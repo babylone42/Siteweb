@@ -1,0 +1,673 @@
+/* RESET & VARIABLES */
+:root {
+    --bg-color: #02161b;
+    /* Deep Teal Background */
+    --text-color: #f1f5f9;
+    --primary-color: #0e8a94;
+    /* Vibrant Teal Accent */
+    --secondary-color: #38bdf8;
+    /* Sky Blue for contrast */
+    --highlight-color: #ccfbf1;
+    /* Mint */
+    --dark-surface: #0a2730;
+    /* Lighter Teal for surfaces */
+    --text-muted: #94a3b8;
+    --font-heading: 'Space Grotesk', sans-serif;
+    --font-body: 'Outfit', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+/* TYPOGRAPHY */
+h1,
+h2,
+h3,
+h4 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 3.5rem;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+p {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    color: var(--text-muted);
+}
+
+.highlight {
+    color: var(--primary-color);
+}
+
+/* UTILITIES */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.section-padding {
+    padding: 6rem 0;
+}
+
+.bg-darker {
+    background-color: #011014;
+    /* Even darker teal */
+}
+
+.bg-light {
+    background-color: #f8fafc;
+    color: #1e293b;
+}
+
+.bg-light .section-title {
+    color: #0f172a;
+}
+
+.bg-light p,
+.bg-light li {
+    color: #475569;
+}
+
+/* Ensure text inside dark cards on light sections stays light */
+.bg-light .bento-card,
+.bg-light .badge,
+.bg-light .faq-item {
+    color: var(--text-color);
+}
+
+.bg-light .bento-card p {
+    color: #94a3b8;
+}
+
+/* Subsection styling */
+.section-title {
+    /* Renamed from .subsection-title based on context */
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+.section-subtitle {
+    text-align: center;
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    margin-bottom: 3rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Service cards */
+.service-card {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+.service-icon {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.service-card p {
+    font-size: 0.9rem;
+}
+
+.bg-highlight {
+    background-color: #1a222c;
+    border-top: 1px solid var(--primary-color);
+}
+
+/* GRIDS */
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+/* BUTTONS */
+.btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: #fff;
+    border: 2px solid var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: transparent;
+    color: var(--primary-color);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--secondary-color);
+    border: 2px solid var(--secondary-color);
+}
+
+.btn-secondary:hover {
+    background-color: var(--secondary-color);
+    color: #fff;
+}
+
+/* NAVBAR */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(17, 17, 17, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 1.5rem 0;
+    z-index: 1000;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+    font-family: var(--font-heading);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    align-items: center;
+    /* Vertically align text and button */
+}
+
+/* Specific button style for navigation to override/augment btn-primary if needed */
+.nav-btn {
+    padding: 0.6rem 1.5rem !important;
+    /* Slightly smaller than hero cta */
+    margin-left: 1rem;
+}
+
+.nav-links a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+/* HERO VISUALS */
+.hero-section {
+    padding-top: 14rem;
+    padding-bottom: 10rem;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    min-height: 90vh;
+}
+
+.hero-visual-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.hero-visual-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.6;
+}
+
+.hero-visual-bg .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, #111111 0%, rgba(17, 17, 17, 0.8) 50%, #111111 100%);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    max-width: 700px;
+    margin: 0 auto 3rem auto;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.trust-signals {
+    justify-content: center;
+}
+
+/* CARDS WITH IMAGES - Problem cards specific styles (Compact version) */
+.problem-card-bento {
+    padding: 1.5rem;
+    /* Reduced padding for compactness */
+    max-height: 320px;
+    /* Height constraint */
+}
+
+.problem-card-bento h3 {
+    font-size: 1.1rem;
+    /* Slightly smaller titles */
+    margin-bottom: 0.5rem;
+}
+
+.problem-card-bento p {
+    font-size: 0.9rem;
+    /* Smaller text */
+    line-height: 1.5;
+}
+
+.problem-card-bento .bento-icon {
+    font-size: 2rem;
+    /* Reduced icon size */
+    margin-bottom: 0.75rem;
+}
+
+.problem-card-bento .bento-visual-mini {
+    height: 140px;
+    /* Reduced height for more compact cards */
+    margin-top: 1rem;
+    width: 100%;
+    flex-grow: 0;
+    /* Don't grow to take all space */
+}
+
+/* BENTO GRID SYSTEM */
+
+.bento-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, minmax(300px, auto));
+    gap: 1.5rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.bento-card {
+    background: var(--dark-surface);
+    /* Darker surface closer to Supabase */
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-decoration: none;
+    /* For anchor tags */
+    color: inherit;
+    /* For anchor tags */
+}
+
+.bento-card:hover {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 20px rgba(16, 155, 128, 0.1);
+    transform: translateY(-2px);
+}
+
+/* Card Variations */
+.bento-large {
+    grid-column: span 2;
+    grid-row: span 2;
+    display: flex;
+    flex-direction: column;
+}
+
+.bento-medium {
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+.bento-small {
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+.bento-wide {
+    grid-column: span 2;
+}
+
+.bento-tall {
+    grid-row: span 2;
+}
+
+/* Image adjustments for different card sizes */
+.bento-tall .bento-visual-mini {
+    height: 480px;
+    /* Much larger for tall chatbot card */
+    margin-top: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bento-wide .bento-visual-mini {
+    height: 240px;
+    /* Larger for wide cards */
+    margin-top: 1rem;
+}
+
+/* Content inside Bento */
+.bento-content {
+    position: relative;
+    z-index: 2;
+}
+
+.bento-content h3 {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    /* Space between icon and title */
+}
+
+.bento-icon {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin-bottom: 0;
+    /* Remove bottom margin for inline layout */
+    background: rgba(255, 255, 255, 0.05);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+}
+
+.bento-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: #fff;
+}
+
+.bento-card p {
+    font-size: 0.95rem;
+    color: #94a3b8;
+    line-height: 1.5;
+}
+
+.bento-list {
+    list-style: none;
+    margin-top: 1rem;
+}
+
+.bento-list li {
+    font-size: 0.9rem;
+    color: var(--primary-color);
+    margin-bottom: 0.25rem;
+}
+
+.bento-list li::before {
+    content: "✓ ";
+    margin-right: 5px;
+}
+
+/* Visuals inside Bento */
+.bento-visual {
+    margin-top: 2rem;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+    min-height: 200px;
+    /* Minimum height for large cards */
+}
+
+.bento-visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    /* Changed to contain for full image visibility */
+    opacity: 1;
+    /* Fully visible */
+}
+
+.visual-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, var(--dark-surface) 0%, transparent 100%);
+}
+
+.bento-visual-mini {
+    margin-top: 1.5rem;
+    height: 180px;
+    /* Reduced from 220px to prevent overflow */
+    min-height: 150px;
+    border-radius: 8px;
+    overflow: hidden;
+    opacity: 1;
+    /* Fully visible */
+}
+
+.bento-visual-mini img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    /* Changed to contain for full image visibility */
+}
+
+/* Specific override for tall card images to ensure proper centering */
+.bento-tall .bento-visual-mini img {
+    height: auto;
+    max-height: 100%;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.bento-bg-icon {
+    position: absolute;
+    bottom: -20px;
+    right: -20px;
+    font-size: 8rem;
+    color: rgba(255, 255, 255, 0.02);
+    transform: rotate(-15deg);
+    z-index: 1;
+}
+
+
+
+/* RESPONSIVE UPGRADES */
+@media (max-width: 900px) {
+
+    /* RESPONSIVE BENTO */
+    .bento-grid {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .bento-large,
+    .bento-wide,
+    .bento-tall {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+
+    /* FAQ RESPONSIVE */
+    .faq-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .faq-header {
+        margin-bottom: 3rem;
+        position: static;
+    }
+}
+
+/* FAQ SECTION STYLES */
+.faq-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 4rem;
+    align-items: start;
+}
+
+.faq-header {
+    position: sticky;
+    top: 6rem;
+}
+
+.badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--text-muted);
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.faq-item {
+    background: #1e1e1e;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.faq-question {
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    width: 100%;
+    background: none;
+    border: none;
+    text-align: left;
+}
+
+.faq-question h3 {
+    font-size: 1.1rem;
+    margin: 0;
+    color: #fff;
+    font-weight: 600;
+}
+
+.faq-question i {
+    color: var(--primary-color);
+    transition: transform 0.3s ease;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    padding: 0 1.5rem;
+}
+
+.faq-answer p {
+    padding-bottom: 1.5rem;
+    margin: 0;
+    color: #94a3b8;
+    font-size: 0.95rem;
+}
+
+/* Active State */
+.faq-item.active {
+    background: #252a33;
+    border-color: var(--primary-color);
+}
+
+.faq-item.active .faq-question i {
+    transform: rotate(180deg);
+}
+
+.faq-item.active .faq-answer {
+    max-height: 300px;
+    /* Arbitrary large height for expansion */
+}
