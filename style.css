@@ -557,84 +557,86 @@ p {
     color: var(--text-muted);
 }
 
-/* BENTO GRID SYSTEM */
-
-.bento-grid {
+/* NEW SOLUTIONS SIDE-BY-SIDE GRID */
+.solutions-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, minmax(300px, auto));
-    gap: 1.5rem;
+    gap: 2rem;
     margin-top: 3rem;
     margin-bottom: 3rem;
 }
 
-.bento-card {
+.solution-card {
     background: var(--dark-surface);
-    /* Darker surface closer to Supabase */
     border: 1px solid rgba(255, 255, 255, 0.05);
     border-radius: 12px;
-    padding: 2rem;
-    position: relative;
     overflow: hidden;
     transition: all 0.3s ease;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     text-decoration: none;
-    /* For anchor tags */
     color: inherit;
-    /* For anchor tags */
+    height: 100%;
 }
 
-.bento-card:hover {
+.solution-card:hover {
     border-color: var(--primary-color);
-    box-shadow: 0 0 20px rgba(16, 155, 128, 0.1);
-    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(16, 155, 128, 0.15);
+    transform: translateY(-5px);
 }
 
-/* Card Variations */
-.bento-large {
-    grid-column: span 2;
-    grid-row: span 2;
+.solution-visual {
+    height: 250px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.solution-visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.solution-card:hover .solution-visual img {
+    transform: scale(1.05);
+}
+
+.solution-content {
+    padding: 2rem;
     display: flex;
     flex-direction: column;
+    flex-grow: 1;
 }
 
-.bento-medium {
-    grid-column: span 1;
-    grid-row: span 1;
+.solution-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #fff;
 }
 
-.bento-small {
-    grid-column: span 1;
-    grid-row: span 1;
+.solution-content p {
+    font-size: 1rem;
+    color: #94a3b8;
+    line-height: 1.6;
+    margin-bottom: 0;
 }
 
-.bento-wide {
-    grid-column: span 2;
+/* Inverted Card Style (for middle card like in the example) */
+.solution-card.inverted {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
 }
 
-.bento-tall {
-    grid-row: span 2;
+.solution-card.inverted .solution-content h3 {
+    color: #fff;
 }
 
-/* Image adjustments for different card sizes */
-.bento-tall .bento-visual-mini {
-    height: 480px;
-    /* Much larger for tall chatbot card */
-    margin-top: 1.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.solution-card.inverted .solution-content p {
+    color: rgba(255, 255, 255, 0.9);
 }
 
-.bento-wide .bento-visual-mini {
-    height: 240px;
-    /* Larger for wide cards */
-    margin-top: 1rem;
-}
-
-/* Content inside Bento */
+/* Content inside original Bento styles (kept for reference or other sections) */
 .bento-content {
     position: relative;
     z-index: 2;
@@ -760,7 +762,16 @@ p {
 /* RESPONSIVE UPGRADES */
 @media (max-width: 900px) {
 
-    /* RESPONSIVE BENTO */
+    /* RESPONSIVE SOLUTIONS GRID */
+    .solutions-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .solution-visual {
+        height: 200px;
+    }
+
+    /* RESPONSIVE BENTO (For Formations) */
     .bento-grid {
         display: flex;
         flex-direction: column;
@@ -783,6 +794,7 @@ p {
         position: static;
     }
 }
+
 
 /* FAQ SECTION STYLES */
 .faq-grid {
