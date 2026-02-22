@@ -77,6 +77,10 @@ p {
     padding: 6rem 0;
 }
 
+#problems.section-padding {
+    padding: 3rem 0;
+}
+
 .bg-darker {
     background-color: #011014;
     /* Even darker teal */
@@ -96,15 +100,41 @@ p {
     color: #475569;
 }
 
-/* Ensure text inside dark cards on light sections stays light */
-.bg-light .bento-card,
-.bg-light .badge,
-.bg-light .faq-item {
-    color: var(--text-color);
+/* Cards in light sections */
+.bg-light .bento-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    color: #0f172a;
+}
+
+.bg-light .bento-card h3 {
+    color: #0f172a;
 }
 
 .bg-light .bento-card p {
-    color: #94a3b8;
+    color: #475569;
+}
+
+.bg-light .bento-card .bento-stat {
+    border-top: 1px solid #e2e8f0;
+}
+
+.bg-light .bento-card .stat-unit {
+    color: #0f172a;
+}
+
+.bg-light .bento-card .stat-label {
+    color: #64748b;
+}
+
+.bg-light .bento-card:hover {
+    border-color: var(--primary-color);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+.bg-light .badge,
+.bg-light .faq-item {
+    color: var(--text-color);
 }
 
 /* Subsection styling */
@@ -480,39 +510,51 @@ p {
     color: var(--primary-color);
 }
 
-/* CARDS WITH IMAGES - Problem cards specific styles (Compact version) */
+/* Problem cards specific styles */
 .problem-card-bento {
     padding: 1.5rem;
-    /* Reduced padding for compactness */
-    max-height: 320px;
-    /* Height constraint */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
 }
 
 .problem-card-bento h3 {
     font-size: 1.1rem;
-    /* Slightly smaller titles */
     margin-bottom: 0.5rem;
 }
 
 .problem-card-bento p {
     font-size: 0.9rem;
-    /* Smaller text */
     line-height: 1.5;
 }
 
-.problem-card-bento .bento-icon {
-    font-size: 2rem;
-    /* Reduced icon size */
-    margin-bottom: 0.75rem;
+.bento-stat {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.problem-card-bento .bento-visual-mini {
-    height: 140px;
-    /* Reduced height for more compact cards */
-    margin-top: 1rem;
-    width: 100%;
-    flex-grow: 0;
-    /* Don't grow to take all space */
+.stat-value {
+    font-size: 2.5rem;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    color: var(--primary-color);
+    line-height: 1;
+}
+
+.stat-unit {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 0.2rem;
+}
+
+.stat-label {
+    font-size: 0.8rem;
+    color: var(--text-muted);
 }
 
 /* BENTO GRID SYSTEM */
