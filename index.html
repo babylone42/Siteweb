@@ -25,10 +25,32 @@
                 <img src="images/logo.svg" alt="Babylone42 Logo" style="height: 40px;">
             </a>
             <ul class="nav-links">
-                <li><a href="#hero">Accueil</a></li>
-                <li><a href="#solutions">Solutions</a></li>
-
-                <li><a href="#formations">Formations</a></li>
+                <li class="dropdown">
+                    <a href="#hero">Accueil <i class="fas fa-chevron-down"
+                            style="font-size: 0.8rem; margin-left: 0.3rem;"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#about-us">About us</a></li>
+                        <li><a href="#vos-interlocuteurs">Vos interlocuteurs</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#solutions">Solutions <i class="fas fa-chevron-down"
+                            style="font-size: 0.8rem; margin-left: 0.3rem;"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="solution-chatbots.html">Chatbots 24/7</a></li>
+                        <li><a href="solution-copilots.html">Copilots IA</a></li>
+                        <li><a href="solution-automation.html">Automatisation</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#formations">Formations <i class="fas fa-chevron-down"
+                            style="font-size: 0.8rem; margin-left: 0.3rem;"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#formations">Python & Data Science</a></li>
+                        <li><a href="#formations">Machine Learning</a></li>
+                        <li><a href="#formations">IA Générative</a></li>
+                    </ul>
+                </li>
                 <li><a href="#newsletter">Newsletter</a></li>
                 <li><a href="#contact" class="btn btn-primary nav-btn">Contact</a></li>
             </ul>
@@ -41,17 +63,41 @@
     <!-- HERO SECTION -->
     <section id="hero" class="hero-section">
         <div class="hero-visual-bg">
-            <img src="images/hero-bg.jpg" alt="AI Technology Background">
-            <div class="overlay"></div>
+            <div class="overlay gradient-bg"></div>
         </div>
         <div class="container hero-content">
-            <h1>Transformez votre entreprise grâce à <span class="highlight">l'IA opérationnelle</span></h1>
-            <p class="hero-subtitle">Nous déployons des solutions d'intelligence artificielle concrètes qui automatisent
-                vos tâches et augmentent immédiatement la productivité de vos équipes.</p>
-            <div class="hero-cta">
-                <a href="#contact" class="btn btn-primary">Parlons de votre projet IA gratuitement</a>
+            <div class="hero-text-content">
+                <h1>Transformez votre entreprise grâce à <span class="highlight">l'IA opérationnelle</span></h1>
+                <p class="hero-subtitle">Nous déployons des solutions d'intelligence artificielle concrètes qui
+                    automatisent
+                    vos tâches et augmentent immédiatement la productivité de vos équipes.</p>
+                <div class="hero-cta">
+                    <a href="#solutions" class="btn btn-primary">Solutions IA</a>
+                    <a href="#formations" class="btn btn-secondary">Formations</a>
+                </div>
+
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <h3><span class="stat-number" data-target="3">0</span>x</h3>
+                        <p>Plus Rapides</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3><span class="stat-number" data-target="96">0</span>%</h3>
+                        <p>Taux de Succès</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3><span class="stat-number" data-target="150">0</span>+</h3>
+                        <p>Clients Accompagnés</p>
+                    </div>
+                </div>
             </div>
-            <div class="trust-signals">
+            <div class="hero-image-content">
+                <img src="images/b42_logomark.svg" alt="Babylone42 Logomark" class="hero-3d-logo">
+            </div>
+        </div>
+
+        <div class="trust-signals-bar">
+            <div class="container trust-container">
                 <span><i class="fas fa-shield-alt"></i> Solutions sécurisées</span>
                 <span><i class="fas fa-rocket"></i> Déploiement rapide</span>
                 <span><i class="fas fa-user-check"></i> Accompagnement humain</span>
