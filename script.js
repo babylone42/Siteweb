@@ -113,7 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const target = parseInt(entry.target.getAttribute('data-target'));
                 const duration = 2000; // 2 seconds
                 const step = target / (duration / 16); // ~60fps
-                
+
                 let current = 0;
                 const updateCounter = () => {
                     current += step;
@@ -124,7 +124,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         entry.target.innerText = target;
                     }
                 };
-                
+
                 updateCounter();
                 statsObserver.unobserve(entry.target); // Run once
             }
@@ -134,4 +134,91 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.stat-number').forEach(stat => {
         statsObserver.observe(stat);
     });
+
+    // Formations Carousel Logic
+    const carouselTrack = document.getElementById('formations-track');
+    const prevBtn = document.querySelector('.prev-btn');
+    const nextBtn = document.querySelector('.next-btn');
+
+    if (carouselTrack && prevBtn && nextBtn) {
+        // Calculate scroll amount based on one card width + gap
+        const getScrollAmount = () => {
+            const card = carouselTrack.querySelector('.solution-card');
+            if (card) {
+                // width + gap (approx 2rem = 32px depending on base font size)
+                return card.offsetWidth + 32;
+            }
+            return 350; // fallback
+        };
+
+        prevBtn.addEventListener('click', () => {
+            carouselTrack.parentElement.scrollBy({
+                left: -getScrollAmount(),
+                behavior: 'smooth'
+            });
+        });
+
+        nextBtn.addEventListener('click', () => {
+            carouselTrack.parentElement.scrollBy({
+                left: getScrollAmount(),
+                behavior: 'smooth'
+            });
+        });
+    }
+    // --- Formations Carousel Ends ---
+
+    // Articles Carousel Logic
+    const articlesTrack = document.getElementById('articles-track');
+    const prevBtnArticles = document.querySelector('.prev-btn-articles');
+    const nextBtnArticles = document.querySelector('.next-btn-articles');
+
+    if (articlesTrack && prevBtnArticles && nextBtnArticles) {
+        const getArticlesScrollAmount = () => {
+            const card = articlesTrack.querySelector('.solution-card');
+            if (card) {
+                return card.offsetWidth + 32;
+            }
+            return 350;
+        };
+
+        prevBtnArticles.addEventListener('click', () => {
+            articlesTrack.parentElement.scrollBy({
+                left: -getArticlesScrollAmount(),
+                behavior: 'smooth'
+            });
+        });
+
+        nextBtnArticles.addEventListener('click', () => {
+            articlesTrack.parentElement.scrollBy({
+                left: getArticlesScrollAmount(),
+                behavior: 'smooth'
+            });
+        });
+    }
+    // --- Articles Carousel Ends ---
+
+    // Contact Form Dynamic Logic
+    const toggleBtns = document.querySelectorAll('.btn-toggle');
+    const optionsSolutions = document.getElementById('options-solutions');
+    const optionsFormations = document.getElementById('options-formations');
+
+    toggleBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            // Remove active from all
+            toggleBtns.forEach(b => b.classList.remove('active'));
+            // Add to clicked
+            btn.classList.add('active');
+
+            // Show corresponding options
+            const type = btn.getAttribute('data-type');
+            if (type === 'solutions') {
+                optionsFormations.classList.add('hidden');
+                optionsSolutions.classList.remove('hidden');
+            } else {
+                optionsSolutions.classList.add('hidden');
+                optionsFormations.classList.remove('hidden');
+            }
+        });
+    });
+
 });

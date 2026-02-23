@@ -12,7 +12,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Space+Grotesk:wght@300;400;600;700&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=5">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
@@ -53,6 +53,12 @@
                 </li>
                 <li><a href="#newsletter">Newsletter</a></li>
                 <li><a href="#contact" class="btn btn-primary nav-btn">Contact</a></li>
+                <li class="nav-socials">
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" aria-label="X Twitter"><i class="fab fa-x-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                </li>
             </ul>
             <div class="hamburger">
                 <i class="fas fa-bars"></i>
@@ -258,47 +264,78 @@
             <h2 class="section-title">Formations <span class="highlight">Expert</span></h2>
             <p class="section-subtitle">Montez en compétences avec nos ingénieurs-formateurs.</p>
 
-            <div class="bento-grid">
-                <!-- Python - Tall Card -->
-                <div class="bento-card bento-tall">
-                    <div class="bento-content">
-                        <h3>
-                            <div class="bento-icon"><i class="fab fa-python"></i></div>Python & Data Science
-                        </h3>
-                        <p>Le socle incontournable. Automatisation, script et analyse de données pour profils métiers et
-                            techniques.
-                        </p>
-                    </div>
-                </div>
+            <div class="carousel-container">
+                <button class="carousel-btn prev-btn" aria-label="Slide Précédente"><i
+                        class="fas fa-chevron-left"></i></button>
+                <div class="carousel-track-wrapper">
+                    <div class="carousel-track" id="formations-track">
+                        <!-- Card 1 -->
+                        <a href="#contact" class="solution-card">
+                            <div class="solution-visual">
+                                <img src="images/formation_genai.png" alt="IA Générative & Prompting">
+                            </div>
+                            <div class="solution-content">
+                                <h3>IA Générative & Prompting</h3>
+                                <p>Maîtrisez ChatGPT/Copilot pour la productivité quotidienne et explorez les usages
+                                    avancés de l'IA générative.</p>
+                            </div>
+                        </a>
 
-                <!-- ML - Wide Card -->
-                <div class="bento-card bento-wide">
-                    <div class="bento-content">
-                        <h3>
-                            <div class="bento-icon"><i class="fas fa-brain"></i></div>Machine Learning & Deep Learning
-                        </h3>
-                        <p>Créez vos propres modèles prédictifs. De la théorie à la pratique sur des cas réels et
-                            concrets.</p>
-                    </div>
-                    <div class="bento-bg-icon"><i class="fas fa-network-wired"></i></div>
-                </div>
+                        <!-- Card 2 -->
+                        <a href="#contact" class="solution-card inverted">
+                            <div class="solution-visual">
+                                <img src="images/formation_jupyter.png" alt="Jupyter Notebook pour le reporting">
+                            </div>
+                            <div class="solution-content">
+                                <h3>Jupyter Notebook</h3>
+                                <p>Reporting et la visualisation de données dynamiques pour exploiter au mieux les
+                                    informations de votre entreprise.</p>
+                            </div>
+                        </a>
 
-                <!-- GenAI - Wide Card -->
-                <div class="bento-card bento-wide">
-                    <div class="bento-content">
-                        <h3>
-                            <div class="bento-icon"><i class="fas fa-magic"></i></div>IA Générative & Prompting
-                        </h3>
-                        <p>Maîtrisez ChatGPT/Copilot pour la productivité quotidienne et explorez les usages avancés de
-                            l'IA générative.
-                        </p>
+                        <!-- Card 3 -->
+                        <a href="#contact" class="solution-card">
+                            <div class="solution-visual">
+                                <img src="images/formation_python.png" alt="Python pour l'analyse de données - POO">
+                            </div>
+                            <div class="solution-content">
+                                <h3>Python : Analyse & POO</h3>
+                                <p>Python pour l’analyse de données et la maîtrise des bases de la Programmation
+                                    Orientée Objet pour des scripts robustes.</p>
+                            </div>
+                        </a>
+
+                        <!-- Card 4 -->
+                        <a href="#contact" class="solution-card inverted">
+                            <div class="solution-visual">
+                                <img src="images/formation_ml.png" alt="Machine Learning - Fondamentaux">
+                            </div>
+                            <div class="solution-content">
+                                <h3>Machine Learning</h3>
+                                <p>Les fondamentaux de l’intelligence artificielle : créez, entraînez et déployez vos
+                                    propres modèles prédictifs.</p>
+                            </div>
+                        </a>
+
+                        <!-- Card 5 -->
+                        <a href="#contact" class="solution-card">
+                            <div class="solution-visual">
+                                <img src="images/formation_dl.png" alt="Deep Learning - Apprentissage Profond">
+                            </div>
+                            <div class="solution-content">
+                                <h3>Apprentissage Profond</h3>
+                                <p>Introduction à l’Intelligence Artificielle par Deep Learning. Réseaux de neurones et
+                                    architectures complexes.</p>
+                            </div>
+                        </a>
                     </div>
-                    <div class="bento-bg-icon"><i class="fas fa-sparkles"></i></div>
                 </div>
+                <button class="carousel-btn next-btn" aria-label="Slide Suivante"><i
+                        class="fas fa-chevron-right"></i></button>
             </div>
 
             <div class="training-cta">
-                <a href="#contact" class="btn btn-outline">Recevoir le catalogue</a>
+                <a href="#dates-formation" class="btn btn-primary">Voir les dates de formation</a>
             </div>
         </div>
     </section>
@@ -308,19 +345,77 @@
     <!-- DIFFERENTIATORS -->
     <section id="why-us" class="section-padding bg-light">
         <div class="container">
-            <h2 class="section-title">Pourquoi Babylone42 ?</h2>
-            <ul class="differentiators-list">
-                <li>✅ <strong>Double Expertise Unique :</strong> Ingénieurs seniors ET formateurs pédagogues.</li>
-                <li>✅ <strong>Pragmatisme Absolu :</strong> Solutions livrées "clés en main", pas de R&D sans fin.</li>
-                <li>✅ <strong>Intervention Nationale :</strong> Basés à Marseille, nous opérons partout en France.</li>
-                <li>✅ <strong>Sur-Mesure :</strong> Des solutions adaptées à votre budget et votre maturité digitale.
-                </li>
-            </ul>
+            <div class="why-us-grid">
+                <!-- Left: Staggered Images -->
+                <div class="why-us-visuals">
+                    <img src="images/why_us_team.png" alt="Équipe technique et formateurs Babylone42"
+                        class="img-stagger-bottom">
+                    <!-- Second image is offset slightly in CSS -->
+                    <img src="images/why_us_meeting.png" alt="Réunion de conseil stratégique IA"
+                        class="img-stagger-top">
+                </div>
+
+                <!-- Right: Content -->
+                <div class="why-us-content">
+                    <h2 class="section-title" style="text-align: left; margin-bottom: 0.5rem;">Pourquoi choisir <span
+                            class="highlight">Babylone42 ?</span></h2>
+                    <p style="margin-bottom: 3rem; font-size: 1.1rem;">Nous ne sommes pas une agence classique. Nous
+                        combinons l'excellence technique à une pédagogie éprouvée pour vous rendre autonome avec l'IA.
+                    </p>
+
+                    <ul class="differentiators-list">
+                        <li>
+                            <div class="diff-icon"><i class="fas fa-user-tie"></i></div>
+                            <div class="diff-text">
+                                <strong>Double Expertise Unique</strong>
+                                <p>Ingénieurs seniors ET formateurs pédagogues. <br>
+                                    <span style="color:var(--primary-color); font-weight: 500;">✓ Vous n'avez qu'un seul
+                                        interlocuteur</span>, <em>plus besoin de coordonner une agence technique et un
+                                        organisme de formation.</em>
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="diff-icon"><i class="fas fa-hand-holding-usd"></i></div>
+                            <div class="diff-text">
+                                <strong>Pragmatisme Absolu (ROI &lt; 3 mois)</strong>
+                                <p>100% de nos projets livrés sans R&D interminable. <br>
+                                    <span style="color:var(--primary-color); font-weight: 500;">✓ Vous obtenez un retour
+                                        sur investissement rapide</span>, <em>dès les premières semaines d'utilisation,
+                                        sans coûts cachés.</em>
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="diff-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div class="diff-text">
+                                <strong>Intervention Nationale (+150 clients)</strong>
+                                <p>Basés à Marseille, nous opérons partout en France. <br>
+                                    <span style="color:var(--primary-color); font-weight: 500;">✓ Où que vous
+                                        soyez</span>, <em>nous vous accompagnons sur site ou à distance sans jamais
+                                        perdre notre proximité.</em>
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="diff-icon"><i class="fas fa-cogs"></i></div>
+                            <div class="diff-text">
+                                <strong>100% Sur-Mesure (50+ workflows créés)</strong>
+                                <p>Des solutions adaptées à votre budget et maturité digitale. <br>
+                                    <span style="color:var(--primary-color); font-weight: 500;">✓ Vous payez uniquement
+                                        pour l'essentiel</span>, <em>avec des outils technologiques qui évoluent à votre
+                                        propre rythme.</em>
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- FAQ SECTION -->
-    <section id="faq" class="section-padding bg-light">
+    <section id="faq" class="section-padding bg-darker">
         <div class="container">
             <div class="faq-grid">
                 <!-- Left Column: Title & Intro -->
@@ -332,197 +427,428 @@
                 </div>
 
                 <!-- Right Column: FAQ Items -->
-                <div class="faq-list">
-                    <!-- Item 1 -->
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h3>Comment se déroule un projet avec Babylone42 ?</h3>
-                            <i class="fas fa-chevron-down"></i>
+                <div class="faq-list-wrapper">
+                    <div class="faq-list">
+                        <!-- Item 1 -->
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>Comment se déroule un projet avec Babylone42 ?</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Nous commençons toujours par un audit gratuit pour identifier vos besoins. Ensuite,
+                                    nous
+                                    vous proposons une feuille de route claire avec des livrables précis. Une fois
+                                    validé,
+                                    nous développons la solution, l'intégrons à vos outils et formons vos équipes.</p>
+                            </div>
                         </div>
-                        <div class="faq-answer">
-                            <p>Nous commençons toujours par un audit gratuit pour identifier vos besoins. Ensuite, nous
-                                vous proposons une feuille de route claire avec des livrables précis. Une fois validé,
-                                nous développons la solution, l'intégrons à vos outils et formons vos équipes.</p>
+                        <!-- Item 2 -->
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>Combien coûte une solution d'IA sur mesure ?</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Le budget varie selon la complexité. Un petit workflow d'automatisation peut démarrer
+                                    à
+                                    quelques centaines d'euros, tandis qu'un Copilot d'entreprise complet nécessitera un
+                                    budget plus conséquent. Nous proposons toujours des solutions adaptées à votre ROI
+                                    attendu.</p>
+                            </div>
+                        </div>
+                        <!-- Item 3 -->
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>Mes données sont-elles sécurisées ?</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Absolument. La sécurité est notre priorité. Nous utilisons des environnements
+                                    sécurisés
+                                    (Azure OpenAI, instances privées) et veillons à ce que vos données ne soient jamais
+                                    utilisées pour entraîner des modèles publics.</p>
+                            </div>
+                        </div>
+                        <!-- Item 4 -->
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>Dois-je avoir une équipe technique en interne ?</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Non, ce n'est pas nécessaire. Nous livrons des solutions "clés en main". Nous
+                                    assurons le
+                                    déploiement et la maintenance. Si vous avez une équipe technique, nous collaborons
+                                    avec
+                                    elle en bonne intelligence.</p>
+                            </div>
+                        </div>
+                        <!-- Item 5 -->
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>Quelles technologies utilisez-vous ?</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Nous sommes agnostiques mais experts. Nous utilisons Python, OpenAI, Mistral,
+                                    Anthropic,
+                                    ainsi que des outils d'automatisation comme Make, n8n et les outils Microsoft (Power
+                                    Automate, Azure).</p>
+                            </div>
+                        </div>
+                        <!-- Item 6 -->
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>L'IA va-t-elle remplacer mes employés ?</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Non, notre vision est celle de l'IA "Copilot". L'objectif est de supprimer les tâches
+                                    répétitives et pénibles pour permettre à vos collaborateurs de se concentrer sur les
+                                    tâches à forte valeur ajoutée.</p>
+                            </div>
+                        </div>
+                        <!-- Item 7 -->
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>Proposez-vous des formations ?</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Oui, Babylone42 est aussi un organisme de formation. Nous formons vos équipes à
+                                    l'utilisation des outils que nous déployons, mais aussi au développement (Python) et
+                                    à
+                                    l'IA Générative en général.</p>
+                            </div>
+                        </div>
+                        <!-- Item 8 -->
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>Combien de temps faut-il pour voir des résultats ?</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Très rapidement. Pour une automatisation simple, les résultats sont immédiats dès la
+                                    mise
+                                    en production (quelques jours). Pour des projets plus complexes, comptez quelques
+                                    semaines.</p>
+                            </div>
+                        </div>
+                        <!-- Item 9 -->
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>Intervenez-vous partout en France ?</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Oui. Bien que basés à Marseille, nous travaillons avec des clients dans toute la
+                                    France,
+                                    et même à l'international, grâce aux outils de collaboration à distance.</p>
+                            </div>
+                        </div>
+                        <!-- Item 10 -->
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>Peut-on tester avant de s'engager ?</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Oui, nous fonctionnons souvent par phase de "Diagnostic" ou de "POC" (Preuve de
+                                    Concept).
+                                    Cela vous permet de valider la valeur de la solution sur un périmètre restreint
+                                    avant un
+                                    déploiement global.</p>
+                            </div>
                         </div>
                     </div>
-                    <!-- Item 2 -->
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h3>Combien coûte une solution d'IA sur mesure ?</h3>
-                            <i class="fas fa-chevron-down"></i>
+                </div>
+            </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="section-padding bg-light">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Left: Info -->
+                <div class="contact-info">
+                    <span class="badge"
+                        style="background: rgba(16, 155, 128, 0.1); color: var(--primary-color);">Contact</span>
+                    <h2 class="section-title" style="text-align: left; margin-bottom: 1rem;">Discutez de votre <span
+                            class="highlight">projet</span></h2>
+                    <p style="margin-bottom: 2rem; font-size: 1.1rem; color: var(--text-muted);">Quel est votre défi
+                        actuel ? Laissez-nous un message et notre équipe vous recontactera très rapidement.</p>
+
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                            <div class="contact-text">
+                                <strong>Email</strong>
+                                <a href="mailto:contact@babylone42.fr">contact@babylone42.fr</a>
+                            </div>
                         </div>
-                        <div class="faq-answer">
-                            <p>Le budget varie selon la complexité. Un petit workflow d'automatisation peut démarrer à
-                                quelques centaines d'euros, tandis qu'un Copilot d'entreprise complet nécessitera un
-                                budget plus conséquent. Nous proposons toujours des solutions adaptées à votre ROI
-                                attendu.</p>
-                        </div>
-                    </div>
-                    <!-- Item 3 -->
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h3>Mes données sont-elles sécurisées ?</h3>
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <div class="faq-answer">
-                            <p>Absolument. La sécurité est notre priorité. Nous utilisons des environnements sécurisés
-                                (Azure OpenAI, instances privées) et veillons à ce que vos données ne soient jamais
-                                utilisées pour entraîner des modèles publics.</p>
-                        </div>
-                    </div>
-                    <!-- Item 4 -->
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h3>Dois-je avoir une équipe technique en interne ?</h3>
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <div class="faq-answer">
-                            <p>Non, ce n'est pas nécessaire. Nous livrons des solutions "clés en main". Nous assurons le
-                                déploiement et la maintenance. Si vous avez une équipe technique, nous collaborons avec
-                                elle en bonne intelligence.</p>
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
+                            <div class="contact-text">
+                                <strong>Téléphone</strong>
+                                <a href="tel:+330773609849">+33 0 7 73 60 98 49</a>
+                            </div>
                         </div>
                     </div>
-                    <!-- Item 5 -->
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h3>Quelles technologies utilisez-vous ?</h3>
-                            <i class="fas fa-chevron-down"></i>
+                </div>
+
+                <!-- Right: Form -->
+                <div class="contact-form-container">
+                    <form class="contact-form" id="contactForm">
+                        <!-- 1. Service Type -->
+                        <div class="form-group service-toggle">
+                            <label style="margin-bottom: 0.75rem; display: block; font-weight: 600;">Type de
+                                besoin</label>
+                            <div class="toggle-buttons">
+                                <button type="button" class="btn-toggle active" data-type="solutions">Solutions
+                                    IA</button>
+                                <button type="button" class="btn-toggle" data-type="formations">Formations</button>
+                            </div>
                         </div>
-                        <div class="faq-answer">
-                            <p>Nous sommes agnostiques mais experts. Nous utilisons Python, OpenAI, Mistral, Anthropic,
-                                ainsi que des outils d'automatisation comme Make, n8n et les outils Microsoft (Power
-                                Automate, Azure).</p>
+
+                        <!-- 2. Sub-options (Dynamic) -->
+                        <div class="form-group dynamic-options" id="options-solutions">
+                            <label style="margin-bottom: 0.75rem; display: block;">Que souhaitez-vous mettre en place
+                                ?</label>
+                            <div class="checkbox-buttons">
+                                <label class="checkbox-btn"><input type="radio" name="solution_type" value="copilot">
+                                    <span>Copilot sur-mesure</span></label>
+                                <label class="checkbox-btn"><input type="radio" name="solution_type" value="chatbot">
+                                    <span>Chatbot de support</span></label>
+                                <label class="checkbox-btn"><input type="radio" name="solution_type" value="automation">
+                                    <span>Automatisation de process</span></label>
+                                <label class="checkbox-btn"><input type="radio" name="solution_type" value="audit">
+                                    <span>Audit & Conseil</span></label>
+                                <label class="checkbox-btn"><input type="radio" name="solution_type" value="other"
+                                        checked> <span>Autre besoin</span></label>
+                            </div>
                         </div>
-                    </div>
-                    <!-- Item 6 -->
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h3>L'IA va-t-elle remplacer mes employés ?</h3>
-                            <i class="fas fa-chevron-down"></i>
+
+                        <div class="form-group dynamic-options hidden" id="options-formations">
+                            <label style="margin-bottom: 0.75rem; display: block;">Quelles formations vous intéressent
+                                ?</label>
+                            <div class="checkbox-buttons">
+                                <label class="checkbox-btn"><input type="checkbox" name="formation_type"
+                                        value="prompting"> <span>Prompting & IA Générative</span></label>
+                                <label class="checkbox-btn"><input type="checkbox" name="formation_type" value="python">
+                                    <span>Python (Data / POO)</span></label>
+                                <label class="checkbox-btn"><input type="checkbox" name="formation_type"
+                                        value="machine_learning"> <span>Machine Learning</span></label>
+                                <label class="checkbox-btn"><input type="checkbox" name="formation_type"
+                                        value="deep_learning"> <span>Deep Learning</span></label>
+                                <label class="checkbox-btn"><input type="checkbox" name="formation_type" value="custom">
+                                    <span>Parcours sur-mesure</span></label>
+                            </div>
                         </div>
-                        <div class="faq-answer">
-                            <p>Non, notre vision est celle de l'IA "Copilot". L'objectif est de supprimer les tâches
-                                répétitives et pénibles pour permettre à vos collaborateurs de se concentrer sur les
-                                tâches à forte valeur ajoutée.</p>
+
+                        <!-- 3. Personal Info Grid -->
+                        <div class="form-row form-grid-2">
+                            <div class="form-group">
+                                <label for="lastname">Nom *</label>
+                                <input type="text" id="lastname" required placeholder="Dupont">
+                            </div>
+                            <div class="form-group">
+                                <label for="firstname">Prénom *</label>
+                                <input type="text" id="firstname" required placeholder="Jean">
+                            </div>
                         </div>
-                    </div>
-                    <!-- Item 7 -->
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h3>Proposez-vous des formations ?</h3>
-                            <i class="fas fa-chevron-down"></i>
+
+                        <div class="form-group">
+                            <label for="company">Entreprise *</label>
+                            <input type="text" id="company" required placeholder="Nom de votre société">
                         </div>
-                        <div class="faq-answer">
-                            <p>Oui, Babylone42 est aussi un organisme de formation. Nous formons vos équipes à
-                                l'utilisation des outils que nous déployons, mais aussi au développement (Python) et à
-                                l'IA Générative en général.</p>
+
+                        <div class="form-row form-grid-2">
+                            <div class="form-group">
+                                <label for="phone">Téléphone</label>
+                                <input type="tel" id="phone" placeholder="06 12 34 56 78">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email professionnel *</label>
+                                <input type="email" id="email" required placeholder="jean.dupont@entreprise.com">
+                            </div>
                         </div>
-                    </div>
-                    <!-- Item 8 -->
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h3>Combien de temps faut-il pour voir des résultats ?</h3>
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <div class="faq-answer">
-                            <p>Très rapidement. Pour une automatisation simple, les résultats sont immédiats dès la mise
-                                en production (quelques jours). Pour des projets plus complexes, comptez quelques
-                                semaines.</p>
-                        </div>
-                    </div>
-                    <!-- Item 9 -->
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h3>Intervenez-vous partout en France ?</h3>
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <div class="faq-answer">
-                            <p>Oui. Bien que basés à Marseille, nous travaillons avec des clients dans toute la France,
-                                et même à l'international, grâce aux outils de collaboration à distance.</p>
-                        </div>
-                    </div>
-                    <!-- Item 10 -->
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h3>Peut-on tester avant de s'engager ?</h3>
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <div class="faq-answer">
-                            <p>Oui, nous fonctionnons souvent par phase de "Diagnostic" ou de "POC" (Preuve de Concept).
-                                Cela vous permet de valider la valeur de la solution sur un périmètre restreint avant un
-                                déploiement global.</p>
-                        </div>
-                    </div>
+                        <button type="submit" class="btn btn-primary btn-block">Parlons de votre projet IA
+                            gratuitement</button>
+                    </form>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CONTACT SECTION -->
-    <section id="contact" class="section-padding">
-        <div class="container contact-wrapper">
-            <h2 class="section-title">Discutez de votre projet</h2>
-            <p>Quel est votre défi actuel ?</p>
+    <!-- ARTICLES SECTION -->
+    <section id="articles" class="section-padding bg-darker" style="border-top: 1px solid rgba(255,255,255,0.05);">
+        <div class="container overflow-hidden">
+            <div class="section-header" style="text-align: center; margin-bottom: 2rem;">
+                <div class="badge">Blog & Actualités</div>
+                <h2 class="section-title">L'IA avance vite, <span class="highlight">ne ratez rien</span></h2>
+                <p>Découvrez nos derniers articles, études de cas et conseils pour intégrer l'intelligence artificielle
+                    dans votre entreprise.</p>
+            </div>
 
-            <form class="contact-form" id="contactForm">
-                <div class="form-group">
-                    <label for="name">Nom complet</label>
-                    <input type="text" id="name" required placeholder="Votre nom">
-                </div>
-                <div class="form-group">
-                    <label for="company">Entreprise</label>
-                    <input type="text" id="company" required placeholder="Votre société">
-                </div>
-                <div class="form-group">
-                    <label for="email">Email professionnel</label>
-                    <input type="email" id="email" required placeholder="vous@entreprise.com">
-                </div>
-                <div class="form-group">
-                    <label>Type de projet</label>
-                    <select id="project-type">
-                        <option value="copilot">Copilot / Assistant IA</option>
-                        <option value="chatbot">Chatbot Support</option>
-                        <option value="automation">Automatisation Process</option>
-                        <option value="training">Plan de Formation</option>
-                        <option value="other">Autre</option>
-                    </select>
-                </div>
-                <button type="submit" class="btn btn-primary btn-block">Parlons de votre projet IA gratuitement</button>
-            </form>
-        </div>
-    </section>
+            <div class="carousel-container">
+                <button class="carousel-btn prev-btn-articles" aria-label="Article Précédent"><i
+                        class="fas fa-chevron-left"></i></button>
+                <div class="carousel-track-wrapper">
+                    <div class="carousel-track" id="articles-track">
+                        <!-- Article 1 -->
+                        <a href="#" class="solution-card">
+                            <div class="solution-visual">
+                                <img src="images/article_1.png" alt="IA, IA Générative et Agents Autonomes">
+                            </div>
+                            <div class="solution-content">
+                                <h3>IA et Agents Autonomes</h3>
+                                <p>Comprendre les nuances essentielles entre l'IA classique, l'IA générative et les
+                                    agents autonomes utiles à votre entreprise.</p>
+                            </div>
+                        </a>
 
-    <!-- NEWSLETTER SECTION -->
-    <section id="newsletter" class="section-padding bg-darker" style="border-top: 1px solid rgba(255,255,255,0.05);">
-        <div class="container" style="text-align: center; max-width: 600px;">
-            <div class="badge">Newsletter</div>
-            <h2 class="section-title">L'IA avance vite, <span class="highlight">ne ratez rien</span></h2>
-            <p>Recevez chaque mois nos meilleurs conseils, cas d'usage et actualités sur l'IA d'entreprise. Pas de spam,
-                que de la valeur.</p>
+                        <!-- Article 2 -->
+                        <a href="#" class="solution-card inverted">
+                            <div class="solution-visual">
+                                <img src="images/article_2.png" alt="L'IA Générative pour le service client">
+                            </div>
+                            <div class="solution-content">
+                                <h3>IA & Service Client</h3>
+                                <p>Comment l'IA Générative transforme profondément la relation et le support client dans
+                                    le milieu B2B.</p>
+                            </div>
+                        </a>
 
-            <form style="display: flex; gap: 1rem; margin-top: 2rem;">
-                <input type="email" placeholder="Votre email professionnel"
-                    style="flex: 1; padding: 1rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); background: #111; color: #fff;">
-                <button type="submit" class="btn btn-primary">S'inscrire</button>
-            </form>
+                        <!-- Article 3 -->
+                        <a href="#" class="solution-card">
+                            <div class="solution-visual">
+                                <img src="images/article_3.png" alt="Copilot d'entreprise">
+                            </div>
+                            <div class="solution-content">
+                                <h3>Copilot d'entreprise</h3>
+                                <p>Le guide complet pour intégrer un assistant intelligent et faire gagner 30% de
+                                    productivité à vos équipes.</p>
+                            </div>
+                        </a>
+
+                        <!-- Article 4 -->
+                        <a href="#" class="solution-card inverted">
+                            <div class="solution-visual">
+                                <img src="images/article_4.png" alt="RPA vs Intelligence Artificielle">
+                            </div>
+                            <div class="solution-content">
+                                <h3>RPA vs IA</h3>
+                                <p>Automatisation des processus classiques face à l'Intelligence Artificielle : Lequel
+                                    choisir pour vos opérations ?</p>
+                            </div>
+                        </a>
+
+                        <!-- Article 5 -->
+                        <a href="#" class="solution-card">
+                            <div class="solution-visual">
+                                <img src="images/article_5.png" alt="Formation IA pour les dirigeants">
+                            </div>
+                            <div class="solution-content">
+                                <h3>Stratégie IA & Dirigeants</h3>
+                                <p>La formation IA spécifiquement pensée pour les dirigeants : Par où commencer votre
+                                    transition technologique ?</p>
+                            </div>
+                        </a>
+
+                        <!-- Article 6 -->
+                        <a href="#" class="solution-card inverted">
+                            <div class="solution-visual">
+                                <img src="images/article_6.png" alt="Formations IA : Recherche vs Entreprise">
+                            </div>
+                            <div class="solution-content">
+                                <h3>Recherche vs Entreprise</h3>
+                                <p>Formations IA théoriques face aux approches pragmatiques B2B : comment choisir la
+                                    bonne approche ?</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <button class="carousel-btn next-btn-articles" aria-label="Article Suivant"><i
+                        class="fas fa-chevron-right"></i></button>
+            </div>
         </div>
     </section>
 
     <!-- FOOTER -->
-    <footer>
+    <footer class="mega-footer">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">Babylone42</div>
-                <div class="footer-links">
-                    <a href="#">Mentions Légales</a>
-                    <a href="#">Politique de Confidentialité</a>
+            <div class="footer-grid">
+                <!-- Column 1: Brand & Socials -->
+                <div class="footer-col brand-col">
+                    <img src="images/logo.svg" alt="Babylone42 Logo" class="footer-logo-img">
+                    <p class="footer-desc">Babylone42 donne le pouvoir aux équipes de transformer des données brutes en
+                        informations claires grâce à l'IA.</p>
+                    <div class="footer-socials">
+                        <a href="#" aria-label="X Twitter"><i class="fab fa-x-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    </div>
                 </div>
-                <div class="footer-social">
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
+
+                <!-- Column 2: Accueil -->
+                <div class="footer-col">
+                    <h4 class="footer-title">Accueil</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="#about-us">About us</a></li>
+                        <li><a href="#vos-interlocuteurs">Vos interlocuteurs</a></li>
+                        <li><a href="#articles">Blog / Actualités</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Solutions -->
+                <div class="footer-col">
+                    <h4 class="footer-title">Solutions</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="solution-chatbots.html">Chatbots 24/7</a></li>
+                        <li><a href="solution-copilots.html">Copilots IA</a></li>
+                        <li><a href="solution-automation.html">Automatisation</a></li>
+                        <li><a href="#">Audit & Conseil</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Formations -->
+                <div class="footer-col">
+                    <h4 class="footer-title">Formations</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="#formations">IA Générative</a></li>
+                        <li><a href="#formations">Jupyter</a></li>
+                        <li><a href="#formations">Python</a></li>
+                        <li><a href="#formations">Machine Learning</a></li>
+                        <li><a href="#formations">Deep Learning</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 5: Contact & Newsletter -->
+                <div class="footer-col newsletter-col">
+                    <h4 class="footer-title">Contact & Newsletter</h4>
+                    <p class="footer-contact-info">
+                        <a href="mailto:contact@babylone42.fr"><i class="fas fa-envelope"></i>
+                            contact@babylone42.fr</a><br>
+                        <a href="tel:+330773609849"><i class="fas fa-phone-alt"></i> +33 0 7 73 60 98 49</a>
+                    </p>
+                    <form class="footer-newsletter-form">
+                        <input type="email" placeholder="Votre email" required>
+                        <button type="submit" aria-label="S'inscrire"><i class="fas fa-paper-plane"></i></button>
+                    </form>
                 </div>
             </div>
-            <p class="copyright">© 2024 Babylone42. Tous droits réservés. Basé à Marseille, France.</p>
+
+            <div class="footer-bottom">
+                <p class="copyright">© 2025 Babylone42. All rights reserved.</p>
+                <div class="legal-links">
+                    <a href="#">Mentions Légales</a>
+                    <a href="#">Politique de Confidentialité</a>
+                    <a href="#">Paramètres des cookies</a>
+                </div>
+            </div>
         </div>
     </footer>
 
