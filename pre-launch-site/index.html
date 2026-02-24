@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Babylone42 | En préparation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Space+Grotesk:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .prelaunch-hero {
+            position: relative;
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+            padding: 4rem 2rem;
+            margin-top: 60px;
+        }
+
+        .prelaunch-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+
+        .prelaunch-bg img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.3;
+            /* Darken the background image */
+        }
+
+        .prelaunch-bg::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(180deg, rgba(8, 12, 23, 0.7) 0%, rgba(8, 12, 23, 1) 100%);
+        }
+
+        .prelaunch-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(12px);
+            padding: 4rem;
+            border-radius: 24px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        }
+
+        .prelaunch-icon {
+            font-size: 4rem;
+            color: var(--primary-color);
+            margin-bottom: 2rem;
+            display: inline-block;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-15px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        /* Simplified Nav for Prelaunch */
+        .simple-nav {
+            justify-content: center !important;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- MINIMAL NAVIGATION -->
+    <nav class="navbar" style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+        <div class="container simple-nav">
+            <a href="#" class="logo">
+                <img src="images/logo.svg" alt="Babylone42 Logo" style="height: 40px;">
+            </a>
+        </div>
+    </nav>
+
+    <main>
+        <!-- PRELAUNCH HERO -->
+        <section class="prelaunch-hero">
+            <div class="prelaunch-bg">
+                <img src="images/hero-bg.jpg" alt="Background">
+            </div>
+
+            <div class="prelaunch-content">
+                <div class="prelaunch-icon">
+                    <i class="fas fa-tools"></i>
+                </div>
+                <h1 class="hero-title" style="font-size: 3rem; margin-bottom: 1.5rem;">
+                    We are doing a <span class="highlight">relooking</span> for you
+                </h1>
+                <p class="hero-subtitle" style="font-size: 1.25rem; font-weight: 300;">
+                    Notre nouveau site internet dédié à l'IA et l'automatisation arrive très prochainement.
+                </p>
+                <div style="margin-top: 3rem; display: flex; justify-content: center; gap: 1rem;">
+                    <a href="mailto:contact@babylone42.fr" class="btn btn-primary"
+                        style="display: inline-flex; align-items: center; gap: 0.5rem;">
+                        <i class="fas fa-envelope"></i> Nous contacter en attendant
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER (Exact copy from main site) -->
+    <footer class="mega-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Column 1: Brand & Socials -->
+                <div class="footer-col brand-col">
+                    <img src="images/logo.svg" alt="Babylone42 Logo" class="footer-logo-img">
+                    <p class="footer-desc">Babylone42 donne le pouvoir aux équipes de transformer des données brutes en
+                        informations claires grâce à l'IA.</p>
+                    <div class="footer-socials">
+                        <a href="#" aria-label="X Twitter"><i class="fab fa-x-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+
+                <!-- Column 2: Accueil -->
+                <div class="footer-col">
+                    <h4 class="footer-title">Accueil</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">Vos interlocuteurs</a></li>
+                        <li><a href="#">Blog / Actualités</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Solutions -->
+                <div class="footer-col">
+                    <h4 class="footer-title">Solutions</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="#">Chatbots 24/7</a></li>
+                        <li><a href="#">Copilots IA</a></li>
+                        <li><a href="#">Automatisation</a></li>
+                        <li><a href="#">Audit & Conseil</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Formations -->
+                <div class="footer-col">
+                    <h4 class="footer-title">Formations</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="#">IA Générative</a></li>
+                        <li><a href="#">Jupyter</a></li>
+                        <li><a href="#">Python</a></li>
+                        <li><a href="#">Machine Learning</a></li>
+                        <li><a href="#">Deep Learning</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 5: Contact -->
+                <div class="footer-col newsletter-col">
+                    <h4 class="footer-title">Contact</h4>
+                    <p class="footer-contact-info">
+                        <a href="mailto:contact@babylone42.fr"><i class="fas fa-envelope"></i>
+                            contact@babylone42.fr</a><br>
+                        <a href="tel:+330773609849"><i class="fas fa-phone-alt"></i> +33 0 7 73 60 98 49</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p class="copyright">© 2025 Babylone42. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
