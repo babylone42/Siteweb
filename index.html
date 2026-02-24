@@ -21,7 +21,7 @@
     <!-- NAVIGATION -->
     <nav class="navbar">
         <div class="container">
-            <a href="#" class="logo">
+            <a href="index.html" class="logo">
                 <img src="images/logo.svg" alt="Babylone42 Logo" style="height: 40px;">
             </a>
             <ul class="nav-links">
@@ -29,8 +29,8 @@
                     <a href="#hero">Accueil <i class="fas fa-chevron-down"
                             style="font-size: 0.8rem; margin-left: 0.3rem;"></i></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#about-us">About us</a></li>
-                        <li><a href="#vos-interlocuteurs">Vos interlocuteurs</a></li>
+                        <li><a href="about.html">About us</a></li>
+                        <li><a href="interlocuteurs.html">Vos interlocuteurs</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
@@ -46,13 +46,18 @@
                     <a href="#formations">Formations <i class="fas fa-chevron-down"
                             style="font-size: 0.8rem; margin-left: 0.3rem;"></i></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#formations">Python & Data Science</a></li>
-                        <li><a href="#formations">Machine Learning</a></li>
-                        <li><a href="#formations">IA Générative</a></li>
+                        <li><a href="formation-genai.html">IA Générative</a></li>
+                        <li><a href="formation-jupyter.html">Jupyter</a></li>
+                        <li><a href="formation-python.html">Python</a></li>
+                        <li><a href="formation-ml.html">Machine Learning</a></li>
+                        <li><a href="formation-dl.html">Deep Learning</a></li>
+                        <li><a href="calendrier-formations.html"
+                                style="border-top: 1px solid rgba(255,255,255,0.1); margin-top: 0.5rem; padding-top: 0.8rem;">Calendrier
+                                des formations</a></li>
                     </ul>
                 </li>
-                <li><a href="#newsletter">Newsletter</a></li>
-                <li><a href="#contact" class="btn btn-primary nav-btn">Contact</a></li>
+                <li><a href="articles.html">Blog/actualités</a></li>
+                <li><a href="contact-page.html" class="btn btn-primary nav-btn">Contact</a></li>
                 <li class="nav-socials">
                     <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
                     <a href="#" aria-label="X Twitter"><i class="fab fa-x-twitter"></i></a>
@@ -261,7 +266,7 @@
     <!-- FORMATIONS SECTION (BENTO GRID) -->
     <section id="formations" class="section-padding bg-darker">
         <div class="container">
-            <h2 class="section-title">Formations <span class="highlight">Expert</span></h2>
+            <h2 class="section-title">Formations</h2>
             <p class="section-subtitle">Montez en compétences avec nos ingénieurs-formateurs.</p>
 
             <div class="carousel-container">
@@ -270,7 +275,7 @@
                 <div class="carousel-track-wrapper">
                     <div class="carousel-track" id="formations-track">
                         <!-- Card 1 -->
-                        <a href="#contact" class="solution-card">
+                        <a href="formation-genai.html" class="solution-card">
                             <div class="solution-visual">
                                 <img src="images/formation_genai.png" alt="IA Générative & Prompting">
                             </div>
@@ -282,7 +287,7 @@
                         </a>
 
                         <!-- Card 2 -->
-                        <a href="#contact" class="solution-card inverted">
+                        <a href="formation-jupyter.html" class="solution-card inverted">
                             <div class="solution-visual">
                                 <img src="images/formation_jupyter.png" alt="Jupyter Notebook pour le reporting">
                             </div>
@@ -294,7 +299,7 @@
                         </a>
 
                         <!-- Card 3 -->
-                        <a href="#contact" class="solution-card">
+                        <a href="formation-python.html" class="solution-card">
                             <div class="solution-visual">
                                 <img src="images/formation_python.png" alt="Python pour l'analyse de données - POO">
                             </div>
@@ -306,7 +311,7 @@
                         </a>
 
                         <!-- Card 4 -->
-                        <a href="#contact" class="solution-card inverted">
+                        <a href="formation-ml.html" class="solution-card inverted">
                             <div class="solution-visual">
                                 <img src="images/formation_ml.png" alt="Machine Learning - Fondamentaux">
                             </div>
@@ -318,7 +323,7 @@
                         </a>
 
                         <!-- Card 5 -->
-                        <a href="#contact" class="solution-card">
+                        <a href="formation-dl.html" class="solution-card">
                             <div class="solution-visual">
                                 <img src="images/formation_dl.png" alt="Deep Learning - Apprentissage Profond">
                             </div>
@@ -334,8 +339,10 @@
                         class="fas fa-chevron-right"></i></button>
             </div>
 
-            <div class="training-cta">
-                <a href="#dates-formation" class="btn btn-primary">Voir les dates de formation</a>
+            <div class="training-cta" style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="calendrier-formations.html" class="btn btn-primary">Voir les dates de formation</a>
+                <a href="#contact" class="btn btn-secondary"><i class="fas fa-phone-alt"
+                        style="margin-right: 0.5rem;"></i>Appel gratuit</a>
             </div>
         </div>
     </section>
@@ -658,10 +665,7 @@
                             </div>
                         </div>
 
-                        <div class="form-group">
-                            <label for="company">Entreprise *</label>
-                            <input type="text" id="company" required placeholder="Nom de votre société">
-                        </div>
+
 
                         <div class="form-row form-grid-2">
                             <div class="form-group">
@@ -796,10 +800,10 @@
                 <div class="footer-col">
                     <h4 class="footer-title">Accueil</h4>
                     <ul class="footer-links-list">
-                        <li><a href="#about-us">About us</a></li>
-                        <li><a href="#vos-interlocuteurs">Vos interlocuteurs</a></li>
-                        <li><a href="#articles">Blog / Actualités</a></li>
-                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="about.html">About us</a></li>
+                        <li><a href="interlocuteurs.html">Vos interlocuteurs</a></li>
+                        <li><a href="articles.html">Blog / Actualités</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
                     </ul>
                 </div>
 
@@ -810,7 +814,7 @@
                         <li><a href="solution-chatbots.html">Chatbots 24/7</a></li>
                         <li><a href="solution-copilots.html">Copilots IA</a></li>
                         <li><a href="solution-automation.html">Automatisation</a></li>
-                        <li><a href="#">Audit & Conseil</a></li>
+                        <li><a href="solution-audit.html">Audit & Conseil</a></li>
                     </ul>
                 </div>
 
@@ -818,11 +822,11 @@
                 <div class="footer-col">
                     <h4 class="footer-title">Formations</h4>
                     <ul class="footer-links-list">
-                        <li><a href="#formations">IA Générative</a></li>
-                        <li><a href="#formations">Jupyter</a></li>
-                        <li><a href="#formations">Python</a></li>
-                        <li><a href="#formations">Machine Learning</a></li>
-                        <li><a href="#formations">Deep Learning</a></li>
+                        <li><a href="formation-genai.html">IA Générative</a></li>
+                        <li><a href="formation-jupyter.html">Jupyter</a></li>
+                        <li><a href="formation-python.html">Python</a></li>
+                        <li><a href="formation-ml.html">Machine Learning</a></li>
+                        <li><a href="formation-dl.html">Deep Learning</a></li>
                     </ul>
                 </div>
 
@@ -844,9 +848,9 @@
             <div class="footer-bottom">
                 <p class="copyright">© 2025 Babylone42. All rights reserved.</p>
                 <div class="legal-links">
-                    <a href="#">Mentions Légales</a>
-                    <a href="#">Politique de Confidentialité</a>
-                    <a href="#">Paramètres des cookies</a>
+                    <a href="mentions-legales.html">Mentions Légales</a>
+                    <a href="politique-confidentialite.html">Politique de Confidentialité</a>
+                    <a href="cookies.html">Paramètres des cookies</a>
                 </div>
             </div>
         </div>

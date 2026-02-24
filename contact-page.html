@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Babylone42 | Partenaire IA & Automatisation pour Entreprises</title>
+    <meta name="description"
+        content="Déployez des solutions IA concrètes (Copilots, Chatbots, Automatisation) et formez vos équipes avec Babylone42. Expertise technique et pédagogique à Marseille et en France.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Space+Grotesk:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=5">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="images/logo.svg" alt="Babylone42 Logo" style="height: 40px;">
+            </a>
+            <ul class="nav-links">
+                <li class="dropdown">
+                    <a href="#hero">Accueil <i class="fas fa-chevron-down"
+                            style="font-size: 0.8rem; margin-left: 0.3rem;"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="about.html">About us</a></li>
+                        <li><a href="interlocuteurs.html">Vos interlocuteurs</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#solutions">Solutions <i class="fas fa-chevron-down"
+                            style="font-size: 0.8rem; margin-left: 0.3rem;"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="solution-chatbots.html">Chatbots 24/7</a></li>
+                        <li><a href="solution-copilots.html">Copilots IA</a></li>
+                        <li><a href="solution-automation.html">Automatisation</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#formations">Formations <i class="fas fa-chevron-down"
+                            style="font-size: 0.8rem; margin-left: 0.3rem;"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="formation-genai.html">IA Générative</a></li>
+                        <li><a href="formation-jupyter.html">Jupyter</a></li>
+                        <li><a href="formation-python.html">Python</a></li>
+                        <li><a href="formation-ml.html">Machine Learning</a></li>
+                        <li><a href="formation-dl.html">Deep Learning</a></li>
+                        <li><a href="calendrier-formations.html"
+                                style="border-top: 1px solid rgba(255,255,255,0.1); margin-top: 0.5rem; padding-top: 0.8rem;">Calendrier
+                                des formations</a></li>
+                    </ul>
+                </li>
+                <li><a href="articles.html">Blog/actualités</a></li>
+                <li><a href="contact-page.html" class="btn btn-primary nav-btn">Contact</a></li>
+                <li class="nav-socials">
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" aria-label="X Twitter"><i class="fab fa-x-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <main class="page-content" style="padding-top: 80px; min-height: 60vh;">
+        <div style="text-align: center; margin-bottom: 2rem; padding-top: 2rem;">
+            <h1 class="section-title">Contactez-<span class="highlight">nous</span></h1>
+        </div>
+        <!-- CONTACT SECTION -->
+        <section id="contact" class="section-padding bg-light" style="padding-top: 0;">
+            <div class="container">
+                <div class="contact-grid">
+                    <!-- Left: Info -->
+                    <div class="contact-info">
+                        <span class="badge"
+                            style="background: rgba(16, 155, 128, 0.1); color: var(--primary-color);">Contact</span>
+                        <h2 class="section-title" style="text-align: left; margin-bottom: 1rem;">Discutez de votre <span
+                                class="highlight">projet</span></h2>
+                        <p style="margin-bottom: 2rem; font-size: 1.1rem; color: var(--text-muted);">Quel est votre défi
+                            actuel ? Laissez-nous un message et notre équipe vous recontactera très rapidement.</p>
+
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                                <div class="contact-text">
+                                    <strong>Email</strong>
+                                    <a href="mailto:contact@babylone42.fr">contact@babylone42.fr</a>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
+                                <div class="contact-text">
+                                    <strong>Téléphone</strong>
+                                    <a href="tel:+330773609849">+33 0 7 73 60 98 49</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Form -->
+                    <div class="contact-form-container">
+                        <form class="contact-form" id="contactForm">
+                            <!-- 1. Service Type -->
+                            <div class="form-group service-toggle">
+                                <label style="margin-bottom: 0.75rem; display: block; font-weight: 600;">Type de
+                                    besoin</label>
+                                <div class="toggle-buttons">
+                                    <button type="button" class="btn-toggle active" data-type="solutions">Solutions
+                                        IA</button>
+                                    <button type="button" class="btn-toggle" data-type="formations">Formations</button>
+                                </div>
+                            </div>
+
+                            <!-- 2. Sub-options (Dynamic) -->
+                            <div class="form-group dynamic-options" id="options-solutions">
+                                <label style="margin-bottom: 0.75rem; display: block;">Que souhaitez-vous mettre en
+                                    place
+                                    ?</label>
+                                <div class="checkbox-buttons">
+                                    <label class="checkbox-btn"><input type="radio" name="solution_type"
+                                            value="copilot">
+                                        <span>Copilot sur-mesure</span></label>
+                                    <label class="checkbox-btn"><input type="radio" name="solution_type"
+                                            value="chatbot">
+                                        <span>Chatbot de support</span></label>
+                                    <label class="checkbox-btn"><input type="radio" name="solution_type"
+                                            value="automation">
+                                        <span>Automatisation de process</span></label>
+                                    <label class="checkbox-btn"><input type="radio" name="solution_type" value="audit">
+                                        <span>Audit & Conseil</span></label>
+                                    <label class="checkbox-btn"><input type="radio" name="solution_type" value="other"
+                                            checked> <span>Autre besoin</span></label>
+                                </div>
+                            </div>
+
+                            <div class="form-group dynamic-options hidden" id="options-formations">
+                                <label style="margin-bottom: 0.75rem; display: block;">Quelles formations vous
+                                    intéressent
+                                    ?</label>
+                                <div class="checkbox-buttons">
+                                    <label class="checkbox-btn"><input type="checkbox" name="formation_type"
+                                            value="prompting"> <span>Prompting & IA Générative</span></label>
+                                    <label class="checkbox-btn"><input type="checkbox" name="formation_type"
+                                            value="python">
+                                        <span>Python (Data / POO)</span></label>
+                                    <label class="checkbox-btn"><input type="checkbox" name="formation_type"
+                                            value="machine_learning"> <span>Machine Learning</span></label>
+                                    <label class="checkbox-btn"><input type="checkbox" name="formation_type"
+                                            value="deep_learning"> <span>Deep Learning</span></label>
+                                    <label class="checkbox-btn"><input type="checkbox" name="formation_type"
+                                            value="custom">
+                                        <span>Parcours sur-mesure</span></label>
+                                </div>
+                            </div>
+
+                            <!-- 3. Personal Info Grid -->
+                            <div class="form-row form-grid-2">
+                                <div class="form-group">
+                                    <label for="lastname">Nom *</label>
+                                    <input type="text" id="lastname" required placeholder="Dupont">
+                                </div>
+                                <div class="form-group">
+                                    <label for="firstname">Prénom *</label>
+                                    <input type="text" id="firstname" required placeholder="Jean">
+                                </div>
+                            </div>
+
+
+
+                            <div class="form-row form-grid-2">
+                                <div class="form-group">
+                                    <label for="phone">Téléphone</label>
+                                    <input type="tel" id="phone" placeholder="06 12 34 56 78">
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email professionnel *</label>
+                                    <input type="email" id="email" required placeholder="jean.dupont@entreprise.com">
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block">Parlons de votre projet IA
+                                gratuitement</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+
+    <footer class="mega-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Column 1: Brand & Socials -->
+                <div class="footer-col brand-col">
+                    <img src="images/logo.svg" alt="Babylone42 Logo" class="footer-logo-img">
+                    <p class="footer-desc">Babylone42 donne le pouvoir aux équipes de transformer des données brutes en
+                        informations claires grâce à l'IA.</p>
+                    <div class="footer-socials">
+                        <a href="#" aria-label="X Twitter"><i class="fab fa-x-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+
+                <!-- Column 2: Accueil -->
+                <div class="footer-col">
+                    <h4 class="footer-title">Accueil</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="about.html">About us</a></li>
+                        <li><a href="interlocuteurs.html">Vos interlocuteurs</a></li>
+                        <li><a href="articles.html">Blog / Actualités</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Solutions -->
+                <div class="footer-col">
+                    <h4 class="footer-title">Solutions</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="solution-chatbots.html">Chatbots 24/7</a></li>
+                        <li><a href="solution-copilots.html">Copilots IA</a></li>
+                        <li><a href="solution-automation.html">Automatisation</a></li>
+                        <li><a href="solution-audit.html">Audit & Conseil</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Formations -->
+                <div class="footer-col">
+                    <h4 class="footer-title">Formations</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="formation-genai.html">IA Générative</a></li>
+                        <li><a href="formation-jupyter.html">Jupyter</a></li>
+                        <li><a href="formation-python.html">Python</a></li>
+                        <li><a href="formation-ml.html">Machine Learning</a></li>
+                        <li><a href="formation-dl.html">Deep Learning</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 5: Contact & Newsletter -->
+                <div class="footer-col newsletter-col">
+                    <h4 class="footer-title">Contact & Newsletter</h4>
+                    <p class="footer-contact-info">
+                        <a href="mailto:contact@babylone42.fr"><i class="fas fa-envelope"></i>
+                            contact@babylone42.fr</a><br>
+                        <a href="tel:+330773609849"><i class="fas fa-phone-alt"></i> +33 0 7 73 60 98 49</a>
+                    </p>
+                    <form class="footer-newsletter-form">
+                        <input type="email" placeholder="Votre email" required>
+                        <button type="submit" aria-label="S'inscrire"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p class="copyright">© 2025 Babylone42. All rights reserved.</p>
+                <div class="legal-links">
+                    <a href="mentions-legales.html">Mentions Légales</a>
+                    <a href="politique-confidentialite.html">Politique de Confidentialité</a>
+                    <a href="cookies.html">Paramètres des cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

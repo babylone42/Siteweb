@@ -29,10 +29,14 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Form Submission Handling (Mock)
+    // Supabase Configuration
+    const SUPABASE_URL = 'https://nzkirwiilgdlitbylxxv.supabase.co';
+    const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im56a2lyd2lpbGdkbGl0YnlseHh2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzE5NDYxNzIsImV4cCI6MjA4NzUyMjE3Mn0.xad9ed_JK-6goYodSyhhcEEiOdmro0xq2skohjGW7SE';
+
+    // Form Submission Handling (Contact via Supabase)
     const form = document.getElementById('contactForm');
     if (form) {
-        form.addEventListener('submit', (e) => {
+        form.addEventListener('submit', async (e) => {
             e.preventDefault();
             const btn = form.querySelector('button');
             const originalText = btn.innerText;
@@ -40,19 +44,146 @@ document.addEventListener('DOMContentLoaded', () => {
             btn.innerText = 'Envoi en cours...';
             btn.style.opacity = '0.7';
 
-            setTimeout(() => {
-                btn.innerText = 'Message envoyé ! ✅';
-                btn.style.backgroundColor = '#109B80';
-                btn.style.color = '#fff';
-                form.reset();
+            // Gather Data
+            const activeToggle = document.querySelector('.btn-toggle.active');
+            const need_type = activeToggle ? activeToggle.getAttribute('data-type') : 'solutions';
+
+            let sub_need = '';
+            if (need_type === 'solutions') {
+                const selectedRadio = document.querySelector('input[name="solution_type"]:checked');
+                sub_need = selectedRadio ? selectedRadio.value : 'other';
+            } else {
+                const checkedBoxes = document.querySelectorAll('input[name="formation_type"]:checked');
+                const values = Array.from(checkedBoxes).map(cb => cb.value);
+                sub_need = values.length > 0 ? values.join(', ') : 'none_selected';
+            }
+
+            const payload = {
+                first_name: document.getElementById('firstname').value,
+                last_name: document.getElementById('lastname').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value || null,
+                need_type: need_type,
+                sub_need: sub_need
+            };
+
+            try {
+                const response = await fetch(`${SUPABASE_URL}/rest/v1/contacts`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'apikey': SUPABASE_KEY,
+                        'Authorization': `Bearer ${SUPABASE_KEY}`,
+                        'Prefer': 'return=minimal'
+                    },
+                    body: JSON.stringify(payload)
+                });
+
+                if (response.ok) {
+                    form.reset();
+                    btn.innerText = originalText;
+                    btn.style.opacity = '1';
+
+                    // Reset toggles UI state visually back to Solutions
+                    const solutionsBtn = document.querySelector('.btn-toggle[data-type="solutions"]');
+                    if (solutionsBtn && !solutionsBtn.classList.contains('active')) {
+                        solutionsBtn.click();
+                    }
+
+                    if (window.showSuccessModal) {
+                        window.showSuccessModal(
+                            "Message envoyé !",
+                            "Votre demande a bien été reçue. Un expert Babylone42 vous recontactera très rapidement."
+                        );
+                    }
+                } else {
+                    const errorResponse = await response.text();
+                    console.error('Supabase Error:', errorResponse);
+                    btn.innerText = 'Erreur lors de l\'envoi ❌';
+                    btn.style.backgroundColor = '#ef4444';
+                    btn.style.color = '#fff';
+                    setTimeout(() => {
+                        btn.innerText = originalText;
+                        btn.style.backgroundColor = '';
+                        btn.style.opacity = '1';
+                    }, 5000);
+                }
+            } catch (err) {
+                console.error('Network Error:', err);
+                btn.innerText = 'Erreur réseau ❌';
+                btn.style.backgroundColor = '#ef4444';
                 setTimeout(() => {
                     btn.innerText = originalText;
                     btn.style.backgroundColor = '';
                     btn.style.opacity = '1';
-                }, 3000);
-            }, 1500);
+                }, 5000);
+            }
         });
     }
+
+    // Newsletter Submission Handling (Supabase)
+    const newsletterForms = document.querySelectorAll('.footer-newsletter-form');
+    newsletterForms.forEach(nForm => {
+        nForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const input = nForm.querySelector('input[type="email"]');
+            const btn = nForm.querySelector('button');
+            const email = input.value;
+            if (!email) return;
+
+            // Visual feedback
+            const originalHtml = btn.innerHTML;
+            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
+            btn.style.opacity = '0.7';
+
+            try {
+                const response = await fetch(`${SUPABASE_URL}/rest/v1/newsletter_subscribers`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'apikey': SUPABASE_KEY,
+                        'Authorization': `Bearer ${SUPABASE_KEY}`,
+                        'Prefer': 'return=minimal'
+                    },
+                    body: JSON.stringify({ email: email })
+                });
+
+                if (response.ok || response.status === 409) {
+                    // 409 Conflict if email already exists, treat as success for UX
+                    btn.innerHTML = originalHtml;
+                    btn.style.opacity = '1';
+                    input.value = '';
+
+                    if (window.showSuccessModal) {
+                        window.showSuccessModal(
+                            "Inscription réussie !",
+                            "Merci pour votre intérêt. Vous recevrez bientôt nos actualités IA."
+                        );
+                    }
+                } else {
+                    console.error("Erreur serveur", await response.text());
+                    btn.innerHTML = '<i class="fas fa-times"></i>';
+                    btn.style.backgroundColor = '#ef4444';
+                    btn.style.color = '#fff';
+                    btn.style.opacity = '1';
+                    setTimeout(() => {
+                        btn.innerHTML = originalHtml;
+                        btn.style.backgroundColor = '';
+                        btn.style.color = '';
+                    }, 3000);
+                }
+            } catch (err) {
+                console.error(err);
+                btn.innerHTML = '<i class="fas fa-wifi"></i>';
+                btn.style.backgroundColor = '#ef4444';
+                btn.style.opacity = '1';
+                setTimeout(() => {
+                    btn.innerHTML = originalHtml;
+                    btn.style.backgroundColor = '';
+                }, 3000);
+            }
+        });
+    });
 
     // Intersection Observer for Fade-in Animations
     const observer = new IntersectionObserver((entries) => {
@@ -220,5 +351,45 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // Global Success Modal Logic
+    window.showSuccessModal = function (title, message) {
+        let modal = document.getElementById('global-success-modal');
+        if (!modal) {
+            modal = document.createElement('div');
+            modal.id = 'global-success-modal';
+            modal.className = 'success-modal-overlay';
+            modal.innerHTML = `
+                <div class="success-modal-content">
+                    <div class="success-modal-icon">
+                        <i class="fas fa-check"></i>
+                    </div>
+                    <h3 id="success-modal-title"></h3>
+                    <p id="success-modal-message"></p>
+                    <button class="success-modal-close" onclick="closeSuccessModal()">Fermer</button>
+                </div>
+            `;
+            // Add click-to-close on overlay background
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) closeSuccessModal();
+            });
+            document.body.appendChild(modal);
+        }
+
+        document.getElementById('success-modal-title').innerText = title;
+        document.getElementById('success-modal-message').innerText = message;
+
+        // Timeout to ensure display transition
+        setTimeout(() => {
+            modal.classList.add('active');
+        }, 10);
+    }
+
+    window.closeSuccessModal = function () {
+        const modal = document.getElementById('global-success-modal');
+        if (modal) {
+            modal.classList.remove('active');
+        }
+    };
 
 });

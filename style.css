@@ -132,9 +132,27 @@ p {
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
 }
 
-.bg-light .badge,
+.bg-light .badge {
+    color: var(--primary-color);
+    background: rgba(14, 138, 148, 0.1);
+}
+
 .bg-light .faq-item {
-    color: var(--text-color);
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+}
+
+.bg-light .faq-item.active {
+    background: #f8fafc;
+    border-color: var(--primary-color);
+}
+
+.bg-light .faq-question h3 {
+    color: #0f172a;
+}
+
+.bg-light .faq-answer p {
+    color: #475569;
 }
 
 /* Subsection styling */
@@ -1567,4 +1585,243 @@ p {
         display: none;
         /* Hide on mobile to save space unless explicitly asked */
     }
+}
+
+/* =========================================
+   STEP-BY-STEP (COMMENT ÇA MARCHE) UI 
+   ========================================= */
+.step-by-step-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    /* Fallback for smaller screens */
+    margin-top: 3rem;
+}
+
+@media (min-width: 992px) {
+    .step-by-step-container {
+        flex-wrap: nowrap;
+    }
+}
+
+.step-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 240px;
+    position: relative;
+}
+
+.step-image-wrap {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    /* Outer border */
+    border: 3px solid rgba(16, 155, 128, 0.2);
+    padding: 8px;
+    /* Space before inner image */
+    background: transparent;
+    margin-bottom: 1.5rem;
+    position: relative;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.bg-darker .step-image-wrap {
+    border-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+.step-card:hover .step-image-wrap {
+    transform: translateY(-5px);
+    border-color: var(--primary-color);
+}
+
+.step-image-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    /* Simple dashed inner border */
+    position: relative;
+    z-index: 2;
+}
+
+/* Create the dashed ring inside */
+.step-image-wrap::after {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    border-radius: 50%;
+    border: 2px dashed rgba(16, 155, 128, 0.5);
+    z-index: 3;
+    pointer-events: none;
+}
+
+.bg-darker .step-image-wrap::after {
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.step-content h4 {
+    font-size: 1.2rem;
+    color: #0f172a;
+    margin-bottom: 0.5rem;
+    font-family: var(--font-heading);
+}
+
+.bg-darker .step-content h4 {
+    color: #fff;
+}
+
+.step-content p {
+    font-size: 0.95rem;
+    color: #475569;
+    line-height: 1.5;
+}
+
+.bg-darker .step-content p {
+    color: var(--text-muted);
+}
+
+/* Background gradient ring on hover */
+.step-image-wrap::before {
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.step-card:hover .step-image-wrap::before {
+    opacity: 0.5;
+}
+
+/* SQUIGGLY ARROW */
+.step-arrow {
+    flex-shrink: 0;
+    color: var(--primary-color);
+    opacity: 0.6;
+    width: 60px;
+    height: 160px;
+    /* Align centrally with the 160px image */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.step-arrow svg {
+    width: 100%;
+    height: auto;
+    stroke: currentColor;
+    stroke-width: 2;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    filter: drop-shadow(0 0 5px rgba(16, 155, 128, 0.2));
+}
+
+@media (max-width: 1050px) {
+    .step-arrow {
+        display: none;
+        /* Hide arrows on smaller tablet/mobile to save space */
+    }
+}
+
+/* SUCCESS MODAL POPUP */
+.success-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(15, 23, 42, 0.85);
+    /* rgba value matching var(--bg-color) roughly */
+    backdrop-filter: blur(8px);
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.success-modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.success-modal-content {
+    background: var(--card-bg);
+    /* Use card background for consistency */
+    padding: 3rem 2rem;
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+    text-align: center;
+    max-width: 450px;
+    width: 90%;
+    transform: scale(0.9) translateY(20px);
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.success-modal-overlay.active .success-modal-content {
+    transform: scale(1) translateY(0);
+}
+
+.success-modal-icon {
+    width: 80px;
+    height: 80px;
+    background: rgba(16, 155, 128, 0.1);
+    color: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    margin: 0 auto 1.5rem;
+    box-shadow: 0 0 20px rgba(16, 155, 128, 0.2);
+}
+
+.success-modal-content h3 {
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    color: white;
+}
+
+.success-modal-content p {
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+.success-modal-close {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 1rem 2.5rem;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.success-modal-close:hover {
+    background: #0d826b;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(16, 155, 128, 0.3);
 }

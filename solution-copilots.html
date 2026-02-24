@@ -23,58 +23,347 @@
                 <img src="images/logo.svg" alt="Babylone42 Logo" style="height: 40px;">
             </a>
             <ul class="nav-links">
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="index.html#solutions">Solutions</a></li>
-                <li><a href="index.html#newsletter">Newsletter</a></li>
-                <li><a href="index.html#contact" class="btn btn-primary nav-btn">Contact</a></li>
+                <li class="dropdown">
+                    <a href="#hero">Accueil <i class="fas fa-chevron-down"
+                            style="font-size: 0.8rem; margin-left: 0.3rem;"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="about.html">About us</a></li>
+                        <li><a href="interlocuteurs.html">Vos interlocuteurs</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#solutions">Solutions <i class="fas fa-chevron-down"
+                            style="font-size: 0.8rem; margin-left: 0.3rem;"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="solution-chatbots.html">Chatbots 24/7</a></li>
+                        <li><a href="solution-copilots.html">Copilots IA</a></li>
+                        <li><a href="solution-automation.html">Automatisation</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#formations">Formations <i class="fas fa-chevron-down"
+                            style="font-size: 0.8rem; margin-left: 0.3rem;"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="formation-genai.html">IA Générative</a></li>
+                        <li><a href="formation-jupyter.html">Jupyter</a></li>
+                        <li><a href="formation-python.html">Python</a></li>
+                        <li><a href="formation-ml.html">Machine Learning</a></li>
+                        <li><a href="formation-dl.html">Deep Learning</a></li>
+                        <li><a href="calendrier-formations.html"
+                                style="border-top: 1px solid rgba(255,255,255,0.1); margin-top: 0.5rem; padding-top: 0.8rem;">Calendrier
+                                des formations</a></li>
+                    </ul>
+                </li>
+                <li><a href="articles.html">Blog/actualités</a></li>
+                <li><a href="contact-page.html" class="btn btn-primary nav-btn">Contact</a></li>
+                <li class="nav-socials">
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" aria-label="X Twitter"><i class="fab fa-x-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                </li>
             </ul>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
         </div>
     </nav>
 
-    <!-- HEADER -->
-    <header class="section-padding" style="padding-top: 150px; background-color: var(--bg-color);">
-        <div class="container hero-content">
-            <h1>Copilots IA pour <span class="highlight">Équipes Agiles</span></h1>
-            <p class="hero-subtitle">Des assistants intelligents sur mesure pour vos départements (Vente, RH,
-                Direction). Assistez, rédigez et analysez en un temps record.</p>
-        </div>
-    </header>
-
-    <!-- CONTENT -->
-    <section class="section-padding">
-        <div class="container">
-            <div class="grid-2" style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
-                <div>
-                    <h2>Pourquoi un Copilot ?</h2>
-                    <p>Vos collaborateurs passent jusqu'à 40% de leur temps à rechercher de l'information ou à rédiger
-                        des contenus standards. Un Copilot IA s'intègre à vos outils (Teams, Slack, CRM) pour :</p>
-                    <ul class="bento-list" style="margin-top: 2rem;">
-                        <li><strong>Recherche sémantique :</strong> Retrouvez n'importe quel document en posant une
-                            question naturelle.</li>
-                        <li><strong>Rédaction assistée :</strong> Générez des emails, des rapports ou des posts LinkedIn
-                            en quelques secondes.</li>
-                        <li><strong>Analyse de données :</strong> Interrogez vos fichiers Excel ou PDF pour en extraire
-                            les tendances clés.</li>
-                    </ul>
-                </div>
-                <div class="bento-visual">
-                    <img src="images/solution-copilot.jpg" alt="Copilot Interface"
-                        style="border-radius: 12px; opacity: 0.9;">
+    <main class="page-content" style="padding-top: 80px;">
+        <!-- HERO SOLUTION -->
+        <section class="formation-hero bg-darker section-padding" style="position: relative; overflow: hidden;">
+            <div class="container" style="position: relative; z-index: 2; text-align: center; max-width: 800px;">
+                <div class="bento-icon" style="margin: 0 auto 1.5rem; font-size: 3rem; color: var(--primary-color);"><i
+                        class="fas fa-brain"></i></div>
+                <h1 style="font-size: 3rem; margin-bottom: 1rem;">Copilots IA : Un assistant pour chaque employé</h1>
+                <p style="font-size: 1.2rem; color: var(--text-muted); margin-bottom: 2rem;">Des assistants intelligents
+                    sur mesure pour vos départements (Vente, RH, Direction). Recherchez, rédigez et analysez en un temps
+                    record avec vos propres données.</p>
+                <div style="display: flex; gap: 1rem; justify-content: center;">
+                    <a href="contact-page.html" class="btn btn-primary">Demander une démo</a>
                 </div>
             </div>
-
-            <div class="section-cta" style="margin-top: 4rem; text-align: center;">
-                <a href="index.html#contact" class="btn btn-primary">Déployer un Copilot</a>
+            <!-- Background element -->
+            <div
+                style="position: absolute; top: -50%; left: -10%; width: 500px; height: 500px; background: radial-gradient(circle, rgba(14,138,148,0.15) 0%, transparent 70%); z-index: 1;">
             </div>
-        </div>
-    </section>
+        </section>
+
+        <!-- BENTO KEY INFO -->
+        <section class="section-padding bg-light">
+            <div class="container">
+                <div class="grid-4"
+                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem;">
+                    <div class="bento-card"
+                        style="background: white; border: 1px solid #e2e8f0; color: #0f172a; text-align: center; padding: 1.5rem;">
+                        <i class="fas fa-search"
+                            style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
+                        <h4 style="margin-bottom: 0.5rem; font-size: 1.1rem;">Recherche Sémantique</h4>
+                        <p style="color: #64748b; font-size: 0.95rem; margin-bottom: 0;">Trouvez l'information
+                            instantanément</p>
+                    </div>
+                    <div class="bento-card"
+                        style="background: white; border: 1px solid #e2e8f0; color: #0f172a; text-align: center; padding: 1.5rem;">
+                        <i class="fas fa-pen-nib"
+                            style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
+                        <h4 style="margin-bottom: 0.5rem; font-size: 1.1rem;">Rédaction Assistée</h4>
+                        <p style="color: #64748b; font-size: 0.95rem; margin-bottom: 0;">Génération de rapports et
+                            synthèses</p>
+                    </div>
+                    <div class="bento-card"
+                        style="background: white; border: 1px solid #e2e8f0; color: #0f172a; text-align: center; padding: 1.5rem;">
+                        <i class="fas fa-lock"
+                            style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
+                        <h4 style="margin-bottom: 0.5rem; font-size: 1.1rem;">Sécurité Privée</h4>
+                        <p style="color: #64748b; font-size: 0.95rem; margin-bottom: 0;">Vos données ne quittent pas
+                            votre SI</p>
+                    </div>
+                    <div class="bento-card"
+                        style="background: white; border: 1px solid #e2e8f0; color: #0f172a; text-align: center; padding: 1.5rem;">
+                        <i class="fas fa-chart-line"
+                            style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
+                        <h4 style="margin-bottom: 0.5rem; font-size: 1.1rem;">Gain de Temps</h4>
+                        <p style="color: #64748b; font-size: 0.95rem; margin-bottom: 0;">40% de temps administratif
+                            gagné</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MARKETING PITCH -->
+        <section class="section-padding bg-darker">
+            <div class="container">
+                <div class="grid-2" style="align-items: center;">
+                    <div>
+                        <h2 class="section-title" style="text-align: left;">Augmentez la productivité de vos équipes
+                        </h2>
+                        <p class="section-subtitle" style="text-align: left; margin-left: 0; margin-bottom: 2rem;">Vos
+                            collaborateurs passent jusqu'à 40% de leur temps à rechercher de l'information.</p>
+                        <ul class="differentiators-list" style="list-style: none; padding: 0;">
+                            <li style="margin-bottom: 1.5rem; display: flex; align-items: flex-start; gap: 1rem;">
+                                <i class="fas fa-check-circle"
+                                    style="color: var(--primary-color); font-size: 1.5rem; margin-top: 0.2rem;"></i>
+                                <div>
+                                    <strong
+                                        style="display: block; font-size: 1.2rem; margin-bottom: 0.2rem;">Intégration
+                                        Native</strong>
+                                    <span style="color: var(--text-muted);">Un Copilot s'intègre directement où vous
+                                        travaillez (Slack, Teams, Intranet) pour fournir des réponses basées sur VOTRE
+                                        documentation interne.</span>
+                                </div>
+                            </li>
+                            <li style="margin-bottom: 1.5rem; display: flex; align-items: flex-start; gap: 1rem;">
+                                <i class="fas fa-check-circle"
+                                    style="color: var(--primary-color); font-size: 1.5rem; margin-top: 0.2rem;"></i>
+                                <div>
+                                    <strong style="display: block; font-size: 1.2rem; margin-bottom: 0.2rem;">Analyse et
+                                        Structuration Complexe</strong>
+                                    <span style="color: var(--text-muted);">Demandez au Copilot de synthétiser 50 PDFs
+                                        techniques ou de croiser les données de plusieurs tableaux Excel
+                                        instantanément.</span>
+                                </div>
+                            </li>
+                            <li style="margin-bottom: 1.5rem; display: flex; align-items: flex-start; gap: 1rem;">
+                                <i class="fas fa-check-circle"
+                                    style="color: var(--primary-color); font-size: 1.5rem; margin-top: 0.2rem;"></i>
+                                <div>
+                                    <strong style="display: block; font-size: 1.2rem; margin-bottom: 0.2rem;">Contrôle
+                                        des Accès (RBAC)</strong>
+                                    <span style="color: var(--text-muted);">Chaque employé n'aura accès via le Copilot
+                                        qu'aux documents auxquels il a déjà accès dans votre système de fichiers,
+                                        garantissant une conformité totale.</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bento-visual">
+                        <img src="images/solution-copilot.jpg" alt="Copilot Interface Premium"
+                            style="border-radius: 12px; width: 100%; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- STEP BY STEP PROCESS -->
+        <section class="section-padding bg-light">
+            <div class="container">
+                <h2 class="section-title" style="color: #0f172a;">Comment <span class="highlight">ça marche ?</span>
+                </h2>
+                <p class="section-subtitle">Notre méthodologie pas à pas pour un déploiement sécurisé.</p>
+
+                <div class="step-by-step-container">
+                    <!-- Step 1 -->
+                    <div class="step-card">
+                        <div class="step-image-wrap">
+                            <img src="images/why_us_meeting.png" alt="Cartographie des sources"
+                                onerror="this.src=''; this.parentElement.style.background='var(--primary-color)';">
+                        </div>
+                        <div class="step-content">
+                            <h4>1. Audit Source</h4>
+                            <p>Analyse de vos sources de vérité (Notion, ERP) et définition de la stratégie d'ingestion.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Arrow -->
+                    <div class="step-arrow">
+                        <svg viewBox="0 0 100 40" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M 5,20 Q 20,5 35,20 T 65,20 T 85,20" fill="none" stroke="currentColor"
+                                stroke-width="2" />
+                            <polyline points="75,10 85,20 75,30" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" />
+                        </svg>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="step-card">
+                        <div class="step-image-wrap">
+                            <img src="images/problem-network.jpg" alt="Architecture RAG"
+                                onerror="this.src=''; this.parentElement.style.background='var(--primary-color)';">
+                        </div>
+                        <div class="step-content">
+                            <h4>2. Base & RAG</h4>
+                            <p>Vectorisation de vos données dans une base isolée. Aucune donnée n'entraîne les modèles
+                                publics.</p>
+                        </div>
+                    </div>
+
+                    <!-- Arrow -->
+                    <div class="step-arrow">
+                        <svg viewBox="0 0 100 40" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M 5,20 Q 20,5 35,20 T 65,20 T 85,20" fill="none" stroke="currentColor"
+                                stroke-width="2" />
+                            <polyline points="75,10 85,20 75,30" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" />
+                        </svg>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="step-card">
+                        <div class="step-image-wrap">
+                            <img src="images/why_us_team.png" alt="Développement et Interface"
+                                onerror="this.src=''; this.parentElement.style.background='var(--primary-color)';">
+                        </div>
+                        <div class="step-content">
+                            <h4>3. Interface & Accès</h4>
+                            <p>Création d'une interface web connectée à votre SSO. Les restrictions d'accès existantes
+                                sont respectées.</p>
+                        </div>
+                    </div>
+
+                    <!-- Arrow -->
+                    <div class="step-arrow">
+                        <svg viewBox="0 0 100 40" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M 5,20 Q 20,5 35,20 T 65,20 T 85,20" fill="none" stroke="currentColor"
+                                stroke-width="2" />
+                            <polyline points="75,10 85,20 75,30" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" />
+                        </svg>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="step-card">
+                        <div class="step-image-wrap">
+                            <img src="images/problem-tech.jpg" alt="Ateliers d'adoption"
+                                onerror="this.src=''; this.parentElement.style.background='var(--primary-color)';">
+                        </div>
+                        <div class="step-content">
+                            <h4>4. Adoption</h4>
+                            <p>Accompagnement de vos équipes via des ateliers de Prompt Engineering ciblés.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA SECTION -->
+        <section class="section-padding bg-darker"
+            style="text-align: center; border-top: 1px solid rgba(255,255,255,0.05);">
+            <div class="container">
+                <h2 class="section-title">Augmentez vos équipes dès aujourd'hui</h2>
+                <p class="section-subtitle" style="margin-bottom: 2rem;">Donnez les meilleurs outils à vos
+                    collaborateurs et constatez une libération de leur productivité.</p>
+                <div style="display: flex; gap: 1rem; justify-content: center;">
+                    <a href="contact-page.html" class="btn btn-primary">Planifier une démo</a>
+                    <a href="solution-automation.html" class="btn btn-secondary">Découvrir l'Automatisation</a>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <!-- FOOTER -->
-    <footer>
+    <footer class="mega-footer">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">Babylone42</div>
-                <p class="copyright">© 2024 Babylone42. Tous droits réservés.</p>
+            <div class="footer-grid">
+                <!-- Column 1: Brand & Socials -->
+                <div class="footer-col brand-col">
+                    <img src="images/logo.svg" alt="Babylone42 Logo" class="footer-logo-img">
+                    <p class="footer-desc">Babylone42 donne le pouvoir aux équipes de transformer des données brutes en
+                        informations claires grâce à l'IA.</p>
+                    <div class="footer-socials">
+                        <a href="#" aria-label="X Twitter"><i class="fab fa-x-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+
+                <!-- Column 2: Accueil -->
+                <div class="footer-col">
+                    <h4 class="footer-title">Accueil</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="about.html">About us</a></li>
+                        <li><a href="interlocuteurs.html">Vos interlocuteurs</a></li>
+                        <li><a href="articles.html">Blog / Actualités</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Solutions -->
+                <div class="footer-col">
+                    <h4 class="footer-title">Solutions</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="solution-chatbots.html">Chatbots 24/7</a></li>
+                        <li><a href="solution-copilots.html">Copilots IA</a></li>
+                        <li><a href="solution-automation.html">Automatisation</a></li>
+                        <li><a href="solution-audit.html">Audit & Conseil</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Formations -->
+                <div class="footer-col">
+                    <h4 class="footer-title">Formations</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="formation-genai.html">IA Générative</a></li>
+                        <li><a href="formation-jupyter.html">Jupyter</a></li>
+                        <li><a href="formation-python.html">Python</a></li>
+                        <li><a href="formation-ml.html">Machine Learning</a></li>
+                        <li><a href="formation-dl.html">Deep Learning</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 5: Contact & Newsletter -->
+                <div class="footer-col newsletter-col">
+                    <h4 class="footer-title">Contact & Newsletter</h4>
+                    <p class="footer-contact-info">
+                        <a href="mailto:contact@babylone42.fr"><i class="fas fa-envelope"></i>
+                            contact@babylone42.fr</a><br>
+                        <a href="tel:+330773609849"><i class="fas fa-phone-alt"></i> +33 0 7 73 60 98 49</a>
+                    </p>
+                    <form class="footer-newsletter-form">
+                        <input type="email" placeholder="Votre email" required>
+                        <button type="submit" aria-label="S'inscrire"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p class="copyright">© 2025 Babylone42. All rights reserved.</p>
+                <div class="legal-links">
+                    <a href="mentions-legales.html">Mentions Légales</a>
+                    <a href="politique-confidentialite.html">Politique de Confidentialité</a>
+                    <a href="cookies.html">Paramètres des cookies</a>
+                </div>
             </div>
         </div>
     </footer>

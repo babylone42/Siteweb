@@ -23,57 +23,321 @@
                 <img src="images/logo.svg" alt="Babylone42 Logo" style="height: 40px;">
             </a>
             <ul class="nav-links">
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="index.html#solutions">Solutions</a></li>
-                <li><a href="index.html#newsletter">Newsletter</a></li>
-                <li><a href="index.html#contact" class="btn btn-primary nav-btn">Contact</a></li>
+                <li class="dropdown">
+                    <a href="#hero">Accueil <i class="fas fa-chevron-down"
+                            style="font-size: 0.8rem; margin-left: 0.3rem;"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="about.html">About us</a></li>
+                        <li><a href="interlocuteurs.html">Vos interlocuteurs</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#solutions">Solutions <i class="fas fa-chevron-down"
+                            style="font-size: 0.8rem; margin-left: 0.3rem;"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="solution-chatbots.html">Chatbots 24/7</a></li>
+                        <li><a href="solution-copilots.html">Copilots IA</a></li>
+                        <li><a href="solution-automation.html">Automatisation</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#formations">Formations <i class="fas fa-chevron-down"
+                            style="font-size: 0.8rem; margin-left: 0.3rem;"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="formation-genai.html">IA Générative</a></li>
+                        <li><a href="formation-jupyter.html">Jupyter</a></li>
+                        <li><a href="formation-python.html">Python</a></li>
+                        <li><a href="formation-ml.html">Machine Learning</a></li>
+                        <li><a href="formation-dl.html">Deep Learning</a></li>
+                        <li><a href="calendrier-formations.html"
+                                style="border-top: 1px solid rgba(255,255,255,0.1); margin-top: 0.5rem; padding-top: 0.8rem;">Calendrier
+                                des formations</a></li>
+                    </ul>
+                </li>
+                <li><a href="articles.html">Blog/actualités</a></li>
+                <li><a href="contact-page.html" class="btn btn-primary nav-btn">Contact</a></li>
+                <li class="nav-socials">
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" aria-label="X Twitter"><i class="fab fa-x-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                </li>
             </ul>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
         </div>
     </nav>
 
-    <!-- HEADER -->
-    <header class="section-padding" style="padding-top: 150px; background-color: var(--bg-color);">
-        <div class="container hero-content">
-            <h1>Automatisation <span class="highlight">Intellegente</span></h1>
-            <p class="hero-subtitle">Reporting, Analyse, Synthèse. Extraction et traitement automatique de vos flux de
-                documents (PDF, Excel, Mails).</p>
-        </div>
-    </header>
-
-    <!-- CONTENT -->
-    <section class="section-padding">
-        <div class="container">
-            <div class="grid-2" style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
-                <div>
-                    <h2>Fini la saisie manuelle</h2>
-                    <p>Transformez vos processus administratifs lourds en workflows fluides et automatisés.</p>
-                    <ul class="bento-list" style="margin-top: 2rem;">
-                        <li><strong>Extraction de données (IDP) :</strong> Lisez automatiquement factures, bons de
-                            commande et CV pour remplir votre ERP/CRM.</li>
-                        <li><strong>Génération de documents :</strong> Créez des contrats ou des rapports personnalisés
-                            à partir de templates dynamiques.</li>
-                        <li><strong>Workflows connectés :</strong> Connectez vos outils (Zapier, n8n, Make) pour faire
-                            circuler l'information sans friction.</li>
-                    </ul>
-                </div>
-                <div class="bento-visual">
-                    <img src="images/solution-automation.jpg" alt="Automation Interface"
-                        style="border-radius: 12px; opacity: 0.9;">
+    <main class="page-content" style="padding-top: 80px;">
+        <!-- HERO SOLUTION -->
+        <section class="formation-hero bg-darker section-padding" style="position: relative; overflow: hidden;">
+            <div class="container" style="position: relative; z-index: 2; text-align: center; max-width: 800px;">
+                <div class="bento-icon" style="margin: 0 auto 1.5rem; font-size: 3rem; color: var(--primary-color);"><i
+                        class="fas fa-cogs"></i></div>
+                <h1 style="font-size: 3rem; margin-bottom: 1rem;">Automatisation Intelligente (IA)</h1>
+                <p style="font-size: 1.2rem; color: var(--text-muted); margin-bottom: 2rem;">Transformez vos processus
+                    administratifs lourds en workflows fluides et automatisés grâce au traitement intelligent des
+                    documents.</p>
+                <div style="display: flex; gap: 1rem; justify-content: center;">
+                    <a href="contact-page.html" class="btn btn-primary">Auditer mes processus</a>
                 </div>
             </div>
-
-            <div class="section-cta" style="margin-top: 4rem; text-align: center;">
-                <a href="index.html#contact" class="btn btn-primary">Automatiser mes process</a>
+            <!-- Background element -->
+            <div
+                style="position: absolute; top: -50%; left: -10%; width: 500px; height: 500px; background: radial-gradient(circle, rgba(14,138,148,0.15) 0%, transparent 70%); z-index: 1;">
             </div>
-        </div>
-    </section>
+        </section>
+
+        <!-- BENTO KEY INFO -->
+        <section class="section-padding bg-light">
+            <div class="container">
+                <div class="grid-4"
+                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem;">
+                    <div class="bento-card"
+                        style="background: white; border: 1px solid #e2e8f0; color: #0f172a; text-align: center; padding: 1.5rem;">
+                        <i class="fas fa-file-invoice"
+                            style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
+                        <h4 style="margin-bottom: 0.5rem; font-size: 1.1rem;">Extraction IDP</h4>
+                        <p style="color: #64748b; font-size: 0.95rem; margin-bottom: 0;">Factures, CVs, Bons de commande
+                        </p>
+                    </div>
+                    <div class="bento-card"
+                        style="background: white; border: 1px solid #e2e8f0; color: #0f172a; text-align: center; padding: 1.5rem;">
+                        <i class="fas fa-project-diagram"
+                            style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
+                        <h4 style="margin-bottom: 0.5rem; font-size: 1.1rem;">Interconnexion</h4>
+                        <p style="color: #64748b; font-size: 0.95rem; margin-bottom: 0;">APIs, Make, n8n, Zapier</p>
+                    </div>
+                    <div class="bento-card"
+                        style="background: white; border: 1px solid #e2e8f0; color: #0f172a; text-align: center; padding: 1.5rem;">
+                        <i class="fas fa-tachometer-alt"
+                            style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
+                        <h4 style="margin-bottom: 0.5rem; font-size: 1.1rem;">Scalabilité</h4>
+                        <p style="color: #64748b; font-size: 0.95rem; margin-bottom: 0;">Gérez les pics de charge sans
+                            effort</p>
+                    </div>
+                    <div class="bento-card"
+                        style="background: white; border: 1px solid #e2e8f0; color: #0f172a; text-align: center; padding: 1.5rem;">
+                        <i class="fas fa-check-double"
+                            style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
+                        <h4 style="margin-bottom: 0.5rem; font-size: 1.1rem;">Précision</h4>
+                        <p style="color: #64748b; font-size: 0.95rem; margin-bottom: 0;">0% d'erreur de saisie manuelle
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MARKETING PITCH -->
+        <section class="section-padding bg-darker">
+            <div class="container">
+                <div class="grid-2" style="align-items: center;">
+                    <div>
+                        <h2 class="section-title" style="text-align: left;">Fini la saisie manuelle et les copier-coller
+                        </h2>
+                        <p class="section-subtitle" style="text-align: left; margin-left: 0; margin-bottom: 2rem;">L'IA
+                            connecte vos logiciels et lit vos documents pour vous.</p>
+                        <ul class="differentiators-list" style="list-style: none; padding: 0;">
+                            <li style="margin-bottom: 1.5rem; display: flex; align-items: flex-start; gap: 1rem;">
+                                <i class="fas fa-check-circle"
+                                    style="color: var(--primary-color); font-size: 1.5rem; margin-top: 0.2rem;"></i>
+                                <div>
+                                    <strong style="display: block; font-size: 1.2rem; margin-bottom: 0.2rem;">Traitement
+                                        Documentaire (IDP)</strong>
+                                    <span style="color: var(--text-muted);">Nos modèles OCR dopés à l'IA sont capables
+                                        de lire et comprendre la structure de n'importe quel PDF (même mal scanné) pour
+                                        extraire les données vers votre ERP.</span>
+                                </div>
+                            </li>
+                            <li style="margin-bottom: 1.5rem; display: flex; align-items: flex-start; gap: 1rem;">
+                                <i class="fas fa-check-circle"
+                                    style="color: var(--primary-color); font-size: 1.5rem; margin-top: 0.2rem;"></i>
+                                <div>
+                                    <strong style="display: block; font-size: 1.2rem; margin-bottom: 0.2rem;">Routage et
+                                        Catégorisation</strong>
+                                    <span style="color: var(--text-muted);">Un client envoie un email avec pièce jointe
+                                        ? L'IA analyse le contenu, le catégorise (Facture, Réclamation, Demande de
+                                        devise), et l'envoie au bon service automatiquement.</span>
+                                </div>
+                            </li>
+                            <li style="margin-bottom: 1.5rem; display: flex; align-items: flex-start; gap: 1rem;">
+                                <i class="fas fa-check-circle"
+                                    style="color: var(--primary-color); font-size: 1.5rem; margin-top: 0.2rem;"></i>
+                                <div>
+                                    <strong style="display: block; font-size: 1.2rem; margin-bottom: 0.2rem;">Génération
+                                        Automatique de Documents</strong>
+                                    <span style="color: var(--text-muted);">Générez instantanément des contrats, devis
+                                        complexes ou rapports d'intervention en fusionnant les données de vos bases de
+                                        données dans des templates prédéfinis.</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bento-visual">
+                        <img src="images/solution-automation.jpg" alt="Workflows d'Automatisation"
+                            style="border-radius: 12px; width: 100%; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- STEP BY STEP PROCESS -->
+        <section class="section-padding bg-light">
+            <div class="container">
+                <h2 class="section-title" style="color: #0f172a;">Comment <span class="highlight">ça marche ?</span>
+                </h2>
+                <p class="section-subtitle">Notre méthodologie pas à pas pour un déploiement sécurisé.</p>
+
+                <div class="step-by-step-container">
+                    <!-- Step 1 -->
+                    <div class="step-card">
+                        <div class="step-image-wrap">
+                            <img src="images/why_us_meeting.png" alt="Capture et Extraction"
+                                onerror="this.src=''; this.parentElement.style.background='var(--primary-color)';">
+                        </div>
+                        <div class="step-content">
+                            <h4>1. Extraction (IDP)</h4>
+                            <p>L'IA lit et comprend vos documents entrants (factures, CVs, e-mails).</p>
+                        </div>
+                    </div>
+
+                    <!-- Arrow -->
+                    <div class="step-arrow">
+                        <svg viewBox="0 0 100 40" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M 5,20 Q 20,5 35,20 T 65,20 T 85,20" fill="none" stroke="currentColor"
+                                stroke-width="2" />
+                            <polyline points="75,10 85,20 75,30" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" />
+                        </svg>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="step-card">
+                        <div class="step-image-wrap">
+                            <img src="images/problem-network.jpg" alt="Traitement et Validation"
+                                onerror="this.src=''; this.parentElement.style.background='var(--primary-color)';">
+                        </div>
+                        <div class="step-content">
+                            <h4>2. Validation Humaine</h4>
+                            <p>Les données sont structurées ; une validation (Human-in-the-Loop) est requise en cas de
+                                doute.</p>
+                        </div>
+                    </div>
+
+                    <!-- Arrow -->
+                    <div class="step-arrow">
+                        <svg viewBox="0 0 100 40" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M 5,20 Q 20,5 35,20 T 65,20 T 85,20" fill="none" stroke="currentColor"
+                                stroke-width="2" />
+                            <polyline points="75,10 85,20 75,30" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" />
+                        </svg>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="step-card">
+                        <div class="step-image-wrap">
+                            <img src="images/why_us_team.png" alt="Routage et Intégration"
+                                onerror="this.src=''; this.parentElement.style.background='var(--primary-color)';">
+                        </div>
+                        <div class="step-content">
+                            <h4>3. Routage Sécurisé</h4>
+                            <p>Les informations validées sont envoyées automatiquement vers vos ERP ou CRM.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA SECTION -->
+        <section class="section-padding bg-darker"
+            style="text-align: center; border-top: 1px solid rgba(255,255,255,0.05);">
+            <div class="container">
+                <h2 class="section-title">Quel processus vous fait perdre le plus de temps ?</h2>
+                <p class="section-subtitle" style="margin-bottom: 2rem;">Arrêtez de lutter contre les tâches
+                    répétitives. Nos experts peuvent auditer vos processus métiers gratuitement.</p>
+                <div style="display: flex; gap: 1rem; justify-content: center;">
+                    <a href="contact-page.html" class="btn btn-primary">Nous contacter</a>
+                    <a href="solution-chatbots.html" class="btn btn-secondary">Découvrir les Chatbots</a>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <!-- FOOTER -->
-    <footer>
+    <footer class="mega-footer">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">Babylone42</div>
-                <p class="copyright">© 2024 Babylone42. Tous droits réservés.</p>
+            <div class="footer-grid">
+                <!-- Column 1: Brand & Socials -->
+                <div class="footer-col brand-col">
+                    <img src="images/logo.svg" alt="Babylone42 Logo" class="footer-logo-img">
+                    <p class="footer-desc">Babylone42 donne le pouvoir aux équipes de transformer des données brutes en
+                        informations claires grâce à l'IA.</p>
+                    <div class="footer-socials">
+                        <a href="#" aria-label="X Twitter"><i class="fab fa-x-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+
+                <!-- Column 2: Accueil -->
+                <div class="footer-col">
+                    <h4 class="footer-title">Accueil</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="about.html">About us</a></li>
+                        <li><a href="interlocuteurs.html">Vos interlocuteurs</a></li>
+                        <li><a href="articles.html">Blog / Actualités</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Solutions -->
+                <div class="footer-col">
+                    <h4 class="footer-title">Solutions</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="solution-chatbots.html">Chatbots 24/7</a></li>
+                        <li><a href="solution-copilots.html">Copilots IA</a></li>
+                        <li><a href="solution-automation.html">Automatisation</a></li>
+                        <li><a href="solution-audit.html">Audit & Conseil</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Formations -->
+                <div class="footer-col">
+                    <h4 class="footer-title">Formations</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="formation-genai.html">IA Générative</a></li>
+                        <li><a href="formation-jupyter.html">Jupyter</a></li>
+                        <li><a href="formation-python.html">Python</a></li>
+                        <li><a href="formation-ml.html">Machine Learning</a></li>
+                        <li><a href="formation-dl.html">Deep Learning</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 5: Contact & Newsletter -->
+                <div class="footer-col newsletter-col">
+                    <h4 class="footer-title">Contact & Newsletter</h4>
+                    <p class="footer-contact-info">
+                        <a href="mailto:contact@babylone42.fr"><i class="fas fa-envelope"></i>
+                            contact@babylone42.fr</a><br>
+                        <a href="tel:+330773609849"><i class="fas fa-phone-alt"></i> +33 0 7 73 60 98 49</a>
+                    </p>
+                    <form class="footer-newsletter-form">
+                        <input type="email" placeholder="Votre email" required>
+                        <button type="submit" aria-label="S'inscrire"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p class="copyright">© 2025 Babylone42. All rights reserved.</p>
+                <div class="legal-links">
+                    <a href="mentions-legales.html">Mentions Légales</a>
+                    <a href="politique-confidentialite.html">Politique de Confidentialité</a>
+                    <a href="cookies.html">Paramètres des cookies</a>
+                </div>
             </div>
         </div>
     </footer>
