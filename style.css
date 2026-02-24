@@ -249,6 +249,17 @@ p {
     color: #fff;
 }
 
+.btn-outline {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+
+.btn-outline:hover {
+    background-color: rgba(16, 155, 128, 0.1);
+    color: white;
+}
+
 /* NAVBAR */
 .navbar {
     position: fixed;
