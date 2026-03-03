@@ -1,0 +1,4566 @@
+﻿commit 4e5392f647bb9cff526cc758d3d5435d1f2c2df7
+Author: eulalio torres <sas.data.formation@gmail.com>
+Date:   Tue Feb 24 20:18:54 2026 +0100
+
+    feat: global update of social media links in nav and footer
+
+diff --git a/about.html b/about.html
+index 31c6890..fd273bd 100644
+--- a/about.html
++++ b/about.html
+@@ -59,10 +59,17 @@
+                 <li><a href="articles.html">Blog/actualit├®s</a></li>
+                 <li><a href="contact-page.html" class="btn btn-primary nav-btn">Contact</a></li>
+                 <li class="nav-socials">
+-                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+-                    <a href="#" aria-label="X Twitter"><i class="fab fa-x-twitter"></i></a>
+-                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+-                    <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
++                    <a href="https://www.linkedin.com/company/babylone42/" target="_blank" rel="noopener noreferrer"
++                        aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
++                    <a href="https://www.instagram.com/babylone42_?igsh=YzVyamk1N3VoYXU1" target="_blank"
++                        rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
++                    <a href="https://www.facebook.com/profile.php?id=61583402791597&name=xhp_nt__fb__action__open_user&locale=fr_FR"
++                        target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i
++                            class="fab fa-facebook"></i></a>
++                    <a href="https://x.com/babylone42_" target="_blank" rel="noopener noreferrer"
++                        aria-label="X Twitter"><i class="fab fa-x-twitter"></i></a>
++                    <a href="https://m.youtube.com/@Babylone42" target="_blank" rel="noopener noreferrer"
++                        aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                 </li>
+             </ul>
+             <div class="hamburger">
+@@ -73,31 +80,31 @@
+ 
+ 
+ 
+-    <main class="page-content" style="padding-top: 120px; padding-bottom: 80px; min-height: 60vh;">
+-        <!-- HERO ABOUT -->
+-        <section class="container" style="text-align: center; margin-bottom: 4rem;">
+-            <span class="badge"
+-                style="background: rgba(16, 155, 128, 0.1); color: var(--primary-color); margin-bottom: 1rem; display: inline-block;">├Ç
+-                Propos de Babylone42</span>
+-            <h1 class="section-title">Notre <span class="highlight">Mission</span></h1>
+-            <p
+-                style="font-size: 1.25rem; color: var(--text-muted); max-width: 800px; margin: 0 auto; line-height: 1.6;">
+-                D├®mocratiser la tech pour permettre ├á chacun de comprendre les langages machine, de ma├«triser les outils
+-                dÔÇÖavenir comme lÔÇÖIA, et de r├®ussir dans un monde num├®rique en pleine ├®volution.
+-            </p>
+-        </section>
++    <main class="page-content" style="padding-top: 100px; padding-bottom: 0; min-height: 60vh;">
+ 
+-        <!-- VISION & VALEURS (Bento Style) -->
+-        <section class="container section-padding" style="padding-top: 0;">
+-            <div class="bento-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
++        <!-- HERO / MISSION (Darker Background) -->
++        <section style="text-align: center; padding: 6rem 1rem;">
++            <div class="container">
++                <span class="badge"
++                    style="background: rgba(16, 155, 128, 0.1); color: var(--primary-color); margin-bottom: 1rem; display: inline-block;">Notre
++                    Mission</span>
++                <h1 class="section-title">D├®mocratiser la <span class="highlight">Tech</span></h1>
++                <p
++                    style="font-size: 1.25rem; color: var(--text-muted); max-width: 800px; margin: 0 auto; line-height: 1.6;">
++                    D├®ployer des solutions d'Intelligence Artificielle sur-mesure et d├®mocratiser la tech pour permettre
++                    ├á chaque entreprise de dominer son march├® en ma├«trisant les outils d'avenir.
++                </p>
++            </div>
++        </section>
+ 
+-                <div class="bento-item glow-border" style="grid-column: 1 / -1; padding: 3rem;">
+-                    <div class="bento-icon"
+-                        style="font-size: 2.5rem; color: var(--primary-color); margin-bottom: 1.5rem;"><i
++        <!-- VISION (Zebra - Lighter/Highlight Background) -->
++        <section class="bg-highlight" style="padding: 6rem 1rem;">
++            <div class="container" style="display: flex; flex-wrap: wrap; align-items: center; gap: 4rem;">
++                <div style="flex: 1; min-width: 300px;">
++                    <div style="font-size: 3rem; color: var(--primary-color); margin-bottom: 1.5rem;"><i
+                             class="fas fa-globe"></i></div>
+-                    <h3 style="font-size: 1.8rem; margin-bottom: 1rem; color: white;">Une vision universelle de la tech
+-                    </h3>
+-                    <p style="color: var(--text-muted); font-size: 1.1rem; line-height: 1.6;">
++                    <h2 class="section-title" style="text-align: left; margin-bottom: 1.5rem;">Notre Vision</h2>
++                    <p style="color: var(--text-muted); font-size: 1.15rem; line-height: 1.7; text-align: justify;">
+                         Nous aspirons ├á ├¬tre un acteur cl├® de la transformation digitale, en rendant lÔÇÖacc├¿s aux
+                         langages de la technologie et ├á lÔÇÖintelligence artificielle simple et universel. Notre vision
+                         est celle dÔÇÖun monde o├╣ chaque individu et chaque organisation peut exploiter la puissance de la
+@@ -105,32 +112,74 @@
+                         pointe de lÔÇÖinnovation.
+                     </p>
+                 </div>
+-
+-                <div class="bento-item glow-border">
+-                    <div class="bento-icon" style="color: var(--primary-color); font-size: 2rem; margin-bottom: 1rem;">
+-                        <i class="fas fa-handshake"></i></div>
+-                    <h3 style="color: white; margin-bottom: 1rem;">La Double Expertise</h3>
+-                    <p style="color: var(--text-muted); line-height: 1.5;">Ing├®nieurs seniors ET formateurs p├®dagogues.
+-                        Nous ne faisons pas que construire des solutions IA, nous transmettons le savoir pour vous
+-                        rendre autonomes.</p>
++                <div
++                    style="flex: 1; min-width: 300px; border-radius: 16px; overflow: hidden; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5); border: 1px solid rgba(255,255,255,0.1);">
++                    <img src="images/problem-network.jpg" alt="Notre vision de l'innovation"
++                        style="width: 100%; height: auto; display: block; filter: brightness(0.8) contrast(1.1);">
+                 </div>
++            </div>
++        </section>
+ 
+-                <div class="bento-item glow-border">
+-                    <div class="bento-icon" style="color: var(--primary-color); font-size: 2rem; margin-bottom: 1rem;">
+-                        <i class="fas fa-rocket"></i></div>
+-                    <h3 style="color: white; margin-bottom: 1rem;">Pragmatisme Absolu</h3>
+-                    <p style="color: var(--text-muted); line-height: 1.5;">Des solutions livr├®es "cl├®s en main". Pas de
+-                        R&D sans fin, nous visons le ROI imm├®diat en automatisant les t├óches chronophages de vos
+-                        ├®quipes.</p>
++        <!-- VALEURS (Light Background, 3-Card Grid) -->
++        <section class="section-padding bg-light">
++            <div class="container">
++                <div style="text-align: center; margin-bottom: 4rem;">
++                    <span class="badge"
++                        style="background: rgba(16, 155, 128, 0.1); color: var(--primary-color); margin-bottom: 1rem; display: inline-block;">Nos
++                        Valeurs</span>
++                    <h2 class="section-title">Ce qui nous <span class="highlight">diff├®rencie</span></h2>
+                 </div>
+ 
++                <div class="grid-3">
++                    <!-- Card 1 -->
++                    <div class="solution-card">
++                        <div class="solution-visual">
++                            <img src="images/valeur_expertise.png" alt="La Double Expertise">
++                        </div>
++                        <div class="solution-content">
++                            <h3>La Double Expertise</h3>
++                            <p>Ing├®nieurs seniors ET formateurs p├®dagogues. Nous ne faisons pas que construire des
++                                solutions IA, nous
++                                transmettons le savoir pour vous rendre autonomes de mani├¿re p├®renne.</p>
++                        </div>
++                    </div>
++
++                    <!-- Card 2 -->
++                    <div class="solution-card inverted">
++                        <div class="solution-visual">
++                            <img src="images/valeur_pragmatisme.png" alt="Le Pragmatisme Absolu">
++                        </div>
++                        <div class="solution-content">
++                            <h3>Le Pragmatisme Absolu</h3>
++                            <p>Des solutions livr├®es "cl├®s en main". Pas de R&D sans fin, nous visons le ROI imm├®diat en
++                                automatisant
++                                les t├óches chronophages de vos ├®quipes et en r├®solvant vos vrais probl├¿mes.</p>
++                        </div>
++                    </div>
++
++                    <!-- Card 3 -->
++                    <div class="solution-card">
++                        <div class="solution-visual">
++                            <img src="images/valeur_reseau.png" alt="Un R├®seau d'Experts">
++                        </div>
++                        <div class="solution-content">
++                            <h3>Un R├®seau d'Experts</h3>
++                            <p>Un vivier de d├®veloppeurs IA sp├®cialis├®s nous permettant d'assembler l'├®quipe id├®ale pour
++                                affronter la complexit├® de chaque projet avec une v├®locit├® maximale.</p>
++                        </div>
++                    </div>
++                </div>
+             </div>
+         </section>
+ 
+-        <!-- CTA -->
+-        <section class="container" style="text-align: center; margin-top: 2rem;">
+-            <a href="contact-page.html" class="btn btn-primary"
+-                style="font-size: 1.1rem; padding: 1rem 2.5rem;">Discuter de votre projet avec nous</a>
++        <!-- CTA (Zebra - Lighter/Highlight Background) -->
++        <section class="bg-highlight" style="padding: 4rem 1rem; text-align: center;">
++            <div class="container">
++                <h2 style="color: white; margin-bottom: 1.5rem; font-size: 2rem;">Pr├¬t ├á innover avec nous ?</h2>
++                <a href="contact-page.html" class="btn btn-primary" style="font-size: 1.1rem; padding: 1rem 2.5rem;"><i
++                        class="fas fa-paper-plane" style="margin-right: 0.5rem;"></i> Discuter de votre projet avec
++                    nous</a>
++            </div>
+         </section>
+     </main>
+ 
+@@ -145,10 +194,17 @@
+                     <p class="footer-desc">Babylone42 donne le pouvoir aux ├®quipes de transformer des donn├®es brutes en
+                         informations claires gr├óce ├á l'IA.</p>
+                     <div class="footer-socials">
+-                        <a href="#" aria-label="X Twitter"><i class="fab fa-x-twitter"></i></a>
+-                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+-                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+-                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
++                        <a href="https://www.linkedin.com/company/babylone42/" target="_blank" rel="noopener noreferrer"
++                            aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
++                        <a href="https://www.instagram.com/babylone42_?igsh=YzVyamk1N3VoYXU1" target="_blank"
++                            rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
++                        <a href="https://www.facebook.com/profile.php?id=61583402791597&name=xhp_nt__fb__action__open_user&locale=fr_FR"
++                            target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i
++                                class="fab fa-facebook"></i></a>
++                        <a href="https://x.com/babylone42_" target="_blank" rel="noopener noreferrer"
++                            aria-label="X Twitter"><i class="fab fa-x-twitter"></i></a>
++                        <a href="https://m.youtube.com/@Babylone42" target="_blank" rel="noopener noreferrer"
++                            aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                     </div>
+                 </div>
+ 
+
+commit f75f1d98e2c64e4bb2f5d1f4a15ce4b367168d38
+Author: eulalio torres <sas.data.formation@gmail.com>
+Date:   Tue Feb 24 18:25:06 2026 +0100
+
+    feat: add pre-launch site folder
+
+diff --git a/pre-launch-site/style.css b/pre-launch-site/style.css
+new file mode 100644
+index 0000000..7654631
+--- /dev/null
++++ b/pre-launch-site/style.css
+@@ -0,0 +1,1827 @@
++/* RESET & VARIABLES */
++:root {
++    --bg-color: #02161b;
++    /* Deep Teal Background */
++    --text-color: #f1f5f9;
++    --primary-color: #109B80;
++    /* Vibrant Teal Accent */
++    --secondary-color: #38bdf8;
++    /* Sky Blue for contrast */
++    --highlight-color: #ccfbf1;
++    /* Mint */
++    --dark-surface: #0a2730;
++    /* Lighter Teal for surfaces */
++    --text-muted: #94a3b8;
++    --font-heading: 'Space Grotesk', sans-serif;
++    --font-body: 'Outfit', sans-serif;
++}
++
++* {
++    margin: 0;
++    padding: 0;
++    box-sizing: border-box;
++}
++
++body {
++    font-family: var(--font-body);
++    background-color: var(--bg-color);
++    color: var(--text-color);
++    line-height: 1.6;
++    scroll-behavior: smooth;
++}
++
++/* TYPOGRAPHY */
++h1,
++h2,
++h3,
++h4 {
++    font-family: var(--font-heading);
++    font-weight: 700;
++}
++
++h1 {
++    font-size: 3.5rem;
++    line-height: 1.1;
++    margin-bottom: 1.5rem;
++}
++
++h2 {
++    font-size: 2.5rem;
++    margin-bottom: 1rem;
++    color: var(--primary-color);
++}
++
++h3 {
++    font-size: 1.5rem;
++    margin-bottom: 0.5rem;
++}
++
++p {
++    margin-bottom: 1rem;
++    font-size: 1.1rem;
++    color: var(--text-muted);
++}
++
++.highlight {
++    color: var(--primary-color);
++}
++
++/* UTILITIES */
++.container {
++    max-width: 1200px;
++    margin: 0 auto;
++    padding: 0 2rem;
++}
++
++.section-padding {
++    padding: 6rem 0;
++}
++
++#problems.section-padding {
++    padding: 3rem 0;
++}
++
++.bg-darker {
++    background-color: #011014;
++    /* Even darker teal */
++}
++
++.bg-light {
++    background-color: #f8fafc;
++    color: #1e293b;
++}
++
++.bg-light .section-title {
++    color: #0f172a;
++}
++
++.bg-light p,
++.bg-light li {
++    color: #475569;
++}
++
++/* Cards in light sections */
++.bg-light .bento-card {
++    background: #ffffff;
++    border: 1px solid #e2e8f0;
++    color: #0f172a;
++}
++
++.bg-light .bento-card h3 {
++    color: #0f172a;
++}
++
++.bg-light .bento-card p {
++    color: #475569;
++}
++
++.bg-light .bento-card .bento-stat {
++    border-top: 1px solid #e2e8f0;
++}
++
++.bg-light .bento-card .stat-unit {
++    color: #0f172a;
++}
++
++.bg-light .bento-card .stat-label {
++    color: #64748b;
++}
++
++.bg-light .bento-card:hover {
++    border-color: var(--primary-color);
++    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
++}
++
++.bg-light .badge {
++    color: var(--primary-color);
++    background: rgba(14, 138, 148, 0.1);
++}
++
++.bg-light .faq-item {
++    background: #ffffff;
++    border: 1px solid #e2e8f0;
++}
++
++.bg-light .faq-item.active {
++    background: #f8fafc;
++    border-color: var(--primary-color);
++}
++
++.bg-light .faq-question h3 {
++    color: #0f172a;
++}
++
++.bg-light .faq-answer p {
++    color: #475569;
++}
++
++/* Subsection styling */
++.section-title {
++    /* Renamed from .subsection-title based on context */
++    text-align: center;
++    font-size: 2.5rem;
++    margin-bottom: 1rem;
++    color: #fff;
++}
++
++.section-subtitle {
++    text-align: center;
++    font-size: 1.1rem;
++    color: var(--text-muted);
++    margin-bottom: 3rem;
++    max-width: 700px;
++    margin-left: auto;
++    margin-right: auto;
++}
++
++/* Service cards */
++.service-card {
++    background: rgba(255, 255, 255, 0.03);
++    padding: 1.5rem;
++    border-radius: 8px;
++    text-align: center;
++    transition: transform 0.3s ease;
++}
++
++.service-card:hover {
++    transform: translateY(-5px);
++}
++
++.service-icon {
++    font-size: 2rem;
++    color: var(--primary-color);
++    margin-bottom: 1rem;
++    display: block;
++}
++
++.service-card p {
++    font-size: 0.9rem;
++}
++
++.bg-highlight {
++    background-color: #1a222c;
++    border-top: 1px solid var(--primary-color);
++}
++
++/* GRIDS */
++.grid-3 {
++    display: grid;
++    grid-template-columns: repeat(3, 1fr);
++    gap: 1.5rem;
++}
++
++.grid-2 {
++    display: grid;
++    grid-template-columns: repeat(2, 1fr);
++    gap: 1.5rem;
++}
++
++/* BUTTONS */
++.btn {
++    display: inline-block;
++    padding: 1rem 2rem;
++    border-radius: 8px;
++    font-weight: 600;
++    text-decoration: none;
++    transition: all 0.3s ease;
++    cursor: pointer;
++}
++
++.btn-primary {
++    background-color: var(--primary-color);
++    color: #fff;
++    border: 2px solid var(--primary-color);
++}
++
++.btn-primary:hover {
++    background-color: transparent;
++    color: var(--primary-color);
++}
++
++.btn-secondary {
++    background-color: transparent;
++    color: #fff;
++    border: 2px solid var(--primary-color);
++}
++
++.btn-secondary:hover {
++    background-color: var(--primary-color);
++    color: #fff;
++}
++
++/* NAVBAR */
++.navbar {
++    position: fixed;
++    top: 0;
++    width: 100%;
++    background: rgba(17, 17, 17, 0.95);
++    backdrop-filter: blur(10px);
++    padding: 1.5rem 0;
++    z-index: 1000;
++}
++
++.navbar .container {
++    display: flex;
++    justify-content: space-between;
++    align-items: center;
++}
++
++.logo {
++    font-size: 1.5rem;
++    font-weight: 700;
++    color: #fff;
++    text-decoration: none;
++    font-family: var(--font-heading);
++}
++
++.nav-links {
++    display: flex;
++    list-style: none;
++    gap: 2rem;
++    align-items: center;
++}
++
++.nav-socials {
++    display: flex;
++    gap: 1rem;
++    margin-left: 1rem;
++}
++
++.nav-socials a {
++    color: var(--text-color);
++    font-size: 1.2rem;
++    transition: color 0.3s ease;
++}
++
++.nav-socials a:hover {
++    color: var(--primary-color);
++}
++
++/* DROPDOWNS */
++.dropdown {
++    position: relative;
++}
++
++.dropdown-menu {
++    display: none;
++    position: absolute;
++    top: 100%;
++    left: 0;
++    background: var(--dark-surface);
++    min-width: 200px;
++    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
++    border-radius: 8px;
++    padding: 0.5rem 0;
++    list-style: none;
++    z-index: 1000;
++    border: 1px solid rgba(255, 255, 255, 0.1);
++}
++
++.dropdown:hover .dropdown-menu {
++    display: block;
++    animation: fadeIn 0.2s ease-in-out;
++}
++
++.dropdown-menu li a {
++    display: block;
++    padding: 0.8rem 1.5rem;
++    color: var(--text-color);
++    text-decoration: none;
++    transition: background 0.3s;
++    font-weight: 400;
++}
++
++.dropdown-menu li a:hover {
++    background: rgba(255, 255, 255, 0.05);
++    color: var(--primary-color);
++}
++
++@keyframes fadeIn {
++    from {
++        opacity: 0;
++        transform: translateY(-10px);
++    }
++
++    to {
++        opacity: 1;
++        transform: translateY(0);
++    }
++}
++
++/* Specific button style for navigation to override/augment btn-primary if needed */
++.nav-btn {
++    padding: 0.6rem 1.5rem !important;
++    /* Slightly smaller than hero cta */
++    margin-left: 1rem;
++}
++
++.nav-links a {
++    color: var(--text-color);
++    text-decoration: none;
++    font-weight: 500;
++    transition: color 0.3s;
++}
++
++.nav-links a:hover {
++    color: var(--primary-color);
++}
++
++.hamburger {
++    display: none;
++    cursor: pointer;
++    color: #fff;
++    font-size: 1.5rem;
++}
++
++/* HERO VISUALS */
++.hero-section {
++    padding-top: 10rem;
++    /* Reduced from 14rem */
++    padding-bottom: 0;
++    /* Remove padding-bottom to connect with trust signals */
++    position: relative;
++    overflow: hidden;
++    display: flex;
++    flex-direction: column;
++    justify-content: center;
++    min-height: 90vh;
++}
++
++.hero-visual-bg {
++    position: absolute;
++    top: 0;
++    left: 0;
++    width: 100%;
++    height: 100%;
++    z-index: 1;
++}
++
++.hero-visual-bg img {
++    width: 100%;
++    height: 100%;
++    object-fit: cover;
++    opacity: 0.6;
++}
++
++.hero-visual-bg .overlay {
++    position: absolute;
++    top: 0;
++    left: 0;
++    width: 100%;
++    height: 100%;
++    background: linear-gradient(to bottom, #111111 0%, rgba(17, 17, 17, 0.8) 50%, #111111 100%);
++}
++
++.hero-visual-bg .overlay.gradient-bg {
++    background: linear-gradient(135deg, #050505 40%, rgba(16, 155, 128, 0.4) 100%);
++}
++
++.hero-content {
++    position: relative;
++    z-index: 2;
++    max-width: 1200px;
++    width: 100%;
++    margin: 0 auto;
++    display: flex;
++    /* Changed back to flex for 2 columns */
++    align-items: center;
++    justify-content: space-between;
++    gap: 4rem;
++    text-align: left;
++    margin-bottom: 4rem;
++    /* Additional space before trust bar */
++}
++
++.hero-text-content {
++    flex: 0 1 55%;
++    position: relative;
++    /* Restored max-width so text takes left half */
++    z-index: 3;
++}
++
++.hero-image-content {
++    flex: 0 1 45%;
++    display: flex;
++    justify-content: flex-end;
++    align-items: center;
++    position: relative;
++    z-index: 1;
++}
++
++.hero-3d-logo {
++    width: 100%;
++    max-width: 600px;
++    height: auto;
++    filter: drop-shadow(0 0 40px rgba(16, 155, 128, 0.4));
++    animation: float 6s ease-in-out infinite;
++    pointer-events: none;
++}
++
++@keyframes float {
++    0% {
++        transform: translateY(0px);
++    }
++
++    50% {
++        transform: translateY(-20px);
++    }
++
++    100% {
++        transform: translateY(0px);
++    }
++}
++
++.hero-subtitle {
++    font-size: 1rem;
++    /* Reduced from 1.1rem */
++    font-weight: 300;
++    /* Made slightly thinner for less saturation */
++    max-width: 650px;
++    /* Tighter width */
++    margin: 0 0 2rem 0;
++    /* Reduced bottom margin slightly */
++    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
++    line-height: 1.6;
++}
++
++.hero-cta {
++    display: flex;
++    gap: 1.5rem;
++    margin-bottom: 3rem;
++    justify-content: flex-start;
++}
++
++.hero-stats {
++    display: flex;
++    gap: 3rem;
++    margin-top: 1rem;
++}
++
++.stat-item h3 {
++    font-size: 2rem;
++    /* Reduced from 2.5rem */
++    color: #fff;
++    margin-bottom: 0.2rem;
++    font-family: var(--font-heading);
++    display: flex;
++    align-items: baseline;
++}
++
++.stat-item p {
++    font-size: 0.7rem;
++    /* Reduced from 0.75rem */
++    color: var(--text-muted);
++    margin: 0;
++    text-transform: uppercase;
++    letter-spacing: 0.5px;
++    /* Tighter letter spacing */
++}
++
++.trust-signals-bar {
++    width: 100%;
++    background: transparent;
++    padding: 1.5rem 0;
++    position: relative;
++    z-index: 2;
++    margin-top: auto;
++}
++
++.trust-container {
++    display: flex;
++    justify-content: space-between;
++    align-items: center;
++    color: var(--text-color);
++    font-weight: 500;
++}
++
++.trust-container span {
++    display: flex;
++    align-items: center;
++    gap: 0.75rem;
++}
++
++.trust-container i {
++    color: var(--primary-color);
++}
++
++/* Problem cards specific styles */
++.problem-card-bento {
++    padding: 1.5rem;
++    display: flex;
++    flex-direction: column;
++    justify-content: space-between;
++    gap: 1rem;
++}
++
++.problem-card-bento h3 {
++    font-size: 1.1rem;
++    margin-bottom: 0.5rem;
++}
++
++.problem-card-bento p {
++    font-size: 0.9rem;
++    line-height: 1.5;
++}
++
++.bento-stat {
++    display: flex;
++    flex-direction: column;
++    align-items: flex-start;
++    padding-top: 1rem;
++    border-top: 1px solid rgba(255, 255, 255, 0.1);
++}
++
++.stat-value {
++    font-size: 2.5rem;
++    font-family: var(--font-heading);
++    font-weight: 700;
++    color: var(--primary-color);
++    line-height: 1;
++}
++
++.stat-unit {
++    font-size: 1rem;
++    font-weight: 600;
++    color: #fff;
++    margin-bottom: 0.2rem;
++}
++
++.stat-label {
++    font-size: 0.8rem;
++    color: var(--text-muted);
++}
++
++/* CAROUSEL STYLES */
++.carousel-container {
++    position: relative;
++    display: flex;
++    align-items: center;
++    gap: 1rem;
++    margin-top: 3rem;
++    margin-bottom: 3rem;
++    width: 100%;
++}
++
++.carousel-track-wrapper {
++    overflow-x: auto;
++    overflow-y: hidden;
++    scroll-behavior: smooth;
++    scroll-snap-type: x mandatory;
++    -ms-overflow-style: none;
++    /* IE and Edge */
++    scrollbar-width: none;
++    /* Firefox */
++    flex-grow: 1;
++    border-radius: 12px;
++}
++
++.carousel-track-wrapper::-webkit-scrollbar {
++    display: none;
++    /* Safari and Chrome */
++}
++
++.carousel-track {
++    display: flex;
++    gap: 2rem;
++    /* This ensures children size according to container width (approx 3 items per view) */
++    width: max-content;
++}
++
++.carousel-track>* {
++    scroll-snap-align: start;
++    /* Adjust width to show exactly 3 cards on standard desktop minus gap */
++    width: calc((100vw - 4rem - 6rem) / 3);
++    max-width: 400px;
++    min-width: 320px;
++    flex-shrink: 0;
++}
++
++.carousel-btn {
++    background: var(--primary-color);
++    color: #fff;
++    border: none;
++    border-radius: 50%;
++    width: 50px;
++    height: 50px;
++    display: flex;
++    align-items: center;
++    justify-content: center;
++    cursor: pointer;
++    font-size: 1.2rem;
++    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
++    transition: background 0.3s, transform 0.3s;
++    z-index: 10;
++    flex-shrink: 0;
++}
++
++.carousel-btn:hover {
++    background: #0d826a;
++    /* Darker teal */
++    transform: scale(1.1);
++}
++
++.carousel-btn:focus {
++    outline: 2px solid #fff;
++    outline-offset: 2px;
++}
++
++
++/* TARGET ITEMS STYLES */
++.target-item {
++    position: relative;
++    padding: 3rem 2rem;
++    border-radius: 12px;
++    overflow: hidden;
++    color: #fff;
++    display: flex;
++    flex-direction: column;
++    justify-content: flex-end;
++    min-height: 250px;
++    transition: transform 0.3s ease, box-shadow 0.3s ease;
++}
++
++.target-item::before {
++    content: '';
++    position: absolute;
++    top: 0;
++    left: 0;
++    right: 0;
++    bottom: 0;
++    background: linear-gradient(to top, rgba(2, 22, 27, 0.9) 0%, rgba(2, 22, 27, 0.3) 100%);
++    z-index: 1;
++}
++
++.target-item>* {
++    position: relative;
++    z-index: 2;
++}
++
++.target-item h4 {
++    font-size: 1.5rem;
++    margin-bottom: 0.5rem;
++}
++
++.target-item p {
++    font-size: 1rem;
++    color: rgba(255, 255, 255, 0.9);
++    margin-bottom: 0;
++}
++
++.target-item:hover {
++    transform: translateY(-5px);
++    box-shadow: 0 10px 25px rgba(16, 155, 128, 0.2);
++}
++
++/* NEW SOLUTIONS SIDE-BY-SIDE GRID */
++.solutions-grid {
++    display: grid;
++    grid-template-columns: repeat(3, 1fr);
++    gap: 2rem;
++    margin-top: 3rem;
++    margin-bottom: 3rem;
++}
++
++.solution-card {
++    background: var(--dark-surface);
++    border: 1px solid rgba(255, 255, 255, 0.05);
++    border-radius: 12px;
++    overflow: hidden;
++    transition: all 0.3s ease;
++    display: flex;
++    flex-direction: column;
++    text-decoration: none;
++    color: inherit;
++    height: 100%;
++}
++
++.solution-card:hover {
++    border-color: var(--primary-color);
++    box-shadow: 0 10px 30px rgba(16, 155, 128, 0.15);
++    transform: translateY(-5px);
++}
++
++.solution-visual {
++    height: 250px;
++    width: 100%;
++    overflow: hidden;
++}
++
++.solution-visual img {
++    width: 100%;
++    height: 100%;
++    object-fit: cover;
++    transition: transform 0.5s ease;
++}
++
++.solution-card:hover .solution-visual img {
++    transform: scale(1.05);
++}
++
++.solution-content {
++    padding: 2rem;
++    display: flex;
++    flex-direction: column;
++    flex-grow: 1;
++}
++
++.solution-content h3 {
++    font-size: 1.5rem;
++    margin-bottom: 1rem;
++    color: #fff;
++}
++
++.solution-content p {
++    font-size: 1rem;
++    color: #94a3b8;
++    line-height: 1.6;
++    margin-bottom: 0;
++}
++
++/* Inverted Card Style (for middle card like in the example) */
++.solution-card.inverted {
++    background: var(--primary-color);
++    border-color: var(--primary-color);
++}
++
++.solution-card.inverted .solution-content h3 {
++    color: #fff;
++}
++
++.solution-card.inverted .solution-content p {
++    color: rgba(255, 255, 255, 0.9);
++}
++
++/* Content inside original Bento styles (kept for reference or other sections) */
++.bento-content {
++    position: relative;
++    z-index: 2;
++}
++
++.bento-content h3 {
++    display: flex;
++    align-items: center;
++    gap: 0.75rem;
++    /* Space between icon and title */
++}
++
++.bento-icon {
++    font-size: 1.5rem;
++    color: var(--text-color);
++    margin-bottom: 0;
++    /* Remove bottom margin for inline layout */
++    background: rgba(255, 255, 255, 0.05);
++    width: 40px;
++    height: 40px;
++    display: flex;
++    align-items: center;
++    justify-content: center;
++    border-radius: 8px;
++}
++
++.bento-card h3 {
++    font-size: 1.25rem;
++    margin-bottom: 0.5rem;
++    color: #fff;
++}
++
++.bento-card p {
++    font-size: 0.95rem;
++    color: #94a3b8;
++    line-height: 1.5;
++}
++
++.bento-list {
++    list-style: none;
++    margin-top: 1rem;
++}
++
++.bento-list li {
++    font-size: 0.9rem;
++    color: var(--primary-color);
++    margin-bottom: 0.25rem;
++}
++
++.bento-list li::before {
++    content: "Ô£ô ";
++    margin-right: 5px;
++}
++
++/* Visuals inside Bento */
++.bento-visual {
++    margin-top: 2rem;
++    border-radius: 8px;
++    overflow: hidden;
++    position: relative;
++    height: 100%;
++    min-height: 200px;
++    /* Minimum height for large cards */
++}
++
++.bento-visual img {
++    width: 100%;
++    height: 100%;
++    object-fit: contain;
++    /* Changed to contain for full image visibility */
++    opacity: 1;
++    /* Fully visible */
++}
++
++.visual-overlay {
++    position: absolute;
++    top: 0;
++    left: 0;
++    width: 100%;
++    height: 100%;
++    background: linear-gradient(to top, var(--dark-surface) 0%, transparent 100%);
++}
++
++.bento-visual-mini {
++    margin-top: 1.5rem;
++    height: 180px;
++    /* Reduced from 220px to prevent overflow */
++    min-height: 150px;
++    border-radius: 8px;
++    overflow: hidden;
++    opacity: 1;
++    /* Fully visible */
++}
++
++.bento-visual-mini img {
++    width: 100%;
++    height: 100%;
++    object-fit: contain;
++    /* Changed to contain for full image visibility */
++}
++
++/* Specific override for tall card images to ensure proper centering */
++.bento-tall .bento-visual-mini img {
++    height: auto;
++    max-height: 100%;
++    width: auto;
++    max-width: 100%;
++    object-fit: contain;
++}
++
++.bento-bg-icon {
++    position: absolute;
++    bottom: -20px;
++    right: -20px;
++    font-size: 8rem;
++    color: rgba(255, 255, 255, 0.02);
++    transform: rotate(-15deg);
++    z-index: 1;
++}
++
++
++
++/* RESPONSIVE UPGRADES */
++@media (max-width: 900px) {
++
++    /* RESPONSIVE SOLUTIONS GRID */
++    .solutions-grid {
++        grid-template-columns: 1fr;
++    }
++
++    .solution-visual {
++        height: 200px;
++    }
++
++    /* RESPONSIVE BENTO (For Formations) */
++    .bento-grid {
++        display: flex;
++        flex-direction: column;
++    }
++
++    .bento-large,
++    .bento-wide,
++    .bento-tall {
++        grid-column: span 1;
++        grid-row: span 1;
++    }
++
++    /* FAQ RESPONSIVE */
++    .faq-grid {
++        grid-template-columns: 1fr;
++    }
++
++    .faq-header {
++        margin-bottom: 3rem;
++        position: static;
++    }
++}
++
++
++/* -------------------------------------
++   WHY US LAYOUT
++-------------------------------------- */
++.why-us-grid {
++    display: grid;
++    grid-template-columns: 1fr 1fr;
++    gap: 4rem;
++    align-items: center;
++}
++
++.why-us-visuals {
++    position: relative;
++    height: 500px;
++    display: flex;
++    align-items: center;
++    justify-content: center;
++}
++
++.why-us-visuals img {
++    position: absolute;
++    width: 65%;
++    border-radius: 16px;
++    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
++    transition: transform 0.4s ease, z-index 0s;
++}
++
++.img-stagger-top {
++    top: 0;
++    left: 0;
++    z-index: 2;
++}
++
++.img-stagger-bottom {
++    bottom: 0;
++    right: 0;
++    z-index: 1;
++}
++
++.why-us-visuals img:hover {
++    transform: translateY(-10px);
++    z-index: 3;
++}
++
++.differentiators-list {
++    list-style: none;
++    padding: 0;
++}
++
++.differentiators-list li {
++    display: flex;
++    gap: 1.5rem;
++    margin-bottom: 2rem;
++    align-items: flex-start;
++}
++
++.diff-icon {
++    background: rgba(16, 155, 128, 0.1);
++    color: var(--primary-color);
++    width: 60px;
++    height: 60px;
++    border-radius: 50%;
++    display: flex;
++    align-items: center;
++    justify-content: center;
++    font-size: 1.5rem;
++    flex-shrink: 0;
++}
++
++.diff-text strong {
++    font-family: var(--font-heading);
++    font-size: 1.25rem;
++    color: #4a4a4a;
++    /* Adjusted for light background */
++    display: block;
++    margin-bottom: 0.25rem;
++}
++
++.diff-text p {
++    margin: 0;
++    color: var(--text-muted);
++    font-size: 0.95rem;
++    line-height: 1.6;
++}
++
++/* -------------------------------------
++   FAQ SECTION 
++-------------------------------------- */
++.faq-grid {
++    display: grid;
++    grid-template-columns: 1fr 2fr;
++    gap: 4rem;
++    align-items: start;
++}
++
++.faq-header {
++    position: sticky;
++    top: 6rem;
++}
++
++.badge {
++    display: inline-block;
++    padding: 0.35rem 1rem;
++    background: rgba(16, 155, 128, 0.1);
++    color: var(--primary-color);
++    border-radius: 20px;
++    font-size: 0.85rem;
++    font-weight: 700;
++    margin-bottom: 1rem;
++}
++
++.faq-list-wrapper {
++    position: relative;
++    width: 100%;
++}
++
++/* Fallback gradient overlay if mask fails, using z-index to place it over items but pointer-events none to allow clicks */
++.faq-list-wrapper::after {
++    content: '';
++    position: absolute;
++    bottom: 0;
++    left: 0;
++    width: 100%;
++    height: 100px;
++    background: linear-gradient(to bottom, rgba(1, 16, 20, 0) 0%, rgba(1, 16, 20, 1) 100%);
++    pointer-events: none;
++    z-index: 5;
++    border-radius: 0 0 12px 12px;
++}
++
++.faq-list {
++    display: flex;
++    flex-direction: column;
++    gap: 0.75rem;
++    max-height: 450px;
++    /* Approximately 5 items height */
++    overflow-y: auto;
++    padding-bottom: 2rem;
++
++    /* Hide scrollbars for neat roulette look */
++    scrollbar-width: none;
++    -ms-overflow-style: none;
++}
++
++.faq-list::-webkit-scrollbar {
++    display: none;
++}
++
++.faq-item {
++    background: rgba(255, 255, 255, 0.03);
++    border: 1px solid transparent;
++    border-radius: 12px;
++    overflow: hidden;
++    transition: all 0.3s ease;
++    flex-shrink: 0;
++    /* CRITICAL FIX: prevents cards from collapsing vertically */
++}
++
++.faq-item:hover {
++    background: rgba(255, 255, 255, 0.05);
++}
++
++.faq-question {
++    padding: 1.25rem 2rem;
++    display: flex;
++    justify-content: space-between;
++    align-items: center;
++    cursor: pointer;
++    width: 100%;
++    background: none;
++    border: none;
++    text-align: left;
++}
++
++.faq-question h3 {
++    font-size: 1.05rem;
++    margin: 0;
++    color: #ffffff;
++    font-weight: 500;
++}
++
++.faq-question i {
++    color: var(--primary-color);
++    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
++    background: transparent;
++    width: 32px;
++    height: 32px;
++    border-radius: 50%;
++    display: flex;
++    align-items: center;
++    justify-content: center;
++    flex-shrink: 0;
++}
++
++.faq-answer {
++    max-height: 0;
++    overflow: hidden;
++    transition: max-height 0.4s ease;
++    padding: 0 2rem;
++}
++
++.faq-answer p {
++    padding-bottom: 1.5rem;
++    margin: 0;
++    color: #a0aec0;
++    font-size: 0.95rem;
++    line-height: 1.6;
++}
++
++/* Active State */
++.faq-item.active {
++    background: rgba(255, 255, 255, 0.06);
++    border-color: var(--primary-color);
++}
++
++.faq-item.active .faq-question h3 {
++    color: var(--primary-color);
++}
++
++.faq-item.active .faq-question i {
++    transform: rotate(180deg);
++    background: var(--primary-color);
++    color: #ffffff;
++}
++
++.faq-item.active .faq-answer {
++    max-height: 300px;
++    /* Arbitrary large height for expansion */
++}
++
++/* WHY US RESPONSIVE */
++@media (max-width: 900px) {
++    .why-us-grid {
++        grid-template-columns: 1fr;
++        gap: 2rem;
++    }
++
++    .why-us-visuals {
++        height: 350px;
++        order: -1;
++        /* Ensure images appear on top on mobile */
++    }
++
++    .why-us-visuals img {
++        width: 75%;
++    }
++}
++
++/* -------------------------------------
++   CONTACT SECTION 2-COLUMNS
++-------------------------------------- */
++.contact-grid {
++    display: grid;
++    grid-template-columns: 1fr 1fr;
++    gap: 4rem;
++    align-items: center;
++}
++
++.contact-info {
++    display: flex;
++    flex-direction: column;
++}
++
++.contact-details {
++    display: flex;
++    flex-direction: column;
++    gap: 1.5rem;
++    margin-top: 2rem;
++}
++
++.contact-item {
++    display: flex;
++    align-items: center;
++    gap: 1.5rem;
++}
++
++.contact-icon {
++    width: 50px;
++    height: 50px;
++    background: #ffffff;
++    border-radius: 50%;
++    display: flex;
++    align-items: center;
++    justify-content: center;
++    font-size: 1.2rem;
++    color: var(--primary-color);
++    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
++    flex-shrink: 0;
++}
++
++.contact-text strong {
++    display: block;
++    color: #4a4a4a;
++    font-size: 0.9rem;
++    text-transform: uppercase;
++    letter-spacing: 1px;
++    margin-bottom: 0.25rem;
++    font-family: var(--font-heading);
++}
++
++.contact-text a {
++    color: #111111;
++    font-size: 1.2rem;
++    font-weight: 600;
++    text-decoration: none;
++    transition: color 0.3s ease;
++}
++
++.contact-text a:hover {
++    color: var(--primary-color);
++}
++
++.contact-form-container {
++    background: #ffffff;
++    padding: 2.5rem;
++    border-radius: 16px;
++    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
++}
++
++/* Make contact form take full width inside its new container */
++.contact-form-container .contact-form {
++    max-width: 100%;
++    margin: 0;
++    padding: 0;
++    box-shadow: none;
++}
++
++@media (max-width: 900px) {
++    .contact-grid {
++        grid-template-columns: 1fr;
++        gap: 3rem;
++    }
++
++    .contact-form-container {
++        padding: 1.5rem;
++    }
++}
++
++/* -------------------------------------
++   CONTACT FORM ADVANCED STYLES
++-------------------------------------- */
++.form-grid-2 {
++    display: grid;
++    grid-template-columns: 1fr 1fr;
++    gap: 1.5rem;
++}
++
++.toggle-buttons {
++    display: flex;
++    background: #f1f5f9;
++    border-radius: 8px;
++    padding: 0.25rem;
++    gap: 0.25rem;
++    margin-bottom: 1rem;
++}
++
++.btn-toggle {
++    flex: 1;
++    padding: 0.75rem 1rem;
++    border: none;
++    background: transparent;
++    color: #64748b;
++    font-weight: 600;
++    font-size: 0.95rem;
++    border-radius: 6px;
++    cursor: pointer;
++    transition: all 0.3s ease;
++}
++
++.btn-toggle:hover {
++    color: #0f172a;
++}
++
++.btn-toggle.active {
++    background: #ffffff;
++    color: var(--primary-color);
++    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
++}
++
++.dynamic-options {
++    transition: opacity 0.3s ease, margin 0.3s ease, height 0.3s ease;
++    opacity: 1;
++}
++
++.dynamic-options.hidden {
++    display: none;
++    opacity: 0;
++}
++
++.checkbox-buttons {
++    display: flex;
++    flex-wrap: wrap;
++    gap: 0.5rem;
++    margin-bottom: 1rem;
++}
++
++.checkbox-btn {
++    display: inline-flex;
++    cursor: pointer;
++}
++
++.checkbox-btn input {
++    display: none;
++    /* Hide native checkbox/radio */
++}
++
++.checkbox-btn span {
++    padding: 0.5rem 1rem;
++    background: #f8fafc;
++    border: 1px solid #e2e8f0;
++    border-radius: 20px;
++    font-size: 0.9rem;
++    color: #475569;
++    transition: all 0.2s ease;
++}
++
++.checkbox-btn:hover span {
++    border-color: #cbd5e1;
++    background: #f1f5f9;
++}
++
++.checkbox-btn input:checked+span {
++    background: rgba(16, 155, 128, 0.1);
++    color: var(--primary-color);
++    border-color: var(--primary-color);
++    font-weight: 600;
++}
++
++/* Contact Form Input Styles */
++.contact-form .form-group {
++    margin-bottom: 1.5rem;
++}
++
++.contact-form label {
++    display: block;
++    margin-bottom: 0.5rem;
++    font-weight: 500;
++    color: #334155;
++    font-size: 0.95rem;
++}
++
++.contact-form input[type="text"],
++.contact-form input[type="email"],
++.contact-form input[type="tel"] {
++    width: 100%;
++    padding: 0.75rem 1rem;
++    border: 1px solid #cbd5e1;
++    border-radius: 6px;
++    background-color: #f8fafc;
++    color: #0f172a;
++    font-family: inherit;
++    font-size: 1rem;
++    transition: all 0.3s ease;
++}
++
++.contact-form input:focus {
++    outline: none;
++    border-color: var(--primary-color);
++    box-shadow: 0 0 0 3px rgba(16, 155, 128, 0.1);
++    background-color: #ffffff;
++}
++
++/* -------------------------------------
++   MEGA FOOTER STYLES
++-------------------------------------- */
++.mega-footer {
++    background-color: var(--bg-color);
++    padding: 6rem 0 2rem;
++    border-top: 1px solid rgba(255, 255, 255, 0.05);
++}
++
++.footer-grid {
++    display: grid;
++    grid-template-columns: 2fr 1.2fr 1.5fr 1.5fr 2fr;
++    gap: 2.5rem;
++    margin-bottom: 4rem;
++}
++
++.brand-col {
++    padding-right: 1.5rem;
++}
++
++.footer-logo-img {
++    height: 40px;
++    margin-bottom: 1.5rem;
++}
++
++.footer-desc {
++    color: var(--text-muted);
++    font-size: 0.95rem;
++    line-height: 1.6;
++    margin-bottom: 1.5rem;
++}
++
++.footer-socials {
++    display: flex;
++    gap: 1.25rem;
++}
++
++.footer-socials a {
++    color: var(--text-color);
++    font-size: 1.25rem;
++    transition: color 0.3s ease, transform 0.3s ease;
++}
++
++.footer-socials a:hover {
++    color: var(--primary-color);
++    transform: translateY(-2px);
++}
++
++.footer-title {
++    color: #fff;
++    font-size: 1.1rem;
++    font-weight: 600;
++    margin-bottom: 1.5rem;
++    font-family: var(--font-heading);
++}
++
++.footer-links-list {
++    list-style: none;
++    padding: 0;
++    margin: 0;
++    display: flex;
++    flex-direction: column;
++    gap: 0.8rem;
++}
++
++.footer-links-list a {
++    color: var(--text-muted);
++    text-decoration: none;
++    font-size: 0.95rem;
++    transition: color 0.2s ease;
++}
++
++.footer-links-list a:hover {
++    color: var(--primary-color);
++}
++
++/* Newsletter Column inside Footer */
++.footer-contact-info {
++    color: var(--text-muted);
++    font-size: 0.95rem;
++    line-height: 1.8;
++    margin-bottom: 1.5rem;
++}
++
++.footer-contact-info a {
++    color: var(--text-muted);
++    text-decoration: none;
++    transition: color 0.2s;
++}
++
++.footer-contact-info a:hover {
++    color: var(--primary-color);
++}
++
++.footer-contact-info i {
++    width: 20px;
++    color: var(--primary-color);
++}
++
++.footer-newsletter-form {
++    display: flex;
++    background: rgba(255, 255, 255, 0.05);
++    border: 1px solid rgba(255, 255, 255, 0.1);
++    border-radius: 6px;
++    overflow: hidden;
++}
++
++.footer-newsletter-form input {
++    background: transparent;
++    border: none;
++    padding: 0.75rem 1rem;
++    color: #fff;
++    width: 100%;
++    outline: none;
++    font-size: 0.9rem;
++}
++
++.footer-newsletter-form button {
++    background: var(--primary-color);
++    color: #fff;
++    border: none;
++    padding: 0 1.25rem;
++    cursor: pointer;
++    transition: background 0.3s ease;
++}
++
++.footer-newsletter-form button:hover {
++    background: #0d826a;
++}
++
++/* Bottom Bar */
++.footer-bottom {
++    display: flex;
++    justify-content: space-between;
++    align-items: center;
++    padding-top: 2rem;
++    border-top: 1px solid rgba(255, 255, 255, 0.05);
++    font-size: 0.85rem;
++    color: #64748b;
++}
++
++.footer-bottom .legal-links {
++    display: flex;
++    gap: 1.5rem;
++}
++
++.footer-bottom .legal-links a {
++    color: #64748b;
++    text-decoration: none;
++    transition: color 0.2s;
++}
++
++.footer-bottom .legal-links a:hover {
++    color: #fff;
++}
++
++@media (max-width: 900px) {
++    .footer-grid {
++        grid-template-columns: 1fr;
++        gap: 3rem;
++    }
++
++    .footer-bottom {
++        flex-direction: column;
++        gap: 1rem;
++        text-align: center;
++        align-items: center;
++    }
++
++    .nav-socials {
++        display: none;
++        /* Hide on mobile to save space unless explicitly asked */
++    }
++}
++
++/* =========================================
++   STEP-BY-STEP (COMMENT ├çA MARCHE) UI 
++   ========================================= */
++.step-by-step-container {
++    display: flex;
++    align-items: flex-start;
++    justify-content: center;
++    gap: 1rem;
++    flex-wrap: wrap;
++    /* Fallback for smaller screens */
++    margin-top: 3rem;
++}
++
++@media (min-width: 992px) {
++    .step-by-step-container {
++        flex-wrap: nowrap;
++    }
++}
++
++.step-card {
++    display: flex;
++    flex-direction: column;
++    align-items: center;
++    text-align: center;
++    width: 240px;
++    position: relative;
++}
++
++.step-image-wrap {
++    width: 160px;
++    height: 160px;
++    border-radius: 50%;
++    /* Outer border */
++    border: 3px solid rgba(16, 155, 128, 0.2);
++    padding: 8px;
++    /* Space before inner image */
++    background: transparent;
++    margin-bottom: 1.5rem;
++    position: relative;
++    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
++    transition: transform 0.3s ease, border-color 0.3s ease;
++}
++
++.bg-darker .step-image-wrap {
++    border-color: rgba(255, 255, 255, 0.1);
++    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
++}
++
++.step-card:hover .step-image-wrap {
++    transform: translateY(-5px);
++    border-color: var(--primary-color);
++}
++
++.step-image-wrap img {
++    width: 100%;
++    height: 100%;
++    object-fit: cover;
++    border-radius: 50%;
++    /* Simple dashed inner border */
++    position: relative;
++    z-index: 2;
++}
++
++/* Create the dashed ring inside */
++.step-image-wrap::after {
++    content: '';
++    position: absolute;
++    top: 10px;
++    left: 10px;
++    right: 10px;
++    bottom: 10px;
++    border-radius: 50%;
++    border: 2px dashed rgba(16, 155, 128, 0.5);
++    z-index: 3;
++    pointer-events: none;
++}
++
++.bg-darker .step-image-wrap::after {
++    border-color: rgba(255, 255, 255, 0.3);
++}
++
++.step-content h4 {
++    font-size: 1.2rem;
++    color: #0f172a;
++    margin-bottom: 0.5rem;
++    font-family: var(--font-heading);
++}
++
++.bg-darker .step-content h4 {
++    color: #fff;
++}
++
++.step-content p {
++    font-size: 0.95rem;
++    color: #475569;
++    line-height: 1.5;
++}
++
++.bg-darker .step-content p {
++    color: var(--text-muted);
++}
++
++/* Background gradient ring on hover */
++.step-image-wrap::before {
++    content: '';
++    position: absolute;
++    top: -3px;
++    left: -3px;
++    right: -3px;
++    bottom: -3px;
++    border-radius: 50%;
++    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
++    z-index: 1;
++    opacity: 0;
++    transition: opacity 0.3s ease;
++}
++
++.step-card:hover .step-image-wrap::before {
++    opacity: 0.5;
++}
++
++/* SQUIGGLY ARROW */
++.step-arrow {
++    flex-shrink: 0;
++    color: var(--primary-color);
++    opacity: 0.6;
++    width: 60px;
++    height: 160px;
++    /* Align centrally with the 160px image */
++    display: flex;
++    align-items: center;
++    justify-content: center;
++}
++
++.step-arrow svg {
++    width: 100%;
++    height: auto;
++    stroke: currentColor;
++    stroke-width: 2;
++    fill: none;
++    stroke-linecap: round;
++    stroke-linejoin: round;
++    filter: drop-shadow(0 0 5px rgba(16, 155, 128, 0.2));
++}
++
++@media (max-width: 1050px) {
++    .step-arrow {
++        display: none;
++        /* Hide arrows on smaller tablet/mobile to save space */
++    }
++}
++
++/* SUCCESS MODAL POPUP */
++.success-modal-overlay {
++    position: fixed;
++    top: 0;
++    left: 0;
++    width: 100%;
++    height: 100%;
++    background: rgba(15, 23, 42, 0.85);
++    /* rgba value matching var(--bg-color) roughly */
++    backdrop-filter: blur(8px);
++    z-index: 99999;
++    display: flex;
++    align-items: center;
++    justify-content: center;
++    opacity: 0;
++    visibility: hidden;
++    transition: all 0.3s ease;
++}
++
++.success-modal-overlay.active {
++    opacity: 1;
++    visibility: visible;
++}
++
++.success-modal-content {
++    background: var(--card-bg);
++    /* Use card background for consistency */
++    padding: 3rem 2rem;
++    border-radius: 24px;
++    border: 1px solid rgba(255, 255, 255, 0.1);
++    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
++    text-align: center;
++    max-width: 450px;
++    width: 90%;
++    transform: scale(0.9) translateY(20px);
++    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
++}
++
++.success-modal-overlay.active .success-modal-content {
++    transform: scale(1) translateY(0);
++}
++
++.success-modal-icon {
++    width: 80px;
++    height: 80px;
++    background: rgba(16, 155, 128, 0.1);
++    color: var(--primary-color);
++    border-radius: 50%;
++    display: flex;
++    align-items: center;
++    justify-content: center;
++    font-size: 2.5rem;
++    margin: 0 auto 1.5rem;
++    box-shadow: 0 0 20px rgba(16, 155, 128, 0.2);
++}
++
++.success-modal-content h3 {
++    margin-bottom: 1rem;
++    font-size: 1.8rem;
++    color: white;
++}
++
++.success-modal-content p {
++    color: var(--text-muted);
++    margin-bottom: 2rem;
++    font-size: 1.1rem;
++    line-height: 1.5;
++}
++
++.success-modal-close {
++    background: var(--primary-color);
++    color: white;
++    border: none;
++    padding: 1rem 2.5rem;
++    border-radius: 30px;
++    font-weight: 600;
++    font-size: 1.1rem;
++    cursor: pointer;
++    transition: all 0.3s ease;
++}
++
++.success-modal-close:hover {
++    background: #0d826b;
++    transform: translateY(-2px);
++    box-shadow: 0 10px 20px rgba(16, 155, 128, 0.3);
++}
+\ No newline at end of file
+
+commit cd3f7c6f658cbec485c9ab62450e724448c6c5d4
+Author: eulalio torres <sas.data.formation@gmail.com>
+Date:   Tue Feb 24 18:14:08 2026 +0100
+
+    feat: implement step-by-step UI and supabase form integration
+
+diff --git a/solution-automation.html b/solution-automation.html
+index 2be0e8f..b974149 100644
+--- a/solution-automation.html
++++ b/solution-automation.html
+@@ -23,57 +23,321 @@
+                 <img src="images/logo.svg" alt="Babylone42 Logo" style="height: 40px;">
+             </a>
+             <ul class="nav-links">
+-                <li><a href="index.html">Accueil</a></li>
+-                <li><a href="index.html#solutions">Solutions</a></li>
+-                <li><a href="index.html#newsletter">Newsletter</a></li>
+-                <li><a href="index.html#contact" class="btn btn-primary nav-btn">Contact</a></li>
++                <li class="dropdown">
++                    <a href="#hero">Accueil <i class="fas fa-chevron-down"
++                            style="font-size: 0.8rem; margin-left: 0.3rem;"></i></a>
++                    <ul class="dropdown-menu">
++                        <li><a href="about.html">About us</a></li>
++                        <li><a href="interlocuteurs.html">Vos interlocuteurs</a></li>
++                    </ul>
++                </li>
++                <li class="dropdown">
++                    <a href="#solutions">Solutions <i class="fas fa-chevron-down"
++                            style="font-size: 0.8rem; margin-left: 0.3rem;"></i></a>
++                    <ul class="dropdown-menu">
++                        <li><a href="solution-chatbots.html">Chatbots 24/7</a></li>
++                        <li><a href="solution-copilots.html">Copilots IA</a></li>
++                        <li><a href="solution-automation.html">Automatisation</a></li>
++                    </ul>
++                </li>
++                <li class="dropdown">
++                    <a href="#formations">Formations <i class="fas fa-chevron-down"
++                            style="font-size: 0.8rem; margin-left: 0.3rem;"></i></a>
++                    <ul class="dropdown-menu">
++                        <li><a href="formation-genai.html">IA G├®n├®rative</a></li>
++                        <li><a href="formation-jupyter.html">Jupyter</a></li>
++                        <li><a href="formation-python.html">Python</a></li>
++                        <li><a href="formation-ml.html">Machine Learning</a></li>
++                        <li><a href="formation-dl.html">Deep Learning</a></li>
++                        <li><a href="calendrier-formations.html"
++                                style="border-top: 1px solid rgba(255,255,255,0.1); margin-top: 0.5rem; padding-top: 0.8rem;">Calendrier
++                                des formations</a></li>
++                    </ul>
++                </li>
++                <li><a href="articles.html">Blog/actualit├®s</a></li>
++                <li><a href="contact-page.html" class="btn btn-primary nav-btn">Contact</a></li>
++                <li class="nav-socials">
++                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
++                    <a href="#" aria-label="X Twitter"><i class="fab fa-x-twitter"></i></a>
++                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
++                    <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
++                </li>
+             </ul>
++            <div class="hamburger">
++                <i class="fas fa-bars"></i>
++            </div>
+         </div>
+     </nav>
+ 
+-    <!-- HEADER -->
+-    <header class="section-padding" style="padding-top: 150px; background-color: var(--bg-color);">
+-        <div class="container hero-content">
+-            <h1>Automatisation <span class="highlight">Intellegente</span></h1>
+-            <p class="hero-subtitle">Reporting, Analyse, Synth├¿se. Extraction et traitement automatique de vos flux de
+-                documents (PDF, Excel, Mails).</p>
+-        </div>
+-    </header>
++    <main class="page-content" style="padding-top: 80px;">
++        <!-- HERO SOLUTION -->
++        <section class="formation-hero bg-darker section-padding" style="position: relative; overflow: hidden;">
++            <div class="container" style="position: relative; z-index: 2; text-align: center; max-width: 800px;">
++                <div class="bento-icon" style="margin: 0 auto 1.5rem; font-size: 3rem; color: var(--primary-color);"><i
++                        class="fas fa-cogs"></i></div>
++                <h1 style="font-size: 3rem; margin-bottom: 1rem;">Automatisation Intelligente (IA)</h1>
++                <p style="font-size: 1.2rem; color: var(--text-muted); margin-bottom: 2rem;">Transformez vos processus
++                    administratifs lourds en workflows fluides et automatis├®s gr├óce au traitement intelligent des
++                    documents.</p>
++                <div style="display: flex; gap: 1rem; justify-content: center;">
++                    <a href="contact-page.html" class="btn btn-primary">Auditer mes processus</a>
++                </div>
++            </div>
++            <!-- Background element -->
++            <div
++                style="position: absolute; top: -50%; left: -10%; width: 500px; height: 500px; background: radial-gradient(circle, rgba(14,138,148,0.15) 0%, transparent 70%); z-index: 1;">
++            </div>
++        </section>
+ 
+-    <!-- CONTENT -->
+-    <section class="section-padding">
+-        <div class="container">
+-            <div class="grid-2" style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+-                <div>
+-                    <h2>Fini la saisie manuelle</h2>
+-                    <p>Transformez vos processus administratifs lourds en workflows fluides et automatis├®s.</p>
+-                    <ul class="bento-list" style="margin-top: 2rem;">
+-                        <li><strong>Extraction de donn├®es (IDP) :</strong> Lisez automatiquement factures, bons de
+-                            commande et CV pour remplir votre ERP/CRM.</li>
+-                        <li><strong>G├®n├®ration de documents :</strong> Cr├®ez des contrats ou des rapports personnalis├®s
+-                            ├á partir de templates dynamiques.</li>
+-                        <li><strong>Workflows connect├®s :</strong> Connectez vos outils (Zapier, n8n, Make) pour faire
+-                            circuler l'information sans friction.</li>
+-                    </ul>
++        <!-- BENTO KEY INFO -->
++        <section class="section-padding bg-light">
++            <div class="container">
++                <div class="grid-4"
++                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem;">
++                    <div class="bento-card"
++                        style="background: white; border: 1px solid #e2e8f0; color: #0f172a; text-align: center; padding: 1.5rem;">
++                        <i class="fas fa-file-invoice"
++                            style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
++                        <h4 style="margin-bottom: 0.5rem; font-size: 1.1rem;">Extraction IDP</h4>
++                        <p style="color: #64748b; font-size: 0.95rem; margin-bottom: 0;">Factures, CVs, Bons de commande
++                        </p>
++                    </div>
++                    <div class="bento-card"
++                        style="background: white; border: 1px solid #e2e8f0; color: #0f172a; text-align: center; padding: 1.5rem;">
++                        <i class="fas fa-project-diagram"
++                            style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
++                        <h4 style="margin-bottom: 0.5rem; font-size: 1.1rem;">Interconnexion</h4>
++                        <p style="color: #64748b; font-size: 0.95rem; margin-bottom: 0;">APIs, Make, n8n, Zapier</p>
++                    </div>
++                    <div class="bento-card"
++                        style="background: white; border: 1px solid #e2e8f0; color: #0f172a; text-align: center; padding: 1.5rem;">
++                        <i class="fas fa-tachometer-alt"
++                            style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
++                        <h4 style="margin-bottom: 0.5rem; font-size: 1.1rem;">Scalabilit├®</h4>
++                        <p style="color: #64748b; font-size: 0.95rem; margin-bottom: 0;">G├®rez les pics de charge sans
++                            effort</p>
++                    </div>
++                    <div class="bento-card"
++                        style="background: white; border: 1px solid #e2e8f0; color: #0f172a; text-align: center; padding: 1.5rem;">
++                        <i class="fas fa-check-double"
++                            style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
++                        <h4 style="margin-bottom: 0.5rem; font-size: 1.1rem;">Pr├®cision</h4>
++                        <p style="color: #64748b; font-size: 0.95rem; margin-bottom: 0;">0% d'erreur de saisie manuelle
++                        </p>
++                    </div>
+                 </div>
+-                <div class="bento-visual">
+-                    <img src="images/solution-automation.jpg" alt="Automation Interface"
+-                        style="border-radius: 12px; opacity: 0.9;">
++            </div>
++        </section>
++
++        <!-- MARKETING PITCH -->
++        <section class="section-padding bg-darker">
++            <div class="container">
++                <div class="grid-2" style="align-items: center;">
++                    <div>
++                        <h2 class="section-title" style="text-align: left;">Fini la saisie manuelle et les copier-coller
++                        </h2>
++                        <p class="section-subtitle" style="text-align: left; margin-left: 0; margin-bottom: 2rem;">L'IA
++                            connecte vos logiciels et lit vos documents pour vous.</p>
++                        <ul class="differentiators-list" style="list-style: none; padding: 0;">
++                            <li style="margin-bottom: 1.5rem; display: flex; align-items: flex-start; gap: 1rem;">
++                                <i class="fas fa-check-circle"
++                                    style="color: var(--primary-color); font-size: 1.5rem; margin-top: 0.2rem;"></i>
++                                <div>
++                                    <strong style="display: block; font-size: 1.2rem; margin-bottom: 0.2rem;">Traitement
++                                        Documentaire (IDP)</strong>
++                                    <span style="color: var(--text-muted);">Nos mod├¿les OCR dop├®s ├á l'IA sont capables
++                                        de lire et comprendre la structure de n'importe quel PDF (m├¬me mal scann├®) pour
++                                        extraire les donn├®es vers votre ERP.</span>
++                                </div>
++                            </li>
++                            <li style="margin-bottom: 1.5rem; display: flex; align-items: flex-start; gap: 1rem;">
++                                <i class="fas fa-check-circle"
++                                    style="color: var(--primary-color); font-size: 1.5rem; margin-top: 0.2rem;"></i>
++                                <div>
++                                    <strong style="display: block; font-size: 1.2rem; margin-bottom: 0.2rem;">Routage et
++                                        Cat├®gorisation</strong>
++                                    <span style="color: var(--text-muted);">Un client envoie un email avec pi├¿ce jointe
++                                        ? L'IA analyse le contenu, le cat├®gorise (Facture, R├®clamation, Demande de
++                                        devise), et l'envoie au bon service automatiquement.</span>
++                                </div>
++                            </li>
++                            <li style="margin-bottom: 1.5rem; display: flex; align-items: flex-start; gap: 1rem;">
++                                <i class="fas fa-check-circle"
++                                    style="color: var(--primary-color); font-size: 1.5rem; margin-top: 0.2rem;"></i>
++                                <div>
++                                    <strong style="display: block; font-size: 1.2rem; margin-bottom: 0.2rem;">G├®n├®ration
++                                        Automatique de Documents</strong>
++                                    <span style="color: var(--text-muted);">G├®n├®rez instantan├®ment des contrats, devis
++                                        complexes ou rapports d'intervention en fusionnant les donn├®es de vos bases de
++                                        donn├®es dans des templates pr├®d├®finis.</span>
++                                </div>
++                            </li>
++                        </ul>
++                    </div>
++                    <div class="bento-visual">
++                        <img src="images/solution-automation.jpg" alt="Workflows d'Automatisation"
++                            style="border-radius: 12px; width: 100%; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
++                    </div>
+                 </div>
+             </div>
++        </section>
++
++        <!-- STEP BY STEP PROCESS -->
++        <section class="section-padding bg-light">
++            <div class="container">
++                <h2 class="section-title" style="color: #0f172a;">Comment <span class="highlight">├ºa marche ?</span>
++                </h2>
++                <p class="section-subtitle">Notre m├®thodologie pas ├á pas pour un d├®ploiement s├®curis├®.</p>
++
++                <div class="step-by-step-container">
++                    <!-- Step 1 -->
++                    <div class="step-card">
++                        <div class="step-image-wrap">
++                            <img src="images/why_us_meeting.png" alt="Capture et Extraction"
++                                onerror="this.src=''; this.parentElement.style.background='var(--primary-color)';">
++                        </div>
++                        <div class="step-content">
++                            <h4>1. Extraction (IDP)</h4>
++                            <p>L'IA lit et comprend vos documents entrants (factures, CVs, e-mails).</p>
++                        </div>
++                    </div>
++
++                    <!-- Arrow -->
++                    <div class="step-arrow">
++                        <svg viewBox="0 0 100 40" xmlns="http://www.w3.org/2000/svg">
++                            <path d="M 5,20 Q 20,5 35,20 T 65,20 T 85,20" fill="none" stroke="currentColor"
++                                stroke-width="2" />
++                            <polyline points="75,10 85,20 75,30" fill="none" stroke="currentColor" stroke-width="2"
++                                stroke-linecap="round" />
++                        </svg>
++                    </div>
+ 
+-            <div class="section-cta" style="margin-top: 4rem; text-align: center;">
+-                <a href="index.html#contact" class="btn btn-primary">Automatiser mes process</a>
++                    <!-- Step 2 -->
++                    <div class="step-card">
++                        <div class="step-image-wrap">
++                            <img src="images/problem-network.jpg" alt="Traitement et Validation"
++                                onerror="this.src=''; this.parentElement.style.background='var(--primary-color)';">
++                        </div>
++                        <div class="step-content">
++                            <h4>2. Validation Humaine</h4>
++                            <p>Les donn├®es sont structur├®es ; une validation (Human-in-the-Loop) est requise en cas de
++                                doute.</p>
++                        </div>
++                    </div>
++
++                    <!-- Arrow -->
++                    <div class="step-arrow">
++                        <svg viewBox="0 0 100 40" xmlns="http://www.w3.org/2000/svg">
++                            <path d="M 5,20 Q 20,5 35,20 T 65,20 T 85,20" fill="none" stroke="currentColor"
++                                stroke-width="2" />
++                            <polyline points="75,10 85,20 75,30" fill="none" stroke="currentColor" stroke-width="2"
++                                stroke-linecap="round" />
++                        </svg>
++                    </div>
++
++                    <!-- Step 3 -->
++                    <div class="step-card">
++                        <div class="step-image-wrap">
++                            <img src="images/why_us_team.png" alt="Routage et Int├®gration"
++                                onerror="this.src=''; this.parentElement.style.background='var(--primary-color)';">
++                        </div>
++                        <div class="step-content">
++                            <h4>3. Routage S├®curis├®</h4>
++                            <p>Les informations valid├®es sont envoy├®es automatiquement vers vos ERP ou CRM.</p>
++                        </div>
++                    </div>
++                </div>
+             </div>
+-        </div>
+-    </section>
++        </section>
++
++        <!-- CTA SECTION -->
++        <section class="section-padding bg-darker"
++            style="text-align: center; border-top: 1px solid rgba(255,255,255,0.05);">
++            <div class="container">
++                <h2 class="section-title">Quel processus vous fait perdre le plus de temps ?</h2>
++                <p class="section-subtitle" style="margin-bottom: 2rem;">Arr├¬tez de lutter contre les t├óches
++                    r├®p├®titives. Nos experts peuvent auditer vos processus m├®tiers gratuitement.</p>
++                <div style="display: flex; gap: 1rem; justify-content: center;">
++                    <a href="contact-page.html" class="btn btn-primary">Nous contacter</a>
++                    <a href="solution-chatbots.html" class="btn btn-secondary">D├®couvrir les Chatbots</a>
++                </div>
++            </div>
++        </section>
++    </main>
+ 
+     <!-- FOOTER -->
+-    <footer>
++    <footer class="mega-footer">
+         <div class="container">
+-            <div class="footer-content">
+-                <div class="footer-logo">Babylone42</div>
+-                <p class="copyright">┬® 2024 Babylone42. Tous droits r├®serv├®s.</p>
++            <div class="footer-grid">
++                <!-- Column 1: Brand & Socials -->
++                <div class="footer-col brand-col">
++                    <img src="images/logo.svg" alt="Babylone42 Logo" class="footer-logo-img">
++                    <p class="footer-desc">Babylone42 donne le pouvoir aux ├®quipes de transformer des donn├®es brutes en
++                        informations claires gr├óce ├á l'IA.</p>
++                    <div class="footer-socials">
++                        <a href="#" aria-label="X Twitter"><i class="fab fa-x-twitter"></i></a>
++                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
++                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
++                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
++                    </div>
++                </div>
++
++                <!-- Column 2: Accueil -->
++                <div class="footer-col">
++                    <h4 class="footer-title">Accueil</h4>
++                    <ul class="footer-links-list">
++                        <li><a href="about.html">About us</a></li>
++                        <li><a href="interlocuteurs.html">Vos interlocuteurs</a></li>
++                        <li><a href="articles.html">Blog / Actualit├®s</a></li>
++                        <li><a href="faq.html">FAQ</a></li>
++                    </ul>
++                </div>
++
++                <!-- Column 3: Solutions -->
++                <div class="footer-col">
++                    <h4 class="footer-title">Solutions</h4>
++                    <ul class="footer-links-list">
++                        <li><a href="solution-chatbots.html">Chatbots 24/7</a></li>
++                        <li><a href="solution-copilots.html">Copilots IA</a></li>
++                        <li><a href="solution-automation.html">Automatisation</a></li>
++                        <li><a href="solution-audit.html">Audit & Conseil</a></li>
++                    </ul>
++                </div>
++
++                <!-- Column 4: Formations -->
++                <div class="footer-col">
++                    <h4 class="footer-title">Formations</h4>
++                    <ul class="footer-links-list">
++                        <li><a href="formation-genai.html">IA G├®n├®rative</a></li>
++                        <li><a href="formation-jupyter.html">Jupyter</a></li>
++                        <li><a href="formation-python.html">Python</a></li>
++                        <li><a href="formation-ml.html">Machine Learning</a></li>
++                        <li><a href="formation-dl.html">Deep Learning</a></li>
++                    </ul>
++                </div>
++
++                <!-- Column 5: Contact & Newsletter -->
++                <div class="footer-col newsletter-col">
++                    <h4 class="footer-title">Contact & Newsletter</h4>
++                    <p class="footer-contact-info">
++                        <a href="mailto:contact@babylone42.fr"><i class="fas fa-envelope"></i>
++                            contact@babylone42.fr</a><br>
++                        <a href="tel:+330773609849"><i class="fas fa-phone-alt"></i> +33 0 7 73 60 98 49</a>
++                    </p>
++                    <form class="footer-newsletter-form">
++                        <input type="email" placeholder="Votre email" required>
++                        <button type="submit" aria-label="S'inscrire"><i class="fas fa-paper-plane"></i></button>
++                    </form>
++                </div>
++            </div>
++
++            <div class="footer-bottom">
++                <p class="copyright">┬® 2025 Babylone42. All rights reserved.</p>
++                <div class="legal-links">
++                    <a href="mentions-legales.html">Mentions L├®gales</a>
++                    <a href="politique-confidentialite.html">Politique de Confidentialit├®</a>
++                    <a href="cookies.html">Param├¿tres des cookies</a>
++                </div>
+             </div>
+         </div>
+     </footer>
+diff --git a/solution-chatbots.html b/solution-chatbots.html
+index 63b3def..1119d2e 100644
+--- a/solution-chatbots.html
++++ b/solution-chatbots.html
+@@ -23,58 +23,343 @@
+                 <img src="images/logo.svg" alt="Babylone42 Logo" style="height: 40px;">
+             </a>
+             <ul class="nav-links">
+-                <li><a href="index.html">Accueil</a></li>
+-                <li><a href="index.html#solutions">Solutions</a></li>
+-                <li><a href="index.html#newsletter">Newsletter</a></li>
+-                <li><a href="index.html#contact" class="btn btn-primary nav-btn">Contact</a></li>
++                <li class="dropdown">
++                    <a href="#hero">Accueil <i class="fas fa-chevron-down"
++                            style="font-size: 0.8rem; margin-left: 0.3rem;"></i></a>
++                    <ul class="dropdown-menu">
++                        <li><a href="about.html">About us</a></li>
++                        <li><a href="interlocuteurs.html">Vos interlocuteurs</a></li>
++                    </ul>
++                </li>
++                <li class="dropdown">
++                    <a href="#solutions">Solutions <i class="fas fa-chevron-down"
++                            style="font-size: 0.8rem; margin-left: 0.3rem;"></i></a>
++                    <ul class="dropdown-menu">
++                        <li><a href="solution-chatbots.html">Chatbots 24/7</a></li>
++                        <li><a href="solution-copilots.html">Copilots IA</a></li>
++                        <li><a href="solution-automation.html">Automatisation</a></li>
++                    </ul>
++                </li>
++                <li class="dropdown">
++                    <a href="#formations">Formations <i class="fas fa-chevron-down"
++                            style="font-size: 0.8rem; margin-left: 0.3rem;"></i></a>
++                    <ul class="dropdown-menu">
++                        <li><a href="formation-genai.html">IA G├®n├®rative</a></li>
++                        <li><a href="formation-jupyter.html">Jupyter</a></li>
++                        <li><a href="formation-python.html">Python</a></li>
++                        <li><a href="formation-ml.html">Machine Learning</a></li>
++                        <li><a href="formation-dl.html">Deep Learning</a></li>
++                        <li><a href="calendrier-formations.html"
++                                style="border-top: 1px solid rgba(255,255,255,0.1); margin-top: 0.5rem; padding-top: 0.8rem;">Calendrier
++                                des formations</a></li>
++                    </ul>
++                </li>
++                <li><a href="articles.html">Blog/actualit├®s</a></li>
++                <li><a href="contact-page.html" class="btn btn-primary nav-btn">Contact</a></li>
++                <li class="nav-socials">
++                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
++                    <a href="#" aria-label="X Twitter"><i class="fab fa-x-twitter"></i></a>
++                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
++                    <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
++                </li>
+             </ul>
++            <div class="hamburger">
++                <i class="fas fa-bars"></i>
++            </div>
+         </div>
+     </nav>
+ 
+-    <!-- HEADER -->
+-    <header class="section-padding" style="padding-top: 150px; background-color: var(--bg-color);">
+-        <div class="container hero-content">
+-            <h1>Chatbots IA <span class="highlight">Support 24/7</span></h1>
+-            <p class="hero-subtitle">Automatisez votre support client (Niveau 1) et facilitez l'acc├¿s ├á votre base de
+-                connaissances interne.</p>
+-        </div>
+-    </header>
++    <main class="page-content" style="padding-top: 80px;">
++        <!-- HERO SOLUTION -->
++        <section class="formation-hero bg-darker section-padding" style="position: relative; overflow: hidden;">
++            <div class="container" style="position: relative; z-index: 2; text-align: center; max-width: 800px;">
++                <div class="bento-icon" style="margin: 0 auto 1.5rem; font-size: 3rem; color: var(--primary-color);"><i
++                        class="fas fa-robot"></i></div>
++                <h1 style="font-size: 3rem; margin-bottom: 1rem;">Chatbots IA : Support Client 24/7</h1>
++                <p style="font-size: 1.2rem; color: var(--text-muted); margin-bottom: 2rem;">Automatisez votre support
++                    niveau 1, qualifiez vos leads en temps r├®el, et facilitez l'acc├¿s ├á votre base de connaissances
++                    interne.</p>
++                <div style="display: flex; gap: 1rem; justify-content: center;">
++                    <a href="contact-page.html" class="btn btn-primary">Demander une d├®mo</a>
++                </div>
++            </div>
++            <!-- Background element -->
++            <div
++                style="position: absolute; top: -50%; left: -10%; width: 500px; height: 500px; background: radial-gradient(circle, rgba(14,138,148,0.15) 0%, transparent 70%); z-index: 1;">
++            </div>
++        </section>
+ 
+-    <!-- CONTENT -->
+-    <section class="section-padding">
+-        <div class="container">
+-            <div class="grid-2" style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+-                <div>
+-                    <h2>Une r├®ponse instantan├®e, tout le temps</h2>
+-                    <p>Vos clients n'attendent pas. Nos Chatbots IA, bas├®s sur des LLM (Large Language Models)
+-                        s├®curis├®s, comprennent le contexte et r├®pondent avec pr├®cision.</p>
+-                    <ul class="bento-list" style="margin-top: 2rem;">
+-                        <li><strong>Service Client :</strong> R├®pondez aux FAQ, guidez les utilisateurs et qualifiez les
+-                            leads avant de passer la main ├á un humain.</li>
+-                        <li><strong>Support Interne :</strong> "Comment poser mes cong├®s ?", "O├╣ est le document X ?" :
+-                            vos RH respirent enfin.</li>
+-                        <li><strong>Multilingue :</strong> Une assistance disponible dans toutes les langues
+-                            instantan├®ment.</li>
+-                    </ul>
++        <!-- BENTO KEY INFO -->
++        <section class="section-padding bg-light">
++            <div class="container">
++                <div class="grid-4"
++                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem;">
++                    <div class="bento-card"
++                        style="background: white; border: 1px solid #e2e8f0; color: #0f172a; text-align: center; padding: 1.5rem;">
++                        <i class="fas fa-history"
++                            style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
++                        <h4 style="margin-bottom: 0.5rem; font-size: 1.1rem;">Disponibilit├®</h4>
++                        <p style="color: #64748b; font-size: 0.95rem; margin-bottom: 0;">24h/24, 7j/7 sans interruption
++                        </p>
++                    </div>
++                    <div class="bento-card"
++                        style="background: white; border: 1px solid #e2e8f0; color: #0f172a; text-align: center; padding: 1.5rem;">
++                        <i class="fas fa-bolt"
++                            style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
++                        <h4 style="margin-bottom: 0.5rem; font-size: 1.1rem;">D├®ploiement</h4>
++                        <p style="color: #64748b; font-size: 0.95rem; margin-bottom: 0;">Mise en place en 2 ├á 4 semaines
++                        </p>
++                    </div>
++                    <div class="bento-card"
++                        style="background: white; border: 1px solid #e2e8f0; color: #0f172a; text-align: center; padding: 1.5rem;">
++                        <i class="fas fa-plug"
++                            style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
++                        <h4 style="margin-bottom: 0.5rem; font-size: 1.1rem;">Int├®gration</h4>
++                        <p style="color: #64748b; font-size: 0.95rem; margin-bottom: 0;">Web, WhatsApp, Teams, CRM...
++                        </p>
++                    </div>
++                    <div class="bento-card"
++                        style="background: white; border: 1px solid #e2e8f0; color: #0f172a; text-align: center; padding: 1.5rem;">
++                        <i class="fas fa-shield-alt"
++                            style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
++                        <h4 style="margin-bottom: 0.5rem; font-size: 1.1rem;">S├®curit├®</h4>
++                        <p style="color: #64748b; font-size: 0.95rem; margin-bottom: 0;">Donn├®es priv├®es et RGPD</p>
++                    </div>
+                 </div>
+-                <div class="bento-visual">
+-                    <img src="images/solution-chatbot.jpg" alt="Chatbot Interface"
+-                        style="border-radius: 12px; opacity: 0.9;">
++            </div>
++        </section>
++
++        <!-- MARKETING PITCH -->
++        <section class="section-padding bg-darker">
++            <div class="container">
++                <div class="grid-2" style="align-items: center;">
++                    <div>
++                        <h2 class="section-title" style="text-align: left;">Pourquoi choisir un Chatbot sur mesure ?
++                        </h2>
++                        <p class="section-subtitle" style="text-align: left; margin-left: 0; margin-bottom: 2rem;">Une
++                            r├®ponse instantan├®e lib├¿re le temps pr├®cieux de vos ├®quipes.</p>
++                        <ul class="differentiators-list" style="list-style: none; padding: 0;">
++                            <li style="margin-bottom: 1.5rem; display: flex; align-items: flex-start; gap: 1rem;">
++                                <i class="fas fa-check-circle"
++                                    style="color: var(--primary-color); font-size: 1.5rem; margin-top: 0.2rem;"></i>
++                                <div>
++                                    <strong style="display: block; font-size: 1.2rem; margin-bottom: 0.2rem;">R├®duction
++                                        des T├óches Chronophages</strong>
++                                    <span style="color: var(--text-muted);">Jusqu'├á 70% des requ├¬tes entrantes sont
++                                        r├®currentes. Automatisez-les et concentrez vos ├®quipes sur la vraie valeur
++                                        ajout├®e.</span>
++                                </div>
++                            </li>
++                            <li style="margin-bottom: 1.5rem; display: flex; align-items: flex-start; gap: 1rem;">
++                                <i class="fas fa-check-circle"
++                                    style="color: var(--primary-color); font-size: 1.5rem; margin-top: 0.2rem;"></i>
++                                <div>
++                                    <strong
++                                        style="display: block; font-size: 1.2rem; margin-bottom: 0.2rem;">Compr├®hension
++                                        Contextuelle Intelligente</strong>
++                                    <span style="color: var(--text-muted);">Au-del├á des simples arbres de d├®cisions :
++                                        nos chatbots bas├®s sur les LLMs comprennent le langage naturel et s'adaptent au
++                                        ton du client.</span>
++                                </div>
++                            </li>
++                            <li style="margin-bottom: 1.5rem; display: flex; align-items: flex-start; gap: 1rem;">
++                                <i class="fas fa-check-circle"
++                                    style="color: var(--primary-color); font-size: 1.5rem; margin-top: 0.2rem;"></i>
++                                <div>
++                                    <strong
++                                        style="display: block; font-size: 1.2rem; margin-bottom: 0.2rem;">Multilingue et
++                                        Omnicanal</strong>
++                                    <span style="color: var(--text-muted);">Une assistance disponible dans des dizaines
++                                        de langues, d├®ployable sur votre site web, vos r├®seaux sociaux ou vos outils
++                                        internes.</span>
++                                </div>
++                            </li>
++                        </ul>
++                    </div>
++                    <div class="bento-visual">
++                        <img src="images/solution-chatbot.jpg" alt="Chatbot Interface Premium"
++                            style="border-radius: 12px; width: 100%; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
++                    </div>
+                 </div>
+             </div>
++        </section>
++
++        <!-- STEP BY STEP PROCESS -->
++        <section class="section-padding bg-light">
++            <div class="container">
++                <h2 class="section-title" style="color: #0f172a;">Comment <span class="highlight">├ºa marche ?</span>
++                </h2>
++                <p class="section-subtitle">Notre m├®thodologie pas ├á pas pour un d├®ploiement r├®ussi.</p>
++
++                <div class="step-by-step-container">
++                    <!-- Step 1 -->
++                    <div class="step-card">
++                        <div class="step-image-wrap">
++                            <img src="images/why_us_meeting.png" alt="Audit et Cadrage"
++                                onerror="this.src=''; this.parentElement.style.background='var(--primary-color)';">
++                        </div>
++                        <div class="step-content">
++                            <h4>1. Audit & Cadrage</h4>
++                            <p>Analyse de vos flux de requ├¬tes et d├®finition des KPIs avec vos ├®quipes.</p>
++                        </div>
++                    </div>
++
++                    <!-- Arrow -->
++                    <div class="step-arrow">
++                        <svg viewBox="0 0 100 40" xmlns="http://www.w3.org/2000/svg">
++                            <path d="M 5,20 Q 20,5 35,20 T 65,20 T 85,20" fill="none" stroke="currentColor"
++                                stroke-width="2" />
++                            <polyline points="75,10 85,20 75,30" fill="none" stroke="currentColor" stroke-width="2"
++                                stroke-linecap="round" />
++                        </svg>
++                    </div>
++
++                    <!-- Step 2 -->
++                    <div class="step-card">
++                        <div class="step-image-wrap">
++                            <img src="images/problem-network.jpg" alt="Structuration des donn├®es"
++                                onerror="this.src=''; this.parentElement.style.background='var(--primary-color)';">
++                        </div>
++                        <div class="step-content">
++                            <h4>2. Base Structur├®e</h4>
++                            <p>Vectorisation de votre documentation dans un espace s├®curis├® et priv├® (RAG).</p>
++                        </div>
++                    </div>
++
++                    <!-- Arrow -->
++                    <div class="step-arrow">
++                        <svg viewBox="0 0 100 40" xmlns="http://www.w3.org/2000/svg">
++                            <path d="M 5,20 Q 20,5 35,20 T 65,20 T 85,20" fill="none" stroke="currentColor"
++                                stroke-width="2" />
++                            <polyline points="75,10 85,20 75,30" fill="none" stroke="currentColor" stroke-width="2"
++                                stroke-linecap="round" />
++                        </svg>
++                    </div>
++
++                    <!-- Step 3 -->
++                    <div class="step-card">
++                        <div class="step-image-wrap">
++                            <img src="images/why_us_team.png" alt="D├®veloppement et Test"
++                                onerror="this.src=''; this.parentElement.style.background='var(--primary-color)';">
++                        </div>
++                        <div class="step-content">
++                            <h4>3. Cr├®ation & Test</h4>
++                            <p>D├®veloppement rapide d'un premier prototype testable. Ajustement des r├¿gles.</p>
++                        </div>
++                    </div>
++
++                    <!-- Arrow -->
++                    <div class="step-arrow">
++                        <svg viewBox="0 0 100 40" xmlns="http://www.w3.org/2000/svg">
++                            <path d="M 5,20 Q 20,5 35,20 T 65,20 T 85,20" fill="none" stroke="currentColor"
++                                stroke-width="2" />
++                            <polyline points="75,10 85,20 75,30" fill="none" stroke="currentColor" stroke-width="2"
++                                stroke-linecap="round" />
++                        </svg>
++                    </div>
+ 
+-            <div class="section-cta" style="margin-top: 4rem; text-align: center;">
+-                <a href="index.html#contact" class="btn btn-primary">Cr├®er mon Chatbot</a>
++                    <!-- Step 4 -->
++                    <div class="step-card">
++                        <div class="step-image-wrap">
++                            <img src="images/problem-tech.jpg" alt="D├®ploiement"
++                                onerror="this.src=''; this.parentElement.style.background='var(--primary-color)';">
++                        </div>
++                        <div class="step-content">
++                            <h4>4. D├®ploiement</h4>
++                            <p>Mise en production omnicanale et am├®lioration continue supervis├®e.</p>
++                        </div>
++                    </div>
++                </div>
+             </div>
+-        </div>
+-    </section>
++        </section>
++        <!-- CTA SECTION -->
++        <section class="section-padding bg-darker"
++            style="text-align: center; border-top: 1px solid rgba(255,255,255,0.05);">
++            <div class="container">
++                <h2 class="section-title">Pr├¬t ├á moderniser votre support ?</h2>
++                <p class="section-subtitle" style="margin-bottom: 2rem;">Discutons ensemble de vos flux de travail et
++                    identifions vos opportunit├®s d'automatisation.</p>
++                <div style="display: flex; gap: 1rem; justify-content: center;">
++                    <a href="contact-page.html" class="btn btn-primary">Planifier un appel</a>
++                    <a href="solution-copilots.html" class="btn btn-secondary">D├®couvrir les Copilots</a>
++                </div>
++            </div>
++        </section>
++    </main>
+ 
+     <!-- FOOTER -->
+-    <footer>
++    <footer class="mega-footer">
+         <div class="container">
+-            <div class="footer-content">
+-                <div class="footer-logo">Babylone42</div>
+-                <p class="copyright">┬® 2024 Babylone42. Tous droits r├®serv├®s.</p>
++            <div class="footer-grid">
++                <!-- Column 1: Brand & Socials -->
++                <div class="footer-col brand-col">
++                    <img src="images/logo.svg" alt="Babylone42 Logo" class="footer-logo-img">
++                    <p class="footer-desc">Babylone42 donne le pouvoir aux ├®quipes de transformer des donn├®es brutes en
++                        informations claires gr├óce ├á l'IA.</p>
++                    <div class="footer-socials">
++                        <a href="#" aria-label="X Twitter"><i class="fab fa-x-twitter"></i></a>
++                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
++                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
++                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
++                    </div>
++                </div>
++
++                <!-- Column 2: Accueil -->
++                <div class="footer-col">
++                    <h4 class="footer-title">Accueil</h4>
++                    <ul class="footer-links-list">
++                        <li><a href="about.html">About us</a></li>
++                        <li><a href="interlocuteurs.html">Vos interlocuteurs</a></li>
++                        <li><a href="articles.html">Blog / Actualit├®s</a></li>
++                        <li><a href="faq.html">FAQ</a></li>
++                    </ul>
++                </div>
++
++                <!-- Column 3: Solutions -->
++                <div class="footer-col">
++                    <h4 class="footer-title">Solutions</h4>
++                    <ul class="footer-links-list">
++                        <li><a href="solution-chatbots.html">Chatbots 24/7</a></li>
++                        <li><a href="solution-copilots.html">Copilots IA</a></li>
++                        <li><a href="solution-automation.html">Automatisation</a></li>
++                        <li><a href="solution-audit.html">Audit & Conseil</a></li>
++                    </ul>
++                </div>
++
++                <!-- Column 4: Formations -->
++                <div class="footer-col">
++                    <h4 class="footer-title">Formations</h4>
++                    <ul class="footer-links-list">
++                        <li><a href="formation-genai.html">IA G├®n├®rative</a></li>
++                        <li><a href="formation-jupyter.html">Jupyter</a></li>
++                        <li><a href="formation-python.html">Python</a></li>
++                        <li><a href="formation-ml.html">Machine Learning</a></li>
++                        <li><a href="formation-dl.html">Deep Learning</a></li>
++                    </ul>
++                </div>
++
++                <!-- Column 5: Contact & Newsletter -->
++                <div class="footer-col newsletter-col">
++                    <h4 class="footer-title">Contact & Newsletter</h4>
++                    <p class="footer-contact-info">
++                        <a href="mailto:contact@babylone42.fr"><i class="fas fa-envelope"></i>
++                            contact@babylone42.fr</a><br>
++                        <a href="tel:+330773609849"><i class="fas fa-phone-alt"></i> +33 0 7 73 60 98 49</a>
++                    </p>
++                    <form class="footer-newsletter-form">
++                        <input type="email" placeholder="Votre email" required>
++                        <button type="submit" aria-label="S'inscrire"><i class="fas fa-paper-plane"></i></button>
++                    </form>
++                </div>
++            </div>
++
++            <div class="footer-bottom">
++                <p class="copyright">┬® 2025 Babylone42. All rights reserved.</p>
++                <div class="legal-links">
++                    <a href="mentions-legales.html">Mentions L├®gales</a>
++                    <a href="politique-confidentialite.html">Politique de Confidentialit├®</a>
++                    <a href="cookies.html">Param├¿tres des cookies</a>
++                </div>
+             </div>
+         </div>
+     </footer>
+diff --git a/solution-copilots.html b/solution-copilots.html
+index 48dc74d..a56e557 100644
+--- a/solution-copilots.html
++++ b/solution-copilots.html
+@@ -23,58 +23,347 @@
+                 <img src="images/logo.svg" alt="Babylone42 Logo" style="height: 40px;">
+             </a>
+             <ul class="nav-links">
+-                <li><a href="index.html">Accueil</a></li>
+-                <li><a href="index.html#solutions">Solutions</a></li>
+-                <li><a href="index.html#newsletter">Newsletter</a></li>
+-                <li><a href="index.html#contact" class="btn btn-primary nav-btn">Contact</a></li>
++                <li class="dropdown">
++                    <a href="#hero">Accueil <i class="fas fa-chevron-down"
++                            style="font-size: 0.8rem; margin-left: 0.3rem;"></i></a>
++                    <ul class="dropdown-menu">
++                        <li><a href="about.html">About us</a></li>
++                        <li><a href="interlocuteurs.html">Vos interlocuteurs</a></li>
++                    </ul>
++                </li>
++                <li class="dropdown">
++                    <a href="#solutions">Solutions <i class="fas fa-chevron-down"
++                            style="font-size: 0.8rem; margin-left: 0.3rem;"></i></a>
++                    <ul class="dropdown-menu">
++                        <li><a href="solution-chatbots.html">Chatbots 24/7</a></li>
++                        <li><a href="solution-copilots.html">Copilots IA</a></li>
++                        <li><a href="solution-automation.html">Automatisation</a></li>
++                    </ul>
++                </li>
++                <li class="dropdown">
++                    <a href="#formations">Formations <i class="fas fa-chevron-down"
++                            style="font-size: 0.8rem; margin-left: 0.3rem;"></i></a>
++                    <ul class="dropdown-menu">
++                        <li><a href="formation-genai.html">IA G├®n├®rative</a></li>
++                        <li><a href="formation-jupyter.html">Jupyter</a></li>
++                        <li><a href="formation-python.html">Python</a></li>
++                        <li><a href="formation-ml.html">Machine Learning</a></li>
++                        <li><a href="formation-dl.html">Deep Learning</a></li>
++                        <li><a href="calendrier-formations.html"
++                                style="border-top: 1px solid rgba(255,255,255,0.1); margin-top: 0.5rem; padding-top: 0.8rem;">Calendrier
++                                des formations</a></li>
++                    </ul>
++                </li>
++                <li><a href="articles.html">Blog/actualit├®s</a></li>
++                <li><a href="contact-page.html" class="btn btn-primary nav-btn">Contact</a></li>
++                <li class="nav-socials">
++                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
++                    <a href="#" aria-label="X Twitter"><i class="fab fa-x-twitter"></i></a>
++                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
++                    <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
++                </li>
+             </ul>
++            <div class="hamburger">
++                <i class="fas fa-bars"></i>
++            </div>
+         </div>
+     </nav>
+ 
+-    <!-- HEADER -->
+-    <header class="section-padding" style="padding-top: 150px; background-color: var(--bg-color);">
+-        <div class="container hero-content">
+-            <h1>Copilots IA pour <span class="highlight">├ëquipes Agiles</span></h1>
+-            <p class="hero-subtitle">Des assistants intelligents sur mesure pour vos d├®partements (Vente, RH,
+-                Direction). Assistez, r├®digez et analysez en un temps record.</p>
+-        </div>
+-    </header>
++    <main class="page-content" style="padding-top: 80px;">
++        <!-- HERO SOLUTION -->
++        <section class="formation-hero bg-darker section-padding" style="position: relative; overflow: hidden;">
++            <div class="container" style="position: relative; z-index: 2; text-align: center; max-width: 800px;">
++                <div class="bento-icon" style="margin: 0 auto 1.5rem; font-size: 3rem; color: var(--primary-color);"><i
++                        class="fas fa-brain"></i></div>
++                <h1 style="font-size: 3rem; margin-bottom: 1rem;">Copilots IA : Un assistant pour chaque employ├®</h1>
++                <p style="font-size: 1.2rem; color: var(--text-muted); margin-bottom: 2rem;">Des assistants intelligents
++                    sur mesure pour vos d├®partements (Vente, RH, Direction). Recherchez, r├®digez et analysez en un temps
++                    record avec vos propres donn├®es.</p>
++                <div style="display: flex; gap: 1rem; justify-content: center;">
++                    <a href="contact-page.html" class="btn btn-primary">Demander une d├®mo</a>
++                </div>
++            </div>
++            <!-- Background element -->
++            <div
++                style="position: absolute; top: -50%; left: -10%; width: 500px; height: 500px; background: radial-gradient(circle, rgba(14,138,148,0.15) 0%, transparent 70%); z-index: 1;">
++            </div>
++        </section>
+ 
+-    <!-- CONTENT -->
+-    <section class="section-padding">
+-        <div class="container">
+-            <div class="grid-2" style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+-                <div>
+-                    <h2>Pourquoi un Copilot ?</h2>
+-                    <p>Vos collaborateurs passent jusqu'├á 40% de leur temps ├á rechercher de l'information ou ├á r├®diger
+-                        des contenus standards. Un Copilot IA s'int├¿gre ├á vos outils (Teams, Slack, CRM) pour :</p>
+-                    <ul class="bento-list" style="margin-top: 2rem;">
+-                        <li><strong>Recherche s├®mantique :</strong> Retrouvez n'importe quel document en posant une
+-                            question naturelle.</li>
+-                        <li><strong>R├®daction assist├®e :</strong> G├®n├®rez des emails, des rapports ou des posts LinkedIn
+-                            en quelques secondes.</li>
+-                        <li><strong>Analyse de donn├®es :</strong> Interrogez vos fichiers Excel ou PDF pour en extraire
+-                            les tendances cl├®s.</li>
+-                    </ul>
++        <!-- BENTO KEY INFO -->
++        <section class="section-padding bg-light">
++            <div class="container">
++                <div class="grid-4"
++                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem;">
++                    <div class="bento-card"
++                        style="background: white; border: 1px solid #e2e8f0; color: #0f172a; text-align: center; padding: 1.5rem;">
++                        <i class="fas fa-search"
++                            style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
++                        <h4 style="margin-bottom: 0.5rem; font-size: 1.1rem;">Recherche S├®mantique</h4>
++                        <p style="color: #64748b; font-size: 0.95rem; margin-bottom: 0;">Trouvez l'information
++                            instantan├®ment</p>
++                    </div>
++                    <div class="bento-card"
++                        style="background: white; border: 1px solid #e2e8f0; color: #0f172a; text-align: center; padding: 1.5rem;">
++                        <i class="fas fa-pen-nib"
++                            style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
++                        <h4 style="margin-bottom: 0.5rem; font-size: 1.1rem;">R├®daction Assist├®e</h4>
++                        <p style="color: #64748b; font-size: 0.95rem; margin-bottom: 0;">G├®n├®ration de rapports et
++                            synth├¿ses</p>
++                    </div>
++                    <div class="bento-card"
++                        style="background: white; border: 1px solid #e2e8f0; color: #0f172a; text-align: center; padding: 1.5rem;">
++                        <i class="fas fa-lock"
++                            style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
++                        <h4 style="margin-bottom: 0.5rem; font-size: 1.1rem;">S├®curit├® Priv├®e</h4>
++                        <p style="color: #64748b; font-size: 0.95rem; margin-bottom: 0;">Vos donn├®es ne quittent pas
++                            votre SI</p>
++                    </div>
++                    <div class="bento-card"
++                        style="background: white; border: 1px solid #e2e8f0; color: #0f172a; text-align: center; padding: 1.5rem;">
++                        <i class="fas fa-chart-line"
++                            style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
++                        <h4 style="margin-bottom: 0.5rem; font-size: 1.1rem;">Gain de Temps</h4>
++                        <p style="color: #64748b; font-size: 0.95rem; margin-bottom: 0;">40% de temps administratif
++                            gagn├®</p>
++                    </div>
+                 </div>
+-                <div class="bento-visual">
+-                    <img src="images/solution-copilot.jpg" alt="Copilot Interface"
+-                        style="border-radius: 12px; opacity: 0.9;">
++            </div>
++        </section>
++
++        <!-- MARKETING PITCH -->
++        <section class="section-padding bg-darker">
++            <div class="container">
++                <div class="grid-2" style="align-items: center;">
++                    <div>
++                        <h2 class="section-title" style="text-align: left;">Augmentez la productivit├® de vos ├®quipes
++                        </h2>
++                        <p class="section-subtitle" style="text-align: left; margin-left: 0; margin-bottom: 2rem;">Vos
++                            collaborateurs passent jusqu'├á 40% de leur temps ├á rechercher de l'information.</p>
++                        <ul class="differentiators-list" style="list-style: none; padding: 0;">
++                            <li style="margin-bottom: 1.5rem; display: flex; align-items: flex-start; gap: 1rem;">
++                                <i class="fas fa-check-circle"
++                                    style="color: var(--primary-color); font-size: 1.5rem; margin-top: 0.2rem;"></i>
++                                <div>
++                                    <strong
++                                        style="display: block; font-size: 1.2rem; margin-bottom: 0.2rem;">Int├®gration
++                                        Native</strong>
++                                    <span style="color: var(--text-muted);">Un Copilot s'int├¿gre directement o├╣ vous
++                                        travaillez (Slack, Teams, Intranet) pour fournir des r├®ponses bas├®es sur VOTRE
++                                        documentation interne.</span>
++                                </div>
++                            </li>
++                            <li style="margin-bottom: 1.5rem; display: flex; align-items: flex-start; gap: 1rem;">
++                                <i class="fas fa-check-circle"
++                                    style="color: var(--primary-color); font-size: 1.5rem; margin-top: 0.2rem;"></i>
++                                <div>
++                                    <strong style="display: block; font-size: 1.2rem; margin-bottom: 0.2rem;">Analyse et
++                                        Structuration Complexe</strong>
++                                    <span style="color: var(--text-muted);">Demandez au Copilot de synth├®tiser 50 PDFs
++                                        techniques ou de croiser les donn├®es de plusieurs tableaux Excel
++                                        instantan├®ment.</span>
++                                </div>
++                            </li>
++                            <li style="margin-bottom: 1.5rem; display: flex; align-items: flex-start; gap: 1rem;">
++                                <i class="fas fa-check-circle"
++                                    style="color: var(--primary-color); font-size: 1.5rem; margin-top: 0.2rem;"></i>
++                                <div>
++                                    <strong style="display: block; font-size: 1.2rem; margin-bottom: 0.2rem;">Contr├┤le
++                                        des Acc├¿s (RBAC)</strong>
++                                    <span style="color: var(--text-muted);">Chaque employ├® n'aura acc├¿s via le Copilot
++                                        qu'aux documents auxquels il a d├®j├á acc├¿s dans votre syst├¿me de fichiers,
++                                        garantissant une conformit├® totale.</span>
++                                </div>
++                            </li>
++                        </ul>
++                    </div>
++                    <div class="bento-visual">
++                        <img src="images/solution-copilot.jpg" alt="Copilot Interface Premium"
++                            style="border-radius: 12px; width: 100%; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
++                    </div>
+                 </div>
+             </div>
++        </section>
++
++        <!-- STEP BY STEP PROCESS -->
++        <section class="section-padding bg-light">
++            <div class="container">
++                <h2 class="section-title" style="color: #0f172a;">Comment <span class="highlight">├ºa marche ?</span>
++                </h2>
++                <p class="section-subtitle">Notre m├®thodologie pas ├á pas pour un d├®ploiement s├®curis├®.</p>
++
++                <div class="step-by-step-container">
++                    <!-- Step 1 -->
++                    <div class="step-card">
++                        <div class="step-image-wrap">
++                            <img src="images/why_us_meeting.png" alt="Cartographie des sources"
++                                onerror="this.src=''; this.parentElement.style.background='var(--primary-color)';">
++                        </div>
++                        <div class="step-content">
++                            <h4>1. Audit Source</h4>
++                            <p>Analyse de vos sources de v├®rit├® (Notion, ERP) et d├®finition de la strat├®gie d'ingestion.
++                            </p>
++                        </div>
++                    </div>
++
++                    <!-- Arrow -->
++                    <div class="step-arrow">
++                        <svg viewBox="0 0 100 40" xmlns="http://www.w3.org/2000/svg">
++                            <path d="M 5,20 Q 20,5 35,20 T 65,20 T 85,20" fill="none" stroke="currentColor"
++                                stroke-width="2" />
++                            <polyline points="75,10 85,20 75,30" fill="none" stroke="currentColor" stroke-width="2"
++                                stroke-linecap="round" />
++                        </svg>
++                    </div>
+ 
+-            <div class="section-cta" style="margin-top: 4rem; text-align: center;">
+-                <a href="index.html#contact" class="btn btn-primary">D├®ployer un Copilot</a>
++                    <!-- Step 2 -->
++                    <div class="step-card">
++                        <div class="step-image-wrap">
++                            <img src="images/problem-network.jpg" alt="Architecture RAG"
++                                onerror="this.src=''; this.parentElement.style.background='var(--primary-color)';">
++                        </div>
++                        <div class="step-content">
++                            <h4>2. Base & RAG</h4>
++                            <p>Vectorisation de vos donn├®es dans une base isol├®e. Aucune donn├®e n'entra├«ne les mod├¿les
++                                publics.</p>
++                        </div>
++                    </div>
++
++                    <!-- Arrow -->
++                    <div class="step-arrow">
++                        <svg viewBox="0 0 100 40" xmlns="http://www.w3.org/2000/svg">
++                            <path d="M 5,20 Q 20,5 35,20 T 65,20 T 85,20" fill="none" stroke="currentColor"
++                                stroke-width="2" />
++                            <polyline points="75,10 85,20 75,30" fill="none" stroke="currentColor" stroke-width="2"
++                                stroke-linecap="round" />
++                        </svg>
++                    </div>
++
++                    <!-- Step 3 -->
++                    <div class="step-card">
++                        <div class="step-image-wrap">
++                            <img src="images/why_us_team.png" alt="D├®veloppement et Interface"
++                                onerror="this.src=''; this.parentElement.style.background='var(--primary-color)';">
++                        </div>
++                        <div class="step-content">
++                            <h4>3. Interface & Acc├¿s</h4>
++                            <p>Cr├®ation d'une interface web connect├®e ├á votre SSO. Les restrictions d'acc├¿s existantes
++                                sont respect├®es.</p>
++                        </div>
++                    </div>
++
++                    <!-- Arrow -->
++                    <div class="step-arrow">
++                        <svg viewBox="0 0 100 40" xmlns="http://www.w3.org/2000/svg">
++                            <path d="M 5,20 Q 20,5 35,20 T 65,20 T 85,20" fill="none" stroke="currentColor"
++                                stroke-width="2" />
++                            <polyline points="75,10 85,20 75,30" fill="none" stroke="currentColor" stroke-width="2"
++                                stroke-linecap="round" />
++                        </svg>
++                    </div>
++
++                    <!-- Step 4 -->
++                    <div class="step-card">
++                        <div class="step-image-wrap">
++                            <img src="images/problem-tech.jpg" alt="Ateliers d'adoption"
++                                onerror="this.src=''; this.parentElement.style.background='var(--primary-color)';">
++                        </div>
++                        <div class="step-content">
++                            <h4>4. Adoption</h4>
++                            <p>Accompagnement de vos ├®quipes via des ateliers de Prompt Engineering cibl├®s.</p>
++                        </div>
++                    </div>
++                </div>
+             </div>
+-        </div>
+-    </section>
++        </section>
++
++        <!-- CTA SECTION -->
++        <section class="section-padding bg-darker"
++            style="text-align: center; border-top: 1px solid rgba(255,255,255,0.05);">
++            <div class="container">
++                <h2 class="section-title">Augmentez vos ├®quipes d├¿s aujourd'hui</h2>
++                <p class="section-subtitle" style="margin-bottom: 2rem;">Donnez les meilleurs outils ├á vos
++                    collaborateurs et constatez une lib├®ration de leur productivit├®.</p>
++                <div style="display: flex; gap: 1rem; justify-content: center;">
++                    <a href="contact-page.html" class="btn btn-primary">Planifier une d├®mo</a>
++                    <a href="solution-automation.html" class="btn btn-secondary">D├®couvrir l'Automatisation</a>
++                </div>
++            </div>
++        </section>
++    </main>
+ 
+     <!-- FOOTER -->
+-    <footer>
++    <footer class="mega-footer">
+         <div class="container">
+-            <div class="footer-content">
+-                <div class="footer-logo">Babylone42</div>
+-                <p class="copyright">┬® 2024 Babylone42. Tous droits r├®serv├®s.</p>
++            <div class="footer-grid">
++                <!-- Column 1: Brand & Socials -->
++                <div class="footer-col brand-col">
++                    <img src="images/logo.svg" alt="Babylone42 Logo" class="footer-logo-img">
++                    <p class="footer-desc">Babylone42 donne le pouvoir aux ├®quipes de transformer des donn├®es brutes en
++                        informations claires gr├óce ├á l'IA.</p>
++                    <div class="footer-socials">
++                        <a href="#" aria-label="X Twitter"><i class="fab fa-x-twitter"></i></a>
++                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
++                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
++                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
++                    </div>
++                </div>
++
++                <!-- Column 2: Accueil -->
++                <div class="footer-col">
++                    <h4 class="footer-title">Accueil</h4>
++                    <ul class="footer-links-list">
++                        <li><a href="about.html">About us</a></li>
++                        <li><a href="interlocuteurs.html">Vos interlocuteurs</a></li>
++                        <li><a href="articles.html">Blog / Actualit├®s</a></li>
++                        <li><a href="faq.html">FAQ</a></li>
++                    </ul>
++                </div>
++
++                <!-- Column 3: Solutions -->
++                <div class="footer-col">
++                    <h4 class="footer-title">Solutions</h4>
++                    <ul class="footer-links-list">
++                        <li><a href="solution-chatbots.html">Chatbots 24/7</a></li>
++                        <li><a href="solution-copilots.html">Copilots IA</a></li>
++                        <li><a href="solution-automation.html">Automatisation</a></li>
++                        <li><a href="solution-audit.html">Audit & Conseil</a></li>
++                    </ul>
++                </div>
++
++                <!-- Column 4: Formations -->
++                <div class="footer-col">
++                    <h4 class="footer-title">Formations</h4>
++                    <ul class="footer-links-list">
++                        <li><a href="formation-genai.html">IA G├®n├®rative</a></li>
++                        <li><a href="formation-jupyter.html">Jupyter</a></li>
++                        <li><a href="formation-python.html">Python</a></li>
++                        <li><a href="formation-ml.html">Machine Learning</a></li>
++                        <li><a href="formation-dl.html">Deep Learning</a></li>
++                    </ul>
++                </div>
++
++                <!-- Column 5: Contact & Newsletter -->
++                <div class="footer-col newsletter-col">
++                    <h4 class="footer-title">Contact & Newsletter</h4>
++                    <p class="footer-contact-info">
++                        <a href="mailto:contact@babylone42.fr"><i class="fas fa-envelope"></i>
++                            contact@babylone42.fr</a><br>
++                        <a href="tel:+330773609849"><i class="fas fa-phone-alt"></i> +33 0 7 73 60 98 49</a>
++                    </p>
++                    <form class="footer-newsletter-form">
++                        <input type="email" placeholder="Votre email" required>
++                        <button type="submit" aria-label="S'inscrire"><i class="fas fa-paper-plane"></i></button>
++                    </form>
++                </div>
++            </div>
++
++            <div class="footer-bottom">
++                <p class="copyright">┬® 2025 Babylone42. All rights reserved.</p>
++                <div class="legal-links">
++                    <a href="mentions-legales.html">Mentions L├®gales</a>
++                    <a href="politique-confidentialite.html">Politique de Confidentialit├®</a>
++                    <a href="cookies.html">Param├¿tres des cookies</a>
++                </div>
+             </div>
+         </div>
+     </footer>
+
+commit 720a39221c21a12ccb0d2405909ee067ed3053c3
+Author: eulalio torres <sas.data.formation@gmail.com>
+Date:   Sun Feb 22 13:39:00 2026 +0100
+
+    Update problem section padding and card themes
+
+diff --git a/index.html b/index.html
+index 1df25ad..63c6775 100644
+--- a/index.html
++++ b/index.html
+@@ -113,36 +113,39 @@
+                 <!-- Card 1 -->
+                 <div class="bento-card problem-card-bento">
+                     <div class="bento-content">
+-                        <div class="bento-icon">­ƒÆ©</div>
+                         <h3>Dette Op├®rationnelle</h3>
+                         <p>Continuer ├á travailler 'comme avant' co├╗te de plus en plus cher</p>
+                     </div>
+-                    <div class="bento-visual-mini">
+-                        <img src="images/problem-time.jpg" alt="Abstract Time">
++                    <div class="bento-stat">
++                        <span class="stat-value">142</span>
++                        <span class="stat-unit">jours / an</span>
++                        <span class="stat-label">Temps perdu en gestion administrative par les PME (Sage)</span>
+                     </div>
+                 </div>
+ 
+                 <!-- Card 2 -->
+                 <div class="bento-card problem-card-bento">
+                     <div class="bento-content">
+-                        <div class="bento-icon">­ƒÄ»</div>
+                         <h3>D├®cisions ├á l'Aveugle</h3>
+                         <p>Sans analyse de donn├®es en temps r├®el, vous naviguez sans boussole</p>
+                     </div>
+-                    <div class="bento-visual-mini">
+-                        <img src="images/problem-network.jpg" alt="Data Network">
++                    <div class="bento-stat">
++                        <span class="stat-value">84<span style="font-size: 1.5rem">%</span></span>
++                        <span class="stat-unit">des dirigeants</span>
++                        <span class="stat-label">doutent de la qualit├® de leurs donn├®es pour d├®cider (Goaland)</span>
+                     </div>
+                 </div>
+ 
+                 <!-- Card 3 -->
+                 <div class="bento-card problem-card-bento">
+                     <div class="bento-content">
+-                        <div class="bento-icon">­ƒÜÇ</div>
+                         <h3>Concurrence ├ëquip├®e IA</h3>
+                         <p>Vos rivaux ├®quip├®s d'IA traitent vos prospects 3x plus vite</p>
+                     </div>
+-                    <div class="bento-visual-mini">
+-                        <img src="images/problem-tech.jpg" alt="Future Tech">
++                    <div class="bento-stat">
++                        <span class="stat-value">10<span style="font-size: 1.5rem">%</span></span>
++                        <span class="stat-unit">des PME</span>
++                        <span class="stat-label">utilisent d├®j├á l'IA en France (INSEE 2024). Soyez pionnier.</span>
+                     </div>
+                 </div>
+             </div>
+diff --git a/style.css b/style.css
+index 3465774..6673261 100644
+--- a/style.css
++++ b/style.css
+@@ -77,6 +77,10 @@ p {
+     padding: 6rem 0;
+ }
+ 
++#problems.section-padding {
++    padding: 3rem 0;
++}
++
+ .bg-darker {
+     background-color: #011014;
+     /* Even darker teal */
+@@ -96,15 +100,41 @@ p {
+     color: #475569;
+ }
+ 
+-/* Ensure text inside dark cards on light sections stays light */
+-.bg-light .bento-card,
+-.bg-light .badge,
+-.bg-light .faq-item {
+-    color: var(--text-color);
++/* Cards in light sections */
++.bg-light .bento-card {
++    background: #ffffff;
++    border: 1px solid #e2e8f0;
++    color: #0f172a;
++}
++
++.bg-light .bento-card h3 {
++    color: #0f172a;
+ }
+ 
+ .bg-light .bento-card p {
+-    color: #94a3b8;
++    color: #475569;
++}
++
++.bg-light .bento-card .bento-stat {
++    border-top: 1px solid #e2e8f0;
++}
++
++.bg-light .bento-card .stat-unit {
++    color: #0f172a;
++}
++
++.bg-light .bento-card .stat-label {
++    color: #64748b;
++}
++
++.bg-light .bento-card:hover {
++    border-color: var(--primary-color);
++    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
++}
++
++.bg-light .badge,
++.bg-light .faq-item {
++    color: var(--text-color);
+ }
+ 
+ /* Subsection styling */
+@@ -480,39 +510,51 @@ p {
+     color: var(--primary-color);
+ }
+ 
+-/* CARDS WITH IMAGES - Problem cards specific styles (Compact version) */
++/* Problem cards specific styles */
+ .problem-card-bento {
+     padding: 1.5rem;
+-    /* Reduced padding for compactness */
+-    max-height: 320px;
+-    /* Height constraint */
++    display: flex;
++    flex-direction: column;
++    justify-content: space-between;
++    gap: 1rem;
+ }
+ 
+ .problem-card-bento h3 {
+     font-size: 1.1rem;
+-    /* Slightly smaller titles */
+     margin-bottom: 0.5rem;
+ }
+ 
+ .problem-card-bento p {
+     font-size: 0.9rem;
+-    /* Smaller text */
+     line-height: 1.5;
+ }
+ 
+-.problem-card-bento .bento-icon {
+-    font-size: 2rem;
+-    /* Reduced icon size */
+-    margin-bottom: 0.75rem;
++.bento-stat {
++    display: flex;
++    flex-direction: column;
++    align-items: flex-start;
++    padding-top: 1rem;
++    border-top: 1px solid rgba(255, 255, 255, 0.1);
+ }
+ 
+-.problem-card-bento .bento-visual-mini {
+-    height: 140px;
+-    /* Reduced height for more compact cards */
+-    margin-top: 1rem;
+-    width: 100%;
+-    flex-grow: 0;
+-    /* Don't grow to take all space */
++.stat-value {
++    font-size: 2.5rem;
++    font-family: var(--font-heading);
++    font-weight: 700;
++    color: var(--primary-color);
++    line-height: 1;
++}
++
++.stat-unit {
++    font-size: 1rem;
++    font-weight: 600;
++    color: #fff;
++    margin-bottom: 0.2rem;
++}
++
++.stat-label {
++    font-size: 0.8rem;
++    color: var(--text-muted);
+ }
+ 
+ /* BENTO GRID SYSTEM */
+
+commit 1d048ed78ee05e878823bec6f43b063e9d76d8eb
+Author: eulalio torres <sas.data.formation@gmail.com>
+Date:   Fri Feb 20 13:21:55 2026 +0100
+
+    Initial commit of Siteweb marketing site
+
+diff --git a/index.html b/index.html
+new file mode 100644
+index 0000000..d31f55c
+--- /dev/null
++++ b/index.html
+@@ -0,0 +1,488 @@
++<!DOCTYPE html>
++<html lang="fr">
++
++<head>
++    <meta charset="UTF-8">
++    <meta name="viewport" content="width=device-width, initial-scale=1.0">
++    <title>Babylone42 | Partenaire IA & Automatisation pour Entreprises</title>
++    <meta name="description"
++        content="D├®ployez des solutions IA concr├¿tes (Copilots, Chatbots, Automatisation) et formez vos ├®quipes avec Babylone42. Expertise technique et p├®dagogique ├á Marseille et en France.">
++    <link rel="preconnect" href="https://fonts.googleapis.com">
++    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
++    <link
++        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Space+Grotesk:wght@300;400;600;700&display=swap"
++        rel="stylesheet">
++    <link rel="stylesheet" href="style.css">
++    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
++</head>
++
++<body>
++
++    <!-- NAVIGATION -->
++    <nav class="navbar">
++        <div class="container">
++            <a href="#" class="logo">
++                <img src="images/logo.svg" alt="Babylone42 Logo" style="height: 40px;">
++            </a>
++            <ul class="nav-links">
++                <li><a href="#hero">Accueil</a></li>
++                <li><a href="#solutions">Solutions</a></li>
++
++                <li><a href="#formations">Formations</a></li>
++                <li><a href="#newsletter">Newsletter</a></li>
++                <li><a href="#contact" class="btn btn-primary nav-btn">Contact</a></li>
++            </ul>
++            <div class="hamburger">
++                <i class="fas fa-bars"></i>
++            </div>
++        </div>
++    </nav>
++
++    <!-- HERO SECTION -->
++    <section id="hero" class="hero-section">
++        <div class="hero-visual-bg">
++            <img src="images/hero-bg.jpg" alt="AI Technology Background">
++            <div class="overlay"></div>
++        </div>
++        <div class="container hero-content">
++            <h1>Transformez votre entreprise gr├óce ├á <span class="highlight">l'IA op├®rationnelle</span></h1>
++            <p class="hero-subtitle">Nous d├®ployons des solutions d'intelligence artificielle concr├¿tes qui automatisent
++                vos t├óches et augmentent imm├®diatement la productivit├® de vos ├®quipes.</p>
++            <div class="hero-cta">
++                <a href="#contact" class="btn btn-primary">Parlons de votre projet IA gratuitement</a>
++            </div>
++            <div class="trust-signals">
++                <span><i class="fas fa-shield-alt"></i> Solutions s├®curis├®es</span>
++                <span><i class="fas fa-rocket"></i> D├®ploiement rapide</span>
++                <span><i class="fas fa-user-check"></i> Accompagnement humain</span>
++            </div>
++        </div>
++    </section>
++
++    <!-- PROBLEMS SECTION -->
++    <section id="problems" class="section-padding bg-light">
++        <div class="container">
++            <h2 class="section-title">L'├®cart avec vos concurrents se creuse chaque jour</h2>
++            <div class="grid-3">
++                <!-- Card 1 -->
++                <div class="bento-card problem-card-bento">
++                    <div class="bento-content">
++                        <div class="bento-icon">­ƒÆ©</div>
++                        <h3>Dette Op├®rationnelle</h3>
++                        <p>Continuer ├á travailler 'comme avant' co├╗te de plus en plus cher</p>
++                    </div>
++                    <div class="bento-visual-mini">
++                        <img src="images/problem-time.jpg" alt="Abstract Time">
++                    </div>
++                </div>
++
++                <!-- Card 2 -->
++                <div class="bento-card problem-card-bento">
++                    <div class="bento-content">
++                        <div class="bento-icon">­ƒÄ»</div>
++                        <h3>D├®cisions ├á l'Aveugle</h3>
++                        <p>Sans analyse de donn├®es en temps r├®el, vous naviguez sans boussole</p>
++                    </div>
++                    <div class="bento-visual-mini">
++                        <img src="images/problem-network.jpg" alt="Data Network">
++                    </div>
++                </div>
++
++                <!-- Card 3 -->
++                <div class="bento-card problem-card-bento">
++                    <div class="bento-content">
++                        <div class="bento-icon">­ƒÜÇ</div>
++                        <h3>Concurrence ├ëquip├®e IA</h3>
++                        <p>Vos rivaux ├®quip├®s d'IA traitent vos prospects 3x plus vite</p>
++                    </div>
++                    <div class="bento-visual-mini">
++                        <img src="images/problem-tech.jpg" alt="Future Tech">
++                    </div>
++                </div>
++            </div>
++        </div>
++    </section>
++
++    <!-- SOLUTIONS SECTION (BENTO GRID) -->
++    <section id="solutions" class="section-padding bg-darker">
++        <div class="container">
++            <h2 class="section-title">Nos solutions <span class="highlight">IA</span></h2>
++            <p class="section-subtitle">3 leviers pour d├®bloquer votre potentiel et transformer votre entreprise.</p>
++
++            <div class="bento-grid">
++                <!-- Chatbots - Tall Card (Left) -->
++                <a href="solution-chatbots.html" class="bento-card bento-tall">
++                    <div class="bento-content">
++                        <h3>
++                            <div class="bento-icon"><i class="fas fa-robot"></i></div>Chatbots 24/7
++                        </h3>
++                        <p>Support client et interne automatis├®. R├®ponse imm├®diate et acc├¿s instantan├® ├á votre base de
++                            connaissances.</p>
++                    </div>
++                    <div class="bento-visual-mini">
++                        <img src="images/chatbot.jpg" alt="Chatbot">
++                    </div>
++                </a>
++
++                <!-- Copilots - Wide Card (Top Right) -->
++                <a href="solution-copilots.html" class="bento-card bento-wide">
++                    <div class="bento-content">
++                        <h3>
++                            <div class="bento-icon"><i class="fas fa-rocket"></i></div>Copilots IA
++                        </h3>
++                        <p>Des assistants intelligents pour vos ├®quipes Vente, RH et Direction. R├®digez, synth├®tisez et
++                            analysez en temps r├®el.</p>
++                    </div>
++                    <div class="bento-visual-mini">
++                        <img src="images/copilotsIA.jpg" alt="Copilot Interface">
++                    </div>
++                </a>
++
++                <!-- Automation - Wide Card (Bottom Right) -->
++                <a href="solution-automation.html" class="bento-card bento-wide">
++                    <div class="bento-content">
++                        <h3>
++                            <div class="bento-icon"><i class="fas fa-cogs"></i></div>Automatisation
++                        </h3>
++                        <p>Fini les t├óches manuelles. Traitement automatique de factures, reporting et extraction de
++                            donn├®es.</p>
++                    </div>
++                    <div class="bento-visual-mini">
++                        <img src="images/automat.jpg" alt="Automation">
++                    </div>
++                </a>
++            </div>
++
++            <!-- ACCOMPAGNEMENT SUBSECTION -->
++            <div style="margin-top: 4rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.05);">
++                <h3 class="subsection-title">Notre accompagnement de A ├á Z
++                </h3>
++                <div class="grid-3">
++                    <div class="service-card">
++                        <i class="fas fa-search service-icon"></i>
++                        <h4>Diagnostic IA</h4>
++                        <p>Audit de vos processus, identification des gisements de
++                            productivit├®.</p>
++                    </div>
++                    <div class="service-card">
++                        <i class="fas fa-network-wired service-icon"></i>
++                        <h4>D├®ploiement</h4>
++                        <p>Mise en ┼ôuvre de solutions IA robustes et s├®curis├®es.</p>
++                    </div>
++                    <div class="service-card">
++                        <i class="fas fa-plug service-icon"></i>
++                        <h4>Int├®gration</h4>
++                        <p>Connexion fluide ├á vos CRM, ERP et bases de donn├®es.</p>
++                    </div>
++                </div>
++            </div>
++
++            <div class="section-cta" style="margin-top: 3rem;">
++                <a href="#contact" class="btn btn-secondary">Parlons de votre projet IA gratuitement</a>
++            </div>
++        </div>
++    </section>
++
++    <!-- TARGETS SECTION -->
++    <section id="targets" class="section-padding bg-light">
++        <div class="container">
++            <h2 class="section-title">Qui accompagnons-nous ?</h2>
++            <div class="grid-3">
++                <div class="target-item">
++                    <h4>­ƒÅó PME / TPE</h4>
++                    <p>Automatisez vos processus administratifs.</p>
++                </div>
++                <div class="target-item">
++                    <h4>­ƒÄô ├ëcoles</h4>
++                    <p>Int├®grez l'IA dans votre p├®dagogie.</p>
++                </div>
++                <div class="target-item">
++                    <h4>­ƒÅø´©Å Services Publics</h4>
++                    <p>Optimisez le traitement des dossiers.</p>
++                </div>
++            </div>
++        </div>
++    </section>
++
++
++
++
++
++    <!-- FORMATIONS SECTION (BENTO GRID) -->
++    <section id="formations" class="section-padding bg-darker">
++        <div class="container">
++            <h2 class="section-title">Formations <span class="highlight">Expert</span></h2>
++            <p class="section-subtitle">Montez en comp├®tences avec nos ing├®nieurs-formateurs.</p>
++
++            <div class="bento-grid">
++                <!-- Python - Tall Card -->
++                <div class="bento-card bento-tall">
++                    <div class="bento-content">
++                        <h3>
++                            <div class="bento-icon"><i class="fab fa-python"></i></div>Python & Data Science
++                        </h3>
++                        <p>Le socle incontournable. Automatisation, script et analyse de donn├®es pour profils m├®tiers et
++                            techniques.
++                        </p>
++                    </div>
++                </div>
++
++                <!-- ML - Wide Card -->
++                <div class="bento-card bento-wide">
++                    <div class="bento-content">
++                        <h3>
++                            <div class="bento-icon"><i class="fas fa-brain"></i></div>Machine Learning & Deep Learning
++                        </h3>
++                        <p>Cr├®ez vos propres mod├¿les pr├®dictifs. De la th├®orie ├á la pratique sur des cas r├®els et
++                            concrets.</p>
++                    </div>
++                    <div class="bento-bg-icon"><i class="fas fa-network-wired"></i></div>
++                </div>
++
++                <!-- GenAI - Wide Card -->
++                <div class="bento-card bento-wide">
++                    <div class="bento-content">
++                        <h3>
++                            <div class="bento-icon"><i class="fas fa-magic"></i></div>IA G├®n├®rative & Prompting
++                        </h3>
++                        <p>Ma├«trisez ChatGPT/Copilot pour la productivit├® quotidienne et explorez les usages avanc├®s de
++                            l'IA g├®n├®rative.
++                        </p>
++                    </div>
++                    <div class="bento-bg-icon"><i class="fas fa-sparkles"></i></div>
++                </div>
++            </div>
++
++            <div class="training-cta">
++                <a href="#contact" class="btn btn-outline">Recevoir le catalogue</a>
++            </div>
++        </div>
++    </section>
++
++
++
++    <!-- DIFFERENTIATORS -->
++    <section id="why-us" class="section-padding bg-light">
++        <div class="container">
++            <h2 class="section-title">Pourquoi Babylone42 ?</h2>
++            <ul class="differentiators-list">
++                <li>Ô£à <strong>Double Expertise Unique :</strong> Ing├®nieurs seniors ET formateurs p├®dagogues.</li>
++                <li>Ô£à <strong>Pragmatisme Absolu :</strong> Solutions livr├®es "cl├®s en main", pas de R&D sans fin.</li>
++                <li>Ô£à <strong>Intervention Nationale :</strong> Bas├®s ├á Marseille, nous op├®rons partout en France.</li>
++                <li>Ô£à <strong>Sur-Mesure :</strong> Des solutions adapt├®es ├á votre budget et votre maturit├® digitale.
++                </li>
++            </ul>
++        </div>
++    </section>
++
++    <!-- FAQ SECTION -->
++    <section id="faq" class="section-padding bg-light">
++        <div class="container">
++            <div class="faq-grid">
++                <!-- Left Column: Title & Intro -->
++                <div class="faq-header">
++                    <span class="badge">F.A.Q</span>
++                    <h2 class="section-title">On r├®pond ├á toutes vos <span class="highlight">questions</span></h2>
++                    <p>Vous avez des questions sur le fonctionnement, les d├®lais ou l'accompagnement ? On a tout pr├®vu.
++                        Voici les r├®ponses aux questions les plus fr├®quentes.</p>
++                </div>
++
++                <!-- Right Column: FAQ Items -->
++                <div class="faq-list">
++                    <!-- Item 1 -->
++                    <div class="faq-item">
++                        <div class="faq-question">
++                            <h3>Comment se d├®roule un projet avec Babylone42 ?</h3>
++                            <i class="fas fa-chevron-down"></i>
++                        </div>
++                        <div class="faq-answer">
++                            <p>Nous commen├ºons toujours par un audit gratuit pour identifier vos besoins. Ensuite, nous
++                                vous proposons une feuille de route claire avec des livrables pr├®cis. Une fois valid├®,
++                                nous d├®veloppons la solution, l'int├®grons ├á vos outils et formons vos ├®quipes.</p>
++                        </div>
++                    </div>
++                    <!-- Item 2 -->
++                    <div class="faq-item">
++                        <div class="faq-question">
++                            <h3>Combien co├╗te une solution d'IA sur mesure ?</h3>
++                            <i class="fas fa-chevron-down"></i>
++                        </div>
++                        <div class="faq-answer">
++                            <p>Le budget varie selon la complexit├®. Un petit workflow d'automatisation peut d├®marrer ├á
++                                quelques centaines d'euros, tandis qu'un Copilot d'entreprise complet n├®cessitera un
++                                budget plus cons├®quent. Nous proposons toujours des solutions adapt├®es ├á votre ROI
++                                attendu.</p>
++                        </div>
++                    </div>
++                    <!-- Item 3 -->
++                    <div class="faq-item">
++                        <div class="faq-question">
++                            <h3>Mes donn├®es sont-elles s├®curis├®es ?</h3>
++                            <i class="fas fa-chevron-down"></i>
++                        </div>
++                        <div class="faq-answer">
++                            <p>Absolument. La s├®curit├® est notre priorit├®. Nous utilisons des environnements s├®curis├®s
++                                (Azure OpenAI, instances priv├®es) et veillons ├á ce que vos donn├®es ne soient jamais
++                                utilis├®es pour entra├«ner des mod├¿les publics.</p>
++                        </div>
++                    </div>
++                    <!-- Item 4 -->
++                    <div class="faq-item">
++                        <div class="faq-question">
++                            <h3>Dois-je avoir une ├®quipe technique en interne ?</h3>
++                            <i class="fas fa-chevron-down"></i>
++                        </div>
++                        <div class="faq-answer">
++                            <p>Non, ce n'est pas n├®cessaire. Nous livrons des solutions "cl├®s en main". Nous assurons le
++                                d├®ploiement et la maintenance. Si vous avez une ├®quipe technique, nous collaborons avec
++                                elle en bonne intelligence.</p>
++                        </div>
++                    </div>
++                    <!-- Item 5 -->
++                    <div class="faq-item">
++                        <div class="faq-question">
++                            <h3>Quelles technologies utilisez-vous ?</h3>
++                            <i class="fas fa-chevron-down"></i>
++                        </div>
++                        <div class="faq-answer">
++                            <p>Nous sommes agnostiques mais experts. Nous utilisons Python, OpenAI, Mistral, Anthropic,
++                                ainsi que des outils d'automatisation comme Make, n8n et les outils Microsoft (Power
++                                Automate, Azure).</p>
++                        </div>
++                    </div>
++                    <!-- Item 6 -->
++                    <div class="faq-item">
++                        <div class="faq-question">
++                            <h3>L'IA va-t-elle remplacer mes employ├®s ?</h3>
++                            <i class="fas fa-chevron-down"></i>
++                        </div>
++                        <div class="faq-answer">
++                            <p>Non, notre vision est celle de l'IA "Copilot". L'objectif est de supprimer les t├óches
++                                r├®p├®titives et p├®nibles pour permettre ├á vos collaborateurs de se concentrer sur les
++                                t├óches ├á forte valeur ajout├®e.</p>
++                        </div>
++                    </div>
++                    <!-- Item 7 -->
++                    <div class="faq-item">
++                        <div class="faq-question">
++                            <h3>Proposez-vous des formations ?</h3>
++                            <i class="fas fa-chevron-down"></i>
++                        </div>
++                        <div class="faq-answer">
++                            <p>Oui, Babylone42 est aussi un organisme de formation. Nous formons vos ├®quipes ├á
++                                l'utilisation des outils que nous d├®ployons, mais aussi au d├®veloppement (Python) et ├á
++                                l'IA G├®n├®rative en g├®n├®ral.</p>
++                        </div>
++                    </div>
++                    <!-- Item 8 -->
++                    <div class="faq-item">
++                        <div class="faq-question">
++                            <h3>Combien de temps faut-il pour voir des r├®sultats ?</h3>
++                            <i class="fas fa-chevron-down"></i>
++                        </div>
++                        <div class="faq-answer">
++                            <p>Tr├¿s rapidement. Pour une automatisation simple, les r├®sultats sont imm├®diats d├¿s la mise
++                                en production (quelques jours). Pour des projets plus complexes, comptez quelques
++                                semaines.</p>
++                        </div>
++                    </div>
++                    <!-- Item 9 -->
++                    <div class="faq-item">
++                        <div class="faq-question">
++                            <h3>Intervenez-vous partout en France ?</h3>
++                            <i class="fas fa-chevron-down"></i>
++                        </div>
++                        <div class="faq-answer">
++                            <p>Oui. Bien que bas├®s ├á Marseille, nous travaillons avec des clients dans toute la France,
++                                et m├¬me ├á l'international, gr├óce aux outils de collaboration ├á distance.</p>
++                        </div>
++                    </div>
++                    <!-- Item 10 -->
++                    <div class="faq-item">
++                        <div class="faq-question">
++                            <h3>Peut-on tester avant de s'engager ?</h3>
++                            <i class="fas fa-chevron-down"></i>
++                        </div>
++                        <div class="faq-answer">
++                            <p>Oui, nous fonctionnons souvent par phase de "Diagnostic" ou de "POC" (Preuve de Concept).
++                                Cela vous permet de valider la valeur de la solution sur un p├®rim├¿tre restreint avant un
++                                d├®ploiement global.</p>
++                        </div>
++                    </div>
++                </div>
++            </div>
++        </div>
++    </section>
++
++    <!-- CONTACT SECTION -->
++    <section id="contact" class="section-padding">
++        <div class="container contact-wrapper">
++            <h2 class="section-title">Discutez de votre projet</h2>
++            <p>Quel est votre d├®fi actuel ?</p>
++
++            <form class="contact-form" id="contactForm">
++                <div class="form-group">
++                    <label for="name">Nom complet</label>
++                    <input type="text" id="name" required placeholder="Votre nom">
++                </div>
++                <div class="form-group">
++                    <label for="company">Entreprise</label>
++                    <input type="text" id="company" required placeholder="Votre soci├®t├®">
++                </div>
++                <div class="form-group">
++                    <label for="email">Email professionnel</label>
++                    <input type="email" id="email" required placeholder="vous@entreprise.com">
++                </div>
++                <div class="form-group">
++                    <label>Type de projet</label>
++                    <select id="project-type">
++                        <option value="copilot">Copilot / Assistant IA</option>
++                        <option value="chatbot">Chatbot Support</option>
++                        <option value="automation">Automatisation Process</option>
++                        <option value="training">Plan de Formation</option>
++                        <option value="other">Autre</option>
++                    </select>
++                </div>
++                <button type="submit" class="btn btn-primary btn-block">Parlons de votre projet IA gratuitement</button>
++            </form>
++        </div>
++    </section>
++
++    <!-- NEWSLETTER SECTION -->
++    <section id="newsletter" class="section-padding bg-darker" style="border-top: 1px solid rgba(255,255,255,0.05);">
++        <div class="container" style="text-align: center; max-width: 600px;">
++            <div class="badge">Newsletter</div>
++            <h2 class="section-title">L'IA avance vite, <span class="highlight">ne ratez rien</span></h2>
++            <p>Recevez chaque mois nos meilleurs conseils, cas d'usage et actualit├®s sur l'IA d'entreprise. Pas de spam,
++                que de la valeur.</p>
++
++            <form style="display: flex; gap: 1rem; margin-top: 2rem;">
++                <input type="email" placeholder="Votre email professionnel"
++                    style="flex: 1; padding: 1rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); background: #111; color: #fff;">
++                <button type="submit" class="btn btn-primary">S'inscrire</button>
++            </form>
++        </div>
++    </section>
++
++    <!-- FOOTER -->
++    <footer>
++        <div class="container">
++            <div class="footer-content">
++                <div class="footer-logo">Babylone42</div>
++                <div class="footer-links">
++                    <a href="#">Mentions L├®gales</a>
++                    <a href="#">Politique de Confidentialit├®</a>
++                </div>
++                <div class="footer-social">
++                    <a href="#"><i class="fab fa-linkedin"></i></a>
++                    <a href="#"><i class="fab fa-twitter"></i></a>
++                </div>
++            </div>
++            <p class="copyright">┬® 2024 Babylone42. Tous droits r├®serv├®s. Bas├® ├á Marseille, France.</p>
++        </div>
++    </footer>
++
++    <script src="script.js"></script>
++</body>
++
++</html>
+\ No newline at end of file
+diff --git a/style.css b/style.css
+new file mode 100644
+index 0000000..a0dcf6c
+--- /dev/null
++++ b/style.css
+@@ -0,0 +1,673 @@
++/* RESET & VARIABLES */
++:root {
++    --bg-color: #02161b;
++    /* Deep Teal Background */
++    --text-color: #f1f5f9;
++    --primary-color: #0e8a94;
++    /* Vibrant Teal Accent */
++    --secondary-color: #38bdf8;
++    /* Sky Blue for contrast */
++    --highlight-color: #ccfbf1;
++    /* Mint */
++    --dark-surface: #0a2730;
++    /* Lighter Teal for surfaces */
++    --text-muted: #94a3b8;
++    --font-heading: 'Space Grotesk', sans-serif;
++    --font-body: 'Outfit', sans-serif;
++}
++
++* {
++    margin: 0;
++    padding: 0;
++    box-sizing: border-box;
++}
++
++body {
++    font-family: var(--font-body);
++    background-color: var(--bg-color);
++    color: var(--text-color);
++    line-height: 1.6;
++    scroll-behavior: smooth;
++}
++
++/* TYPOGRAPHY */
++h1,
++h2,
++h3,
++h4 {
++    font-family: var(--font-heading);
++    font-weight: 700;
++}
++
++h1 {
++    font-size: 3.5rem;
++    line-height: 1.1;
++    margin-bottom: 1.5rem;
++}
++
++h2 {
++    font-size: 2.5rem;
++    margin-bottom: 1rem;
++    color: var(--primary-color);
++}
++
++h3 {
++    font-size: 1.5rem;
++    margin-bottom: 0.5rem;
++}
++
++p {
++    margin-bottom: 1rem;
++    font-size: 1.1rem;
++    color: var(--text-muted);
++}
++
++.highlight {
++    color: var(--primary-color);
++}
++
++/* UTILITIES */
++.container {
++    max-width: 1200px;
++    margin: 0 auto;
++    padding: 0 2rem;
++}
++
++.section-padding {
++    padding: 6rem 0;
++}
++
++.bg-darker {
++    background-color: #011014;
++    /* Even darker teal */
++}
++
++.bg-light {
++    background-color: #f8fafc;
++    color: #1e293b;
++}
++
++.bg-light .section-title {
++    color: #0f172a;
++}
++
++.bg-light p,
++.bg-light li {
++    color: #475569;
++}
++
++/* Ensure text inside dark cards on light sections stays light */
++.bg-light .bento-card,
++.bg-light .badge,
++.bg-light .faq-item {
++    color: var(--text-color);
++}
++
++.bg-light .bento-card p {
++    color: #94a3b8;
++}
++
++/* Subsection styling */
++.section-title {
++    /* Renamed from .subsection-title based on context */
++    text-align: center;
++    font-size: 2.5rem;
++    margin-bottom: 1rem;
++    color: #fff;
++}
++
++.section-subtitle {
++    text-align: center;
++    font-size: 1.1rem;
++    color: var(--text-muted);
++    margin-bottom: 3rem;
++    max-width: 700px;
++    margin-left: auto;
++    margin-right: auto;
++}
++
++/* Service cards */
++.service-card {
++    background: rgba(255, 255, 255, 0.03);
++    padding: 1.5rem;
++    border-radius: 8px;
++    text-align: center;
++    transition: transform 0.3s ease;
++}
++
++.service-card:hover {
++    transform: translateY(-5px);
++}
++
++.service-icon {
++    font-size: 2rem;
++    color: var(--primary-color);
++    margin-bottom: 1rem;
++    display: block;
++}
++
++.service-card p {
++    font-size: 0.9rem;
++}
++
++.bg-highlight {
++    background-color: #1a222c;
++    border-top: 1px solid var(--primary-color);
++}
++
++/* GRIDS */
++.grid-3 {
++    display: grid;
++    grid-template-columns: repeat(3, 1fr);
++    gap: 1.5rem;
++}
++
++.grid-2 {
++    display: grid;
++    grid-template-columns: repeat(2, 1fr);
++    gap: 1.5rem;
++}
++
++/* BUTTONS */
++.btn {
++    display: inline-block;
++    padding: 1rem 2rem;
++    border-radius: 8px;
++    font-weight: 600;
++    text-decoration: none;
++    transition: all 0.3s ease;
++    cursor: pointer;
++}
++
++.btn-primary {
++    background-color: var(--primary-color);
++    color: #fff;
++    border: 2px solid var(--primary-color);
++}
++
++.btn-primary:hover {
++    background-color: transparent;
++    color: var(--primary-color);
++}
++
++.btn-secondary {
++    background-color: transparent;
++    color: var(--secondary-color);
++    border: 2px solid var(--secondary-color);
++}
++
++.btn-secondary:hover {
++    background-color: var(--secondary-color);
++    color: #fff;
++}
++
++/* NAVBAR */
++.navbar {
++    position: fixed;
++    top: 0;
++    width: 100%;
++    background: rgba(17, 17, 17, 0.95);
++    backdrop-filter: blur(10px);
++    padding: 1.5rem 0;
++    z-index: 1000;
++}
++
++.navbar .container {
++    display: flex;
++    justify-content: space-between;
++    align-items: center;
++}
++
++.logo {
++    font-size: 1.5rem;
++    font-weight: 700;
++    color: #fff;
++    text-decoration: none;
++    font-family: var(--font-heading);
++}
++
++.nav-links {
++    display: flex;
++    list-style: none;
++    gap: 2rem;
++    align-items: center;
++    /* Vertically align text and button */
++}
++
++/* Specific button style for navigation to override/augment btn-primary if needed */
++.nav-btn {
++    padding: 0.6rem 1.5rem !important;
++    /* Slightly smaller than hero cta */
++    margin-left: 1rem;
++}
++
++.nav-links a {
++    color: var(--text-color);
++    text-decoration: none;
++    font-weight: 500;
++    transition: color 0.3s;
++}
++
++.nav-links a:hover {
++    color: var(--primary-color);
++}
++
++.hamburger {
++    display: none;
++    cursor: pointer;
++    color: #fff;
++    font-size: 1.5rem;
++}
++
++/* HERO VISUALS */
++.hero-section {
++    padding-top: 14rem;
++    padding-bottom: 10rem;
++    position: relative;
++    overflow: hidden;
++    display: flex;
++    align-items: center;
++    min-height: 90vh;
++}
++
++.hero-visual-bg {
++    position: absolute;
++    top: 0;
++    left: 0;
++    width: 100%;
++    height: 100%;
++    z-index: 1;
++}
++
++.hero-visual-bg img {
++    width: 100%;
++    height: 100%;
++    object-fit: cover;
++    opacity: 0.6;
++}
++
++.hero-visual-bg .overlay {
++    position: absolute;
++    top: 0;
++    left: 0;
++    width: 100%;
++    height: 100%;
++    background: linear-gradient(to bottom, #111111 0%, rgba(17, 17, 17, 0.8) 50%, #111111 100%);
++}
++
++.hero-content {
++    position: relative;
++    z-index: 2;
++    max-width: 900px;
++    margin: 0 auto;
++    text-align: center;
++}
++
++.hero-subtitle {
++    font-size: 1.5rem;
++    max-width: 700px;
++    margin: 0 auto 3rem auto;
++    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
++}
++
++.trust-signals {
++    justify-content: center;
++}
++
++/* CARDS WITH IMAGES - Problem cards specific styles (Compact version) */
++.problem-card-bento {
++    padding: 1.5rem;
++    /* Reduced padding for compactness */
++    max-height: 320px;
++    /* Height constraint */
++}
++
++.problem-card-bento h3 {
++    font-size: 1.1rem;
++    /* Slightly smaller titles */
++    margin-bottom: 0.5rem;
++}
++
++.problem-card-bento p {
++    font-size: 0.9rem;
++    /* Smaller text */
++    line-height: 1.5;
++}
++
++.problem-card-bento .bento-icon {
++    font-size: 2rem;
++    /* Reduced icon size */
++    margin-bottom: 0.75rem;
++}
++
++.problem-card-bento .bento-visual-mini {
++    height: 140px;
++    /* Reduced height for more compact cards */
++    margin-top: 1rem;
++    width: 100%;
++    flex-grow: 0;
++    /* Don't grow to take all space */
++}
++
++/* BENTO GRID SYSTEM */
++
++.bento-grid {
++    display: grid;
++    grid-template-columns: repeat(3, 1fr);
++    grid-template-rows: repeat(2, minmax(300px, auto));
++    gap: 1.5rem;
++    margin-top: 3rem;
++    margin-bottom: 3rem;
++}
++
++.bento-card {
++    background: var(--dark-surface);
++    /* Darker surface closer to Supabase */
++    border: 1px solid rgba(255, 255, 255, 0.05);
++    border-radius: 12px;
++    padding: 2rem;
++    position: relative;
++    overflow: hidden;
++    transition: all 0.3s ease;
++    display: flex;
++    flex-direction: column;
++    justify-content: space-between;
++    text-decoration: none;
++    /* For anchor tags */
++    color: inherit;
++    /* For anchor tags */
++}
++
++.bento-card:hover {
++    border-color: var(--primary-color);
++    box-shadow: 0 0 20px rgba(16, 155, 128, 0.1);
++    transform: translateY(-2px);
++}
++
++/* Card Variations */
++.bento-large {
++    grid-column: span 2;
++    grid-row: span 2;
++    display: flex;
++    flex-direction: column;
++}
++
++.bento-medium {
++    grid-column: span 1;
++    grid-row: span 1;
++}
++
++.bento-small {
++    grid-column: span 1;
++    grid-row: span 1;
++}
++
++.bento-wide {
++    grid-column: span 2;
++}
++
++.bento-tall {
++    grid-row: span 2;
++}
++
++/* Image adjustments for different card sizes */
++.bento-tall .bento-visual-mini {
++    height: 480px;
++    /* Much larger for tall chatbot card */
++    margin-top: 1.5rem;
++    display: flex;
++    align-items: center;
++    justify-content: center;
++}
++
++.bento-wide .bento-visual-mini {
++    height: 240px;
++    /* Larger for wide cards */
++    margin-top: 1rem;
++}
++
++/* Content inside Bento */
++.bento-content {
++    position: relative;
++    z-index: 2;
++}
++
++.bento-content h3 {
++    display: flex;
++    align-items: center;
++    gap: 0.75rem;
++    /* Space between icon and title */
++}
++
++.bento-icon {
++    font-size: 1.5rem;
++    color: var(--text-color);
++    margin-bottom: 0;
++    /* Remove bottom margin for inline layout */
++    background: rgba(255, 255, 255, 0.05);
++    width: 40px;
++    height: 40px;
++    display: flex;
++    align-items: center;
++    justify-content: center;
++    border-radius: 8px;
++}
++
++.bento-card h3 {
++    font-size: 1.25rem;
++    margin-bottom: 0.5rem;
++    color: #fff;
++}
++
++.bento-card p {
++    font-size: 0.95rem;
++    color: #94a3b8;
++    line-height: 1.5;
++}
++
++.bento-list {
++    list-style: none;
++    margin-top: 1rem;
++}
++
++.bento-list li {
++    font-size: 0.9rem;
++    color: var(--primary-color);
++    margin-bottom: 0.25rem;
++}
++
++.bento-list li::before {
++    content: "Ô£ô ";
++    margin-right: 5px;
++}
++
++/* Visuals inside Bento */
++.bento-visual {
++    margin-top: 2rem;
++    border-radius: 8px;
++    overflow: hidden;
++    position: relative;
++    height: 100%;
++    min-height: 200px;
++    /* Minimum height for large cards */
++}
++
++.bento-visual img {
++    width: 100%;
++    height: 100%;
++    object-fit: contain;
++    /* Changed to contain for full image visibility */
++    opacity: 1;
++    /* Fully visible */
++}
++
++.visual-overlay {
++    position: absolute;
++    top: 0;
++    left: 0;
++    width: 100%;
++    height: 100%;
++    background: linear-gradient(to top, var(--dark-surface) 0%, transparent 100%);
++}
++
++.bento-visual-mini {
++    margin-top: 1.5rem;
++    height: 180px;
++    /* Reduced from 220px to prevent overflow */
++    min-height: 150px;
++    border-radius: 8px;
++    overflow: hidden;
++    opacity: 1;
++    /* Fully visible */
++}
++
++.bento-visual-mini img {
++    width: 100%;
++    height: 100%;
++    object-fit: contain;
++    /* Changed to contain for full image visibility */
++}
++
++/* Specific override for tall card images to ensure proper centering */
++.bento-tall .bento-visual-mini img {
++    height: auto;
++    max-height: 100%;
++    width: auto;
++    max-width: 100%;
++    object-fit: contain;
++}
++
++.bento-bg-icon {
++    position: absolute;
++    bottom: -20px;
++    right: -20px;
++    font-size: 8rem;
++    color: rgba(255, 255, 255, 0.02);
++    transform: rotate(-15deg);
++    z-index: 1;
++}
++
++
++
++/* RESPONSIVE UPGRADES */
++@media (max-width: 900px) {
++
++    /* RESPONSIVE BENTO */
++    .bento-grid {
++        display: flex;
++        flex-direction: column;
++    }
++
++    .bento-large,
++    .bento-wide,
++    .bento-tall {
++        grid-column: span 1;
++        grid-row: span 1;
++    }
++
++    /* FAQ RESPONSIVE */
++    .faq-grid {
++        grid-template-columns: 1fr;
++    }
++
++    .faq-header {
++        margin-bottom: 3rem;
++        position: static;
++    }
++}
++
++/* FAQ SECTION STYLES */
++.faq-grid {
++    display: grid;
++    grid-template-columns: 1fr 2fr;
++    gap: 4rem;
++    align-items: start;
++}
++
++.faq-header {
++    position: sticky;
++    top: 6rem;
++}
++
++.badge {
++    display: inline-block;
++    padding: 0.25rem 0.75rem;
++    background: rgba(255, 255, 255, 0.1);
++    color: var(--text-muted);
++    border-radius: 20px;
++    font-size: 0.8rem;
++    font-weight: 600;
++    margin-bottom: 1rem;
++    border: 1px solid rgba(255, 255, 255, 0.1);
++}
++
++.faq-list {
++    display: flex;
++    flex-direction: column;
++    gap: 1rem;
++}
++
++.faq-item {
++    background: #1e1e1e;
++    border: 1px solid rgba(255, 255, 255, 0.1);
++    border-radius: 8px;
++    overflow: hidden;
++    transition: all 0.3s ease;
++}
++
++.faq-item:hover {
++    border-color: rgba(255, 255, 255, 0.2);
++}
++
++.faq-question {
++    padding: 1.5rem;
++    display: flex;
++    justify-content: space-between;
++    align-items: center;
++    cursor: pointer;
++    width: 100%;
++    background: none;
++    border: none;
++    text-align: left;
++}
++
++.faq-question h3 {
++    font-size: 1.1rem;
++    margin: 0;
++    color: #fff;
++    font-weight: 600;
++}
++
++.faq-question i {
++    color: var(--primary-color);
++    transition: transform 0.3s ease;
++}
++
++.faq-answer {
++    max-height: 0;
++    overflow: hidden;
++    transition: max-height 0.3s ease;
++    padding: 0 1.5rem;
++}
++
++.faq-answer p {
++    padding-bottom: 1.5rem;
++    margin: 0;
++    color: #94a3b8;
++    font-size: 0.95rem;
++}
++
++/* Active State */
++.faq-item.active {
++    background: #252a33;
++    border-color: var(--primary-color);
++}
++
++.faq-item.active .faq-question i {
++    transform: rotate(180deg);
++}
++
++.faq-item.active .faq-answer {
++    max-height: 300px;
++    /* Arbitrary large height for expansion */
++}
+\ No newline at end of file

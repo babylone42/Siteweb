@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+﻿document.addEventListener('DOMContentLoaded', () => {
 
     // Smooth Scrolling for Anchors
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -9,6 +9,18 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     });
+
+    // Navbar Scroll Effect (Hide top row on scroll)
+    const navbar = document.querySelector('.navbar');
+    if (navbar) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    }
 
     // Mobile Menu Toggle
     const hamburger = document.querySelector('.hamburger');

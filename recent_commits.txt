@@ -1,0 +1,550 @@
+﻿commit 4e5392f647bb9cff526cc758d3d5435d1f2c2df7
+Author: eulalio torres <sas.data.formation@gmail.com>
+Date:   Tue Feb 24 20:18:54 2026 +0100
+
+    feat: global update of social media links in nav and footer
+
+diff --git a/index.html b/index.html
+index 07c7186..6500cb0 100644
+--- a/index.html
++++ b/index.html
+@@ -59,10 +59,17 @@
+                 <li><a href="articles.html">Blog/actualit├®s</a></li>
+                 <li><a href="contact-page.html" class="btn btn-primary nav-btn">Contact</a></li>
+                 <li class="nav-socials">
+-                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+-                    <a href="#" aria-label="X Twitter"><i class="fab fa-x-twitter"></i></a>
+-                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+-                    <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
++                    <a href="https://www.linkedin.com/company/babylone42/" target="_blank" rel="noopener noreferrer"
++                        aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
++                    <a href="https://www.instagram.com/babylone42_?igsh=YzVyamk1N3VoYXU1" target="_blank"
++                        rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
++                    <a href="https://www.facebook.com/profile.php?id=61583402791597&name=xhp_nt__fb__action__open_user&locale=fr_FR"
++                        target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i
++                            class="fab fa-facebook"></i></a>
++                    <a href="https://x.com/babylone42_" target="_blank" rel="noopener noreferrer"
++                        aria-label="X Twitter"><i class="fab fa-x-twitter"></i></a>
++                    <a href="https://m.youtube.com/@Babylone42" target="_blank" rel="noopener noreferrer"
++                        aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                 </li>
+             </ul>
+             <div class="hamburger">
+@@ -789,10 +796,17 @@
+                     <p class="footer-desc">Babylone42 donne le pouvoir aux ├®quipes de transformer des donn├®es brutes en
+                         informations claires gr├óce ├á l'IA.</p>
+                     <div class="footer-socials">
+-                        <a href="#" aria-label="X Twitter"><i class="fab fa-x-twitter"></i></a>
+-                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+-                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+-                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
++                        <a href="https://www.linkedin.com/company/babylone42/" target="_blank" rel="noopener noreferrer"
++                            aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
++                        <a href="https://www.instagram.com/babylone42_?igsh=YzVyamk1N3VoYXU1" target="_blank"
++                            rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
++                        <a href="https://www.facebook.com/profile.php?id=61583402791597&name=xhp_nt__fb__action__open_user&locale=fr_FR"
++                            target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i
++                                class="fab fa-facebook"></i></a>
++                        <a href="https://x.com/babylone42_" target="_blank" rel="noopener noreferrer"
++                            aria-label="X Twitter"><i class="fab fa-x-twitter"></i></a>
++                        <a href="https://m.youtube.com/@Babylone42" target="_blank" rel="noopener noreferrer"
++                            aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                     </div>
+                 </div>
+ 
+
+commit 8c65cb356b905cca6572d85681a3886660f3f535
+Author: eulalio torres <sas.data.formation@gmail.com>
+Date:   Tue Feb 24 19:58:47 2026 +0100
+
+    fix: update C-level profile roles and descriptions
+
+diff --git a/style.css b/style.css
+index 7654631..34da13e 100644
+--- a/style.css
++++ b/style.css
+@@ -249,6 +249,17 @@ p {
+     color: #fff;
+ }
+ 
++.btn-outline {
++    background-color: transparent;
++    color: var(--primary-color);
++    border: 1px solid var(--primary-color);
++}
++
++.btn-outline:hover {
++    background-color: rgba(16, 155, 128, 0.1);
++    color: white;
++}
++
+ /* NAVBAR */
+ .navbar {
+     position: fixed;
+
+commit cd3f7c6f658cbec485c9ab62450e724448c6c5d4
+Author: eulalio torres <sas.data.formation@gmail.com>
+Date:   Tue Feb 24 18:14:08 2026 +0100
+
+    feat: implement step-by-step UI and supabase form integration
+
+diff --git a/index.html b/index.html
+index 850f31b..07c7186 100644
+--- a/index.html
++++ b/index.html
+@@ -21,7 +21,7 @@
+     <!-- NAVIGATION -->
+     <nav class="navbar">
+         <div class="container">
+-            <a href="#" class="logo">
++            <a href="index.html" class="logo">
+                 <img src="images/logo.svg" alt="Babylone42 Logo" style="height: 40px;">
+             </a>
+             <ul class="nav-links">
+@@ -29,8 +29,8 @@
+                     <a href="#hero">Accueil <i class="fas fa-chevron-down"
+                             style="font-size: 0.8rem; margin-left: 0.3rem;"></i></a>
+                     <ul class="dropdown-menu">
+-                        <li><a href="#about-us">About us</a></li>
+-                        <li><a href="#vos-interlocuteurs">Vos interlocuteurs</a></li>
++                        <li><a href="about.html">About us</a></li>
++                        <li><a href="interlocuteurs.html">Vos interlocuteurs</a></li>
+                     </ul>
+                 </li>
+                 <li class="dropdown">
+@@ -46,13 +46,18 @@
+                     <a href="#formations">Formations <i class="fas fa-chevron-down"
+                             style="font-size: 0.8rem; margin-left: 0.3rem;"></i></a>
+                     <ul class="dropdown-menu">
+-                        <li><a href="#formations">Python & Data Science</a></li>
+-                        <li><a href="#formations">Machine Learning</a></li>
+-                        <li><a href="#formations">IA G├®n├®rative</a></li>
++                        <li><a href="formation-genai.html">IA G├®n├®rative</a></li>
++                        <li><a href="formation-jupyter.html">Jupyter</a></li>
++                        <li><a href="formation-python.html">Python</a></li>
++                        <li><a href="formation-ml.html">Machine Learning</a></li>
++                        <li><a href="formation-dl.html">Deep Learning</a></li>
++                        <li><a href="calendrier-formations.html"
++                                style="border-top: 1px solid rgba(255,255,255,0.1); margin-top: 0.5rem; padding-top: 0.8rem;">Calendrier
++                                des formations</a></li>
+                     </ul>
+                 </li>
+-                <li><a href="#newsletter">Newsletter</a></li>
+-                <li><a href="#contact" class="btn btn-primary nav-btn">Contact</a></li>
++                <li><a href="articles.html">Blog/actualit├®s</a></li>
++                <li><a href="contact-page.html" class="btn btn-primary nav-btn">Contact</a></li>
+                 <li class="nav-socials">
+                     <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                     <a href="#" aria-label="X Twitter"><i class="fab fa-x-twitter"></i></a>
+@@ -261,7 +266,7 @@
+     <!-- FORMATIONS SECTION (BENTO GRID) -->
+     <section id="formations" class="section-padding bg-darker">
+         <div class="container">
+-            <h2 class="section-title">Formations <span class="highlight">Expert</span></h2>
++            <h2 class="section-title">Formations</h2>
+             <p class="section-subtitle">Montez en comp├®tences avec nos ing├®nieurs-formateurs.</p>
+ 
+             <div class="carousel-container">
+@@ -270,7 +275,7 @@
+                 <div class="carousel-track-wrapper">
+                     <div class="carousel-track" id="formations-track">
+                         <!-- Card 1 -->
+-                        <a href="#contact" class="solution-card">
++                        <a href="formation-genai.html" class="solution-card">
+                             <div class="solution-visual">
+                                 <img src="images/formation_genai.png" alt="IA G├®n├®rative & Prompting">
+                             </div>
+@@ -282,7 +287,7 @@
+                         </a>
+ 
+                         <!-- Card 2 -->
+-                        <a href="#contact" class="solution-card inverted">
++                        <a href="formation-jupyter.html" class="solution-card inverted">
+                             <div class="solution-visual">
+                                 <img src="images/formation_jupyter.png" alt="Jupyter Notebook pour le reporting">
+                             </div>
+@@ -294,7 +299,7 @@
+                         </a>
+ 
+                         <!-- Card 3 -->
+-                        <a href="#contact" class="solution-card">
++                        <a href="formation-python.html" class="solution-card">
+                             <div class="solution-visual">
+                                 <img src="images/formation_python.png" alt="Python pour l'analyse de donn├®es - POO">
+                             </div>
+@@ -306,7 +311,7 @@
+                         </a>
+ 
+                         <!-- Card 4 -->
+-                        <a href="#contact" class="solution-card inverted">
++                        <a href="formation-ml.html" class="solution-card inverted">
+                             <div class="solution-visual">
+                                 <img src="images/formation_ml.png" alt="Machine Learning - Fondamentaux">
+                             </div>
+@@ -318,7 +323,7 @@
+                         </a>
+ 
+                         <!-- Card 5 -->
+-                        <a href="#contact" class="solution-card">
++                        <a href="formation-dl.html" class="solution-card">
+                             <div class="solution-visual">
+                                 <img src="images/formation_dl.png" alt="Deep Learning - Apprentissage Profond">
+                             </div>
+@@ -334,8 +339,10 @@
+                         class="fas fa-chevron-right"></i></button>
+             </div>
+ 
+-            <div class="training-cta">
+-                <a href="#dates-formation" class="btn btn-primary">Voir les dates de formation</a>
++            <div class="training-cta" style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
++                <a href="calendrier-formations.html" class="btn btn-primary">Voir les dates de formation</a>
++                <a href="#contact" class="btn btn-secondary"><i class="fas fa-phone-alt"
++                        style="margin-right: 0.5rem;"></i>Appel gratuit</a>
+             </div>
+         </div>
+     </section>
+@@ -658,10 +665,7 @@
+                             </div>
+                         </div>
+ 
+-                        <div class="form-group">
+-                            <label for="company">Entreprise *</label>
+-                            <input type="text" id="company" required placeholder="Nom de votre soci├®t├®">
+-                        </div>
++
+ 
+                         <div class="form-row form-grid-2">
+                             <div class="form-group">
+@@ -796,10 +800,10 @@
+                 <div class="footer-col">
+                     <h4 class="footer-title">Accueil</h4>
+                     <ul class="footer-links-list">
+-                        <li><a href="#about-us">About us</a></li>
+-                        <li><a href="#vos-interlocuteurs">Vos interlocuteurs</a></li>
+-                        <li><a href="#articles">Blog / Actualit├®s</a></li>
+-                        <li><a href="#faq">FAQ</a></li>
++                        <li><a href="about.html">About us</a></li>
++                        <li><a href="interlocuteurs.html">Vos interlocuteurs</a></li>
++                        <li><a href="articles.html">Blog / Actualit├®s</a></li>
++                        <li><a href="faq.html">FAQ</a></li>
+                     </ul>
+                 </div>
+ 
+@@ -810,7 +814,7 @@
+                         <li><a href="solution-chatbots.html">Chatbots 24/7</a></li>
+                         <li><a href="solution-copilots.html">Copilots IA</a></li>
+                         <li><a href="solution-automation.html">Automatisation</a></li>
+-                        <li><a href="#">Audit & Conseil</a></li>
++                        <li><a href="solution-audit.html">Audit & Conseil</a></li>
+                     </ul>
+                 </div>
+ 
+@@ -818,11 +822,11 @@
+                 <div class="footer-col">
+                     <h4 class="footer-title">Formations</h4>
+                     <ul class="footer-links-list">
+-                        <li><a href="#formations">IA G├®n├®rative</a></li>
+-                        <li><a href="#formations">Jupyter</a></li>
+-                        <li><a href="#formations">Python</a></li>
+-                        <li><a href="#formations">Machine Learning</a></li>
+-                        <li><a href="#formations">Deep Learning</a></li>
++                        <li><a href="formation-genai.html">IA G├®n├®rative</a></li>
++                        <li><a href="formation-jupyter.html">Jupyter</a></li>
++                        <li><a href="formation-python.html">Python</a></li>
++                        <li><a href="formation-ml.html">Machine Learning</a></li>
++                        <li><a href="formation-dl.html">Deep Learning</a></li>
+                     </ul>
+                 </div>
+ 
+@@ -844,9 +848,9 @@
+             <div class="footer-bottom">
+                 <p class="copyright">┬® 2025 Babylone42. All rights reserved.</p>
+                 <div class="legal-links">
+-                    <a href="#">Mentions L├®gales</a>
+-                    <a href="#">Politique de Confidentialit├®</a>
+-                    <a href="#">Param├¿tres des cookies</a>
++                    <a href="mentions-legales.html">Mentions L├®gales</a>
++                    <a href="politique-confidentialite.html">Politique de Confidentialit├®</a>
++                    <a href="cookies.html">Param├¿tres des cookies</a>
+                 </div>
+             </div>
+         </div>
+diff --git a/style.css b/style.css
+index b68813c..7654631 100644
+--- a/style.css
++++ b/style.css
+@@ -132,9 +132,27 @@ p {
+     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+ }
+ 
+-.bg-light .badge,
++.bg-light .badge {
++    color: var(--primary-color);
++    background: rgba(14, 138, 148, 0.1);
++}
++
+ .bg-light .faq-item {
+-    color: var(--text-color);
++    background: #ffffff;
++    border: 1px solid #e2e8f0;
++}
++
++.bg-light .faq-item.active {
++    background: #f8fafc;
++    border-color: var(--primary-color);
++}
++
++.bg-light .faq-question h3 {
++    color: #0f172a;
++}
++
++.bg-light .faq-answer p {
++    color: #475569;
+ }
+ 
+ /* Subsection styling */
+@@ -1567,4 +1585,243 @@ p {
+         display: none;
+         /* Hide on mobile to save space unless explicitly asked */
+     }
++}
++
++/* =========================================
++   STEP-BY-STEP (COMMENT ├çA MARCHE) UI 
++   ========================================= */
++.step-by-step-container {
++    display: flex;
++    align-items: flex-start;
++    justify-content: center;
++    gap: 1rem;
++    flex-wrap: wrap;
++    /* Fallback for smaller screens */
++    margin-top: 3rem;
++}
++
++@media (min-width: 992px) {
++    .step-by-step-container {
++        flex-wrap: nowrap;
++    }
++}
++
++.step-card {
++    display: flex;
++    flex-direction: column;
++    align-items: center;
++    text-align: center;
++    width: 240px;
++    position: relative;
++}
++
++.step-image-wrap {
++    width: 160px;
++    height: 160px;
++    border-radius: 50%;
++    /* Outer border */
++    border: 3px solid rgba(16, 155, 128, 0.2);
++    padding: 8px;
++    /* Space before inner image */
++    background: transparent;
++    margin-bottom: 1.5rem;
++    position: relative;
++    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
++    transition: transform 0.3s ease, border-color 0.3s ease;
++}
++
++.bg-darker .step-image-wrap {
++    border-color: rgba(255, 255, 255, 0.1);
++    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
++}
++
++.step-card:hover .step-image-wrap {
++    transform: translateY(-5px);
++    border-color: var(--primary-color);
++}
++
++.step-image-wrap img {
++    width: 100%;
++    height: 100%;
++    object-fit: cover;
++    border-radius: 50%;
++    /* Simple dashed inner border */
++    position: relative;
++    z-index: 2;
++}
++
++/* Create the dashed ring inside */
++.step-image-wrap::after {
++    content: '';
++    position: absolute;
++    top: 10px;
++    left: 10px;
++    right: 10px;
++    bottom: 10px;
++    border-radius: 50%;
++    border: 2px dashed rgba(16, 155, 128, 0.5);
++    z-index: 3;
++    pointer-events: none;
++}
++
++.bg-darker .step-image-wrap::after {
++    border-color: rgba(255, 255, 255, 0.3);
++}
++
++.step-content h4 {
++    font-size: 1.2rem;
++    color: #0f172a;
++    margin-bottom: 0.5rem;
++    font-family: var(--font-heading);
++}
++
++.bg-darker .step-content h4 {
++    color: #fff;
++}
++
++.step-content p {
++    font-size: 0.95rem;
++    color: #475569;
++    line-height: 1.5;
++}
++
++.bg-darker .step-content p {
++    color: var(--text-muted);
++}
++
++/* Background gradient ring on hover */
++.step-image-wrap::before {
++    content: '';
++    position: absolute;
++    top: -3px;
++    left: -3px;
++    right: -3px;
++    bottom: -3px;
++    border-radius: 50%;
++    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
++    z-index: 1;
++    opacity: 0;
++    transition: opacity 0.3s ease;
++}
++
++.step-card:hover .step-image-wrap::before {
++    opacity: 0.5;
++}
++
++/* SQUIGGLY ARROW */
++.step-arrow {
++    flex-shrink: 0;
++    color: var(--primary-color);
++    opacity: 0.6;
++    width: 60px;
++    height: 160px;
++    /* Align centrally with the 160px image */
++    display: flex;
++    align-items: center;
++    justify-content: center;
++}
++
++.step-arrow svg {
++    width: 100%;
++    height: auto;
++    stroke: currentColor;
++    stroke-width: 2;
++    fill: none;
++    stroke-linecap: round;
++    stroke-linejoin: round;
++    filter: drop-shadow(0 0 5px rgba(16, 155, 128, 0.2));
++}
++
++@media (max-width: 1050px) {
++    .step-arrow {
++        display: none;
++        /* Hide arrows on smaller tablet/mobile to save space */
++    }
++}
++
++/* SUCCESS MODAL POPUP */
++.success-modal-overlay {
++    position: fixed;
++    top: 0;
++    left: 0;
++    width: 100%;
++    height: 100%;
++    background: rgba(15, 23, 42, 0.85);
++    /* rgba value matching var(--bg-color) roughly */
++    backdrop-filter: blur(8px);
++    z-index: 99999;
++    display: flex;
++    align-items: center;
++    justify-content: center;
++    opacity: 0;
++    visibility: hidden;
++    transition: all 0.3s ease;
++}
++
++.success-modal-overlay.active {
++    opacity: 1;
++    visibility: visible;
++}
++
++.success-modal-content {
++    background: var(--card-bg);
++    /* Use card background for consistency */
++    padding: 3rem 2rem;
++    border-radius: 24px;
++    border: 1px solid rgba(255, 255, 255, 0.1);
++    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
++    text-align: center;
++    max-width: 450px;
++    width: 90%;
++    transform: scale(0.9) translateY(20px);
++    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
++}
++
++.success-modal-overlay.active .success-modal-content {
++    transform: scale(1) translateY(0);
++}
++
++.success-modal-icon {
++    width: 80px;
++    height: 80px;
++    background: rgba(16, 155, 128, 0.1);
++    color: var(--primary-color);
++    border-radius: 50%;
++    display: flex;
++    align-items: center;
++    justify-content: center;
++    font-size: 2.5rem;
++    margin: 0 auto 1.5rem;
++    box-shadow: 0 0 20px rgba(16, 155, 128, 0.2);
++}
++
++.success-modal-content h3 {
++    margin-bottom: 1rem;
++    font-size: 1.8rem;
++    color: white;
++}
++
++.success-modal-content p {
++    color: var(--text-muted);
++    margin-bottom: 2rem;
++    font-size: 1.1rem;
++    line-height: 1.5;
++}
++
++.success-modal-close {
++    background: var(--primary-color);
++    color: white;
++    border: none;
++    padding: 1rem 2.5rem;
++    border-radius: 30px;
++    font-weight: 600;
++    font-size: 1.1rem;
++    cursor: pointer;
++    transition: all 0.3s ease;
++}
++
++.success-modal-close:hover {
++    background: #0d826b;
++    transform: translateY(-2px);
++    box-shadow: 0 10px 20px rgba(16, 155, 128, 0.3);
+ }
+\ No newline at end of file

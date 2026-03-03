@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="fr">
 
 <head>
@@ -11,7 +11,7 @@
         href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Space+Grotesk:wght@300;400;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body>
@@ -19,59 +19,73 @@
     <!-- NAVIGATION -->
     <nav class="navbar">
         <div class="container">
-            <a href="index.html" class="logo">
-                <img src="images/logo.svg" alt="Babylone42 Logo" style="height: 40px;">
-            </a>
-            <ul class="nav-links">
-                <li class="dropdown">
-                    <a href="#hero">Accueil <i class="fas fa-chevron-down"
-                            style="font-size: 0.8rem; margin-left: 0.3rem;"></i></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="about.html">About us</a></li>
-                        <li><a href="interlocuteurs.html">Vos interlocuteurs</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="#solutions">Solutions <i class="fas fa-chevron-down"
-                            style="font-size: 0.8rem; margin-left: 0.3rem;"></i></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="solution-chatbots.html">Chatbots 24/7</a></li>
-                        <li><a href="solution-copilots.html">Copilots IA</a></li>
-                        <li><a href="solution-automation.html">Automatisation</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="#formations">Formations <i class="fas fa-chevron-down"
-                            style="font-size: 0.8rem; margin-left: 0.3rem;"></i></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="formation-genai.html">IA Générative</a></li>
-                        <li><a href="formation-jupyter.html">Jupyter</a></li>
-                        <li><a href="formation-python.html">Python</a></li>
-                        <li><a href="formation-ml.html">Machine Learning</a></li>
-                        <li><a href="formation-dl.html">Deep Learning</a></li>
-                        <li><a href="calendrier-formations.html"
-                                style="border-top: 1px solid rgba(255,255,255,0.1); margin-top: 0.5rem; padding-top: 0.8rem;">Calendrier
-                                des formations</a></li>
-                    </ul>
-                </li>
-                <li><a href="articles.html">Blog/actualités</a></li>
-                <li><a href="contact-page.html" class="btn btn-primary nav-btn">Contact</a></li>
-                <li class="nav-socials">
-                    <a href="https://www.linkedin.com/company/babylone42/" target="_blank" rel="noopener noreferrer"
-                        aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://www.instagram.com/babylone42_?igsh=YzVyamk1N3VoYXU1" target="_blank"
-                        rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.facebook.com/profile.php?id=61583402791597&name=xhp_nt__fb__action__open_user&locale=fr_FR"
-                        target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i
-                            class="fab fa-facebook"></i></a>
-                    <a href="https://x.com/babylone42_" target="_blank" rel="noopener noreferrer"
-                        aria-label="X Twitter"><i class="fab fa-x-twitter"></i></a>
-                    <a href="https://m.youtube.com/@Babylone42" target="_blank" rel="noopener noreferrer"
-                        aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-                </li>
-            </ul>
-            <div class="hamburger">
-                <i class="fas fa-bars"></i>
+            <!-- TOP ROW: Socials & Contact -->
+            <div class="navbar-top">
+                <div class="navbar-top-content">
+                    <a href="https://wa.me/33773609849" target="_blank" rel="noopener noreferrer" class="navbar-phone">
+                        <i class="fab fa-whatsapp"></i> +33 0 7 73 60 98 49
+                    </a>
+                    <div class="nav-socials">
+                        <a href="https://www.linkedin.com/company/babylone42/" target="_blank" rel="noopener noreferrer"
+                            aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/babylone42_?igsh=YzVyamk1N3VoYXU1" target="_blank"
+                            rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=61583402791597&name=xhp_nt__fb__action__open_user&locale=fr_FR"
+                            target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i
+                                class="fab fa-facebook"></i></a>
+                        <a href="https://x.com/babylone42_" target="_blank" rel="noopener noreferrer"
+                            aria-label="X Twitter"><i class="fab fa-x-twitter"></i></a>
+                        <a href="https://m.youtube.com/@Babylone42" target="_blank" rel="noopener noreferrer"
+                            aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BOTTOM ROW: Logo, Links & Mobile Menu -->
+            <div class="navbar-bottom">
+                <a href="index.html" class="logo">
+                    <img src="images/logo.svg" alt="Babylone42 Logo" style="height: 40px;">
+                </a>
+
+                <ul class="nav-links">
+                    <li class="dropdown">
+                        <a href="#hero">Accueil <i class="fas fa-chevron-down"
+                                style="font-size: 0.8rem; margin-left: 0.3rem;"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="about.html">About us</a></li>
+                            <li><a href="interlocuteurs.html">Vos interlocuteurs</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#solutions">Solutions <i class="fas fa-chevron-down"
+                                style="font-size: 0.8rem; margin-left: 0.3rem;"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="solution-chatbots.html">Chatbots 24/7</a></li>
+                            <li><a href="solution-copilots.html">Copilots IA</a></li>
+                            <li><a href="solution-automation.html">Automatisation</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#formations">Formations <i class="fas fa-chevron-down"
+                                style="font-size: 0.8rem; margin-left: 0.3rem;"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="formation-genai.html">IA Générative</a></li>
+                            <li><a href="formation-jupyter.html">Jupyter</a></li>
+                            <li><a href="formation-python.html">Python</a></li>
+                            <li><a href="formation-ml.html">Machine Learning</a></li>
+                            <li><a href="formation-dl.html">Deep Learning</a></li>
+                            <li><a href="calendrier-formations.html"
+                                    style="border-top: 1px solid rgba(255,255,255,0.1); margin-top: 0.5rem; padding-top: 0.8rem;">Calendrier
+                                    des formations</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="articles.html">Blog/actualités</a></li>
+                    <li><a href="contact-page.html" class="btn btn-primary nav-btn">Contact</a></li>
+                </ul>
+
+                <div class="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
             </div>
         </div>
     </nav>
@@ -382,6 +396,7 @@
         </div>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 
 </html>

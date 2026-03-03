@@ -1,4 +1,4 @@
-const fs = require('fs');
+﻿const fs = require('fs');
 
 const pages = [
     ["about.html", "À propos de Babylone42"],

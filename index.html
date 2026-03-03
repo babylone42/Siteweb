@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="fr">
 
 <head>
@@ -13,7 +13,7 @@
         href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Space+Grotesk:wght@300;400;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css?v=5">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body>
@@ -21,59 +21,73 @@
     <!-- NAVIGATION -->
     <nav class="navbar">
         <div class="container">
-            <a href="index.html" class="logo">
-                <img src="images/logo.svg" alt="Babylone42 Logo" style="height: 40px;">
-            </a>
-            <ul class="nav-links">
-                <li class="dropdown">
-                    <a href="#hero">Accueil <i class="fas fa-chevron-down"
-                            style="font-size: 0.8rem; margin-left: 0.3rem;"></i></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="about.html">About us</a></li>
-                        <li><a href="interlocuteurs.html">Vos interlocuteurs</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="#solutions">Solutions <i class="fas fa-chevron-down"
-                            style="font-size: 0.8rem; margin-left: 0.3rem;"></i></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="solution-chatbots.html">Chatbots 24/7</a></li>
-                        <li><a href="solution-copilots.html">Copilots IA</a></li>
-                        <li><a href="solution-automation.html">Automatisation</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="#formations">Formations <i class="fas fa-chevron-down"
-                            style="font-size: 0.8rem; margin-left: 0.3rem;"></i></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="formation-genai.html">IA Générative</a></li>
-                        <li><a href="formation-jupyter.html">Jupyter</a></li>
-                        <li><a href="formation-python.html">Python</a></li>
-                        <li><a href="formation-ml.html">Machine Learning</a></li>
-                        <li><a href="formation-dl.html">Deep Learning</a></li>
-                        <li><a href="calendrier-formations.html"
-                                style="border-top: 1px solid rgba(255,255,255,0.1); margin-top: 0.5rem; padding-top: 0.8rem;">Calendrier
-                                des formations</a></li>
-                    </ul>
-                </li>
-                <li><a href="articles.html">Blog/actualités</a></li>
-                <li><a href="contact-page.html" class="btn btn-primary nav-btn">Contact</a></li>
-                <li class="nav-socials">
-                    <a href="https://www.linkedin.com/company/babylone42/" target="_blank" rel="noopener noreferrer"
-                        aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://www.instagram.com/babylone42_?igsh=YzVyamk1N3VoYXU1" target="_blank"
-                        rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.facebook.com/profile.php?id=61583402791597&name=xhp_nt__fb__action__open_user&locale=fr_FR"
-                        target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i
-                            class="fab fa-facebook"></i></a>
-                    <a href="https://x.com/babylone42_" target="_blank" rel="noopener noreferrer"
-                        aria-label="X Twitter"><i class="fab fa-x-twitter"></i></a>
-                    <a href="https://m.youtube.com/@Babylone42" target="_blank" rel="noopener noreferrer"
-                        aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-                </li>
-            </ul>
-            <div class="hamburger">
-                <i class="fas fa-bars"></i>
+            <!-- TOP ROW: Socials & Contact -->
+            <div class="navbar-top">
+                <div class="navbar-top-content">
+                    <a href="https://wa.me/33773609849" target="_blank" rel="noopener noreferrer" class="navbar-phone">
+                        <i class="fab fa-whatsapp"></i> +33 0 7 73 60 98 49
+                    </a>
+                    <div class="nav-socials">
+                        <a href="https://www.linkedin.com/company/babylone42/" target="_blank" rel="noopener noreferrer"
+                            aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/babylone42_?igsh=YzVyamk1N3VoYXU1" target="_blank"
+                            rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=61583402791597&name=xhp_nt__fb__action__open_user&locale=fr_FR"
+                            target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i
+                                class="fab fa-facebook"></i></a>
+                        <a href="https://x.com/babylone42_" target="_blank" rel="noopener noreferrer"
+                            aria-label="X Twitter"><i class="fab fa-x-twitter"></i></a>
+                        <a href="https://m.youtube.com/@Babylone42" target="_blank" rel="noopener noreferrer"
+                            aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BOTTOM ROW: Logo, Links & Mobile Menu -->
+            <div class="navbar-bottom">
+                <a href="index.html" class="logo">
+                    <img src="images/logo.svg" alt="Babylone42 Logo" style="height: 40px;">
+                </a>
+
+                <ul class="nav-links">
+                    <li class="dropdown">
+                        <a href="#hero">Accueil <i class="fas fa-chevron-down"
+                                style="font-size: 0.8rem; margin-left: 0.3rem;"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="about.html">About us</a></li>
+                            <li><a href="interlocuteurs.html">Vos interlocuteurs</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#solutions">Solutions <i class="fas fa-chevron-down"
+                                style="font-size: 0.8rem; margin-left: 0.3rem;"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="solution-chatbots.html">Chatbots 24/7</a></li>
+                            <li><a href="solution-copilots.html">Copilots IA</a></li>
+                            <li><a href="solution-automation.html">Automatisation</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#formations">Formations <i class="fas fa-chevron-down"
+                                style="font-size: 0.8rem; margin-left: 0.3rem;"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="formation-genai.html">IA Générative</a></li>
+                            <li><a href="formation-jupyter.html">Jupyter</a></li>
+                            <li><a href="formation-python.html">Python</a></li>
+                            <li><a href="formation-ml.html">Machine Learning</a></li>
+                            <li><a href="formation-dl.html">Deep Learning</a></li>
+                            <li><a href="calendrier-formations.html"
+                                    style="border-top: 1px solid rgba(255,255,255,0.1); margin-top: 0.5rem; padding-top: 0.8rem;">Calendrier
+                                    des formations</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="articles.html">Blog/actualités</a></li>
+                    <li><a href="contact-page.html" class="btn btn-primary nav-btn">Contact</a></li>
+                </ul>
+
+                <div class="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
             </div>
         </div>
     </nav>
@@ -110,15 +124,7 @@
                 </div>
             </div>
             <div class="hero-image-content">
-                <img src="images/b42_logomark.svg" alt="Babylone42 Logomark" class="hero-3d-logo">
-            </div>
-        </div>
-
-        <div class="trust-signals-bar">
-            <div class="container trust-container">
-                <span><i class="fas fa-shield-alt"></i> Solutions sécurisées</span>
-                <span><i class="fas fa-rocket"></i> Déploiement rapide</span>
-                <span><i class="fas fa-user-check"></i> Accompagnement humain</span>
+                <img src="images/hero_ai_looking_forward.png" alt="Assistant IA en action" class="hero-3d-logo">
             </div>
         </div>
     </section>
@@ -130,40 +136,41 @@
             <div class="grid-3">
                 <!-- Card 1 -->
                 <div class="bento-card problem-card-bento">
-                    <div class="bento-content">
-                        <h3>Dette Opérationnelle</h3>
-                        <p>Continuer à travailler 'comme avant' coûte de plus en plus cher</p>
-                    </div>
                     <div class="bento-stat">
                         <span class="stat-value">142</span>
                         <span class="stat-unit">jours / an</span>
                         <span class="stat-label">Temps perdu en gestion administrative par les PME (Sage)</span>
                     </div>
+                    <div class="bento-content">
+                        <h3>Dette Opérationnelle</h3>
+                        <p>Continuer à travailler 'comme avant' coûte de plus en plus cher</p>
+                    </div>
                 </div>
 
                 <!-- Card 2 -->
                 <div class="bento-card problem-card-bento">
+                    <div class="bento-stat">
+                        <span class="stat-value">84<span style="font-size: 2.5rem; margin-left: 2px;">%</span></span>
+                        <span class="stat-unit">des dirigeants</span>
+                        <span class="stat-label">doutent de la qualité de leurs données pour décider (Goaland)</span>
+                    </div>
                     <div class="bento-content">
                         <h3>Décisions à l'Aveugle</h3>
                         <p>Sans analyse de données en temps réel, vous naviguez sans boussole</p>
-                    </div>
-                    <div class="bento-stat">
-                        <span class="stat-value">84<span style="font-size: 1.5rem">%</span></span>
-                        <span class="stat-unit">des dirigeants</span>
-                        <span class="stat-label">doutent de la qualité de leurs données pour décider (Goaland)</span>
                     </div>
                 </div>
 
                 <!-- Card 3 -->
                 <div class="bento-card problem-card-bento">
+                    <div class="bento-stat">
+                        <span class="stat-value">3<span style="font-size: 2.5rem; margin-left: 2px;">x</span></span>
+                        <span class="stat-unit">plus vite</span>
+                        <span class="stat-label">C'est la vitesse à laquelle vos concurrents équipés d'IA traitent leurs
+                            prospects</span>
+                    </div>
                     <div class="bento-content">
                         <h3>Concurrence Équipée IA</h3>
-                        <p>Vos rivaux équipés d'IA traitent vos prospects 3x plus vite</p>
-                    </div>
-                    <div class="bento-stat">
-                        <span class="stat-value">10<span style="font-size: 1.5rem">%</span></span>
-                        <span class="stat-unit">des PME</span>
-                        <span class="stat-label">utilisent déjà l'IA en France (INSEE 2024). Soyez pionnier.</span>
+                        <p>Ne laissez pas les 10% de PME déjà équipées (INSEE 2026) prendre le monopole</p>
                     </div>
                 </div>
             </div>
@@ -216,23 +223,39 @@
 
             <!-- ACCOMPAGNEMENT SUBSECTION -->
             <div style="margin-top: 4rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.05);">
-                <h3 class="subsection-title">Notre accompagnement de A à Z
+                <h3 class="subsection-title"
+                    style="text-align: center; font-size: 2rem; margin-bottom: 2rem; color: #fff;">Notre accompagnement
+                    pas à pas
                 </h3>
-                <div class="grid-3">
-                    <div class="service-card">
+                <div class="step-by-step-container" style="justify-content: space-between;">
+                    <div class="service-card" style="flex: 1;">
                         <i class="fas fa-search service-icon"></i>
-                        <h4>Diagnostic IA</h4>
+                        <h4>1. Diagnostic IA</h4>
                         <p>Audit de vos processus, identification des gisements de
                             productivité.</p>
                     </div>
-                    <div class="service-card">
+
+                    <div class="step-arrow">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 12h14M12 5l7 7-7 7" />
+                        </svg>
+                    </div>
+
+                    <div class="service-card" style="flex: 1;">
                         <i class="fas fa-network-wired service-icon"></i>
-                        <h4>Déploiement</h4>
+                        <h4>2. Déploiement</h4>
                         <p>Mise en œuvre de solutions IA robustes et sécurisées.</p>
                     </div>
-                    <div class="service-card">
+
+                    <div class="step-arrow">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 12h14M12 5l7 7-7 7" />
+                        </svg>
+                    </div>
+
+                    <div class="service-card" style="flex: 1;">
                         <i class="fas fa-plug service-icon"></i>
-                        <h4>Intégration</h4>
+                        <h4>3. Intégration</h4>
                         <p>Connexion fluide à vos CRM, ERP et bases de données.</p>
                     </div>
                 </div>
@@ -249,18 +272,32 @@
         <div class="container">
             <h2 class="section-title">Qui accompagnons-nous ?</h2>
             <div class="grid-3">
-                <div class="target-item" style="background: url('images/bg_tpe_pme.png') center/cover no-repeat;">
-                    <h4>🏢 PME / TPE</h4>
-                    <p>Automatisez vos processus administratifs.</p>
+                <div class="target-card-new">
+                    <h4 class="target-title">Dirigeants PME & TPE</h4>
+                    <div class="target-image-wrapper">
+                        <img src="images/bg_tpe_pme.png" alt="PME et TPE" class="target-img">
+                    </div>
+                    <p class="target-text">Cessez de perdre du temps sur des tâches chronophages. Gagnez en productivité
+                        et concentrez-vous sur la croissance de votre entreprise grâce à nos solutions IA sur mesure.
+                    </p>
                 </div>
-                <div class="target-item" style="background: url('images/bg_ecole.png') center/cover no-repeat;">
-                    <h4>🎓 Écoles</h4>
-                    <p>Intégrez l'IA dans votre pédagogie.</p>
+
+                <div class="target-card-new">
+                    <h4 class="target-title">Enseignement / R&amp;D</h4>
+                    <div class="target-image-wrapper">
+                        <img src="images/bg_ecole.png" alt="Enseignement et Recherche" class="target-img">
+                    </div>
+                    <p class="target-text">Modernisez votre pédagogie et équipez vos étudiants des compétences clés de
+                        demain. Devenez une institution pionnière dans l'adoption de l'Intelligence Artificielle.</p>
                 </div>
-                <div class="target-item"
-                    style="background: url('images/bg_service_public.png') center/cover no-repeat;">
-                    <h4>🏛️ Services Publics</h4>
-                    <p>Optimisez le traitement des dossiers.</p>
+
+                <div class="target-card-new">
+                    <h4 class="target-title">Secteur Public</h4>
+                    <div class="target-image-wrapper">
+                        <img src="images/bg_service_public.png" alt="Secteur Public" class="target-img">
+                    </div>
+                    <p class="target-text">Allégez la charge mentale de vos agents et offrez un service citoyen
+                        ultra-rapide et sans friction grâce à l'automatisation des flux.</p>
                 </div>
             </div>
         </div>
@@ -271,11 +308,9 @@
 
 
     <!-- FORMATIONS SECTION (BENTO GRID) -->
-    <section id="formations" class="section-padding bg-darker">
+    <section id="formations" class="bg-darker" style="padding: 4rem 0;">
         <div class="container">
-            <h2 class="section-title">Formations</h2>
-            <p class="section-subtitle">Montez en compétences avec nos ingénieurs-formateurs.</p>
-
+            <h2 class="section-title" style="margin-bottom: 2rem;">Formations</h2>
             <div class="carousel-container">
                 <button class="carousel-btn prev-btn" aria-label="Slide Précédente"><i
                         class="fas fa-chevron-left"></i></button>
@@ -357,7 +392,7 @@
 
 
     <!-- DIFFERENTIATORS -->
-    <section id="why-us" class="section-padding bg-light">
+    <section id="why-us" class="bg-light" style="padding: 4rem 0;">
         <div class="container">
             <div class="why-us-grid">
                 <!-- Left: Staggered Images -->
@@ -383,9 +418,10 @@
                             <div class="diff-text">
                                 <strong>Double Expertise Unique</strong>
                                 <p>Ingénieurs seniors ET formateurs pédagogues. <br>
-                                    <span style="color:var(--primary-color); font-weight: 500;">✓ Vous n'avez qu'un seul
-                                        interlocuteur</span>, <em>plus besoin de coordonner une agence technique et un
-                                        organisme de formation.</em>
+                                    <span style="color:var(--primary-color); font-weight: bold;">✓ Vous n'avez qu'un
+                                        seul
+                                        interlocuteur</span>, plus besoin de coordonner une agence technique et un
+                                    organisme de formation.
                                 </p>
                             </div>
                         </li>
@@ -394,9 +430,10 @@
                             <div class="diff-text">
                                 <strong>Pragmatisme Absolu (ROI &lt; 3 mois)</strong>
                                 <p>100% de nos projets livrés sans R&D interminable. <br>
-                                    <span style="color:var(--primary-color); font-weight: 500;">✓ Vous obtenez un retour
-                                        sur investissement rapide</span>, <em>dès les premières semaines d'utilisation,
-                                        sans coûts cachés.</em>
+                                    <span style="color:var(--primary-color); font-weight: bold;">✓ Vous obtenez un
+                                        retour
+                                        sur investissement rapide</span>, dès les premières semaines d'utilisation,
+                                    sans coûts cachés.
                                 </p>
                             </div>
                         </li>
@@ -405,9 +442,9 @@
                             <div class="diff-text">
                                 <strong>Intervention Nationale (+150 clients)</strong>
                                 <p>Basés à Marseille, nous opérons partout en France. <br>
-                                    <span style="color:var(--primary-color); font-weight: 500;">✓ Où que vous
-                                        soyez</span>, <em>nous vous accompagnons sur site ou à distance sans jamais
-                                        perdre notre proximité.</em>
+                                    <span style="color:var(--primary-color); font-weight: bold;">✓ Où que vous
+                                        soyez</span>, nous vous accompagnons sur site ou à distance sans jamais
+                                    perdre notre proximité.
                                 </p>
                             </div>
                         </li>
@@ -416,9 +453,9 @@
                             <div class="diff-text">
                                 <strong>100% Sur-Mesure (50+ workflows créés)</strong>
                                 <p>Des solutions adaptées à votre budget et maturité digitale. <br>
-                                    <span style="color:var(--primary-color); font-weight: 500;">✓ Vous payez uniquement
-                                        pour l'essentiel</span>, <em>avec des outils technologiques qui évoluent à votre
-                                        propre rythme.</em>
+                                    <span style="color:var(--primary-color); font-weight: bold;">✓ Vous payez uniquement
+                                        pour l'essentiel</span>, avec des outils technologiques qui évoluent à votre
+                                    propre rythme.
                                 </p>
                             </div>
                         </li>
@@ -581,15 +618,15 @@
     </section>
 
     <!-- CONTACT SECTION -->
-    <section id="contact" class="section-padding bg-light">
+    <section id="contact" class="bg-light" style="padding: 2rem 0;">
         <div class="container">
             <div class="contact-grid">
                 <!-- Left: Info -->
                 <div class="contact-info">
                     <span class="badge"
                         style="background: rgba(16, 155, 128, 0.1); color: var(--primary-color);">Contact</span>
-                    <h2 class="section-title" style="text-align: left; margin-bottom: 1rem;">Discutez de votre <span
-                            class="highlight">projet</span></h2>
+                    <h2 class="section-title" style="text-align: left; margin-bottom: 1rem;">Passez à l'<span
+                            class="highlight">action</span></h2>
                     <p style="margin-bottom: 2rem; font-size: 1.1rem; color: var(--text-muted);">Quel est votre défi
                         actuel ? Laissez-nous un message et notre équipe vous recontactera très rapidement.</p>
 
@@ -602,9 +639,9 @@
                             </div>
                         </div>
                         <div class="contact-item">
-                            <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
+                            <div class="contact-icon"><i class="fab fa-whatsapp"></i></div>
                             <div class="contact-text">
-                                <strong>Téléphone</strong>
+                                <strong>Téléphone / WhatsApp</strong>
                                 <a href="tel:+330773609849">+33 0 7 73 60 98 49</a>
                             </div>
                         </div>
@@ -649,6 +686,8 @@
                             <div class="checkbox-buttons">
                                 <label class="checkbox-btn"><input type="checkbox" name="formation_type"
                                         value="prompting"> <span>Prompting & IA Générative</span></label>
+                                <label class="checkbox-btn"><input type="checkbox" name="formation_type"
+                                        value="jupyter"> <span>Jupyter Notebook</span></label>
                                 <label class="checkbox-btn"><input type="checkbox" name="formation_type" value="python">
                                     <span>Python (Data / POO)</span></label>
                                 <label class="checkbox-btn"><input type="checkbox" name="formation_type"
@@ -684,8 +723,7 @@
                                 <input type="email" id="email" required placeholder="jean.dupont@entreprise.com">
                             </div>
                         </div>
-                        <button type="submit" class="btn btn-primary btn-block">Parlons de votre projet IA
-                            gratuitement</button>
+                        <button type="submit" class="btn btn-primary btn-block">Envoyer pour être recontacté</button>
                     </form>
                 </div>
             </div>
