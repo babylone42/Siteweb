@@ -4,7 +4,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Copilots IA | Babylone42</title>
+    <title>Copilot IA sur mesure pour Entreprises — Productivité &amp; Base de Connaissances | Babylone42</title>
+    <meta name="description"
+        content="Donnez à chaque collaborateur un assistant IA qui connaît toute votre documentation interne. Recherche sémantique, rédaction assistée, analyse de données. RGPD. Babylone42, expert IA à Marseille et toute la France.">
+    <meta name="robots" content="index, follow">
+    <meta name="geo.region" content="FR-13">
+    <meta name="geo.placename" content="Marseille">
+    <meta name="geo.position" content="43.296482;5.369780">
+    <meta name="ICBM" content="43.296482, 5.369780">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Copilot IA sur mesure pour Entreprises | Babylone42">
+    <meta property="og:description"
+        content="Un assistant IA privé qui connaît toute votre documentation. 40% de temps administratif économisé. RGPD natif. Babylone42, Marseille.">
+    <meta property="og:url" content="https://www.babylone42.fr/solution-copilots.html">
+    <meta property="og:site_name" content="Babylone42">
+    <link rel="canonical" href="https://www.babylone42.fr/solution-copilots.html">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Copilot IA sur mesure pour Entreprises",
+      "provider": {
+        "@type": "Organization",
+        "name": "Babylone42",
+        "url": "https://www.babylone42.fr",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Marseille",
+          "addressCountry": "FR"
+        }
+      },
+      "description": "Assistants IA internes propulsés par LLM et entraînés sur la documentation de l'entreprise. Recherche sémantique, rédaction assistée, analyse documentaire, contrôle d'accès RBAC.",
+      "areaServed": "France",
+      "serviceType": "Intelligence Artificielle & Automatisation"
+    }
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -12,6 +46,201 @@
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        .sol-hero-stats {
+            display: flex;
+            gap: 2.5rem;
+            justify-content: center;
+            margin-top: 2.5rem;
+            flex-wrap: wrap;
+        }
+
+        .sol-hero-stat {
+            text-align: center;
+        }
+
+        .sol-hero-stat .sol-stat-val {
+            display: block;
+            font-size: 2.5rem;
+            font-weight: 700;
+            font-family: var(--font-heading);
+            color: var(--primary-color);
+            line-height: 1;
+        }
+
+        .sol-hero-stat p {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin: 0.3rem 0 0;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .results-bar {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #0d7a64 100%);
+            padding: 3rem 0;
+        }
+
+        .results-bar .container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .results-bar .result-item h3 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 0.3rem;
+            font-family: var(--font-heading);
+        }
+
+        .results-bar .result-item p {
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 0.95rem;
+            margin: 0;
+        }
+
+        .pain-card {
+            background: #fff;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 2rem;
+            text-align: left;
+        }
+
+        .pain-card .pain-stat {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            font-family: var(--font-heading);
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+
+        .pain-card h4 {
+            font-size: 1.2rem;
+            color: #0f172a;
+            margin-bottom: 0.5rem;
+        }
+
+        .pain-card p {
+            color: #64748b;
+            font-size: 0.95rem;
+            margin: 0;
+        }
+
+        .diff-check-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .diff-check-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1.75rem;
+        }
+
+        .diff-check-list li i {
+            color: var(--primary-color);
+            font-size: 1.3rem;
+            margin-top: 0.15rem;
+            flex-shrink: 0;
+        }
+
+        .diff-check-list li strong {
+            display: block;
+            font-size: 1.1rem;
+            color: #fff;
+            margin-bottom: 0.25rem;
+        }
+
+        .diff-check-list li span {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .bg-light .diff-check-list li strong {
+            color: #0f172a;
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 2rem;
+            counter-reset: steps;
+        }
+
+        .process-step {
+            background: #fff;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 2rem;
+            position: relative;
+            counter-increment: steps;
+        }
+
+        .process-step::before {
+            content: counter(steps);
+            position: absolute;
+            top: -18px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--primary-color);
+            color: #fff;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-family: var(--font-heading);
+            font-size: 1rem;
+        }
+
+        .process-step i {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .process-step h4 {
+            color: #0f172a;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .process-step p {
+            color: #64748b;
+            font-size: 0.9rem;
+            margin: 0;
+        }
+
+        .dept-card {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            padding: 2rem;
+        }
+
+        .dept-card h4 {
+            color: var(--primary-color);
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+
+        .dept-card li {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+    </style>
 </head>
 
 <body>
@@ -19,7 +248,6 @@
     <!-- NAVIGATION -->
     <nav class="navbar">
         <div class="container">
-            <!-- TOP ROW: Socials & Contact -->
             <div class="navbar-top">
                 <div class="navbar-top-content">
                     <a href="https://wa.me/33773609849" target="_blank" rel="noopener noreferrer" class="navbar-phone">
@@ -40,16 +268,13 @@
                     </div>
                 </div>
             </div>
-
-            <!-- BOTTOM ROW: Logo, Links & Mobile Menu -->
             <div class="navbar-bottom">
                 <a href="index.html" class="logo">
                     <img src="images/logo.svg" alt="Babylone42 Logo" style="height: 40px;">
                 </a>
-
                 <ul class="nav-links">
                     <li class="dropdown">
-                        <a href="#hero">Accueil <i class="fas fa-chevron-down"
+                        <a href="index.html">Accueil <i class="fas fa-chevron-down"
                                 style="font-size: 0.8rem; margin-left: 0.3rem;"></i></a>
                         <ul class="dropdown-menu">
                             <li><a href="about.html">About us</a></li>
@@ -57,7 +282,7 @@
                         </ul>
                     </li>
                     <li class="dropdown">
-                        <a href="#solutions">Solutions <i class="fas fa-chevron-down"
+                        <a href="#">Solutions <i class="fas fa-chevron-down"
                                 style="font-size: 0.8rem; margin-left: 0.3rem;"></i></a>
                         <ul class="dropdown-menu">
                             <li><a href="solution-chatbots.html">Chatbots 24/7</a></li>
@@ -66,7 +291,7 @@
                         </ul>
                     </li>
                     <li class="dropdown">
-                        <a href="#formations">Formations <i class="fas fa-chevron-down"
+                        <a href="#">Formations <i class="fas fa-chevron-down"
                                 style="font-size: 0.8rem; margin-left: 0.3rem;"></i></a>
                         <ul class="dropdown-menu">
                             <li><a href="formation-genai.html">IA Générative</a></li>
@@ -82,241 +307,366 @@
                     <li><a href="articles.html">Blog/actualités</a></li>
                     <li><a href="contact-page.html" class="btn btn-primary nav-btn">Diagnostic IA Gratuit</a></li>
                 </ul>
-
-                <div class="hamburger">
-                    <i class="fas fa-bars"></i>
-                </div>
+                <div class="hamburger"><i class="fas fa-bars"></i></div>
             </div>
         </div>
     </nav>
 
     <main class="page-content" style="padding-top: 80px;">
-        <!-- HERO SOLUTION -->
+
+        <!-- HERO -->
         <section class="formation-hero bg-darker section-padding" style="position: relative; overflow: hidden;">
-            <div class="container" style="position: relative; z-index: 2; text-align: center; max-width: 800px;">
-                <div class="bento-icon" style="margin: 0 auto 1.5rem; font-size: 3rem; color: var(--primary-color);"><i
-                        class="fas fa-brain"></i></div>
-                <h1 style="font-size: 3rem; margin-bottom: 1rem;">Copilots IA : Un assistant pour chaque employé</h1>
-                <p style="font-size: 1.2rem; color: var(--text-muted); margin-bottom: 2rem;">Des assistants intelligents
-                    sur mesure pour vos départements (Vente, RH, Direction). Recherchez, rédigez et analysez en un temps
-                    record avec vos propres données.</p>
-                <div style="display: flex; gap: 1rem; justify-content: center;">
-                    <a href="contact-page.html" class="btn btn-primary">Demander une démo</a>
-                </div>
-            </div>
-            <!-- Background element -->
             <div
-                style="position: absolute; top: -50%; left: -10%; width: 500px; height: 500px; background: radial-gradient(circle, rgba(14,138,148,0.15) 0%, transparent 70%); z-index: 1;">
+                style="position: absolute; top: -20%; right: -5%; width: 600px; height: 600px; background: radial-gradient(circle, rgba(14,138,148,0.12) 0%, transparent 70%); z-index: 1;">
+            </div>
+            <div
+                style="position: absolute; bottom: -20%; left: -5%; width: 500px; height: 500px; background: radial-gradient(circle, rgba(14,138,148,0.08) 0%, transparent 70%); z-index: 1;">
+            </div>
+            <div class="container" style="position: relative; z-index: 2; text-align: center; max-width: 860px;">
+                <span class="badge" style="margin-bottom: 1.5rem; display: inline-block;">Solution IA</span>
+                <h1 style="font-size: 3rem; margin-bottom: 1.25rem; line-height: 1.15;">Vos experts passent <span
+                        class="highlight">3 heures par jour</span> à chercher une information qu'ils possèdent déjà.
+                </h1>
+                <p
+                    style="font-size: 1.15rem; color: var(--text-muted); margin-bottom: 2rem; max-width: 680px; margin-left: auto; margin-right: auto;">
+                    Un Copilot IA sur mesure qui connaît l'intégralité de votre documentation interne et répond en
+                    langage naturel à vos collaborateurs — en toute confidentialité, sans jamais exposer vos données.
+                </p>
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="contact-page.html" class="btn btn-primary">Demander une démo gratuite</a>
+                    <a href="#comment-ca-marche" class="btn btn-secondary">Voir comment ça marche</a>
+                </div>
+                <div class="sol-hero-stats">
+                    <div class="sol-hero-stat">
+                        <span class="sol-stat-val">40<span style="font-size:1.5rem">%</span></span>
+                        <p>de temps administratif économisé</p>
+                    </div>
+                    <div class="sol-hero-stat">
+                        <span class="sol-stat-val">0</span>
+                        <p>donnée partagée avec les IA publiques</p>
+                    </div>
+                    <div class="sol-hero-stat">
+                        <span class="sol-stat-val">&lt;3s</span>
+                        <p>pour retrouver n'importe quelle information</p>
+                    </div>
+                    <div class="sol-hero-stat">
+                        <span class="sol-stat-val">100<span style="font-size:1.5rem">%</span></span>
+                        <p>basé sur vos propres données</p>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <!-- BENTO KEY INFO -->
+        <!-- PAIN SECTION -->
         <section class="section-padding bg-light">
             <div class="container">
-                <div class="grid-4"
-                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem;">
-                    <div class="bento-card"
-                        style="background: white; border: 1px solid #e2e8f0; color: #0f172a; text-align: center; padding: 1.5rem;">
-                        <i class="fas fa-search"
-                            style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
-                        <h4 style="margin-bottom: 0.5rem; font-size: 1.1rem;">Recherche Sémantique</h4>
-                        <p style="color: #64748b; font-size: 0.95rem; margin-bottom: 0;">Trouvez l'information
-                            instantanément</p>
+                <h2 class="section-title" style="color: #0f172a;">Ce que coûte une entreprise <span
+                        class="highlight">sans mémoire collective</span></h2>
+                <p class="section-subtitle" style="color: #64748b;">Chaque heure passée à chercher une information
+                    existante est une heure non investie dans la croissance.</p>
+                <div class="grid-3" style="gap: 2rem;">
+                    <div class="pain-card">
+                        <div class="pain-stat">40<span style="font-size:1.8rem">%</span></div>
+                        <h4>Du temps des cols blancs perdu en recherche</h4>
+                        <p>McKinsey estime qu'un cadre passe jusqu'à 40&nbsp;% de son temps à chercher, valider et
+                            reformater des informations déjà présentes dans l'entreprise.</p>
                     </div>
-                    <div class="bento-card"
-                        style="background: white; border: 1px solid #e2e8f0; color: #0f172a; text-align: center; padding: 1.5rem;">
-                        <i class="fas fa-pen-nib"
-                            style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
-                        <h4 style="margin-bottom: 0.5rem; font-size: 1.1rem;">Rédaction Assistée</h4>
-                        <p style="color: #64748b; font-size: 0.95rem; margin-bottom: 0;">Génération de rapports et
-                            synthèses</p>
+                    <div class="pain-card">
+                        <div class="pain-stat">6x</div>
+                        <h4>Plus lent sans base de connaissances structurée</h4>
+                        <p>Onboarding, réponses clients, préparation de réunions : sans accès immédiat au savoir
+                            interne, chaque tâche prend 6 fois plus longtemps qu'avec un copilot.</p>
                     </div>
-                    <div class="bento-card"
-                        style="background: white; border: 1px solid #e2e8f0; color: #0f172a; text-align: center; padding: 1.5rem;">
-                        <i class="fas fa-lock"
-                            style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
-                        <h4 style="margin-bottom: 0.5rem; font-size: 1.1rem;">Sécurité Privée</h4>
-                        <p style="color: #64748b; font-size: 0.95rem; margin-bottom: 0;">Vos données ne quittent pas
-                            votre SI</p>
-                    </div>
-                    <div class="bento-card"
-                        style="background: white; border: 1px solid #e2e8f0; color: #0f172a; text-align: center; padding: 1.5rem;">
-                        <i class="fas fa-chart-line"
-                            style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
-                        <h4 style="margin-bottom: 0.5rem; font-size: 1.1rem;">Gain de Temps</h4>
-                        <p style="color: #64748b; font-size: 0.95rem; margin-bottom: 0;">40% de temps administratif
-                            gagné</p>
+                    <div class="pain-card">
+                        <div class="pain-stat">84<span style="font-size:1.8rem">%</span></div>
+                        <h4>Des dirigeants doutent de la qualité de leurs données</h4>
+                        <p>Quand l'information est éparpillée dans des silos (SharePoint, emails, Google Drive), la
+                            prise de décision repose sur des données incomplètes ou périmées.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- MARKETING PITCH -->
+        <!-- BENEFITS SECTION -->
         <section class="section-padding bg-darker">
             <div class="container">
-                <div class="grid-2" style="align-items: center;">
+                <div class="grid-2" style="align-items: center; gap: 4rem;">
                     <div>
-                        <h2 class="section-title" style="text-align: left;">Augmentez la productivité de vos équipes
-                        </h2>
-                        <p class="section-subtitle" style="text-align: left; margin-left: 0; margin-bottom: 2rem;">Vos
-                            collaborateurs passent jusqu'à 40% de leur temps à rechercher de l'information.</p>
-                        <ul class="differentiators-list" style="list-style: none; padding: 0;">
-                            <li style="margin-bottom: 1.5rem; display: flex; align-items: flex-start; gap: 1rem;">
-                                <i class="fas fa-check-circle"
-                                    style="color: var(--primary-color); font-size: 1.5rem; margin-top: 0.2rem;"></i>
+                        <img src="images/solution-copilot.jpg" alt="Copilot IA Babylone42 pour entreprises"
+                            style="border-radius: 12px; width: 100%; box-shadow: 0 10px 40px rgba(0,0,0,0.6);">
+                    </div>
+                    <div>
+                        <span class="badge" style="margin-bottom: 1rem; display: inline-block;">Pourquoi
+                            Babylone42</span>
+                        <h2 class="section-title" style="text-align: left; margin-bottom: 1rem;">Un ChatGPT qui ne
+                            connaît <span class="highlight">que votre entreprise</span></h2>
+                        <p style="color: var(--text-muted); margin-bottom: 2rem;">Contrairement aux outils publics,
+                            votre Copilot est entraîné exclusivement sur vos documents. Il répond avec précision, cite
+                            ses sources, et respecte vos droits d'accès existants.</p>
+                        <ul class="diff-check-list">
+                            <li>
+                                <i class="fas fa-check-circle"></i>
                                 <div>
-                                    <strong
-                                        style="display: block; font-size: 1.2rem; margin-bottom: 0.2rem;">Intégration
-                                        Native</strong>
-                                    <span style="color: var(--text-muted);">Un Copilot s'intègre directement où vous
-                                        travaillez (Slack, Teams, Intranet) pour fournir des réponses basées sur VOTRE
-                                        documentation interne.</span>
+                                    <strong>Intégration native dans vos outils</strong>
+                                    <span>Slack, Microsoft Teams, votre intranet ou une interface web dédiée. Le Copilot
+                                        s'intègre exactement là où vos équipes travaillent déjà, sans changer leurs
+                                        habitudes.</span>
                                 </div>
                             </li>
-                            <li style="margin-bottom: 1.5rem; display: flex; align-items: flex-start; gap: 1rem;">
-                                <i class="fas fa-check-circle"
-                                    style="color: var(--primary-color); font-size: 1.5rem; margin-top: 0.2rem;"></i>
+                            <li>
+                                <i class="fas fa-check-circle"></i>
                                 <div>
-                                    <strong style="display: block; font-size: 1.2rem; margin-bottom: 0.2rem;">Analyse et
-                                        Structuration Complexe</strong>
-                                    <span style="color: var(--text-muted);">Demandez au Copilot de synthétiser 50 PDFs
-                                        techniques ou de croiser les données de plusieurs tableaux Excel
-                                        instantanément.</span>
+                                    <strong>Analyse documentaire à grande échelle</strong>
+                                    <span>Demandez au Copilot de synthétiser 50 PDFs techniques, de comparer des clauses
+                                        contractuelles ou de croiser les données de plusieurs tableaux Excel en quelques
+                                        secondes.</span>
                                 </div>
                             </li>
-                            <li style="margin-bottom: 1.5rem; display: flex; align-items: flex-start; gap: 1rem;">
-                                <i class="fas fa-check-circle"
-                                    style="color: var(--primary-color); font-size: 1.5rem; margin-top: 0.2rem;"></i>
+                            <li>
+                                <i class="fas fa-check-circle"></i>
                                 <div>
-                                    <strong style="display: block; font-size: 1.2rem; margin-bottom: 0.2rem;">Contrôle
-                                        des Accès (RBAC)</strong>
-                                    <span style="color: var(--text-muted);">Chaque employé n'aura accès via le Copilot
-                                        qu'aux documents auxquels il a déjà accès dans votre système de fichiers,
-                                        garantissant une conformité totale.</span>
+                                    <strong>Contrôle des accès granulaire (RBAC)</strong>
+                                    <span>Le Copilot ne montre à chaque collaborateur que les documents auxquels il a
+                                        déjà accès. Les droits de votre système de fichiers sont respectés
+                                        automatiquement.</span>
                                 </div>
                             </li>
                         </ul>
                     </div>
-                    <div class="bento-visual">
-                        <img src="images/solution-copilot.jpg" alt="Copilot Interface Premium"
-                            style="border-radius: 12px; width: 100%; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
-                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- STEP BY STEP PROCESS -->
+        <!-- RESULTS BAR -->
+        <div class="results-bar">
+            <div class="container">
+                <div class="result-item">
+                    <h3>+40%</h3>
+                    <p>de productivité pour les équipes Vente</p>
+                </div>
+                <div class="result-item">
+                    <h3>-60%</h3>
+                    <p>de temps sur la rédaction de rapports</p>
+                </div>
+                <div class="result-item">
+                    <h3>+35%</h3>
+                    <p>de rapidité dans l'onboarding RH</p>
+                </div>
+                <div class="result-item">
+                    <h3>&lt;3 mois</h3>
+                    <p>pour mesurer un ROI concret</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- USE CASES BY DEPARTMENT -->
         <section class="section-padding bg-light">
             <div class="container">
-                <h2 class="section-title" style="color: #0f172a;">Comment <span class="highlight">ça marche ?</span>
-                </h2>
-                <p class="section-subtitle">Notre méthodologie pas à pas pour un déploiement sécurisé.</p>
-
-                <div class="step-by-step-container">
-                    <!-- Step 1 -->
-                    <div class="step-card">
-                        <div class="step-image-wrap">
-                            <img src="images/why_us_meeting.png" alt="Cartographie des sources"
-                                onerror="this.src=''; this.parentElement.style.background='var(--primary-color)';">
+                <h2 class="section-title" style="color: #0f172a;">Un Copilot pour <span class="highlight">chaque
+                        département</span></h2>
+                <p class="section-subtitle" style="color: #64748b;">La même infrastructure, adaptée aux besoins
+                    spécifiques de chaque équipe.</p>
+                <div class="grid-3" style="gap: 2rem; margin-top: 2rem;">
+                    <div style="background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 2rem;">
+                        <div
+                            style="width: 48px; height: 48px; background: rgba(16,155,128,0.1); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.25rem;">
+                            <i class="fas fa-chart-line" style="color: var(--primary-color); font-size: 1.4rem;"></i>
                         </div>
-                        <div class="step-content">
-                            <h4>1. Audit Source</h4>
-                            <p>Analyse de vos sources de vérité (Notion, ERP) et définition de la stratégie d'ingestion.
-                            </p>
-                        </div>
+                        <h4 style="color: #0f172a; margin-bottom: 1rem;">Ventes &amp; Commercial</h4>
+                        <ul style="list-style: none; padding: 0;">
+                            <li
+                                style="color: #64748b; font-size: 0.9rem; margin-bottom: 0.6rem; padding-left: 1rem; border-left: 2px solid var(--primary-color);">
+                                Génération de propositions commerciales en 5 minutes</li>
+                            <li
+                                style="color: #64748b; font-size: 0.9rem; margin-bottom: 0.6rem; padding-left: 1rem; border-left: 2px solid var(--primary-color);">
+                                Accès instantané aux fiches produits et argumentaires</li>
+                            <li
+                                style="color: #64748b; font-size: 0.9rem; padding-left: 1rem; border-left: 2px solid var(--primary-color);">
+                                Résumé automatique des historiques clients CRM</li>
+                        </ul>
                     </div>
-
-                    <!-- Arrow -->
-                    <div class="step-arrow">
-                        <svg viewBox="0 0 100 40" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M 5,20 Q 20,5 35,20 T 65,20 T 85,20" fill="none" stroke="currentColor"
-                                stroke-width="2" />
-                            <polyline points="75,10 85,20 75,30" fill="none" stroke="currentColor" stroke-width="2"
-                                stroke-linecap="round" />
-                        </svg>
+                    <div style="background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 2rem;">
+                        <div
+                            style="width: 48px; height: 48px; background: rgba(16,155,128,0.1); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.25rem;">
+                            <i class="fas fa-users" style="color: var(--primary-color); font-size: 1.4rem;"></i>
+                        </div>
+                        <h4 style="color: #0f172a; margin-bottom: 1rem;">Ressources Humaines</h4>
+                        <ul style="list-style: none; padding: 0;">
+                            <li
+                                style="color: #64748b; font-size: 0.9rem; margin-bottom: 0.6rem; padding-left: 1rem; border-left: 2px solid var(--primary-color);">
+                                Réponses immédiates aux questions RH des employés (congés, avantages)</li>
+                            <li
+                                style="color: #64748b; font-size: 0.9rem; margin-bottom: 0.6rem; padding-left: 1rem; border-left: 2px solid var(--primary-color);">
+                                Onboarding accéléré avec accès à toute la documentation</li>
+                            <li
+                                style="color: #64748b; font-size: 0.9rem; padding-left: 1rem; border-left: 2px solid var(--primary-color);">
+                                Analyse et tri automatique des CVs en fonction de critères définis</li>
+                        </ul>
                     </div>
-
-                    <!-- Step 2 -->
-                    <div class="step-card">
-                        <div class="step-image-wrap">
-                            <img src="images/problem-network.jpg" alt="Architecture RAG"
-                                onerror="this.src=''; this.parentElement.style.background='var(--primary-color)';">
+                    <div style="background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 2rem;">
+                        <div
+                            style="width: 48px; height: 48px; background: rgba(16,155,128,0.1); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.25rem;">
+                            <i class="fas fa-landmark" style="color: var(--primary-color); font-size: 1.4rem;"></i>
                         </div>
-                        <div class="step-content">
-                            <h4>2. Base & RAG</h4>
-                            <p>Vectorisation de vos données dans une base isolée. Aucune donnée n'entraîne les modèles
-                                publics.</p>
-                        </div>
-                    </div>
-
-                    <!-- Arrow -->
-                    <div class="step-arrow">
-                        <svg viewBox="0 0 100 40" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M 5,20 Q 20,5 35,20 T 65,20 T 85,20" fill="none" stroke="currentColor"
-                                stroke-width="2" />
-                            <polyline points="75,10 85,20 75,30" fill="none" stroke="currentColor" stroke-width="2"
-                                stroke-linecap="round" />
-                        </svg>
-                    </div>
-
-                    <!-- Step 3 -->
-                    <div class="step-card">
-                        <div class="step-image-wrap">
-                            <img src="images/why_us_team.png" alt="Développement et Interface"
-                                onerror="this.src=''; this.parentElement.style.background='var(--primary-color)';">
-                        </div>
-                        <div class="step-content">
-                            <h4>3. Interface & Accès</h4>
-                            <p>Création d'une interface web connectée à votre SSO. Les restrictions d'accès existantes
-                                sont respectées.</p>
-                        </div>
-                    </div>
-
-                    <!-- Arrow -->
-                    <div class="step-arrow">
-                        <svg viewBox="0 0 100 40" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M 5,20 Q 20,5 35,20 T 65,20 T 85,20" fill="none" stroke="currentColor"
-                                stroke-width="2" />
-                            <polyline points="75,10 85,20 75,30" fill="none" stroke="currentColor" stroke-width="2"
-                                stroke-linecap="round" />
-                        </svg>
-                    </div>
-
-                    <!-- Step 4 -->
-                    <div class="step-card">
-                        <div class="step-image-wrap">
-                            <img src="images/problem-tech.jpg" alt="Ateliers d'adoption"
-                                onerror="this.src=''; this.parentElement.style.background='var(--primary-color)';">
-                        </div>
-                        <div class="step-content">
-                            <h4>4. Adoption</h4>
-                            <p>Accompagnement de vos équipes via des ateliers de Prompt Engineering ciblés.</p>
-                        </div>
+                        <h4 style="color: #0f172a; margin-bottom: 1rem;">Direction &amp; Juridique</h4>
+                        <ul style="list-style: none; padding: 0;">
+                            <li
+                                style="color: #64748b; font-size: 0.9rem; margin-bottom: 0.6rem; padding-left: 1rem; border-left: 2px solid var(--primary-color);">
+                                Synthèse de rapports et tableaux de bord en quelques secondes</li>
+                            <li
+                                style="color: #64748b; font-size: 0.9rem; margin-bottom: 0.6rem; padding-left: 1rem; border-left: 2px solid var(--primary-color);">
+                                Comparaison et analyse de clauses contractuelles complexes</li>
+                            <li
+                                style="color: #64748b; font-size: 0.9rem; padding-left: 1rem; border-left: 2px solid var(--primary-color);">
+                                Recherche de précédents dans l'ensemble de la documentation légale interne</li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- CTA SECTION -->
-        <section class="section-padding bg-darker"
-            style="text-align: center; border-top: 1px solid rgba(255,255,255,0.05);">
+        <!-- HOW IT WORKS -->
+        <section id="comment-ca-marche" class="section-padding bg-darker">
             <div class="container">
-                <h2 class="section-title">Augmentez vos équipes dès aujourd'hui</h2>
-                <p class="section-subtitle" style="margin-bottom: 2rem;">Donnez les meilleurs outils à vos
-                    collaborateurs et constatez une libération de leur productivité.</p>
-                <div style="display: flex; gap: 1rem; justify-content: center;">
-                    <a href="contact-page.html" class="btn btn-primary">Planifier une démo</a>
-                    <a href="solution-automation.html" class="btn btn-secondary">Découvrir l'Automatisation</a>
+                <h2 class="section-title" style="margin-bottom: 1rem;">De l'audit au déploiement <span
+                        class="highlight">sécurisé</span></h2>
+                <p class="section-subtitle">Une architecture RAG (Retrieval Augmented Generation) privée, mise en
+                    production en moins de 6 semaines.</p>
+                <div class="process-steps" style="margin-top: 3rem;">
+                    <div class="process-step">
+                        <i class="fas fa-map-signs"></i>
+                        <h4>Audit des Sources</h4>
+                        <p>Cartographie de vos sources de vérité (Notion, SharePoint, ERP, Google Drive). Définition de
+                            la stratégie d'ingestion et des priorités métier.</p>
+                    </div>
+                    <div class="process-step">
+                        <i class="fas fa-database"></i>
+                        <h4>Base Vectorielle Privée</h4>
+                        <p>Vectorisation de vos données dans une base isolée et chiffrée. Aucune donnée n'entraîne ni ne
+                            rejoint les modèles publics. Vos informations restent dans votre périmètre.</p>
+                    </div>
+                    <div class="process-step">
+                        <i class="fas fa-desktop"></i>
+                        <h4>Interface &amp; Contrôle d'Accès</h4>
+                        <p>Déploiement d'une interface connectée à votre SSO (Azure AD, Okta). Les restrictions d'accès
+                            existantes sont automatiquement respectées.</p>
+                    </div>
+                    <div class="process-step">
+                        <i class="fas fa-graduation-cap"></i>
+                        <h4>Formation &amp; Adoption</h4>
+                        <p>Ateliers de Prompt Engineering ciblés par département. Vos équipes maîtrisent leur nouvel
+                            assistant dès la première semaine.</p>
+                    </div>
                 </div>
             </div>
         </section>
+
+        <!-- FAQ -->
+        <section class="section-padding bg-light">
+            <div class="container" style="max-width: 780px;">
+                <h2 class="section-title" style="color: #0f172a;">Questions <span class="highlight">fréquentes</span>
+                </h2>
+                <p class="section-subtitle" style="color: #64748b;">Les questions que posent les DSI et directions avant
+                    chaque projet Copilot.</p>
+                <div style="margin-top: 2rem;">
+                    <div class="faq-item"
+                        style="background: #fff; border: 1px solid #e2e8f0; border-radius: 10px; margin-bottom: 1rem; padding: 1.5rem;">
+                        <div class="faq-question">
+                            <h3 style="color: #0f172a; font-size: 1rem; margin: 0;">Mes données confidentielles
+                                sont-elles vraiment protégées ?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p style="color: #475569; margin-top: 1rem; margin-bottom: 0;">Absolument. Nous utilisons
+                                des instances Azure OpenAI dédiées avec data isolation totale, ou des modèles
+                                open-source auto-hébergés (Mistral, LLaMA) en fonction de vos exigences. Vos données ne
+                                transitent pas par les serveurs publics d'OpenAI ou d'Anthropic.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item"
+                        style="background: #fff; border: 1px solid #e2e8f0; border-radius: 10px; margin-bottom: 1rem; padding: 1.5rem;">
+                        <div class="faq-question">
+                            <h3 style="color: #0f172a; font-size: 1rem; margin: 0;">Est-ce compatible avec Microsoft 365
+                                / SharePoint ?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p style="color: #475569; margin-top: 1rem; margin-bottom: 0;">Oui. Nous connectons
+                                directement le Copilot à SharePoint, OneDrive, Teams, Notion et les ERP courants.
+                                L'ingestion est automatique et la synchronisation peut être configurée en temps réel ou
+                                par lots périodiques.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item"
+                        style="background: #fff; border: 1px solid #e2e8f0; border-radius: 10px; margin-bottom: 1rem; padding: 1.5rem;">
+                        <div class="faq-question">
+                            <h3 style="color: #0f172a; font-size: 1rem; margin: 0;">Le Copilot peut-il accéder à des
+                                documents qu'un employé ne devrait pas voir ?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p style="color: #475569; margin-top: 1rem; margin-bottom: 0;">Non. Notre architecture RBAC
+                                (Role-Based Access Control) reflète exactement les droits de votre annuaire d'entreprise
+                                (Azure AD). Un employé ne pourra jamais obtenir une réponse basée sur un document auquel
+                                il n'a pas accès dans votre système de fichiers.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item"
+                        style="background: #fff; border: 1px solid #e2e8f0; border-radius: 10px; margin-bottom: 1rem; padding: 1.5rem;">
+                        <div class="faq-question">
+                            <h3 style="color: #0f172a; font-size: 1rem; margin: 0;">Combien de documents le Copilot
+                                peut-il ingérer ?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p style="color: #475569; margin-top: 1rem; margin-bottom: 0;">Il n'y a pas de limite
+                                pratique. Nous avons déployé des Copilots sur des bases de plusieurs milliers de
+                                documents (PDFs, Word, Excel, emails, pages web). Plus la base est riche, plus les
+                                réponses sont précises et contextualisées.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item"
+                        style="background: #fff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 1.5rem;">
+                        <div class="faq-question">
+                            <h3 style="color: #0f172a; font-size: 1rem; margin: 0;">Le Copilot cite-t-il ses sources ?
+                            </h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p style="color: #475569; margin-top: 1rem; margin-bottom: 0;">Oui. Chaque réponse est
+                                accompagnée de citations avec le nom du document source et la page ou section exacte.
+                                Cela permet à vos collaborateurs de vérifier l'information et d'éviter les erreurs dites
+                                "hallucinations" des LLMs.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA FINAL -->
+        <section class="section-padding bg-darker" style="text-align: center;">
+            <div class="container">
+                <div style="max-width: 680px; margin: 0 auto;">
+                    <span class="badge" style="margin-bottom: 1.5rem; display: inline-block;">Diagnostic gratuit</span>
+                    <h2 class="section-title" style="margin-bottom: 1rem;">Votre savoir collectif est votre actif le
+                        plus précieux.<br><span class="highlight">Rendez-le accessible en temps réel.</span></h2>
+                    <p style="color: var(--text-muted); margin-bottom: 2.5rem; font-size: 1.1rem;">En 30 minutes, nos
+                        experts vous montrent comment transformer votre documentation existante en un avantage
+                        compétitif durable. Sans engagement.</p>
+                    <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                        <a href="contact-page.html" class="btn btn-primary">Planifier mon diagnostic gratuit</a>
+                        <a href="solution-automation.html" class="btn btn-secondary">Découvrir l'Automatisation IA</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <!-- FOOTER -->
     <footer class="mega-footer">
         <div class="container">
             <div class="footer-grid">
-                <!-- Column 1: Brand & Socials -->
                 <div class="footer-col brand-col">
                     <img src="images/logo.svg" alt="Babylone42 Logo" class="footer-logo-img">
                     <p class="footer-desc">Babylone42 donne le pouvoir aux équipes de transformer des données brutes en
@@ -335,8 +685,6 @@
                             aria-label="YouTube"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
-
-                <!-- Column 2: Accueil -->
                 <div class="footer-col">
                     <h4 class="footer-title">Accueil</h4>
                     <ul class="footer-links-list">
@@ -346,19 +694,15 @@
                         <li><a href="faq.html">FAQ</a></li>
                     </ul>
                 </div>
-
-                <!-- Column 3: Solutions -->
                 <div class="footer-col">
                     <h4 class="footer-title">Solutions</h4>
                     <ul class="footer-links-list">
                         <li><a href="solution-chatbots.html">Chatbots 24/7</a></li>
                         <li><a href="solution-copilots.html">Copilots IA</a></li>
                         <li><a href="solution-automation.html">Automatisation</a></li>
-                        <li><a href="solution-audit.html">Audit & Conseil</a></li>
+                        <li><a href="solution-audit.html">Audit &amp; Conseil</a></li>
                     </ul>
                 </div>
-
-                <!-- Column 4: Formations -->
                 <div class="footer-col">
                     <h4 class="footer-title">Formations</h4>
                     <ul class="footer-links-list">
@@ -369,10 +713,8 @@
                         <li><a href="formation-dl.html">Deep Learning</a></li>
                     </ul>
                 </div>
-
-                <!-- Column 5: Contact & Newsletter -->
                 <div class="footer-col newsletter-col">
-                    <h4 class="footer-title">Contact & Newsletter</h4>
+                    <h4 class="footer-title">Contact &amp; Newsletter</h4>
                     <p class="footer-contact-info">
                         <a href="mailto:contact@babylone42.fr"><i class="fas fa-envelope"></i>
                             contact@babylone42.fr</a><br>
@@ -384,7 +726,6 @@
                     </form>
                 </div>
             </div>
-
             <div class="footer-bottom">
                 <p class="copyright">© 2025 Babylone42. All rights reserved.</p>
                 <div class="legal-links">

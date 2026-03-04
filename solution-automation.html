@@ -4,7 +4,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Automatisation Documentaire | Babylone42</title>
+    <title>Automatisation Intelligente des Processus IA (IDP) — Zéro Saisie Manuelle | Babylone42</title>
+    <meta name="description"
+        content="Traitement automatique de vos factures, bons de commande et e-mails entrants. IA OCR, routage intelligent, connexion ERP/CRM. ROI en moins de 3 mois. Babylone42, expert automatisation IA Marseille et toute la France.">
+    <meta name="robots" content="index, follow">
+    <meta name="geo.region" content="FR-13">
+    <meta name="geo.placename" content="Marseille">
+    <meta name="geo.position" content="43.296482;5.369780">
+    <meta name="ICBM" content="43.296482, 5.369780">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Automatisation Intelligente des Processus IA | Babylone42">
+    <meta property="og:description"
+        content="Zéro saisie manuelle. Traitez automatiquement vos factures, bons de commande et e-mails. IDP, OCR IA, connexion ERP. ROI &lt; 3 mois. Babylone42, Marseille.">
+    <meta property="og:url" content="https://www.babylone42.fr/solution-automation.html">
+    <meta property="og:site_name" content="Babylone42">
+    <link rel="canonical" href="https://www.babylone42.fr/solution-automation.html">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Automatisation Intelligente des Processus par IA (IDP)",
+      "provider": {
+        "@type": "Organization",
+        "name": "Babylone42",
+        "url": "https://www.babylone42.fr",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Marseille",
+          "addressCountry": "FR"
+        }
+      },
+      "description": "Automatisation des processus administratifs et documentaires par IA : extraction IDP, OCR intelligent, routage automatique d'e-mails, connexion ERP/CRM, génération automatique de documents.",
+      "areaServed": "France",
+      "serviceType": "Intelligence Artificielle & Automatisation"
+    }
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -12,6 +46,216 @@
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        .sol-hero-stats {
+            display: flex;
+            gap: 2.5rem;
+            justify-content: center;
+            margin-top: 2.5rem;
+            flex-wrap: wrap;
+        }
+
+        .sol-hero-stat {
+            text-align: center;
+        }
+
+        .sol-hero-stat .sol-stat-val {
+            display: block;
+            font-size: 2.5rem;
+            font-weight: 700;
+            font-family: var(--font-heading);
+            color: var(--primary-color);
+            line-height: 1;
+        }
+
+        .sol-hero-stat p {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin: 0.3rem 0 0;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .results-bar {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #0d7a64 100%);
+            padding: 3rem 0;
+        }
+
+        .results-bar .container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .results-bar .result-item h3 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 0.3rem;
+            font-family: var(--font-heading);
+        }
+
+        .results-bar .result-item p {
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 0.95rem;
+            margin: 0;
+        }
+
+        .pain-card {
+            background: #fff;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 2rem;
+            text-align: left;
+        }
+
+        .pain-card .pain-stat {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            font-family: var(--font-heading);
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+
+        .pain-card h4 {
+            font-size: 1.2rem;
+            color: #0f172a;
+            margin-bottom: 0.5rem;
+        }
+
+        .pain-card p {
+            color: #64748b;
+            font-size: 0.95rem;
+            margin: 0;
+        }
+
+        .diff-check-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .diff-check-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1.75rem;
+        }
+
+        .diff-check-list li i {
+            color: var(--primary-color);
+            font-size: 1.3rem;
+            margin-top: 0.15rem;
+            flex-shrink: 0;
+        }
+
+        .diff-check-list li strong {
+            display: block;
+            font-size: 1.1rem;
+            color: #fff;
+            margin-bottom: 0.25rem;
+        }
+
+        .diff-check-list li span {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .bg-light .diff-check-list li strong {
+            color: #0f172a;
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 2rem;
+            counter-reset: steps;
+        }
+
+        .process-step {
+            background: #fff;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 2rem;
+            position: relative;
+            counter-increment: steps;
+        }
+
+        .process-step::before {
+            content: counter(steps);
+            position: absolute;
+            top: -18px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--primary-color);
+            color: #fff;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-family: var(--font-heading);
+            font-size: 1rem;
+        }
+
+        .process-step i {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .process-step h4 {
+            color: #0f172a;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .process-step p {
+            color: #64748b;
+            font-size: 0.9rem;
+            margin: 0;
+        }
+
+        .usecase-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .usecase-table th {
+            background: var(--primary-color);
+            color: #fff;
+            padding: 1rem 1.5rem;
+            text-align: left;
+            font-family: var(--font-heading);
+            font-size: 0.95rem;
+        }
+
+        .usecase-table td {
+            padding: 1rem 1.5rem;
+            border-bottom: 1px solid #e2e8f0;
+            color: #475569;
+            font-size: 0.95rem;
+        }
+
+        .usecase-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .usecase-table tr:nth-child(even) td {
+            background: #f8fafc;
+        }
+
+        .usecase-table .savings {
+            color: var(--primary-color);
+            font-weight: 700;
+        }
+    </style>
 </head>
 
 <body>
@@ -19,7 +263,6 @@
     <!-- NAVIGATION -->
     <nav class="navbar">
         <div class="container">
-            <!-- TOP ROW: Socials & Contact -->
             <div class="navbar-top">
                 <div class="navbar-top-content">
                     <a href="https://wa.me/33773609849" target="_blank" rel="noopener noreferrer" class="navbar-phone">
@@ -40,16 +283,13 @@
                     </div>
                 </div>
             </div>
-
-            <!-- BOTTOM ROW: Logo, Links & Mobile Menu -->
             <div class="navbar-bottom">
                 <a href="index.html" class="logo">
                     <img src="images/logo.svg" alt="Babylone42 Logo" style="height: 40px;">
                 </a>
-
                 <ul class="nav-links">
                     <li class="dropdown">
-                        <a href="#hero">Accueil <i class="fas fa-chevron-down"
+                        <a href="index.html">Accueil <i class="fas fa-chevron-down"
                                 style="font-size: 0.8rem; margin-left: 0.3rem;"></i></a>
                         <ul class="dropdown-menu">
                             <li><a href="about.html">About us</a></li>
@@ -57,7 +297,7 @@
                         </ul>
                     </li>
                     <li class="dropdown">
-                        <a href="#solutions">Solutions <i class="fas fa-chevron-down"
+                        <a href="#">Solutions <i class="fas fa-chevron-down"
                                 style="font-size: 0.8rem; margin-left: 0.3rem;"></i></a>
                         <ul class="dropdown-menu">
                             <li><a href="solution-chatbots.html">Chatbots 24/7</a></li>
@@ -66,7 +306,7 @@
                         </ul>
                     </li>
                     <li class="dropdown">
-                        <a href="#formations">Formations <i class="fas fa-chevron-down"
+                        <a href="#">Formations <i class="fas fa-chevron-down"
                                 style="font-size: 0.8rem; margin-left: 0.3rem;"></i></a>
                         <ul class="dropdown-menu">
                             <li><a href="formation-genai.html">IA Générative</a></li>
@@ -82,215 +322,358 @@
                     <li><a href="articles.html">Blog/actualités</a></li>
                     <li><a href="contact-page.html" class="btn btn-primary nav-btn">Diagnostic IA Gratuit</a></li>
                 </ul>
-
-                <div class="hamburger">
-                    <i class="fas fa-bars"></i>
-                </div>
+                <div class="hamburger"><i class="fas fa-bars"></i></div>
             </div>
         </div>
     </nav>
 
     <main class="page-content" style="padding-top: 80px;">
-        <!-- HERO SOLUTION -->
+
+        <!-- HERO -->
         <section class="formation-hero bg-darker section-padding" style="position: relative; overflow: hidden;">
-            <div class="container" style="position: relative; z-index: 2; text-align: center; max-width: 800px;">
-                <div class="bento-icon" style="margin: 0 auto 1.5rem; font-size: 3rem; color: var(--primary-color);"><i
-                        class="fas fa-cogs"></i></div>
-                <h1 style="font-size: 3rem; margin-bottom: 1rem;">Automatisation Intelligente (IA)</h1>
-                <p style="font-size: 1.2rem; color: var(--text-muted); margin-bottom: 2rem;">Transformez vos processus
-                    administratifs lourds en workflows fluides et automatisés grâce au traitement intelligent des
-                    documents.</p>
-                <div style="display: flex; gap: 1rem; justify-content: center;">
-                    <a href="contact-page.html" class="btn btn-primary">Auditer mes processus</a>
-                </div>
-            </div>
-            <!-- Background element -->
             <div
-                style="position: absolute; top: -50%; left: -10%; width: 500px; height: 500px; background: radial-gradient(circle, rgba(14,138,148,0.15) 0%, transparent 70%); z-index: 1;">
+                style="position: absolute; top: -20%; right: -5%; width: 600px; height: 600px; background: radial-gradient(circle, rgba(14,138,148,0.12) 0%, transparent 70%); z-index: 1;">
+            </div>
+            <div
+                style="position: absolute; bottom: -20%; left: -5%; width: 500px; height: 500px; background: radial-gradient(circle, rgba(14,138,148,0.08) 0%, transparent 70%); z-index: 1;">
+            </div>
+            <div class="container" style="position: relative; z-index: 2; text-align: center; max-width: 860px;">
+                <span class="badge" style="margin-bottom: 1.5rem; display: inline-block;">Solution IA</span>
+                <h1 style="font-size: 3rem; margin-bottom: 1.25rem; line-height: 1.15;">Chaque facture traitée à la main
+                    est une erreur <span class="highlight">qui coûte en moyenne 60&euro;</span> à votre entreprise.</h1>
+                <p
+                    style="font-size: 1.15rem; color: var(--text-muted); margin-bottom: 2rem; max-width: 680px; margin-left: auto; margin-right: auto;">
+                    Une automatisation intelligente qui lit, classe et route vos documents entrants — factures, bons de
+                    commande, e-mails — directement vers votre ERP ou CRM, sans intervention humaine et sans erreur de
+                    saisie.</p>
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="contact-page.html" class="btn btn-primary">Auditer mes processus gratuitement</a>
+                    <a href="#comment-ca-marche" class="btn btn-secondary">Voir comment ça marche</a>
+                </div>
+                <div class="sol-hero-stats">
+                    <div class="sol-hero-stat">
+                        <span class="sol-stat-val">0<span style="font-size:1.5rem">%</span></span>
+                        <p>d'erreur de saisie manuelle</p>
+                    </div>
+                    <div class="sol-hero-stat">
+                        <span class="sol-stat-val">-80<span style="font-size:1.5rem">%</span></span>
+                        <p>de temps de traitement documentaire</p>
+                    </div>
+                    <div class="sol-hero-stat">
+                        <span class="sol-stat-val">&lt;3 mois</span>
+                        <p>pour atteindre le ROI</p>
+                    </div>
+                    <div class="sol-hero-stat">
+                        <span class="sol-stat-val">24/7</span>
+                        <p>traitement en temps réel, sans interruption</p>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <!-- BENTO KEY INFO -->
+        <!-- PAIN SECTION -->
         <section class="section-padding bg-light">
             <div class="container">
-                <div class="grid-4"
-                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem;">
-                    <div class="bento-card"
-                        style="background: white; border: 1px solid #e2e8f0; color: #0f172a; text-align: center; padding: 1.5rem;">
-                        <i class="fas fa-file-invoice"
-                            style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
-                        <h4 style="margin-bottom: 0.5rem; font-size: 1.1rem;">Extraction IDP</h4>
-                        <p style="color: #64748b; font-size: 0.95rem; margin-bottom: 0;">Factures, CVs, Bons de commande
-                        </p>
+                <h2 class="section-title" style="color: #0f172a;">Ce que la saisie manuelle <span class="highlight">vous
+                        coûte vraiment</span></h2>
+                <p class="section-subtitle" style="color: #64748b;">Au-delà du temps perdu, la saisie manuelle est une
+                    source permanente d'erreurs, de risques de conformité et de coûts cachés.</p>
+                <div class="grid-3" style="gap: 2rem;">
+                    <div class="pain-card">
+                        <div class="pain-stat">60&euro;</div>
+                        <h4>Coût moyen d'une erreur de saisie</h4>
+                        <p>Une mauvaise saisie de référence ou de montant sur une facture génère en moyenne
+                            60&nbsp;&euro; de coûts cachés : correction, litiges fournisseurs, retards de paiement et
+                            heures de réconciliation.</p>
                     </div>
-                    <div class="bento-card"
-                        style="background: white; border: 1px solid #e2e8f0; color: #0f172a; text-align: center; padding: 1.5rem;">
-                        <i class="fas fa-project-diagram"
-                            style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
-                        <h4 style="margin-bottom: 0.5rem; font-size: 1.1rem;">Interconnexion</h4>
-                        <p style="color: #64748b; font-size: 0.95rem; margin-bottom: 0;">APIs, Make, n8n, Zapier</p>
+                    <div class="pain-card">
+                        <div class="pain-stat">2,5<span style="font-size:1.8rem">h</span></div>
+                        <h4>Par jour et par employé sur des tâches répétitives</h4>
+                        <p>Saisie de données, copier-coller entre applications, archivage manuel. Vos collaborateurs
+                            passent 30&nbsp;% de leur journée sur des tâches que l'IA peut traiter en millisecondes.</p>
                     </div>
-                    <div class="bento-card"
-                        style="background: white; border: 1px solid #e2e8f0; color: #0f172a; text-align: center; padding: 1.5rem;">
-                        <i class="fas fa-tachometer-alt"
-                            style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
-                        <h4 style="margin-bottom: 0.5rem; font-size: 1.1rem;">Scalabilité</h4>
-                        <p style="color: #64748b; font-size: 0.95rem; margin-bottom: 0;">Gérez les pics de charge sans
-                            effort</p>
-                    </div>
-                    <div class="bento-card"
-                        style="background: white; border: 1px solid #e2e8f0; color: #0f172a; text-align: center; padding: 1.5rem;">
-                        <i class="fas fa-check-double"
-                            style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
-                        <h4 style="margin-bottom: 0.5rem; font-size: 1.1rem;">Précision</h4>
-                        <p style="color: #64748b; font-size: 0.95rem; margin-bottom: 0;">0% d'erreur de saisie manuelle
-                        </p>
+                    <div class="pain-card">
+                        <div class="pain-stat">3,5<span style="font-size:1.8rem">%</span></div>
+                        <h4>Des documents contiennent des erreurs critiques</h4>
+                        <p>Selon les études sectorielles, 3,5&nbsp;% des transactions B2B contiennent des erreurs de
+                            données. Sur 1000 factures par mois, c'est 35 incidents potentiels à gérer manuellement.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- MARKETING PITCH -->
+        <!-- BENEFITS SECTION -->
         <section class="section-padding bg-darker">
             <div class="container">
-                <div class="grid-2" style="align-items: center;">
+                <div class="grid-2" style="align-items: center; gap: 4rem;">
                     <div>
-                        <h2 class="section-title" style="text-align: left;">Fini la saisie manuelle et les copier-coller
+                        <span class="badge" style="margin-bottom: 1rem; display: inline-block;">Pourquoi
+                            Babylone42</span>
+                        <h2 class="section-title" style="text-align: left; margin-bottom: 1rem;">L'IA lit, comprend et
+                            <span class="highlight">agit</span> sur vos documents
                         </h2>
-                        <p class="section-subtitle" style="text-align: left; margin-left: 0; margin-bottom: 2rem;">L'IA
-                            connecte vos logiciels et lit vos documents pour vous.</p>
-                        <ul class="differentiators-list" style="list-style: none; padding: 0;">
-                            <li style="margin-bottom: 1.5rem; display: flex; align-items: flex-start; gap: 1rem;">
-                                <i class="fas fa-check-circle"
-                                    style="color: var(--primary-color); font-size: 1.5rem; margin-top: 0.2rem;"></i>
+                        <p style="color: var(--text-muted); margin-bottom: 2rem;">Nos modèles IDP (Intelligent Document
+                            Processing) vont bien au-delà du simple OCR. Ils comprennent la structure et le contexte de
+                            n'importe quel document, même mal scanné.</p>
+                        <ul class="diff-check-list">
+                            <li>
+                                <i class="fas fa-check-circle"></i>
                                 <div>
-                                    <strong style="display: block; font-size: 1.2rem; margin-bottom: 0.2rem;">Traitement
-                                        Documentaire (IDP)</strong>
-                                    <span style="color: var(--text-muted);">Nos modèles OCR dopés à l'IA sont capables
-                                        de lire et comprendre la structure de n'importe quel PDF (même mal scanné) pour
-                                        extraire les données vers votre ERP.</span>
+                                    <strong>Extraction documentaire intelligente (IDP)</strong>
+                                    <span>Nos modèles OCR dopés à l'IA lisent et comprennent la structure de vos
+                                        factures, CVs, bons de commande et contrats — même en mauvais état — pour
+                                        extraire les données clés vers votre ERP ou CRM.</span>
                                 </div>
                             </li>
-                            <li style="margin-bottom: 1.5rem; display: flex; align-items: flex-start; gap: 1rem;">
-                                <i class="fas fa-check-circle"
-                                    style="color: var(--primary-color); font-size: 1.5rem; margin-top: 0.2rem;"></i>
+                            <li>
+                                <i class="fas fa-check-circle"></i>
                                 <div>
-                                    <strong style="display: block; font-size: 1.2rem; margin-bottom: 0.2rem;">Routage et
-                                        Catégorisation</strong>
-                                    <span style="color: var(--text-muted);">Un client envoie un email avec pièce jointe
-                                        ? L'IA analyse le contenu, le catégorise (Facture, Réclamation, Demande de
-                                        devise), et l'envoie au bon service automatiquement.</span>
+                                    <strong>Routage et catégorisation automatique</strong>
+                                    <span>Un email entrant avec pièce jointe ? L'IA analyse le contenu, le catégorise
+                                        (Facture, Réclamation, Bon de commande) et le transmet automatiquement au bon
+                                        service et au bon collaborateur.</span>
                                 </div>
                             </li>
-                            <li style="margin-bottom: 1.5rem; display: flex; align-items: flex-start; gap: 1rem;">
-                                <i class="fas fa-check-circle"
-                                    style="color: var(--primary-color); font-size: 1.5rem; margin-top: 0.2rem;"></i>
+                            <li>
+                                <i class="fas fa-check-circle"></i>
                                 <div>
-                                    <strong style="display: block; font-size: 1.2rem; margin-bottom: 0.2rem;">Génération
-                                        Automatique de Documents</strong>
-                                    <span style="color: var(--text-muted);">Générez instantanément des contrats, devis
-                                        complexes ou rapports d'intervention en fusionnant les données de vos bases de
-                                        données dans des templates prédéfinis.</span>
+                                    <strong>Génération automatique de documents</strong>
+                                    <span>Devis complexes, contrats, rapports d'intervention. Fusionnez vos données
+                                        existantes dans des templates prédéfinis et générez des centaines de documents
+                                        personnalisés en quelques secondes.</span>
                                 </div>
                             </li>
                         </ul>
                     </div>
-                    <div class="bento-visual">
-                        <img src="images/solution-automation.jpg" alt="Workflows d'Automatisation"
-                            style="border-radius: 12px; width: 100%; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                    <div>
+                        <img src="images/solution-automation.jpg"
+                            alt="Automatisation intelligente des processus Babylone42"
+                            style="border-radius: 12px; width: 100%; box-shadow: 0 10px 40px rgba(0,0,0,0.6);">
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- STEP BY STEP PROCESS -->
+        <!-- RESULTS BAR -->
+        <div class="results-bar">
+            <div class="container">
+                <div class="result-item">
+                    <h3>-80%</h3>
+                    <p>de temps de traitement des factures</p>
+                </div>
+                <div class="result-item">
+                    <h3>0%</h3>
+                    <p>d'erreur de saisie après déploiement</p>
+                </div>
+                <div class="result-item">
+                    <h3>+50%</h3>
+                    <p>de volume traité sans embaucher</p>
+                </div>
+                <div class="result-item">
+                    <h3>&lt;3 mois</h3>
+                    <p>de retour sur investissement</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- USE CASES TABLE -->
         <section class="section-padding bg-light">
             <div class="container">
-                <h2 class="section-title" style="color: #0f172a;">Comment <span class="highlight">ça marche ?</span>
-                </h2>
-                <p class="section-subtitle">Notre méthodologie pas à pas pour un déploiement sécurisé.</p>
-
-                <div class="step-by-step-container">
-                    <!-- Step 1 -->
-                    <div class="step-card">
-                        <div class="step-image-wrap">
-                            <img src="images/why_us_meeting.png" alt="Capture et Extraction"
-                                onerror="this.src=''; this.parentElement.style.background='var(--primary-color)';">
-                        </div>
-                        <div class="step-content">
-                            <h4>1. Extraction (IDP)</h4>
-                            <p>L'IA lit et comprend vos documents entrants (factures, CVs, e-mails).</p>
-                        </div>
-                    </div>
-
-                    <!-- Arrow -->
-                    <div class="step-arrow">
-                        <svg viewBox="0 0 100 40" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M 5,20 Q 20,5 35,20 T 65,20 T 85,20" fill="none" stroke="currentColor"
-                                stroke-width="2" />
-                            <polyline points="75,10 85,20 75,30" fill="none" stroke="currentColor" stroke-width="2"
-                                stroke-linecap="round" />
-                        </svg>
-                    </div>
-
-                    <!-- Step 2 -->
-                    <div class="step-card">
-                        <div class="step-image-wrap">
-                            <img src="images/problem-network.jpg" alt="Traitement et Validation"
-                                onerror="this.src=''; this.parentElement.style.background='var(--primary-color)';">
-                        </div>
-                        <div class="step-content">
-                            <h4>2. Validation Humaine</h4>
-                            <p>Les données sont structurées ; une validation (Human-in-the-Loop) est requise en cas de
-                                doute.</p>
-                        </div>
-                    </div>
-
-                    <!-- Arrow -->
-                    <div class="step-arrow">
-                        <svg viewBox="0 0 100 40" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M 5,20 Q 20,5 35,20 T 65,20 T 85,20" fill="none" stroke="currentColor"
-                                stroke-width="2" />
-                            <polyline points="75,10 85,20 75,30" fill="none" stroke="currentColor" stroke-width="2"
-                                stroke-linecap="round" />
-                        </svg>
-                    </div>
-
-                    <!-- Step 3 -->
-                    <div class="step-card">
-                        <div class="step-image-wrap">
-                            <img src="images/why_us_team.png" alt="Routage et Intégration"
-                                onerror="this.src=''; this.parentElement.style.background='var(--primary-color)';">
-                        </div>
-                        <div class="step-content">
-                            <h4>3. Routage Sécurisé</h4>
-                            <p>Les informations validées sont envoyées automatiquement vers vos ERP ou CRM.</p>
-                        </div>
-                    </div>
+                <h2 class="section-title" style="color: #0f172a;">Ce que nous <span
+                        class="highlight">automatisons</span> pour vous</h2>
+                <p class="section-subtitle" style="color: #64748b;">Des cas d'usage concrets avec des gains mesurables,
+                    déployés en quelques semaines.</p>
+                <div
+                    style="overflow-x: auto; margin-top: 2.5rem; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.06);">
+                    <table class="usecase-table">
+                        <thead>
+                            <tr>
+                                <th>Processus automatisé</th>
+                                <th>Département</th>
+                                <th>Source</th>
+                                <th>Destination</th>
+                                <th>Gain moyen</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Traitement des factures fournisseurs</td>
+                                <td>Comptabilité</td>
+                                <td>Email / PDF</td>
+                                <td>ERP (SAP, Sage, Cegid)</td>
+                                <td class="savings">-75% de temps</td>
+                            </tr>
+                            <tr>
+                                <td>Qualification et routage des emails entrants</td>
+                                <td>Service Client / Commercial</td>
+                                <td>Boîte mail</td>
+                                <td>CRM (HubSpot, Salesforce)</td>
+                                <td class="savings">-60% de délai</td>
+                            </tr>
+                            <tr>
+                                <td>Extraction de données des CVs</td>
+                                <td>Ressources Humaines</td>
+                                <td>PDF / Word</td>
+                                <td>ATS / Base RH</td>
+                                <td class="savings">-80% de saisie</td>
+                            </tr>
+                            <tr>
+                                <td>Génération de devis et contrats</td>
+                                <td>Commerce / Juridique</td>
+                                <td>CRM / Formulaire</td>
+                                <td>PDF signé / Email</td>
+                                <td class="savings">De 2h à 2min</td>
+                            </tr>
+                            <tr>
+                                <td>Reporting financier automatique</td>
+                                <td>Direction / Finance</td>
+                                <td>ERP / Excel</td>
+                                <td>PowerPoint / Email</td>
+                                <td class="savings">-90% de temps</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </section>
 
-        <!-- CTA SECTION -->
-        <section class="section-padding bg-darker"
-            style="text-align: center; border-top: 1px solid rgba(255,255,255,0.05);">
+        <!-- HOW IT WORKS -->
+        <section id="comment-ca-marche" class="section-padding bg-darker">
             <div class="container">
-                <h2 class="section-title">Quel processus vous fait perdre le plus de temps ?</h2>
-                <p class="section-subtitle" style="margin-bottom: 2rem;">Arrêtez de lutter contre les tâches
-                    répétitives. Nos experts peuvent auditer vos processus métiers gratuitement.</p>
-                <div style="display: flex; gap: 1rem; justify-content: center;">
-                    <a href="contact-page.html" class="btn btn-primary">Nous contacter</a>
-                    <a href="solution-chatbots.html" class="btn btn-secondary">Découvrir les Chatbots</a>
+                <h2 class="section-title" style="margin-bottom: 1rem;">Une méthodologie <span class="highlight">en 3
+                        étapes</span> éprouvée</h2>
+                <p class="section-subtitle">De l'analyse de vos processus à la mise en production, avec validation
+                    humaine à chaque étape critique.</p>
+                <div class="process-steps" style="margin-top: 3rem;">
+                    <div class="process-step">
+                        <i class="fas fa-file-alt"></i>
+                        <h4>Extraction Intelligente (IDP)</h4>
+                        <p>L'IA lit et comprend vos documents entrants (factures, CVs, emails, bons de commande) et en
+                            extrait les données structurées avec une précision supérieure à 99&nbsp;%.</p>
+                    </div>
+                    <div class="process-step">
+                        <i class="fas fa-user-check"></i>
+                        <h4>Validation Human-in-the-Loop</h4>
+                        <p>En dessous d'un seuil de confiance défini ensemble, une validation humaine est déclenchée.
+                            Les cas ambigus sont traités par vos équipes avec tout le contexte déjà préparé.</p>
+                    </div>
+                    <div class="process-step">
+                        <i class="fas fa-exchange-alt"></i>
+                        <h4>Routage &amp; Intégration</h4>
+                        <p>Les données validées sont routées automatiquement vers votre ERP, CRM ou tout autre système
+                            métier via APIs, Make, n8n ou Power Automate. Zéro copier-coller.</p>
+                    </div>
                 </div>
             </div>
         </section>
+
+        <!-- FAQ -->
+        <section class="section-padding bg-light">
+            <div class="container" style="max-width: 780px;">
+                <h2 class="section-title" style="color: #0f172a;">Questions <span class="highlight">fréquentes</span>
+                </h2>
+                <p class="section-subtitle" style="color: #64748b;">Ce que les directeurs financiers et opérationnels
+                    demandent avant chaque projet.</p>
+                <div style="margin-top: 2rem;">
+                    <div class="faq-item"
+                        style="background: #fff; border: 1px solid #e2e8f0; border-radius: 10px; margin-bottom: 1rem; padding: 1.5rem;">
+                        <div class="faq-question">
+                            <h3 style="color: #0f172a; font-size: 1rem; margin: 0;">L'IA peut-elle traiter des documents
+                                de mauvaise qualité ou mal scannés ?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p style="color: #475569; margin-top: 1rem; margin-bottom: 0;">Oui. Nos modèles IDP sont
+                                entraînés sur des millions de documents de qualité variable. Ils gèrent les scans de
+                                mauvaise résolution, les PDFs non natifs, les tableaux complexes et les formats non
+                                standards nettement mieux qu'un OCR classique.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item"
+                        style="background: #fff; border: 1px solid #e2e8f0; border-radius: 10px; margin-bottom: 1rem; padding: 1.5rem;">
+                        <div class="faq-question">
+                            <h3 style="color: #0f172a; font-size: 1rem; margin: 0;">Comment le système s'intègre-t-il
+                                avec notre ERP existant ?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p style="color: #475569; margin-top: 1rem; margin-bottom: 0;">Nous nous connectons à tous
+                                les ERP et CRM majeurs (SAP, Oracle, Sage, Cegid, HubSpot, Salesforce) via leurs APIs ou
+                                via des connecteurs no-code (Make, n8n, Zapier, Power Automate). Pour les systèmes
+                                legacy, des connecteurs sur mesure peuvent être développés.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item"
+                        style="background: #fff; border: 1px solid #e2e8f0; border-radius: 10px; margin-bottom: 1rem; padding: 1.5rem;">
+                        <div class="faq-question">
+                            <h3 style="color: #0f172a; font-size: 1rem; margin: 0;">Que se passe-t-il si l'IA n'est pas
+                                sûre d'un résultat ?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p style="color: #475569; margin-top: 1rem; margin-bottom: 0;">C'est notre approche
+                                Human-in-the-Loop. Quand le niveau de confiance est sous le seuil que vous définissez,
+                                une alerte est envoyée à un collaborateur qui valide ou corrige en 30 secondes. Cela
+                                garantit une fiabilité maximale sans ralentir le flux.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item"
+                        style="background: #fff; border: 1px solid #e2e8f0; border-radius: 10px; margin-bottom: 1rem; padding: 1.5rem;">
+                        <div class="faq-question">
+                            <h3 style="color: #0f172a; font-size: 1rem; margin: 0;">Le système peut-il monter en charge
+                                lors des pics d'activité ?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p style="color: #475569; margin-top: 1rem; margin-bottom: 0;">Absolument. Nos architectures
+                                cloud-native sont conçues pour la scalabilité horizontale. Que vous traitiez 100 ou
+                                100&nbsp;000 documents par jour, le système s'adapte automatiquement sans dégradation de
+                                performance ni coût proportionnel.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item"
+                        style="background: #fff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 1.5rem;">
+                        <div class="faq-question">
+                            <h3 style="color: #0f172a; font-size: 1rem; margin: 0;">En combien de temps est-ce déployé
+                                et pour quel budget ?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p style="color: #475569; margin-top: 1rem; margin-bottom: 0;">Un premier workflow
+                                d'automatisation simple (traitement de factures, par exemple) peut être en production en
+                                3&nbsp;à 4 semaines. Pour un projet complet multi-flux, comptez 6&nbsp;à 10 semaines. Le
+                                budget dépend de la complexité des flux — nous démarrons systématiquement par un audit
+                                gratuit pour vous donner une estimation précise.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA FINAL -->
+        <section class="section-padding bg-darker" style="text-align: center;">
+            <div class="container">
+                <div style="max-width: 680px; margin: 0 auto;">
+                    <span class="badge" style="margin-bottom: 1.5rem; display: inline-block;">Audit gratuit</span>
+                    <h2 class="section-title" style="margin-bottom: 1rem;">Quel processus vous fait <span
+                            class="highlight">perdre le plus de temps</span> aujourd'hui ?</h2>
+                    <p style="color: var(--text-muted); margin-bottom: 2.5rem; font-size: 1.1rem;">En 30 minutes, nos
+                        experts cartographient vos processus les plus chronophages, estiment votre potentiel d'économies
+                        et vous proposent une feuille de route concrète. Sans engagement.</p>
+                    <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                        <a href="contact-page.html" class="btn btn-primary">Auditer mes processus gratuitement</a>
+                        <a href="solution-chatbots.html" class="btn btn-secondary">Découvrir les Chatbots IA</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <!-- FOOTER -->
     <footer class="mega-footer">
         <div class="container">
             <div class="footer-grid">
-                <!-- Column 1: Brand & Socials -->
                 <div class="footer-col brand-col">
                     <img src="images/logo.svg" alt="Babylone42 Logo" class="footer-logo-img">
                     <p class="footer-desc">Babylone42 donne le pouvoir aux équipes de transformer des données brutes en
@@ -309,8 +692,6 @@
                             aria-label="YouTube"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
-
-                <!-- Column 2: Accueil -->
                 <div class="footer-col">
                     <h4 class="footer-title">Accueil</h4>
                     <ul class="footer-links-list">
@@ -320,19 +701,15 @@
                         <li><a href="faq.html">FAQ</a></li>
                     </ul>
                 </div>
-
-                <!-- Column 3: Solutions -->
                 <div class="footer-col">
                     <h4 class="footer-title">Solutions</h4>
                     <ul class="footer-links-list">
                         <li><a href="solution-chatbots.html">Chatbots 24/7</a></li>
                         <li><a href="solution-copilots.html">Copilots IA</a></li>
                         <li><a href="solution-automation.html">Automatisation</a></li>
-                        <li><a href="solution-audit.html">Audit & Conseil</a></li>
+                        <li><a href="solution-audit.html">Audit &amp; Conseil</a></li>
                     </ul>
                 </div>
-
-                <!-- Column 4: Formations -->
                 <div class="footer-col">
                     <h4 class="footer-title">Formations</h4>
                     <ul class="footer-links-list">
@@ -343,10 +720,8 @@
                         <li><a href="formation-dl.html">Deep Learning</a></li>
                     </ul>
                 </div>
-
-                <!-- Column 5: Contact & Newsletter -->
                 <div class="footer-col newsletter-col">
-                    <h4 class="footer-title">Contact & Newsletter</h4>
+                    <h4 class="footer-title">Contact &amp; Newsletter</h4>
                     <p class="footer-contact-info">
                         <a href="mailto:contact@babylone42.fr"><i class="fas fa-envelope"></i>
                             contact@babylone42.fr</a><br>
@@ -358,7 +733,6 @@
                     </form>
                 </div>
             </div>
-
             <div class="footer-bottom">
                 <p class="copyright">© 2025 Babylone42. All rights reserved.</p>
                 <div class="legal-links">
