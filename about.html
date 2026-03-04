@@ -4,9 +4,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Babylone42 | Partenaire IA & Automatisation pour Entreprises</title>
+
+    <!-- ─── SEO TITLE & META ─── -->
+    <title>À Propos de Babylone42 | Cabinet IA & Automatisation à Marseille</title>
     <meta name="description"
-        content="Déployez des solutions IA concrètes (Copilots, Chatbots, Automatisation) et formez vos équipes avec Babylone42. Expertise technique et pédagogique à Marseille et en France.">
+        content="Babylone42 est un cabinet spécialisé en Intelligence Artificielle et automatisation basé à Marseille. Découvrez notre mission, notre équipe et nos valeurs pour transformer votre entreprise grâce à l'IA.">
+    <meta name="keywords"
+        content="Babylone42, cabinet IA Marseille, intelligence artificielle entreprise, automatisation PME, formation IA France, consultant IA, transformation digitale, agents autonomes, copilot IA">
+    <meta name="author" content="Babylone42">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://babylone42.fr/about.html">
+
+    <!-- ─── GEO META (référencement local) ─── -->
+    <meta name="geo.region" content="FR-13">
+    <meta name="geo.placename" content="Marseille, France">
+    <meta name="geo.position" content="43.296482;5.381100">
+    <meta name="ICBM" content="43.296482, 5.381100">
+
+    <!-- ─── OPEN GRAPH (SEA / Partage Social) ─── -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://babylone42.fr/about.html">
+    <meta property="og:title" content="À Propos de Babylone42 | Cabinet IA & Automatisation à Marseille">
+    <meta property="og:description"
+        content="Découvrez l'équipe et la mission de Babylone42 : déployer des solutions d'IA concrètes et former les entreprises de France pour dominer leur marché.">
+    <meta property="og:image" content="https://babylone42.fr/images/og_about.png">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:site_name" content="Babylone42">
+
+    <!-- ─── TWITTER CARD ─── -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@babylone42_">
+    <meta name="twitter:title" content="À Propos de Babylone42 | Cabinet IA & Automatisation">
+    <meta name="twitter:description"
+        content="Notre mission : démocratiser l'IA pour chaque entreprise en France. Découvrez l'équipe Babylone42.">
+    <meta name="twitter:image" content="https://babylone42.fr/images/og_about.png">
+
+    <!-- ─── SCHEMA.ORG STRUCTURED DATA ─── -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Babylone42",
+      "url": "https://babylone42.fr",
+      "logo": "https://babylone42.fr/images/logo.svg",
+      "description": "Cabinet spécialisé en Intelligence Artificielle, automatisation et formation IA pour PME et grandes entreprises en France.",
+      "foundingDate": "2023",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Marseille",
+        "addressRegion": "Provence-Alpes-Côte d'Azur",
+        "addressCountry": "FR"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+33-7-73-60-98-49",
+        "contactType": "customer service",
+        "email": "contact@babylone42.fr",
+        "areaServed": "FR",
+        "availableLanguage": ["French", "English"]
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/babylone42/",
+        "https://www.instagram.com/babylone42_",
+        "https://x.com/babylone42_",
+        "https://m.youtube.com/@Babylone42"
+      ]
+    }
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -14,6 +79,434 @@
         rel="stylesheet">
     <link rel="stylesheet" href="style.css?v=5">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        /* ─── About-page styles ─── */
+
+        /* Hero */
+        .about-hero {
+            padding-top: 140px;
+            padding-bottom: 80px;
+            background: linear-gradient(160deg, #060b18 0%, #0a1628 55%, #071520 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-hero::before {
+            content: '';
+            position: absolute;
+            top: -40%;
+            right: -15%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(16, 155, 128, 0.08) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .about-hero-inner {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-hero h1 {
+            font-size: clamp(2.2rem, 4.5vw, 3.4rem);
+            font-weight: 700;
+            color: #fff;
+            line-height: 1.15;
+            margin-bottom: 1.5rem;
+        }
+
+        .about-hero .lead {
+            font-size: 1.15rem;
+            color: var(--text-muted);
+            line-height: 1.75;
+            margin-bottom: 2rem;
+        }
+
+        .hero-stat-row {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-top: 2.5rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.07);
+        }
+
+        .hero-stat-item {
+            text-align: left;
+        }
+
+        .hero-stat-item strong {
+            display: block;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            line-height: 1;
+        }
+
+        .hero-stat-item span {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-top: 0.3rem;
+            display: block;
+        }
+
+        .about-hero-visual {
+            position: relative;
+        }
+
+        .about-hero-visual img {
+            width: 100%;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 40px 80px rgba(0, 0, 0, 0.5);
+            display: block;
+        }
+
+        .about-hero-visual::after {
+            content: '';
+            position: absolute;
+            inset: -2px;
+            border-radius: 22px;
+            background: linear-gradient(135deg, rgba(16, 155, 128, 0.3), transparent 60%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* Section accent line */
+        .section-accent {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .section-accent::before {
+            content: '';
+            display: block;
+            width: 32px;
+            height: 3px;
+            background: var(--primary-color);
+            border-radius: 2px;
+        }
+
+        .section-accent span {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--primary-color);
+            font-weight: 700;
+        }
+
+        /* Mission / Vision two-col */
+        .two-col-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+            align-items: center;
+        }
+
+        .two-col-section.reverse {
+            direction: rtl;
+        }
+
+        .two-col-section.reverse>* {
+            direction: ltr;
+        }
+
+        .two-col-text h2 {
+            font-size: clamp(1.8rem, 3vw, 2.5rem);
+            font-weight: 700;
+            color: #fff;
+            line-height: 1.2;
+            margin-bottom: 1.25rem;
+        }
+
+        .two-col-text p {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+            line-height: 1.8;
+            margin-bottom: 1.25rem;
+        }
+
+        .two-col-visual img {
+            width: 100%;
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.45);
+            display: block;
+        }
+
+        /* Values grid */
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+
+        .value-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.07);
+            border-radius: 16px;
+            padding: 2rem;
+            transition: border-color 0.3s, transform 0.3s;
+        }
+
+        .value-card:hover {
+            border-color: rgba(16, 155, 128, 0.4);
+            transform: translateY(-4px);
+        }
+
+        .value-icon {
+            width: 52px;
+            height: 52px;
+            background: rgba(16, 155, 128, 0.1);
+            border: 1px solid rgba(16, 155, 128, 0.2);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            color: var(--primary-color);
+            margin-bottom: 1.25rem;
+        }
+
+        .value-card h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 0.75rem;
+        }
+
+        .value-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            padding-left: 2.5rem;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 8px;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, var(--primary-color), transparent);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 2.5rem;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -2.5rem;
+            top: 6px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--primary-color);
+            box-shadow: 0 0 0 4px rgba(16, 155, 128, 0.2);
+        }
+
+        .timeline-year {
+            font-size: 0.78rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--primary-color);
+            margin-bottom: 0.4rem;
+        }
+
+        .timeline-item h4 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 0.4rem;
+        }
+
+        .timeline-item p {
+            color: var(--text-muted);
+            font-size: 0.92rem;
+            line-height: 1.6;
+        }
+
+        /* Team card */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 2rem;
+        }
+
+        .team-card {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: border-color 0.3s, transform 0.3s;
+        }
+
+        .team-card:hover {
+            border-color: rgba(16, 155, 128, 0.4);
+            transform: translateY(-5px);
+        }
+
+        .team-card-photo {
+            width: 100%;
+            aspect-ratio: 4/3;
+            object-fit: cover;
+            object-position: top center;
+            display: block;
+            filter: grayscale(20%);
+            transition: filter 0.3s;
+        }
+
+        .team-card:hover .team-card-photo {
+            filter: grayscale(0%);
+        }
+
+        .team-card-body {
+            padding: 1.5rem;
+        }
+
+        .team-card-body h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 0.2rem;
+        }
+
+        .team-card-role {
+            font-size: 0.85rem;
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+
+        .team-card-body p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            line-height: 1.65;
+        }
+
+        .team-card-socials {
+            display: flex;
+            gap: 0.6rem;
+            margin-top: 1rem;
+        }
+
+        .team-card-socials a {
+            width: 34px;
+            height: 34px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #94a3b8;
+            font-size: 0.9rem;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+
+        .team-card-socials a:hover {
+            background: rgba(16, 155, 128, 0.1);
+            border-color: var(--primary-color);
+            color: var(--primary-color);
+        }
+
+        /* Trusted by badges */
+        .trust-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .trust-badge {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 10px;
+            padding: 0.75rem 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            font-size: 0.9rem;
+            color: #94a3b8;
+            font-weight: 600;
+        }
+
+        .trust-badge i {
+            color: var(--primary-color);
+            font-size: 1rem;
+        }
+
+        /* CTA banner */
+        .cta-banner {
+            background: linear-gradient(135deg, rgba(16, 155, 128, 0.12), rgba(16, 155, 128, 0.04));
+            border: 1px solid rgba(16, 155, 128, 0.25);
+            border-radius: 20px;
+            padding: 4rem 3rem;
+            text-align: center;
+        }
+
+        .cta-banner h2 {
+            font-size: clamp(1.8rem, 3vw, 2.5rem);
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 1rem;
+        }
+
+        .cta-banner p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            max-width: 560px;
+            margin: 0 auto 2rem;
+            line-height: 1.7;
+        }
+
+        .cta-banner-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+
+            .about-hero-inner,
+            .two-col-section {
+                grid-template-columns: 1fr;
+            }
+
+            .two-col-section.reverse {
+                direction: ltr;
+            }
+
+            .values-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .values-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -21,7 +514,6 @@
     <!-- NAVIGATION -->
     <nav class="navbar">
         <div class="container">
-            <!-- TOP ROW: Socials & Contact -->
             <div class="navbar-top">
                 <div class="navbar-top-content">
                     <a href="https://wa.me/33773609849" target="_blank" rel="noopener noreferrer" class="navbar-phone">
@@ -43,23 +535,21 @@
                 </div>
             </div>
 
-            <!-- BOTTOM ROW: Logo, Links & Mobile Menu -->
             <div class="navbar-bottom">
                 <a href="index.html" class="logo">
                     <img src="images/logo.svg" alt="Babylone42 Logo" style="height: 40px;">
                 </a>
-
                 <ul class="nav-links">
                     <li class="dropdown">
-                        <a href="#hero">Accueil <i class="fas fa-chevron-down"
+                        <a href="index.html">Accueil <i class="fas fa-chevron-down"
                                 style="font-size: 0.8rem; margin-left: 0.3rem;"></i></a>
                         <ul class="dropdown-menu">
-                            <li><a href="about.html">About us</a></li>
+                            <li><a href="about.html" class="active">About us</a></li>
                             <li><a href="interlocuteurs.html">Vos interlocuteurs</a></li>
                         </ul>
                     </li>
                     <li class="dropdown">
-                        <a href="#solutions">Solutions <i class="fas fa-chevron-down"
+                        <a href="index.html#solutions">Solutions <i class="fas fa-chevron-down"
                                 style="font-size: 0.8rem; margin-left: 0.3rem;"></i></a>
                         <ul class="dropdown-menu">
                             <li><a href="solution-chatbots.html">Chatbots 24/7</a></li>
@@ -68,7 +558,7 @@
                         </ul>
                     </li>
                     <li class="dropdown">
-                        <a href="#formations">Formations <i class="fas fa-chevron-down"
+                        <a href="index.html#formations">Formations <i class="fas fa-chevron-down"
                                 style="font-size: 0.8rem; margin-left: 0.3rem;"></i></a>
                         <ul class="dropdown-menu">
                             <li><a href="formation-genai.html">IA Générative</a></li>
@@ -84,125 +574,343 @@
                     <li><a href="articles.html">Blog/actualités</a></li>
                     <li><a href="contact-page.html" class="btn btn-primary nav-btn">Diagnostic IA Gratuit</a></li>
                 </ul>
-
-                <div class="hamburger">
-                    <i class="fas fa-bars"></i>
-                </div>
+                <div class="hamburger"><i class="fas fa-bars"></i></div>
             </div>
         </div>
     </nav>
 
+    <main>
 
-
-    <main class="page-content" style="padding-top: 100px; padding-bottom: 0; min-height: 60vh;">
-
-        <!-- HERO / MISSION (Darker Background) -->
-        <section style="text-align: center; padding: 6rem 1rem;">
+        <!-- ══════════════════════════════════
+             HERO
+        ══════════════════════════════════ -->
+        <section class="about-hero" aria-labelledby="about-h1">
             <div class="container">
-                <span class="badge"
-                    style="background: rgba(16, 155, 128, 0.1); color: var(--primary-color); margin-bottom: 1rem; display: inline-block;">Notre
-                    Mission</span>
-                <h1 class="section-title">Démocratiser la <span class="highlight">Tech</span></h1>
-                <p
-                    style="font-size: 1.25rem; color: var(--text-muted); max-width: 800px; margin: 0 auto; line-height: 1.6;">
-                    Déployer des solutions d'Intelligence Artificielle sur-mesure et démocratiser la tech pour permettre
-                    à chaque entreprise de dominer son marché en maîtrisant les outils d'avenir.
-                </p>
+                <div class="about-hero-inner">
+                    <div>
+                        <div class="section-accent"><span>Notre Histoire</span></div>
+                        <h1 id="about-h1">Nous croyons que <span class="highlight">chaque entreprise</span> mérite l'IA
+                            dont elle a besoin.</h1>
+                        <p class="lead">
+                            Babylone42 est un cabinet spécialisé en Intelligence Artificielle et automatisation, basé à
+                            Marseille. Nous aidons les PME, ETI et organisations publiques à déployer des solutions IA
+                            concrètes — et à monter en compétences pour ne plus jamais dépendre d'une "boîte noire".
+                        </p>
+                        <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                            <a href="contact-page.html" class="btn btn-primary">Diagnostic IA Gratuit</a>
+                            <a href="#notre-equipe" class="btn btn-secondary">Rencontrer l'équipe</a>
+                        </div>
+
+                        <div class="hero-stat-row">
+                            <div class="hero-stat-item">
+                                <strong>150+</strong>
+                                <span>Clients accompagnés</span>
+                            </div>
+                            <div class="hero-stat-item">
+                                <strong>50+</strong>
+                                <span>Workflows IA déployés</span>
+                            </div>
+                            <div class="hero-stat-item">
+                                <strong>&lt; 3 mois</strong>
+                                <span>ROI constaté</span>
+                            </div>
+                            <div class="hero-stat-item">
+                                <strong>100%</strong>
+                                <span>Sur-mesure</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="about-hero-visual">
+                        <img src="images/why_us_meeting.png"
+                            alt="Équipe Babylone42 en conseil stratégique IA — Marseille et toute la France"
+                            loading="eager">
+                    </div>
+                </div>
             </div>
         </section>
 
-        <!-- VISION (Zebra - Lighter/Highlight Background) -->
-        <section class="bg-highlight" style="padding: 6rem 1rem;">
-            <div class="container" style="display: flex; flex-wrap: wrap; align-items: center; gap: 4rem;">
-                <div style="flex: 1; min-width: 300px;">
-                    <div style="font-size: 3rem; color: var(--primary-color); margin-bottom: 1.5rem;"><i
-                            class="fas fa-globe"></i></div>
-                    <h2 class="section-title" style="text-align: left; margin-bottom: 1.5rem;">Notre Vision</h2>
-                    <p style="color: var(--text-muted); font-size: 1.15rem; line-height: 1.7; text-align: justify;">
-                        Nous aspirons à être un acteur clé de la transformation digitale, en rendant l’accès aux
-                        langages de la technologie et à l’intelligence artificielle simple et universel. Notre vision
-                        est celle d’un monde où chaque individu et chaque organisation peut exploiter la puissance de la
-                        tech pour innover, optimiser et réussir, grâce à une éducation accessible, pratique et à la
-                        pointe de l’innovation.
+        <!-- ══════════════════════════════════
+             MISSION
+        ══════════════════════════════════ -->
+        <section class="section-padding" style="background:#02161b;" aria-labelledby="mission-h2">
+            <div class="container">
+                <div class="two-col-section">
+                    <div class="two-col-text">
+                        <div class="section-accent"><span>Notre Mission</span></div>
+                        <h2 id="mission-h2">Démocratiser la Tech — rendre l'IA <span class="highlight">accessible à
+                                tous</span></h2>
+                        <p style="color: #94a3b8;">
+                            Trop longtemps, les outils d'intelligence artificielle ont été réservés aux grandes
+                            corporations disposant de budgets R&D colossaux. Chez Babylone42, nous pensons que ce n'est
+                            pas une fatalité.
+                        </p>
+                        <p style="color: #94a3b8;">
+                            Notre mission est de déployer des solutions IA <strong style="color:#fff;">pragmatiques,
+                                mesurables et
+                                sur-mesure</strong>
+                            — en accompagnant chaque organisation que nous servons non pas comme un
+                            simple fournisseur, mais comme un partenaire technologique durable.
+                        </p>
+                        <p style="color: #94a3b8;">
+                            Nous ne livrons pas uniquement du code. Nous transférons les compétences pour que vous
+                            restiez aux commandes de votre transformation digitale.
+                        </p>
+                        <div style="margin-top:1.5rem;">
+                            <a href="solution-audit.html" class="btn btn-secondary" style="font-size:0.95rem;">
+                                <i class="fas fa-search" style="margin-right:0.5rem;"></i>Découvrir nos solutions
+                            </a>
+                        </div>
+                    </div>
+                    <div class="two-col-visual">
+                        <img src="images/why_us_team.png"
+                            alt="Équipe d'experts IA Babylone42 — développeurs, formateurs et consultants"
+                            loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══════════════════════════════════
+             VISION + TIMELINE
+        ══════════════════════════════════ -->
+        <section class="section-padding" aria-labelledby="vision-h2">
+            <div class="container">
+                <div class="two-col-section reverse">
+                    <div class="two-col-visual">
+                        <img src="images/vision_babylone42.png"
+                            alt="Vision Babylone42 — réseau IA interconnecté, innovation et transformation digitale en France"
+                            loading="lazy">
+                    </div>
+                    <div class="two-col-text">
+                        <div class="section-accent"><span>Notre Vision</span></div>
+                        <h2 id="vision-h2">Un monde où <span class="highlight">chaque organisation</span> maîtrise sa
+                            technologie</h2>
+                        <p>
+                            Nous croyons en un avenir où l'Intelligence Artificielle n'est plus une menace ni un mythe,
+                            mais un levier quotidien entre les mains de chaque dirigeant, manager et collaborateur.
+                        </p>
+                        <p>
+                            Notre ambition : être le partenaire IA de référence pour les PME françaises, reconnu pour
+                            la clarté de notre pédagogie et la robustesse de nos déploiements techniques.
+                        </p>
+
+                        <div class="timeline" style="margin-top: 2.5rem;">
+                            <div class="timeline-item">
+                                <div class="timeline-year">2023</div>
+                                <h4>Fondation de Babylone42</h4>
+                                <p>Création du cabinet à Marseille avec une double ambition : déploiement IA et
+                                    formation.</p>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-year">2024</div>
+                                <h4>100+ Clients & 1er Copilot Entreprise</h4>
+                                <p>Franchissement du cap des 100 clients accompagnés. Lancement de nos premiers agents
+                                    autonomes métiers.</p>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-year">2025 – 2026</div>
+                                <h4>Expansion nationale & Catalogue de Formations</h4>
+                                <p>Interventions dans toute la France. Déploiement de notre offre de formations
+                                    certifiantes en IA.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══════════════════════════════════
+             NOS VALEURS
+        ══════════════════════════════════ -->
+        <section class="section-padding" style="background:#060e1c;" aria-labelledby="valeurs-h2">
+            <div class="container">
+                <div style="text-align: center; margin-bottom: 3.5rem;">
+                    <div class="section-accent" style="justify-content:center;"><span>Nos Valeurs</span></div>
+                    <h2 id="valeurs-h2" class="section-title">Ce qui nous <span class="highlight">différencie</span>
+                    </h2>
+                    <p
+                        style="color:var(--text-muted); max-width:580px; margin:0 auto; font-size:1.05rem; line-height:1.7;">
+                        Quatre principes non-négociables qui guident chacune de nos interventions et chaque solution que
+                        nous construisons.
                     </p>
                 </div>
-                <div
-                    style="flex: 1; min-width: 300px; border-radius: 16px; overflow: hidden; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5); border: 1px solid rgba(255,255,255,0.1);">
-                    <img src="images/problem-network.jpg" alt="Notre vision de l'innovation"
-                        style="width: 100%; height: auto; display: block; filter: brightness(0.8) contrast(1.1);">
+
+                <div class="values-grid">
+                    <!-- Double Expertise -->
+                    <div class="value-card">
+                        <div class="value-icon"><i class="fas fa-layer-group"></i></div>
+                        <h3>Double Expertise</h3>
+                        <p>Ingénieurs seniors ET formateurs pédagogues. Vous n'avez qu'un seul interlocuteur, sans
+                            coordination entre une agence et un organisme de formation.</p>
+                    </div>
+
+                    <!-- Pragmatisme -->
+                    <div class="value-card">
+                        <div class="value-icon"><i class="fas fa-bullseye"></i></div>
+                        <h3>Pragmatisme & ROI</h3>
+                        <p>100% de nos projets livrés avec un ROI mesurable sous 3 mois. Pas de R&D interminable — nous
+                            visons la valeur opérationnelle immédiate.</p>
+                    </div>
+
+                    <!-- Sur-mesure -->
+                    <div class="value-card">
+                        <div class="value-icon"><i class="fas fa-sliders-h"></i></div>
+                        <h3>100% Sur-Mesure</h3>
+                        <p>Chaque solution est construite pour vous — votre budget, votre maturité digitale, vos outils
+                            existants. Aucun template préfabriqué.</p>
+                    </div>
+
+                    <!-- Transparence -->
+                    <div class="value-card">
+                        <div class="value-icon"><i class="fas fa-eye"></i></div>
+                        <h3>Transparence Totale</h3>
+                        <p>Vous savez exactement ce que vous payez, ce que fait l'IA et comment elle décide. Nos
+                            solutions sont explicables, auditables et sécurisées.</p>
+                    </div>
+
+                    <!-- Réseau -->
+                    <div class="value-card">
+                        <div class="value-icon"><i class="fas fa-network-wired"></i></div>
+                        <h3>Réseau d'Experts IA</h3>
+                        <p>Un vivier de développeurs et data scientists spécialisés pour assembler l'équipe idéale en
+                            fonction de la complexité de votre projet.</p>
+                    </div>
+
+                    <!-- Autonomie -->
+                    <div class="value-card">
+                        <div class="value-icon"><i class="fas fa-graduation-cap"></i></div>
+                        <h3>Vous Rendre Autonome</h3>
+                        <p>Notre succès se mesure à votre indépendance. Nous formons vos équipes pour que vous
+                            maîtrisiez durablement les outils que nous déployons.</p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- VALEURS (Light Background, 3-Card Grid) -->
-        <section class="section-padding bg-light">
+        <!-- ══════════════════════════════════
+             ÉQUIPE
+        ══════════════════════════════════ -->
+        <section id="notre-equipe" class="section-padding" aria-labelledby="equipe-h2">
             <div class="container">
-                <div style="text-align: center; margin-bottom: 4rem;">
-                    <span class="badge"
-                        style="background: rgba(16, 155, 128, 0.1); color: var(--primary-color); margin-bottom: 1rem; display: inline-block;">Nos
-                        Valeurs</span>
-                    <h2 class="section-title">Ce qui nous <span class="highlight">différencie</span></h2>
+                <div style="text-align: center; margin-bottom: 3.5rem;">
+                    <div class="section-accent" style="justify-content:center;"><span>Notre Équipe</span></div>
+                    <h2 id="equipe-h2" class="section-title">Des experts qui <span class="highlight">ont vos
+                            résultats</span> à cœur</h2>
+                    <p
+                        style="color:var(--text-muted); max-width:560px; margin:0 auto; font-size:1.05rem; line-height:1.7;">
+                        Babylone42 réunit des profils complémentaires : ingénieurs IA, data scientists, formateurs et
+                        chefs de projet — tous animés par la même vision.
+                    </p>
                 </div>
 
-                <div class="grid-3">
-                    <!-- Card 1 -->
-                    <div class="solution-card">
-                        <div class="solution-visual">
-                            <img src="images/valeur_expertise.png" alt="La Double Expertise">
-                        </div>
-                        <div class="solution-content">
-                            <h3>La Double Expertise</h3>
-                            <p>Ingénieurs seniors ET formateurs pédagogues. Nous ne faisons pas que construire des
-                                solutions IA, nous
-                                transmettons le savoir pour vous rendre autonomes de manière pérenne.</p>
-                        </div>
-                    </div>
-
-                    <!-- Card 2 -->
-                    <div class="solution-card inverted">
-                        <div class="solution-visual">
-                            <img src="images/valeur_pragmatisme.png" alt="Le Pragmatisme Absolu">
-                        </div>
-                        <div class="solution-content">
-                            <h3>Le Pragmatisme Absolu</h3>
-                            <p>Des solutions livrées "clés en main". Pas de R&D sans fin, nous visons le ROI immédiat en
-                                automatisant
-                                les tâches chronophages de vos équipes et en résolvant vos vrais problèmes.</p>
+                <div class="team-grid">
+                    <!-- Laurence Peersman -->
+                    <div class="team-card">
+                        <img src="images/why_us_team.png"
+                            alt="Laurence Peersman — Co-fondatrice & Directrice Générale, Babylone42"
+                            class="team-card-photo" loading="lazy">
+                        <div class="team-card-body">
+                            <h3>Laurence Peersman</h3>
+                            <div class="team-card-role">Co-fondatrice & Directrice Générale</div>
+                            <p>Experte en stratégie digitale et développement commercial, Laurence pilote la relation
+                                client et la vision stratégique de Babylone42.</p>
+                            <div class="team-card-socials">
+                                <a href="https://www.linkedin.com/company/babylone42/" target="_blank"
+                                    rel="noopener noreferrer" aria-label="LinkedIn Laurence">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- Card 3 -->
-                    <div class="solution-card">
-                        <div class="solution-visual">
-                            <img src="images/valeur_reseau.png" alt="Un Réseau d'Experts">
+                    <!-- Expert IA -->
+                    <div class="team-card">
+                        <img src="images/why_us_meeting.png" alt="Équipe d'ingénieurs IA Babylone42"
+                            class="team-card-photo" loading="lazy">
+                        <div class="team-card-body">
+                            <h3>Équipe Technique</h3>
+                            <div class="team-card-role">Ingénieurs IA & Data Scientists</div>
+                            <p>Nos développeurs seniors maîtrisent Python, LangChain, RAG, Azure OpenAI et les outils
+                                d'automatisation (n8n, Make, Power Automate).</p>
+                            <div class="team-card-socials">
+                                <a href="https://www.linkedin.com/company/babylone42/" target="_blank"
+                                    rel="noopener noreferrer" aria-label="LinkedIn Babylone42">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                            </div>
                         </div>
-                        <div class="solution-content">
-                            <h3>Un Réseau d'Experts</h3>
-                            <p>Un vivier de développeurs IA spécialisés nous permettant d'assembler l'équipe idéale pour
-                                affronter la complexité de chaque projet avec une vélocité maximale.</p>
-                        </div>
+                    </div>
+
+                    <!-- Rejoindre -->
+                    <div class="team-card"
+                        style="display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; padding:2.5rem; min-height:340px; border-style:dashed;">
+                        <div class="value-icon" style="margin: 0 auto 1.25rem;"><i class="fas fa-user-plus"></i></div>
+                        <h3 style="margin-bottom:0.5rem;">Rejoignez l'équipe</h3>
+                        <p style="color:var(--text-muted); font-size:0.95rem; margin-bottom:1.5rem;">Passionné(e) par
+                            l'IA et la pédagogie ? Nous recrutons des ingénieurs et formateurs pour accompagner notre
+                            croissance.</p>
+                        <a href="contact-page.html" class="btn btn-secondary" style="font-size:0.9rem;">Candidature
+                            spontanée</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- CTA (Zebra - Lighter/Highlight Background) -->
-        <section class="bg-highlight" style="padding: 4rem 1rem; text-align: center;">
+        <!-- ══════════════════════════════════
+             CONFIANCE / CERTIFICATIONS
+        ══════════════════════════════════ -->
+        <section class="section-padding" style="border-top: 1px solid rgba(255,255,255,0.05);"
+            aria-labelledby="confiance-h2">
+            <div class="container" style="text-align:center;">
+                <h2 id="confiance-h2"
+                    style="color:#fff; font-size:1.3rem; font-weight:600; margin-bottom:2rem; opacity:0.9;">
+                    Certifications, Technologies &amp; Partenaires de confiance
+                </h2>
+                <div class="trust-row">
+                    <div class="trust-badge"><i class="fab fa-microsoft"></i> Azure OpenAI</div>
+                    <div class="trust-badge"><i class="fas fa-brain"></i> OpenAI GPT-4</div>
+                    <div class="trust-badge"><i class="fas fa-robot"></i> Mistral AI</div>
+                    <div class="trust-badge"><i class="fab fa-python"></i> Python Expert</div>
+                    <div class="trust-badge"><i class="fas fa-cogs"></i> n8n / Make</div>
+                    <div class="trust-badge"><i class="fas fa-shield-alt"></i> RGPD Conforme</div>
+                    <div class="trust-badge"><i class="fas fa-map-marker-alt"></i> Marseille &amp; France entière</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══════════════════════════════════
+             CTA FINAL
+        ══════════════════════════════════ -->
+        <section class="section-padding" aria-labelledby="cta-h2">
             <div class="container">
-                <h2 style="color: white; margin-bottom: 1.5rem; font-size: 2rem;">Prêt à innover avec nous ?</h2>
-                <a href="contact-page.html" class="btn btn-primary" style="font-size: 1.1rem; padding: 1rem 2.5rem;"><i
-                        class="fas fa-paper-plane" style="margin-right: 0.5rem;"></i> Discuter de votre projet avec
-                    nous</a>
+                <div class="cta-banner">
+                    <div class="section-accent" style="justify-content:center;margin-bottom:1rem;"><span>Passez à
+                            l'Action</span></div>
+                    <h2 id="cta-h2">Prêt à transformer votre entreprise <span class="highlight">grâce à l'IA ?</span>
+                    </h2>
+                    <p>Un échange de 30 minutes suffit pour identifier vos premiers gisements de productivité. C'est
+                        gratuit, sans engagement, et ça peut tout changer.</p>
+                    <div class="cta-banner-buttons">
+                        <a href="contact-page.html" class="btn btn-primary" style="font-size:1rem;">
+                            <i class="fas fa-paper-plane" style="margin-right:0.5rem;"></i>Démarrer mon Diagnostic IA
+                            Gratuit
+                        </a>
+                        <a href="https://wa.me/33773609849" target="_blank" rel="noopener noreferrer"
+                            class="btn btn-secondary" style="font-size:1rem;">
+                            <i class="fab fa-whatsapp" style="margin-right:0.5rem;"></i>WhatsApp Direct
+                        </a>
+                    </div>
+                </div>
             </div>
         </section>
+
     </main>
 
     <!-- FOOTER -->
-
     <footer class="mega-footer">
         <div class="container">
             <div class="footer-grid">
-                <!-- Column 1: Brand & Socials -->
                 <div class="footer-col brand-col">
                     <img src="images/logo.svg" alt="Babylone42 Logo" class="footer-logo-img">
                     <p class="footer-desc">Babylone42 donne le pouvoir aux équipes de transformer des données brutes en
@@ -221,8 +929,6 @@
                             aria-label="YouTube"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
-
-                <!-- Column 2: Accueil -->
                 <div class="footer-col">
                     <h4 class="footer-title">Accueil</h4>
                     <ul class="footer-links-list">
@@ -232,19 +938,15 @@
                         <li><a href="faq.html">FAQ</a></li>
                     </ul>
                 </div>
-
-                <!-- Column 3: Solutions -->
                 <div class="footer-col">
                     <h4 class="footer-title">Solutions</h4>
                     <ul class="footer-links-list">
                         <li><a href="solution-chatbots.html">Chatbots 24/7</a></li>
                         <li><a href="solution-copilots.html">Copilots IA</a></li>
                         <li><a href="solution-automation.html">Automatisation</a></li>
-                        <li><a href="solution-audit.html">Audit & Conseil</a></li>
+                        <li><a href="solution-audit.html">Audit &amp; Conseil</a></li>
                     </ul>
                 </div>
-
-                <!-- Column 4: Formations -->
                 <div class="footer-col">
                     <h4 class="footer-title">Formations</h4>
                     <ul class="footer-links-list">
@@ -255,10 +957,8 @@
                         <li><a href="formation-dl.html">Deep Learning</a></li>
                     </ul>
                 </div>
-
-                <!-- Column 5: Contact & Newsletter -->
                 <div class="footer-col newsletter-col">
-                    <h4 class="footer-title">Contact & Newsletter</h4>
+                    <h4 class="footer-title">Contact &amp; Newsletter</h4>
                     <p class="footer-contact-info">
                         <a href="mailto:contact@babylone42.fr"><i class="fas fa-envelope"></i>
                             contact@babylone42.fr</a><br>
@@ -270,7 +970,6 @@
                     </form>
                 </div>
             </div>
-
             <div class="footer-bottom">
                 <p class="copyright">© 2025 Babylone42. All rights reserved.</p>
                 <div class="legal-links">
