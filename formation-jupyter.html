@@ -4,72 +4,183 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Babylone42 | Partenaire IA & Automatisation pour Entreprises</title>
+    <title>Formation Jupyter Notebook — Reporting Interactif &amp; Data Storytelling | 1 jour | Babylone42 Marseille
+    </title>
     <meta name="description"
-        content="Déployez des solutions IA concrètes (Copilots, Chatbots, Automatisation) et formez vos équipes avec Babylone42. Expertise technique et pédagogique à Marseille et en France.">
+        content="Maîtrisez Jupyter Notebook pour créer des rapports interactifs (widgets, Matplotlib). Export HTML/PDF, Git, Jupyter Book. 1 journée intensive. Certification Babylone42. Distanciel. Marseille et toute la France.">
+    <meta name="robots" content="index, follow">
+    <meta name="geo.region" content="FR-13">
+    <meta name="geo.placename" content="Marseille">
+    <meta name="geo.position" content="43.296482;5.381498">
+    <meta name="ICBM" content="43.296482, 5.381498">
+    <meta property="og:title" content="Formation Jupyter Notebook — Data Storytelling &amp; Reporting | Babylone42">
+    <meta property="og:description"
+        content="Créez des rapports interactifs avec Jupyter Notebook. Widgets, Matplotlib. Export HTML/PDF. Certification. 1 journée. Marseille et France.">
+    <meta property="og:url" content="https://www.babylone42.fr/formation-jupyter.html">
+    <link rel="canonical" href="https://www.babylone42.fr/formation-jupyter.html">
+    <script
+        type="application/ld+json">{"@context":"https://schema.org","@type":"Course","name":"Formation Jupyter Notebook — Reporting Interactif et Data Storytelling","description":"Maîtrisez Jupyter Notebook pour créer des rapports interactifs (widgets, Matplotlib) et les exporter en HTML/PDF.","provider":{"@type":"Organization","name":"Babylone42","url":"https://www.babylone42.fr","address":{"@type":"PostalAddress","addressLocality":"Marseille","addressCountry":"FR"}},"courseMode":"online","educationalLevel":"Débutant","timeRequired":"PT6H","inLanguage":"fr"}</script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Space+Grotesk:wght@300;400;600;700&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=5">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        .form-hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center
+        }
+
+        .form-hero-img {
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            width: 100%
+        }
+
+        .form-stats {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-top: 2.5rem
+        }
+
+        .form-stat {
+            text-align: center
+        }
+
+        .sol-stat-val {
+            display: block;
+            font-size: 2rem;
+            font-weight: 700;
+            font-family: var(--font-heading);
+            color: var(--primary-color);
+            line-height: 1
+        }
+
+        .form-stat p {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-top: 0.3rem;
+            margin-bottom: 0
+        }
+
+        .results-bar {
+            background: linear-gradient(135deg, #0a5c4e 0%, #109B80 50%, #0a7a64 100%);
+            padding: 3rem 0
+        }
+
+        .results-bar-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            text-align: center
+        }
+
+        .result-num {
+            font-size: 2.5rem;
+            font-weight: 700;
+            font-family: var(--font-heading);
+            color: #fff
+        }
+
+        .result-item p {
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 0.9rem;
+            margin: 0
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem
+        }
+
+        .skill-card {
+            background: #fff;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 1.5rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem
+        }
+
+        .skill-card i {
+            color: var(--primary-color);
+            font-size: 1.4rem;
+            margin-top: 0.2rem;
+            flex-shrink: 0
+        }
+
+        .skill-card strong {
+            display: block;
+            color: #0f172a;
+            font-size: 1rem;
+            margin-bottom: 0.3rem
+        }
+
+        .skill-card span {
+            color: #64748b;
+            font-size: 0.9rem
+        }
+
+        @media(max-width:768px) {
+            .form-hero-grid {
+                grid-template-columns: 1fr
+            }
+
+            .results-bar-grid {
+                grid-template-columns: repeat(2, 1fr)
+            }
+        }
+    </style>
 </head>
 
 <body>
-
-    <!-- NAVIGATION -->
     <nav class="navbar">
         <div class="container">
-            <!-- TOP ROW: Socials & Contact -->
             <div class="navbar-top">
                 <div class="navbar-top-content">
-                    <a href="https://wa.me/33773609849" target="_blank" rel="noopener noreferrer" class="navbar-phone">
-                        <i class="fab fa-whatsapp"></i> +33 0 7 73 60 98 49
-                    </a>
-                    <div class="nav-socials">
-                        <a href="https://www.linkedin.com/company/babylone42/" target="_blank" rel="noopener noreferrer"
-                            aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://www.instagram.com/babylone42_?igsh=YzVyamk1N3VoYXU1" target="_blank"
-                            rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="https://www.facebook.com/profile.php?id=61583402791597&name=xhp_nt__fb__action__open_user&locale=fr_FR"
+                    <a href="https://wa.me/33773609849" target="_blank" rel="noopener noreferrer"
+                        class="navbar-phone"><i class="fab fa-whatsapp"></i> +33 0 7 73 60 98 49</a>
+                    <div class="nav-socials"><a href="https://www.linkedin.com/company/babylone42/" target="_blank"
+                            rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a><a
+                            href="https://www.instagram.com/babylone42_?igsh=YzVyamk1N3VoYXU1" target="_blank"
+                            rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a><a
+                            href="https://www.facebook.com/profile.php?id=61583402791597&name=xhp_nt__fb__action__open_user&locale=fr_FR"
                             target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i
-                                class="fab fa-facebook"></i></a>
-                        <a href="https://x.com/babylone42_" target="_blank" rel="noopener noreferrer"
-                            aria-label="X Twitter"><i class="fab fa-x-twitter"></i></a>
-                        <a href="https://m.youtube.com/@Babylone42" target="_blank" rel="noopener noreferrer"
-                            aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-                    </div>
+                                class="fab fa-facebook"></i></a><a href="https://x.com/babylone42_" target="_blank"
+                            rel="noopener noreferrer" aria-label="X Twitter"><i class="fab fa-x-twitter"></i></a><a
+                            href="https://m.youtube.com/@Babylone42" target="_blank" rel="noopener noreferrer"
+                            aria-label="YouTube"><i class="fab fa-youtube"></i></a></div>
                 </div>
             </div>
-
-            <!-- BOTTOM ROW: Logo, Links & Mobile Menu -->
             <div class="navbar-bottom">
-                <a href="index.html" class="logo">
-                    <img src="images/logo.svg" alt="Babylone42 Logo" style="height: 40px;">
-                </a>
-
+                <a href="index.html" class="logo"><img src="images/logo.svg" alt="Babylone42 Logo"
+                        style="height:40px"></a>
                 <ul class="nav-links">
-                    <li class="dropdown">
-                        <a href="#hero">Accueil <i class="fas fa-chevron-down"
-                                style="font-size: 0.8rem; margin-left: 0.3rem;"></i></a>
+                    <li class="dropdown"><a href="index.html">Accueil <i class="fas fa-chevron-down"
+                                style="font-size:0.8rem;margin-left:0.3rem"></i></a>
                         <ul class="dropdown-menu">
                             <li><a href="about.html">About us</a></li>
                             <li><a href="interlocuteurs.html">Vos interlocuteurs</a></li>
                         </ul>
                     </li>
-                    <li class="dropdown">
-                        <a href="#solutions">Solutions <i class="fas fa-chevron-down"
-                                style="font-size: 0.8rem; margin-left: 0.3rem;"></i></a>
+                    <li class="dropdown"><a href="index.html#solutions">Solutions <i class="fas fa-chevron-down"
+                                style="font-size:0.8rem;margin-left:0.3rem"></i></a>
                         <ul class="dropdown-menu">
                             <li><a href="solution-chatbots.html">Chatbots 24/7</a></li>
                             <li><a href="solution-copilots.html">Copilots IA</a></li>
                             <li><a href="solution-automation.html">Automatisation</a></li>
                         </ul>
                     </li>
-                    <li class="dropdown">
-                        <a href="#formations">Formations <i class="fas fa-chevron-down"
-                                style="font-size: 0.8rem; margin-left: 0.3rem;"></i></a>
+                    <li class="dropdown"><a href="index.html#formations">Formations <i class="fas fa-chevron-down"
+                                style="font-size:0.8rem;margin-left:0.3rem"></i></a>
                         <ul class="dropdown-menu">
                             <li><a href="formation-genai.html">IA Générative</a></li>
                             <li><a href="formation-jupyter.html">Jupyter</a></li>
@@ -77,139 +188,174 @@
                             <li><a href="formation-ml.html">Machine Learning</a></li>
                             <li><a href="formation-dl.html">Deep Learning</a></li>
                             <li><a href="calendrier-formations.html"
-                                    style="border-top: 1px solid rgba(255,255,255,0.1); margin-top: 0.5rem; padding-top: 0.8rem;">Calendrier
+                                    style="border-top:1px solid rgba(255,255,255,0.1);margin-top:0.5rem;padding-top:0.8rem">Calendrier
                                     des formations</a></li>
                         </ul>
                     </li>
                     <li><a href="articles.html">Blog/actualités</a></li>
                     <li><a href="contact-page.html" class="btn btn-primary nav-btn">Diagnostic IA Gratuit</a></li>
                 </ul>
-
-                <div class="hamburger">
-                    <i class="fas fa-bars"></i>
-                </div>
+                <div class="hamburger"><i class="fas fa-bars"></i></div>
             </div>
         </div>
     </nav>
 
+    <main class="page-content" style="padding-top:80px">
 
-
-    <main class="page-content" style="padding-top: 80px;">
-        <!-- HERO FORMATION -->
-        <section class="formation-hero bg-darker section-padding" style="position: relative; overflow: hidden;">
-            <div class="container" style="position: relative; z-index: 2; text-align: center; max-width: 800px;">
-                <div class="bento-icon" style="margin: 0 auto 1.5rem; font-size: 3rem; color: var(--primary-color);">
-                    <img src="images/logo-jupyter.svg"
-                        onerror="this.src=''; this.outerHTML='<i class=\'fas fa-book-open\'></i>'" style="height:48px;"
-                        alt="Jupyter"></div>
-                <h1 style="font-size: 3rem; margin-bottom: 1rem;">Formation Jupyter Notebook</h1>
-                <p style="font-size: 1.2rem; color: var(--text-muted); margin-bottom: 2rem;">Maîtrisez le reporting
-                    interactif et la visualisation de données : créez des documents dynamiques alliant code, texte et
-                    graphiques.</p>
-                <a href="contact-page.html" class="btn btn-primary">S'inscrire à la formation</a>
+        <section class="bg-darker section-padding" style="position:relative;overflow:hidden">
+            <div class="container" style="position:relative;z-index:2">
+                <div class="form-hero-grid">
+                    <div>
+                        <p
+                            style="color:var(--primary-color);font-weight:600;font-size:0.9rem;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:1rem">
+                            Formation certifiante — 6h — Distanciel</p>
+                        <h1 style="font-size:2.8rem;line-height:1.15;margin-bottom:1.2rem">Un bon code que personne ne
+                            comprend<br><span class="highlight">n'a aucune valeur. Jupyter rend vos analyses
+                                parlantes.</span></h1>
+                        <p style="font-size:1.15rem;color:var(--text-muted);margin-bottom:2rem">Maîtrisez le reporting
+                            interactif et la data storytelling en une seule journée. Créez des documents dynamiques
+                            alliant code, visualisation et texte — prêts à partager.</p>
+                        <div style="display:flex;gap:1rem;flex-wrap:wrap">
+                            <a href="contact-page.html" class="btn btn-primary">S'inscrire a la formation</a>
+                            <a href="calendrier-formations.html" class="btn btn-secondary">Voir les dates</a>
+                        </div>
+                        <div class="form-stats">
+                            <div class="form-stat"><span class="sol-stat-val">6h</span>
+                                <p>intensives en 1 journée</p>
+                            </div>
+                            <div class="form-stat"><span class="sol-stat-val">4</span>
+                                <p>ateliers pratiques</p>
+                            </div>
+                            <div class="form-stat"><span class="sol-stat-val">Python</span>
+                                <p>bases requises</p>
+                            </div>
+                            <div class="form-stat"><span class="sol-stat-val">Certif.</span>
+                                <p>Babylone42 incluse</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div><img src="images/formation-jupyter.jpg"
+                            alt="Formation Jupyter Notebook — dashboard interactif avec widgets et graphiques"
+                            class="form-hero-img"></div>
+                </div>
             </div>
-            <!-- Background element -->
             <div
-                style="position: absolute; top: -50%; left: -10%; width: 500px; height: 500px; background: radial-gradient(circle, rgba(14,138,148,0.15) 0%, transparent 70%); z-index: 1;">
+                style="position:absolute;top:-50%;right:-10%;width:500px;height:500px;background:radial-gradient(circle,rgba(16,155,128,0.12) 0%,transparent 70%);z-index:1">
             </div>
         </section>
 
-        <!-- BENTO KEY INFO -->
         <section class="section-padding bg-light">
             <div class="container">
-                <div class="grid-4"
-                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem;">
+                <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.5rem">
                     <div class="bento-card"
-                        style="background: white; border: 1px solid #e2e8f0; color: #0f172a; text-align: center; padding: 1.5rem;">
+                        style="background:white;border:1px solid #e2e8f0;color:#0f172a;text-align:center;padding:1.5rem">
                         <i class="fas fa-clock"
-                            style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
-                        <h4 style="margin-bottom: 0.5rem; font-size: 1.1rem;">Durée</h4>
-                        <p style="color: #64748b; font-size: 0.95rem; margin-bottom: 0;">6 heures (1 journée)</p>
+                            style="font-size:2rem;color:var(--primary-color);margin-bottom:1rem"></i>
+                        <h4 style="margin-bottom:0.5rem">Durée</h4>
+                        <p style="color:#64748b;margin-bottom:0">6 heures (1 journée)</p>
                     </div>
                     <div class="bento-card"
-                        style="background: white; border: 1px solid #e2e8f0; color: #0f172a; text-align: center; padding: 1.5rem;">
+                        style="background:white;border:1px solid #e2e8f0;color:#0f172a;text-align:center;padding:1.5rem">
                         <i class="fas fa-users"
-                            style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
-                        <h4 style="margin-bottom: 0.5rem; font-size: 1.1rem;">Public Cible</h4>
-                        <p style="color: #64748b; font-size: 0.95rem; margin-bottom: 0;">Pros de la data, analystes,
-                            chargés de reporting</p>
+                            style="font-size:2rem;color:var(--primary-color);margin-bottom:1rem"></i>
+                        <h4 style="margin-bottom:0.5rem">Public Cible</h4>
+                        <p style="color:#64748b;margin-bottom:0">Pros de la data, analystes, chargés de reporting</p>
                     </div>
                     <div class="bento-card"
-                        style="background: white; border: 1px solid #e2e8f0; color: #0f172a; text-align: center; padding: 1.5rem;">
+                        style="background:white;border:1px solid #e2e8f0;color:#0f172a;text-align:center;padding:1.5rem">
                         <i class="fas fa-clipboard-check"
-                            style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
-                        <h4 style="margin-bottom: 0.5rem; font-size: 1.1rem;">Pré-requis</h4>
-                        <p style="color: #64748b; font-size: 0.95rem; margin-bottom: 0;">Bases de Python (variables,
-                            listes)</p>
+                            style="font-size:2rem;color:var(--primary-color);margin-bottom:1rem"></i>
+                        <h4 style="margin-bottom:0.5rem">Pré-requis</h4>
+                        <p style="color:#64748b;margin-bottom:0">Bases de Python (variables, listes)</p>
                     </div>
                     <div class="bento-card"
-                        style="background: white; border: 1px solid #e2e8f0; color: #0f172a; text-align: center; padding: 1.5rem;">
+                        style="background:white;border:1px solid #e2e8f0;color:#0f172a;text-align:center;padding:1.5rem">
                         <i class="fas fa-laptop-house"
-                            style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
-                        <h4 style="margin-bottom: 0.5rem; font-size: 1.1rem;">Modalité</h4>
-                        <p style="color: #64748b; font-size: 0.95rem; margin-bottom: 0;">100% Distanciel (Teams / Zoom)
-                        </p>
+                            style="font-size:2rem;color:var(--primary-color);margin-bottom:1rem"></i>
+                        <h4 style="margin-bottom:0.5rem">Modalité</h4>
+                        <p style="color:#64748b;margin-bottom:0">100% Distanciel (Teams)</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- MARKETING PITCH -->
+        <section class="results-bar">
+            <div class="container">
+                <div class="results-bar-grid">
+                    <div class="result-item">
+                        <div class="result-num">+200</div>
+                        <p>professionnels formés</p>
+                    </div>
+                    <div class="result-item">
+                        <div class="result-num">97%</div>
+                        <p>taux de satisfaction</p>
+                    </div>
+                    <div class="result-item">
+                        <div class="result-num">4</div>
+                        <p>ateliers pratiques guidés</p>
+                    </div>
+                    <div class="result-item">
+                        <div class="result-num">1 jour</div>
+                        <p>pour transformer vos analyses</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section class="section-padding bg-darker">
             <div class="container">
-                <div class="grid-2" style="align-items: center;">
+                <div class="grid-2" style="align-items:center;gap:4rem">
                     <div>
-                        <h2 class="section-title" style="text-align: left;">Pourquoi choisir cette formation ?</h2>
-                        <p class="section-subtitle" style="text-align: left; margin-left: 0; margin-bottom: 2rem;">
-                            Transformez vos analyses en de véritables histoires interactives.</p>
-                        <ul class="differentiators-list" style="list-style: none; padding: 0;">
-                            <li style="margin-bottom: 1.5rem; display: flex; align-items: flex-start; gap: 1rem;">
-                                <i class="fas fa-check-circle"
-                                    style="color: var(--primary-color); font-size: 1.5rem; margin-top: 0.2rem;"></i>
-                                <div>
-                                    <strong style="display: block; font-size: 1.2rem; margin-bottom: 0.2rem;">Maîtrise
-                                        de l'environnement Jupyter</strong>
-                                    <span style="color: var(--text-muted);">Créez, structurez et mettez en forme vos
-                                        notebooks en utilisant Markdown, HTML et LaTeX.</span>
+                        <h2 class="section-title" style="text-align:left">Passez du tableur<br><span
+                                class="highlight">au reporting interactif vivant.</span></h2>
+                        <p class="section-subtitle" style="text-align:left;margin-left:0;margin-bottom:2rem">Vos
+                            analyses méritent mieux qu'un fichier Excel envoyé par email. Jupyter vous permet de
+                            combiner code, explications textuelles et graphiques animés dans un seul document
+                            partageable.</p>
+                        <ul style="list-style:none;padding:0">
+                            <li style="margin-bottom:1.5rem;display:flex;align-items:flex-start;gap:1rem"><i
+                                    class="fas fa-check-circle"
+                                    style="color:var(--primary-color);font-size:1.5rem;margin-top:0.2rem"></i>
+                                <div><strong style="display:block;font-size:1.1rem;margin-bottom:0.2rem">Maîtrise de
+                                        l'environnement Jupyter</strong><span style="color:var(--text-muted)">Créez,
+                                        structurez et mettez en forme vos notebooks avec Markdown, HTML et LaTeX.</span>
                                 </div>
                             </li>
-                            <li style="margin-bottom: 1.5rem; display: flex; align-items: flex-start; gap: 1rem;">
-                                <i class="fas fa-check-circle"
-                                    style="color: var(--primary-color); font-size: 1.5rem; margin-top: 0.2rem;"></i>
-                                <div>
-                                    <strong style="display: block; font-size: 1.2rem; margin-bottom: 0.2rem;">Rapports
-                                        dynamiques & interactifs</strong>
-                                    <span style="color: var(--text-muted);">Intégrez des widgets dynamiques (ipywidgets)
-                                        et des visualisations avec Matplotlib.</span>
-                                </div>
+                            <li style="margin-bottom:1.5rem;display:flex;align-items:flex-start;gap:1rem"><i
+                                    class="fas fa-check-circle"
+                                    style="color:var(--primary-color);font-size:1.5rem;margin-top:0.2rem"></i>
+                                <div><strong style="display:block;font-size:1.1rem;margin-bottom:0.2rem">Rapports
+                                        dynamiques et interactifs</strong><span style="color:var(--text-muted)">Intégrez
+                                        des widgets dynamiques (ipywidgets) et des visualisations avec
+                                        Matplotlib.</span></div>
                             </li>
-                            <li style="margin-bottom: 1.5rem; display: flex; align-items: flex-start; gap: 1rem;">
-                                <i class="fas fa-check-circle"
-                                    style="color: var(--primary-color); font-size: 1.5rem; margin-top: 0.2rem;"></i>
-                                <div>
-                                    <strong style="display: block; font-size: 1.2rem; margin-bottom: 0.2rem;">Export &
-                                        Partage professionnels</strong>
-                                    <span style="color: var(--text-muted);">Exportez vos travaux en HTML/PDF, utilisez
-                                        Git pour le verisioning, et découvrez Jupyter Book.</span>
-                                </div>
+                            <li style="display:flex;align-items:flex-start;gap:1rem"><i class="fas fa-check-circle"
+                                    style="color:var(--primary-color);font-size:1.5rem;margin-top:0.2rem"></i>
+                                <div><strong style="display:block;font-size:1.1rem;margin-bottom:0.2rem">Export et
+                                        partage professionnels</strong><span style="color:var(--text-muted)">Exportez en
+                                        HTML/PDF, versionez avec Git et découvrez Jupyter Book pour la
+                                        publication.</span></div>
                             </li>
                         </ul>
                     </div>
-                    <div class="bento-card" style="padding: 2rem; background: var(--dark-surface);">
+                    <div class="bento-card" style="padding:2rem;background:var(--dark-surface)">
                         <h3
-                            style="margin-bottom: 1.5rem; color: var(--primary-color); border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 1rem;">
+                            style="margin-bottom:1.5rem;color:var(--primary-color);border-bottom:1px solid rgba(255,255,255,0.1);padding-bottom:1rem">
                             Livrables Inclus</h3>
-                        <ul class="bento-list" style="list-style: none; padding: 0;">
-                            <li style="margin-bottom: 0.8rem;"><i class="fas fa-book"
-                                    style="color: var(--primary-color); width: 25px;"></i> Supports de cours (Jupyter)
+                        <ul style="list-style:none;padding:0">
+                            <li style="margin-bottom:0.8rem"><i class="fas fa-book"
+                                    style="color:var(--primary-color);width:25px"></i> Supports de cours (Jupyter
+                                notebooks)</li>
+                            <li style="margin-bottom:0.8rem"><i class="fas fa-database"
+                                    style="color:var(--primary-color);width:25px"></i> Jeux de données réels d'exercices
                             </li>
-                            <li style="margin-bottom: 0.8rem;"><i class="fas fa-database"
-                                    style="color: var(--primary-color); width: 25px;"></i> Jeux de données réels</li>
-                            <li style="margin-bottom: 0.8rem;"><i class="fas fa-code"
-                                    style="color: var(--primary-color); width: 25px;"></i> Codes sources complets</li>
-                            <li style="margin-bottom: 0.8rem;"><i class="fas fa-certificate"
-                                    style="color: var(--primary-color); width: 25px;"></i> Badge de certification</li>
-                            <li><i class="fas fa-headset" style="color: var(--primary-color); width: 25px;"></i> Support
+                            <li style="margin-bottom:0.8rem"><i class="fas fa-code"
+                                    style="color:var(--primary-color);width:25px"></i> Codes sources complets annotés
+                            </li>
+                            <li style="margin-bottom:0.8rem"><i class="fas fa-certificate"
+                                    style="color:var(--primary-color);width:25px"></i> Badge de certification Babylone42
+                            </li>
+                            <li><i class="fas fa-headset" style="color:var(--primary-color);width:25px"></i> Support
                                 post-formation (Discord)</li>
                         </ul>
                     </div>
@@ -217,82 +363,104 @@
             </div>
         </section>
 
-        <!-- PROGRAMME ACCORDION -->
         <section class="section-padding bg-light">
-            <div class="container" style="max-width: 800px;">
-                <h2 class="section-title" style="color: #0f172a;">Programme <span class="highlight">Détaillé</span></h2>
-                <p class="section-subtitle">Une journée intensive pour maîtriser la data data storytelling.</p>
+            <div class="container">
+                <h2 class="section-title" style="color:#0f172a">Ce que vous saurez faire <span class="highlight">en 1
+                        journée</span></h2>
+                <p class="section-subtitle">Transformez vos analyses en documents professionnels, interactifs et
+                    accessibles à tous.</p>
+                <div class="skills-grid">
+                    <div class="skill-card"><i class="fas fa-laptop-code"></i>
+                        <div><strong>Créer et structurer un notebook</strong><span>Installer Jupyter via Anaconda, gérer
+                                des cellules code et Markdown, maîtriser les raccourcis clavier.</span></div>
+                    </div>
+                    <div class="skill-card"><i class="fas fa-paint-brush"></i>
+                        <div><strong>Formater avec Markdown, HTML, LaTeX</strong><span>Rédiger de la mise en forme
+                                professionnelle, des titres, des listes et des équations scientifiques.</span></div>
+                    </div>
+                    <div class="skill-card"><i class="fas fa-chart-area"></i>
+                        <div><strong>Visualiser avec Matplotlib</strong><span>Créer des graphiques clairs et esthétiques
+                                directement intégrés dans vos notebooks.</span></div>
+                    </div>
+                    <div class="skill-card"><i class="fas fa-sliders-h"></i>
+                        <div><strong>Ajouter des widgets interactifs</strong><span>Intégrer des sliders, boutons et
+                                menus déroulants pour rendre vos analyses dynamiques avec ipywidgets.</span></div>
+                    </div>
+                    <div class="skill-card"><i class="fas fa-file-export"></i>
+                        <div><strong>Exporter en HTML et PDF</strong><span>Partager votre analyse complète sous forme de
+                                rapport autonome, sans aucun prérequis pour le lecteur.</span></div>
+                    </div>
+                    <div class="skill-card"><i class="fas fa-code-branch"></i>
+                        <div><strong>Versionner avec Git</strong><span>Tracer l'historique de vos notebooks avec Git et
+                                découvrir Jupyter Book pour la publication avancée.</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
+        <section class="section-padding bg-darker">
+            <div class="container" style="max-width:860px">
+                <h2 class="section-title">Programme <span class="highlight">Détaillé</span></h2>
+                <p class="section-subtitle">Une journée intensive pour maîtriser le data storytelling avec Jupyter.</p>
                 <div class="faq-list">
-                    <!-- Session 1 -->
                     <div class="faq-item">
                         <div class="faq-question">
-                            <h3>9h00 - 10h30 : Introduction à Jupyter Notebook</h3>
-                            <i class="fas fa-chevron-down"></i>
+                            <h3>9h00 - 10h30 : Introduction à Jupyter Notebook</h3><i class="fas fa-chevron-down"></i>
                         </div>
                         <div class="faq-answer">
-                            <ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
-                                <li><strong>Les bases:</strong> Qu’est-ce que Jupyter Notebook ? Interface et
+                            <ul style="padding-left:1.5rem;margin-bottom:1rem">
+                                <li><strong>Les bases:</strong> Qu'est-ce que Jupyter Notebook ? Interface et
                                     navigation.</li>
                                 <li><strong>Configuration:</strong> Installation via Anaconda.</li>
                                 <li><strong>Gestion:</strong> Création, ouverture et enregistrement de notebooks.
                                     Raccourcis clavier courants.</li>
-                                <li><strong>Atelier:</strong> Création d’un notebook simple avec code et texte.</li>
+                                <li><strong>Atelier:</strong> Création d'un notebook simple avec code et texte.</li>
                             </ul>
                         </div>
                     </div>
-
-                    <!-- Session 2 -->
                     <div class="faq-item">
                         <div class="faq-question">
-                            <h3>10h45 - 12h00 : Mise en forme et cellules</h3>
-                            <i class="fas fa-chevron-down"></i>
+                            <h3>10h45 - 12h00 : Mise en forme et cellules</h3><i class="fas fa-chevron-down"></i>
                         </div>
                         <div class="faq-answer">
-                            <ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
-                                <li><strong>Markdown & HTML:</strong> Mise en forme avec Markdown, HTML et LaTeX
+                            <ul style="padding-left:1.5rem;margin-bottom:1rem">
+                                <li><strong>Markdown &amp; HTML:</strong> Mise en forme avec Markdown, HTML et LaTeX
                                     (titres, listes, équations).</li>
                                 <li><strong>Le Noyau:</strong> Exécution des cellules de code et gestion du noyau
                                     (interruption, redémarrage).</li>
-                                <li><strong>Atelier:</strong> Formatage express d’un notebook mixant texte et code
+                                <li><strong>Atelier:</strong> Formatage d'un notebook mixant texte enrichi et code
                                     Python.</li>
                             </ul>
                         </div>
                     </div>
-
-                    <!-- Session 3 -->
                     <div class="faq-item">
                         <div class="faq-question">
-                            <h3>13h00 - 14h15 : Visualisations et interactions</h3>
-                            <i class="fas fa-chevron-down"></i>
+                            <h3>13h00 - 14h15 : Visualisations et interactions</h3><i class="fas fa-chevron-down"></i>
                         </div>
                         <div class="faq-answer">
-                            <ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
+                            <ul style="padding-left:1.5rem;margin-bottom:1rem">
                                 <li><strong>Interactivité:</strong> Introduction aux widgets interactifs avec
                                     <code>ipywidgets</code> (sliders, boutons).</li>
                                 <li><strong>Graphiques:</strong> Création de graphiques de base avec Matplotlib
                                     intra-notebook.</li>
-                                <li><strong>Atelier:</strong> Création d’un graphique rendu interactif via l'usage d'un
-                                    widget.</li>
+                                <li><strong>Atelier:</strong> Création d'un graphique interactif piloté par un widget.
+                                </li>
                             </ul>
                         </div>
                     </div>
-
-                    <!-- Session 4 -->
                     <div class="faq-item">
                         <div class="faq-question">
-                            <h3>14h30 - 16h00 : Partage, export et projet final</h3>
-                            <i class="fas fa-chevron-down"></i>
+                            <h3>14h30 - 16h00 : Partage, export et projet final</h3><i class="fas fa-chevron-down"></i>
                         </div>
                         <div class="faq-answer">
-                            <ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
+                            <ul style="padding-left:1.5rem;margin-bottom:1rem">
                                 <li><strong>Livrables:</strong> Exportation des notebooks en HTML et PDF.</li>
                                 <li><strong>Versioning:</strong> Introduction à Git pour la gestion des versions du
                                     notebook.</li>
                                 <li><strong>Publication:</strong> Présentation rapide de Jupyter Book pour la création
                                     de livres numériques.</li>
-                                <li><strong>Projet final:</strong> Création d’un notebook complet avec texte formaté,
-                                    graphique interactif, et export prêt à être partagé.</li>
+                                <li><strong>Projet final:</strong> Notebook complet avec texte formaté, graphique
+                                    interactif et export partageable.</li>
                             </ul>
                         </div>
                     </div>
@@ -300,45 +468,38 @@
             </div>
         </section>
 
-        <!-- CTA SECTION -->
-        <section class="section-padding bg-darker"
-            style="text-align: center; border-top: 1px solid rgba(255,255,255,0.05);">
-            <div class="container">
-                <h2 class="section-title">Prêt à clarifier vos reportings ?</h2>
-                <p class="section-subtitle" style="margin-bottom: 2rem;">Rejoignez notre prochaine session de formation
-                    ou demandez un devis intra-entreprise sur mesure.</p>
-                <a href="contact-page.html" class="btn btn-primary" style="margin-right: 1rem;">Nous contacter</a>
+        <section class="section-padding bg-light" style="text-align:center">
+            <div class="container" style="max-width:700px">
+                <h2 class="section-title" style="color:#0f172a">Clarifiez vos analyses. Impressionnez votre audience.
+                </h2>
+                <p class="section-subtitle" style="margin-bottom:2rem">Rejoignez notre prochaine session ou demandez un
+                    devis intra-entreprise sur mesure. Disponible à Marseille et partout en France.</p>
+                <a href="contact-page.html" class="btn btn-primary" style="margin-right:1rem">S'inscrire a la
+                    formation</a>
                 <a href="calendrier-formations.html" class="btn btn-secondary">Voir le calendrier</a>
             </div>
         </section>
-    </main>
 
-    <!-- FOOTER -->
+    </main>
 
     <footer class="mega-footer">
         <div class="container">
             <div class="footer-grid">
-                <!-- Column 1: Brand & Socials -->
-                <div class="footer-col brand-col">
-                    <img src="images/logo.svg" alt="Babylone42 Logo" class="footer-logo-img">
+                <div class="footer-col brand-col"><img src="images/logo.svg" alt="Babylone42 Logo"
+                        class="footer-logo-img">
                     <p class="footer-desc">Babylone42 donne le pouvoir aux équipes de transformer des données brutes en
                         informations claires grâce à l'IA.</p>
-                    <div class="footer-socials">
-                        <a href="https://www.linkedin.com/company/babylone42/" target="_blank" rel="noopener noreferrer"
-                            aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://www.instagram.com/babylone42_?igsh=YzVyamk1N3VoYXU1" target="_blank"
-                            rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="https://www.facebook.com/profile.php?id=61583402791597&name=xhp_nt__fb__action__open_user&locale=fr_FR"
+                    <div class="footer-socials"><a href="https://www.linkedin.com/company/babylone42/" target="_blank"
+                            rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a><a
+                            href="https://www.instagram.com/babylone42_?igsh=YzVyamk1N3VoYXU1" target="_blank"
+                            rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a><a
+                            href="https://www.facebook.com/profile.php?id=61583402791597&name=xhp_nt__fb__action__open_user&locale=fr_FR"
                             target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i
-                                class="fab fa-facebook"></i></a>
-                        <a href="https://x.com/babylone42_" target="_blank" rel="noopener noreferrer"
-                            aria-label="X Twitter"><i class="fab fa-x-twitter"></i></a>
-                        <a href="https://m.youtube.com/@Babylone42" target="_blank" rel="noopener noreferrer"
-                            aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-                    </div>
+                                class="fab fa-facebook"></i></a><a href="https://x.com/babylone42_" target="_blank"
+                            rel="noopener noreferrer" aria-label="X Twitter"><i class="fab fa-x-twitter"></i></a><a
+                            href="https://m.youtube.com/@Babylone42" target="_blank" rel="noopener noreferrer"
+                            aria-label="YouTube"><i class="fab fa-youtube"></i></a></div>
                 </div>
-
-                <!-- Column 2: Accueil -->
                 <div class="footer-col">
                     <h4 class="footer-title">Accueil</h4>
                     <ul class="footer-links-list">
@@ -348,19 +509,15 @@
                         <li><a href="faq.html">FAQ</a></li>
                     </ul>
                 </div>
-
-                <!-- Column 3: Solutions -->
                 <div class="footer-col">
                     <h4 class="footer-title">Solutions</h4>
                     <ul class="footer-links-list">
                         <li><a href="solution-chatbots.html">Chatbots 24/7</a></li>
                         <li><a href="solution-copilots.html">Copilots IA</a></li>
                         <li><a href="solution-automation.html">Automatisation</a></li>
-                        <li><a href="solution-audit.html">Audit & Conseil</a></li>
+                        <li><a href="solution-audit.html">Audit &amp; Conseil</a></li>
                     </ul>
                 </div>
-
-                <!-- Column 4: Formations -->
                 <div class="footer-col">
                     <h4 class="footer-title">Formations</h4>
                     <ul class="footer-links-list">
@@ -371,33 +528,23 @@
                         <li><a href="formation-dl.html">Deep Learning</a></li>
                     </ul>
                 </div>
-
-                <!-- Column 5: Contact & Newsletter -->
                 <div class="footer-col newsletter-col">
-                    <h4 class="footer-title">Contact & Newsletter</h4>
-                    <p class="footer-contact-info">
-                        <a href="mailto:contact@babylone42.fr"><i class="fas fa-envelope"></i>
-                            contact@babylone42.fr</a><br>
-                        <a href="tel:+330773609849"><i class="fas fa-phone-alt"></i> +33 0 7 73 60 98 49</a>
-                    </p>
-                    <form class="footer-newsletter-form">
-                        <input type="email" placeholder="Votre email" required>
-                        <button type="submit" aria-label="S'inscrire"><i class="fas fa-paper-plane"></i></button>
-                    </form>
+                    <h4 class="footer-title">Contact &amp; Newsletter</h4>
+                    <p class="footer-contact-info"><a href="mailto:contact@babylone42.fr"><i
+                                class="fas fa-envelope"></i> contact@babylone42.fr</a><br><a href="tel:+330773609849"><i
+                                class="fas fa-phone-alt"></i> +33 0 7 73 60 98 49</a></p>
+                    <form class="footer-newsletter-form"><input type="email" placeholder="Votre email" required><button
+                            type="submit" aria-label="S'inscrire"><i class="fas fa-paper-plane"></i></button></form>
                 </div>
             </div>
-
             <div class="footer-bottom">
                 <p class="copyright">© 2025 Babylone42. All rights reserved.</p>
-                <div class="legal-links">
-                    <a href="mentions-legales.html">Mentions Légales</a>
-                    <a href="politique-confidentialite.html">Politique de Confidentialité</a>
-                    <a href="cookies.html">Paramètres des cookies</a>
-                </div>
+                <div class="legal-links"><a href="mentions-legales.html">Mentions Légales</a><a
+                        href="politique-confidentialite.html">Politique de Confidentialité</a><a
+                        href="cookies.html">Paramètres des cookies</a></div>
             </div>
         </div>
     </footer>
-
     <script src="script.js"></script>
 </body>
 
