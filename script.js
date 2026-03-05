@@ -404,4 +404,51 @@
         }
     };
 
+    // Intercept clicks on links containing ?formation= to store in sessionStorage (prevents loss on redirect)
+    document.addEventListener('click', function (e) {
+        const link = e.target.closest('a');
+        if (link && link.href && link.href.includes('formation=')) {
+            try {
+                const url = new URL(link.href, window.location.href);
+                if (url.searchParams.has('formation')) {
+                    sessionStorage.setItem('preselect_formation', url.searchParams.get('formation'));
+                }
+            } catch (err) { }
+        }
+    });
+
+    // Auto-select formation from URL parameter OR sessionStorage
+    const urlParams = new URLSearchParams(window.location.search);
+    let formationParam = urlParams.get('formation');
+
+    // Check sessionStorage as fallback
+    if (!formationParam) {
+        formationParam = sessionStorage.getItem('preselect_formation');
+    }
+
+    if (formationParam && document.getElementById('contactForm')) {
+        // Switch to "Formations" tab
+        const formationsToggle = document.querySelector('.btn-toggle[data-type="formations"]');
+        if (formationsToggle) {
+            formationsToggle.click();
+        }
+
+        // Check the specific formation checkbox
+        const formationCheckbox = document.querySelector(`input[name="formation_type"][value="${formationParam}"]`);
+        if (formationCheckbox) {
+            formationCheckbox.checked = true;
+        }
+
+        // Clear memory
+        sessionStorage.removeItem('preselect_formation');
+
+        // Scroll to form to make it obvious
+        setTimeout(() => {
+            const contactSection = document.getElementById('contact');
+            if (contactSection) {
+                contactSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        }, 500);
+    }
+
 });

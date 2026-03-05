@@ -1,85 +1,781 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calendrier des Formations | Babylone42</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Space+Grotesk:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Space+Grotesk:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css?v=5">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
+
 <body>
-<nav class="navbar">
+    <nav class="navbar">
         <div class="container">
-            <a href="index.html" class="logo">
-                <img src="images/logo.svg" alt="Babylone42 Logo" style="height: 40px;">
-            </a>
-            <ul class="nav-links">
-                <li class="dropdown">
-                    <a href="#hero">Accueil <i class="fas fa-chevron-down"
-                            style="font-size: 0.8rem; margin-left: 0.3rem;"></i></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="about.html">About us</a></li>
-                        <li><a href="interlocuteurs.html">Vos interlocuteurs</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="#solutions">Solutions <i class="fas fa-chevron-down"
-                            style="font-size: 0.8rem; margin-left: 0.3rem;"></i></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="solution-chatbots.html">Chatbots 24/7</a></li>
-                        <li><a href="solution-copilots.html">Copilots IA</a></li>
-                        <li><a href="solution-automation.html">Automatisation</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="#formations">Formations <i class="fas fa-chevron-down"
-                            style="font-size: 0.8rem; margin-left: 0.3rem;"></i></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="formation-genai.html">IA Générative</a></li>
-                        <li><a href="formation-jupyter.html">Jupyter</a></li>
-                        <li><a href="formation-python.html">Python</a></li>
-                        <li><a href="formation-ml.html">Machine Learning</a></li>
-                        <li><a href="formation-dl.html">Deep Learning</a></li>
-                        <li><a href="calendrier-formations.html"
-                                style="border-top: 1px solid rgba(255,255,255,0.1); margin-top: 0.5rem; padding-top: 0.8rem;">Calendrier
-                                des formations</a></li>
-                    </ul>
-                </li>
-                <li><a href="articles.html">Blog/actualités</a></li>
-                <li><a href="contact-page.html" class="btn btn-primary nav-btn">Diagnostic IA Gratuit</a></li>
-                <li class="nav-socials">
-                    <a href="https://www.linkedin.com/company/babylone42/" target="_blank" rel="noopener noreferrer"
-                        aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://www.instagram.com/babylone42_?igsh=YzVyamk1N3VoYXU1" target="_blank"
-                        rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.facebook.com/profile.php?id=61583402791597&name=xhp_nt__fb__action__open_user&locale=fr_FR"
-                        target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i
-                            class="fab fa-facebook"></i></a>
-                    <a href="https://x.com/babylone42_" target="_blank" rel="noopener noreferrer"
-                        aria-label="X Twitter"><i class="fab fa-x-twitter"></i></a>
-                    <a href="https://m.youtube.com/@Babylone42" target="_blank" rel="noopener noreferrer"
-                        aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-                </li>
-            </ul>
-            <div class="hamburger">
-                <i class="fas fa-bars"></i>
+            <!-- TOP ROW: Socials & Contact -->
+            <div class="navbar-top">
+                <div class="navbar-top-content">
+                    <a href="https://wa.me/33773609849" target="_blank" rel="noopener noreferrer" class="navbar-phone">
+                        <i class="fab fa-whatsapp"></i> +33 0 7 73 60 98 49
+                    </a>
+                    <div class="nav-socials">
+                        <a href="https://www.linkedin.com/company/babylone42/" target="_blank" rel="noopener noreferrer"
+                            aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/babylone42_?igsh=YzVyamk1N3VoYXU1" target="_blank"
+                            rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=61583402791597&name=xhp_nt__fb__action__open_user&locale=fr_FR"
+                            target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i
+                                class="fab fa-facebook"></i></a>
+                        <a href="https://x.com/babylone42_" target="_blank" rel="noopener noreferrer"
+                            aria-label="X Twitter"><i class="fab fa-x-twitter"></i></a>
+                        <a href="https://m.youtube.com/@Babylone42" target="_blank" rel="noopener noreferrer"
+                            aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BOTTOM ROW: Logo, Links & Mobile Menu -->
+            <div class="navbar-bottom">
+                <a href="index.html" class="logo">
+                    <img src="images/logo.svg" alt="Babylone42 Logo" style="height: 40px;">
+                </a>
+
+                <ul class="nav-links">
+                    <li class="dropdown">
+                        <a href="index.html">Accueil <i class="fas fa-chevron-down"
+                                style="font-size: 0.8rem; margin-left: 0.3rem;"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="about.html">About us</a></li>
+                            <li><a href="interlocuteurs.html">Vos interlocuteurs</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="index.html#solutions">Solutions <i class="fas fa-chevron-down"
+                                style="font-size: 0.8rem; margin-left: 0.3rem;"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="solution-chatbots.html">Chatbots 24/7</a></li>
+                            <li><a href="solution-copilots.html">Copilots IA</a></li>
+                            <li><a href="solution-automation.html">Automatisation</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="index.html#formations">Formations <i class="fas fa-chevron-down"
+                                style="font-size: 0.8rem; margin-left: 0.3rem;"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="formation-genai.html">IA Générative</a></li>
+                            <li><a href="formation-jupyter.html">Jupyter</a></li>
+                            <li><a href="formation-python.html">Python</a></li>
+                            <li><a href="formation-ml.html">Machine Learning</a></li>
+                            <li><a href="formation-dl.html">Deep Learning</a></li>
+                            <li><a href="calendrier-formations.html"
+                                    style="border-top: 1px solid rgba(255,255,255,0.1); margin-top: 0.5rem; padding-top: 0.8rem;">Calendrier
+                                    des formations</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="articles.html">Blog/actualités</a></li>
+                    <li><a href="contact-page.html" class="btn btn-primary nav-btn">Diagnostic IA Gratuit</a></li>
+                </ul>
+
+                <div class="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
             </div>
         </div>
     </nav>
 
-    <main class="page-content" style="padding-top: 120px; padding-bottom: 80px; min-height: 60vh;">
-        <div class="container section-padding">
-            <h1 class="section-title" style="margin-bottom: 2rem;">Calendrier des formations</h1>
-            <div style="background: rgba(255, 255, 255, 0.03); padding: 4rem 2rem; border-radius: 12px; border: 1px dashed rgba(255, 255, 255, 0.1); text-align: center;">
-                <p style="color: #94a3b8; font-size: 1.1rem;">Page en cours de construction. Le calendrier complet sera bientôt affiché ici.</p>
+    <style>
+        .calendar-wrapper {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .month-block {
+            margin-bottom: 3rem;
+            background: #fff;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e2e8f0;
+        }
+
+        .month-title {
+            color: var(--primary-color);
+            border-bottom: 2px solid #f1f5f9;
+            padding-bottom: 1rem;
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+        }
+
+        .course-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .course-item {
+            display: flex;
+            align-items: center;
+            padding: 1.2rem;
+            border: 1px solid #f1f5f9;
+            border-radius: 8px;
+            transition: all 0.2s ease;
+            background: #fafafa;
+        }
+
+        .course-item:hover {
+            border-color: var(--primary-color);
+            box-shadow: 0 4px 12px rgba(16, 155, 128, 0.08);
+            background: #fff;
+        }
+
+        .course-dates {
+            min-width: 130px;
+            text-align: center;
+            padding-right: 1.5rem;
+            margin-right: 1.5rem;
+            border-right: 1px solid #e2e8f0;
+        }
+
+        .course-dates .day {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: #64748b;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.2rem;
+        }
+
+        .course-dates .num {
+            display: block;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #0f172a;
+            line-height: 1.1;
+        }
+
+        .course-info {
+            flex-grow: 1;
+        }
+
+        .course-info h3 {
+            margin-bottom: 0.4rem;
+            font-size: 1.3rem;
+            color: #0f172a;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            flex-wrap: wrap;
+        }
+
+        .course-info .badge {
+            font-size: 0.8rem;
+            background: rgba(16, 155, 128, 0.1);
+            color: var(--primary-color);
+            padding: 0.25rem 0.6rem;
+            border-radius: 4px;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        .course-info p {
+            margin: 0;
+            font-size: 0.95rem;
+            color: #64748b;
+            font-weight: 500;
+        }
+
+        .course-action {
+            margin-left: 1.5rem;
+        }
+
+        .holiday-notice {
+            margin-top: 1.5rem;
+            padding: 1rem 1.2rem;
+            background: #f8fafc;
+            border-left: 4px solid #cbd5e1;
+            color: #64748b;
+            font-size: 0.95rem;
+            border-radius: 0 8px 8px 0;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            font-weight: 500;
+        }
+
+        .holiday-notice i {
+            color: #94a3b8;
+            font-size: 1.2rem;
+        }
+
+        @media (max-width: 640px) {
+            .course-item {
+                flex-direction: column;
+                text-align: center;
+                padding: 1.5rem;
+            }
+
+            .course-dates {
+                border-right: none;
+                border-bottom: 1px solid #e2e8f0;
+                padding-right: 0;
+                margin-right: 0;
+                padding-bottom: 1rem;
+                margin-bottom: 1rem;
+            }
+
+            .course-action {
+                margin-left: 0;
+                margin-top: 1.5rem;
+                width: 100%;
+            }
+
+            .course-action .btn {
+                width: 100%;
+                display: block;
+                text-align: center;
+            }
+
+            .course-info h3 {
+                justify-content: center;
+            }
+        }
+    </style>
+    <style>
+        .calendar-layout {
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 3rem;
+            max-width: 1100px;
+            margin: 0 auto;
+            align-items: start;
+        }
+
+        .calendar-sidebar {
+            background: #fff;
+            border-radius: 12px;
+            padding: 1.5rem;
+            border: 1px solid #e2e8f0;
+            position: sticky;
+            top: 120px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+
+        .calendar-sidebar h3 {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            color: #0f172a;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .filter-btn {
+            display: block;
+            width: 100%;
+            text-align: left;
+            padding: 0.75rem 1rem;
+            background: transparent;
+            border: 1px solid transparent;
+            border-radius: 6px;
+            color: #64748b;
+            font-size: 0.95rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+            margin-bottom: 0.3rem;
+        }
+
+        .filter-btn:hover {
+            background: #f8fafc;
+            color: #0f172a;
+        }
+
+        .filter-btn.active {
+            background: rgba(16, 155, 128, 0.1);
+            color: var(--primary-color);
+            font-weight: 600;
+            border-color: rgba(16, 155, 128, 0.2);
+        }
+
+        .month-block {
+            margin-bottom: 3rem;
+            background: #fff;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e2e8f0;
+        }
+
+        .month-title {
+            color: var(--primary-color);
+            border-bottom: 2px solid #f1f5f9;
+            padding-bottom: 1rem;
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+        }
+
+        .course-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .course-item {
+            display: flex;
+            align-items: center;
+            padding: 1.2rem;
+            border: 1px solid #f1f5f9;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            background: #fafafa;
+        }
+
+        .course-item:hover {
+            border-color: var(--primary-color);
+            box-shadow: 0 4px 12px rgba(16, 155, 128, 0.08);
+            background: #fff;
+        }
+
+        .course-dates {
+            min-width: 130px;
+            text-align: center;
+            padding-right: 1.5rem;
+            margin-right: 1.5rem;
+            border-right: 1px solid #e2e8f0;
+        }
+
+        .course-dates .day {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: #64748b;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.2rem;
+        }
+
+        .course-dates .num {
+            display: block;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #0f172a;
+            line-height: 1.1;
+        }
+
+        .course-info {
+            flex-grow: 1;
+        }
+
+        .course-info h3 {
+            margin-bottom: 0.4rem;
+            font-size: 1.3rem;
+            color: #0f172a;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            flex-wrap: wrap;
+        }
+
+        .course-info .badge {
+            font-size: 0.8rem;
+            background: rgba(16, 155, 128, 0.1);
+            color: var(--primary-color);
+            padding: 0.25rem 0.6rem;
+            border-radius: 4px;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        .course-info p {
+            margin: 0;
+            font-size: 0.95rem;
+            color: #64748b;
+            font-weight: 500;
+        }
+
+        .course-action {
+            margin-left: 1.5rem;
+        }
+
+        .holiday-notice {
+            margin-top: 1.5rem;
+            padding: 1rem 1.2rem;
+            background: #f8fafc;
+            border-left: 4px solid #cbd5e1;
+            color: #64748b;
+            font-size: 0.95rem;
+            border-radius: 0 8px 8px 0;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            font-weight: 500;
+        }
+
+        .holiday-notice i {
+            color: #94a3b8;
+            font-size: 1.2rem;
+        }
+
+        @media (max-width: 860px) {
+            .calendar-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .calendar-sidebar {
+                position: static;
+                margin-bottom: 2rem;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .course-item {
+                flex-direction: column;
+                text-align: center;
+                padding: 1.5rem;
+            }
+
+            .course-dates {
+                border-right: none;
+                border-bottom: 1px solid #e2e8f0;
+                padding-right: 0;
+                margin-right: 0;
+                padding-bottom: 1rem;
+                margin-bottom: 1rem;
+            }
+
+            .course-action {
+                margin-left: 0;
+                margin-top: 1.5rem;
+                width: 100%;
+            }
+
+            .course-action .btn {
+                width: 100%;
+                display: block;
+                text-align: center;
+            }
+
+            .course-info h3 {
+                justify-content: center;
+            }
+        }
+    </style>
+    <main class="page-content" style="padding-top: 100px; padding-bottom: 80px; background: #f8fafc;">
+        <div class="container bg-light section-padding" style="background: transparent;">
+            <div style="text-align: center; margin-bottom: 3rem;">
+                <h1 class="section-title" style="margin-bottom: 1rem; color: #0f172a;">Calendrier des formations <span
+                        class="highlight">2026</span></h1>
+                <p style="color: #64748b; font-size: 1.1rem; max-width: 600px; margin: 0 auto;">Planifiez votre montée
+                    en compétences. Nos sessions se déroulent essentiellement les jeudis et vendredis (hors vacances
+                    scolaires).</p>
             </div>
+
+            <div class="calendar-layout">
+                <!-- Sidebar Filters -->
+                <aside class="calendar-sidebar">
+                    <h3>Filtrer par module</h3>
+                    <button class="filter-btn active" data-filter="all">Toutes les formations</button>
+                    <button class="filter-btn" data-filter="python">Python pour la Data</button>
+                    <button class="filter-btn" data-filter="machine_learning">Machine Learning</button>
+                    <button class="filter-btn" data-filter="deep_learning">Deep Learning</button>
+                    <button class="filter-btn" data-filter="jupyter">Jupyter Notebook</button>
+                    <button class="filter-btn" data-filter="prompting">IA Générative</button>
+                </aside>
+
+                <!-- Calendar Content -->
+                <div class="calendar-wrapper">
+
+                    <!-- AVRIL 2026 -->
+                    <div class="month-block" id="avril">
+                        <h2 class="month-title">Avril 2026</h2>
+                        <div class="course-list">
+                            <div class="course-item" data-type="jupyter">
+                                <div class="course-dates"><span class="day">JEU</span> <span class="num">09</span></div>
+                                <div class="course-info">
+                                    <h3>Jupyter Notebook <span class="badge">1 jour</span></h3>
+                                    <p>Distanciel • Session 2</p>
+                                </div>
+                                <div class="course-action"><a href="contact-page.html?formation=jupyter"
+                                        class="btn btn-primary" style="padding: 0.6rem 1.2rem;">S'inscrire</a></div>
+                            </div>
+                            <div class="course-item" data-type="prompting">
+                                <div class="course-dates"><span class="day">JEU &amp; VEN</span> <span class="num">16 -
+                                        17</span></div>
+                                <div class="course-info">
+                                    <h3>IA Générative <span class="badge">1.5 jours</span></h3>
+                                    <p>Distanciel • Session 3</p>
+                                </div>
+                                <div class="course-action"><a href="contact-page.html?formation=prompting"
+                                        class="btn btn-primary" style="padding: 0.6rem 1.2rem;">S'inscrire</a></div>
+                            </div>
+                        </div>
+                        <div class="holiday-notice"><i class="fas fa-umbrella-beach"></i> <strong>18 Avril - 3
+                                Mai</strong> : Vacances de Printemps</div>
+                    </div>
+
+                    <!-- MAI 2026 -->
+                    <div class="month-block" id="mai">
+                        <h2 class="month-title">Mai 2026</h2>
+                        <div class="course-list">
+                            <div class="course-item" data-type="python">
+                                <div class="course-dates"><span class="day">JEU / VEN</span> <span class="num">07, 21,
+                                        22</span></div>
+                                <div class="course-info">
+                                    <h3>Python pour la Data <span class="badge">3 jours</span></h3>
+                                    <p>Distanciel • Session 4</p>
+                                </div>
+                                <div class="course-action"><a href="contact-page.html?formation=python"
+                                        class="btn btn-primary" style="padding: 0.6rem 1.2rem;">S'inscrire</a></div>
+                            </div>
+                            <div class="course-item" data-type="machine_learning">
+                                <div class="course-dates"><span class="day">JEU / VEN</span> <span class="num">28, 29,
+                                        04 Juin</span></div>
+                                <div class="course-info">
+                                    <h3>Machine Learning <span class="badge">3 jours</span></h3>
+                                    <p>Distanciel • Session 3</p>
+                                </div>
+                                <div class="course-action"><a href="contact-page.html?formation=machine_learning"
+                                        class="btn btn-primary" style="padding: 0.6rem 1.2rem;">S'inscrire</a></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- JUIN 2026 -->
+                    <div class="month-block" id="juin">
+                        <h2 class="month-title">Juin 2026</h2>
+                        <div class="course-list">
+                            <div class="course-item" data-type="deep_learning"
+                                style="opacity: 0.6; filter: grayscale(1);">
+                                <div class="course-dates"><span class="day">VEN / JEU</span> <span class="num">05, 11,
+                                        12</span></div>
+                                <div class="course-info">
+                                    <h3>Deep Learning <span class="badge">3 jours</span></h3>
+                                    <p>Distanciel • Session 3 — <strong style="color: #dc2626;">Complet</strong></p>
+                                </div>
+                                <div class="course-action"><span class="btn btn-outline"
+                                        style="border-color: #cbd5e1; color: #94a3b8; cursor: not-allowed; padding: 0.6rem 1.2rem;">Fermé</span>
+                                </div>
+                            </div>
+                            <div class="course-item" data-type="jupyter">
+                                <div class="course-dates"><span class="day">JEU</span> <span class="num">18</span></div>
+                                <div class="course-info">
+                                    <h3>Jupyter Notebook <span class="badge">1 jour</span></h3>
+                                    <p>Distanciel • Session 3</p>
+                                </div>
+                                <div class="course-action"><a href="contact-page.html?formation=jupyter"
+                                        class="btn btn-primary" style="padding: 0.6rem 1.2rem;">S'inscrire</a></div>
+                            </div>
+                            <div class="course-item" data-type="python">
+                                <div class="course-dates"><span class="day">JEU / VEN</span> <span class="num">25, 26,
+                                        02 Juil</span></div>
+                                <div class="course-info">
+                                    <h3>Python pour la Data <span class="badge">3 jours</span></h3>
+                                    <p>Distanciel • Session 5</p>
+                                </div>
+                                <div class="course-action"><a href="contact-page.html?formation=python"
+                                        class="btn btn-primary" style="padding: 0.6rem 1.2rem;">S'inscrire</a></div>
+                            </div>
+                        </div>
+                        <div class="holiday-notice"><i class="fas fa-sun"></i> <strong>4 Juillet - 31 Août</strong> :
+                            Vacances d'été</div>
+                    </div>
+
+                    <!-- SEPTEMBRE 2026 -->
+                    <div class="month-block" id="septembre">
+                        <h2 class="month-title">Septembre 2026</h2>
+                        <div class="course-list">
+                            <div class="course-item" data-type="prompting">
+                                <div class="course-dates"><span class="day">JEU &amp; VEN</span> <span class="num">03 -
+                                        04</span></div>
+                                <div class="course-info">
+                                    <h3>IA Générative <span class="badge">1.5 jours</span></h3>
+                                    <p>Distanciel • Session 4</p>
+                                </div>
+                                <div class="course-action"><a href="contact-page.html?formation=prompting"
+                                        class="btn btn-primary" style="padding: 0.6rem 1.2rem;">S'inscrire</a></div>
+                            </div>
+                            <div class="course-item" data-type="machine_learning">
+                                <div class="course-dates"><span class="day">JEU / VEN</span> <span class="num">10, 11,
+                                        17</span></div>
+                                <div class="course-info">
+                                    <h3>Machine Learning <span class="badge">3 jours</span></h3>
+                                    <p>Distanciel • Session 4</p>
+                                </div>
+                                <div class="course-action"><a href="contact-page.html?formation=machine_learning"
+                                        class="btn btn-primary" style="padding: 0.6rem 1.2rem;">S'inscrire</a></div>
+                            </div>
+                            <div class="course-item" data-type="deep_learning">
+                                <div class="course-dates"><span class="day">VEN / JEU</span> <span class="num">18, 24,
+                                        25</span></div>
+                                <div class="course-info">
+                                    <h3>Deep Learning <span class="badge">3 jours</span></h3>
+                                    <p>Distanciel • Session 4</p>
+                                </div>
+                                <div class="course-action"><a href="contact-page.html?formation=deep_learning"
+                                        class="btn btn-primary" style="padding: 0.6rem 1.2rem;">S'inscrire</a></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- OCTOBRE 2026 -->
+                    <div class="month-block" id="octobre">
+                        <h2 class="month-title">Octobre 2026</h2>
+                        <div class="course-list">
+                            <div class="course-item" data-type="python">
+                                <div class="course-dates"><span class="day">JEU / VEN</span> <span class="num">01, 02,
+                                        08</span></div>
+                                <div class="course-info">
+                                    <h3>Python pour la Data <span class="badge">3 jours</span></h3>
+                                    <p>Distanciel • Session 6</p>
+                                </div>
+                                <div class="course-action"><a href="contact-page.html?formation=python"
+                                        class="btn btn-primary" style="padding: 0.6rem 1.2rem;">S'inscrire</a></div>
+                            </div>
+                            <div class="course-item" data-type="jupyter">
+                                <div class="course-dates"><span class="day">VEN</span> <span class="num">09</span></div>
+                                <div class="course-info">
+                                    <h3>Jupyter Notebook <span class="badge">1 jour</span></h3>
+                                    <p>Distanciel • Session 4</p>
+                                </div>
+                                <div class="course-action"><a href="contact-page.html?formation=jupyter"
+                                        class="btn btn-primary" style="padding: 0.6rem 1.2rem;">S'inscrire</a></div>
+                            </div>
+                            <div class="course-item" data-type="prompting">
+                                <div class="course-dates"><span class="day">JEU &amp; VEN</span> <span class="num">15 -
+                                        16</span></div>
+                                <div class="course-info">
+                                    <h3>IA Générative <span class="badge">1.5 jours</span></h3>
+                                    <p>Distanciel • Session 5</p>
+                                </div>
+                                <div class="course-action"><a href="contact-page.html?formation=prompting"
+                                        class="btn btn-primary" style="padding: 0.6rem 1.2rem;">S'inscrire</a></div>
+                            </div>
+                        </div>
+                        <div class="holiday-notice"><i class="fas fa-leaf"></i> <strong>17 Octobre - 1 Novembre</strong>
+                            : Vacances de la Toussaint</div>
+                    </div>
+
+                    <!-- NOVEMBRE 2026 -->
+                    <div class="month-block" id="novembre">
+                        <h2 class="month-title">Novembre 2026</h2>
+                        <div class="course-list">
+                            <div class="course-item" data-type="machine_learning">
+                                <div class="course-dates"><span class="day">JEU / VEN</span> <span class="num">05, 06,
+                                        12</span></div>
+                                <div class="course-info">
+                                    <h3>Machine Learning <span class="badge">3 jours</span></h3>
+                                    <p>Distanciel • Session 5</p>
+                                </div>
+                                <div class="course-action"><a href="contact-page.html?formation=machine_learning"
+                                        class="btn btn-primary" style="padding: 0.6rem 1.2rem;">S'inscrire</a></div>
+                            </div>
+                            <div class="course-item" data-type="deep_learning">
+                                <div class="course-dates"><span class="day">VEN / JEU</span> <span class="num">13, 19,
+                                        20</span></div>
+                                <div class="course-info">
+                                    <h3>Deep Learning <span class="badge">3 jours</span></h3>
+                                    <p>Distanciel • Session 5</p>
+                                </div>
+                                <div class="course-action"><a href="contact-page.html?formation=deep_learning"
+                                        class="btn btn-primary" style="padding: 0.6rem 1.2rem;">S'inscrire</a></div>
+                            </div>
+                            <div class="course-item" data-type="python">
+                                <div class="course-dates"><span class="day">JEU / VEN</span> <span class="num">26, 27,
+                                        03 Déc</span></div>
+                                <div class="course-info">
+                                    <h3>Python pour la Data <span class="badge">3 jours</span></h3>
+                                    <p>Distanciel • Session 7</p>
+                                </div>
+                                <div class="course-action"><a href="contact-page.html?formation=python"
+                                        class="btn btn-primary" style="padding: 0.6rem 1.2rem;">S'inscrire</a></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- DECEMBRE 2026 -->
+                    <div class="month-block" id="decembre">
+                        <h2 class="month-title">Décembre 2026</h2>
+                        <div class="course-list">
+                            <div class="course-item" data-type="machine_learning">
+                                <div class="course-dates"><span class="day">VEN / JEU</span> <span class="num">04, 10,
+                                        11</span></div>
+                                <div class="course-info">
+                                    <h3>Machine Learning <span class="badge">3 jours</span></h3>
+                                    <p>Distanciel • Session 6</p>
+                                </div>
+                                <div class="course-action"><a href="contact-page.html?formation=machine_learning"
+                                        class="btn btn-primary" style="padding: 0.6rem 1.2rem;">S'inscrire</a></div>
+                            </div>
+                            <div class="course-item" data-type="jupyter">
+                                <div class="course-dates"><span class="day">JEU</span> <span class="num">17</span></div>
+                                <div class="course-info">
+                                    <h3>Jupyter Notebook <span class="badge">1 jour</span></h3>
+                                    <p>Distanciel • Session 5</p>
+                                </div>
+                                <div class="course-action"><a href="contact-page.html?formation=jupyter"
+                                        class="btn btn-primary" style="padding: 0.6rem 1.2rem;">S'inscrire</a></div>
+                            </div>
+                            <div class="course-item" data-type="prompting">
+                                <div class="course-dates"><span class="day">VEN</span> <span class="num">18</span></div>
+                                <div class="course-info">
+                                    <h3>IA Générative <span class="badge">1 jour intensif</span></h3>
+                                    <p>Distanciel • Session 6</p>
+                                </div>
+                                <div class="course-action"><a href="contact-page.html?formation=prompting"
+                                        class="btn btn-primary" style="padding: 0.6rem 1.2rem;">S'inscrire</a></div>
+                            </div>
+                        </div>
+                        <div class="holiday-notice"><i class="fas fa-snowflake"></i> <strong>19 Décembre - 3
+                                Janvier</strong> : Vacances de Noël</div>
+                    </div>
+                </div>
+            </div>
+
+            <script>
+                document.addEventListener('DOMContentLoaded', () => {
+                    const filterBtns = document.querySelectorAll('.filter-btn');
+                    const courseItems = document.querySelectorAll('.course-item');
+                    const monthBlocks = document.querySelectorAll('.month-block');
+
+                    filterBtns.forEach(btn => {
+                        btn.addEventListener('click', () => {
+                            // Update active state
+                            filterBtns.forEach(b => b.classList.remove('active'));
+                            btn.classList.add('active');
+
+                            const filter = btn.getAttribute('data-filter');
+
+                            // Show/hide items
+                            courseItems.forEach(item => {
+                                if (filter === 'all' || item.getAttribute('data-type') === filter) {
+                                    item.style.display = 'flex';
+                                } else {
+                                    item.style.display = 'none';
+                                }
+                            });
+
+                            // Hide blocks that have no visible items
+                            monthBlocks.forEach(block => {
+                                const visibleItems = Array.from(block.querySelectorAll('.course-item')).filter(i => i.style.display !== 'none');
+                                if (visibleItems.length === 0) {
+                                    block.style.display = 'none';
+                                } else {
+                                    block.style.display = 'block';
+                                }
+                            });
+                        });
+                    });
+                });
+            </script>
         </div>
     </main>
 
-<footer class="mega-footer">
+    <footer class="mega-footer">
         <div class="container">
             <div class="footer-grid">
                 <!-- Column 1: Brand & Socials -->
@@ -163,4 +859,5 @@
     </footer>
     <script src="script.js"></script>
 </body>
+
 </html>
