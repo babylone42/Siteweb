@@ -1,0 +1,20 @@
+﻿Mois;Dates;Jours;Formation;Durée;Format;Session;Statut
+Avril;09 Avril;Jeudi;Jupyter Notebook;1 jour;Distanciel;Session 2;Ouvert
+Avril;16-17 Avril;Jeudi & Vendredi;IA Générative;1.5 jours;Distanciel;Session 3;Ouvert
+Mai;07, 21, 22 Mai;Jeudi / Vendredi;Python pour la Data;3 jours;Distanciel;Session 4;Ouvert
+Mai;28, 29 Mai, 04 Juin;Jeudi / Vendredi;Machine Learning;3 jours;Distanciel;Session 3;Ouvert
+Juin;05, 11, 12 Juin;Vendredi / Jeudi;Deep Learning;3 jours;Distanciel;Session 3;Complet
+Juin;18 Juin;Jeudi;Jupyter Notebook;1 jour;Distanciel;Session 3;Ouvert
+Juin;25, 26 Juin, 02 Juil;Jeudi / Vendredi;Python pour la Data;3 jours;Distanciel;Session 5;Ouvert
+Septembre;03-04 Sept;Jeudi & Vendredi;IA Générative;1.5 jours;Distanciel;Session 4;Ouvert
+Septembre;10, 11, 17 Sept;Jeudi / Vendredi;Machine Learning;3 jours;Distanciel;Session 4;Ouvert
+Septembre;18, 24, 25 Sept;Vendredi / Jeudi;Deep Learning;3 jours;Distanciel;Session 4;Ouvert
+Octobre;01, 02, 08 Oct;Jeudi / Vendredi;Python pour la Data;3 jours;Distanciel;Session 6;Ouvert
+Octobre;09 Octobre;Vendredi;Jupyter Notebook;1 jour;Distanciel;Session 4;Ouvert
+Octobre;15-16 Oct;Jeudi & Vendredi;IA Générative;1.5 jours;Distanciel;Session 5;Ouvert
+Novembre;05, 06, 12 Nov;Jeudi / Vendredi;Machine Learning;3 jours;Distanciel;Session 5;Ouvert
+Novembre;13, 19, 20 Nov;Vendredi / Jeudi;Deep Learning;3 jours;Distanciel;Session 5;Ouvert
+Novembre;26, 27 Nov, 03 Déc;Jeudi / Vendredi;Python pour la Data;3 jours;Distanciel;Session 7;Ouvert
+Décembre;04, 10, 11 Déc;Vendredi / Jeudi;Machine Learning;3 jours;Distanciel;Session 6;Ouvert
+Décembre;17 Décembre;Jeudi;Jupyter Notebook;1 jour;Distanciel;Session 5;Ouvert
+Décembre;18 Décembre;Vendredi;IA Générative;1 jour intensif;Distanciel;Session 6;Ouvert

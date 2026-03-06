@@ -13,13 +13,16 @@
     // Navbar Scroll Effect (Hide top row on scroll)
     const navbar = document.querySelector('.navbar');
     if (navbar) {
-        window.addEventListener('scroll', () => {
+        const toggleScrolled = () => {
             if (window.scrollY > 50) {
                 navbar.classList.add('scrolled');
             } else {
                 navbar.classList.remove('scrolled');
             }
-        });
+        };
+        window.addEventListener('scroll', toggleScrolled);
+        // Initialize state on load to prevent jumping
+        toggleScrolled();
     }
 
     // Mobile Menu Toggle
@@ -28,16 +31,16 @@
 
     if (hamburger) {
         hamburger.addEventListener('click', () => {
-            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
-            if (navLinks.style.display === 'flex') {
-                navLinks.style.flexDirection = 'column';
-                navLinks.style.position = 'absolute';
-                navLinks.style.top = '100%';
-                navLinks.style.left = '0';
-                navLinks.style.width = '100%';
-                navLinks.style.background = '#111111';
-                navLinks.style.padding = '2rem';
-            }
+            navLinks.classList.toggle('active-mobile-menu');
+            hamburger.innerHTML = navLinks.classList.contains('active-mobile-menu') ? '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+        });
+
+        // Close menu when clicking a link
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active-mobile-menu');
+                hamburger.innerHTML = '<i class="fas fa-bars"></i>';
+            });
         });
     }
 
@@ -308,6 +311,23 @@
             });
         });
     }
+
+    const solCarouselTrack = document.getElementById('solutions-track');
+    const solPrevBtn = document.querySelector('.prev-btn-solutions');
+    const solNextBtn = document.querySelector('.next-btn-solutions');
+
+    if (solCarouselTrack && solPrevBtn && solNextBtn) {
+        const getSolScrollAmount = () => {
+            const card = solCarouselTrack.querySelector('.solution-card');
+            return card ? card.offsetWidth + 32 : 350;
+        };
+        solPrevBtn.addEventListener('click', () => {
+            solCarouselTrack.parentElement.scrollBy({ left: -getSolScrollAmount(), behavior: 'smooth' });
+        });
+        solNextBtn.addEventListener('click', () => {
+            solCarouselTrack.parentElement.scrollBy({ left: getSolScrollAmount(), behavior: 'smooth' });
+        });
+    }
     // --- Formations Carousel Ends ---
 
     // Articles Carousel Logic
@@ -451,4 +471,21 @@
         }, 500);
     }
 
+    // FAQ Toggle "Voir plus"
+    const toggleFaqBtn = document.getElementById('toggle-faq-btn');
+    if (toggleFaqBtn) {
+        toggleFaqBtn.addEventListener('click', () => {
+            const faqSection = document.getElementById('faq');
+            if (faqSection) {
+                faqSection.classList.toggle('show-all');
+                if (faqSection.classList.contains('show-all')) {
+                    toggleFaqBtn.innerHTML = 'Voir moins <i class="fas fa-chevron-up" style="margin-left: 0.5rem;"></i>';
+                } else {
+                    toggleFaqBtn.innerHTML = 'Voir tout <i class="fas fa-chevron-down" style="margin-left: 0.5rem;"></i>';
+                }
+            }
+        });
+    }
+
 });
+

@@ -12,7 +12,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Space+Grotesk:wght@300;400;600;700&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=5">
+    <link rel="stylesheet" href="style.css?v=9">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
@@ -46,7 +46,7 @@
             <!-- BOTTOM ROW: Logo, Links & Mobile Menu -->
             <div class="navbar-bottom">
                 <a href="index.html" class="logo">
-                    <img src="images/logo.svg" alt="Babylone42 Logo" style="height: 40px;">
+                    <img src="images/logo.svg" alt="Babylone42 Logo" style="height: 30px;">
                 </a>
 
                 <ul class="nav-links">
@@ -59,7 +59,7 @@
                         </ul>
                     </li>
                     <li class="dropdown">
-                        <a href="#solutions">Solutions <i class="fas fa-chevron-down"
+                        <a href="#solutions">Solutions IA <i class="fas fa-chevron-down"
                                 style="font-size: 0.8rem; margin-left: 0.3rem;"></i></a>
                         <ul class="dropdown-menu">
                             <li><a href="solution-chatbots.html">Chatbots 24/7</a></li>
@@ -81,7 +81,7 @@
                                     des formations</a></li>
                         </ul>
                     </li>
-                    <li><a href="articles.html">Blog/actualités</a></li>
+                    <li><a href="articles.html">Actualités</a></li>
                     <li><a href="contact-page.html" class="btn btn-primary nav-btn">Diagnostic IA Gratuit</a></li>
                 </ul>
 
@@ -137,7 +137,7 @@
                 <!-- Card 1 -->
                 <div class="bento-card problem-card-bento">
                     <div class="bento-stat">
-                        <span class="stat-value">142</span>
+                        <span class="stat-value"><span class="stat-number" data-target="142">0</span></span>
                         <span class="stat-unit">jours / an</span>
                         <span class="stat-label">Temps perdu en gestion administrative par les PME (Sage)</span>
                     </div>
@@ -150,7 +150,8 @@
                 <!-- Card 2 -->
                 <div class="bento-card problem-card-bento">
                     <div class="bento-stat">
-                        <span class="stat-value">84<span style="font-size: 2.5rem; margin-left: 2px;">%</span></span>
+                        <span class="stat-value"><span class="stat-number" data-target="84">0</span><span
+                                style="font-size: 2.5rem; margin-left: 2px;">%</span></span>
                         <span class="stat-unit">des dirigeants</span>
                         <span class="stat-label">doutent de la qualité de leurs données pour décider (Goaland)</span>
                     </div>
@@ -163,7 +164,8 @@
                 <!-- Card 3 -->
                 <div class="bento-card problem-card-bento">
                     <div class="bento-stat">
-                        <span class="stat-value">3<span style="font-size: 2.5rem; margin-left: 2px;">x</span></span>
+                        <span class="stat-value"><span class="stat-number" data-target="3">0</span><span
+                                style="font-size: 2.5rem; margin-left: 2px;">x</span></span>
                         <span class="stat-unit">plus vite</span>
                         <span class="stat-label">C'est la vitesse à laquelle vos concurrents équipés d'IA traitent leurs
                             prospects</span>
@@ -181,44 +183,67 @@
     <section id="solutions" class="section-padding">
         <div class="container">
             <h2 class="section-title">Nos solutions <span class="highlight">IA</span></h2>
-            <p class="section-subtitle">3 leviers pour débloquer votre potentiel et transformer votre entreprise.</p>
+            <p class="section-subtitle"
+                style="text-align: justify; margin-bottom: 3rem; max-width: 900px; margin-left: auto; margin-right: auto;">
+                L'ère numérique exige une adaptation rapide et intelligente. En combinant la puissance de l'IA et de la
+                tech, Babylone 42 vous accompagne pour franchir un cap décisif dans votre croissance. Nous concevons des
+                solutions sur mesure qui s'intègrent organiquement à vos processus existants. Grâce à l'automatisation
+                de vos tâches chronophages, vous libérez un temps précieux pour vos équipes, leur permettant de se
+                concentrer sur l'essentiel. Que ce soit à travers le déploiement de copilotes performants, la mise en
+                place de chatbots disponibles 24/7, ou nos programmes de formaciones tech de pointe, Babylone s'assure
+                que vous maîtrisiez chaque aspect de votre transformation digitale. Chez Babylone 42, nous croyons
+                qu'une technologie n'a de valeur que si elle est adoptée. C'est pourquoi chaque projet est pensé pour
+                maximiser votre retour sur investissement et garantir une adoption fluide par l'ensemble de vos
+                collaborateurs de manière pérenne.
+            </p>
 
-            <div class="solutions-grid">
-                <!-- Chatbots -->
-                <a href="solution-chatbots.html" class="solution-card">
-                    <div class="solution-visual">
-                        <img src="images/chatbot_modern_ui.png" alt="Chatbot Customer Service Interface">
-                    </div>
-                    <div class="solution-content">
-                        <h3>Chatbots 24/7</h3>
-                        <p>Support client et interne automatisé. Réponse immédiate et accès instantané à votre base de
-                            connaissances.</p>
-                    </div>
-                </a>
+            <div class="carousel-container">
+                <button class="carousel-btn prev-btn-solutions" aria-label="Slide Précédente"><i
+                        class="fas fa-chevron-left"></i></button>
+                <div class="carousel-track-wrapper">
+                    <div class="carousel-track" id="solutions-track">
+                        <!-- Chatbots -->
+                        <a href="solution-chatbots.html" class="solution-card">
+                            <div class="solution-visual">
+                                <img src="images/chatbot_modern_ui.png" alt="Chatbot Customer Service Interface">
+                            </div>
+                            <div class="solution-content">
+                                <h3>Chatbots 24/7</h3>
+                                <p>Support client et interne automatisé. Réponse immédiate et accès instantané à votre
+                                    base de
+                                    connaissances.</p>
+                            </div>
+                        </a>
 
-                <!-- Copilots (Inverted Theme) -->
-                <a href="solution-copilots.html" class="solution-card inverted">
-                    <div class="solution-visual">
-                        <img src="images/copilot_laptop_ui.png" alt="AI Copilot Dashboard">
-                    </div>
-                    <div class="solution-content">
-                        <h3>Copilots IA</h3>
-                        <p>Des assistants intelligents pour vos équipes Vente, RH et Direction. Rédigez, synthétisez et
-                            analysez en temps réel.</p>
-                    </div>
-                </a>
+                        <!-- Copilots (Inverted Theme) -->
+                        <a href="solution-copilots.html" class="solution-card inverted">
+                            <div class="solution-visual">
+                                <img src="images/copilot_laptop_ui.png" alt="AI Copilot Dashboard">
+                            </div>
+                            <div class="solution-content">
+                                <h3>Copilots IA</h3>
+                                <p>Des assistants intelligents pour vos équipes Vente, RH et Direction. Rédigez,
+                                    synthétisez et
+                                    analysez en temps réel.</p>
+                            </div>
+                        </a>
 
-                <!-- Automation -->
-                <a href="solution-automation.html" class="solution-card">
-                    <div class="solution-visual">
-                        <img src="images/automation_ui_modern.png" alt="Automated Tech Workflows">
+                        <!-- Automation -->
+                        <a href="solution-automation.html" class="solution-card">
+                            <div class="solution-visual">
+                                <img src="images/automation_ui_modern.png" alt="Automated Tech Workflows">
+                            </div>
+                            <div class="solution-content">
+                                <h3>Automatisation</h3>
+                                <p>Fini les tâches manuelles. Traitement automatique de factures, reporting et
+                                    extraction de
+                                    données.</p>
+                            </div>
+                        </a>
                     </div>
-                    <div class="solution-content">
-                        <h3>Automatisation</h3>
-                        <p>Fini les tâches manuelles. Traitement automatique de factures, reporting et extraction de
-                            données.</p>
-                    </div>
-                </a>
+                </div>
+                <button class="carousel-btn next-btn-solutions" aria-label="Slide Suivante"><i
+                        class="fas fa-chevron-right"></i></button>
             </div>
 
             <!-- ACCOMPAGNEMENT SUBSECTION -->
@@ -261,7 +286,7 @@
                 </div>
             </div>
 
-            <div class="section-cta" style="margin-top: 3rem;">
+            <div class="section-cta" style="margin-top: 3rem; text-align: center;">
                 <a href="#contact" class="btn btn-secondary">Parlons de votre projet IA gratuitement</a>
             </div>
         </div>
@@ -273,7 +298,7 @@
             <h2 class="section-title">Qui accompagnons-nous ?</h2>
             <div class="grid-3">
                 <div class="target-card-new">
-                    <h4 class="target-title">Dirigeants PME & TPE</h4>
+                    <h3 class="target-title">Dirigeants PME & TPE</h3>
                     <div class="target-image-wrapper">
                         <img src="images/bg_tpe_pme.png" alt="PME et TPE" class="target-img">
                     </div>
@@ -283,7 +308,7 @@
                 </div>
 
                 <div class="target-card-new">
-                    <h4 class="target-title">Enseignement / R&amp;D</h4>
+                    <h3 class="target-title">Enseignement / R&amp;D</h3>
                     <div class="target-image-wrapper">
                         <img src="images/bg_ecole.png" alt="Enseignement et Recherche" class="target-img">
                     </div>
@@ -292,7 +317,7 @@
                 </div>
 
                 <div class="target-card-new">
-                    <h4 class="target-title">Secteur Public</h4>
+                    <h3 class="target-title">Secteur Public</h3>
                     <div class="target-image-wrapper">
                         <img src="images/bg_service_public.png" alt="Secteur Public" class="target-img">
                     </div>
@@ -308,7 +333,7 @@
 
 
     <!-- FORMATIONS SECTION (BENTO GRID) -->
-    <section id="formations" class="bg-darker" style="padding: 4rem 0;">
+    <section id="formations" class="bg-darker section-padding">
         <div class="container">
             <h2 class="section-title" style="margin-bottom: 2rem;">Formations</h2>
             <div class="carousel-container">
@@ -392,7 +417,7 @@
 
 
     <!-- DIFFERENTIATORS -->
-    <section id="why-us" class="bg-light" style="padding: 4rem 0;">
+    <section id="why-us" class="bg-light section-padding">
         <div class="container">
             <div class="why-us-grid">
                 <!-- Left: Staggered Images -->
@@ -613,25 +638,44 @@
                             </div>
                         </div>
                     </div>
+                    <!-- Action to show more FAQs -->
+                    <div class="faq-actions" style="width: 100%; text-align: center; margin-top: 2rem;">
+                        <button id="toggle-faq-btn" class="btn btn-secondary">Voir tout <i class="fas fa-chevron-down"
+                                style="margin-left: 0.5rem;"></i></button>
+                    </div>
                 </div>
-            </div>
     </section>
 
     <!-- CONTACT SECTION -->
-    <section id="contact" class="bg-light" style="padding: 2rem 0;">
+    <section id="contact" class="bg-light section-padding">
         <div class="container">
-            <div class="contact-grid">
+            <div
+                style="display: flex; flex-direction: column; align-items: center; max-width: 900px; margin: 0 auto; gap: 3rem;">
                 <!-- Left: Info -->
-                <div class="contact-info">
+                <div class="contact-info"
+                    style="display: flex; flex-direction: column; align-items: center; text-align: center;">
                     <span class="badge"
                         style="background: rgba(16, 155, 128, 0.1); color: var(--primary-color);">Diagnostic IA
                         Gratuit</span>
-                    <h2 class="section-title" style="text-align: left; margin-bottom: 1rem;">Passez à l'<span
-                            class="highlight">action</span></h2>
-                    <p style="margin-bottom: 2rem; font-size: 1.1rem; color: var(--text-muted);">Quel est votre défi
-                        actuel ? Laissez-nous un message et notre équipe vous recontactera très rapidement.</p>
+                    <h2 class="section-title" style="text-align: center; margin-bottom: 1rem; margin-top: 1rem;">Passez
+                        à l'<span class="highlight">action</span></h2>
+                    <p class="section-subtitle"
+                        style="margin-bottom: 2rem; color: var(--text-muted); text-align: justify; max-width: 900px; margin-left: auto; margin-right: auto;">
+                        Il est grand temps de transformer vos idées en solutions concrètes. Chez Babylone 42, chaque
+                        défi est une opportunité d'innover et de repenser la façon dont vous travaillez. Que vous
+                        souhaitiez intégrer de l'IA dans vos processus décisionnels, fluidifier vos flux de travail par
+                        l'automatisation, ou simplement former vos collaborateurs grâce à nos formaciones tech, nous
+                        sommes là pour vous. Notre équipe tech d'experts est prête à analyser en profondeur vos besoins
+                        spécifiques pour vous proposer un plan d'action personnalisé et efficace. Ne laissez pas la
+                        complexité technologique freiner vos ambitions. Contactez Babylone dès aujourd'hui et réservez
+                        votre audit de diagnostic IA entièrement gratuit. Ensemble, nous évaluerons précisément votre
+                        maturité digitale et dessinerons la feuille de route qui fera la différence face à votre
+                        concurrence. Faites le premier pas vers une croissance accélérée et laissez l'expertise de
+                        Babylone 42 catalyser la réussite éclatante de vos projets.
+                    </p>
 
-                    <div class="contact-details">
+                    <div class="contact-details"
+                        style="display: flex; flex-direction: row; flex-wrap: wrap; justify-content: center; gap: 2rem;">
                         <div class="contact-item">
                             <div class="contact-icon"><i class="fas fa-envelope"></i></div>
                             <div class="contact-text">
@@ -735,7 +779,7 @@
     <section id="articles" class="section-padding bg-darker" style="border-top: 1px solid rgba(255,255,255,0.05);">
         <div class="container overflow-hidden">
             <div class="section-header" style="text-align: center; margin-bottom: 2rem;">
-                <div class="badge">Blog & Actualités</div>
+                <div class="badge">Actualités</div>
                 <h2 class="section-title">L'IA avance vite, <span class="highlight">ne ratez rien</span></h2>
                 <p>Découvrez nos derniers articles, études de cas et conseils pour intégrer l'intelligence artificielle
                     dans votre entreprise.</p>
@@ -855,14 +899,14 @@
                     <ul class="footer-links-list">
                         <li><a href="about.html">About us</a></li>
                         <li><a href="interlocuteurs.html">Vos interlocuteurs</a></li>
-                        <li><a href="articles.html">Blog / Actualités</a></li>
+                        <li><a href="articles.html">Actualités</a></li>
                         <li><a href="faq.html">FAQ</a></li>
                     </ul>
                 </div>
 
                 <!-- Column 3: Solutions -->
                 <div class="footer-col">
-                    <h4 class="footer-title">Solutions</h4>
+                    <h4 class="footer-title">Solutions IA</h4>
                     <ul class="footer-links-list">
                         <li><a href="solution-chatbots.html">Chatbots 24/7</a></li>
                         <li><a href="solution-copilots.html">Copilots IA</a></li>
@@ -909,7 +953,7 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js?v=2"></script>
 </body>
 
 </html>

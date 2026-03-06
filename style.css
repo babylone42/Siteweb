@@ -22,12 +22,20 @@
     box-sizing: border-box;
 }
 
+html {
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
 body {
     font-family: var(--font-body);
     background-color: var(--bg-color);
     color: var(--text-color);
     line-height: 1.6;
     scroll-behavior: smooth;
+    padding: 24px;
+    overflow-x: hidden;
+    max-width: 100%;
 }
 
 /* TYPOGRAPHY */
@@ -52,7 +60,7 @@ h2 {
 }
 
 h3 {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     margin-bottom: 0.5rem;
 }
 
@@ -633,26 +641,40 @@ p {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
     gap: 1rem;
+}
+
+.bento-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
 }
 
 .problem-card-bento h3 {
     font-size: 1.1rem;
     margin-bottom: 0.5rem;
+    text-align: center !important;
+    justify-content: center !important;
 }
 
 .problem-card-bento p {
     font-size: 0.9rem;
     line-height: 1.5;
+    text-align: center !important;
+    justify-content: center;
 }
 
 .bento-stat {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     padding-bottom: 1rem;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     margin-bottom: 1rem;
+    text-align: center;
 }
 
 .stat-value {
@@ -707,17 +729,22 @@ p {
 .carousel-track {
     display: flex;
     gap: 2rem;
-    /* This ensures children size according to container width (approx 3 items per view) */
-    width: max-content;
+    align-items: stretch;
 }
 
 .carousel-track>* {
     scroll-snap-align: start;
-    /* Adjust width to show exactly 3 cards on standard desktop minus gap */
-    width: calc((100vw - 4rem - 6rem) / 3);
-    max-width: 400px;
+    width: calc(50% - 1rem);
+    flex: 0 0 calc(50% - 1rem);
     min-width: 320px;
     flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+    .carousel-track>* {
+        width: 100%;
+        flex: 0 0 100%;
+    }
 }
 
 .carousel-btn {
@@ -822,7 +849,9 @@ p {
     flex-direction: column;
     text-decoration: none;
     color: inherit;
-    height: 100%;
+    /* Ensure cards stretch to fill carousel height */
+    height: auto;
+    min-height: 100%;
 }
 
 .solution-card:hover {
@@ -1136,15 +1165,26 @@ p {
    FAQ SECTION 
 -------------------------------------- */
 .faq-grid {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 4rem;
-    align-items: start;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
 }
 
 .faq-header {
-    position: sticky;
-    top: 6rem;
+    text-align: center;
+    position: relative;
+    top: 0;
+}
+
+.faq-header p {
+    margin: 0 auto;
+    max-width: 700px;
+}
+
+/* Limit FAQ to 4 items initially */
+#faq:not(.show-all) .faq-item:nth-child(n+5) {
+    display: none;
 }
 
 .badge {
@@ -1163,32 +1203,11 @@ p {
     width: 100%;
 }
 
-/* Fallback gradient overlay if mask fails, using z-index to place it over items but pointer-events none to allow clicks */
-.faq-list-wrapper::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100px;
-    background: linear-gradient(to bottom, rgba(1, 16, 20, 0) 0%, rgba(1, 16, 20, 1) 100%);
-    pointer-events: none;
-    z-index: 5;
-    border-radius: 0 0 12px 12px;
-}
-
 .faq-list {
     display: flex;
     flex-direction: column;
     gap: 0.75rem;
-    max-height: 450px;
-    /* Approximately 5 items height */
-    overflow-y: auto;
     padding-bottom: 2rem;
-
-    /* Hide scrollbars for neat roulette look */
-    scrollbar-width: none;
-    -ms-overflow-style: none;
 }
 
 .faq-list::-webkit-scrollbar {
@@ -1925,4 +1944,330 @@ p {
     background: #0d826b;
     transform: translateY(-2px);
     box-shadow: 0 10px 20px rgba(16, 155, 128, 0.3);
+}
+
+/* CARDS TEXT JUSTIFICATION */
+.solution-card p,
+.service-card p,
+.faq-answer p,
+.why-us-content p,
+.diff-text p,
+.target-text {
+    text-align: justify;
+}
+
+/* FULL SCREEN MENU & GLOBAL MOBILE RESETS */
+.active-mobile-menu {
+    display: flex !important;
+    flex-direction: column;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    background: rgba(17, 17, 17, 0.98) !important;
+    padding: 6rem 2rem 2rem 2rem !important;
+    z-index: 999;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem !important;
+}
+
+.active-mobile-menu li {
+    font-size: 1.5rem;
+}
+
+.hamburger {
+    z-index: 1001;
+    position: relative;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 0;
+    }
+
+    .navbar-top {
+        max-height: none;
+        overflow: visible;
+        justify-content: center;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .navbar-top-content {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.8rem;
+        font-size: 0.85rem;
+        padding-bottom: 0.5rem;
+        width: 100%;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .nav-links.active-mobile-menu {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--dark-bg);
+        padding: 2rem;
+        gap: 1.5rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        z-index: 1000;
+        max-height: 80vh;
+        overflow-y: auto;
+    }
+
+    /* Keep dropdowns permanently open on mobile menu */
+    .active-mobile-menu .dropdown-menu {
+        display: block;
+        position: static;
+        background: transparent;
+        box-shadow: none;
+        border: none;
+        padding-left: 1rem;
+        margin-top: 0.5rem;
+    }
+
+    .active-mobile-menu .dropdown-menu li a {
+        padding: 0.5rem 0;
+        font-size: 0.95rem;
+        color: var(--text-muted);
+    }
+
+    /* Hide the dropdown chevron on mobile since they are always open */
+    .active-mobile-menu .dropdown>a .fa-chevron-down {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    /* HERO: collapse two-column into single column */
+    .hero {
+        padding: 6rem 1rem 2rem;
+    }
+
+    .hero-content {
+        flex-direction: column;
+        gap: 1.5rem;
+        text-align: center;
+        padding: 0;
+    }
+
+    .hero-text-content {
+        flex: 1 1 100%;
+        width: 100%;
+    }
+
+    .hero-image-content {
+        display: flex;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        opacity: 0.15;
+        margin: 0;
+        pointer-events: none;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hero-3d-logo {
+        height: 100%;
+        width: auto;
+        object-fit: cover;
+    }
+
+    .hero-cta {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .hero-stats {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+    }
+
+    /* General section padding */
+    .section-padding {
+        padding: 3rem 0;
+    }
+
+    .container {
+        padding: 0 1rem;
+    }
+
+    h1 {
+        font-size: 30px !important;
+    }
+
+    h2 {
+        font-size: 20px !important;
+    }
+
+    p,
+    .target-text,
+    .solution-content p,
+    .faq-answer p,
+    .bento-content p,
+    .hero-subtitle {
+        font-size: 1rem !important;
+    }
+
+    /* Grid fallbacks for mobile */
+    .grid-3,
+    .grid-2 {
+        grid-template-columns: 1fr;
+    }
+
+    /* Custom spacing for contact text to prevent edge touching */
+    .contact-info {
+        padding: 0 1rem;
+    }
+
+    /* Ensuring stats/figures remain on a single line on smaller screens without overflowing */
+    .stat-value {
+        font-size: 2.5rem !important;
+        white-space: nowrap;
+    }
+
+    .stat-unit {
+        font-size: 1rem !important;
+    }
+
+    .stat-label {
+        font-size: 1rem !important;
+        /* Made same as h3 and p for consistency */
+        text-align: center;
+        color: #0f172a !important;
+        /* Darker color */
+        display: block;
+        margin-top: 2px;
+    }
+
+    .problem-card-bento {
+        padding: 1.5rem 1rem;
+        text-align: center;
+    }
+
+    .problem-card-bento h3 {
+        font-size: 1rem !important;
+        text-align: center !important;
+        justify-content: center !important;
+        color: #0f172a !important;
+        /* Darker color */
+        margin-bottom: 0px;
+        /* Reduced gap between title and text */
+        width: 100%;
+    }
+
+    .problem-card-bento p {
+        font-size: 1rem !important;
+        /* Made same as h3 and label */
+        text-align: center !important;
+        color: #0f172a !important;
+        /* Darker color */
+        margin-top: 0px;
+        width: 100%;
+    }
+
+    .bento-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center !important;
+        width: 100%;
+    }
+
+    .bento-stat {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding-bottom: 0.5rem;
+        margin-bottom: 0.5rem;
+        border-bottom: 1px solid rgba(15, 23, 42, 0.1) !important;
+    }
+
+    .stat-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .stat-item h3 {
+        font-size: 1.6rem !important;
+        white-space: nowrap;
+        justify-content: center;
+    }
+
+    .bento-stat {
+        white-space: normal;
+    }
+
+    /* SOLUTIONS CAROUSEL MOBILE WIDTH FIX */
+    .carousel-container {
+        padding: 0;
+        justify-content: center;
+    }
+
+    .carousel-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 10;
+        width: 40px;
+        height: 40px;
+        opacity: 0.9;
+    }
+
+    .prev-btn-solutions,
+    .prev-btn,
+    .prev-btn-articles {
+        left: -5px;
+    }
+
+    .next-btn-solutions,
+    .next-btn,
+    .next-btn-articles {
+        right: -5px;
+    }
+
+    .carousel-track-wrapper {
+        width: 100%;
+        padding: 1rem 0;
+    }
+
+    .carousel-track {
+        gap: 1rem;
+        padding: 0 1.5rem;
+        /* Padding for gap at sides */
+    }
+
+    .carousel-track>* {
+        width: 80vw !important;
+        flex: 0 0 80vw !important;
+        min-width: 80vw !important;
+        max-width: 80vw !important;
+        scroll-snap-align: center;
+    }
+
+    .solution-card {
+        margin: 0;
+    }
 }
