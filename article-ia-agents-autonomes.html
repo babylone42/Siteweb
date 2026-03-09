@@ -63,17 +63,20 @@
         }
 
         .article-hero h1 {
-            font-size: clamp(2rem, 5vw, 3rem);
+            font-size: clamp(1.8rem, 5vw, 3rem);
             font-weight: 700;
             color: #fff;
             line-height: 1.2;
             margin-bottom: 1.25rem;
+            word-break: break-word;
+            overflow-wrap: break-word;
         }
 
         .article-hero .lead {
             font-size: 1.2rem;
             color: var(--text-muted);
             line-height: 1.7;
+            text-align: justify;
             max-width: 720px;
         }
 
@@ -111,8 +114,13 @@
 
         .article-content {
             color: #cbd5e1;
-            font-size: 1.05rem;
+            font-size: 1.1rem;
+            text-align: justify;
             line-height: 1.85;
+            min-width: 0;
+            /* Critical for grid overflow */
+            overflow-wrap: break-word;
+            word-wrap: break-word;
         }
 
         .article-content h2 {
@@ -122,6 +130,8 @@
             margin: 2.8rem 0 1rem;
             padding-bottom: 0.5rem;
             border-bottom: 2px solid rgba(16, 155, 128, 0.3);
+            word-break: break-word;
+            overflow-wrap: break-word;
         }
 
         .article-content h3 {
@@ -142,6 +152,7 @@
 
         .article-content li {
             margin-bottom: 0.6rem;
+            text-align: justify;
         }
 
         .article-content strong {
@@ -205,6 +216,7 @@
             border-radius: 12px;
             padding: 1.5rem;
             margin: 1.5rem 0;
+            overflow-wrap: break-word;
         }
 
         .concept-box .concept-title {
@@ -314,8 +326,13 @@
         }
 
         .cta-widget .btn {
+            display: block;
             width: 100%;
             text-align: center;
+            padding: 1rem 0.5rem;
+            font-size: 0.95rem;
+            white-space: normal;
+            /* Allow text to wrap if necessary */
         }
 
         /* Tags */
@@ -368,19 +385,53 @@
             border-top: 1px solid rgba(255, 255, 255, 0.06);
         }
 
+        .table-wrapper {
+            width: 100%;
+            overflow-x: auto;
+            margin: 2rem 0;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .table-wrapper .comparison-table {
+            margin: 0;
+            min-width: 600px;
+        }
+
         /* Responsive */
-        @media (max-width: 768px) {
+        @media (max-width: 991px) {
             .article-layout {
                 grid-template-columns: 1fr;
+                gap: 2rem;
             }
 
             .article-sidebar {
                 position: static;
-                order: -1;
+                order: 2;
+                /* Move sidebar below content on mobile/tablet */
+            }
+
+            .article-cover img {
+                height: 320px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .article-hero {
+                padding-top: 120px;
+                padding-bottom: 40px;
+            }
+
+            .article-hero h1 {
+                font-size: 2rem;
             }
 
             .article-cover img {
                 height: 240px;
+            }
+
+            .article-body {
+                padding: 40px 0 60px;
             }
         }
     </style>
@@ -604,54 +655,56 @@
 
                 <h2 id="comparaison">4. Tableau Comparatif : IA Classique vs Générative vs Agents</h2>
 
-                <table class="comparison-table">
-                    <thead>
-                        <tr>
-                            <th>Critère</th>
-                            <th>IA Classique</th>
-                            <th>IA Générative</th>
-                            <th>Agents Autonomes</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>Fonction principale</strong></td>
-                            <td>Prédire, classer</td>
-                            <td>Créer, générer</td>
-                            <td>Agir, orchestrer</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Mode d'interaction</strong></td>
-                            <td>Données structurées</td>
-                            <td>Langage naturel</td>
-                            <td>Objectifs en langage naturel</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Autonomie</strong></td>
-                            <td>Très faible</td>
-                            <td>Faible (réponse unique)</td>
-                            <td>Élevée (multi-étapes)</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Accès aux outils</strong></td>
-                            <td>Non</td>
-                            <td>Limité</td>
-                            <td>Oui (APIs, CRM, web…)</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Exemples</strong></td>
-                            <td>Filtre spam, scoring leads</td>
-                            <td>ChatGPT, Copilot M365</td>
-                            <td>AutoGPT, agents n8n/Make</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Maturité en 2026</strong></td>
-                            <td>✅ Très mature</td>
-                            <td>✅ Mature</td>
-                            <td>⚡ Émergente mais opérationnelle</td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div class="table-wrapper">
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th>Critère</th>
+                                <th>IA Classique</th>
+                                <th>IA Générative</th>
+                                <th>Agents Autonomes</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Fonction principale</strong></td>
+                                <td>Prédire, classer</td>
+                                <td>Créer, générer</td>
+                                <td>Agir, orchestrer</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Mode d'interaction</strong></td>
+                                <td>Données structurées</td>
+                                <td>Langage naturel</td>
+                                <td>Objectifs en langage naturel</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Autonomie</strong></td>
+                                <td>Très faible</td>
+                                <td>Faible (réponse unique)</td>
+                                <td>Élevée (multi-étapes)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Accès aux outils</strong></td>
+                                <td>Non</td>
+                                <td>Limité</td>
+                                <td>Oui (APIs, CRM, web…)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Exemples</strong></td>
+                                <td>Filtre spam, scoring leads</td>
+                                <td>ChatGPT, Copilot M365</td>
+                                <td>AutoGPT, agents n8n/Make</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Maturité en 2026</strong></td>
+                                <td>✅ Très mature</td>
+                                <td>✅ Mature</td>
+                                <td>⚡ Émergente mais opérationnelle</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
 
                 <h2 id="entreprise">5. Ce Que Cela Signifie Concrètement pour Votre Entreprise</h2>
                 <p>
@@ -787,14 +840,17 @@
     <section class="related-section">
         <div class="container">
             <h2 class="section-title" style="margin-bottom: 2rem;">Articles connexes</h2>
-            <div class="solutions-grid" style="max-width: 900px; margin: 0 auto;">
+            <div class="solutions-grid"
+                style="max-width: 900px; margin: 0 auto; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));">
                 <a href="#" class="solution-card inverted">
                     <div class="solution-visual">
                         <img src="images/article_2.png" alt="IA & Service Client">
                     </div>
                     <div class="solution-content">
-                        <h3>IA & Service Client</h3>
-                        <p>Comment l'IA Générative transforme profondément la relation et le support client en B2B.</p>
+                        <h3 style="font-size: 1.1rem; color: #e2e8f0; margin: 0.5rem 0 0.75rem; line-height: 1.4;">IA &
+                            Service Client</h3>
+                        <p style="color: #64748b; font-size: 1.1rem; text-align: justify; line-height: 1.6;">Comment
+                            l'IA Générative transforme profondément la relation et le support client en B2B.</p>
                     </div>
                 </a>
                 <a href="#" class="solution-card">
@@ -802,8 +858,10 @@
                         <img src="images/article_3.png" alt="Copilot d'entreprise">
                     </div>
                     <div class="solution-content">
-                        <h3>Copilot d'entreprise</h3>
-                        <p>Le guide complet pour intégrer un assistant intelligent et gagner 30% de productivité.</p>
+                        <h3 style="font-size: 1.1rem; color: #e2e8f0; margin: 0.5rem 0 0.75rem; line-height: 1.4;">
+                            Copilot d'entreprise</h3>
+                        <p style="color: #64748b; font-size: 1.1rem; text-align: justify; line-height: 1.6;">Le guide
+                            complet pour intégrer un assistant intelligent et gagner 30% de productivité.</p>
                     </div>
                 </a>
             </div>

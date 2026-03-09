@@ -88,6 +88,13 @@
             text-align: center;
         }
 
+        @media (max-width: 768px) {
+            .results-bar .container {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.5rem;
+            }
+        }
+
         .results-bar .result-item h3 {
             font-size: 2.8rem;
             font-weight: 700;
@@ -107,7 +114,7 @@
             border: 1px solid #e2e8f0;
             border-radius: 12px;
             padding: 2rem;
-            text-align: left;
+            text-align: center;
         }
 
         .pain-card .pain-stat {
@@ -127,8 +134,9 @@
 
         .pain-card p {
             color: #64748b;
-            font-size: 0.95rem;
+            font-size: 1.1rem;
             margin: 0;
+            text-align: justify;
         }
 
         .sol-faq-item {
@@ -168,8 +176,9 @@
 
         .sol-faq-answer p {
             color: var(--text-muted);
-            font-size: 1rem;
+            font-size: 1.1rem;
             margin: 0;
+            text-align: justify;
         }
 
         .sol-faq-item.active .sol-faq-question i {
@@ -209,8 +218,10 @@
 
         .diff-check-list li span {
             color: var(--text-muted);
-            font-size: 0.95rem;
+            font-size: 1.1rem;
             line-height: 1.6;
+            text-align: justify;
+            display: block;
         }
 
         .bg-light .diff-check-list li strong {
@@ -255,20 +266,35 @@
         .process-step i {
             font-size: 2rem;
             color: var(--primary-color);
-            margin-bottom: 1rem;
+            margin: 0 auto 1rem;
             display: block;
+            text-align: center;
         }
 
         .process-step h4 {
             color: #0f172a;
             font-size: 1.1rem;
             margin-bottom: 0.5rem;
+            text-align: center;
         }
 
         .process-step p {
             color: #64748b;
-            font-size: 0.9rem;
+            font-size: 1.1rem;
             margin: 0;
+            text-align: justify;
+        }
+
+        .bento-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .bento-grid {
+                grid-template-columns: 1fr;
+            }
         }
 
         .cta-box {
@@ -383,7 +409,7 @@
                 <h1 style="font-size: 3rem; margin-bottom: 1.25rem; line-height: 1.15;">Votre équipe répond aux <span
                         class="highlight">mêmes questions</span> chaque jour.<br>L'IA peut le faire à leur place.</h1>
                 <p
-                    style="font-size: 1.15rem; color: var(--text-muted); margin-bottom: 2rem; max-width: 680px; margin-left: auto; margin-right: auto;">
+                    style="font-size: 1.1rem; color: var(--text-muted); margin-bottom: 2rem; max-width: 680px; margin-left: auto; margin-right: auto; text-align: justify;">
                     Un chatbot IA sur mesure qui traite 70&nbsp;% de vos tickets en quelques secondes — 24&nbsp;h/24,
                     7&nbsp;j/7 — et libère vos équipes pour les interactions à forte valeur ajoutée.</p>
                 <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
@@ -450,7 +476,9 @@
                             Babylone42</span>
                         <h2 class="section-title" style="text-align: left; margin-bottom: 1rem;">Un chatbot qui <span
                                 class="highlight">comprend</span> vos clients, pas juste leurs mots</h2>
-                        <p style="color: var(--text-muted); margin-bottom: 2rem;">Nos chatbots sont propulsés par les
+                        <p
+                            style="color: var(--text-muted); margin-bottom: 2rem; font-size: 1.1rem; text-align: justify;">
+                            Nos chatbots sont propulsés par les
                             LLMs (GPT-4, Mistral) et entraînés sur votre base de connaissances. Ils comprennent le
                             contexte, le ton et l'intention.</p>
                         <ul class="diff-check-list">
@@ -557,7 +585,9 @@
                         <h2 class="section-title" style="text-align: left; margin-bottom: 1rem;">Vos données restent
                             <span class="highlight">vos données</span>
                         </h2>
-                        <p style="color: var(--text-muted); margin-bottom: 2rem;">La confiance numérique est un avantage
+                        <p
+                            style="color: var(--text-muted); margin-bottom: 2rem; font-size: 1.1rem; text-align: justify;">
+                            La confiance numérique est un avantage
                             concurrentiel. Nos architectures sont conçues pour satisfaire les DSI les plus exigeants.
                         </p>
                         <ul class="diff-check-list">
@@ -587,7 +617,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+                    <div class="bento-grid">
                         <div class="bento-card"
                             style="text-align: center; padding: 2rem; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);">
                             <i class="fas fa-shield-alt"
@@ -640,7 +670,9 @@
                             <i class="fas fa-chevron-down"></i>
                         </div>
                         <div class="faq-answer">
-                            <p style="color: #475569; margin-top: 1rem; margin-bottom: 0;">Non. Babylone42 assure la
+                            <p
+                                style="color: #475569; margin-top: 1rem; margin-bottom: 0; font-size: 1.1rem; text-align: justify;">
+                                Non. Babylone42 assure la
                                 mise en place, le déploiement et la maintenance. Vos équipes accèdent à un tableau de
                                 bord simple pour consulter les statistiques et modifier certains contenus sans coder.
                             </p>
@@ -654,7 +686,9 @@
                             <i class="fas fa-chevron-down"></i>
                         </div>
                         <div class="faq-answer">
-                            <p style="color: #475569; margin-top: 1rem; margin-bottom: 0;">Oui. Contrairement aux
+                            <p
+                                style="color: #475569; margin-top: 1rem; margin-bottom: 0; font-size: 1.1rem; text-align: justify;">
+                                Oui. Contrairement aux
                                 chatbots classiques à boutons, nos solutions reposent sur les LLMs (GPT-4, Mistral). Ils
                                 comprennent les formulations imparfaites, le verlan, les fautes d'orthographe et les
                                 questions composées, en plusieurs langues.</p>
@@ -668,7 +702,9 @@
                             <i class="fas fa-chevron-down"></i>
                         </div>
                         <div class="faq-answer">
-                            <p style="color: #475569; margin-top: 1rem; margin-bottom: 0;">En règle générale, 2&nbsp;à 4
+                            <p
+                                style="color: #475569; margin-top: 1rem; margin-bottom: 0; font-size: 1.1rem; text-align: justify;">
+                                En règle générale, 2&nbsp;à 4
                                 semaines de la phase de cadrage à la mise en production. Le délai dépend principalement
                                 de la disponibilité et du volume de votre documentation existante.</p>
                         </div>
@@ -681,7 +717,9 @@
                             <i class="fas fa-chevron-down"></i>
                         </div>
                         <div class="faq-answer">
-                            <p style="color: #475569; margin-top: 1rem; margin-bottom: 0;">Absolument pas. Nous
+                            <p
+                                style="color: #475569; margin-top: 1rem; margin-bottom: 0; font-size: 1.1rem; text-align: justify;">
+                                Absolument pas. Nous
                                 utilisons des environnements privés (Azure OpenAI avec data isolation, ou instances
                                 auto-hébergées) où vos données ne sont jamais partagées avec les modèles de base ni avec
                                 des tiers.</p>
@@ -695,7 +733,9 @@
                             <i class="fas fa-chevron-down"></i>
                         </div>
                         <div class="faq-answer">
-                            <p style="color: #475569; margin-top: 1rem; margin-bottom: 0;">Nos solutions sont calibrées
+                            <p
+                                style="color: #475569; margin-top: 1rem; margin-bottom: 0; font-size: 1.1rem; text-align: justify;">
+                                Nos solutions sont calibrées
                                 pour les PME et ETI. Nous proposons plusieurs niveaux d'engagement adaptés à votre
                                 volume de tickets et à votre budget. Un premier chatbot simple peut démarrer à partir de
                                 quelques milliers d'euros.</p>
@@ -712,7 +752,8 @@
                     <span class="badge" style="margin-bottom: 1.5rem; display: inline-block;">Diagnostic gratuit</span>
                     <h2 class="section-title" style="margin-bottom: 1rem;">Prêt à libérer vos équipes des tâches
                         répétitives ?</h2>
-                    <p style="color: var(--text-muted); margin-bottom: 2.5rem; font-size: 1.1rem;">En 30 minutes, nos
+                    <p style="color: var(--text-muted); margin-bottom: 2.5rem; font-size: 1.1rem; text-align: justify;">
+                        En 30 minutes, nos
                         experts analysent vos flux de support et vous indiquent le potentiel d'automatisation exact pour
                         votre entreprise. Sans engagement.</p>
                     <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">

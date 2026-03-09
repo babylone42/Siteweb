@@ -33,9 +33,17 @@ body {
     color: var(--text-color);
     line-height: 1.6;
     scroll-behavior: smooth;
-    padding: 24px;
+    padding: 0;
+    /* Removed global padding that caused overflow */
     overflow-x: hidden;
     max-width: 100%;
+}
+
+@media (min-width: 769px) {
+    body {
+        padding: 0;
+        /* Keep it 0 or uniform */
+    }
 }
 
 /* TYPOGRAPHY */
@@ -76,9 +84,11 @@ p {
 
 /* UTILITIES */
 .container {
-    max-width: 1200px;
+    width: 100%;
+    max-width: 1240px;
     margin: 0 auto;
-    padding: 0 1rem;
+    padding: 0 1.5rem;
+    /* Standardized container padding */
 }
 
 .section-padding {

@@ -88,6 +88,13 @@
             text-align: center;
         }
 
+        @media (max-width: 768px) {
+            .results-bar .container {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.5rem;
+            }
+        }
+
         .results-bar .result-item h3 {
             font-size: 2.8rem;
             font-weight: 700;
@@ -107,7 +114,7 @@
             border: 1px solid #e2e8f0;
             border-radius: 12px;
             padding: 2rem;
-            text-align: left;
+            text-align: center;
         }
 
         .pain-card .pain-stat {
@@ -127,8 +134,9 @@
 
         .pain-card p {
             color: #64748b;
-            font-size: 0.95rem;
+            font-size: 1.1rem;
             margin: 0;
+            text-align: justify;
         }
 
         .diff-check-list {
@@ -160,8 +168,10 @@
 
         .diff-check-list li span {
             color: var(--text-muted);
-            font-size: 0.95rem;
+            font-size: 1.1rem;
             line-height: 1.6;
+            text-align: justify;
+            display: block;
         }
 
         .bg-light .diff-check-list li strong {
@@ -206,20 +216,23 @@
         .process-step i {
             font-size: 2rem;
             color: var(--primary-color);
-            margin-bottom: 1rem;
+            margin: 0 auto 1rem;
             display: block;
+            text-align: center;
         }
 
         .process-step h4 {
             color: #0f172a;
             font-size: 1.1rem;
             margin-bottom: 0.5rem;
+            text-align: center;
         }
 
         .process-step p {
             color: #64748b;
-            font-size: 0.9rem;
+            font-size: 1.1rem;
             margin: 0;
+            text-align: justify;
         }
 
         .dept-card {
@@ -233,12 +246,14 @@
             color: var(--primary-color);
             font-size: 1.1rem;
             margin-bottom: 1rem;
+            text-align: center;
         }
 
         .dept-card li {
             color: var(--text-muted);
-            font-size: 0.9rem;
+            font-size: 1.1rem;
             margin-bottom: 0.5rem;
+            text-align: justify;
         }
     </style>
 </head>
@@ -328,7 +343,7 @@
                         class="highlight">3 heures par jour</span> à chercher une information qu'ils possèdent déjà.
                 </h1>
                 <p
-                    style="font-size: 1.15rem; color: var(--text-muted); margin-bottom: 2rem; max-width: 680px; margin-left: auto; margin-right: auto;">
+                    style="font-size: 1.1rem; color: var(--text-muted); margin-bottom: 2rem; max-width: 680px; margin-left: auto; margin-right: auto; text-align: justify;">
                     Un Copilot IA sur mesure qui connaît l'intégralité de votre documentation interne et répond en
                     langage naturel à vos collaborateurs — en toute confidentialité, sans jamais exposer vos données.
                 </p>
@@ -400,7 +415,9 @@
                             Babylone42</span>
                         <h2 class="section-title" style="text-align: left; margin-bottom: 1rem;">Un ChatGPT qui ne
                             connaît <span class="highlight">que votre entreprise</span></h2>
-                        <p style="color: var(--text-muted); margin-bottom: 2rem;">Contrairement aux outils publics,
+                        <p
+                            style="color: var(--text-muted); margin-bottom: 2rem; font-size: 1.1rem; text-align: justify;">
+                            Contrairement aux outils publics,
                             votre Copilot est entraîné exclusivement sur vos documents. Il répond avec précision, cite
                             ses sources, et respecte vos droits d'accès existants.</p>
                         <ul class="diff-check-list">
@@ -472,16 +489,17 @@
                             style="width: 48px; height: 48px; background: rgba(16,155,128,0.1); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.25rem;">
                             <i class="fas fa-chart-line" style="color: var(--primary-color); font-size: 1.4rem;"></i>
                         </div>
-                        <h4 style="color: #0f172a; margin-bottom: 1rem;">Ventes &amp; Commercial</h4>
+                        <h4 style="color: #0f172a; margin-bottom: 1rem; text-align: center;">Ventes &amp; Commercial
+                        </h4>
                         <ul style="list-style: none; padding: 0;">
                             <li
-                                style="color: #64748b; font-size: 0.9rem; margin-bottom: 0.6rem; padding-left: 1rem; border-left: 2px solid var(--primary-color);">
+                                style="color: #64748b; font-size: 1.1rem; margin-bottom: 0.6rem; padding-left: 1rem; border-left: 2px solid var(--primary-color); text-align: justify;">
                                 Génération de propositions commerciales en 5 minutes</li>
                             <li
-                                style="color: #64748b; font-size: 0.9rem; margin-bottom: 0.6rem; padding-left: 1rem; border-left: 2px solid var(--primary-color);">
+                                style="color: #64748b; font-size: 1.1rem; margin-bottom: 0.6rem; padding-left: 1rem; border-left: 2px solid var(--primary-color); text-align: justify;">
                                 Accès instantané aux fiches produits et argumentaires</li>
                             <li
-                                style="color: #64748b; font-size: 0.9rem; padding-left: 1rem; border-left: 2px solid var(--primary-color);">
+                                style="color: #64748b; font-size: 1.1rem; padding-left: 1rem; border-left: 2px solid var(--primary-color); text-align: justify;">
                                 Résumé automatique des historiques clients CRM</li>
                         </ul>
                     </div>
@@ -490,16 +508,16 @@
                             style="width: 48px; height: 48px; background: rgba(16,155,128,0.1); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.25rem;">
                             <i class="fas fa-users" style="color: var(--primary-color); font-size: 1.4rem;"></i>
                         </div>
-                        <h4 style="color: #0f172a; margin-bottom: 1rem;">Ressources Humaines</h4>
+                        <h4 style="color: #0f172a; margin-bottom: 1rem; text-align: center;">Ressources Humaines</h4>
                         <ul style="list-style: none; padding: 0;">
                             <li
-                                style="color: #64748b; font-size: 0.9rem; margin-bottom: 0.6rem; padding-left: 1rem; border-left: 2px solid var(--primary-color);">
+                                style="color: #64748b; font-size: 1.1rem; margin-bottom: 0.6rem; padding-left: 1rem; border-left: 2px solid var(--primary-color); text-align: justify;">
                                 Réponses immédiates aux questions RH des employés (congés, avantages)</li>
                             <li
-                                style="color: #64748b; font-size: 0.9rem; margin-bottom: 0.6rem; padding-left: 1rem; border-left: 2px solid var(--primary-color);">
+                                style="color: #64748b; font-size: 1.1rem; margin-bottom: 0.6rem; padding-left: 1rem; border-left: 2px solid var(--primary-color); text-align: justify;">
                                 Onboarding accéléré avec accès à toute la documentation</li>
                             <li
-                                style="color: #64748b; font-size: 0.9rem; padding-left: 1rem; border-left: 2px solid var(--primary-color);">
+                                style="color: #64748b; font-size: 1.1rem; padding-left: 1rem; border-left: 2px solid var(--primary-color); text-align: justify;">
                                 Analyse et tri automatique des CVs en fonction de critères définis</li>
                         </ul>
                     </div>
@@ -508,16 +526,17 @@
                             style="width: 48px; height: 48px; background: rgba(16,155,128,0.1); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.25rem;">
                             <i class="fas fa-landmark" style="color: var(--primary-color); font-size: 1.4rem;"></i>
                         </div>
-                        <h4 style="color: #0f172a; margin-bottom: 1rem;">Direction &amp; Juridique</h4>
+                        <h4 style="color: #0f172a; margin-bottom: 1rem; text-align: center;">Direction &amp; Juridique
+                        </h4>
                         <ul style="list-style: none; padding: 0;">
                             <li
-                                style="color: #64748b; font-size: 0.9rem; margin-bottom: 0.6rem; padding-left: 1rem; border-left: 2px solid var(--primary-color);">
+                                style="color: #64748b; font-size: 1.1rem; margin-bottom: 0.6rem; padding-left: 1rem; border-left: 2px solid var(--primary-color); text-align: justify;">
                                 Synthèse de rapports et tableaux de bord en quelques secondes</li>
                             <li
-                                style="color: #64748b; font-size: 0.9rem; margin-bottom: 0.6rem; padding-left: 1rem; border-left: 2px solid var(--primary-color);">
+                                style="color: #64748b; font-size: 1.1rem; margin-bottom: 0.6rem; padding-left: 1rem; border-left: 2px solid var(--primary-color); text-align: justify;">
                                 Comparaison et analyse de clauses contractuelles complexes</li>
                             <li
-                                style="color: #64748b; font-size: 0.9rem; padding-left: 1rem; border-left: 2px solid var(--primary-color);">
+                                style="color: #64748b; font-size: 1.1rem; padding-left: 1rem; border-left: 2px solid var(--primary-color); text-align: justify;">
                                 Recherche de précédents dans l'ensemble de la documentation légale interne</li>
                         </ul>
                     </div>
@@ -577,7 +596,9 @@
                             <i class="fas fa-chevron-down"></i>
                         </div>
                         <div class="faq-answer">
-                            <p style="color: #475569; margin-top: 1rem; margin-bottom: 0;">Absolument. Nous utilisons
+                            <p
+                                style="color: #475569; margin-top: 1rem; margin-bottom: 0; font-size: 1.1rem; text-align: justify;">
+                                Absolument. Nous utilisons
                                 des instances Azure OpenAI dédiées avec data isolation totale, ou des modèles
                                 open-source auto-hébergés (Mistral, LLaMA) en fonction de vos exigences. Vos données ne
                                 transitent pas par les serveurs publics d'OpenAI ou d'Anthropic.</p>
@@ -591,7 +612,9 @@
                             <i class="fas fa-chevron-down"></i>
                         </div>
                         <div class="faq-answer">
-                            <p style="color: #475569; margin-top: 1rem; margin-bottom: 0;">Oui. Nous connectons
+                            <p
+                                style="color: #475569; margin-top: 1rem; margin-bottom: 0; font-size: 1.1rem; text-align: justify;">
+                                Oui. Nous connectons
                                 directement le Copilot à SharePoint, OneDrive, Teams, Notion et les ERP courants.
                                 L'ingestion est automatique et la synchronisation peut être configurée en temps réel ou
                                 par lots périodiques.</p>
@@ -605,7 +628,9 @@
                             <i class="fas fa-chevron-down"></i>
                         </div>
                         <div class="faq-answer">
-                            <p style="color: #475569; margin-top: 1rem; margin-bottom: 0;">Non. Notre architecture RBAC
+                            <p
+                                style="color: #475569; margin-top: 1rem; margin-bottom: 0; font-size: 1.1rem; text-align: justify;">
+                                Non. Notre architecture RBAC
                                 (Role-Based Access Control) reflète exactement les droits de votre annuaire d'entreprise
                                 (Azure AD). Un employé ne pourra jamais obtenir une réponse basée sur un document auquel
                                 il n'a pas accès dans votre système de fichiers.</p>
@@ -619,7 +644,9 @@
                             <i class="fas fa-chevron-down"></i>
                         </div>
                         <div class="faq-answer">
-                            <p style="color: #475569; margin-top: 1rem; margin-bottom: 0;">Il n'y a pas de limite
+                            <p
+                                style="color: #475569; margin-top: 1rem; margin-bottom: 0; font-size: 1.1rem; text-align: justify;">
+                                Il n'y a pas de limite
                                 pratique. Nous avons déployé des Copilots sur des bases de plusieurs milliers de
                                 documents (PDFs, Word, Excel, emails, pages web). Plus la base est riche, plus les
                                 réponses sont précises et contextualisées.</p>
@@ -633,7 +660,9 @@
                             <i class="fas fa-chevron-down"></i>
                         </div>
                         <div class="faq-answer">
-                            <p style="color: #475569; margin-top: 1rem; margin-bottom: 0;">Oui. Chaque réponse est
+                            <p
+                                style="color: #475569; margin-top: 1rem; margin-bottom: 0; font-size: 1.1rem; text-align: justify;">
+                                Oui. Chaque réponse est
                                 accompagnée de citations avec le nom du document source et la page ou section exacte.
                                 Cela permet à vos collaborateurs de vérifier l'information et d'éviter les erreurs dites
                                 "hallucinations" des LLMs.</p>
@@ -650,7 +679,8 @@
                     <span class="badge" style="margin-bottom: 1.5rem; display: inline-block;">Diagnostic gratuit</span>
                     <h2 class="section-title" style="margin-bottom: 1rem;">Votre savoir collectif est votre actif le
                         plus précieux.<br><span class="highlight">Rendez-le accessible en temps réel.</span></h2>
-                    <p style="color: var(--text-muted); margin-bottom: 2.5rem; font-size: 1.1rem;">En 30 minutes, nos
+                    <p style="color: var(--text-muted); margin-bottom: 2.5rem; font-size: 1.1rem; text-align: justify;">
+                        En 30 minutes, nos
                         experts vous montrent comment transformer votre documentation existante en un avantage
                         compétitif durable. Sans engagement.</p>
                     <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">

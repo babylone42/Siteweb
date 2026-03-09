@@ -88,6 +88,13 @@
             text-align: center;
         }
 
+        @media (max-width: 768px) {
+            .results-bar .container {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.5rem;
+            }
+        }
+
         .results-bar .result-item h3 {
             font-size: 2.8rem;
             font-weight: 700;
@@ -107,7 +114,7 @@
             border: 1px solid #e2e8f0;
             border-radius: 12px;
             padding: 2rem;
-            text-align: left;
+            text-align: center;
         }
 
         .pain-card .pain-stat {
@@ -127,8 +134,9 @@
 
         .pain-card p {
             color: #64748b;
-            font-size: 0.95rem;
+            font-size: 1.1rem;
             margin: 0;
+            text-align: justify;
         }
 
         .diff-check-list {
@@ -160,8 +168,10 @@
 
         .diff-check-list li span {
             color: var(--text-muted);
-            font-size: 0.95rem;
+            font-size: 1.1rem;
             line-height: 1.6;
+            text-align: justify;
+            display: block;
         }
 
         .bg-light .diff-check-list li strong {
@@ -206,20 +216,23 @@
         .process-step i {
             font-size: 2rem;
             color: var(--primary-color);
-            margin-bottom: 1rem;
+            margin: 0 auto 1rem;
             display: block;
+            text-align: center;
         }
 
         .process-step h4 {
             color: #0f172a;
             font-size: 1.1rem;
             margin-bottom: 0.5rem;
+            text-align: center;
         }
 
         .process-step p {
             color: #64748b;
-            font-size: 0.9rem;
+            font-size: 1.1rem;
             margin: 0;
+            text-align: justify;
         }
 
         .usecase-table {
@@ -240,7 +253,7 @@
             padding: 1rem 1.5rem;
             border-bottom: 1px solid #e2e8f0;
             color: #475569;
-            font-size: 0.95rem;
+            font-size: 1.1rem;
         }
 
         .usecase-table tr:last-child td {
@@ -342,7 +355,7 @@
                 <h1 style="font-size: 3rem; margin-bottom: 1.25rem; line-height: 1.15;">Chaque facture traitée à la main
                     est une erreur <span class="highlight">qui coûte en moyenne 60&euro;</span> à votre entreprise.</h1>
                 <p
-                    style="font-size: 1.15rem; color: var(--text-muted); margin-bottom: 2rem; max-width: 680px; margin-left: auto; margin-right: auto;">
+                    style="font-size: 1.1rem; color: var(--text-muted); margin-bottom: 2rem; max-width: 680px; margin-left: auto; margin-right: auto; text-align: justify;">
                     Une automatisation intelligente qui lit, classe et route vos documents entrants — factures, bons de
                     commande, e-mails — directement vers votre ERP ou CRM, sans intervention humaine et sans erreur de
                     saisie.</p>
@@ -412,7 +425,9 @@
                         <h2 class="section-title" style="text-align: left; margin-bottom: 1rem;">L'IA lit, comprend et
                             <span class="highlight">agit</span> sur vos documents
                         </h2>
-                        <p style="color: var(--text-muted); margin-bottom: 2rem;">Nos modèles IDP (Intelligent Document
+                        <p
+                            style="color: var(--text-muted); margin-bottom: 2rem; font-size: 1.1rem; text-align: justify;">
+                            Nos modèles IDP (Intelligent Document
                             Processing) vont bien au-delà du simple OCR. Ils comprennent la structure et le contexte de
                             n'importe quel document, même mal scanné.</p>
                         <ul class="diff-check-list">
@@ -583,7 +598,9 @@
                             <i class="fas fa-chevron-down"></i>
                         </div>
                         <div class="faq-answer">
-                            <p style="color: #475569; margin-top: 1rem; margin-bottom: 0;">Oui. Nos modèles IDP sont
+                            <p
+                                style="color: #475569; margin-top: 1rem; margin-bottom: 0; font-size: 1.1rem; text-align: justify;">
+                                Oui. Nos modèles IDP sont
                                 entraînés sur des millions de documents de qualité variable. Ils gèrent les scans de
                                 mauvaise résolution, les PDFs non natifs, les tableaux complexes et les formats non
                                 standards nettement mieux qu'un OCR classique.</p>
@@ -597,7 +614,9 @@
                             <i class="fas fa-chevron-down"></i>
                         </div>
                         <div class="faq-answer">
-                            <p style="color: #475569; margin-top: 1rem; margin-bottom: 0;">Nous nous connectons à tous
+                            <p
+                                style="color: #475569; margin-top: 1rem; margin-bottom: 0; font-size: 1.1rem; text-align: justify;">
+                                Nous nous connectons à tous
                                 les ERP et CRM majeurs (SAP, Oracle, Sage, Cegid, HubSpot, Salesforce) via leurs APIs ou
                                 via des connecteurs no-code (Make, n8n, Zapier, Power Automate). Pour les systèmes
                                 legacy, des connecteurs sur mesure peuvent être développés.</p>
@@ -611,7 +630,9 @@
                             <i class="fas fa-chevron-down"></i>
                         </div>
                         <div class="faq-answer">
-                            <p style="color: #475569; margin-top: 1rem; margin-bottom: 0;">C'est notre approche
+                            <p
+                                style="color: #475569; margin-top: 1rem; margin-bottom: 0; font-size: 1.1rem; text-align: justify;">
+                                C'est notre approche
                                 Human-in-the-Loop. Quand le niveau de confiance est sous le seuil que vous définissez,
                                 une alerte est envoyée à un collaborateur qui valide ou corrige en 30 secondes. Cela
                                 garantit une fiabilité maximale sans ralentir le flux.</p>
@@ -625,7 +646,9 @@
                             <i class="fas fa-chevron-down"></i>
                         </div>
                         <div class="faq-answer">
-                            <p style="color: #475569; margin-top: 1rem; margin-bottom: 0;">Absolument. Nos architectures
+                            <p
+                                style="color: #475569; margin-top: 1rem; margin-bottom: 0; font-size: 1.1rem; text-align: justify;">
+                                Absolument. Nos architectures
                                 cloud-native sont conçues pour la scalabilité horizontale. Que vous traitiez 100 ou
                                 100&nbsp;000 documents par jour, le système s'adapte automatiquement sans dégradation de
                                 performance ni coût proportionnel.</p>
@@ -639,7 +662,9 @@
                             <i class="fas fa-chevron-down"></i>
                         </div>
                         <div class="faq-answer">
-                            <p style="color: #475569; margin-top: 1rem; margin-bottom: 0;">Un premier workflow
+                            <p
+                                style="color: #475569; margin-top: 1rem; margin-bottom: 0; font-size: 1.1rem; text-align: justify;">
+                                Un premier workflow
                                 d'automatisation simple (traitement de factures, par exemple) peut être en production en
                                 3&nbsp;à 4 semaines. Pour un projet complet multi-flux, comptez 6&nbsp;à 10 semaines. Le
                                 budget dépend de la complexité des flux — nous démarrons systématiquement par un audit
@@ -657,7 +682,8 @@
                     <span class="badge" style="margin-bottom: 1.5rem; display: inline-block;">Audit gratuit</span>
                     <h2 class="section-title" style="margin-bottom: 1rem;">Quel processus vous fait <span
                             class="highlight">perdre le plus de temps</span> aujourd'hui ?</h2>
-                    <p style="color: var(--text-muted); margin-bottom: 2.5rem; font-size: 1.1rem;">En 30 minutes, nos
+                    <p style="color: var(--text-muted); margin-bottom: 2.5rem; font-size: 1.1rem; text-align: justify;">
+                        En 30 minutes, nos
                         experts cartographient vos processus les plus chronophages, estiment votre potentiel d'économies
                         et vous proposent une feuille de route concrète. Sans engagement.</p>
                     <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">

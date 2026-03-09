@@ -44,11 +44,16 @@
             display: flex;
             gap: 2rem;
             flex-wrap: wrap;
-            margin-top: 2.5rem
+            margin-top: 2.5rem;
+            justify-content: center;
         }
 
         .form-stat {
-            text-align: center
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
         }
 
         .sol-stat-val {
@@ -57,14 +62,18 @@
             font-weight: 700;
             font-family: var(--font-heading);
             color: var(--primary-color);
-            line-height: 1
+            line-height: 1;
+            text-align: center;
+            width: 100%;
         }
 
         .form-stat p {
             font-size: 0.8rem;
             color: var(--text-muted);
             margin-top: 0.3rem;
-            margin-bottom: 0
+            margin-bottom: 0;
+            text-align: center;
+            width: 100%;
         }
 
         .results-bar {
@@ -119,13 +128,16 @@
         .skill-card strong {
             display: block;
             color: #0f172a;
-            font-size: 1rem;
-            margin-bottom: 0.3rem
+            font-size: 1.1rem;
+            margin-bottom: 0.3rem;
+            text-align: center;
         }
 
         .skill-card span {
             color: #64748b;
-            font-size: 0.9rem
+            font-size: 1.1rem;
+            text-align: justify;
+            display: block;
         }
 
         @media(max-width:768px) {
@@ -215,12 +227,15 @@
                         <h1 style="font-size:2.8rem;line-height:1.15;margin-bottom:1.2rem">Python est la langue
                             maternelle des donnees.<br><span class="highlight">Vous avez 4 jours pour la parler
                                 couramment.</span></h1>
-                        <p style="font-size:1.15rem;color:var(--text-muted);margin-bottom:2rem">De la programmation de
+                        <p style="font-size:1.1rem;color:var(--text-muted);margin-bottom:2rem;text-align:justify;">De la
+                            programmation de
                             base à la visualisation avancée. Pandas, Matplotlib et Plotly sur projets concrets à partir
                             de données réelles. Aucun prérequis en programmation.</p>
-                        <div style="display:flex;gap:1rem;flex-wrap:wrap">
-                            <a href="contact-page.html" class="btn btn-primary">S'inscrire a la formation</a>
-                            <a href="calendrier-formations.html" class="btn btn-secondary">Voir les dates</a>
+                        <div style="display:flex;justify-content:center;gap:1rem;flex-wrap:wrap">
+                            <a href="contact-page.html" class="btn btn-primary"
+                                style="margin-bottom: 0.5rem;">S'inscrire a la formation</a>
+                            <a href="calendrier-formations.html" class="btn btn-secondary"
+                                style="margin-bottom: 0.5rem;">Voir les dates</a>
                         </div>
                         <div class="form-stats">
                             <div class="form-stat"><span class="sol-stat-val">24h</span>
@@ -256,28 +271,32 @@
                         <i class="fas fa-clock"
                             style="font-size:2rem;color:var(--primary-color);margin-bottom:1rem"></i>
                         <h4 style="margin-bottom:0.5rem">Durée</h4>
-                        <p style="color:#64748b;margin-bottom:0">24 heures (4 jours)</p>
+                        <p style="color:#64748b;font-size:1.1rem;margin-bottom:0;text-align:center;">24 heures (4 jours)
+                        </p>
                     </div>
                     <div class="bento-card"
                         style="background:white;border:1px solid #e2e8f0;color:#0f172a;text-align:center;padding:1.5rem">
                         <i class="fas fa-users"
                             style="font-size:2rem;color:var(--primary-color);margin-bottom:1rem"></i>
-                        <h4 style="margin-bottom:0.5rem">Public Cible</h4>
-                        <p style="color:#64748b;margin-bottom:0">Analystes, pros de la data, débutants</p>
+                        <h4 style="margin-bottom:0.5rem;font-size:1.1rem;">Public Cible</h4>
+                        <p style="color:#64748b;font-size:1.1rem;margin-bottom:0;text-align:center;">Analystes, pros de
+                            la data, débutants</p>
                     </div>
                     <div class="bento-card"
                         style="background:white;border:1px solid #e2e8f0;color:#0f172a;text-align:center;padding:1.5rem">
                         <i class="fas fa-clipboard-check"
                             style="font-size:2rem;color:var(--primary-color);margin-bottom:1rem"></i>
-                        <h4 style="margin-bottom:0.5rem">Pré-requis</h4>
-                        <p style="color:#64748b;margin-bottom:0">Aucun prérequis en programmation</p>
+                        <h4 style="margin-bottom:0.5rem;font-size:1.1rem;">Pré-requis</h4>
+                        <p style="color:#64748b;font-size:1.1rem;margin-bottom:0;text-align:center;">Aucun prérequis en
+                            programmation</p>
                     </div>
                     <div class="bento-card"
                         style="background:white;border:1px solid #e2e8f0;color:#0f172a;text-align:center;padding:1.5rem">
                         <i class="fas fa-laptop-house"
                             style="font-size:2rem;color:var(--primary-color);margin-bottom:1rem"></i>
-                        <h4 style="margin-bottom:0.5rem">Modalité</h4>
-                        <p style="color:#64748b;margin-bottom:0">100% Distanciel (Teams)</p>
+                        <h4 style="margin-bottom:0.5rem;font-size:1.1rem;">Modalité</h4>
+                        <p style="color:#64748b;font-size:1.1rem;margin-bottom:0;text-align:center;">100% Distanciel
+                            (Teams)</p>
                     </div>
                 </div>
             </div>
@@ -314,7 +333,8 @@
                     <div>
                         <h2 class="section-title" style="text-align:left">Analysez, visualisez, decidez.<br><span
                                 class="highlight">Plus vite et sans Excel.</span></h2>
-                        <p class="section-subtitle" style="text-align:left;margin-left:0;margin-bottom:2rem">Excel
+                        <p class="section-subtitle"
+                            style="text-align:justify;margin-left:0;margin-bottom:2rem;font-size:1.1rem;">Excel
                             atteint ses limites à 100 000 lignes. Python, lui, n'en a aucune. Et avec l'IA comme
                             assistant de code, vous progressez deux fois plus vite.</p>
                         <ul style="list-style:none;padding:0">
@@ -322,21 +342,26 @@
                                     class="fas fa-check-circle"
                                     style="color:var(--primary-color);font-size:1.5rem;margin-top:0.2rem"></i>
                                 <div><strong style="display:block;font-size:1.1rem;margin-bottom:0.2rem">Maîtrise de
-                                        bout en bout</strong><span style="color:var(--text-muted)">De l'acquisition à la
+                                        bout en bout</strong><span
+                                        style="color:var(--text-muted);font-size:1.1rem;text-align:justify;display:block;">De
+                                        l'acquisition à la
                                         visualisation avec Pandas, Matplotlib et Plotly.</span></div>
                             </li>
                             <li style="margin-bottom:1.5rem;display:flex;align-items:flex-start;gap:1rem"><i
                                     class="fas fa-check-circle"
                                     style="color:var(--primary-color);font-size:1.5rem;margin-top:0.2rem"></i>
                                 <div><strong style="display:block;font-size:1.1rem;margin-bottom:0.2rem">Pratique
-                                        intensive sur projets réels</strong><span style="color:var(--text-muted)">4
+                                        intensive sur projets réels</strong><span
+                                        style="color:var(--text-muted);font-size:1.1rem;text-align:justify;display:block;">4
                                         projets sur le cycle d'analyse IBM avec l'aide de l'IA (ChatGPT/Grok) pour
                                         coder.</span></div>
                             </li>
                             <li style="display:flex;align-items:flex-start;gap:1rem"><i class="fas fa-check-circle"
                                     style="color:var(--primary-color);font-size:1.5rem;margin-top:0.2rem"></i>
                                 <div><strong style="display:block;font-size:1.1rem;margin-bottom:0.2rem">Certification
-                                        Babylone42</strong><span style="color:var(--text-muted)">Validez vos acquis avec
+                                        Babylone42</strong><span
+                                        style="color:var(--text-muted);font-size:1.1rem;text-align:justify;display:block;">Validez
+                                        vos acquis avec
                                         un projet final et obtenez votre badge reconnu en entreprise.</span></div>
                             </li>
                         </ul>
@@ -346,19 +371,22 @@
                             style="margin-bottom:1.5rem;color:var(--primary-color);border-bottom:1px solid rgba(255,255,255,0.1);padding-bottom:1rem">
                             Livrables Inclus</h3>
                         <ul style="list-style:none;padding:0">
-                            <li style="margin-bottom:0.8rem"><i class="fas fa-book"
+                            <li style="margin-bottom:0.8rem;font-size:1.1rem;text-align:justify;"><i class="fas fa-book"
                                     style="color:var(--primary-color);width:25px"></i> Supports de cours (Jupyter
                                 notebooks)</li>
-                            <li style="margin-bottom:0.8rem"><i class="fas fa-database"
-                                    style="color:var(--primary-color);width:25px"></i> Jeux de données réels
+                            <li style="margin-bottom:0.8rem;font-size:1.1rem;text-align:justify;"><i
+                                    class="fas fa-database" style="color:var(--primary-color);width:25px"></i> Jeux de
+                                données réels
                                 (sectoriels)</li>
-                            <li style="margin-bottom:0.8rem"><i class="fas fa-code"
+                            <li style="margin-bottom:0.8rem;font-size:1.1rem;text-align:justify;"><i class="fas fa-code"
                                     style="color:var(--primary-color);width:25px"></i> Codes sources complets annotés
                             </li>
-                            <li style="margin-bottom:0.8rem"><i class="fas fa-certificate"
-                                    style="color:var(--primary-color);width:25px"></i> Badge de certification Babylone42
+                            <li style="margin-bottom:0.8rem;font-size:1.1rem;text-align:justify;"><i
+                                    class="fas fa-certificate" style="color:var(--primary-color);width:25px"></i> Badge
+                                de certification Babylone42
                             </li>
-                            <li><i class="fas fa-headset" style="color:var(--primary-color);width:25px"></i> Support
+                            <li style="font-size:1.1rem;text-align:justify;"><i class="fas fa-headset"
+                                    style="color:var(--primary-color);width:25px"></i> Support
                                 post-formation (Discord)</li>
                         </ul>
                     </div>
@@ -371,7 +399,8 @@
             <div class="container">
                 <h2 class="section-title" style="color:#0f172a">Ce que vous saurez faire <span class="highlight">apres 4
                         jours</span></h2>
-                <p class="section-subtitle">Des compétences concrètes, applicables immédiatement dans votre poste.</p>
+                <p class="section-subtitle" style="font-size:1.1rem;text-align:justify;">Des compétences concrètes,
+                    applicables immédiatement dans votre poste.</p>
                 <div class="skills-grid">
                     <div class="skill-card"><i class="fab fa-python"></i>
                         <div><strong>Programmer en Python</strong><span>Variables, structures de contrôle, fonctions —
@@ -412,13 +441,17 @@
                             <h3>Jour 1 : Les bases de la programmation Python</h3><i class="fas fa-chevron-down"></i>
                         </div>
                         <div class="faq-answer">
-                            <ul style="padding-left:1.5rem;margin-bottom:1rem">
-                                <li><strong>09h00 - 10h45:</strong> Introduction à Python, installation, syntaxe de
+                            <ul style="padding-left:1.5rem;margin-bottom:1rem;color:#475569;">
+                                <li style="font-size:1.1rem;text-align:justify;margin-bottom:0.5rem;"><strong>09h00 -
+                                        10h45:</strong> Introduction à Python, installation, syntaxe de
                                     base.</li>
-                                <li><strong>11h00 - 12h30:</strong> Structures de contrôle, boucles, listes,
+                                <li style="font-size:1.1rem;text-align:justify;margin-bottom:0.5rem;"><strong>11h00 -
+                                        12h30:</strong> Structures de contrôle, boucles, listes,
                                     dictionnaires.</li>
-                                <li><strong>13h30 - 14h45:</strong> Fonctions et modularité.</li>
-                                <li><strong>15h00 - 16h00:</strong> Projet pratique : Exploration de données simples.
+                                <li style="font-size:1.1rem;text-align:justify;margin-bottom:0.5rem;"><strong>13h30 -
+                                        14h45:</strong> Fonctions et modularité.</li>
+                                <li style="font-size:1.1rem;text-align:justify;margin-bottom:0.5rem;"><strong>15h00 -
+                                        16h00:</strong> Projet pratique : Exploration de données simples.
                                 </li>
                             </ul>
                         </div>
@@ -428,13 +461,17 @@
                             <h3>Jour 2 : Analyse de données avec Pandas</h3><i class="fas fa-chevron-down"></i>
                         </div>
                         <div class="faq-answer">
-                            <ul style="padding-left:1.5rem;margin-bottom:1rem">
-                                <li><strong>09h00 - 10h45:</strong> Découverte de Pandas (DataFrames, lecture
+                            <ul style="padding-left:1.5rem;margin-bottom:1rem;color:#475569;">
+                                <li style="font-size:1.1rem;text-align:justify;margin-bottom:0.5rem;"><strong>09h00 -
+                                        10h45:</strong> Découverte de Pandas (DataFrames, lecture
                                     CSV/Excel).</li>
-                                <li><strong>11h00 - 12h30:</strong> Nettoyage et prétraitement (valeurs manquantes,
+                                <li style="font-size:1.1rem;text-align:justify;margin-bottom:0.5rem;"><strong>11h00 -
+                                        12h30:</strong> Nettoyage et prétraitement (valeurs manquantes,
                                     transformations).</li>
-                                <li><strong>13h30 - 14h45:</strong> Manipulation avancée (jointures, agrégations).</li>
-                                <li><strong>15h00 - 16h00:</strong> Projet pratique : Préparation de données sur un cas
+                                <li style="font-size:1.1rem;text-align:justify;margin-bottom:0.5rem;"><strong>13h30 -
+                                        14h45:</strong> Manipulation avancée (jointures, agrégations).</li>
+                                <li style="font-size:1.1rem;text-align:justify;margin-bottom:0.5rem;"><strong>15h00 -
+                                        16h00:</strong> Projet pratique : Préparation de données sur un cas
                                     réel.</li>
                             </ul>
                         </div>
@@ -444,12 +481,16 @@
                             <h3>Jour 3 : Visualisation avec Matplotlib et Plotly</h3><i class="fas fa-chevron-down"></i>
                         </div>
                         <div class="faq-answer">
-                            <ul style="padding-left:1.5rem;margin-bottom:1rem">
-                                <li><strong>09h00 - 10h45:</strong> Introduction à Matplotlib (graphiques de base).</li>
-                                <li><strong>11h00 - 12h30:</strong> Visualisations interactives avec Plotly (heatmaps,
+                            <ul style="padding-left:1.5rem;margin-bottom:1rem;color:#475569;">
+                                <li style="font-size:1.1rem;text-align:justify;margin-bottom:0.5rem;"><strong>09h00 -
+                                        10h45:</strong> Introduction à Matplotlib (graphiques de base).</li>
+                                <li style="font-size:1.1rem;text-align:justify;margin-bottom:0.5rem;"><strong>11h00 -
+                                        12h30:</strong> Visualisations interactives avec Plotly (heatmaps,
                                     comparatifs).</li>
-                                <li><strong>13h30 - 14h45:</strong> Visualisation appliquée à des cas sectoriels.</li>
-                                <li><strong>15h00 - 16h00:</strong> Projet pratique : Création d'un rapport visuel
+                                <li style="font-size:1.1rem;text-align:justify;margin-bottom:0.5rem;"><strong>13h30 -
+                                        14h45:</strong> Visualisation appliquée à des cas sectoriels.</li>
+                                <li style="font-size:1.1rem;text-align:justify;margin-bottom:0.5rem;"><strong>15h00 -
+                                        16h00:</strong> Projet pratique : Création d'un rapport visuel
                                     complet.</li>
                             </ul>
                         </div>
@@ -459,13 +500,17 @@
                             <h3>Jour 4 : Intégration et projet final</h3><i class="fas fa-chevron-down"></i>
                         </div>
                         <div class="faq-answer">
-                            <ul style="padding-left:1.5rem;margin-bottom:1rem">
-                                <li><strong>09h00 - 10h45:</strong> Cycle d'analyse de données IBM et structuration.
+                            <ul style="padding-left:1.5rem;margin-bottom:1rem;color:#475569;">
+                                <li style="font-size:1.1rem;text-align:justify;margin-bottom:0.5rem;"><strong>09h00 -
+                                        10h45:</strong> Cycle d'analyse de données IBM et structuration.
                                 </li>
-                                <li><strong>11h00 - 12h30:</strong> Outils avancés et utilisation de l'IA (ChatGPT/Grok)
+                                <li style="font-size:1.1rem;text-align:justify;margin-bottom:0.5rem;"><strong>11h00 -
+                                        12h30:</strong> Outils avancés et utilisation de l'IA (ChatGPT/Grok)
                                     pour coder.</li>
-                                <li><strong>13h30 - 14h45:</strong> Projet final collaboratif.</li>
-                                <li><strong>15h00 - 16h00:</strong> Synthèse, présentation et remise de certification.
+                                <li style="font-size:1.1rem;text-align:justify;margin-bottom:0.5rem;"><strong>13h30 -
+                                        14h45:</strong> Projet final collaboratif.</li>
+                                <li style="font-size:1.1rem;text-align:justify;margin-bottom:0.5rem;"><strong>15h00 -
+                                        16h00:</strong> Synthèse, présentation et remise de certification.
                                 </li>
                             </ul>
                         </div>
@@ -478,11 +523,13 @@
         <section class="section-padding bg-light" style="text-align:center">
             <div class="container" style="max-width:700px">
                 <h2 class="section-title" style="color:#0f172a">Prêt à maîtriser Python ?</h2>
-                <p class="section-subtitle" style="margin-bottom:2rem">Rejoignez notre prochaine session ou demandez un
+                <p class="section-subtitle" style="margin-bottom:2rem;font-size:1.1rem;text-align:justify;">Rejoignez
+                    notre prochaine session ou demandez un
                     devis intra-entreprise. Formation disponible à Marseille et partout en France.</p>
-                <a href="contact-page.html" class="btn btn-primary" style="margin-right:1rem">S'inscrire a la
-                    formation</a>
-                <a href="calendrier-formations.html" class="btn btn-secondary">Voir le calendrier</a>
+                <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;">
+                    <a href="contact-page.html" class="btn btn-primary">S'inscrire a la formation</a>
+                    <a href="calendrier-formations.html" class="btn btn-secondary">Voir le calendrier</a>
+                </div>
             </div>
         </section>
 

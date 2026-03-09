@@ -44,11 +44,16 @@
             display: flex;
             gap: 2rem;
             flex-wrap: wrap;
-            margin-top: 2.5rem
+            margin-top: 2.5rem;
+            justify-content: center;
         }
 
         .form-stat {
-            text-align: center
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
         }
 
         .sol-stat-val {
@@ -57,14 +62,18 @@
             font-weight: 700;
             font-family: var(--font-heading);
             color: var(--primary-color);
-            line-height: 1
+            line-height: 1;
+            text-align: center;
+            width: 100%;
         }
 
         .form-stat p {
             font-size: 0.8rem;
             color: var(--text-muted);
             margin-top: 0.3rem;
-            margin-bottom: 0
+            margin-bottom: 0;
+            text-align: center;
+            width: 100%;
         }
 
         .results-bar {
@@ -119,13 +128,16 @@
         .skill-card strong {
             display: block;
             color: #0f172a;
-            font-size: 1rem;
-            margin-bottom: 0.3rem
+            font-size: 1.1rem;
+            margin-bottom: 0.3rem;
+            text-align: center;
         }
 
         .skill-card span {
             color: #64748b;
-            font-size: 0.9rem
+            font-size: 1.1rem;
+            text-align: justify;
+            display: block;
         }
 
         @media(max-width:768px) {
@@ -210,12 +222,15 @@
                             Formation avancée — 18h — Distanciel</p>
                         <h1 style="font-size:2.8rem;line-height:1.15;margin-bottom:1.2rem">Le Deep Learning alimente GPT
                             et les voitures autonomes.<br><span class="highlight">Maintenant, votre tour.</span></h1>
-                        <p style="font-size:1.15rem;color:var(--text-muted);margin-bottom:2rem">Concevez des réseaux de
+                        <p style="font-size:1.1rem;color:var(--text-muted);margin-bottom:2rem;text-align:justify;">
+                            Concevez des réseaux de
                             neurones profonds (CNN, RNN, LSTM) et maîtrisez le Transfer Learning avec TensorFlow et
                             Keras. 3 jours d'immersion sur Google Colab.</p>
-                        <div style="display:flex;gap:1rem;flex-wrap:wrap">
-                            <a href="contact-page.html" class="btn btn-primary">S'inscrire a la formation</a>
-                            <a href="calendrier-formations.html" class="btn btn-secondary">Voir les dates</a>
+                        <div style="display:flex;justify-content:center;gap:1rem;flex-wrap:wrap">
+                            <a href="contact-page.html" class="btn btn-primary"
+                                style="margin-bottom: 0.5rem;">S'inscrire a la formation</a>
+                            <a href="calendrier-formations.html" class="btn btn-secondary"
+                                style="margin-bottom: 0.5rem;">Voir les dates</a>
                         </div>
                         <div class="form-stats">
                             <div class="form-stat"><span class="sol-stat-val">18h</span>
@@ -250,28 +265,32 @@
                         <i class="fas fa-clock"
                             style="font-size:2rem;color:var(--primary-color);margin-bottom:1rem"></i>
                         <h4 style="margin-bottom:0.5rem">Durée</h4>
-                        <p style="color:#64748b;margin-bottom:0">18 heures (3 jours)</p>
+                        <p style="color:#64748b;font-size:1.1rem;margin-bottom:0;text-align:center;">18 heures (3 jours)
+                        </p>
                     </div>
                     <div class="bento-card"
                         style="background:white;border:1px solid #e2e8f0;color:#0f172a;text-align:center;padding:1.5rem">
                         <i class="fas fa-users"
                             style="font-size:2rem;color:var(--primary-color);margin-bottom:1rem"></i>
-                        <h4 style="margin-bottom:0.5rem">Public Cible</h4>
-                        <p style="color:#64748b;margin-bottom:0">Analystes, Développeurs, Ingénieurs</p>
+                        <h4 style="margin-bottom:0.5rem;font-size:1.1rem;">Public Cible</h4>
+                        <p style="color:#64748b;font-size:1.1rem;margin-bottom:0;text-align:center;">Analystes,
+                            Développeurs, Ingénieurs</p>
                     </div>
                     <div class="bento-card"
                         style="background:white;border:1px solid #e2e8f0;color:#0f172a;text-align:center;padding:1.5rem">
                         <i class="fas fa-clipboard-check"
                             style="font-size:2rem;color:var(--primary-color);margin-bottom:1rem"></i>
-                        <h4 style="margin-bottom:0.5rem">Pré-requis</h4>
-                        <p style="color:#64748b;margin-bottom:0">Python et bases en Machine Learning</p>
+                        <h4 style="margin-bottom:0.5rem;font-size:1.1rem;">Pré-requis</h4>
+                        <p style="color:#64748b;font-size:1.1rem;margin-bottom:0;text-align:center;">Python et bases en
+                            Machine Learning</p>
                     </div>
                     <div class="bento-card"
                         style="background:white;border:1px solid #e2e8f0;color:#0f172a;text-align:center;padding:1.5rem">
                         <i class="fas fa-laptop-house"
                             style="font-size:2rem;color:var(--primary-color);margin-bottom:1rem"></i>
-                        <h4 style="margin-bottom:0.5rem">Modalité</h4>
-                        <p style="color:#64748b;margin-bottom:0">100% Distanciel (Teams)</p>
+                        <h4 style="margin-bottom:0.5rem;font-size:1.1rem;">Modalité</h4>
+                        <p style="color:#64748b;font-size:1.1rem;margin-bottom:0;text-align:center;">100% Distanciel
+                            (Teams)</p>
                     </div>
                 </div>
             </div>
@@ -306,7 +325,8 @@
                     <div>
                         <h2 class="section-title" style="text-align:left">Au-dela du Machine Learning :<br><span
                                 class="highlight">maîtrisez l'intelligence profonde.</span></h2>
-                        <p class="section-subtitle" style="text-align:left;margin-left:0;margin-bottom:2rem">Résolution
+                        <p class="section-subtitle"
+                            style="text-align:justify;margin-left:0;margin-bottom:2rem;font-size:1.1rem;">Résolution
                             de cas impossibles pour les algorithmes classiques : vision par ordinateur, prédiction de
                             séries temporelles, reconnaissance de langage.</p>
                         <ul style="list-style:none;padding:0">
@@ -314,14 +334,17 @@
                                     class="fas fa-check-circle"
                                     style="color:var(--primary-color);font-size:1.5rem;margin-top:0.2rem"></i>
                                 <div><strong style="display:block;font-size:1.1rem;margin-bottom:0.2rem">Architectures
-                                        neuronales complexes</strong><span style="color:var(--text-muted)">Maîtrisez le
+                                        neuronales complexes</strong><span
+                                        style="color:var(--text-muted);font-size:1.1rem;text-align:justify;display:block;">Maîtrisez
+                                        le
                                         perceptron, CNN (vision), et RNN/LSTM (séries temporelles).</span></div>
                             </li>
                             <li style="margin-bottom:1.5rem;display:flex;align-items:flex-start;gap:1rem"><i
                                     class="fas fa-check-circle"
                                     style="color:var(--primary-color);font-size:1.5rem;margin-top:0.2rem"></i>
                                 <div><strong style="display:block;font-size:1.1rem;margin-bottom:0.2rem">Transfer
-                                        Learning (VGG, ResNet)</strong><span style="color:var(--text-muted)">Réutilisez
+                                        Learning (VGG, ResNet)</strong><span
+                                        style="color:var(--text-muted);font-size:1.1rem;text-align:justify;display:block;">Réutilisez
                                         des modèles colossaux pré-entraînés et adaptez-les à vos données en quelques
                                         heures.</span></div>
                             </li>
@@ -329,7 +352,8 @@
                                     style="color:var(--primary-color);font-size:1.5rem;margin-top:0.2rem"></i>
                                 <div><strong style="display:block;font-size:1.1rem;margin-bottom:0.2rem">Frameworks
                                         industriels TensorFlow &amp; Keras</strong><span
-                                        style="color:var(--text-muted)">Développez sur Google Colab avec les outils
+                                        style="color:var(--text-muted);font-size:1.1rem;text-align:justify;display:block;">Développez
+                                        sur Google Colab avec les outils
                                         qu'utilisent les ingénieurs chez Google et Meta.</span></div>
                             </li>
                         </ul>
@@ -339,22 +363,26 @@
                             style="margin-bottom:1.5rem;color:var(--primary-color);border-bottom:1px solid rgba(255,255,255,0.1);padding-bottom:1rem">
                             Livrables Inclus</h3>
                         <ul style="list-style:none;padding:0">
-                            <li style="margin-bottom:0.8rem"><i class="fas fa-book"
+                            <li style="margin-bottom:0.8rem;font-size:1.1rem;text-align:justify;"><i class="fas fa-book"
                                     style="color:var(--primary-color);width:25px"></i> Notebooks de cours interactifs
                             </li>
-                            <li style="margin-bottom:0.8rem"><i class="fas fa-database"
-                                    style="color:var(--primary-color);width:25px"></i> Datasets pour l'imagerie et le
+                            <li style="margin-bottom:0.8rem;font-size:1.1rem;text-align:justify;"><i
+                                    class="fas fa-database" style="color:var(--primary-color);width:25px"></i> Datasets
+                                pour l'imagerie et le
                                 NLP</li>
-                            <li style="margin-bottom:0.8rem"><i class="fas fa-code"
+                            <li style="margin-bottom:0.8rem;font-size:1.1rem;text-align:justify;"><i class="fas fa-code"
                                     style="color:var(--primary-color);width:25px"></i> Codes modèles (CNN, RNN,
                                 Transfert)</li>
-                            <li style="margin-bottom:0.8rem"><i class="fas fa-spell-check"
-                                    style="color:var(--primary-color);width:25px"></i> Glossaire DL technique exclusif
+                            <li style="margin-bottom:0.8rem;font-size:1.1rem;text-align:justify;"><i
+                                    class="fas fa-spell-check" style="color:var(--primary-color);width:25px"></i>
+                                Glossaire DL technique exclusif
                             </li>
-                            <li style="margin-bottom:0.8rem"><i class="fas fa-certificate"
-                                    style="color:var(--primary-color);width:25px"></i> Badge de certification AI-DL
+                            <li style="margin-bottom:0.8rem;font-size:1.1rem;text-align:justify;"><i
+                                    class="fas fa-certificate" style="color:var(--primary-color);width:25px"></i> Badge
+                                de certification AI-DL
                                 Babylone42</li>
-                            <li><i class="fas fa-headset" style="color:var(--primary-color);width:25px"></i> Canal
+                            <li style="font-size:1.1rem;text-align:justify;"><i class="fas fa-headset"
+                                    style="color:var(--primary-color);width:25px"></i> Canal
                                 Discord dédié post-formation</li>
                         </ul>
                     </div>
@@ -366,7 +394,8 @@
             <div class="container">
                 <h2 class="section-title" style="color:#0f172a">Ce que vous saurez faire <span class="highlight">apres 3
                         jours</span></h2>
-                <p class="section-subtitle">Des compétences d'ingénieur IA, formées en 3 jours intensifs.</p>
+                <p class="section-subtitle" style="font-size:1.1rem;text-align:justify;">Des compétences d'ingénieur IA,
+                    formées en 3 jours intensifs.</p>
                 <div class="skills-grid">
                     <div class="skill-card"><i class="fas fa-layer-group"></i>
                         <div><strong>Construire un MLP complet</strong><span>Concevoir, entraîner et évaluer un
@@ -399,7 +428,8 @@
         <section class="section-padding bg-darker">
             <div class="container" style="max-width:860px">
                 <h2 class="section-title">Programme <span class="highlight">Détaillé</span></h2>
-                <p class="section-subtitle">Trois jours pour plonger au coeur des réseaux de neurones.</p>
+                <p class="section-subtitle" style="font-size:1.1rem;text-align:justify;">Trois jours pour plonger au
+                    coeur des réseaux de neurones.</p>
                 <div class="faq-list">
                     <div class="faq-item">
                         <div class="faq-question">
@@ -407,14 +437,21 @@
                                 class="fas fa-chevron-down"></i>
                         </div>
                         <div class="faq-answer">
-                            <ul style="padding-left:1.5rem;margin-bottom:1rem">
-                                <li><strong>09h00:</strong> Introduction au Deep Learning. Configuration de
-                                    TensorFlow/Keras sur Google Colab.</li>
-                                <li><strong>11h00:</strong> Le Perceptron en pratique (préparation, entraînement,
-                                    évaluation).</li>
-                                <li><strong>13h30:</strong> Théorie du Multi-Layer Perceptron (MLP), architectures
-                                    multicouches et rétropropagation.</li>
-                                <li><strong>15h00:</strong> Déploiement d'un MLP avec Keras sur un dataset structuré.
+                            <ul style="padding-left:1.5rem;margin-bottom:1rem;color:#475569;">
+                                <li style="font-size:1.1rem;text-align:justify;margin-bottom:0.5rem;">
+                                    <strong>09h00:</strong> Introduction au Deep Learning. Configuration de
+                                    TensorFlow/Keras sur Google Colab.
+                                </li>
+                                <li style="font-size:1.1rem;text-align:justify;margin-bottom:0.5rem;">
+                                    <strong>11h00:</strong> Le Perceptron en pratique (préparation, entraînement,
+                                    évaluation).
+                                </li>
+                                <li style="font-size:1.1rem;text-align:justify;margin-bottom:0.5rem;">
+                                    <strong>13h30:</strong> Théorie du Multi-Layer Perceptron (MLP), architectures
+                                    multicouches et rétropropagation.
+                                </li>
+                                <li style="font-size:1.1rem;text-align:justify;margin-bottom:0.5rem;">
+                                    <strong>15h00:</strong> Déploiement d'un MLP avec Keras sur un dataset structuré.
                                 </li>
                             </ul>
                         </div>
@@ -425,14 +462,22 @@
                                 class="fas fa-chevron-down"></i>
                         </div>
                         <div class="faq-answer">
-                            <ul style="padding-left:1.5rem;margin-bottom:1rem">
-                                <li><strong>09h00:</strong> Réseaux de neurones convolutifs (CNN) appliqués à la vision
-                                    par ordinateur.</li>
-                                <li><strong>11h00:</strong> Implémentation d'un CNN sur le dataset Fashion MNIST.</li>
-                                <li><strong>13h30:</strong> Introduction à l'apprentissage par transfert avec les
-                                    modèles VGG et ResNet.</li>
-                                <li><strong>15h00:</strong> Fine-tuning pratique : reconnaissance et classification de
-                                    fleurs.</li>
+                            <ul style="padding-left:1.5rem;margin-bottom:1rem;color:#475569;">
+                                <li style="font-size:1.1rem;text-align:justify;margin-bottom:0.5rem;">
+                                    <strong>09h00:</strong> Réseaux de neurones convolutifs (CNN) appliqués à la vision
+                                    par ordinateur.
+                                </li>
+                                <li style="font-size:1.1rem;text-align:justify;margin-bottom:0.5rem;">
+                                    <strong>11h00:</strong> Implémentation d'un CNN sur le dataset Fashion MNIST.
+                                </li>
+                                <li style="font-size:1.1rem;text-align:justify;margin-bottom:0.5rem;">
+                                    <strong>13h30:</strong> Introduction à l'apprentissage par transfert avec les
+                                    modèles VGG et ResNet.
+                                </li>
+                                <li style="font-size:1.1rem;text-align:justify;margin-bottom:0.5rem;">
+                                    <strong>15h00:</strong> Fine-tuning pratique : reconnaissance et classification de
+                                    fleurs.
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -442,15 +487,23 @@
                                 class="fas fa-chevron-down"></i>
                         </div>
                         <div class="faq-answer">
-                            <ul style="padding-left:1.5rem;margin-bottom:1rem">
-                                <li><strong>09h00:</strong> Les réseaux de neurones récurrents (RNN) et leurs variantes
-                                    (LSTM, GRU).</li>
-                                <li><strong>11h00:</strong> Application des RNN : analyse de séries temporelles et
-                                    prédiction boursière.</li>
-                                <li><strong>13h30:</strong> Projet final Deep Learning : résoudre un use case réel de
-                                    bout en bout.</li>
-                                <li><strong>15h00:</strong> Synthèse technique, évaluation des modèles et obtention du
-                                    badge AI-DL.</li>
+                            <ul style="padding-left:1.5rem;margin-bottom:1rem;color:#475569;">
+                                <li style="font-size:1.1rem;text-align:justify;margin-bottom:0.5rem;">
+                                    <strong>09h00:</strong> Les réseaux de neurones récurrents (RNN) et leurs variantes
+                                    (LSTM, GRU).
+                                </li>
+                                <li style="font-size:1.1rem;text-align:justify;margin-bottom:0.5rem;">
+                                    <strong>11h00:</strong> Application des RNN : analyse de séries temporelles et
+                                    prédiction boursière.
+                                </li>
+                                <li style="font-size:1.1rem;text-align:justify;margin-bottom:0.5rem;">
+                                    <strong>13h30:</strong> Projet final Deep Learning : résoudre un use case réel de
+                                    bout en bout.
+                                </li>
+                                <li style="font-size:1.1rem;text-align:justify;margin-bottom:0.5rem;">
+                                    <strong>15h00:</strong> Synthèse technique, évaluation des modèles et obtention du
+                                    badge AI-DL.
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -461,11 +514,13 @@
         <section class="section-padding bg-light" style="text-align:center">
             <div class="container" style="max-width:700px">
                 <h2 class="section-title" style="color:#0f172a">Créez l'IA de demain</h2>
-                <p class="section-subtitle" style="margin-bottom:2rem">Accélérez la montée en compétences de vos équipes
+                <p class="section-subtitle" style="margin-bottom:2rem;font-size:1.1rem;text-align:justify;">Accélérez la
+                    montée en compétences de vos équipes
                     sur les architectures Neural Networks. Session disponible partout en France.</p>
-                <a href="contact-page.html" class="btn btn-primary" style="margin-right:1rem">S'inscrire a la
-                    formation</a>
-                <a href="calendrier-formations.html" class="btn btn-secondary">Voir le calendrier</a>
+                <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;">
+                    <a href="contact-page.html" class="btn btn-primary">S'inscrire a la formation</a>
+                    <a href="calendrier-formations.html" class="btn btn-secondary">Voir le calendrier</a>
+                </div>
             </div>
         </section>
 

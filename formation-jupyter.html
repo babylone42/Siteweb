@@ -45,11 +45,16 @@
             display: flex;
             gap: 2rem;
             flex-wrap: wrap;
-            margin-top: 2.5rem
+            margin-top: 2.5rem;
+            justify-content: center;
         }
 
         .form-stat {
-            text-align: center
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
         }
 
         .sol-stat-val {
@@ -58,14 +63,18 @@
             font-weight: 700;
             font-family: var(--font-heading);
             color: var(--primary-color);
-            line-height: 1
+            line-height: 1;
+            text-align: center;
+            width: 100%;
         }
 
         .form-stat p {
             font-size: 0.8rem;
             color: var(--text-muted);
             margin-top: 0.3rem;
-            margin-bottom: 0
+            margin-bottom: 0;
+            text-align: center;
+            width: 100%;
         }
 
         .results-bar {
@@ -120,13 +129,16 @@
         .skill-card strong {
             display: block;
             color: #0f172a;
-            font-size: 1rem;
-            margin-bottom: 0.3rem
+            font-size: 1.1rem;
+            margin-bottom: 0.3rem;
+            text-align: center;
         }
 
         .skill-card span {
             color: #64748b;
-            font-size: 0.9rem
+            font-size: 1.1rem;
+            text-align: justify;
+            display: block;
         }
 
         @media(max-width:768px) {
@@ -212,12 +224,15 @@
                         <h1 style="font-size:2.8rem;line-height:1.15;margin-bottom:1.2rem">Un bon code que personne ne
                             comprend<br><span class="highlight">n'a aucune valeur. Jupyter rend vos analyses
                                 parlantes.</span></h1>
-                        <p style="font-size:1.15rem;color:var(--text-muted);margin-bottom:2rem">Maîtrisez le reporting
+                        <p style="font-size:1.1rem;color:var(--text-muted);margin-bottom:2rem;text-align:justify;">
+                            Maîtrisez le reporting
                             interactif et la data storytelling en une seule journée. Créez des documents dynamiques
                             alliant code, visualisation et texte — prêts à partager.</p>
-                        <div style="display:flex;gap:1rem;flex-wrap:wrap">
-                            <a href="contact-page.html" class="btn btn-primary">S'inscrire a la formation</a>
-                            <a href="calendrier-formations.html" class="btn btn-secondary">Voir les dates</a>
+                        <div style="display:flex;justify-content:center;gap:1rem;flex-wrap:wrap">
+                            <a href="contact-page.html" class="btn btn-primary"
+                                style="margin-bottom: 0.5rem;">S'inscrire a la formation</a>
+                            <a href="calendrier-formations.html" class="btn btn-secondary"
+                                style="margin-bottom: 0.5rem;">Voir les dates</a>
                         </div>
                         <div class="form-stats">
                             <div class="form-stat"><span class="sol-stat-val">6h</span>
@@ -252,28 +267,32 @@
                         <i class="fas fa-clock"
                             style="font-size:2rem;color:var(--primary-color);margin-bottom:1rem"></i>
                         <h4 style="margin-bottom:0.5rem">Durée</h4>
-                        <p style="color:#64748b;margin-bottom:0">6 heures (1 journée)</p>
+                        <p style="color:#64748b;font-size:1.1rem;margin-bottom:0;text-align:center;">6 heures (1
+                            journée)</p>
                     </div>
                     <div class="bento-card"
                         style="background:white;border:1px solid #e2e8f0;color:#0f172a;text-align:center;padding:1.5rem">
                         <i class="fas fa-users"
                             style="font-size:2rem;color:var(--primary-color);margin-bottom:1rem"></i>
-                        <h4 style="margin-bottom:0.5rem">Public Cible</h4>
-                        <p style="color:#64748b;margin-bottom:0">Pros de la data, analystes, chargés de reporting</p>
+                        <h4 style="margin-bottom:0.5rem;font-size:1.1rem;">Public Cible</h4>
+                        <p style="color:#64748b;font-size:1.1rem;margin-bottom:0;text-align:center;">Pros de la data,
+                            analystes, chargés de reporting</p>
                     </div>
                     <div class="bento-card"
                         style="background:white;border:1px solid #e2e8f0;color:#0f172a;text-align:center;padding:1.5rem">
                         <i class="fas fa-clipboard-check"
                             style="font-size:2rem;color:var(--primary-color);margin-bottom:1rem"></i>
-                        <h4 style="margin-bottom:0.5rem">Pré-requis</h4>
-                        <p style="color:#64748b;margin-bottom:0">Bases de Python (variables, listes)</p>
+                        <h4 style="margin-bottom:0.5rem;font-size:1.1rem;">Pré-requis</h4>
+                        <p style="color:#64748b;font-size:1.1rem;margin-bottom:0;text-align:center;">Bases de Python
+                            (variables, listes)</p>
                     </div>
                     <div class="bento-card"
                         style="background:white;border:1px solid #e2e8f0;color:#0f172a;text-align:center;padding:1.5rem">
                         <i class="fas fa-laptop-house"
                             style="font-size:2rem;color:var(--primary-color);margin-bottom:1rem"></i>
-                        <h4 style="margin-bottom:0.5rem">Modalité</h4>
-                        <p style="color:#64748b;margin-bottom:0">100% Distanciel (Teams)</p>
+                        <h4 style="margin-bottom:0.5rem;font-size:1.1rem;">Modalité</h4>
+                        <p style="color:#64748b;font-size:1.1rem;margin-bottom:0;text-align:center;">100% Distanciel
+                            (Teams)</p>
                     </div>
                 </div>
             </div>
@@ -308,7 +327,8 @@
                     <div>
                         <h2 class="section-title" style="text-align:left">Passez du tableur<br><span
                                 class="highlight">au reporting interactif vivant.</span></h2>
-                        <p class="section-subtitle" style="text-align:left;margin-left:0;margin-bottom:2rem">Vos
+                        <p class="section-subtitle"
+                            style="text-align:justify;margin-left:0;margin-bottom:2rem;font-size:1.1rem;">Vos
                             analyses méritent mieux qu'un fichier Excel envoyé par email. Jupyter vous permet de
                             combiner code, explications textuelles et graphiques animés dans un seul document
                             partageable.</p>
@@ -317,7 +337,8 @@
                                     class="fas fa-check-circle"
                                     style="color:var(--primary-color);font-size:1.5rem;margin-top:0.2rem"></i>
                                 <div><strong style="display:block;font-size:1.1rem;margin-bottom:0.2rem">Maîtrise de
-                                        l'environnement Jupyter</strong><span style="color:var(--text-muted)">Créez,
+                                        l'environnement Jupyter</strong><span
+                                        style="color:var(--text-muted);font-size:1.1rem;text-align:justify;display:block;">Créez,
                                         structurez et mettez en forme vos notebooks avec Markdown, HTML et LaTeX.</span>
                                 </div>
                             </li>
@@ -325,14 +346,17 @@
                                     class="fas fa-check-circle"
                                     style="color:var(--primary-color);font-size:1.5rem;margin-top:0.2rem"></i>
                                 <div><strong style="display:block;font-size:1.1rem;margin-bottom:0.2rem">Rapports
-                                        dynamiques et interactifs</strong><span style="color:var(--text-muted)">Intégrez
+                                        dynamiques et interactifs</strong><span
+                                        style="color:var(--text-muted);font-size:1.1rem;text-align:justify;display:block;">Intégrez
                                         des widgets dynamiques (ipywidgets) et des visualisations avec
                                         Matplotlib.</span></div>
                             </li>
                             <li style="display:flex;align-items:flex-start;gap:1rem"><i class="fas fa-check-circle"
                                     style="color:var(--primary-color);font-size:1.5rem;margin-top:0.2rem"></i>
                                 <div><strong style="display:block;font-size:1.1rem;margin-bottom:0.2rem">Export et
-                                        partage professionnels</strong><span style="color:var(--text-muted)">Exportez en
+                                        partage professionnels</strong><span
+                                        style="color:var(--text-muted);font-size:1.1rem;text-align:justify;display:block;">Exportez
+                                        en
                                         HTML/PDF, versionez avec Git et découvrez Jupyter Book pour la
                                         publication.</span></div>
                             </li>
@@ -343,19 +367,22 @@
                             style="margin-bottom:1.5rem;color:var(--primary-color);border-bottom:1px solid rgba(255,255,255,0.1);padding-bottom:1rem">
                             Livrables Inclus</h3>
                         <ul style="list-style:none;padding:0">
-                            <li style="margin-bottom:0.8rem"><i class="fas fa-book"
+                            <li style="margin-bottom:0.8rem;font-size:1.1rem;text-align:justify;"><i class="fas fa-book"
                                     style="color:var(--primary-color);width:25px"></i> Supports de cours (Jupyter
                                 notebooks)</li>
-                            <li style="margin-bottom:0.8rem"><i class="fas fa-database"
-                                    style="color:var(--primary-color);width:25px"></i> Jeux de données réels d'exercices
+                            <li style="margin-bottom:0.8rem;font-size:1.1rem;text-align:justify;"><i
+                                    class="fas fa-database" style="color:var(--primary-color);width:25px"></i> Jeux de
+                                données réels d'exercices
                             </li>
-                            <li style="margin-bottom:0.8rem"><i class="fas fa-code"
+                            <li style="margin-bottom:0.8rem;font-size:1.1rem;text-align:justify;"><i class="fas fa-code"
                                     style="color:var(--primary-color);width:25px"></i> Codes sources complets annotés
                             </li>
-                            <li style="margin-bottom:0.8rem"><i class="fas fa-certificate"
-                                    style="color:var(--primary-color);width:25px"></i> Badge de certification Babylone42
+                            <li style="margin-bottom:0.8rem;font-size:1.1rem;text-align:justify;"><i
+                                    class="fas fa-certificate" style="color:var(--primary-color);width:25px"></i> Badge
+                                de certification Babylone42
                             </li>
-                            <li><i class="fas fa-headset" style="color:var(--primary-color);width:25px"></i> Support
+                            <li style="font-size:1.1rem;text-align:justify;"><i class="fas fa-headset"
+                                    style="color:var(--primary-color);width:25px"></i> Support
                                 post-formation (Discord)</li>
                         </ul>
                     </div>
@@ -367,7 +394,8 @@
             <div class="container">
                 <h2 class="section-title" style="color:#0f172a">Ce que vous saurez faire <span class="highlight">en 1
                         journée</span></h2>
-                <p class="section-subtitle">Transformez vos analyses en documents professionnels, interactifs et
+                <p class="section-subtitle" style="font-size:1.1rem;text-align:justify;">Transformez vos analyses en
+                    documents professionnels, interactifs et
                     accessibles à tous.</p>
                 <div class="skills-grid">
                     <div class="skill-card"><i class="fas fa-laptop-code"></i>
@@ -401,20 +429,28 @@
         <section class="section-padding bg-darker">
             <div class="container" style="max-width:860px">
                 <h2 class="section-title">Programme <span class="highlight">Détaillé</span></h2>
-                <p class="section-subtitle">Une journée intensive pour maîtriser le data storytelling avec Jupyter.</p>
+                <p class="section-subtitle" style="font-size:1.1rem;text-align:justify;">Une journée intensive pour
+                    maîtriser le data storytelling avec Jupyter.</p>
                 <div class="faq-list">
                     <div class="faq-item">
                         <div class="faq-question">
                             <h3>9h00 - 10h30 : Introduction à Jupyter Notebook</h3><i class="fas fa-chevron-down"></i>
                         </div>
                         <div class="faq-answer">
-                            <ul style="padding-left:1.5rem;margin-bottom:1rem">
-                                <li><strong>Les bases:</strong> Qu'est-ce que Jupyter Notebook ? Interface et
+                            <ul style="padding-left:1.5rem;margin-bottom:1rem;color:#475569;">
+                                <li style="font-size:1.1rem;text-align:justify;margin-bottom:0.5rem;"><strong>Les
+                                        bases:</strong> Qu'est-ce que Jupyter Notebook ? Interface et
                                     navigation.</li>
-                                <li><strong>Configuration:</strong> Installation via Anaconda.</li>
-                                <li><strong>Gestion:</strong> Création, ouverture et enregistrement de notebooks.
-                                    Raccourcis clavier courants.</li>
-                                <li><strong>Atelier:</strong> Création d'un notebook simple avec code et texte.</li>
+                                <li style="font-size:1.1rem;text-align:justify;margin-bottom:0.5rem;">
+                                    <strong>Configuration:</strong> Installation via Anaconda.
+                                </li>
+                                <li style="font-size:1.1rem;text-align:justify;margin-bottom:0.5rem;">
+                                    <strong>Gestion:</strong> Création, ouverture et enregistrement de notebooks.
+                                    Raccourcis clavier courants.
+                                </li>
+                                <li style="font-size:1.1rem;text-align:justify;margin-bottom:0.5rem;">
+                                    <strong>Atelier:</strong> Création d'un notebook simple avec code et texte.
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -423,13 +459,17 @@
                             <h3>10h45 - 12h00 : Mise en forme et cellules</h3><i class="fas fa-chevron-down"></i>
                         </div>
                         <div class="faq-answer">
-                            <ul style="padding-left:1.5rem;margin-bottom:1rem">
-                                <li><strong>Markdown &amp; HTML:</strong> Mise en forme avec Markdown, HTML et LaTeX
+                            <ul style="padding-left:1.5rem;margin-bottom:1rem;color:#475569;">
+                                <li style="font-size:1.1rem;text-align:justify;margin-bottom:0.5rem;"><strong>Markdown
+                                        &amp; HTML:</strong> Mise en forme avec Markdown, HTML et LaTeX
                                     (titres, listes, équations).</li>
-                                <li><strong>Le Noyau:</strong> Exécution des cellules de code et gestion du noyau
+                                <li style="font-size:1.1rem;text-align:justify;margin-bottom:0.5rem;"><strong>Le
+                                        Noyau:</strong> Exécution des cellules de code et gestion du noyau
                                     (interruption, redémarrage).</li>
-                                <li><strong>Atelier:</strong> Formatage d'un notebook mixant texte enrichi et code
-                                    Python.</li>
+                                <li style="font-size:1.1rem;text-align:justify;margin-bottom:0.5rem;">
+                                    <strong>Atelier:</strong> Formatage d'un notebook mixant texte enrichi et code
+                                    Python.
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -438,12 +478,17 @@
                             <h3>13h00 - 14h15 : Visualisations et interactions</h3><i class="fas fa-chevron-down"></i>
                         </div>
                         <div class="faq-answer">
-                            <ul style="padding-left:1.5rem;margin-bottom:1rem">
-                                <li><strong>Interactivité:</strong> Introduction aux widgets interactifs avec
-                                    <code>ipywidgets</code> (sliders, boutons).</li>
-                                <li><strong>Graphiques:</strong> Création de graphiques de base avec Matplotlib
-                                    intra-notebook.</li>
-                                <li><strong>Atelier:</strong> Création d'un graphique interactif piloté par un widget.
+                            <ul style="padding-left:1.5rem;margin-bottom:1rem;color:#475569;">
+                                <li style="font-size:1.1rem;text-align:justify;margin-bottom:0.5rem;">
+                                    <strong>Interactivité:</strong> Introduction aux widgets interactifs avec
+                                    <code>ipywidgets</code> (sliders, boutons).
+                                </li>
+                                <li style="font-size:1.1rem;text-align:justify;margin-bottom:0.5rem;">
+                                    <strong>Graphiques:</strong> Création de graphiques de base avec Matplotlib
+                                    intra-notebook.
+                                </li>
+                                <li style="font-size:1.1rem;text-align:justify;margin-bottom:0.5rem;">
+                                    <strong>Atelier:</strong> Création d'un graphique interactif piloté par un widget.
                                 </li>
                             </ul>
                         </div>
@@ -453,13 +498,20 @@
                             <h3>14h30 - 16h00 : Partage, export et projet final</h3><i class="fas fa-chevron-down"></i>
                         </div>
                         <div class="faq-answer">
-                            <ul style="padding-left:1.5rem;margin-bottom:1rem">
-                                <li><strong>Livrables:</strong> Exportation des notebooks en HTML et PDF.</li>
-                                <li><strong>Versioning:</strong> Introduction à Git pour la gestion des versions du
-                                    notebook.</li>
-                                <li><strong>Publication:</strong> Présentation rapide de Jupyter Book pour la création
-                                    de livres numériques.</li>
-                                <li><strong>Projet final:</strong> Notebook complet avec texte formaté, graphique
+                            <ul style="padding-left:1.5rem;margin-bottom:1rem;color:#475569;">
+                                <li style="font-size:1.1rem;text-align:justify;margin-bottom:0.5rem;">
+                                    <strong>Livrables:</strong> Exportation des notebooks en HTML et PDF.
+                                </li>
+                                <li style="font-size:1.1rem;text-align:justify;margin-bottom:0.5rem;">
+                                    <strong>Versioning:</strong> Introduction à Git pour la gestion des versions du
+                                    notebook.
+                                </li>
+                                <li style="font-size:1.1rem;text-align:justify;margin-bottom:0.5rem;">
+                                    <strong>Publication:</strong> Présentation rapide de Jupyter Book pour la création
+                                    de livres numériques.
+                                </li>
+                                <li style="font-size:1.1rem;text-align:justify;margin-bottom:0.5rem;"><strong>Projet
+                                        final:</strong> Notebook complet avec texte formaté, graphique
                                     interactif et export partageable.</li>
                             </ul>
                         </div>
@@ -472,11 +524,13 @@
             <div class="container" style="max-width:700px">
                 <h2 class="section-title" style="color:#0f172a">Clarifiez vos analyses. Impressionnez votre audience.
                 </h2>
-                <p class="section-subtitle" style="margin-bottom:2rem">Rejoignez notre prochaine session ou demandez un
+                <p class="section-subtitle" style="margin-bottom:2rem;font-size:1.1rem;text-align:justify;">Rejoignez
+                    notre prochaine session ou demandez un
                     devis intra-entreprise sur mesure. Disponible à Marseille et partout en France.</p>
-                <a href="contact-page.html" class="btn btn-primary" style="margin-right:1rem">S'inscrire a la
-                    formation</a>
-                <a href="calendrier-formations.html" class="btn btn-secondary">Voir le calendrier</a>
+                <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;">
+                    <a href="contact-page.html" class="btn btn-primary">S'inscrire a la formation</a>
+                    <a href="calendrier-formations.html" class="btn btn-secondary">Voir le calendrier</a>
+                </div>
             </div>
         </section>
 
