@@ -103,12 +103,27 @@
             border: 1px solid #e2e8f0;
         }
 
+        @media (max-width: 640px) {
+            .month-block {
+                padding: 1.25rem;
+                margin-bottom: 2rem;
+            }
+        }
+
         .month-title {
             color: var(--primary-color);
             border-bottom: 2px solid #f1f5f9;
             padding-bottom: 1rem;
             margin-bottom: 1.5rem;
             font-size: 1.8rem;
+        }
+
+        @media (max-width: 640px) {
+            .month-title {
+                font-size: 1.5rem;
+                text-align: center;
+                margin-bottom: 1rem;
+            }
         }
 
         .course-list {
@@ -125,6 +140,25 @@
             border-radius: 8px;
             transition: all 0.2s ease;
             background: #fafafa;
+        }
+
+        .badge-full {
+            background: #fee2e2 !important;
+            color: #dc2626 !important;
+            border: 1px solid #fecaca;
+        }
+
+        .course-full {
+            opacity: 0.7;
+            filter: grayscale(0.5);
+        }
+
+        .btn-closed {
+            border-color: #cbd5e1 !important;
+            color: #94a3b8 !important;
+            cursor: not-allowed !important;
+            background: transparent !important;
+            pointer-events: none;
         }
 
         .course-item:hover {
@@ -208,6 +242,19 @@
             font-weight: 500;
         }
 
+        @media (max-width: 640px) {
+            .holiday-notice {
+                font-size: 0.85rem;
+                flex-direction: column;
+                text-align: center;
+                gap: 0.4rem;
+                padding: 1rem;
+                border-left: none;
+                border-top: 4px solid #cbd5e1;
+                border-radius: 8px;
+            }
+        }
+
         .holiday-notice i {
             color: #94a3b8;
             font-size: 1.2rem;
@@ -243,6 +290,28 @@
 
             .course-info h3 {
                 justify-content: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .course-item {
+                padding: 1rem;
+            }
+
+            .course-dates {
+                min-width: unset;
+                width: 100%;
+                padding-bottom: 0.75rem;
+                margin-bottom: 0.75rem;
+            }
+
+            .course-info h3 {
+                font-size: 1.15rem;
+                gap: 0.5rem;
+            }
+
+            .course-dates .num {
+                font-size: 1.2rem;
             }
         }
     </style>
@@ -311,12 +380,27 @@
             border: 1px solid #e2e8f0;
         }
 
+        @media (max-width: 640px) {
+            .month-block {
+                padding: 1.25rem;
+                margin-bottom: 2rem;
+            }
+        }
+
         .month-title {
             color: var(--primary-color);
             border-bottom: 2px solid #f1f5f9;
             padding-bottom: 1rem;
             margin-bottom: 1.5rem;
             font-size: 1.8rem;
+        }
+
+        @media (max-width: 640px) {
+            .month-title {
+                font-size: 1.5rem;
+                text-align: center;
+                margin-bottom: 1rem;
+            }
         }
 
         .course-list {
@@ -416,11 +500,6 @@
             font-weight: 500;
         }
 
-        .holiday-notice i {
-            color: #94a3b8;
-            font-size: 1.2rem;
-        }
-
         @media (max-width: 860px) {
             .calendar-layout {
                 grid-template-columns: 1fr;
@@ -463,16 +542,59 @@
             .course-info h3 {
                 justify-content: center;
             }
+
+            .month-block {
+                padding: 1.25rem;
+                margin-bottom: 2rem;
+            }
+
+            .month-title {
+                font-size: 1.5rem;
+                text-align: center;
+                margin-bottom: 1rem;
+            }
+
+            .holiday-notice {
+                font-size: 0.85rem;
+                flex-direction: column;
+                text-align: center;
+                gap: 0.4rem;
+                padding: 1rem;
+                border-left: none;
+                border-top: 4px solid #cbd5e1;
+                border-radius: 8px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .course-item {
+                padding: 1rem;
+            }
+
+            .course-dates {
+                min-width: unset;
+                width: 100%;
+                padding-bottom: 0.75rem;
+                margin-bottom: 0.75rem;
+            }
+
+            .course-info h3 {
+                font-size: 1.15rem;
+                gap: 0.5rem;
+            }
+
+            .course-dates .num {
+                font-size: 1.2rem;
+            }
         }
     </style>
-    <main class="page-content" style="padding-top: 100px; padding-bottom: 80px; background: #f8fafc;">
+    <main class="page-content" style="padding-top: 150px; padding-bottom: 80px; background: #f8fafc;">
         <div class="container bg-light section-padding" style="background: transparent;">
             <div style="text-align: center; margin-bottom: 3rem;">
                 <h1 class="section-title" style="margin-bottom: 1rem; color: #0f172a;">Calendrier des formations <span
                         class="highlight">2026</span></h1>
                 <p style="color: #64748b; font-size: 1.1rem; max-width: 600px; margin: 0 auto;">Planifiez votre montée
-                    en compétences. Nos sessions se déroulent essentiellement les jeudis et vendredis (hors vacances
-                    scolaires).</p>
+                    en compétences.</p>
             </div>
 
             <div class="calendar-layout">
@@ -513,6 +635,16 @@
                                 <div class="course-action"><a href="contact-page.html?formation=prompting"
                                         class="btn btn-primary" style="padding: 0.6rem 1.2rem;">S'inscrire</a></div>
                             </div>
+                            <div class="course-item course-full" data-type="machine_learning">
+                                <div class="course-dates"><span class="day">JEU &amp; VEN</span> <span class="num">23 -
+                                        24</span></div>
+                                <div class="course-info">
+                                    <h3>Machine Learning <span class="badge badge-full">COMPLET</span></h3>
+                                    <p>Distanciel • Session 2</p>
+                                </div>
+                                <div class="course-action"><span class="btn btn-outline btn-closed">Fermé</span>
+                                </div>
+                            </div>
                         </div>
                         <div class="holiday-notice"><i class="fas fa-umbrella-beach"></i> <strong>18 Avril - 3
                                 Mai</strong> : Vacances de Printemps</div>
@@ -522,14 +654,23 @@
                     <div class="month-block" id="mai">
                         <h2 class="month-title">Mai 2026</h2>
                         <div class="course-list">
-                            <div class="course-item" data-type="python">
+                            <div class="course-item course-full" data-type="python">
                                 <div class="course-dates"><span class="day">JEU / VEN</span> <span class="num">07, 21,
                                         22</span></div>
                                 <div class="course-info">
-                                    <h3>Python pour la Data <span class="badge">3 jours</span></h3>
+                                    <h3>Python pour la Data <span class="badge badge-full">COMPLET</span></h3>
                                     <p>Distanciel • Session 4</p>
                                 </div>
-                                <div class="course-action"><a href="contact-page.html?formation=python"
+                                <div class="course-action"><span class="btn btn-outline btn-closed">Fermé</span>
+                                </div>
+                            </div>
+                            <div class="course-item" data-type="jupyter">
+                                <div class="course-dates"><span class="day">VEN</span> <span class="num">15</span></div>
+                                <div class="course-info">
+                                    <h3>Jupyter Notebook <span class="badge">1 jour</span></h3>
+                                    <p>Distanciel • Session supplémentaire</p>
+                                </div>
+                                <div class="course-action"><a href="contact-page.html?formation=jupyter"
                                         class="btn btn-primary" style="padding: 0.6rem 1.2rem;">S'inscrire</a></div>
                             </div>
                             <div class="course-item" data-type="machine_learning">
@@ -549,16 +690,14 @@
                     <div class="month-block" id="juin">
                         <h2 class="month-title">Juin 2026</h2>
                         <div class="course-list">
-                            <div class="course-item" data-type="deep_learning"
-                                style="opacity: 0.6; filter: grayscale(1);">
+                            <div class="course-item course-full" data-type="deep_learning">
                                 <div class="course-dates"><span class="day">VEN / JEU</span> <span class="num">05, 11,
                                         12</span></div>
                                 <div class="course-info">
-                                    <h3>Deep Learning <span class="badge">3 jours</span></h3>
-                                    <p>Distanciel • Session 3 — <strong style="color: #dc2626;">Complet</strong></p>
+                                    <h3>Deep Learning <span class="badge badge-full">COMPLET</span></h3>
+                                    <p>Distanciel • Session 3</p>
                                 </div>
-                                <div class="course-action"><span class="btn btn-outline"
-                                        style="border-color: #cbd5e1; color: #94a3b8; cursor: not-allowed; padding: 0.6rem 1.2rem;">Fermé</span>
+                                <div class="course-action"><span class="btn btn-outline btn-closed">Fermé</span>
                                 </div>
                             </div>
                             <div class="course-item" data-type="jupyter">
@@ -570,15 +709,24 @@
                                 <div class="course-action"><a href="contact-page.html?formation=jupyter"
                                         class="btn btn-primary" style="padding: 0.6rem 1.2rem;">S'inscrire</a></div>
                             </div>
-                            <div class="course-item" data-type="python">
+                            <div class="course-item" data-type="prompting">
+                                <div class="course-dates"><span class="day">JEU</span> <span class="num">04</span></div>
+                                <div class="course-info">
+                                    <h3>IA Générative <span class="badge">1 jour intensif</span></h3>
+                                    <p>Distanciel • Session supplémentaire</p>
+                                </div>
+                                <div class="course-action"><a href="contact-page.html?formation=prompting"
+                                        class="btn btn-primary" style="padding: 0.6rem 1.2rem;">S'inscrire</a></div>
+                            </div>
+                            <div class="course-item course-full" data-type="python">
                                 <div class="course-dates"><span class="day">JEU / VEN</span> <span class="num">25, 26,
                                         02 Juil</span></div>
                                 <div class="course-info">
-                                    <h3>Python pour la Data <span class="badge">3 jours</span></h3>
+                                    <h3>Python pour la Data <span class="badge badge-full">COMPLET</span></h3>
                                     <p>Distanciel • Session 5</p>
                                 </div>
-                                <div class="course-action"><a href="contact-page.html?formation=python"
-                                        class="btn btn-primary" style="padding: 0.6rem 1.2rem;">S'inscrire</a></div>
+                                <div class="course-action"><span class="btn btn-outline btn-closed">Fermé</span>
+                                </div>
                             </div>
                         </div>
                         <div class="holiday-notice"><i class="fas fa-sun"></i> <strong>4 Juillet - 31 Août</strong> :
@@ -589,14 +737,23 @@
                     <div class="month-block" id="septembre">
                         <h2 class="month-title">Septembre 2026</h2>
                         <div class="course-list">
-                            <div class="course-item" data-type="prompting">
+                            <div class="course-item course-full" data-type="prompting">
                                 <div class="course-dates"><span class="day">JEU &amp; VEN</span> <span class="num">03 -
                                         04</span></div>
                                 <div class="course-info">
-                                    <h3>IA Générative <span class="badge">1.5 jours</span></h3>
+                                    <h3>IA Générative <span class="badge badge-full">COMPLET</span></h3>
                                     <p>Distanciel • Session 4</p>
                                 </div>
-                                <div class="course-action"><a href="contact-page.html?formation=prompting"
+                                <div class="course-action"><span class="btn btn-outline btn-closed">Fermé</span>
+                                </div>
+                            </div>
+                            <div class="course-item" data-type="python">
+                                <div class="course-dates"><span class="day">VEN</span> <span class="num">25</span></div>
+                                <div class="course-info">
+                                    <h3>Python pour la Data <span class="badge">Session Intensive</span></h3>
+                                    <p>Distanciel • Session supplémentaire</p>
+                                </div>
+                                <div class="course-action"><a href="contact-page.html?formation=python"
                                         class="btn btn-primary" style="padding: 0.6rem 1.2rem;">S'inscrire</a></div>
                             </div>
                             <div class="course-item" data-type="machine_learning">
@@ -626,15 +783,15 @@
                     <div class="month-block" id="octobre">
                         <h2 class="month-title">Octobre 2026</h2>
                         <div class="course-list">
-                            <div class="course-item" data-type="python">
+                            <div class="course-item course-full" data-type="python">
                                 <div class="course-dates"><span class="day">JEU / VEN</span> <span class="num">01, 02,
                                         08</span></div>
                                 <div class="course-info">
-                                    <h3>Python pour la Data <span class="badge">3 jours</span></h3>
+                                    <h3>Python pour la Data <span class="badge badge-full">COMPLET</span></h3>
                                     <p>Distanciel • Session 6</p>
                                 </div>
-                                <div class="course-action"><a href="contact-page.html?formation=python"
-                                        class="btn btn-primary" style="padding: 0.6rem 1.2rem;">S'inscrire</a></div>
+                                <div class="course-action"><span class="btn btn-outline btn-closed">Fermé</span>
+                                </div>
                             </div>
                             <div class="course-item" data-type="jupyter">
                                 <div class="course-dates"><span class="day">VEN</span> <span class="num">09</span></div>
@@ -674,15 +831,15 @@
                                 <div class="course-action"><a href="contact-page.html?formation=machine_learning"
                                         class="btn btn-primary" style="padding: 0.6rem 1.2rem;">S'inscrire</a></div>
                             </div>
-                            <div class="course-item" data-type="deep_learning">
+                            <div class="course-item course-full" data-type="deep_learning">
                                 <div class="course-dates"><span class="day">VEN / JEU</span> <span class="num">13, 19,
                                         20</span></div>
                                 <div class="course-info">
-                                    <h3>Deep Learning <span class="badge">3 jours</span></h3>
+                                    <h3>Deep Learning <span class="badge badge-full">COMPLET</span></h3>
                                     <p>Distanciel • Session 5</p>
                                 </div>
-                                <div class="course-action"><a href="contact-page.html?formation=deep_learning"
-                                        class="btn btn-primary" style="padding: 0.6rem 1.2rem;">S'inscrire</a></div>
+                                <div class="course-action"><span class="btn btn-outline btn-closed">Fermé</span>
+                                </div>
                             </div>
                             <div class="course-item" data-type="python">
                                 <div class="course-dates"><span class="day">JEU / VEN</span> <span class="num">26, 27,
@@ -720,13 +877,23 @@
                                 <div class="course-action"><a href="contact-page.html?formation=jupyter"
                                         class="btn btn-primary" style="padding: 0.6rem 1.2rem;">S'inscrire</a></div>
                             </div>
-                            <div class="course-item" data-type="prompting">
+                            <div class="course-item course-full" data-type="prompting">
                                 <div class="course-dates"><span class="day">VEN</span> <span class="num">18</span></div>
                                 <div class="course-info">
-                                    <h3>IA Générative <span class="badge">1 jour intensif</span></h3>
+                                    <h3>IA Générative <span class="badge badge-full">COMPLET</span></h3>
                                     <p>Distanciel • Session 6</p>
                                 </div>
-                                <div class="course-action"><a href="contact-page.html?formation=prompting"
+                                <div class="course-action"><span class="btn btn-outline btn-closed">Fermé</span>
+                                </div>
+                            </div>
+                            <div class="course-item" data-type="python">
+                                <div class="course-dates"><span class="day">LUN / MAR</span> <span class="num">14,
+                                        15</span></div>
+                                <div class="course-info">
+                                    <h3>Python pour la Data <span class="badge">Dernière chance</span></h3>
+                                    <p>Distanciel • Session Noël</p>
+                                </div>
+                                <div class="course-action"><a href="contact-page.html?formation=python"
                                         class="btn btn-primary" style="padding: 0.6rem 1.2rem;">S'inscrire</a></div>
                             </div>
                         </div>

@@ -193,12 +193,25 @@ p {
 /* Service cards */
 .service-card {
     background: #f8fafc;
-    /* Light background */
     border: 1px solid rgba(16, 155, 128, 0.2);
-    padding: 1.5rem;
-    border-radius: 8px;
+    padding: 2rem 1.5rem;
+    border-radius: 12px;
     text-align: center;
     color: #0f172a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1 1 300px;
+    /* Base width and allows growing/shrinking */
+    max-width: 400px;
+    /* Prevents being too wide when alone */
+    min-height: 250px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
 .service-card h4 {
@@ -1719,11 +1732,11 @@ p {
    ========================================= */
 .step-by-step-container {
     display: flex;
-    align-items: flex-start;
+    align-items: stretch;
+    /* Force same height */
     justify-content: center;
-    gap: 1rem;
+    gap: 1.5rem;
     flex-wrap: wrap;
-    /* Fallback for smaller screens */
     margin-top: 3rem;
 }
 
