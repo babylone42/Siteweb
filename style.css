@@ -194,7 +194,7 @@ p {
 .service-card {
     background: #f8fafc;
     border: 1px solid rgba(16, 155, 128, 0.2);
-    padding: 2rem 1.5rem;
+    padding: 1.25rem 1rem;
     border-radius: 12px;
     text-align: center;
     color: #0f172a;
@@ -205,7 +205,7 @@ p {
     /* Base width and allows growing/shrinking */
     max-width: 400px;
     /* Prevents being too wide when alone */
-    min-height: 250px;
+    min-height: 200px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -222,7 +222,7 @@ p {
     font-size: 2rem;
     color: #0d7a64;
     /* Deeper teal for better contrast on light background */
-    margin-bottom: 1rem;
+    margin-bottom: 0.75rem;
     display: block;
 }
 
@@ -1110,6 +1110,17 @@ p {
     align-items: center;
 }
 
+.why-us-content .section-title {
+    text-align: left;
+    margin-bottom: 0.5rem;
+}
+
+.why-us-subtitle {
+    margin-bottom: 3rem;
+    font-size: 1.1rem;
+    font-family: var(--font-body);
+}
+
 .why-us-visuals {
     position: relative;
     height: 500px;
@@ -1170,7 +1181,7 @@ p {
 
 .diff-text strong {
     font-family: var(--font-heading);
-    font-size: 1.15rem;
+    font-size: 1.2rem;
     color: #4a4a4a;
     /* Adjusted for light background */
     display: block;
@@ -1180,8 +1191,9 @@ p {
 .diff-text p {
     margin: 0;
     color: #000000;
-    font-size: 0.95rem;
+    font-size: 1.05rem;
     line-height: 1.6;
+    font-family: var(--font-body);
 }
 
 /* -------------------------------------
@@ -2292,5 +2304,10 @@ p {
 
     .solution-card {
         margin: 0;
+    }
+
+    .service-card {
+        padding: 1rem !important;
+        min-height: auto !important;
     }
 }
