@@ -1,4 +1,4 @@
-﻿document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => {
 
     // Smooth Scrolling for Anchors
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -486,6 +486,62 @@
             }
         });
     }
+
+    // --- Floating AI Widget Injection & Logic ---
+    const injectFloatingWidget = () => {
+        const widgetHTML = `
+            <div class="floating-widget-container">
+                <div class="floating-widget-popup" id="ai-widget-popup">
+                    <div class="floating-widget-header">
+                        <div class="success-modal-icon" style="width: 30px; height: 30px; font-size: 14px; margin: 0;">
+                            <i class="fas fa-sparkles"></i>
+                        </div>
+                        <span>Assistant IA Premium</span>
+                    </div>
+                    <div class="floating-widget-body">
+                        <p>Optimisez votre relation client avec nos solutions d'IA sur-mesure. Découvrez comment nous aidons les marques d'exception.</p>
+                        <a href="#contact" class="floating-widget-cta" id="widget-cta">Demander un Audit Design</a>
+                    </div>
+                </div>
+                <button class="floating-widget-btn" id="ai-widget-btn">
+                    <i class="fas fa-robot"></i>
+                    <div class="floating-widget-badge">1</div>
+                </button>
+            </div>
+        `;
+
+        document.body.insertAdjacentHTML('beforeend', widgetHTML);
+
+        const btn = document.getElementById('ai-widget-btn');
+        const popup = document.getElementById('ai-widget-popup');
+        const cta = document.getElementById('widget-cta');
+
+        if (btn && popup) {
+            btn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                popup.classList.toggle('active');
+                // Hide badge when opened
+                const badge = btn.querySelector('.floating-widget-badge');
+                if (badge) badge.style.display = 'none';
+            });
+
+            // Close when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!popup.contains(e.target) && !btn.contains(e.target)) {
+                    popup.classList.remove('active');
+                }
+            });
+
+            // Special CTA behavior
+            cta.addEventListener('click', () => {
+                popup.classList.remove('active');
+                // Pre-fill or focus logic could go here
+            });
+        }
+    };
+
+    // Delay appearance for better UX
+    setTimeout(injectFloatingWidget, 3000);
 
 });
 
