@@ -543,5 +543,198 @@ document.addEventListener('DOMContentLoaded', () => {
     // Delay appearance for better UX
     setTimeout(injectFloatingWidget, 3000);
 
+    // --- Devis Form Submission (Video IA Pro) ---
+    const devisForm = document.getElementById('devisForm');
+    if (devisForm) {
+        devisForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const btn = devisForm.querySelector('button');
+            const originalText = btn.innerText;
+
+            btn.innerText = 'Envoi en cours...';
+            btn.disabled = true;
+
+            const payload = {
+                first_name: document.getElementById('devis-firstname').value,
+                last_name: document.getElementById('devis-lastname').value,
+                email: document.getElementById('devis-email').value,
+                phone: document.getElementById('devis-phone').value || null,
+                need_type: 'formations',
+                sub_need: `video_ia_pro (participants: ${document.getElementById('devis-participants').value}, secteur: ${document.getElementById('devis-sector').value}, message: ${document.getElementById('devis-message').value || 'none'})`
+            };
+
+            try {
+                const response = await fetch(`${SUPABASE_URL}/rest/v1/contacts`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'apikey': SUPABASE_KEY,
+                        'Authorization': `Bearer ${SUPABASE_KEY}`,
+                        'Prefer': 'return=minimal'
+                    },
+                    body: JSON.stringify(payload)
+                });
+
+                if (response.ok) {
+                    devisForm.reset();
+                    if (window.closeModal) {
+                        window.closeModal('devis-modal');
+                    } else {
+                        const modal = document.getElementById('devis-modal');
+                        if (modal) modal.classList.remove('active');
+                    }
+                    if (window.showSuccessModal) {
+                        window.showSuccessModal(
+                            "Merci !",
+                            "Notre équipe vous contacte sous 24h. Votre brochure arrive par email."
+                        );
+                    }
+                } else {
+                    throw new Error('Server error');
+                }
+            } catch (err) {
+                console.error(err);
+                btn.innerText = 'Erreur lors de l\'envoi ❌';
+                btn.style.backgroundColor = '#ef4444';
+                btn.style.color = '#fff';
+                setTimeout(() => {
+                    btn.innerText = originalText;
+                    btn.style.backgroundColor = '';
+                    btn.style.color = '';
+                    btn.disabled = false;
+                }, 4000);
+            } finally {
+                btn.disabled = false;
+            }
+        });
+    }
+
+    // --- Beta Form Submission (Video IA Pro) ---
+    const betaForm = document.getElementById('betaForm');
+    if (betaForm) {
+        betaForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const btn = betaForm.querySelector('button');
+            const originalText = btn.innerText;
+
+            btn.innerText = 'Envoi en cours...';
+            btn.disabled = true;
+
+            const payload = {
+                nom: document.getElementById('beta-lastname').value,
+                prenom: document.getElementById('beta-firstname').value,
+                email: document.getElementById('beta-email').value,
+                telephone: document.getElementById('beta-phone').value || null,
+                entreprise: document.getElementById('beta-company').value || null,
+                profil: document.getElementById('beta-profile').value,
+                motivation: document.getElementById('beta-motivation').value
+            };
+
+            try {
+                const response = await fetch(`${SUPABASE_URL}/rest/v1/beta_testers_video_ia`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'apikey': SUPABASE_KEY,
+                        'Authorization': `Bearer ${SUPABASE_KEY}`,
+                        'Prefer': 'return=minimal'
+                    },
+                    body: JSON.stringify(payload)
+                });
+
+                if (response.ok) {
+                    betaForm.reset();
+                    if (window.closeModal) {
+                        window.closeModal('beta-modal');
+                    } else {
+                        const modal = document.getElementById('beta-modal');
+                        if (modal) modal.classList.remove('active');
+                    }
+                    if (window.showSuccessModal) {
+                        window.showSuccessModal(
+                            "Merci !",
+                            "Merci ! On vous contacte vite pour la prochaine session beta."
+                        );
+                    }
+                } else {
+                    throw new Error('Server error');
+                }
+            } catch (err) {
+                console.error(err);
+                btn.innerText = 'Erreur lors de l\'envoi ❌';
+                btn.style.backgroundColor = '#ef4444';
+                btn.style.color = '#fff';
+                setTimeout(() => {
+                    btn.innerText = originalText;
+                    btn.style.backgroundColor = '';
+                    btn.style.color = '';
+                    btn.disabled = false;
+                }, 4000);
+            } finally {
+                btn.disabled = false;
+            }
+        });
+    }
+
+    // --- Inscription Form Submission (Video IA Pro) ---
+    const inscriptionForm = document.getElementById('inscriptionForm');
+    if (inscriptionForm) {
+        const accomCheckModal = document.getElementById('inscription-accom-check');
+        const priceDisplayModal = document.getElementById('inscription-total-price');
+        
+        if (accomCheckModal && priceDisplayModal) {
+            accomCheckModal.addEventListener('change', () => {
+                if (accomCheckModal.checked) {
+                    priceDisplayModal.innerText = "1 690 €";
+                } else {
+                    priceDisplayModal.innerText = "1 490 €";
+                }
+            });
+        }
+
+        inscriptionForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const btn = inscriptionForm.querySelector('button');
+            const originalText = btn.innerText;
+
+            btn.innerText = 'Redirection vers le paiement...';
+            btn.disabled = true;
+
+            const hasAccompaniment = accomCheckModal ? accomCheckModal.checked : false;
+
+            const payload = {
+                first_name: document.getElementById('inscription-firstname').value,
+                last_name: document.getElementById('inscription-lastname').value,
+                email: document.getElementById('inscription-email').value,
+                phone: document.getElementById('inscription-phone').value || null,
+                need_type: 'formations',
+                sub_need: `video_ia_pro (inscription, accompagnement: ${hasAccompaniment ? 'oui (+200€)' : 'non'}, entreprise: ${document.getElementById('inscription-company').value || 'none'})`
+            };
+
+            try {
+                // Save lead in Supabase contacts table
+                await fetch(`${SUPABASE_URL}/rest/v1/contacts`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'apikey': SUPABASE_KEY,
+                        'Authorization': `Bearer ${SUPABASE_KEY}`,
+                        'Prefer': 'return=minimal'
+                    },
+                    body: JSON.stringify(payload)
+                });
+            } catch (err) {
+                console.error("Failed to save contact lead, redirecting anyway", err);
+            }
+
+            // Redirect to Qonto payment
+            const redirectUrl = hasAccompaniment ? 
+                "https://pay.qonto.com/payment-links/019e9378-4255-7410-9231-508f31a9f4ea?resource_id=019e9378-4256-7558-8e2f-ba9195e5a441" : 
+                "https://pay.qonto.com/payment-links/019e9379-c930-72c5-8444-0275154509e6?resource_id=019e9379-c931-7717-bb8a-1b9105d4aac4";
+            
+            window.location.href = redirectUrl;
+        });
+    }
+
 });
 

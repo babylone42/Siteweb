@@ -1,0 +1,1539 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vidéo IA Pro : De zéro à portfolio en 3 jours | Babylone42</title>
+    <meta name="description"
+        content="Devenez autonome en production vidéo IA. Formation intensive 3 jours en binôme expert IA + vidéaste indépendant. Créez votre portfolio vidéo sans agence.">
+    <meta name="robots" content="index, follow">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Space+Grotesk:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=9">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <style>
+        /* --- Landing page custom layouts --- */
+        .form-hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        @media (max-width: 991px) {
+            .form-hero-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+
+        .badge-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+            margin-top: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .badge-item {
+            background: rgba(16, 155, 128, 0.08);
+            border: 1px solid rgba(16, 155, 128, 0.25);
+            color: var(--primary-color);
+            padding: 0.4rem 0.9rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .cta-group {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-brochure-link {
+            display: block;
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            text-decoration: underline;
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+
+        .cta-brochure-link:hover {
+            color: var(--primary-color);
+        }
+
+        .problems-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .problem-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 2rem;
+            transition: border-color 0.3s;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+        }
+
+        .problem-card:hover {
+            border-color: rgba(16, 155, 128, 0.3);
+        }
+
+        .problem-card i {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .problem-card h3 {
+            font-size: 1.25rem;
+            color: #0f172a;
+            margin-bottom: 0.75rem;
+        }
+
+        .problem-card p {
+            color: #475569;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .before-after-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 2rem;
+        }
+
+        .before-after-table th {
+            background: rgba(15, 23, 42, 0.05);
+            border-bottom: 2px solid rgba(15, 23, 42, 0.1);
+            color: #0f172a;
+            padding: 1.2rem;
+            font-weight: 600;
+            text-align: left;
+        }
+
+        .before-after-table td {
+            padding: 1.2rem;
+            border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+            color: #334155;
+        }
+
+        .before-after-table tr:hover td {
+            color: #0f172a;
+            background: rgba(15, 23, 42, 0.02);
+        }
+
+        .before-after-table td.highlight-column {
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        .agenda-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 14px;
+            overflow: hidden;
+            margin-bottom: 1rem;
+        }
+
+        .agenda-header {
+            padding: 1.25rem 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            user-select: none;
+            background: rgba(255, 255, 255, 0.01);
+            transition: background 0.2s;
+        }
+
+        .agenda-header:hover {
+            background: rgba(255, 255, 255, 0.03);
+        }
+
+        .agenda-header h3 {
+            font-size: 1.15rem;
+            color: #fff;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .agenda-header h3 span {
+            background: var(--primary-color);
+            color: #fff;
+            font-size: 0.75rem;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-weight: 700;
+        }
+
+        .agenda-header i {
+            color: var(--text-muted);
+            transition: transform 0.3s;
+        }
+
+        .agenda-card.active .agenda-header i {
+            transform: rotate(180deg);
+            color: var(--primary-color);
+        }
+
+        .agenda-body {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+
+        .agenda-content {
+            padding: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            color: #cbd5e1;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .agenda-content ul {
+            padding-left: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .agenda-content li {
+            margin-bottom: 0.5rem;
+        }
+
+        .agenda-livrable {
+            background: rgba(16, 155, 128, 0.06);
+            border-left: 3px solid var(--primary-color);
+            padding: 0.75rem 1rem;
+            border-radius: 0 8px 8px 0;
+            margin-top: 1rem;
+        }
+
+        .agenda-livrable strong {
+            color: #fff;
+            display: block;
+            font-size: 0.9rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .personas-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .persona-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 14px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+        }
+
+        .persona-card .icon-wrap {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .persona-card h3 {
+            font-size: 1.3rem;
+            color: #0f172a;
+            margin-bottom: 0.75rem;
+        }
+
+        .persona-card p {
+            color: #475569;
+            line-height: 1.6;
+            margin-bottom: 1.25rem;
+            font-size: 0.95rem;
+        }
+
+        .persona-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            justify-content: center;
+        }
+
+        .persona-tag {
+            background: rgba(16, 155, 128, 0.06);
+            border: 1px solid rgba(16, 155, 128, 0.15);
+            color: var(--primary-color);
+            padding: 0.25rem 0.75rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .binome-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .profile-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 16px;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .profile-avatar {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary-color), #3b82f6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 1.5rem;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .profile-card h3 {
+            font-size: 1.3rem;
+            color: #fff;
+            margin-bottom: 0.25rem;
+        }
+
+        .profile-card .title {
+            color: var(--primary-color);
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 1rem;
+        }
+
+        .profile-card p {
+            color: var(--text-muted);
+            line-height: 1.6;
+            font-size: 0.95rem;
+            margin-bottom: 0;
+        }
+
+        .pricing-table-wrap {
+            overflow-x: auto;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            margin-top: 2rem;
+        }
+
+        .pricing-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: rgba(255, 255, 255, 0.02);
+            min-width: 600px;
+        }
+
+        .pricing-table th, .pricing-table td {
+            padding: 1.25rem 1.5rem;
+            text-align: left;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .pricing-table th {
+            color: #fff;
+            font-weight: 600;
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        .pricing-table td {
+            color: #cbd5e1;
+        }
+
+        .pricing-table tr:hover td {
+            background: rgba(255, 255, 255, 0.01);
+        }
+
+        .pricing-checkbox-wrap {
+            background: rgba(16, 155, 128, 0.05);
+            border: 1px solid rgba(16, 155, 128, 0.2);
+            padding: 1.25rem;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-top: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .pricing-checkbox-wrap input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+            accent-color: var(--primary-color);
+        }
+
+        .pricing-checkbox-wrap label {
+            cursor: pointer;
+            font-size: 0.95rem;
+            color: #fff;
+            font-weight: 600;
+        }
+
+        .pricing-argument {
+            font-style: italic;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            text-align: center;
+            display: block;
+            margin-top: 1.5rem;
+        }
+
+        .premium-kit-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .premium-kit-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 12px;
+            padding: 1.5rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .premium-kit-card i {
+            color: var(--primary-color);
+            font-size: 1.25rem;
+            margin-top: 0.2rem;
+        }
+
+        .premium-kit-card div strong {
+            display: block;
+            color: #fff;
+            font-size: 1rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .premium-kit-card div span {
+            color: var(--text-muted);
+            font-size: 0.88rem;
+            line-height: 1.5;
+            display: block;
+        }
+
+        /* --- Devis Modal overlay --- */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(8px);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .modal-overlay.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .modal-container {
+            background: #0d1527;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            width: 90%;
+            max-width: 580px;
+            max-height: 90vh;
+            overflow-y: auto;
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.5);
+            position: relative;
+            transform: scale(0.9);
+            transition: transform 0.3s ease;
+        }
+
+        .modal-overlay.active .modal-container {
+            transform: scale(1);
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 1.25rem;
+            right: 1.25rem;
+            background: none;
+            border: none;
+            color: var(--text-muted);
+            font-size: 1.25rem;
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+
+        .modal-close:hover {
+            color: #fff;
+        }
+
+        .modal-body {
+            padding: 2.5rem;
+        }
+
+        .modal-title {
+            font-size: 1.6rem;
+            color: #fff;
+            margin-bottom: 0.5rem;
+            font-family: var(--font-heading);
+        }
+
+        .modal-subtitle {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 2rem;
+            line-height: 1.5;
+        }
+
+        /* --- Floating Beta Widget --- */
+        .beta-widget-wrap {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            z-index: 900;
+        }
+
+        .beta-btn {
+            background: #2563eb;
+            color: #fff;
+            border: none;
+            padding: 0.75rem 1.25rem;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 0.88rem;
+            cursor: pointer;
+            box-shadow: 0 8px 24px rgba(37, 99, 235, 0.3);
+            transition: transform 0.2s, background 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .beta-btn:hover {
+            background: #1d4ed8;
+            transform: translateY(-2px);
+        }
+
+        /* --- Adaptive responsive fixes --- */
+        @media (max-width: 991px) {
+            .binome-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .cta-group {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .cta-group .btn {
+                text-align: center;
+                width: 100%;
+            }
+            .before-after-table th, .before-after-table td {
+                padding: 0.8rem;
+                font-size: 0.88rem;
+            }
+            .modal-body {
+                padding: 1.5rem;
+            }
+        }
+
+        /* --- Floating Earlybird Bubble --- */
+        .earlybird-bubble {
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            background: linear-gradient(135deg, var(--primary-color), #0f766e);
+            color: #fff;
+            padding: 0.8rem 1.2rem;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            box-shadow: 0 8px 24px rgba(16, 155, 128, 0.3);
+            cursor: pointer;
+            z-index: 900;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: transform 0.2s, background 0.2s;
+            animation: pulse-bubble 2s infinite;
+        }
+
+        .earlybird-bubble:hover {
+            transform: scale(1.05);
+            background: linear-gradient(135deg, #13b596, #115e59);
+        }
+
+        @keyframes pulse-bubble {
+            0% {
+                box-shadow: 0 0 0 0 rgba(16, 155, 128, 0.4);
+            }
+            70% {
+                box-shadow: 0 0 0 10px rgba(16, 155, 128, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(16, 155, 128, 0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+        <div class="container">
+            <!-- TOP ROW: Socials & Contact -->
+            <div class="navbar-top">
+                <div class="navbar-top-content">
+                    <a href="https://wa.me/33773609849" target="_blank" rel="noopener noreferrer" class="navbar-phone">
+                        <i class="fab fa-whatsapp"></i> +33 0 7 73 60 98 49
+                    </a>
+                    <div class="nav-socials">
+                        <a href="https://www.linkedin.com/company/babylone42/" target="_blank" rel="noopener noreferrer"
+                            aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/babylone42_?igsh=YzVyamk1N3VoYXU1" target="_blank"
+                            rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=61583402791597&name=xhp_nt__fb__action__open_user&locale=fr_FR"
+                            target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i
+                                class="fab fa-facebook"></i></a>
+                        <a href="https://x.com/babylone42_" target="_blank" rel="noopener noreferrer"
+                            aria-label="X Twitter"><i class="fab fa-x-twitter"></i></a>
+                        <a href="https://m.youtube.com/@Babylone42" target="_blank" rel="noopener noreferrer"
+                            aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BOTTOM ROW: Logo, Links & Mobile Menu -->
+            <div class="navbar-bottom">
+                <a href="index.html" class="logo">
+                    <img src="images/logo.svg" alt="Babylone42 Logo" style="height: 30px;">
+                </a>
+
+                <ul class="nav-links">
+                    <li class="dropdown">
+                        <a href="#hero">Accueil <i class="fas fa-chevron-down"
+                                style="font-size: 0.8rem; margin-left: 0.3rem;"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="about.html">About us</a></li>
+                            <li><a href="interlocuteurs.html">Vos interlocuteurs</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#solutions">Solutions IA <i class="fas fa-chevron-down"
+                                style="font-size: 0.8rem; margin-left: 0.3rem;"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="solution-chatbots.html">Chatbots 24/7</a></li>
+                            <li><a href="solution-copilots.html">Copilots IA</a></li>
+                            <li><a href="solution-automation.html">Automatisation</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#formations">Formations <i class="fas fa-chevron-down"
+                                style="font-size: 0.8rem; margin-left: 0.3rem;"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="formation-genai.html">IA Générative</a></li>
+                            <li><a href="formation-video-ia-pro.html">Vidéo IA Pro</a></li>
+                            <li><a href="formation-jupyter.html">Jupyter</a></li>
+                            <li><a href="formation-python.html">Python</a></li>
+                            <li><a href="formation-ml.html">Machine Learning</a></li>
+                            <li><a href="formation-dl.html">Deep Learning</a></li>
+                            <li><a href="calendrier-formations.html"
+                                    style="border-top: 1px solid rgba(255,255,255,0.1); margin-top: 0.5rem; padding-top: 0.8rem;">Calendrier
+                                    des formations</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="articles.html">Actualités</a></li>
+                    <li><a href="contact-page.html" class="btn btn-primary nav-btn">Diagnostic IA Gratuit</a></li>
+                </ul>
+
+                <div class="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="page-content" style="padding-top: 80px;">
+
+        <!-- HERO SECTION (Section 1) -->
+        <section class="bg-darker section-padding" style="position: relative; overflow: hidden;">
+            <div class="container" style="position: relative; z-index: 2;">
+                <div class="form-hero-grid">
+                    <div>
+                        <h1 style="font-size: clamp(2rem, 4vw, 2.8rem); line-height: 1.15; margin-top: 1rem; margin-bottom: 1.2rem;">
+                            Vidéo IA Pro :<br><span class="highlight">De zéro à portfolio en 3 jours</span>
+                        </h1>
+                        <p style="font-size: 1.1rem; color: var(--text-muted); margin-bottom: 1.5rem; text-align: justify; line-height: 1.6;">
+                            Formation intensive en binôme — Expert IA + Vidéaste / Monteur & Réalisateur indépendant. Produisez vos vidéos pro (15-60s) en autonomie, sans agence.
+                        </p>
+                        
+                        <div class="badge-grid">
+                            <span class="badge-item"> Certification Babylone42</span>
+                            <span class="badge-item"> 70% pratique</span>
+                            <span class="badge-item"> -80% de coût de production</span>
+                            <span class="badge-item"> 50€ crédits offerts</span>
+                        </div>
+
+                        <div class="cta-group">
+                            <button onclick="openModal('devis-modal')" class="btn btn-primary">Demander un devis</button>
+                            <a onclick="openModal('inscription-modal')" class="btn btn-secondary check-earlybird-btn">
+                                S'inscrire en Early-bird — 1 490€ HT
+                            </a>
+                        </div>
+                        <a onclick="openModal('devis-modal')" class="cta-brochure-link">Télécharger la brochure PDF</a>
+                    </div>
+                    <div style="display: flex; align-items: center; justify-content: center;">
+                        <img src="images/formation-video-ia-pro.png" alt="Formation Vidéo IA Pro - mockup et workflow de génération vidéo par intelligence artificielle" class="form-hero-img" style="border: 1px solid rgba(255,255,255,0.08); max-height: 400px; object-fit: cover;">
+                    </div>
+                </div>
+            </div>
+            <div style="position: absolute; top: -50%; right: -10%; width: 500px; height: 500px; background: radial-gradient(circle, rgba(16,155,128,0.12) 0%, transparent 70%); z-index: 1;"></div>
+        </section>
+
+        <!-- PROBLEME SECTION (Section 2) -->
+        <section class="section-padding bg-light">
+            <div class="container">
+                <div style="text-align: center; max-width: 700px; margin: 0 auto 3rem;">
+                    <h2 class="section-title" style="color: #0f172a; margin-top: 1rem;">La production vidéo vous coûte une fortune…<br><span class="highlight" style="color: var(--primary-color);">et vous n'êtes jamais satisfait</span></h2>
+                </div>
+                <div class="problems-grid">
+                    <div class="problem-card">
+                        <i class="fas fa-hand-holding-usd"></i>
+                        <h3>Budget prohibitif</h3>
+                        <p>Faire appel à une agence classique pour vos vidéos courtes de communication ou e-commerce détruit vos marges avant même d'avoir testé vos campagnes.</p>
+                    </div>
+                    <div class="problem-card">
+                        <i class="fas fa-hourglass-half"></i>
+                        <h3>Délais interminables</h3>
+                        <p>Attendre des semaines pour recevoir une première ébauche, faire des allers-retours de correction sans fin, et rater le timing idéal de vos publications.</p>
+                    </div>
+                    <div class="problem-card">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        <h3>Incohérence créative</h3>
+                        <p>Des vidéos génériques ou déconnectées de votre identité de marque, parce que le prestataire externe ne saisit pas l'essence de votre proposition.</p>
+                    </div>
+                </div>
+                <div style="text-align: center; margin-top: 3.5rem;">
+                    <p style="font-size: 1.25rem; font-weight: 600; color: #0f172a;">Ce n'est pas une fatalité. L'IA a complètement changé la donne.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SOLUTION SECTION (Section 3) -->
+        <section class="section-padding bg-darker">
+            <div class="container">
+                <div style="text-align: center; max-width: 700px; margin: 0 auto 4rem;">
+                    <h2 class="section-title" style="margin-top: 1rem;">En 3 jours, repartez avec un<br><span class="highlight">portfolio vidéo prêt à diffuser</span></h2>
+                    <p class="section-subtitle">Une méthode pas à pas alternant théorie métier et ateliers pratiques immersifs.</p>
+                </div>
+                
+                <div class="grid-3" style="margin-bottom: 4rem;">
+                    <div class="bento-card" style="padding: 2rem; border-color: rgba(255,255,255,0.06);">
+                        <h4 style="color: var(--primary-color); font-weight: 700; margin-bottom: 0.5rem; text-transform: uppercase; font-size: 0.85rem;">Jour 1</h4>
+                        <h3 style="color:#fff; font-size: 1.3rem; margin-bottom: 1rem;">Conception & Scripting</h3>
+                        <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; text-align: justify; margin: 0;">Dompter les LLM (Claude, ChatGPT) pour scénariser vos idées. Structuration avec le framework d'attention AIDA et storyboarding.</p>
+                    </div>
+                    <div class="bento-card" style="padding: 2rem; border-color: rgba(255,255,255,0.06);">
+                        <h4 style="color: var(--primary-color); font-weight: 700; margin-bottom: 0.5rem; text-transform: uppercase; font-size: 0.85rem;">Jour 2</h4>
+                        <h3 style="color:#fff; font-size: 1.3rem; margin-bottom: 1rem;">Génération IA (Audio & Visuel)</h3>
+                        <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; text-align: justify; margin: 0;">Clonage de voix (ElevenLabs), génération d'images ultra-réalistes (Midjourney) et conversion en plans vidéo haute définition (Runway, Luma).</p>
+                    </div>
+                    <div class="bento-card" style="padding: 2rem; border-color: rgba(255,255,255,0.06);">
+                        <h4 style="color: var(--primary-color); font-weight: 700; margin-bottom: 0.5rem; text-transform: uppercase; font-size: 0.85rem;">Jour 3</h4>
+                        <h3 style="color:#fff; font-size: 1.3rem; margin-bottom: 1rem;">Montage & Sound Design</h3>
+                        <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; text-align: justify; margin: 0;">Assemblage dynamique, sous-titres animés, calage sonore pro et habillage pour un rendu premium prêt pour les plateformes sociales.</p>
+                    </div>
+                </div>
+
+                <div class="concept-box" style="background: rgba(16, 155, 128, 0.04); border-color: rgba(16, 155, 128, 0.15); max-width: 800px; margin: 0 auto;">
+                    <div class="concept-title">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Preuve d'efficacité chiffrée</span>
+                    </div>
+                    <p style="margin: 0; font-size: 1rem; line-height: 1.6; text-align: justify;">
+                        <strong>Cas Client Restauration</strong> : 15 vidéos courtes produites en 1 seule journée pour un coût total de seulement 180€ en outils IA, générant une hausse de <strong>+45% d'engagement organique</strong> sur Instagram dès la première semaine.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- AVANT/APRÈS SECTION (Section 4) -->
+        <section class="section-padding bg-light">
+            <div class="container" style="max-width: 800px;">
+                <div style="text-align: center; margin-bottom: 3rem;">
+                    <h2 class="section-title" style="color: #0f172a; margin-top: 1rem;">Repensez vos ratios de production</h2>
+                </div>
+                
+                <div class="table-wrapper">
+                    <table class="before-after-table">
+                        <thead>
+                            <tr>
+                                <th>Indicateur</th>
+                                <th>Avant la formation</th>
+                                <th>Après la formation</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Coût / vidéo (30s)</strong></td>
+                                <td>1 500 € – 3 000 € (agence/prestataire)</td>
+                                <td class="highlight-column">80 € – 250 € (coût outils)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Délai de livraison</strong></td>
+                                <td>2 à 4 semaines</td>
+                                <td class="highlight-column">1 à 2 jours</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Ressources requises</strong></td>
+                                <td>3 à 5 prestataires (monteur, acteur, voix, preneur de son)</td>
+                                <td class="highlight-column">1 collaborateur interne autonome</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Volume mensuel possible</strong></td>
+                                <td>4 à 6 vidéos</td>
+                                <td class="highlight-column">15 à 30 vidéos</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROGRAMME SECTION (Section 5) -->
+        <section class="section-padding bg-darker">
+            <div class="container" style="max-width: 800px;">
+                <div style="text-align: center; margin-bottom: 3.5rem;">
+                    <h2 class="section-title" style="margin-top: 1rem;">Le programme jour par jour</h2>
+                </div>
+
+                <div class="agenda-list">
+                    <!-- Jour 1 -->
+                    <div class="agenda-card active" id="agenda-j1">
+                        <div class="agenda-header" onclick="toggleAgenda('agenda-j1')">
+                            <h3><span>J1</span> Conception, Scripting & Storyboard</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="agenda-body" style="max-height: 500px;">
+                            <div class="agenda-content">
+                                <p><strong>Horaires :</strong> 09h00 - 12h30 | 14h00 - 17h00</p>
+                                <ul>
+                                    <li><strong>Module 1.1 :</strong> Analyse de l'attention et mécanique des vidéos virales de 15-60s.</li>
+                                    <li><strong>Module 1.2 :</strong> Maîtrise des prompts C.O.R.E pour pousser Claude et ChatGPT à rédiger des scripts captivants.</li>
+                                    <li><strong>Module 1.3 :</strong> Traduction du script en plan de caméra et storyboard détaillé avec des outils d'IA.</li>
+                                </ul>
+                                <div class="agenda-livrable">
+                                    <strong> Livrable Jour 1 :</strong>
+                                    3 scénarios complets structurés et validés pour votre marque.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Jour 2 -->
+                    <div class="agenda-card" id="agenda-j2">
+                        <div class="agenda-header" onclick="toggleAgenda('agenda-j2')">
+                            <h3><span>J2</span> Génération Audio & Vidéo par IA</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="agenda-body">
+                            <div class="agenda-content">
+                                <p><strong>Horaires :</strong> 09h00 - 12h30 | 14h00 - 17h00</p>
+                                <ul>
+                                    <li><strong>Module 2.1 :</strong> ElevenLabs avancé (clonage vocal, modulation d'intonations, voix off multilingues).</li>
+                                    <li><strong>Module 2.2 :</strong> Midjourney expert pour créer un personnage récurrent et des arrières-plans cohérents.</li>
+                                    <li><strong>Module 2.3 :</strong> Runway Gen-3 et Luma Dream Machine : techniques de prompt-to-video et d'image-to-video.</li>
+                                </ul>
+                                <div class="agenda-livrable">
+                                    <strong> Livrable Jour 2 :</strong>
+                                    L'ensemble des médias audio bruts, voix off et plans vidéo haute fidélité générés.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Jour 3 -->
+                    <div class="agenda-card" id="agenda-j3">
+                        <div class="agenda-header" onclick="toggleAgenda('agenda-j3')">
+                            <h3><span>J3</span> Montage, Sound Design & Finitions</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="agenda-body">
+                            <div class="agenda-content">
+                                <p><strong>Horaires :</strong> 09h00 - 12h30 | 14h00 - 17h00</p>
+                                <ul>
+                                    <li><strong>Module 3.1 :</strong> Montage rythmé dans CapCut / Premiere Pro : calage audio-vidéo et transitions.</li>
+                                    <li><strong>Module 3.2 :</strong> Intégration de sous-titres animés dynamiques (auto-captions optimisés).</li>
+                                    <li><strong>Module 3.3 :</strong> Sound design complet, effets de bruitage et musiques libres de droits adaptées.</li>
+                                </ul>
+                                <div class="agenda-livrable" style="background: rgba(16, 155, 128, 0.12); border-left-color: var(--primary-color);">
+                                    <strong> Livrable Jour 3 (Clôture) :</strong>
+                                    3 preuves de concept validées et 1 vidéo finale premium prête à publier pour votre portfolio.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- POUR QUI SECTION (Section 6) -->
+        <section class="section-padding bg-light">
+            <div class="container">
+                <div style="text-align: center; max-width: 700px; margin: 0 auto 3rem;">
+                    <h2 class="section-title" style="color: #0f172a; margin-top: 1rem;">Est-ce fait pour vous ?</h2>
+                </div>
+                
+                <div class="personas-grid">
+                    <div class="persona-card">
+                        <span class="icon-wrap"></span>
+                        <h3>Agences de Communication</h3>
+                        <p>Passez en production batch multi-comptes, abaissez votre coût par vidéo (CPV) et proposez des formats courts haut de gamme sans exploser vos frais fixes.</p>
+                        <div class="persona-tags">
+                            <span class="persona-tag">Production Batch</span>
+                            <span class="persona-tag">Optimisation CPV</span>
+                        </div>
+                    </div>
+                    <div class="persona-card">
+                        <span class="icon-wrap"></span>
+                        <h3>Entreprises &amp; RH</h3>
+                        <p>Internalisez la création vidéo pour votre communication interne, vos modules d'e-learning et vos rapports, dans un cadre juridique strict et conforme.</p>
+                        <div class="persona-tags">
+                            <span class="persona-tag">Com Interne</span>
+                            <span class="persona-tag">Conformité RGPD</span>
+                        </div>
+                    </div>
+                    <div class="persona-card">
+                        <span class="icon-wrap"></span>
+                        <h3>E-commerce &amp; Retail</h3>
+                        <p>Multipliez les vidéos de fiches produits, créez des publicités dynamiques en A/B testing pour vos réseaux et boostez vos campagnes de retargeting.</p>
+                        <div class="persona-tags">
+                            <span class="persona-tag">Fiches Produits</span>
+                            <span class="persona-tag">A/B Testing</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- LES FORMATEURS SECTION (Section 7) -->
+        <section class="section-padding bg-darker">
+            <div class="container">
+                <div style="text-align: center; max-width: 700px; margin: 0 auto 3rem;">
+                    <h2 class="section-title">Les Formateurs</h2>
+                    <p class="section-subtitle">L'alliance d'un ingénieur IA senior et d'un réalisateur vidéo professionnel indépendant pour un double regard technique et artistique.</p>
+                </div>
+
+                <div class="binome-container">
+                    <div class="profile-card">
+                        <div class="profile-avatar">ET</div>
+                        <h3>Eulalio TORRES</h3>
+                        <span class="title">Dr en Ingénierie / Data Spécialiste / IA Expert</span>
+                        <p style="margin-top: 1rem; text-align: justify;">Docteur en Ingénierie Aérospatiale et fort de plus de 15 ans d'expérience dans le traitement de données complexes. Spécialiste de la structuration des prompts et du déploiement opérationnel des architectures d'IA génératives.</p>
+                    </div>
+                    <div class="profile-card">
+                        <div class="profile-avatar" style="background: linear-gradient(135deg, #f59e0b, var(--primary-color));">TK</div>
+                        <h3>Thomas Khairallah</h3>
+                        <span class="title">Vidéaste / Monteur &amp; Réalisateur indépendant</span>
+                        <p style="margin-top: 1rem; text-align: justify;">Réalisateur indépendant expérimenté, garant du cadre artistique, de la colorimétrie, du sound design et du rythme nécessaire aux vidéos professionnelles.</p>
+                    </div>
+                </div>
+
+                <div style="text-align: center; margin-top: 3rem;">
+                    <a href="https://thomas-khairallah.fr/#realisations" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                        Voir les réalisations du formateur vidéo <i class="fas fa-external-link-alt" style="font-size:0.8rem; margin-left:0.3rem;"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- TARIFS SECTION (Section 9) -->
+        <section class="section-padding bg-light">
+            <div class="container" style="max-width: 850px;">
+                <div style="text-align: center; margin-bottom: 2.5rem;">
+                    <h2 class="section-title" style="color: #0f172a; margin-top: 1rem;">Des tarifs clairs et sans surprise</h2>
+                </div>
+
+                <div class="pricing-checkbox-wrap">
+                    <input type="checkbox" id="accompaniment-check">
+                    <label for="accompaniment-check">Ajouter l'accompagnement post-formation de 3 mois (+ 200 € HT)</label>
+                </div>
+
+                <div class="pricing-table-wrap">
+                    <table class="pricing-table">
+                        <thead>
+                            <tr>
+                                <th>Formule</th>
+                                <th>Tarif (HT)</th>
+                                <th>Participants</th>
+                                <th>Inscription</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Individuel Early-bird</strong></td>
+                                <td id="price-earlybird" style="font-weight: 700; color: #0f172a;">1 490 €</td>
+                                <td>1 personne</td>
+                                <td>
+                                    <a id="link-earlybird" onclick="openModal('inscription-modal')" class="btn btn-primary" style="font-size: 0.85rem; padding: 0.6rem 1rem;">S'inscrire</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><strong>Groupe</strong></td>
+                                <td style="font-weight: 600; color: #0f172a;">Sur devis</td>
+                                <td>3 à 12 personnes</td>
+                                <td>
+                                    <button onclick="openModal('devis-modal')" class="btn btn-secondary" style="font-size: 0.85rem; padding: 0.6rem 1rem;">Demander un devis</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><strong>Intra-entreprise</strong></td>
+                                <td style="font-weight: 600; color: #0f172a;">Sur devis</td>
+                                <td>8 à 12 personnes</td>
+                                <td>
+                                    <button onclick="openModal('devis-modal')" class="btn btn-secondary" style="font-size: 0.85rem; padding: 0.6rem 1rem;">Demander un devis</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <span class="pricing-argument">
+                    « 1 490 €, c'est le coût de production de seulement 2 à 3 vidéos courtes par une agence traditionnelle. En 3 jours, vous internalisez définitivement la compétence pour en générer plus de 10 par mois. »
+                </span>
+            </div>
+        </section>
+
+        <!-- KIT PREMIUM INCLUS (Section 10) -->
+        <section class="section-padding bg-darker">
+            <div class="container">
+                <div style="text-align: center; max-width: 700px; margin: 0 auto 3rem;">
+                    <h2 class="section-title" style="margin-top: 1rem;">Le Kit Premium Vidéo IA</h2>
+                    <p class="section-subtitle">Toutes les ressources clés pour continuer à produire en toute autonomie après les 3 jours.</p>
+                </div>
+
+                <div class="premium-kit-grid">
+                    <div class="premium-kit-card">
+                        <i class="fas fa-terminal"></i>
+                        <div>
+                            <strong>Prompts C.O.R.E.</strong>
+                            <span>La bibliothèque de scripts et de prompts prêts à l'emploi.</span>
+                        </div>
+                    </div>
+                    <div class="premium-kit-card">
+                        <i class="fas fa-gavel"></i>
+                        <div>
+                            <strong>Modèles de clauses juridiques</strong>
+                            <span>Vos fiches et clauses types sur les droits d'auteur de l'IA.</span>
+                        </div>
+                    </div>
+                    <div class="premium-kit-card">
+                        <i class="fas fa-gift"></i>
+                        <div>
+                            <strong>50€ de crédits offerts</strong>
+                            <span>Crédits inclus pour tester ElevenLabs et Runway.</span>
+                        </div>
+                    </div>
+                    <div class="premium-kit-card">
+                        <i class="fas fa-balance-scale"></i>
+                        <div>
+                            <strong>Matrice d'outils freemium</strong>
+                            <span>Notre tableau comparatif pour choisir les outils adaptés à vos budgets.</span>
+                        </div>
+                    </div>
+                    <div class="premium-kit-card">
+                        <i class="fas fa-map"></i>
+                        <div>
+                            <strong>Gabarit de storyboard</strong>
+                            <span>Modèle vierge prêt à imprimer ou à dupliquer sur Figma.</span>
+                        </div>
+                    </div>
+                    <div class="premium-kit-card">
+                        <i class="fab fa-slack"></i>
+                        <div>
+                            <strong>Canal Slack Privé 6 mois</strong>
+                            <span>Échanges réguliers, feedbacks de vos formateurs et entraide alumni.</span>
+                        </div>
+                    </div>
+                    <div class="premium-kit-card">
+                        <i class="fas fa-globe"></i>
+                        <div>
+                            <strong>Tutoriel de localisation</strong>
+                            <span>Méthodologie pour traduire et adapter vos vidéos dans 5+ langues.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ SECTION (Section 11) -->
+        <section class="section-padding bg-light">
+            <div class="container" style="max-width: 800px;">
+                <div style="text-align: center; margin-bottom: 3.5rem;">
+                    <h2 class="section-title" style="color: #0f172a; margin-top: 1rem;">Des questions sur la formation ?</h2>
+                </div>
+
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Est-il possible de financer la formation via le CPF ?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p style="color:#64748b; font-size:1rem; padding: 0.5rem 0 1rem; line-height:1.6;">
+                                Les demandes de financement OPCO sont tout à fait envisageables selon votre secteur d'activité. Pour le CPF, veuillez nous contacter directement lors de votre demande de devis pour évaluer les options de prise en charge disponibles.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Quel matériel ou équipement dois-je prévoir pour participer ?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p style="color:#64748b; font-size:1rem; padding: 0.5rem 0 1rem; line-height:1.6;">
+                                Un ordinateur portable récent muni d'une connexion internet stable est requis. Les licences temporaires d'outils d'IA et de montage vidéo nécessaires vous seront fournies au début du cours.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>La qualité esthétique des vidéos générées par IA est-elle crédible ?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p style="color:#64748b; font-size:1rem; padding: 0.5rem 0 1rem; line-height:1.6;">
+                                Oui, les moteurs récents comme Runway Gen-3 ou Midjourney v6 permettent d'atteindre un réalisme bluffant. Le but de l'atelier est précisément de vous apprendre à gommer l'effet artificiel grâce aux retouches de montage apprises avec notre vidéaste.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Qu'est-ce que l'option accompagnement de 3 mois ?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p style="color:#64748b; font-size:1rem; padding: 0.5rem 0 1rem; line-height:1.6;">
+                                Elle inclut une session de coaching individuel mensuel d'une heure avec vos formateurs pour auditer vos premières campagnes vidéo réelles et optimiser vos workflows de génération.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Proposez-vous des tarifs dégressifs pour les groupes ?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p style="color:#64748b; font-size:1rem; padding: 0.5rem 0 1rem; line-height:1.6;">
+                                Absolument. À partir de 3 inscriptions simultanées de la même structure, des remises sont appliquées. Veuillez formuler une demande de devis pour obtenir notre proposition personnalisée.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>La formation est-elle disponible entièrement à distance ?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p style="color:#64748b; font-size:1rem; padding: 0.5rem 0 1rem; line-height:1.6;">
+                                Oui, la formation se déroule en visioconférence interactive (via Microsoft Teams ou Zoom) avec partage d'écrans bidirectionnel régulier et sessions de feedback en temps réel.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA FINAL (Section 12) -->
+        <section class="section-padding bg-darker" style="text-align: center; border-top: 1px solid rgba(255,255,255,0.05);">
+            <div class="container" style="max-width: 700px;">
+                <h2 class="section-title">Devenez autonome dans votre production vidéo</h2>
+                <p class="section-subtitle" style="margin-bottom: 2.5rem; text-align: justify;">Rejoignez la prochaine session limitée à 12 participants pour garantir un accompagnement de haute qualité.</p>
+                <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;">
+                    <button onclick="openModal('devis-modal')" class="btn btn-primary">Demander un devis</button>
+                    <a onclick="openModal('inscription-modal')" class="btn btn-secondary check-earlybird-btn-final">
+                        S'inscrire Early-bird — 1 490€ HT
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="mega-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Column 1: Brand & Socials -->
+                <div class="footer-col brand-col">
+                    <img src="images/logo.svg" alt="Babylone42 Logo" class="footer-logo-img">
+                    <p class="footer-desc">Babylone42 donne le pouvoir aux équipes de transformer des données brutes en
+                        informations claires grâce à l'IA.</p>
+                    <div class="footer-socials">
+                        <a href="https://www.linkedin.com/company/babylone42/" target="_blank" rel="noopener noreferrer"
+                            aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/babylone42_?igsh=YzVyamk1N3VoYXU1" target="_blank"
+                            rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=61583402791597&name=xhp_nt__fb__action__open_user&locale=fr_FR"
+                            target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i
+                                class="fab fa-facebook"></i></a>
+                        <a href="https://x.com/babylone42_" target="_blank" rel="noopener noreferrer"
+                            aria-label="X Twitter"><i class="fab fa-x-twitter"></i></a>
+                        <a href="https://m.youtube.com/@Babylone42" target="_blank" rel="noopener noreferrer"
+                            aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <!-- Column 2: Accueil -->
+                <div class="footer-col">
+                    <h4 class="footer-title">Accueil</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="about.html">About us</a></li>
+                        <li><a href="interlocuteurs.html">Vos interlocuteurs</a></li>
+                        <li><a href="articles.html">Actualités</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Solutions -->
+                <div class="footer-col">
+                    <h4 class="footer-title">Solutions IA</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="solution-chatbots.html">Chatbots 24/7</a></li>
+                        <li><a href="solution-copilots.html">Copilots IA</a></li>
+                        <li><a href="solution-automation.html">Automatisation</a></li>
+                        <li><a href="solution-audit.html">Audit & Conseil</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Formations -->
+                <div class="footer-col">
+                    <h4 class="footer-title">Formations</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="formation-genai.html">IA Générative</a></li>
+                        <li><a href="formation-jupyter.html">Jupyter</a></li>
+                        <li><a href="formation-python.html">Python</a></li>
+                        <li><a href="formation-ml.html">Machine Learning</a></li>
+                        <li><a href="formation-dl.html">Deep Learning</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 5: Contact & Newsletter -->
+                <div class="footer-col newsletter-col">
+                    <h4 class="footer-title">Contact & Newsletter</h4>
+                    <p class="footer-contact-info">
+                        <a href="mailto:contact@babylone42.fr"><i class="fas fa-envelope"></i>
+                            contact@babylone42.fr</a><br>
+                        <a href="tel:+330773609849"><i class="fas fa-phone-alt"></i> +33 0 7 73 60 98 49</a>
+                    </p>
+                    <form class="footer-newsletter-form">
+                        <input type="email" placeholder="Votre email" required>
+                        <button type="submit" aria-label="S'inscrire"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p class="copyright">© 2025 Babylone42. All rights reserved.</p>
+                <div class="legal-links">
+                    <a href="mentions-legales.html">Mentions Légales</a>
+                    <a href="politique-confidentialite.html">Politique de Confidentialité</a>
+                    <a href="cookies.html">Paramètres des cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODAL DEVIS FORM -->
+    <div class="modal-overlay" id="devis-modal">
+        <div class="modal-container">
+            <button class="modal-close" onclick="closeModal('devis-modal')"><i class="fas fa-times"></i></button>
+            <div class="modal-body">
+                <h3 class="modal-title">Demande de devis</h3>
+                <p class="modal-subtitle">Remplissez ce formulaire et notre équipe vous recontactera sous 24h. Votre brochure détaillée vous sera également envoyée.</p>
+                
+                <form class="contact-form" id="devisForm">
+                    <div class="form-row form-grid-2">
+                        <div class="form-group">
+                            <label for="devis-lastname">Nom *</label>
+                            <input type="text" id="devis-lastname" required placeholder="Dupont">
+                        </div>
+                        <div class="form-group">
+                            <label for="devis-firstname">Prénom *</label>
+                            <input type="text" id="devis-firstname" required placeholder="Jean">
+                        </div>
+                    </div>
+
+                    <div class="form-row form-grid-2">
+                        <div class="form-group">
+                            <label for="devis-phone">Téléphone</label>
+                            <input type="tel" id="devis-phone" placeholder="06 12 34 56 78">
+                        </div>
+                        <div class="form-group">
+                            <label for="devis-email">Email professionnel *</label>
+                            <input type="email" id="devis-email" required placeholder="jean.dupont@entreprise.com">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="devis-company">Entreprise *</label>
+                        <input type="text" id="devis-company" required placeholder="Nom de votre structure">
+                    </div>
+
+                    <div class="form-row form-grid-2">
+                        <div class="form-group">
+                            <label for="devis-participants">Participants *</label>
+                            <select id="devis-participants" required style="width: 100%; background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12); color: #e2e8f0; padding: 0.75rem 1rem; border-radius: 8px; font-family: inherit; font-size: 0.95rem; outline: none;">
+                                <option value="1" style="background:#0d1527;">1 personne</option>
+                                <option value="3-5" style="background:#0d1527;">3 - 5 personnes</option>
+                                <option value="6+" style="background:#0d1527;">6+ personnes</option>
+                                <option value="intra" style="background:#0d1527;">Intra-entreprise</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="devis-sector">Secteur *</label>
+                            <select id="devis-sector" required style="width: 100%; background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12); color: #e2e8f0; padding: 0.75rem 1rem; border-radius: 8px; font-family: inherit; font-size: 0.95rem; outline: none;">
+                                <option value="Agence" style="background:#0d1527;">Agence</option>
+                                <option value="Entreprise" style="background:#0d1527;">Entreprise</option>
+                                <option value="E-commerce" style="background:#0d1527;">E-commerce</option>
+                                <option value="Autre" style="background:#0d1527;">Autre</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="devis-message">Message optionnel</label>
+                        <textarea id="devis-message" rows="3" placeholder="Précisez votre besoin..." style="width: 100%; background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12); color: #e2e8f0; padding: 0.75rem 1rem; border-radius: 8px; font-family: inherit; font-size: 0.95rem; outline: none; resize: vertical;"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-block" style="margin-top: 1rem;">Envoyer ma demande</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- WIDGET BETA TESTER -->
+    <div class="beta-widget-wrap">
+        <button class="beta-btn" onclick="openModal('beta-modal')"> Devenir beta-testeur</button>
+    </div>
+
+    <!-- MODAL BETA FORM -->
+    <div class="modal-overlay" id="beta-modal">
+        <div class="modal-container" style="max-width: 500px;">
+            <button class="modal-close" onclick="closeModal('beta-modal')"><i class="fas fa-times"></i></button>
+            <div class="modal-body">
+                <h3 class="modal-title">Devenir beta-testeur</h3>
+                <p class="modal-subtitle">Postulez pour intégrer notre prochaine session de beta-testeurs et profitez d'un tarif ultra-préférentiel.</p>
+                
+                <form class="contact-form" id="betaForm">
+                    <div class="form-row form-grid-2">
+                        <div class="form-group">
+                            <label for="beta-lastname">Nom *</label>
+                            <input type="text" id="beta-lastname" required placeholder="Dupont">
+                        </div>
+                        <div class="form-group">
+                            <label for="beta-firstname">Prénom *</label>
+                            <input type="text" id="beta-firstname" required placeholder="Jean">
+                        </div>
+                    </div>
+
+                    <div class="form-row form-grid-2">
+                        <div class="form-group">
+                            <label for="beta-phone">Téléphone</label>
+                            <input type="tel" id="beta-phone" placeholder="06 12 34 56 78">
+                        </div>
+                        <div class="form-group">
+                            <label for="beta-email">Email *</label>
+                            <input type="email" id="beta-email" required placeholder="jean.dupont@email.com">
+                        </div>
+                    </div>
+
+                    <div class="form-row form-grid-2">
+                        <div class="form-group">
+                            <label for="beta-company">Entreprise</label>
+                            <input type="text" id="beta-company" placeholder="Nom de votre structure">
+                        </div>
+                        <div class="form-group">
+                            <label for="beta-profile">Profil *</label>
+                            <select id="beta-profile" required style="width: 100%; background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12); color: #e2e8f0; padding: 0.75rem 1rem; border-radius: 8px; font-family: inherit; font-size: 0.95rem; outline: none;">
+                                <option value="Agence" style="background:#0d1527;">Agence</option>
+                                <option value="Entreprise" style="background:#0d1527;">Entreprise</option>
+                                <option value="Freelance" style="background:#0d1527;">Freelance</option>
+                                <option value="Autre" style="background:#0d1527;">Autre</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="beta-motivation">Vos motivations *</label>
+                        <textarea id="beta-motivation" rows="3" required placeholder="Pourquoi souhaitez-vous devenir beta-testeur ?" style="width: 100%; background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12); color: #e2e8f0; padding: 0.75rem 1rem; border-radius: 8px; font-family: inherit; font-size: 0.95rem; outline: none; resize: vertical;"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-block" style="margin-top: 1rem;">Envoyer ma candidature</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN SCRIPTS -->
+    <script src="script.js?v=2"></script>
+    <script>
+        // Toggle Agenda Accordion
+        function toggleAgenda(id) {
+            const card = document.getElementById(id);
+            const body = card.querySelector('.agenda-body');
+            const isActive = card.classList.contains('active');
+            
+            // Close all
+            document.querySelectorAll('.agenda-card').forEach(c => {
+                c.classList.remove('active');
+                c.querySelector('.agenda-body').style.maxHeight = null;
+            });
+
+            if (!isActive) {
+                card.classList.add('active');
+                body.style.maxHeight = body.scrollHeight + "px";
+            }
+        }
+
+        // Modal Open/Close handlers
+        function openModal(id) {
+            document.getElementById(id).classList.add('active');
+        }
+
+        function closeModal(id) {
+            document.getElementById(id).classList.remove('active');
+        }
+
+        // Click outside modal to close
+        document.querySelectorAll('.modal-overlay').forEach(overlay => {
+            overlay.addEventListener('click', (e) => {
+                if (e.target === overlay) {
+                    overlay.classList.remove('active');
+                }
+            });
+        });
+
+        // Accompaniment Pricing Logic
+        const accomCheck = document.getElementById('accompaniment-check');
+        const earlyBirdPrice = document.getElementById('price-earlybird');
+
+        if (accomCheck) {
+            accomCheck.addEventListener('change', () => {
+                const accomCheckModal = document.getElementById('inscription-accom-check');
+                const priceDisplayModal = document.getElementById('inscription-total-price');
+                if (accomCheck.checked) {
+                    earlyBirdPrice.innerText = "1 690 €";
+                    if (accomCheckModal) accomCheckModal.checked = true;
+                    if (priceDisplayModal) priceDisplayModal.innerText = "1 690 €";
+                } else {
+                    earlyBirdPrice.innerText = "1 490 €";
+                    if (accomCheckModal) accomCheckModal.checked = false;
+                    if (priceDisplayModal) priceDisplayModal.innerText = "1 490 €";
+                }
+            });
+        }
+    </script>
+
+    <!-- MODAL INSCRIPTION FORM -->
+    <div class="modal-overlay" id="inscription-modal">
+        <div class="modal-container">
+            <button class="modal-close" onclick="closeModal('inscription-modal')"><i class="fas fa-times"></i></button>
+            <div class="modal-body">
+                <h3 class="modal-title">Inscription a la formation</h3>
+                <p class="modal-subtitle">Saisissez vos informations pour valider votre inscription et passer au paiement securise.</p>
+                
+                <form class="contact-form" id="inscriptionForm">
+                    <div class="form-row form-grid-2">
+                        <div class="form-group">
+                            <label for="inscription-lastname">Nom *</label>
+                            <input type="text" id="inscription-lastname" required placeholder="Dupont">
+                        </div>
+                        <div class="form-group">
+                            <label for="inscription-firstname">Prenom *</label>
+                            <input type="text" id="inscription-firstname" required placeholder="Jean">
+                        </div>
+                    </div>
+
+                    <div class="form-row form-grid-2">
+                        <div class="form-group">
+                            <label for="inscription-phone">Telephone *</label>
+                            <input type="tel" id="inscription-phone" required placeholder="06 12 34 56 78">
+                        </div>
+                        <div class="form-group">
+                            <label for="inscription-email">Email *</label>
+                            <input type="email" id="inscription-email" required placeholder="jean.dupont@entreprise.com">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="inscription-company">Entreprise</label>
+                        <input type="text" id="inscription-company" placeholder="Nom de votre structure (optionnel)">
+                    </div>
+
+                    <div class="pricing-checkbox-wrap" style="margin-top: 1.5rem; margin-bottom: 1.5rem;">
+                        <input type="checkbox" id="inscription-accom-check">
+                        <label for="inscription-accom-check">Ajouter l'accompagnement post-formation de 3 mois (+ 200 € HT)</label>
+                    </div>
+
+                    <div style="font-size: 1.1rem; font-weight: 600; color: #fff; margin-bottom: 1.5rem; text-align: center;">
+                        Total : <span id="inscription-total-price" style="color: var(--primary-color); font-size: 1.3rem;">1 490 €</span> HT
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-block">Valider et passer au paiement</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- FLOATING EARLYBIRD BUBBLE -->
+    <div class="earlybird-bubble" onclick="openModal('inscription-modal')">
+        <i class="fas fa-gift"></i>
+        <span>Tarif Early-Bird Disponible</span>
+    </div>
+
+</body>
+
+</html>
