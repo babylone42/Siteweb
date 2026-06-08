@@ -991,6 +991,17 @@
                     const courseItems = document.querySelectorAll('.course-item');
                     const monthBlocks = document.querySelectorAll('.month-block');
 
+                    // Give time for script.js to add .past-date-hidden if necessary
+                    setTimeout(() => {
+                        // Initial hide of empty month blocks
+                        monthBlocks.forEach(block => {
+                            const visibleItems = Array.from(block.querySelectorAll('.course-item')).filter(i => i.style.display !== 'none' && !i.classList.contains('past-date-hidden'));
+                            if (visibleItems.length === 0) {
+                                block.style.display = 'none';
+                            }
+                        });
+                    }, 50);
+
                     filterBtns.forEach(btn => {
                         btn.addEventListener('click', () => {
                             // Update active state
@@ -1001,6 +1012,11 @@
 
                             // Show/hide items
                             courseItems.forEach(item => {
+                                if (item.classList.contains('past-date-hidden')) {
+                                    item.style.display = 'none';
+                                    return;
+                                }
+                                
                                 if (filter === 'all' || item.getAttribute('data-type') === filter) {
                                     item.style.display = 'flex';
                                 } else {

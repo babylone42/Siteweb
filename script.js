@@ -734,43 +734,235 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // --- Inscription Form Submission (Video IA Pro) ---
+    // --- Past Dates Filter for Calendar ---
+    // Hides .course-item elements if their date has already passed.
+    const courseItems = document.querySelectorAll('.course-item');
+    if (courseItems.length > 0) {
+        const today = new Date();
+        today.setHours(0, 0, 0, 0);
+        
+        courseItems.forEach(item => {
+            const numSpan = item.querySelector('.course-dates .num');
+            const monthBlock = item.closest('.month-block');
+            if (numSpan && monthBlock) {
+                const daysText = numSpan.innerText;
+                const firstDayMatch = daysText.match(/(\d+)/);
+                
+                const titleEl = monthBlock.querySelector('.month-title');
+                
+                if (firstDayMatch && titleEl) {
+                    const day = parseInt(firstDayMatch[1], 10);
+                    const titleText = titleEl.innerText.trim().toLowerCase();
+                    const parts = titleText.split(' ');
+                    if (parts.length >= 2) {
+                        const monthStr = parts[0];
+                        const yearStr = parts[parts.length - 1];
+                        const year = parseInt(yearStr, 10);
+                        
+                        const monthsMap = {
+                            'janvier': 0, 'février': 1, 'fevrier': 1, 'mars': 2, 'avril': 3,
+                            'mai': 4, 'juin': 5, 'juillet': 6, 'août': 7, 'aout': 7,
+                            'septembre': 8, 'octobre': 9, 'novembre': 10, 'décembre': 11, 'decembre': 11
+                        };
+                        const month = monthsMap[monthStr];
+                        if (month !== undefined && !isNaN(year)) {
+                            const courseDate = new Date(year, month, day);
+                            if (courseDate < today) {
+                                item.style.display = 'none';
+                                item.classList.add('past-date-hidden');
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    }
+
+    // --- Inscription Page Logic ---
+    const formationsData = {
+        'video_ia_pro': {
+            name: 'Vidéo IA Pro',
+            basePrice: 1490,
+            links: {
+                base: 'https://pay.qonto.com/payment-links/019ea68d-6c74-74a5-be80-0efc49b6f60b?resource_id=019ea68d-6c75-7048-a57f-5f6b9e044645',
+                accomp: 'https://pay.qonto.com/payment-links/019ea75f-1598-7712-b7bd-366a2717e45b?resource_id=019ea75f-1599-716a-a443-af8790d1da24'
+            },
+            sessions: [
+                { id: 's1', label: '07, 08, 09 Septembre 2026', date: '2026-09-07' },
+                { id: 's2', label: '21, 22, 23 Septembre 2026', date: '2026-09-21' },
+                { id: 's3', label: '05, 06, 07 Octobre 2026', date: '2026-10-05' },
+                { id: 's4', label: '19, 20, 21 Octobre 2026', date: '2026-10-19' },
+                { id: 's5', label: '09, 10, 11 Novembre 2026', date: '2026-11-09' },
+                { id: 's6', label: '23, 24, 25 Novembre 2026', date: '2026-11-23' },
+                { id: 's7', label: '07, 08, 09 Décembre 2026', date: '2026-12-07' },
+                { id: 's8', label: '14, 15, 16 Décembre 2026', date: '2026-12-14' }
+            ]
+        },
+        'prompting': {
+            name: 'IA Générative',
+            basePrice: null,
+            links: { base: 'https://pay.qonto.com/payment-links/019ea7c0-c87e-7ca4-9736-736a2f3b8a85?resource_id=019ea7c0-c880-7c41-8e97-f081c4222c8d' },
+            sessions: [
+                { id: 's3', label: '16 - 17 Avril 2026', date: '2026-04-16' },
+                { id: 'ss1', label: '04 Juin 2026', date: '2026-06-04' },
+                { id: 's4', label: '03 - 04 Septembre 2026', date: '2026-09-03' },
+                { id: 's5', label: '15 - 16 Octobre 2026', date: '2026-10-15' },
+                { id: 's6', label: '18 Décembre 2026', date: '2026-12-18' }
+            ]
+        },
+        'deep_learning': {
+            name: 'Deep Learning',
+            basePrice: null,
+            links: { base: 'https://pay.qonto.com/payment-links/019ea7c1-8d57-7c31-9ef3-5f73904985d5?resource_id=019ea7c1-8d59-712c-9c69-6765332a600c' },
+            sessions: [
+                { id: 's3', label: '05, 11, 12 Juin 2026', date: '2026-06-05' },
+                { id: 's4', label: '18, 24, 25 Septembre 2026', date: '2026-09-18' },
+                { id: 's5', label: '13, 19, 20 Novembre 2026', date: '2026-11-13' }
+            ]
+        },
+        'python': {
+            name: 'Python (Data / POO)',
+            basePrice: null,
+            links: { base: 'https://pay.qonto.com/payment-links/019ea7c2-7bd9-7ceb-96e2-185434f5d03f?resource_id=019ea7c2-7bdb-71da-aebc-10051822801d' },
+            sessions: [
+                { id: 's4', label: '07, 21, 22 Mai 2026', date: '2026-05-07' },
+                { id: 's5', label: '25, 26, 02 Juil 2026', date: '2026-06-25' },
+                { id: 's6', label: '01, 02, 08 Octobre 2026', date: '2026-10-01' },
+                { id: 's7', label: '26, 27, 03 Déc 2026', date: '2026-11-26' },
+                { id: 's8', label: '14, 15 Décembre 2026', date: '2026-12-14' }
+            ]
+        },
+        'machine_learning': {
+            name: 'Machine Learning',
+            basePrice: null,
+            links: { base: 'https://pay.qonto.com/payment-links/019ea7c3-5e12-7581-8886-f41775cba441?resource_id=019ea7c3-5e13-78c3-99f6-f5bd8c9e6055' },
+            sessions: [
+                { id: 's2', label: '23 - 24 Avril 2026', date: '2026-04-23' },
+                { id: 's3', label: '28, 29 Mai, 04 Juin 2026', date: '2026-05-28' },
+                { id: 's4', label: '10, 11, 17 Septembre 2026', date: '2026-09-10' },
+                { id: 's5', label: '05, 06, 12 Novembre 2026', date: '2026-11-05' },
+                { id: 's6', label: '04, 10, 11 Décembre 2026', date: '2026-12-04' }
+            ]
+        },
+        'jupyter': {
+            name: 'Jupyter Notebook',
+            basePrice: null,
+            links: { base: 'https://pay.qonto.com/payment-links/019ea7c4-4cd7-7c62-aebe-9f268eaaabd1?resource_id=019ea7c4-4cd9-720b-b5bf-682d4f6fce2e' },
+            sessions: [
+                { id: 's2', label: '09 Avril 2026', date: '2026-04-09' },
+                { id: 's3', label: '18 Juin 2026', date: '2026-06-18' },
+                { id: 's4', label: '09 Octobre 2026', date: '2026-10-09' },
+                { id: 's5', label: '17 Décembre 2026', date: '2026-12-17' }
+            ]
+        }
+    };
+
     const inscriptionForm = document.getElementById('inscriptionForm');
     if (inscriptionForm) {
-        const accomCheckModal = document.getElementById('inscription-accom-check');
-        const priceDisplayModal = document.getElementById('inscription-total-price');
-        
-        if (accomCheckModal && priceDisplayModal) {
-            accomCheckModal.addEventListener('change', () => {
-                if (accomCheckModal.checked) {
-                    priceDisplayModal.innerText = "1 690 €";
-                } else {
-                    priceDisplayModal.innerText = "1 490 €";
+        const formationRadios = document.querySelectorAll('input[name="formation_type"]');
+        const sessionContainer = document.getElementById('session-dates-container');
+        const sessionList = document.getElementById('session-dates-list');
+        const accomContainer = document.getElementById('accompagnement-container');
+        const accomCheckbox = document.getElementById('accompagnement-checkbox');
+        const submitBtn = document.getElementById('submit-btn');
+
+        const urlParams = new URLSearchParams(window.location.search);
+        const urlFormation = urlParams.get('formation');
+        if (urlFormation) {
+            const radio = document.querySelector(`input[name="formation_type"][value="${urlFormation}"]`);
+            if (radio) radio.checked = true;
+        }
+
+        const updateFormState = () => {
+            const selectedFormation = document.querySelector('input[name="formation_type"]:checked');
+            if (!selectedFormation) return;
+
+            const fData = formationsData[selectedFormation.value];
+            if (!fData) return;
+
+            sessionList.innerHTML = '';
+            const today = new Date();
+            today.setHours(0, 0, 0, 0);
+            
+            let hasValidSessions = false;
+            let firstValid = true;
+            fData.sessions.forEach((sess) => {
+                const sDate = new Date(sess.date);
+                if (sDate >= today) {
+                    hasValidSessions = true;
+                    const isChecked = firstValid ? 'checked' : '';
+                    firstValid = false;
+                    sessionList.innerHTML += `
+                        <label class="checkbox-btn" style="text-align:left;">
+                            <input type="radio" name="session_date" value="${sess.label}" required ${isChecked}>
+                            <span>${sess.label}</span>
+                        </label>
+                    `;
                 }
             });
-        }
+            
+            if (!hasValidSessions) {
+                sessionList.innerHTML = '<p style="color: var(--primary-color);">Aucune session disponible à venir pour le moment.</p>';
+                submitBtn.disabled = true;
+                submitBtn.innerText = "Inscription indisponible";
+            } else {
+                submitBtn.disabled = false;
+            }
+
+            sessionContainer.classList.remove('hidden');
+
+            if (selectedFormation.value === 'video_ia_pro') {
+                accomContainer.classList.remove('hidden');
+            } else {
+                accomContainer.classList.add('hidden');
+                if (accomCheckbox) accomCheckbox.checked = false;
+            }
+
+            const hasAccompaniment = accomCheckbox ? accomCheckbox.checked : false;
+            if (hasValidSessions) {
+                if (fData.basePrice) {
+                    const price = hasAccompaniment ? (fData.basePrice + 200) : fData.basePrice;
+                    submitBtn.innerText = `Payer l'inscription (${price}€ HT)`;
+                } else {
+                    submitBtn.innerText = `Valider l'inscription sur Qonto`;
+                }
+            }
+        };
+
+        formationRadios.forEach(r => r.addEventListener('change', updateFormState));
+        if (accomCheckbox) accomCheckbox.addEventListener('change', updateFormState);
+
+        updateFormState();
 
         inscriptionForm.addEventListener('submit', async (e) => {
             e.preventDefault();
-            const btn = inscriptionForm.querySelector('button');
-            const originalText = btn.innerText;
+            
+            const selectedFormation = document.querySelector('input[name="formation_type"]:checked');
+            const selectedSession = document.querySelector('input[name="session_date"]:checked');
+            const fData = formationsData[selectedFormation.value];
+            
+            if (!fData || !selectedSession) return;
+            
+            const originalText = submitBtn.innerText;
+            submitBtn.innerText = 'Redirection vers Qonto...';
+            submitBtn.disabled = true;
 
-            btn.innerText = 'Redirection vers le paiement...';
-            btn.disabled = true;
-
-            const hasAccompaniment = accomCheckModal ? accomCheckModal.checked : false;
+            const hasAccompaniment = accomCheckbox ? accomCheckbox.checked : false;
+            
+            const redirectUrl = (selectedFormation.value === 'video_ia_pro' && hasAccompaniment) 
+                                ? fData.links.accomp 
+                                : fData.links.base;
 
             const payload = {
-                first_name: document.getElementById('inscription-firstname').value,
-                last_name: document.getElementById('inscription-lastname').value,
-                email: document.getElementById('inscription-email').value,
-                phone: document.getElementById('inscription-phone').value || null,
+                first_name: document.getElementById('firstname').value,
+                last_name: document.getElementById('lastname').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value || null,
                 need_type: 'formations',
-                sub_need: `video_ia_pro (inscription, accompagnement: ${hasAccompaniment ? 'oui (+200€)' : 'non'}, entreprise: ${document.getElementById('inscription-company').value || 'none'})`
+                sub_need: `${fData.name} - Session: ${selectedSession.value} (accompagnement: ${hasAccompaniment ? 'oui (+200€)' : 'non'})`
             };
 
             try {
-                // Save lead in Supabase contacts table
                 await fetch(`${SUPABASE_URL}/rest/v1/contacts`, {
                     method: 'POST',
                     headers: {
@@ -782,23 +974,18 @@ document.addEventListener('DOMContentLoaded', () => {
                     body: JSON.stringify(payload)
                 });
             } catch (err) {
-                console.error("Failed to save contact lead, redirecting anyway", err);
+                console.error("Failed to save lead, proceeding to Qonto", err);
             }
 
-            // Send email notification via Web3Forms
-            sendEmailNotification('Nouvelle Inscription - Vidéo IA Pro', {
+            sendEmailNotification(`Nouvelle Inscription - ${fData.name}`, {
                 Nom: payload.last_name,
                 Prenom: payload.first_name,
                 Email: payload.email,
                 Telephone: payload.phone,
-                Entreprise: document.getElementById('inscription-company').value,
+                Session: selectedSession.value,
                 Accompagnement: hasAccompaniment ? 'Oui (+200€)' : 'Non'
             });
 
-            // Redirect to correct Qonto payment link
-            const redirectUrl = hasAccompaniment
-                ? "https://pay.qonto.com/payment-links/019ea75f-1598-7712-b7bd-366a2717e45b?resource_id=019ea75f-1599-716a-a443-af8790d1da24"
-                : "https://pay.qonto.com/payment-links/019ea68d-6c74-74a5-be80-0efc49b6f60b?resource_id=019ea68d-6c75-7048-a57f-5f6b9e044645";
             window.location.href = redirectUrl;
         });
     }
