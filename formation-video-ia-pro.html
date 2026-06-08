@@ -23,10 +23,35 @@
             align-items: center;
         }
 
+        .form-hero-img {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
         @media (max-width: 991px) {
             .form-hero-grid {
                 grid-template-columns: 1fr;
                 gap: 2rem;
+            }
+            .form-hero-img {
+                max-height: 280px;
+                object-fit: cover;
+                border-radius: 12px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .form-hero-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+                /* Prevent any child from overflowing */
+                overflow: hidden;
+                max-width: 100%;
+            }
+            .form-hero-img {
+                display: none; /* Hide image on very small screens to save space */
             }
         }
 
@@ -724,7 +749,8 @@
                         <a onclick="openModal('devis-modal')" class="cta-brochure-link">Télécharger la brochure PDF</a>
                     </div>
                     <div style="display: flex; align-items: center; justify-content: center;">
-                        <img src="images/formation-video-ia-pro.png" alt="Formation Vidéo IA Pro - mockup et workflow de génération vidéo par intelligence artificielle" class="form-hero-img" style="border: 1px solid rgba(255,255,255,0.08); max-height: 400px; object-fit: cover;">
+                        <img src="images/formation-video-ia-pro.png" alt="Formation Vidéo IA Pro - mockup et workflow de génération vidéo par intelligence artificielle" class="form-hero-img" style="border: 1px solid rgba(255,255,255,0.08);">
+
                     </div>
                 </div>
             </div>
