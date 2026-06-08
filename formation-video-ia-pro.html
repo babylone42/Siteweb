@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vidéo IA Pro : De zéro à portfolio en 3 jours | Babylone42</title>
+    <title>Vidéo IA Pro : Internalisez votre production vidéo en 3 jours | Babylone42</title>
     <meta name="description"
         content="Devenez autonome en production vidéo IA. Formation intensive 3 jours en binôme expert IA + vidéaste indépendant. Créez votre portfolio vidéo sans agence.">
     <meta name="robots" content="index, follow">
@@ -563,6 +563,9 @@
             .cta-group .btn {
                 text-align: center;
                 width: 100%;
+                white-space: normal;
+                height: auto;
+                padding: 0.8rem 1rem;
             }
             .before-after-table th, .before-after-table td {
                 padding: 0.8rem;
@@ -577,7 +580,7 @@
         .earlybird-bubble {
             position: fixed;
             bottom: 80px;
-            right: 20px;
+            left: 20px;
             background: linear-gradient(135deg, var(--primary-color), #0f766e);
             color: #fff;
             padding: 0.8rem 1.2rem;
@@ -698,7 +701,7 @@
                 <div class="form-hero-grid">
                     <div>
                         <h1 style="font-size: clamp(2rem, 4vw, 2.8rem); line-height: 1.15; margin-top: 1rem; margin-bottom: 1.2rem;">
-                            Vidéo IA Pro :<br><span class="highlight">De zéro à portfolio en 3 jours</span>
+                            Vidéo IA Pro :<br><span class="highlight">Internalisez votre production vidéo en 3 jours</span>
                         </h1>
                         <p style="font-size: 1.1rem; color: var(--text-muted); margin-bottom: 1.5rem; text-align: justify; line-height: 1.6;">
                             Formation intensive en binôme — Expert IA + Vidéaste / Monteur & Réalisateur indépendant. Produisez vos vidéos pro (15-60s) en autonomie, sans agence.
@@ -713,7 +716,7 @@
 
                         <div class="cta-group">
                             <button onclick="openModal('devis-modal')" class="btn btn-primary">Demander un devis</button>
-                            <a onclick="openModal('inscription-modal')" class="btn btn-secondary check-earlybird-btn">
+                            <a href="https://pay.qonto.com/payment-links/019ea68d-6c74-74a5-be80-0efc49b6f60b?resource_id=019ea68d-6c75-7048-a57f-5f6b9e044645" target="_blank" class="btn btn-secondary check-earlybird-btn">
                                 S'inscrire en Early bird — 1 490€ HT
                             </a>
                         </div>
@@ -846,7 +849,7 @@
 
                 <div class="agenda-list">
                     <!-- Jour 1 -->
-                    <div class="agenda-card active" id="agenda-j1">
+                    <div class="agenda-card" id="agenda-j1">
                         <div class="agenda-header" onclick="toggleAgenda('agenda-j1')">
                             <h3><span>J1</span> Conception, Scripting & Storyboard</h3>
                             <i class="fas fa-chevron-down"></i>
@@ -1012,23 +1015,15 @@
                                 <td id="price-earlybird" style="font-weight: 700; color: #0f172a;">1 490 €</td>
                                 <td>1 personne</td>
                                 <td>
-                                    <a id="link-earlybird" onclick="openModal('inscription-modal')" class="btn btn-primary" style="font-size: 0.85rem; padding: 0.6rem 1rem;">S'inscrire</a>
+                                    <a id="link-earlybird" href="https://pay.qonto.com/payment-links/019ea68d-6c74-74a5-be80-0efc49b6f60b?resource_id=019ea68d-6c75-7048-a57f-5f6b9e044645" target="_blank" class="btn btn-primary" style="font-size: 0.85rem; padding: 0.6rem 1rem; width: 100%; max-width: 180px; text-align: center; display: inline-block; box-sizing: border-box;">S'inscrire</a>
                                 </td>
                             </tr>
                             <tr>
-                                <td><strong>Groupe</strong></td>
+                                <td><strong>Groupe / Intra</strong></td>
                                 <td style="font-weight: 600; color: #0f172a;">Sur devis</td>
                                 <td>3 à 12 personnes</td>
                                 <td>
-                                    <button onclick="openModal('devis-modal')" class="btn btn-secondary" style="font-size: 0.85rem; padding: 0.6rem 1rem;">Demander un devis</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><strong>Intra-entreprise</strong></td>
-                                <td style="font-weight: 600; color: #0f172a;">Sur devis</td>
-                                <td>8 à 12 personnes</td>
-                                <td>
-                                    <button onclick="openModal('devis-modal')" class="btn btn-secondary" style="font-size: 0.85rem; padding: 0.6rem 1rem;">Demander un devis</button>
+                                    <button onclick="openModal('devis-modal')" class="btn btn-secondary" style="font-size: 0.85rem; padding: 0.6rem 1rem; width: 100%; max-width: 180px; text-align: center; display: inline-block; box-sizing: border-box;">Demander un devis</button>
                                 </td>
                             </tr>
                         </tbody>
@@ -1193,7 +1188,7 @@
                 <p class="section-subtitle" style="margin-bottom: 2.5rem; text-align: justify;">Rejoignez la prochaine session limitée à 12 participants pour garantir un accompagnement de haute qualité.</p>
                 <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;">
                     <button onclick="openModal('devis-modal')" class="btn btn-primary">Demander un devis</button>
-                    <a onclick="openModal('inscription-modal')" class="btn btn-secondary check-earlybird-btn-final">
+                    <a href="https://pay.qonto.com/payment-links/019ea68d-6c74-74a5-be80-0efc49b6f60b?resource_id=019ea68d-6c75-7048-a57f-5f6b9e044645" target="_blank" class="btn btn-secondary check-earlybird-btn-final">
                         S'inscrire Early bird — 1 490€ HT
                     </a>
                 </div>
@@ -1356,7 +1351,7 @@
 
     <!-- WIDGET BETA TESTER -->
     <div class="beta-widget-wrap">
-        <button class="beta-btn" onclick="openModal('beta-modal')"> Devenir beta-testeur</button>
+        <button class="beta-btn" onclick="openModal('beta-modal')"> Inscris-toi à la master class</button>
     </div>
 
     <!-- MODAL BETA FORM -->
@@ -1364,8 +1359,8 @@
         <div class="modal-container" style="max-width: 500px;">
             <button class="modal-close" onclick="closeModal('beta-modal')"><i class="fas fa-times"></i></button>
             <div class="modal-body">
-                <h3 class="modal-title">Devenir beta-testeur</h3>
-                <p class="modal-subtitle">Postulez pour intégrer notre prochaine session de beta-testeurs et profitez d'un tarif ultra-préférentiel.</p>
+                <h3 class="modal-title">Inscris-toi à la master class</h3>
+                <p class="modal-subtitle">Participez à notre prochaine master class exclusive sur la vidéo IA.</p>
                 
                 <form class="contact-form" id="betaForm">
                     <div class="form-row form-grid-2">
@@ -1408,7 +1403,7 @@
 
                     <div class="form-group">
                         <label for="beta-motivation">Vos motivations *</label>
-                        <textarea id="beta-motivation" rows="3" required placeholder="Pourquoi souhaitez-vous devenir beta-testeur ?" style="width: 100%; background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12); color: #e2e8f0; padding: 0.75rem 1rem; border-radius: 8px; font-family: inherit; font-size: 0.95rem; outline: none; resize: vertical;"></textarea>
+                        <textarea id="beta-motivation" rows="3" required placeholder="Pourquoi souhaitez-vous participer à cette master class ?" style="width: 100%; background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12); color: #e2e8f0; padding: 0.75rem 1rem; border-radius: 8px; font-family: inherit; font-size: 0.95rem; outline: none; resize: vertical;"></textarea>
                     </div>
 
                     <button type="submit" class="btn btn-primary btn-block" style="margin-top: 1rem;">Envoyer ma candidature</button>
@@ -1529,7 +1524,7 @@
     </div>
 
     <!-- FLOATING EARLYBIRD BUBBLE -->
-    <div class="earlybird-bubble" onclick="openModal('inscription-modal')">
+    <div class="earlybird-bubble" onclick="window.open('https://pay.qonto.com/payment-links/019ea68d-6c74-74a5-be80-0efc49b6f60b?resource_id=019ea68d-6c75-7048-a57f-5f6b9e044645', '_blank')">
         <i class="fas fa-gift"></i>
         <span>Tarif Early bird Disponible</span>
     </div>
