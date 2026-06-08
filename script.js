@@ -3,10 +3,14 @@ document.addEventListener('DOMContentLoaded', () => {
     // Smooth Scrolling for Anchors
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
+            const targetId = this.getAttribute('href');
+            if (targetId && targetId !== '#') {
+                const targetEl = document.querySelector(targetId);
+                if (targetEl) {
+                    e.preventDefault();
+                    targetEl.scrollIntoView({ behavior: 'smooth' });
+                }
+            }
         });
     });
 
@@ -118,6 +122,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
 
                 if (response.ok) {
+                    // Email notification
+                    sendEmailNotification('Demande de contact - Babylone42', {
+                        Nom: payload.last_name,
+                        Prenom: payload.first_name,
+                        Email: payload.email,
+                        Telephone: payload.phone,
+                        Type_besoin: payload.need_type,
+                        Detail: payload.sub_need
+                    });
                     form.reset();
                     btn.innerText = originalText;
                     btn.style.opacity = '1';
@@ -523,7 +536,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     </div>
                     <div class="floating-widget-body">
                         <p>Optimisez votre relation client avec nos solutions d'IA sur-mesure. Découvrez comment nous aidons les marques d'exception.</p>
-                        <a href="#contact" class="floating-widget-cta" id="widget-cta">Demander un Audit Design</a>
+                        <a href="https://babylone42.fr/contact-page.html" class="floating-widget-cta" id="widget-cta">Demander un Audit Design</a>
                     </div>
                 </div>
                 <button class="floating-widget-btn" id="ai-widget-btn">
@@ -558,7 +571,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Special CTA behavior
             cta.addEventListener('click', () => {
                 popup.classList.remove('active');
-                // Pre-fill or focus logic could go here
+                window.location.href = 'https://babylone42.fr/contact-page.html';
             });
         }
     };
