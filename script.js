@@ -800,7 +800,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         'prompting': {
             name: 'IA Générative',
-            basePrice: null,
+            basePrice: 1290,
             links: { base: 'https://pay.qonto.com/payment-links/019ea7c0-c87e-7ca4-9736-736a2f3b8a85?resource_id=019ea7c0-c880-7c41-8e97-f081c4222c8d' },
             sessions: [
                 { id: 's3', label: '16 - 17 Avril 2026', date: '2026-04-16' },
@@ -812,7 +812,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         'deep_learning': {
             name: 'Deep Learning',
-            basePrice: null,
+            basePrice: 1890,
             links: { base: 'https://pay.qonto.com/payment-links/019ea7c1-8d57-7c31-9ef3-5f73904985d5?resource_id=019ea7c1-8d59-712c-9c69-6765332a600c' },
             sessions: [
                 { id: 's3', label: '05, 11, 12 Juin 2026', date: '2026-06-05' },
@@ -822,7 +822,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         'python': {
             name: 'Python (Data / POO)',
-            basePrice: null,
+            basePrice: 1490,
             links: { base: 'https://pay.qonto.com/payment-links/019ea7c2-7bd9-7ceb-96e2-185434f5d03f?resource_id=019ea7c2-7bdb-71da-aebc-10051822801d' },
             sessions: [
                 { id: 's4', label: '07, 21, 22 Mai 2026', date: '2026-05-07' },
@@ -834,7 +834,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         'machine_learning': {
             name: 'Machine Learning',
-            basePrice: null,
+            basePrice: 1890,
             links: { base: 'https://pay.qonto.com/payment-links/019ea7c3-5e12-7581-8886-f41775cba441?resource_id=019ea7c3-5e13-78c3-99f6-f5bd8c9e6055' },
             sessions: [
                 { id: 's2', label: '23 - 24 Avril 2026', date: '2026-04-23' },
@@ -846,7 +846,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         'jupyter': {
             name: 'Jupyter Notebook',
-            basePrice: null,
+            basePrice: 990,
             links: { base: 'https://pay.qonto.com/payment-links/019ea7c4-4cd7-7c62-aebe-9f268eaaabd1?resource_id=019ea7c4-4cd9-720b-b5bf-682d4f6fce2e' },
             sessions: [
                 { id: 's2', label: '09 Avril 2026', date: '2026-04-09' },
