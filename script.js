@@ -780,8 +780,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 Accompagnement: hasAccompaniment ? 'Oui (+200€)' : 'Non'
             });
 
-            // Redirect to Qonto payment
-            const redirectUrl = "https://pay.qonto.com/payment-links/019ea68d-6c74-74a5-be80-0efc49b6f60b?resource_id=019ea68d-6c75-7048-a57f-5f6b9e044645";
+            // Redirect to correct Qonto payment link
+            const redirectUrl = hasAccompaniment
+                ? "https://pay.qonto.com/payment-links/019ea75f-1598-7712-b7bd-366a2717e45b?resource_id=019ea75f-1599-716a-a443-af8790d1da24"
+                : "https://pay.qonto.com/payment-links/019ea68d-6c74-74a5-be80-0efc49b6f60b?resource_id=019ea68d-6c75-7048-a57f-5f6b9e044645";
             window.location.href = redirectUrl;
         });
     }
