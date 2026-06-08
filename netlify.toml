@@ -1,0 +1,9 @@
+[[redirects]]
+  from = "/inscription"
+  to = "/inscription.html"
+  status = 200
+
+[[redirects]]
+  from = "/contact-page"
+  to = "/contact-page.html"
+  status = 200
