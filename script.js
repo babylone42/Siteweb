@@ -660,7 +660,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 telephone: document.getElementById('beta-phone').value || null,
                 entreprise: document.getElementById('beta-company').value || null,
                 profil: document.getElementById('beta-profile').value,
-                motivation: document.getElementById('beta-motivation').value
+                motivation: document.getElementById('beta-motivation').value,
+                date_souhaitee: (document.querySelector('input[name="beta-date"]:checked') || {}).value || 'Non précisée'
             };
 
             try {
@@ -685,6 +686,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         Telephone: payload.telephone,
                         Entreprise: payload.entreprise,
                         Profil: payload.profil,
+                        Date_souhaitee: payload.date_souhaitee,
                         Motivation: payload.motivation
                     });
                     if (window.closeModal) {
