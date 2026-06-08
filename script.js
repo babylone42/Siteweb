@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // ── Email notification helper (Web3Forms – no activation needed) ──────────
     // Web3Forms sends emails to the address linked to the access key.
     // Key below is linked to contact@babylone42.fr
-    const WEB3FORMS_KEY = 'YOUR_WEB3FORMS_ACCESS_KEY'; // ← remplacez par votre clé Web3Forms
+    const WEB3FORMS_KEY = '0a0ab618-aa84-43be-8671-9547db7ede48';
 
     async function sendEmailNotification(subject, fields) {
         try {
