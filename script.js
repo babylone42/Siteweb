@@ -48,6 +48,29 @@ document.addEventListener('DOMContentLoaded', () => {
     const SUPABASE_URL = 'https://nzkirwiilgdlitbylxxv.supabase.co';
     const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im56a2lyd2lpbGdkbGl0YnlseHh2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzE5NDYxNzIsImV4cCI6MjA4NzUyMjE3Mn0.xad9ed_JK-6goYodSyhhcEEiOdmro0xq2skohjGW7SE';
 
+    // ── Email notification helper (Web3Forms – no activation needed) ──────────
+    // Web3Forms sends emails to the address linked to the access key.
+    // Key below is linked to contact@babylone42.fr
+    const WEB3FORMS_KEY = 'YOUR_WEB3FORMS_ACCESS_KEY'; // ← remplacez par votre clé Web3Forms
+
+    async function sendEmailNotification(subject, fields) {
+        try {
+            await fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                body: JSON.stringify({
+                    access_key: WEB3FORMS_KEY,
+                    subject: subject,
+                    from_name: 'Site Babylone42',
+                    ...fields
+                })
+            });
+        } catch (err) {
+            console.error('Email notification failed:', err);
+        }
+    }
+    // ─────────────────────────────────────────────────────────────────────────
+
     // Form Submission Handling (Contact via Supabase)
     const form = document.getElementById('contactForm');
     if (form) {
@@ -577,6 +600,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 if (response.ok) {
                     devisForm.reset();
+                    // Email notification
+                    sendEmailNotification('Demande de devis - Vidéo IA Pro', {
+                        Nom: payload.last_name,
+                        Prenom: payload.first_name,
+                        Email: payload.email,
+                        Telephone: payload.phone,
+                        Participants: document.getElementById('devis-participants').value,
+                        Secteur: document.getElementById('devis-sector').value,
+                        Message: document.getElementById('devis-message').value
+                    });
                     if (window.closeModal) {
                         window.closeModal('devis-modal');
                     } else {
@@ -644,6 +677,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 if (response.ok) {
                     betaForm.reset();
+                    // Email notification
+                    sendEmailNotification('Inscription Master Class - Vidéo IA Pro', {
+                        Nom: payload.nom,
+                        Prenom: payload.prenom,
+                        Email: payload.email,
+                        Telephone: payload.telephone,
+                        Entreprise: payload.entreprise,
+                        Profil: payload.profil,
+                        Motivation: payload.motivation
+                    });
                     if (window.closeModal) {
                         window.closeModal('beta-modal');
                     } else {
@@ -653,7 +696,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     if (window.showSuccessModal) {
                         window.showSuccessModal(
                             "Merci !",
-                            "Merci ! On vous contacte vite pour la prochaine session beta."
+                            "Merci ! On vous contacte vite pour la prochaine session."
                         );
                     }
                 } else {
@@ -727,31 +770,18 @@ document.addEventListener('DOMContentLoaded', () => {
                 console.error("Failed to save contact lead, redirecting anyway", err);
             }
 
-            // Send email notification to contact@babylone42.fr
-            try {
-                await fetch("https://formsubmit.co/ajax/contact@babylone42.fr", {
-                    method: "POST",
-                    headers: { 
-                        'Content-Type': 'application/json',
-                        'Accept': 'application/json'
-                    },
-                    body: JSON.stringify({
-                        Nom: payload.last_name,
-                        Prenom: payload.first_name,
-                        Email: payload.email,
-                        Telephone: payload.phone,
-                        Entreprise: document.getElementById('inscription-company').value,
-                        Accompagnement: hasAccompaniment ? "Oui (+200€)" : "Non",
-                        _subject: "Nouvelle Inscription - Vidéo IA Pro"
-                    })
-                });
-            } catch (err) {
-                console.error("Email notification failed", err);
-            }
+            // Send email notification via Web3Forms
+            sendEmailNotification('Nouvelle Inscription - Vidéo IA Pro', {
+                Nom: payload.last_name,
+                Prenom: payload.first_name,
+                Email: payload.email,
+                Telephone: payload.phone,
+                Entreprise: document.getElementById('inscription-company').value,
+                Accompagnement: hasAccompaniment ? 'Oui (+200€)' : 'Non'
+            });
 
             // Redirect to Qonto payment
             const redirectUrl = "https://pay.qonto.com/payment-links/019ea68d-6c74-74a5-be80-0efc49b6f60b?resource_id=019ea68d-6c75-7048-a57f-5f6b9e044645";
-            
             window.location.href = redirectUrl;
         });
     }

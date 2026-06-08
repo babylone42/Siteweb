@@ -46,12 +46,14 @@
             .form-hero-grid {
                 grid-template-columns: 1fr;
                 gap: 1.5rem;
-                /* Prevent any child from overflowing */
                 overflow: hidden;
                 max-width: 100%;
             }
             .form-hero-img {
-                display: none; /* Hide image on very small screens to save space */
+                max-height: 200px;
+                object-fit: cover;
+                border-radius: 12px;
+                width: 100%;
             }
         }
 
