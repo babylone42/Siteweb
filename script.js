@@ -727,10 +727,30 @@ document.addEventListener('DOMContentLoaded', () => {
                 console.error("Failed to save contact lead, redirecting anyway", err);
             }
 
+            // Send email notification to contact@babylone42.fr
+            try {
+                await fetch("https://formsubmit.co/ajax/contact@babylone42.fr", {
+                    method: "POST",
+                    headers: { 
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        Nom: payload.last_name,
+                        Prenom: payload.first_name,
+                        Email: payload.email,
+                        Telephone: payload.phone,
+                        Entreprise: document.getElementById('inscription-company').value,
+                        Accompagnement: hasAccompaniment ? "Oui (+200€)" : "Non",
+                        _subject: "Nouvelle Inscription - Vidéo IA Pro"
+                    })
+                });
+            } catch (err) {
+                console.error("Email notification failed", err);
+            }
+
             // Redirect to Qonto payment
-            const redirectUrl = hasAccompaniment ? 
-                "https://pay.qonto.com/payment-links/019e9378-4255-7410-9231-508f31a9f4ea?resource_id=019e9378-4256-7558-8e2f-ba9195e5a441" : 
-                "https://pay.qonto.com/payment-links/019e9379-c930-72c5-8444-0275154509e6?resource_id=019e9379-c931-7717-bb8a-1b9105d4aac4";
+            const redirectUrl = "https://pay.qonto.com/payment-links/019ea68d-6c74-74a5-be80-0efc49b6f60b?resource_id=019ea68d-6c75-7048-a57f-5f6b9e044645";
             
             window.location.href = redirectUrl;
         });

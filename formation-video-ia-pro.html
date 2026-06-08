@@ -701,7 +701,7 @@
             <div class="container" style="position: relative; z-index: 2;">
                 <div class="form-hero-grid">
                     <div>
-                        <h1 style="font-size: clamp(2rem, 4vw, 2.8rem); line-height: 1.15; margin-top: 1rem; margin-bottom: 1.2rem;">
+                        <h1 style="font-size: clamp(1.6rem, 5vw, 2.8rem); line-height: 1.15; margin-top: 1rem; margin-bottom: 1.2rem; hyphens: auto; word-break: break-word;">
                             Vidéo IA Pro :<br><span class="highlight">Internalisez votre production vidéo en 3 jours</span>
                         </h1>
                         <p style="font-size: 1.1rem; color: var(--text-muted); margin-bottom: 1.5rem; text-align: justify; line-height: 1.6;">
@@ -717,7 +717,7 @@
 
                         <div class="cta-group">
                             <button onclick="openModal('devis-modal')" class="btn btn-primary">Demander un devis</button>
-                            <a href="https://pay.qonto.com/payment-links/019ea68d-6c74-74a5-be80-0efc49b6f60b?resource_id=019ea68d-6c75-7048-a57f-5f6b9e044645" target="_blank" class="btn btn-secondary check-earlybird-btn">
+                            <a onclick="openModal('inscription-modal')" class="btn btn-secondary check-earlybird-btn">
                                 S'inscrire en Early bird — 1 490€ HT
                             </a>
                         </div>
@@ -855,7 +855,7 @@
                             <h3><span>J1</span> Conception, Scripting & Storyboard</h3>
                             <i class="fas fa-chevron-down"></i>
                         </div>
-                        <div class="agenda-body" style="max-height: 500px;">
+                        <div class="agenda-body">
                             <div class="agenda-content">
                                 <p><strong>Horaires :</strong> 09h00 - 12h30 | 14h00 - 17h00</p>
                                 <ul>
@@ -1016,7 +1016,7 @@
                                 <td id="price-earlybird" style="font-weight: 700; color: #0f172a;">1 490 €</td>
                                 <td>1 personne</td>
                                 <td>
-                                    <a id="link-earlybird" href="https://pay.qonto.com/payment-links/019ea68d-6c74-74a5-be80-0efc49b6f60b?resource_id=019ea68d-6c75-7048-a57f-5f6b9e044645" target="_blank" class="btn btn-primary" style="font-size: 0.85rem; padding: 0.6rem 1rem; width: 100%; max-width: 180px; text-align: center; display: inline-block; box-sizing: border-box;">S'inscrire</a>
+                                    <a id="link-earlybird" onclick="openModal('inscription-modal')" class="btn btn-primary" style="font-size: 0.85rem; padding: 0.6rem 1rem; width: 100%; max-width: 180px; text-align: center; display: inline-block; box-sizing: border-box;">S'inscrire</a>
                                 </td>
                             </tr>
                             <tr>
@@ -1189,7 +1189,7 @@
                 <p class="section-subtitle" style="margin-bottom: 2.5rem; text-align: justify;">Rejoignez la prochaine session limitée à 12 participants pour garantir un accompagnement de haute qualité.</p>
                 <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;">
                     <button onclick="openModal('devis-modal')" class="btn btn-primary">Demander un devis</button>
-                    <a href="https://pay.qonto.com/payment-links/019ea68d-6c74-74a5-be80-0efc49b6f60b?resource_id=019ea68d-6c75-7048-a57f-5f6b9e044645" target="_blank" class="btn btn-secondary check-earlybird-btn-final">
+                    <a onclick="openModal('inscription-modal')" class="btn btn-secondary check-earlybird-btn-final">
                         S'inscrire Early bird — 1 490€ HT
                     </a>
                 </div>
@@ -1526,7 +1526,7 @@
     </div>
 
     <!-- FLOATING EARLYBIRD BUBBLE -->
-    <div class="earlybird-bubble" onclick="window.open('https://pay.qonto.com/payment-links/019ea68d-6c74-74a5-be80-0efc49b6f60b?resource_id=019ea68d-6c75-7048-a57f-5f6b9e044645', '_blank')">
+    <div class="earlybird-bubble" onclick="openModal('inscription-modal')">
         <i class="fas fa-gift"></i>
         <span>Tarif Early bird Disponible</span>
     </div>
