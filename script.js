@@ -780,6 +780,49 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Inscription Page Logic ---
     const formationsData = {
+        'metier_literacy': {
+            name: 'Module 1 - IA Literacy',
+            basePrice: 490,
+            links: { base: 'https://pay.qonto.com/payment-links/019ecb3d-1946-79d9-bdb9-7a70ed8d1bec?resource_id=019ecb3d-1947-7885-b3ae-01cb7065230a' },
+            sessions: [
+                { id: 's1', label: 'Session Été — 20 Juillet 2026', date: '2026-07-20' },
+                { id: 's2', label: 'Session Automne — 14 Septembre 2026', date: '2026-09-14' },
+                { id: 's3', label: 'Session Hiver — 16 & 17 Novembre 2026', date: '2026-11-16' }
+            ]
+        },
+        'metier_generative': {
+            name: 'Module 2 - IA Générative Métier',
+            basePrice: 990,
+            links: { base: 'https://pay.qonto.com/payment-links/019ecb3f-3163-7ea4-8978-589bc45362d8?resource_id=019ecb3f-3165-7492-aeef-9af86ca57133' },
+            sessions: [
+                { id: 's1_avocats', label: 'Avocats (Été) — 27 & 28 Juillet 2026', date: '2026-07-27' },
+                { id: 's1_comptables', label: 'Comptables (Été) — 30 & 31 Juillet 2026', date: '2026-07-30' },
+                { id: 's2_avocats', label: 'Avocats (Automne) — 28 & 29 Septembre 2026', date: '2026-09-28' },
+                { id: 's2_comptables', label: 'Comptables (Automne) — 12 & 13 Octobre 2026', date: '2026-10-12' },
+                { id: 's3_avocats', label: 'Avocats (Hiver) — 30 Nov. & 01 Déc. 2026', date: '2026-11-30' },
+                { id: 's3_comptables', label: 'Comptables (Hiver) — 03 & 04 Décembre 2026', date: '2026-12-03' }
+            ]
+        },
+        'metier_prompting': {
+            name: 'Module 3 - Prompt Engineering Métier',
+            basePrice: 1090,
+            links: { base: 'https://pay.qonto.com/payment-links/019ecb40-55c6-7f27-a997-9d654c9ba65f?resource_id=019ecb40-55c7-7820-ae4c-f662f80a9e7f' },
+            sessions: [
+                { id: 's1', label: 'Session Été (Mixte) — 03 & 04 Août 2026', date: '2026-08-03' },
+                { id: 's2', label: 'Session Automne (Mixte) — 02 & 03 Novembre 2026', date: '2026-11-02' },
+                { id: 's3', label: 'Session Hiver (Mixte) — 21 & 22 Décembre 2026', date: '2026-12-21' }
+            ]
+        },
+        'metier_secret_pro': {
+            name: 'Module 4 - IA & Secret Professionnel / RGPD',
+            basePrice: 490,
+            links: { base: 'https://pay.qonto.com/payment-links/019ecb41-64a2-7e2a-9c42-7e34ed527ccb?resource_id=019ecb41-64a4-738a-b158-08ae363551b8' },
+            sessions: [
+                { id: 's1', label: 'Session Été — 10 Août 2026', date: '2026-08-10' },
+                { id: 's2', label: 'Session Automne — 16 Novembre 2026', date: '2026-11-16' },
+                { id: 's3', label: 'Session Hiver — 23 Décembre 2026', date: '2026-12-23' }
+            ]
+        },
         'video_ia_pro': {
             name: 'Vidéo IA Pro',
             basePrice: 1490,
@@ -990,5 +1033,159 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // ── Cookie Consent Banner ────────────────────────────────────────────────
+    const COOKIE_CONSENT_KEY = 'babylone42-cookie-consent';
+    const consent = localStorage.getItem(COOKIE_CONSENT_KEY);
+
+    if (!consent) {
+        // Create CSS styles dynamically
+        const style = document.createElement('style');
+        style.innerHTML = `
+            .cookie-banner {
+                position: fixed;
+                bottom: 24px;
+                left: 24px;
+                right: 24px;
+                max-width: 600px;
+                background: rgba(10, 39, 48, 0.95);
+                backdrop-filter: blur(12px);
+                -webkit-backdrop-filter: blur(12px);
+                border: 1px solid rgba(16, 155, 128, 0.3);
+                border-radius: 16px;
+                padding: 1.5rem;
+                z-index: 10000;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+                opacity: 0;
+                transform: translateY(20px);
+                transition: opacity 0.4s ease, transform 0.4s ease;
+                font-family: 'Plus Jakarta Sans', sans-serif;
+            }
+            .cookie-banner.show {
+                opacity: 1;
+                transform: translateY(0);
+            }
+            .cookie-banner-title {
+                font-family: 'Outfit', sans-serif;
+                font-size: 1.25rem;
+                font-weight: 700;
+                color: #ffffff;
+                margin: 0;
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+            }
+            .cookie-banner-title i {
+                color: #109B80;
+            }
+            .cookie-banner-text {
+                font-size: 0.9rem;
+                color: #94a3b8;
+                line-height: 1.5;
+                margin: 0;
+                text-align: justify;
+            }
+            .cookie-banner-text a {
+                color: #109B80;
+                text-decoration: underline;
+            }
+            .cookie-banner-buttons {
+                display: flex;
+                gap: 0.75rem;
+                justify-content: flex-end;
+                flex-wrap: wrap;
+                margin-top: 0.5rem;
+            }
+            .cookie-btn {
+                padding: 0.6rem 1.2rem;
+                border-radius: 50px;
+                font-size: 0.85rem;
+                font-weight: 700;
+                cursor: pointer;
+                border: none;
+                transition: all 0.3s ease;
+                text-transform: uppercase;
+                letter-spacing: 0.05em;
+            }
+            .cookie-btn-accept {
+                background: #109B80;
+                color: #ffffff;
+            }
+            .cookie-btn-accept:hover {
+                background: #14bd9c;
+                box-shadow: 0 4px 12px rgba(16, 155, 128, 0.3);
+            }
+            .cookie-btn-decline {
+                background: transparent;
+                border: 1px solid rgba(255, 255, 255, 0.15);
+                color: #94a3b8;
+            }
+            .cookie-btn-decline:hover {
+                background: rgba(255, 255, 255, 0.05);
+                color: #ffffff;
+                border-color: rgba(255, 255, 255, 0.3);
+            }
+            @media (max-width: 576px) {
+                .cookie-banner {
+                    bottom: 12px;
+                    left: 12px;
+                    right: 12px;
+                    padding: 1.25rem;
+                    border-radius: 12px;
+                }
+                .cookie-banner-buttons {
+                    flex-direction: column;
+                }
+                .cookie-btn {
+                    width: 100%;
+                    text-align: center;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Determine proper link to cookies page depending on depth
+        const isSubDir = window.location.pathname.includes('/Avocats/') || window.location.pathname.includes('/Comptables/');
+        const cookiesLink = isSubDir ? '../cookies.html' : 'cookies.html';
+
+        // Create HTML markup
+        const banner = document.createElement('div');
+        banner.className = 'cookie-banner';
+        banner.innerHTML = `
+            <h4 class="cookie-banner-title"><i class="fas fa-cookie-bite"></i> Respect de votre vie privée</h4>
+            <p class="cookie-banner-text">
+                Nous utilisons des cookies pour améliorer votre expérience utilisateur, mesurer l'audience du site et vous proposer des contenus adaptés. 
+                Vous pouvez accepter ou refuser ces cookies, ou en savoir plus en consultant notre 
+                <a href="${cookiesLink}">politique de gestion des cookies</a>.
+            </p>
+            <div class="cookie-banner-buttons">
+                <button class="cookie-btn cookie-btn-decline" id="cookieDecline">Refuser</button>
+                <button class="cookie-btn cookie-btn-accept" id="cookieAccept">Tout accepter</button>
+            </div>
+        `;
+        document.body.appendChild(banner);
+
+        // Show banner with delay
+        setTimeout(() => {
+            banner.classList.add('show');
+        }, 1000);
+
+        // Button Event Listeners
+        document.getElementById('cookieAccept').addEventListener('click', () => {
+            localStorage.setItem(COOKIE_CONSENT_KEY, 'accepted');
+            banner.classList.remove('show');
+            setTimeout(() => banner.remove(), 400);
+        });
+
+        document.getElementById('cookieDecline').addEventListener('click', () => {
+            localStorage.setItem(COOKIE_CONSENT_KEY, 'declined');
+            banner.classList.remove('show');
+            setTimeout(() => banner.remove(), 400);
+        });
+    }
+
 });
+
 

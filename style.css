@@ -2423,6 +2423,79 @@ p {
     50% { transform: translateY(-10px); }
 }
 
+
+
+/* GLOBAL MOBILE RESPONSIVENESS IMPROVEMENTS */
+.cta-buttons-wrap {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .syllabus-table-wrapper {
+        display: block !important;
+        width: 100% !important;
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch !important;
+        margin: 2rem 0 !important;
+    }
+    .syllabus-table-wrapper table,
+    table.syllabus-table {
+        display: table !important;
+        width: 100% !important;
+        min-width: 650px !important;
+    }
+    .grid-packs, .info-grid, .funding-grid {
+        grid-template-columns: 1fr !important;
+    }
+    .navbar-bottom {
+        padding: 0.5rem 1rem !important;
+    }
+    .logo img {
+        height: 25px !important;
+    }
+    
+    /* Prevent lists bullets from being cut off on mobile */
+    .container ul, .container ol,
+    .bg-darker ul, .bg-darker ol,
+    .bg-light ul, .bg-light ol {
+        padding-left: 1.5rem !important;
+        margin-left: 0.5rem !important;
+    }
+    
+    .container li, .bg-darker li, .bg-light li {
+        text-align: left !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .cta-buttons-wrap {
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+    .cta-buttons-wrap .btn,
+    .cta-buttons-wrap a {
+        width: 100% !important;
+        text-align: center !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+    .container {
+        padding: 0 1rem !important;
+    }
+    .section-padding {
+        padding: 2rem 0 !important;
+    }
+    .pack-card, .card, .funding-section, .qualiopi-banner {
+        padding: 1.25rem !important;
+    }
+}
+
 @media (max-width: 480px) {
     .floating-widget-container {
         bottom: 20px;
@@ -2437,3 +2510,5 @@ p {
 .hidden {
     display: none !important;
 }
+
+

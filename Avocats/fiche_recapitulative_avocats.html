@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fiche Récapitulative - Avocats – Babylone 42</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Space+Grotesk:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css?v=10">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <style>
+        .opco-badge {
+            background: rgba(16, 155, 128, 0.08);
+            color: var(--primary-color);
+            border: 1px solid var(--primary-color);
+            padding: 0.5rem 1.2rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+
+        .pack {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            padding: 1.5rem 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+            transition: all 0.3s ease;
+        }
+
+        .pack:hover {
+            border-color: var(--primary-color);
+            transform: translateY(-2px);
+            box-shadow: 0 12px 24px rgba(16, 155, 128, 0.08);
+        }
+
+        .pl {
+            font-size: 0.85rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 0.5rem;
+        }
+
+        .pack h3 {
+            margin: 0 0 0.75rem 0;
+            color: #0f172a;
+            font-family: var(--font-heading);
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+
+        .meta {
+            font-size: 0.95rem;
+            color: #475569;
+            margin-top: 0.5rem;
+            border-bottom: 1px solid #f1f5f9;
+            padding-bottom: 0.75rem;
+        }
+
+        .intra {
+            font-size: 0.9rem;
+            color: #64748b;
+            margin-top: 0.75rem;
+        }
+
+        .bdg {
+            background: rgba(16, 155, 128, 0.05);
+            padding: 0.25rem 0.75rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-top: 1rem;
+            display: inline-block;
+            border: 1px solid rgba(16, 155, 128, 0.15);
+        }
+
+        .info {
+            background: var(--dark-surface);
+            border: 1px solid rgba(16, 155, 128, 0.2);
+            padding: 2rem;
+            border-radius: 1rem;
+            font-size: 1rem;
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .cta {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: #ffffff;
+            text-decoration: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 700;
+            font-family: var(--font-heading);
+            margin-top: 1.5rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(16, 155, 128, 0.1);
+        }
+
+        .cta:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-2px);
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+        <div class="container">
+            <!-- TOP ROW: Socials & Contact -->
+            <div class="navbar-top">
+                <div class="navbar-top-content">
+                    <a href="https://wa.me/33773609849" target="_blank" rel="noopener noreferrer" class="navbar-phone">
+                        <i class="fab fa-whatsapp"></i> +33 0 7 73 60 98 49
+                    </a>
+                    <div class="nav-socials">
+                        <a href="https://www.linkedin.com/company/babylone42/" target="_blank" rel="noopener noreferrer"
+                            aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/babylone42_?igsh=YzVyamk1N3VoYXU1" target="_blank"
+                            rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=61583402791597&name=xhp_nt__fb__action__open_user&locale=fr_FR"
+                            target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i
+                                class="fab fa-facebook"></i></a>
+                        <a href="https://x.com/babylone42_" target="_blank" rel="noopener noreferrer"
+                            aria-label="X Twitter"><i class="fab fa-x-twitter"></i></a>
+                        <a href="https://m.youtube.com/@Babylone42" target="_blank" rel="noopener noreferrer"
+                            aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BOTTOM ROW: Logo, Links & Mobile Menu -->
+            <div class="navbar-bottom">
+                <a href="../index.html" class="logo">
+                    <img src="../images/logo.svg" alt="Babylone42 Logo" style="height: 30px;">
+                </a>
+
+                <ul class="nav-links">
+                    <li class="dropdown">
+                        <a href="../index.html">Accueil <i class="fas fa-chevron-down"
+                                style="font-size: 0.8rem; margin-left: 0.3rem;"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../about.html">About us</a></li>
+                            <li><a href="../interlocuteurs.html">Vos interlocuteurs</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="../index.html#solutions">Solutions IA <i class="fas fa-chevron-down"
+                                style="font-size: 0.8rem; margin-left: 0.3rem;"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../solution-chatbots.html">Chatbots 24/7</a></li>
+                            <li><a href="../solution-copilots.html">Copilots IA</a></li>
+                            <li><a href="../solution-automation.html">Automatisation</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="../index.html#formations">Formations <i class="fas fa-chevron-down"
+                                style="font-size: 0.8rem; margin-left: 0.3rem;"></i></a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-header" style="font-weight: 700; font-size: 0.85rem; color: #109B80; padding: 0.6rem 1rem 0.3rem 1rem; text-transform: uppercase; letter-spacing: 0.05em;">Secteurs & Métiers</li>
+                            <li><a href="../Avocats/brochure_generale_avocats.html" style="padding-left: 1.5rem;">Cabinets d'Avocats</a></li>
+                            <li><a href="../Comptables/brochure_generale_comptables.html" style="padding-left: 1.5rem;">Expertise Comptable & Audit</a></li>
+                            
+                            <li style="border-top: 1px solid rgba(255,255,255,0.08); margin: 0.4rem 0;"></li>
+                            
+                            <li class="dropdown-header" style="font-weight: 700; font-size: 0.85rem; color: #109B80; padding: 0.6rem 1rem 0.3rem 1rem; text-transform: uppercase; letter-spacing: 0.05em;">Technologies & Outils</li>
+                            <li><a href="../formation-genai.html" style="padding-left: 1.5rem;">IA Générative</a></li>
+                            <li><a href="../formation-video-ia-pro.html" style="padding-left: 1.5rem;">Vidéo IA Pro</a></li>
+                            <li><a href="../formation-jupyter.html" style="padding-left: 1.5rem;">Jupyter</a></li>
+                            <li><a href="../formation-python.html" style="padding-left: 1.5rem;">Python</a></li>
+                            <li><a href="../formation-ml.html" style="padding-left: 1.5rem;">Machine Learning</a></li>
+                            <li><a href="../formation-dl.html" style="padding-left: 1.5rem;">Deep Learning</a></li>
+                            
+                            <li style="border-top: 1px solid rgba(255,255,255,0.08); margin: 0.4rem 0;"></li>
+                            <li><a href="../calendrier-formations.html" style="font-weight: bold;">Calendrier des formations</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../articles.html">Actualités</a></li>
+                    <li><a href="../contact-page.html" class="btn btn-primary nav-btn">Diagnostic IA Gratuit</a></li>
+                </ul>
+
+                <div class="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <main class="page-content" style="padding-top: 80px;">
+
+        <!-- SECTION 1: HEADER (Dark background) -->
+        <section class="bg-darker section-padding" style="position: relative; overflow: hidden;">
+            <div class="container" style="position: relative; z-index: 2; max-width: 900px;">
+                <div style="margin-bottom: 2rem;">
+                    <span class="opco-badge">OPCO EP & FIF PL</span>
+                </div>
+                
+                <h1 style="font-family: var(--font-heading); font-size: clamp(1.8rem, 5vw, 2.8rem); font-weight: 800; color: #ffffff; line-height: 1.2; margin-bottom: 1.5rem; hyphens: auto; word-break: break-word;">
+                    Parcours de Formation IA &mdash; <span style="color: var(--primary-color);">Avocats</span>
+                </h1>
+                
+                <p class="subtitle" style="font-size: 1.1rem; color: var(--text-muted); line-height: 1.6;">
+                    Organisme de formation spécialisé en Intelligence Artificielle &middot; En cours de certification Qualiopi &middot; SIRET : 913 859 292 00018
+                </p>
+            </div>
+        </section>
+
+        <!-- SECTION 2: MODULES LIST (White background) -->
+        <section class="section-padding bg-light">
+            <div class="container" style="max-width: 900px;">
+                <h2 style="font-family: var(--font-heading); font-size: 1.8rem; color: #0f172a; margin-bottom: 2rem; display: flex; align-items: center; gap: 0.8rem;">
+                    <span style="display: inline-block; width: 4px; height: 1.8rem; background: var(--primary-color); border-radius: 2px;"></span>
+                    Formations éligibles OPCO (OPCO EP / FIF PL)
+                </h2>
+                
+                <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+                    <div class="pack">
+  <div class="pl">Module 1 &mdash; IA Literacy</div>
+  <h3>Culture IA et conformite reglementaire pour les professionnels du droit</h3>
+  <div class="meta">Duree : 7h (1 jour) &nbsp;|&nbsp; <strong>Inter : 490 EUR HT/pers</strong> &nbsp;|&nbsp; Max 10 participants</div>
+  <div class="intra">Intra entreprise : Tarif dégressif à partir de 5 participants (ex: 420 EUR HT/pers. au lieu de 490 EUR HT, demander un devis)</div>
+  <div class="bdg">Badge : Praticien IA &ndash; Literacy</div>
+ </div>
+<div class="pack">
+  <div class="pl">Module 2 &mdash; IA Generative</div>
+  <h3>IA generative pour la redaction d'actes, notes et consultations juridiques</h3>
+  <div class="meta">Duree : 14h (2 jours) &nbsp;|&nbsp; <strong>Inter : 990 EUR HT/pers</strong> &nbsp;|&nbsp; Max 10 participants</div>
+  <div class="intra">Intra entreprise : Tarif dégressif à partir de 5 participants (ex: 840 EUR HT/pers. au lieu de 990 EUR HT, demander un devis)</div>
+  <div class="bdg">Badge : Praticien IA &ndash; Generative</div>
+ </div>
+<div class="pack">
+  <div class="pl">Module 3 &mdash; Prompt Engineering</div>
+  <h3>Prompt engineering pour avocats : maitriser les requetes IA en pratique professionnelle</h3>
+  <div class="meta">Duree : 14h (2 jours) &nbsp;|&nbsp; <strong>Inter : 1 090 EUR HT/pers</strong> &nbsp;|&nbsp; Max 10 participants</div>
+  <div class="intra">Intra entreprise : Tarif dégressif à partir de 5 participants (ex: 925 EUR HT/pers. au lieu de 1090 EUR HT, demander un devis)</div>
+  <div class="bdg">Badge : Praticien IA &ndash; Prompt Engineering</div>
+ </div>
+<div class="pack">
+  <div class="pl">Module 4 &mdash; IA &amp; Secret Professionnel (PRIORITAIRE)</div>
+  <h3>IA, secret professionnel et RGPD : proteger les donnees clients en cabinet d'avocats</h3>
+  <div class="meta">Duree : 7h (1 jour) &nbsp;|&nbsp; <strong>Inter : 490 EUR HT/pers</strong> &nbsp;|&nbsp; Prerequis : Module 1 recommande</div>
+  <div class="intra">Intra entreprise : Tarif dégressif à partir de 5 participants (ex: 420 EUR HT/pers. au lieu de 490 EUR HT, demander un devis)</div>
+  <div class="bdg">Badge : Praticien IA &ndash; Securite &amp; Ethique</div>
+ </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: CONDITIONS & CTA (Dark background) -->
+        <section class="bg-darker section-padding">
+            <div class="container" style="max-width: 900px;">
+                <div class="info">
+  <strong>Conditions de financement (OPCO EP / FIF PL)</strong><br>
+  Pour avocats liberaux : FIF PL. Depot recommandé 6 semaines avant le debut de la formation.<br><br>
+  Delai depot dossier : Recommandé 6 semaines avant le début de la formation (FIF PL)
+  <a class="cta" href="mailto:contact@babylone42.fr?subject=Demande%20renseignements%20formation%20IA%20Avocats&body=Bonjour%2C%0AJe%20souhaite%20des%20informations%20sur%20les%20sessions%20et%20dates%20disponibles.%0AMerci.">
+   Demander les dates disponibles &rarr; contact@babylone42.fr
+  </a>
+ </div>
+            </div>
+        </section>
+
+    </main>
+
+    
+    <!-- FOOTER -->
+    <footer class="mega-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Column 1: Brand & Socials -->
+                <div class="footer-col brand-col">
+                    <img src="../images/logo.svg" alt="Babylone42 Logo" class="footer-logo-img">
+                    <p class="footer-desc">Babylone42 donne le pouvoir aux équipes de transformer des données brutes en
+                        informations claires grâce à l'IA.</p>
+                    <div class="footer-socials">
+                        <a href="https://www.linkedin.com/company/babylone42/" target="_blank" rel="noopener noreferrer"
+                            aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/babylone42_?igsh=YzVyamk1N3VoYXU1" target="_blank"
+                            rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=61583402791597&name=xhp_nt__fb__action__open_user&locale=fr_FR"
+                            target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i
+                                class="fab fa-facebook"></i></a>
+                        <a href="https://x.com/babylone42_" target="_blank" rel="noopener noreferrer"
+                            aria-label="X Twitter"><i class="fab fa-x-twitter"></i></a>
+                        <a href="https://m.youtube.com/@Babylone42" target="_blank" rel="noopener noreferrer"
+                            aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <!-- Column 2: Accueil -->
+                <div class="footer-col">
+                    <h4 class="footer-title">Accueil</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="../about.html">About us</a></li>
+                        <li><a href="../interlocuteurs.html">Vos interlocuteurs</a></li>
+                        <li><a href="../articles.html">Actualités</a></li>
+                        <li><a href="../faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Solutions -->
+                <div class="footer-col">
+                    <h4 class="footer-title">Solutions IA</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="../solution-chatbots.html">Chatbots 24/7</a></li>
+                        <li><a href="../solution-copilots.html">Copilots IA</a></li>
+                        <li><a href="../solution-automation.html">Automatisation</a></li>
+                        <li><a href="../solution-audit.html">Audit & Conseil</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Formations -->
+                <div class="footer-col">
+                    <h4 class="footer-title">Formations</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="../formation-genai.html">IA Générative</a></li>
+                        <li><a href="../formation-video-ia-pro.html">Vidéo IA Pro</a></li>
+                        <li><a href="../formation-jupyter.html">Jupyter</a></li>
+                        <li><a href="../formation-python.html">Python</a></li>
+                        <li><a href="../formation-ml.html">Machine Learning</a></li>
+                        <li><a href="../formation-dl.html">Deep Learning</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 5: Contact & Newsletter -->
+                <div class="footer-col newsletter-col">
+                    <h4 class="footer-title">Contact & Newsletter</h4>
+                    <p class="footer-contact-info">
+                        <a href="mailto:contact@babylone42.fr"><i class="fas fa-envelope"></i>
+                            contact@babylone42.fr</a><br>
+                        <a href="tel:+330773609849"><i class="fas fa-phone-alt"></i> +33 0 7 73 60 98 49</a>
+                    </p>
+                    <form class="footer-newsletter-form">
+                        <input type="email" placeholder="Votre email" required>
+                        <button type="submit" aria-label="S'inscrire"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- LEGAL & MENTIONS IN FOOTER -->
+            <div style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.05); font-size: 0.8rem; color: var(--text-muted); line-height: 1.6; text-align: center;">
+                <strong>Babylone 42</strong> – Organisme de formation spécialisé en Intelligence Artificielle<br>
+                Région PACA · En cours de certification Qualiopi à travers notre partenaire agréé · SIRET : 913 859 292 00018 · NDA en cours d'acquisition
+            </div>
+
+            <div class="footer-bottom">
+                <p class="copyright">© 2025 Babylone42. All rights reserved.</p>
+                <div class="legal-links">
+                    <a href="../mentions-legales.html">Mentions Légales</a>
+                    <a href="../politique-confidentialite.html">Politique de Confidentialité</a>
+                    <a href="../cookies.html">Paramètres des cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- MAIN SCRIPTS -->
+    <script src="../script.js?v=4"></script>
+
+</body>
+
+</html>

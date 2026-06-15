@@ -67,15 +67,22 @@
                         <a href="index.html#formations">Formations <i class="fas fa-chevron-down"
                                 style="font-size: 0.8rem; margin-left: 0.3rem;"></i></a>
                         <ul class="dropdown-menu">
-                            <li><a href="formation-genai.html">IA Générative</a></li>
-                            <li><a href="formation-video-ia-pro.html">Vidéo IA Pro</a></li>
-                            <li><a href="formation-jupyter.html">Jupyter</a></li>
-                            <li><a href="formation-python.html">Python</a></li>
-                            <li><a href="formation-ml.html">Machine Learning</a></li>
-                            <li><a href="formation-dl.html">Deep Learning</a></li>
-                            <li><a href="calendrier-formations.html"
-                                    style="border-top: 1px solid rgba(255,255,255,0.1); margin-top: 0.5rem; padding-top: 0.8rem;">Calendrier
-                                    des formations</a></li>
+                            <li class="dropdown-header" style="font-weight: 700; font-size: 0.85rem; color: #109B80; padding: 0.6rem 1rem 0.3rem 1rem; text-transform: uppercase; letter-spacing: 0.05em;">Secteurs & Métiers</li>
+                            <li><a href="Avocats/brochure_generale_avocats.html" style="padding-left: 1.5rem;">Cabinets d'Avocats</a></li>
+                            <li><a href="Comptables/brochure_generale_comptables.html" style="padding-left: 1.5rem;">Expertise Comptable & Audit</a></li>
+                            
+                            <li style="border-top: 1px solid rgba(255,255,255,0.08); margin: 0.4rem 0;"></li>
+                            
+                            <li class="dropdown-header" style="font-weight: 700; font-size: 0.85rem; color: #109B80; padding: 0.6rem 1rem 0.3rem 1rem; text-transform: uppercase; letter-spacing: 0.05em;">Technologies & Outils</li>
+                            <li><a href="formation-genai.html" style="padding-left: 1.5rem;">IA Générative</a></li>
+                            <li><a href="formation-video-ia-pro.html" style="padding-left: 1.5rem;">Vidéo IA Pro</a></li>
+                            <li><a href="formation-jupyter.html" style="padding-left: 1.5rem;">Jupyter</a></li>
+                            <li><a href="formation-python.html" style="padding-left: 1.5rem;">Python</a></li>
+                            <li><a href="formation-ml.html" style="padding-left: 1.5rem;">Machine Learning</a></li>
+                            <li><a href="formation-dl.html" style="padding-left: 1.5rem;">Deep Learning</a></li>
+                            
+                            <li style="border-top: 1px solid rgba(255,255,255,0.08); margin: 0.4rem 0;"></li>
+                            <li><a href="calendrier-formations.html" style="font-weight: bold;">Calendrier des formations</a></li>
                         </ul>
                     </li>
                     <li><a href="articles.html">Actualités</a></li>
@@ -603,6 +610,8 @@
                 <aside class="calendar-sidebar">
                     <h3>Filtrer par module</h3>
                     <button class="filter-btn active" data-filter="all">Toutes les formations</button>
+                    <button class="filter-btn" data-filter="avocats">Cabinets d'Avocats</button>
+                    <button class="filter-btn" data-filter="comptables">Expertise Comptable</button>
                     <button class="filter-btn" data-filter="video_ia_pro">Vidéo IA Pro</button>
                     <button class="filter-btn" data-filter="prompting">IA Générative</button>
                     <button class="filter-btn" data-filter="python">Python pour la Data</button>
@@ -610,8 +619,6 @@
                     <button class="filter-btn" data-filter="deep_learning">Deep Learning</button>
                     <button class="filter-btn" data-filter="jupyter">Jupyter Notebook</button>
                 </aside>
-
-                <!-- Calendar Content -->
                 <div class="calendar-wrapper">
 
                     <!-- AVRIL 2026 -->
@@ -735,6 +742,31 @@
                             Vacances d'été</div>
                     </div>
 
+                    <!-- JUILLET 2026 -->
+                    <div class="month-block" id="juillet">
+                        <h2 class="month-title">Juillet 2026</h2>
+                        <div class="course-list">
+                            <div class="course-item" data-type="avocats">
+                                <div class="course-dates"><span class="day">Dès le</span> <span class="num">20 Juil.</span></div>
+                                <div class="course-info">
+                                    <h3>IA Générative - Cabinets d'Avocats <span class="badge">6 jours</span></h3>
+                                    <p>Distanciel • Session 1 (été) : 20, 27, 28 Juil. &amp; 3, 4, 10 Août</p>
+                                </div>
+                                <div class="course-action"><a href="inscription-metiers?formation=metier_literacy"
+                                        class="btn btn-primary" style="padding: 0.6rem 1.2rem;">S'inscrire</a></div>
+                            </div>
+                            <div class="course-item" data-type="comptables">
+                                <div class="course-dates"><span class="day">Dès le</span> <span class="num">20 Juil.</span></div>
+                                <div class="course-info">
+                                    <h3>IA Générative - Expertise Comptable &amp; Audit <span class="badge">6 jours</span></h3>
+                                    <p>Distanciel • Session 1 (été) : 20, 30, 31 Juil. &amp; 3, 4, 10 Août</p>
+                                </div>
+                                <div class="course-action"><a href="inscription-metiers?formation=metier_literacy"
+                                        class="btn btn-primary" style="padding: 0.6rem 1.2rem;">S'inscrire</a></div>
+                            </div>
+                        </div>
+                    </div>
+
                     <!-- SEPTEMBRE 2026 -->
                     <div class="month-block" id="septembre">
                         <h2 class="month-title">Septembre 2026</h2>
@@ -796,6 +828,24 @@
                                     <p>Distanciel • Session 4</p>
                                 </div>
                                 <div class="course-action"><a href="inscription?formation=deep_learning"
+                                        class="btn btn-primary" style="padding: 0.6rem 1.2rem;">S'inscrire</a></div>
+                            </div>
+                            <div class="course-item" data-type="avocats">
+                                <div class="course-dates"><span class="day">Dès le</span> <span class="num">14 Sept.</span></div>
+                                <div class="course-info">
+                                    <h3>IA Générative - Cabinets d'Avocats <span class="badge">6 jours</span></h3>
+                                    <p>Distanciel • Session 2 (automne) : 14, 28, 29 Sept. &amp; 2, 3, 16 Nov.</p>
+                                </div>
+                                <div class="course-action"><a href="inscription-metiers?formation=metier_literacy"
+                                        class="btn btn-primary" style="padding: 0.6rem 1.2rem;">S'inscrire</a></div>
+                            </div>
+                            <div class="course-item" data-type="comptables">
+                                <div class="course-dates"><span class="day">Dès le</span> <span class="num">14 Sept.</span></div>
+                                <div class="course-info">
+                                    <h3>IA Générative - Expertise Comptable &amp; Audit <span class="badge">6 jours</span></h3>
+                                    <p>Distanciel • Session 2 (automne) : 14 Sept., 12, 13 Oct. &amp; 2, 3, 16 Nov.</p>
+                                </div>
+                                <div class="course-action"><a href="inscription-metiers?formation=metier_literacy"
                                         class="btn btn-primary" style="padding: 0.6rem 1.2rem;">S'inscrire</a></div>
                             </div>
                         </div>
@@ -911,6 +961,24 @@
                                     <p>Distanciel • Session 7</p>
                                 </div>
                                 <div class="course-action"><a href="inscription?formation=python"
+                                        class="btn btn-primary" style="padding: 0.6rem 1.2rem;">S'inscrire</a></div>
+                            </div>
+                            <div class="course-item" data-type="avocats">
+                                <div class="course-dates"><span class="day">Dès le</span> <span class="num">16 Nov.</span></div>
+                                <div class="course-info">
+                                    <h3>IA Générative - Cabinets d'Avocats <span class="badge">6 jours</span></h3>
+                                    <p>Distanciel • Session 3 (hiver) : 16, 17, 30 Nov., 1 Déc. &amp; 21, 22, 23 Déc.</p>
+                                </div>
+                                <div class="course-action"><a href="inscription-metiers?formation=metier_literacy"
+                                        class="btn btn-primary" style="padding: 0.6rem 1.2rem;">S'inscrire</a></div>
+                            </div>
+                            <div class="course-item" data-type="comptables">
+                                <div class="course-dates"><span class="day">Dès le</span> <span class="num">16 Nov.</span></div>
+                                <div class="course-info">
+                                    <h3>IA Générative - Expertise Comptable &amp; Audit <span class="badge">6 jours</span></h3>
+                                    <p>Distanciel • Session 3 (hiver) : 16, 17 Nov., 3, 4 Déc. &amp; 21, 22, 23 Déc.</p>
+                                </div>
+                                <div class="course-action"><a href="inscription-metiers?formation=metier_literacy"
                                         class="btn btn-primary" style="padding: 0.6rem 1.2rem;">S'inscrire</a></div>
                             </div>
                         </div>

@@ -1,4 +1,9 @@
 [[redirects]]
+  from = "/inscription-metiers"
+  to = "/inscription-metiers.html"
+  status = 200
+
+[[redirects]]
   from = "/inscription"
   to = "/inscription.html"
   status = 200

@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Babylone 42 – Offre de Formation IA pour Cabinets d'Avocats et Professions Juridiques</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Space+Grotesk:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css?v=10">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <style>
+        /* Custom styles for brochure elements matching style.css */
+        .opco-badge {
+            background: rgba(16, 155, 128, 0.08);
+            color: var(--primary-color);
+            border: 1px solid var(--primary-color);
+            padding: 0.5rem 1.2rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+
+        .highlight-box {
+            background: rgba(16, 155, 128, 0.05);
+            border-left: 4px solid var(--primary-color);
+            padding: 1.5rem;
+            border-radius: 1rem;
+            margin-bottom: 3rem;
+            border-top: 1px solid rgba(16, 155, 128, 0.1);
+            border-right: 1px solid rgba(16, 155, 128, 0.1);
+            border-bottom: 1px solid rgba(16, 155, 128, 0.1);
+        }
+
+        .highlight-box h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+            font-family: var(--font-heading);
+            font-size: 1.3rem;
+        }
+
+        .highlight-box p, .highlight-box li {
+            color: var(--text-color);
+            text-align: justify;
+        }
+
+        .grid-packs {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .pack-card {
+            background-color: var(--dark-surface);
+            border: 1px solid rgba(16, 155, 128, 0.2);
+            border-radius: 1rem;
+            padding: 2rem;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        .pack-card:hover {
+            border-color: var(--primary-color);
+            transform: translateY(-5px);
+            box-shadow: 0 12px 24px rgba(16, 155, 128, 0.15);
+        }
+
+        .pack-num {
+            font-size: 0.85rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 0.5rem;
+        }
+
+        .pack-title {
+            font-family: var(--font-heading);
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+
+        .pack-desc {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+            text-align: justify;
+            line-height: 1.6;
+        }
+
+        .pack-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: auto;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .pack-duration {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .pack-link {
+            color: var(--primary-color) !important;
+            font-weight: 600;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .pack-link:hover {
+            color: var(--secondary-color) !important;
+        }
+
+        /* Funding Section */
+        .funding-section {
+            background: rgba(16, 155, 128, 0.03);
+            border: 1px solid rgba(16, 155, 128, 0.15);
+            border-radius: 1.5rem;
+            padding: 2.5rem;
+            margin: 2rem 0;
+        }
+
+        .funding-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .funding-card {
+            background: var(--dark-surface);
+            border: 1px solid rgba(16, 155, 128, 0.1);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .funding-value {
+            display: block;
+            font-family: var(--font-heading);
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .funding-label {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            line-height: 1.5;
+            display: block;
+            text-align: justify;
+        }
+
+        .qualiopi-banner {
+            background: linear-gradient(135deg, rgba(16, 155, 128, 0.1) 0%, rgba(56, 189, 248, 0.05) 100%);
+            border: 1px solid rgba(16, 155, 128, 0.2);
+            border-radius: 1rem;
+            padding: 2rem;
+            margin-top: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .qualiopi-title {
+            font-family: var(--font-heading);
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 0.5rem;
+        }
+
+        .qualiopi-desc {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            text-align: justify;
+        }
+
+        .card {
+            background: var(--dark-surface);
+            border: 1px solid rgba(16, 155, 128, 0.2);
+            border-radius: 1rem;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+
+        .card h3 {
+            font-family: var(--font-heading);
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .card p {
+            color: var(--text-color);
+            line-height: 1.6;
+            text-align: justify;
+        }
+
+        /* Alternating style variants for light sections */
+        .bg-light .pack-card {
+            background-color: #ffffff;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+        }
+        .bg-light .pack-card:hover {
+            border-color: var(--primary-color);
+            box-shadow: 0 12px 24px rgba(16, 155, 128, 0.1);
+        }
+        .bg-light .pack-title {
+            color: #0f172a;
+        }
+        .bg-light .pack-desc {
+            color: #475569;
+        }
+        .bg-light .pack-duration {
+            color: #64748b;
+        }
+
+        .bg-light .qualiopi-banner {
+            background: rgba(16, 155, 128, 0.05);
+            border: 1px solid rgba(16, 155, 128, 0.15);
+        }
+        .bg-light .qualiopi-title {
+            color: #0f172a;
+        }
+        .bg-light .qualiopi-desc {
+            color: #475569;
+        }
+
+        .bg-light .card {
+            background-color: #ffffff;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+        }
+        .bg-light .card h3 {
+            color: var(--primary-color);
+        }
+        .bg-light .card p {
+            color: #334155;
+        }
+
+        @media (max-width: 768px) {
+            .grid-packs {
+                grid-template-columns: 1fr;
+            }
+            .funding-grid {
+                grid-template-columns: 1fr;
+            }
+            .qualiopi-banner {
+                flex-direction: column;
+                text-align: center;
+            }
+            .qualiopi-desc {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+        <div class="container">
+            <!-- TOP ROW: Socials & Contact -->
+            <div class="navbar-top">
+                <div class="navbar-top-content">
+                    <a href="https://wa.me/33773609849" target="_blank" rel="noopener noreferrer" class="navbar-phone">
+                        <i class="fab fa-whatsapp"></i> +33 0 7 73 60 98 49
+                    </a>
+                    <div class="nav-socials">
+                        <a href="https://www.linkedin.com/company/babylone42/" target="_blank" rel="noopener noreferrer"
+                            aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/babylone42_?igsh=YzVyamk1N3VoYXU1" target="_blank"
+                            rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=61583402791597&name=xhp_nt__fb__action__open_user&locale=fr_FR"
+                            target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i
+                                class="fab fa-facebook"></i></a>
+                        <a href="https://x.com/babylone42_" target="_blank" rel="noopener noreferrer"
+                            aria-label="X Twitter"><i class="fab fa-x-twitter"></i></a>
+                        <a href="https://m.youtube.com/@Babylone42" target="_blank" rel="noopener noreferrer"
+                            aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BOTTOM ROW: Logo, Links & Mobile Menu -->
+            <div class="navbar-bottom">
+                <a href="../index.html" class="logo">
+                    <img src="../images/logo.svg" alt="Babylone42 Logo" style="height: 30px;">
+                </a>
+
+                <ul class="nav-links">
+                    <li class="dropdown">
+                        <a href="../index.html">Accueil <i class="fas fa-chevron-down"
+                                style="font-size: 0.8rem; margin-left: 0.3rem;"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../about.html">About us</a></li>
+                            <li><a href="../interlocuteurs.html">Vos interlocuteurs</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="../index.html#solutions">Solutions IA <i class="fas fa-chevron-down"
+                                style="font-size: 0.8rem; margin-left: 0.3rem;"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../solution-chatbots.html">Chatbots 24/7</a></li>
+                            <li><a href="../solution-copilots.html">Copilots IA</a></li>
+                            <li><a href="../solution-automation.html">Automatisation</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="../index.html#formations">Formations <i class="fas fa-chevron-down"
+                                style="font-size: 0.8rem; margin-left: 0.3rem;"></i></a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-header" style="font-weight: 700; font-size: 0.85rem; color: #109B80; padding: 0.6rem 1rem 0.3rem 1rem; text-transform: uppercase; letter-spacing: 0.05em;">Secteurs & Métiers</li>
+                            <li><a href="../Avocats/brochure_generale_avocats.html" style="padding-left: 1.5rem;">Cabinets d'Avocats</a></li>
+                            <li><a href="../Comptables/brochure_generale_comptables.html" style="padding-left: 1.5rem;">Expertise Comptable & Audit</a></li>
+                            
+                            <li style="border-top: 1px solid rgba(255,255,255,0.08); margin: 0.4rem 0;"></li>
+                            
+                            <li class="dropdown-header" style="font-weight: 700; font-size: 0.85rem; color: #109B80; padding: 0.6rem 1rem 0.3rem 1rem; text-transform: uppercase; letter-spacing: 0.05em;">Technologies & Outils</li>
+                            <li><a href="../formation-genai.html" style="padding-left: 1.5rem;">IA Générative</a></li>
+                            <li><a href="../formation-video-ia-pro.html" style="padding-left: 1.5rem;">Vidéo IA Pro</a></li>
+                            <li><a href="../formation-jupyter.html" style="padding-left: 1.5rem;">Jupyter</a></li>
+                            <li><a href="../formation-python.html" style="padding-left: 1.5rem;">Python</a></li>
+                            <li><a href="../formation-ml.html" style="padding-left: 1.5rem;">Machine Learning</a></li>
+                            <li><a href="../formation-dl.html" style="padding-left: 1.5rem;">Deep Learning</a></li>
+                            
+                            <li style="border-top: 1px solid rgba(255,255,255,0.08); margin: 0.4rem 0;"></li>
+                            <li><a href="../calendrier-formations.html" style="font-weight: bold;">Calendrier des formations</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../articles.html">Actualités</a></li>
+                    <li><a href="../contact-page.html" class="btn btn-primary nav-btn">Diagnostic IA Gratuit</a></li>
+                </ul>
+
+                <div class="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="page-content" style="padding-top: 80px;">
+
+        <!-- SECTION 1: HERO / INTRODUCTION (Dark background) -->
+        <section class="bg-darker section-padding" style="position: relative; overflow: hidden;">
+            <div class="container" style="position: relative; z-index: 2; max-width: 1000px;">
+                <div style="margin-bottom: 2rem;">
+                    <span class="opco-badge">OPCO EP & FIF PL</span>
+                </div>
+                
+                <h1 style="font-family: var(--font-heading); font-size: clamp(1.8rem, 5vw, 2.8rem); font-weight: 800; color: #ffffff; line-height: 1.2; margin-bottom: 1rem; hyphens: auto; word-break: break-word;">
+                    Intelligence Artificielle & <span style="color: var(--primary-color);">Professions Juridiques</span>
+                </h1>
+                
+                <p class="subtitle" style="font-size: 1.1rem; color: var(--text-muted); margin-bottom: 2.5rem; max-width: 800px; text-align: justify; line-height: 1.6;">
+                    Découvrez notre offre de formations certifiantes spécialement adaptées pour les Cabinets d'Avocats. Des parcours sur-mesure pour accroître votre <strong>productivité juridique</strong> tout en sécurisant la <strong>déontologie</strong> et le <strong>secret professionnel</strong>.
+                </p>
+
+                <div class="highlight-box">
+                    <h3> Une stratégie de financement optimale (PACA)</h3>
+                    <p style="margin-bottom: 1rem;">Pour les cabinets d'avocats de la <strong>Région PACA</strong> comptant de <strong>5 à 99 salariés</strong>, nous optimisons les dossiers de prise en charge pour activer les meilleures sources de financement :</p>
+                    <ul style="margin-top: 0.5rem; margin-left: 1.5rem; color: var(--text-color);">
+                        <li style="margin-bottom: 0.5rem;"><strong>OPCO EP</strong> (Cabinets d'Avocats - IDCC 1000) : Financement jusqu'à 100% des coûts pédagogiques pour le personnel salarié (secrétaires, juristes, fonctions support).</li>
+                        <li><strong>FIF PL</strong> : Prise en charge spécifique annuelle pour les Avocats Associés et Collaborateurs Libéraux.</li>
+                    </ul>
+                </div>
+                <div style="margin-top: 2rem;">
+                    <a href="../contact-page.html?formation=avocats" class="btn btn-secondary"><i class="fas fa-envelope" style="margin-right: 0.4rem;"></i>Prendre contact</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: CATALOGUE DE FORMATIONS (White Background) -->
+        <section class="section-padding bg-light">
+            <div class="container" style="max-width: 1000px;">
+                <h2 style="font-family: var(--font-heading); font-size: 1.8rem; color: #0f172a; margin-bottom: 2rem; display: flex; align-items: center; gap: 0.8rem;">
+                    <span style="display: inline-block; width: 4px; height: 1.8rem; background: var(--primary-color); border-radius: 2px;"></span>
+                    Notre catalogue de formations (4 Modules Complémentaires)
+                </h2>
+
+                <div class="grid-packs">
+                    <!-- Module 1 -->
+                    <div class="pack-card">
+                        <div class="pack-num">Module 1 — IA Literacy</div>
+                        <div class="pack-title">IA Literacy et EU AI Act pour les avocats et professions juridiques</div>
+                        <p class="pack-desc">Acquérir la culture fondamentale de l'IA et comprendre les impacts du règlement européen sur l'IA (EU AI Act) sur la pratique du droit.</p>
+                        <div class="pack-meta">
+                            <span class="pack-duration"><i class="far fa-clock" style="margin-right: 0.3rem;"></i> 7 heures (1 jour)</span>
+                            <a href="pack0_ia_literacy_avocats.html" class="pack-link">Voir la fiche →</a>
+                        </div>
+                    </div>
+
+                    <!-- Module 2 -->
+                    <div class="pack-card">
+                        <div class="pack-num">Module 2 — IA Générative</div>
+                        <div class="pack-title">IA générative pour les cabinets d'avocats : productivité et conformité</div>
+                        <p class="pack-desc">Automatiser et accélérer les tâches administratives quotidiennes du cabinet (rédaction de courriers, synthèses de dossiers, comptes rendus).</p>
+                        <div class="pack-meta">
+                            <span class="pack-duration"><i class="far fa-clock" style="margin-right: 0.3rem;"></i> 14 heures (2 jours)</span>
+                            <a href="pack1_ia_generative_avocats.html" class="pack-link">Voir la fiche →</a>
+                        </div>
+                    </div>
+
+                    <!-- Module 3 -->
+                    <div class="pack-card">
+                        <div class="pack-num">Module 3 — Prompt Engineering</div>
+                        <div class="pack-title">Prompt engineering pour la rédaction d'actes, notes et consultations juridiques</div>
+                        <p class="pack-desc">Méthodes avancées de prompting appliquées à la structuration d'actes, l'analyse de pièces de procédure et la rédaction de projets de conclusions.</p>
+                        <div class="pack-meta">
+                            <span class="pack-duration"><i class="far fa-clock" style="margin-right: 0.3rem;"></i> 14 heures (2 jours)</span>
+                            <a href="pack2_prompt_engineering_avocats.html" class="pack-link">Voir la fiche →</a>
+                        </div>
+                    </div>
+
+                    <!-- Module 4 -->
+                    <div class="pack-card">
+                        <div class="pack-num">Module 4 — Sécurité & Déontologie</div>
+                        <div class="pack-title">IA, secret professionnel et RGPD pour avocats et professions juridiques</div>
+                        <p class="pack-desc">Sécuriser l'usage de l'IA générative en cabinet : protection absolue du secret professionnel, non-divulgation des pièces et conformité RGPD.</p>
+                        <div class="pack-meta">
+                            <span class="pack-duration"><i class="far fa-clock" style="margin-right: 0.3rem;"></i> 7 heures (1 jour)</span>
+                            <a href="pack3_ia_secret_pro_avocats.html" class="pack-link">Voir la fiche →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: DISPOSITIFS DE FINANCEMENT (Dark Background) -->
+        <section class="bg-darker section-padding">
+            <div class="container" style="max-width: 1000px;">
+                <h2 style="font-family: var(--font-heading); font-size: 1.8rem; color: #ffffff; margin-bottom: 2rem; display: flex; align-items: center; gap: 0.8rem;">
+                    <span style="display: inline-block; width: 4px; height: 1.8rem; background: var(--primary-color); border-radius: 2px;"></span>
+                    Dispositifs de Financement (PACA)
+                </h2>
+
+                <div class="funding-section">
+                    <p style="text-align: justify; line-height: 1.6; color: var(--text-color); margin-bottom: 1.5rem;">
+                        Notre statut d'organisme de formation en cours de portage et conforme Qualiopi garantit l'accès aux financements de l'OPCO EP et du FIF PL pour les cabinets de la région PACA :
+                    </p>
+                    <div class="funding-grid">
+                        <div class="funding-card">
+                            <span class="funding-value">OPCO EP</span>
+                            <span class="funding-label">Prise en charge du Plan de Développement des Compétences pour vos salariés</span>
+                        </div>
+                        <div class="funding-card">
+                            <span class="funding-value">FIF PL</span>
+                            <span class="funding-label">Forfait de prise en charge annuel disponible pour les avocats libéraux</span>
+                        </div>
+                        <div class="funding-card">
+                            <span class="funding-value">Région PACA</span>
+                            <span class="funding-label">Accompagnement et réactivité accrus sur les dossiers de transition numérique</span>
+                        </div>
+                    </div>
+                    <div style="text-align: center; margin-top: 2rem;">
+                        <a href="mailto:contact@babylone42.fr?subject=Demande d%27information Formations OPCO EP / FIF PL" class="btn btn-primary" style="text-decoration: none; display: inline-block;">
+                            Demander une étude de financement personnalisée
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: QUALIOPI & CAS CLIENT & RECAP (White Background) -->
+        <section class="section-padding bg-light">
+            <div class="container" style="max-width: 1000px;">
+                <div class="qualiopi-banner">
+                    <div class="qualiopi-text">
+                        <div class="qualiopi-title">Conformité Qualiopi & Exigences Evaluateurs</div>
+                        <div class="qualiopi-desc">Nos fiches de formation sont structurées selon les critères du Référentiel National Qualité (RNQ). Chaque parcours définit des objectifs SMART, des évaluations rigoureuses et des prérequis clairs pour garantir une validation immédiate par votre conseiller OPCO.</div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3> Cas Client Chiffré</h3>
+                    <p style="font-style: italic; margin-bottom: 0;">"Un cabinet de 8 avocats à Marseille a réduit de 35% le temps de rédaction de ses conclusions après le Module 3."</p>
+                </div>
+
+                <div class="cta-buttons-wrap" style="margin-top: 3rem;">
+                    <a href="fiche_recapitulative_avocats.pdf" class="btn btn-secondary" style="text-decoration: none; font-weight: bold;">
+                        <i class="fas fa-file-pdf" style="margin-right: 0.5rem;"></i> Télécharger la fiche récapitulative (PDF)
+                    </a>
+                    <a href="../contact-page.html?formation=avocats" class="btn btn-primary" style="text-decoration: none; font-weight: bold;">
+                        <i class="fas fa-envelope" style="margin-right: 0.5rem;"></i> Prendre contact
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="mega-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Column 1: Brand & Socials -->
+                <div class="footer-col brand-col">
+                    <img src="../images/logo.svg" alt="Babylone42 Logo" class="footer-logo-img">
+                    <p class="footer-desc">Babylone42 donne le pouvoir aux équipes de transformer des données brutes en
+                        informations claires grâce à l'IA.</p>
+                    <div class="footer-socials">
+                        <a href="https://www.linkedin.com/company/babylone42/" target="_blank" rel="noopener noreferrer"
+                            aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/babylone42_?igsh=YzVyamk1N3VoYXU1" target="_blank"
+                            rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=61583402791597&name=xhp_nt__fb__action__open_user&locale=fr_FR"
+                            target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i
+                                class="fab fa-facebook"></i></a>
+                        <a href="https://x.com/babylone42_" target="_blank" rel="noopener noreferrer"
+                            aria-label="X Twitter"><i class="fab fa-x-twitter"></i></a>
+                        <a href="https://m.youtube.com/@Babylone42" target="_blank" rel="noopener noreferrer"
+                            aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <!-- Column 2: Accueil -->
+                <div class="footer-col">
+                    <h4 class="footer-title">Accueil</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="../about.html">About us</a></li>
+                        <li><a href="../interlocuteurs.html">Vos interlocuteurs</a></li>
+                        <li><a href="../articles.html">Actualités</a></li>
+                        <li><a href="../faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Solutions -->
+                <div class="footer-col">
+                    <h4 class="footer-title">Solutions IA</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="../solution-chatbots.html">Chatbots 24/7</a></li>
+                        <li><a href="../solution-copilots.html">Copilots IA</a></li>
+                        <li><a href="../solution-automation.html">Automatisation</a></li>
+                        <li><a href="../solution-audit.html">Audit & Conseil</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Formations -->
+                <div class="footer-col">
+                    <h4 class="footer-title">Formations</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="../formation-genai.html">IA Générative</a></li>
+                        <li><a href="../formation-video-ia-pro.html">Vidéo IA Pro</a></li>
+                        <li><a href="../formation-jupyter.html">Jupyter</a></li>
+                        <li><a href="../formation-python.html">Python</a></li>
+                        <li><a href="../formation-ml.html">Machine Learning</a></li>
+                        <li><a href="../formation-dl.html">Deep Learning</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 5: Contact & Newsletter -->
+                <div class="footer-col newsletter-col">
+                    <h4 class="footer-title">Contact & Newsletter</h4>
+                    <p class="footer-contact-info">
+                        <a href="mailto:contact@babylone42.fr"><i class="fas fa-envelope"></i>
+                            contact@babylone42.fr</a><br>
+                        <a href="tel:+330773609849"><i class="fas fa-phone-alt"></i> +33 0 7 73 60 98 49</a>
+                    </p>
+                    <form class="footer-newsletter-form">
+                        <input type="email" placeholder="Votre email" required>
+                        <button type="submit" aria-label="S'inscrire"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- LEGAL & MENTIONS IN FOOTER -->
+            <div style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.05); font-size: 0.8rem; color: var(--text-muted); line-height: 1.6; text-align: center;">
+                <strong>Babylone 42</strong> – Organisme de formation spécialisé en Intelligence Artificielle<br>
+                Région PACA · En cours de certification Qualiopi à travers notre partenaire agréé · SIRET : 913 859 292 00018 · NDA en cours d'acquisition
+            </div>
+
+            <div class="footer-bottom">
+                <p class="copyright">© 2025 Babylone42. All rights reserved.</p>
+                <div class="legal-links">
+                    <a href="../mentions-legales.html">Mentions Légales</a>
+                    <a href="../politique-confidentialite.html">Politique de Confidentialité</a>
+                    <a href="../cookies.html">Paramètres des cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MAIN SCRIPTS -->
+    <script src="../script.js?v=4"></script>
+
+</body>
+
+</html>
