@@ -1694,7 +1694,6 @@ p {
     background: #0d826a;
 }
 
-/* Bottom Bar */
 .footer-bottom {
     display: flex;
     justify-content: space-between;
@@ -1702,6 +1701,12 @@ p {
     padding-top: 2rem;
     border-top: 1px solid rgba(255, 255, 255, 0.05);
     font-size: 0.85rem;
+    color: #64748b;
+}
+
+.footer-bottom p {
+    font-size: 0.85rem;
+    margin: 0;
     color: #64748b;
 }
 
@@ -2509,6 +2514,37 @@ p {
 
 .hidden {
     display: none !important;
+}
+
+/* Qualiopi Banner Grid */
+.qualiopi-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.qualiopi-grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+    .qualiopi-grid, .qualiopi-grid-3 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .qualiopi-grid, .qualiopi-grid-3 {
+        grid-template-columns: 1fr;
+    }
 }
 
 
