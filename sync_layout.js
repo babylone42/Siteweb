@@ -1,4 +1,4 @@
-﻿const fs = require('fs');
+const fs = require('fs');
 const path = require('path');
 
 const indexHtml = fs.readFileSync('index.html', 'utf8');
@@ -16,32 +16,68 @@ if (!headerPart || !footerPart) {
     process.exit(1);
 }
 
-const files = fs.readdirSync(__dirname);
+function getHtmlFiles(dir) {
+    let results = [];
+    const list = fs.readdirSync(dir);
+    list.forEach(file => {
+        const filePath = path.join(dir, file);
+        const stat = fs.statSync(filePath);
+        if (stat && stat.isDirectory()) {
+            if (file !== 'node_modules' && file !== '.git' && file !== 'scratch' && file !== 'pre-launch-site') {
+                results = results.concat(getHtmlFiles(filePath));
+            }
+        } else if (file.endsWith('.html') && filePath !== path.join(__dirname, 'index.html')) {
+            results.push(filePath);
+        }
+    });
+    return results;
+}
+
+const htmlFiles = getHtmlFiles(__dirname);
 let updatedCount = 0;
 
-files.forEach(file => {
-    if (file.endsWith('.html') && file !== 'index.html') {
-        let content = fs.readFileSync(file, 'utf8');
-        let modified = false;
+htmlFiles.forEach(filePath => {
+    const relativePath = path.relative(__dirname, filePath);
+    const depth = relativePath.split(path.sep).length - 1;
+    const prefix = '../'.repeat(depth);
 
-        // Replace nav
-        if (content.match(/<nav class="navbar">[\s\S]*?<\/nav>/)) {
-            content = content.replace(/<nav class="navbar">[\s\S]*?<\/nav>/, headerPart);
-            modified = true;
-        }
+    let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
 
-        // Replace footer - either old <footer> or new <footer class="mega-footer">
-        // Using \b to ensure we match <footer class="..."> or <footer>
-        if (content.match(/<footer\b[^>]*>[\s\S]*?<\/footer>/)) {
-            content = content.replace(/<footer\b[^>]*>[\s\S]*?<\/footer>/, footerPart);
-            modified = true;
-        }
+    // Adjust header and footer links prefix for subdirectories
+    let adjustedHeader = headerPart;
+    let adjustedFooter = footerPart;
 
-        if (modified) {
-            fs.writeFileSync(file, content, 'utf8');
-            console.log(`Updated ${file}`);
-            updatedCount++;
-        }
+    if (depth > 0) {
+        // Find href="xxx" and prefix them if they don't start with http, mailto, tel, # or already contain ../
+        const adjustLinks = (html) => {
+            return html.replace(/href="([^"#:][^"]*)"/g, (match, p1) => {
+                if (p1.startsWith('http') || p1.startsWith('mailto') || p1.startsWith('tel') || p1.startsWith('#') || p1.startsWith('../')) {
+                    return match;
+                }
+                return `href="${prefix}${p1}"`;
+            });
+        };
+        adjustedHeader = adjustLinks(headerPart);
+        adjustedFooter = adjustLinks(footerPart);
+    }
+
+    // Replace nav
+    if (content.match(/<nav class="navbar">[\s\S]*?<\/nav>/)) {
+        content = content.replace(/<nav class="navbar">[\s\S]*?<\/nav>/, adjustedHeader);
+        modified = true;
+    }
+
+    // Replace footer
+    if (content.match(/<footer\b[^>]*>[\s\S]*?<\/footer>/)) {
+        content = content.replace(/<footer\b[^>]*>[\s\S]*?<\/footer>/, adjustedFooter);
+        modified = true;
+    }
+
+    if (modified) {
+        fs.writeFileSync(filePath, content, 'utf8');
+        console.log(`Updated ${relativePath}`);
+        updatedCount++;
     }
 });
 
