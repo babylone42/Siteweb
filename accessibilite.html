@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessibilité &amp; Engagement PSH — Babylone42</title>
+    <meta name="description"
+        content="Charte d'accessibilité et d'engagement envers les personnes en situation de handicap (PSH) de Babylone42. Référent handicap, aménagements possibles, réseau de partenaires et conformité RGAA.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.babylone42.fr/accessibilite.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&amp;family=Space+Grotesk:wght@300;400;600;700&amp;display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=11">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        .access-hero {
+            background: linear-gradient(135deg, #0a1628 0%, #0d2a1f 60%, #0a1628 100%);
+            padding: 5rem 0 3rem;
+            position: relative;
+            overflow: hidden;
+            border-bottom: 1px solid rgba(16, 155, 128, 0.2);
+        }
+        .access-hero::before {
+            content: '';
+            position: absolute;
+            top: -30%;
+            right: -5%;
+            width: 450px;
+            height: 450px;
+            background: radial-gradient(circle, rgba(16, 155, 128, 0.10) 0%, transparent 70%);
+            z-index: 1;
+        }
+        .access-hero .container { position: relative; z-index: 2; }
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(16, 155, 128, 0.15);
+            border: 1px solid rgba(16, 155, 128, 0.4);
+            color: var(--primary-color);
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            padding: 0.4rem 1rem;
+            border-radius: 30px;
+            margin-bottom: 1.5rem;
+        }
+        .content-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 14px;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            color: #e2e8f0;
+            line-height: 1.8;
+            transition: border-color 0.3s;
+        }
+        .content-card:hover { border-color: rgba(16, 155, 128, 0.3); }
+        .content-card h2 {
+            color: var(--primary-color);
+            font-size: 1.4rem;
+            margin-bottom: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding-bottom: 0.8rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+        }
+        .content-card h2 i { font-size: 1.2rem; width: 28px; text-align: center; }
+        .content-card h3 {
+            color: #94a3b8;
+            margin: 1.5rem 0 0.6rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-size: 0.85rem;
+        }
+        .content-card p { color: #cbd5e1; margin-bottom: 0.8rem; font-size: 1.05rem; }
+        .content-card ul { list-style: none; padding: 0; margin: 0.5rem 0 1rem; }
+        .content-card ul li {
+            padding: 0.4rem 0 0.4rem 1.5rem;
+            position: relative;
+            color: #cbd5e1;
+            font-size: 1.05rem;
+        }
+        .content-card ul li::before { content: '\2192'; position: absolute; left: 0; color: var(--primary-color); }
+        .contact-block {
+            background: rgba(16, 155, 128, 0.08);
+            border: 1px solid rgba(16, 155, 128, 0.25);
+            border-radius: 10px;
+            padding: 1.5rem 2rem;
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            align-items: center;
+            margin-top: 1.2rem;
+        }
+        .contact-person { display: flex; align-items: center; gap: 1rem; }
+        .contact-avatar {
+            width: 56px; height: 56px; border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary-color), #0a7a64);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.4rem; color: #fff; flex-shrink: 0;
+        }
+        .contact-detail strong { display: block; color: #f8fafc; font-size: 1.05rem; }
+        .contact-detail span { color: #94a3b8; font-size: 0.9rem; }
+        .contact-links { display: flex; flex-direction: column; gap: 0.4rem; }
+        .contact-links a {
+            color: var(--primary-color); text-decoration: none;
+            font-size: 1rem; display: flex; align-items: center;
+            gap: 0.5rem; transition: opacity 0.2s;
+        }
+        .contact-links a:hover { opacity: 0.8; text-decoration: underline; }
+        .amenagement-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.2rem; margin-top: 1.2rem;
+        }
+        .amenagement-item {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.07);
+            border-radius: 10px; padding: 1.2rem 1.5rem;
+            display: flex; gap: 1rem; align-items: flex-start;
+            transition: border-color 0.2s, background 0.2s;
+        }
+        .amenagement-item:hover { border-color: rgba(16, 155, 128, 0.3); background: rgba(16, 155, 128, 0.05); }
+        .amenagement-item i { color: var(--primary-color); font-size: 1.3rem; margin-top: 0.15rem; flex-shrink: 0; width: 24px; text-align: center; }
+        .amenagement-item strong { display: block; color: #f1f5f9; font-size: 1rem; margin-bottom: 0.25rem; }
+        .amenagement-item p { color: #94a3b8; font-size: 0.9rem; margin: 0; }
+        .partner-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+            gap: 1rem; margin-top: 1.2rem;
+        }
+        .partner-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 10px; padding: 1.2rem; text-align: center;
+            transition: border-color 0.2s;
+        }
+        .partner-card:hover { border-color: rgba(16, 155, 128, 0.3); }
+        .partner-card i { font-size: 1.8rem; color: var(--primary-color); margin-bottom: 0.6rem; }
+        .partner-card strong { display: block; color: #f1f5f9; font-size: 0.95rem; margin-bottom: 0.3rem; }
+        .partner-card p { color: #64748b; font-size: 0.85rem; margin: 0; }
+        .rgaa-table { width: 100%; border-collapse: collapse; margin-top: 1rem; font-size: 0.95rem; }
+        .rgaa-table th {
+            background: rgba(16, 155, 128, 0.12); color: var(--primary-color);
+            text-align: left; padding: 0.75rem 1rem; font-weight: 600;
+            letter-spacing: 0.04em; border-bottom: 1px solid rgba(16, 155, 128, 0.2);
+        }
+        .rgaa-table td {
+            padding: 0.7rem 1rem; color: #cbd5e1;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05); vertical-align: top;
+        }
+        .rgaa-table tr:last-child td { border-bottom: none; }
+        .badge-conform { display: inline-block; padding: 0.2rem 0.65rem; border-radius: 20px; font-size: 0.8rem; font-weight: 600; }
+        .badge-ok { background: rgba(16, 155, 128, 0.2); color: #34d399; }
+        .badge-partial { background: rgba(234, 179, 8, 0.15); color: #fbbf24; }
+        .commitment-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1rem; margin-top: 1rem;
+        }
+        .commitment-item { display: flex; gap: 0.8rem; align-items: flex-start; }
+        .commitment-item i { color: var(--primary-color); font-size: 1.1rem; margin-top: 0.15rem; flex-shrink: 0; }
+        .commitment-item span { color: #cbd5e1; font-size: 0.95rem; line-height: 1.5; }
+        .alert-info {
+            background: rgba(16, 155, 128, 0.08);
+            border-left: 4px solid var(--primary-color);
+            border-radius: 0 8px 8px 0;
+            padding: 1rem 1.5rem; margin: 1rem 0;
+            color: #94a3b8; font-size: 0.95rem;
+        }
+        .alert-info strong { color: var(--primary-color); }
+        .toc {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.07);
+            border-radius: 10px; padding: 1.5rem 2rem; margin-bottom: 2.5rem;
+        }
+        .toc h3 { color: #94a3b8; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 1rem; }
+        .toc ol { padding-left: 1.2rem; margin: 0; }
+        .toc ol li { margin-bottom: 0.4rem; }
+        .toc ol li a { color: var(--primary-color); text-decoration: none; font-size: 0.95rem; transition: opacity 0.2s; }
+        .toc ol li a:hover { opacity: 0.75; text-decoration: underline; }
+        .step-circle {
+            min-width: 36px; height: 36px; border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary-color), #0a7a64);
+            display: flex; align-items: center; justify-content: center;
+            color: #fff; font-weight: 700; font-size: 0.95rem; flex-shrink: 0;
+        }
+        @media (max-width: 768px) {
+            .contact-block { flex-direction: column; }
+            .rgaa-table th, .rgaa-table td { padding: 0.5rem 0.7rem; font-size: 0.85rem; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-top">
+                <div class="navbar-top-content">
+                    <a href="https://wa.me/33773609849" target="_blank" rel="noopener noreferrer" class="navbar-phone">
+                        <i class="fab fa-whatsapp"></i> +33 0 7 73 60 98 49
+                    </a>
+                    <div class="nav-socials">
+                        <a href="https://www.linkedin.com/company/babylone42/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/babylone42_?igsh=YzVyamk1N3VoYXU1" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=61583402791597&amp;name=xhp_nt__fb__action__open_user&amp;locale=fr_FR" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="https://x.com/babylone42_" target="_blank" rel="noopener noreferrer" aria-label="X Twitter"><i class="fab fa-x-twitter"></i></a>
+                        <a href="https://m.youtube.com/@Babylone42" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="navbar-bottom">
+                <a href="index.html" class="logo">
+                    <img src="images/logo.svg" alt="Babylone42 Logo" style="height: 30px;">
+                </a>
+                <ul class="nav-links">
+                    <li class="dropdown">
+                        <a href="index.html">Accueil <i class="fas fa-chevron-down" style="font-size: 0.8rem; margin-left: 0.3rem;"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="about.html">About us</a></li>
+                            <li><a href="interlocuteurs.html">Vos interlocuteurs</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="index.html#solutions">Solutions IA <i class="fas fa-chevron-down" style="font-size: 0.8rem; margin-left: 0.3rem;"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="solution-chatbots.html">Chatbots 24/7</a></li>
+                            <li><a href="solution-copilots.html">Copilots IA</a></li>
+                            <li><a href="solution-automation.html">Automatisation</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="index.html#formations">Formations <i class="fas fa-chevron-down" style="font-size: 0.8rem; margin-left: 0.3rem;"></i></a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-header" style="font-weight: 700; font-size: 0.85rem; color: #109B80; padding: 0.6rem 1rem 0.3rem 1rem; text-transform: uppercase; letter-spacing: 0.05em;">Secteurs &amp; Métiers</li>
+                            <li><a href="Avocats/brochure_generale_avocats.html" style="padding-left: 1.5rem;">Cabinets d'Avocats</a></li>
+                            <li><a href="Comptables/brochure_generale_comptables.html" style="padding-left: 1.5rem;">Expertise Comptable &amp; Audit</a></li>
+                            <li style="border-top: 1px solid rgba(255,255,255,0.08); margin: 0.4rem 0;"></li>
+                            <li class="dropdown-header" style="font-weight: 700; font-size: 0.85rem; color: #109B80; padding: 0.6rem 1rem 0.3rem 1rem; text-transform: uppercase; letter-spacing: 0.05em;">Technologies &amp; Outils</li>
+                            <li><a href="formation-genai.html" style="padding-left: 1.5rem;">IA Générative</a></li>
+                            <li><a href="formation-video-ia-pro.html" style="padding-left: 1.5rem;">Vidéo IA Pro</a></li>
+                            <li><a href="formation-jupyter.html" style="padding-left: 1.5rem;">Jupyter</a></li>
+                            <li><a href="formation-python.html" style="padding-left: 1.5rem;">Python</a></li>
+                            <li><a href="formation-ml.html" style="padding-left: 1.5rem;">Machine Learning</a></li>
+                            <li><a href="formation-dl.html" style="padding-left: 1.5rem;">Deep Learning</a></li>
+                            <li style="border-top: 1px solid rgba(255,255,255,0.08); margin: 0.4rem 0;"></li>
+                            <li><a href="calendrier-formations.html" style="font-weight: bold;">Calendrier des formations</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="articles.html">Actualités</a></li>
+                    <li><a href="contact-page.html" class="btn btn-primary nav-btn">Diagnostic IA Gratuit</a></li>
+                </ul>
+                <div class="hamburger"><i class="fas fa-bars"></i></div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="page-content" style="padding-top: 80px;">
+
+        <!-- HERO -->
+        <section class="access-hero">
+            <div class="container">
+                <div class="hero-badge">
+                    <i class="fas fa-universal-access"></i>
+                    Accessibilité &amp; Engagement PSH
+                </div>
+                <h1 style="font-size: 2.4rem; line-height: 1.2; margin-bottom: 1rem; color: #f8fafc;">
+                    Nos formations sont ouvertes<br>
+                    <span class="highlight">à toutes et à tous.</span>
+                </h1>
+                <p style="font-size: 1.1rem; color: #94a3b8; max-width: 680px; line-height: 1.7; margin-bottom: 2rem;">
+                    Babylone42 s'engage à rendre ses formations accessibles aux personnes en situation de handicap (PSH)
+                    et à faire évoluer ses pratiques en continu. Cette page présente notre charte d'engagement, les
+                    aménagements disponibles, notre réseau de partenaires et notre déclaration de conformité numérique.
+                </p>
+                <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                    <a href="mailto:contact@babylone42.fr" class="btn btn-primary">
+                        <i class="fas fa-envelope" style="margin-right: 0.5rem;"></i> Contacter le référent handicap
+                    </a>
+                    <a href="tel:+33773609849" class="btn btn-secondary">
+                        <i class="fas fa-phone-alt" style="margin-right: 0.5rem;"></i> +33 7 73 60 98 49
+                    </a>
+                </div>
+                <p style="margin-top: 1.2rem; font-size: 0.85rem; color: #64748b; line-height: 1.6;">
+                    <i class="fas fa-clock" style="color: var(--primary-color);"></i>
+                    Délai recommandé pour signaler un besoin :
+                    <strong style="color: #94a3b8;">3 semaines avant le début de la formation</strong><br>
+                    <i class="fas fa-file-alt" style="color: var(--primary-color); margin-top: 0.5rem;"></i> Réf Qualité : B42-POL-ACC-002 | Version 2.0 (Juillet 2026)<br>
+                    <i class="fas fa-landmark" style="color: var(--primary-color);"></i> SIRET : 992 220 707 00010 |  Enregistré sous le numéro 93132513713. Cet enregistrement ne vaut pas agrément de l'État.
+                </p>
+            </div>
+        </section>
+
+        <div class="container section-padding" style="max-width: 900px;">
+
+            <!-- TABLE DES MATIÈRES -->
+            <nav class="toc" aria-label="Table des matières">
+                <h3><i class="fas fa-list" style="margin-right: 0.5rem;"></i>Sommaire</h3>
+                <ol>
+                    <li><a href="#referent">1. Référent handicap &amp; contact</a></li>
+                    <li><a href="#charte">2. Charte d'engagement Qualiopi (C6-I26)</a></li>
+                    <li><a href="#amenagements">3. Aménagements possibles</a></li>
+                    <li><a href="#procedure">4. Procédure de demande d'aménagement</a></li>
+                    <li><a href="#partenaires">5. Réseau de partenaires</a></li>
+                    <li><a href="#rgaa">6. Déclaration d'accessibilité numérique (RGAA)</a></li>
+                    <li><a href="#signalement">7. Signalement &amp; recours</a></li>
+                </ol>
+            </nav>
+
+            <!-- 1. RÉFÉRENT HANDICAP -->
+            <section class="content-card" id="referent">
+                <h2><i class="fas fa-user-shield"></i> 1. Référent handicap &amp; contact</h2>
+                <p>Conformément à l'article L.6352-3 du Code du travail et à l'indicateur 26 du Référentiel Qualiopi, Babylone42 a désigné un référent handicap chargé d'orienter, d'informer et d'accompagner les personnes en situation de handicap.</p>
+                <div class="contact-block">
+                    <div class="contact-person">
+                        <div class="contact-avatar"><i class="fas fa-user"></i></div>
+                        <div class="contact-detail">
+                            <strong>Eulalio TORRES GARCIA</strong>
+                            <span>Référent handicap &amp; Responsable formations<br>Babylone 42 SAS</span>
+                        </div>
+                    </div>
+                    <div class="contact-links">
+                        <a href="mailto:contact@babylone42.fr"><i class="fas fa-envelope"></i> contact@babylone42.fr</a>
+                        <a href="tel:+33773609849"><i class="fas fa-phone-alt"></i> +33 7 73 60 98 49</a>
+                        <a href="https://wa.me/33773609849" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i> WhatsApp disponible</a>
+                    </div>
+                </div>
+                <div class="alert-info" style="margin-top: 1.2rem;">
+                    <strong>Délai de réponse :</strong> Nous nous engageons à répondre à toute demande d'aménagement
+                    dans un délai de <strong>5 jours ouvrés</strong>. Pour une prise en charge optimale, contactez-nous
+                    <strong>3 semaines avant le début de la formation</strong>.
+                </div>
+                <div class="alert-info" style="margin-top: 1rem;">
+                    <strong>Confidentialité :</strong> Toutes les informations relatives à la situation de handicap sont traitées de manière strictement confidentielle et conformes au RGPD. Elles ne figurent sur aucun document officiel (attestation, convention) sans accord explicite du stagiaire.
+                </div>
+            </section>
+
+            <!-- 2. CHARTE D'ENGAGEMENT -->
+            <section class="content-card" id="charte">
+                <h2><i class="fas fa-file-contract"></i> 2. Charte d'engagement Qualiopi (C6-I26)</h2>
+                <p>Babylone42 s'engage formellement à respecter les principes suivants dans le cadre de sa démarche
+                    qualité Qualiopi (Critère 6, Indicateur 26) :</p>
+                <div class="commitment-list">
+                    <div class="commitment-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span><strong style="color: #f1f5f9;">Information préalable</strong> — Informer clairement
+                            chaque personne sur les conditions d'accès et les aménagements disponibles avant toute inscription.</span>
+                    </div>
+                    <div class="commitment-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span><strong style="color: #f1f5f9;">Adaptation individuelle</strong> — Proposer des
+                            aménagements personnalisés en fonction de la nature du handicap et des besoins spécifiques.</span>
+                    </div>
+                    <div class="commitment-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span><strong style="color: #f1f5f9;">Confidentialité</strong> — Traiter les informations
+                            relatives au handicap avec la plus stricte confidentialité, conformément au RGPD.</span>
+                    </div>
+                    <div class="commitment-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span><strong style="color: #f1f5f9;">Réseau partenarial</strong> — Mobiliser notre réseau de
+                            partenaires spécialisés lorsque nos ressources internes ne suffisent pas.</span>
+                    </div>
+                    <div class="commitment-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span><strong style="color: #f1f5f9;">Amélioration continue</strong> — Évaluer et améliorer
+                            nos pratiques d'accessibilité à chaque bilan annuel de l'organisme.</span>
+                    </div>
+                    <div class="commitment-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span><strong style="color: #f1f5f9;">Non-discrimination</strong> — Garantir l'égalité de
+                            traitement et refuser toute discrimination fondée sur le handicap.</span>
+                    </div>
+                    <div class="commitment-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span><strong style="color: #f1f5f9;">Suivi post-formation</strong> — Recueillir le retour des
+                            participants PSH pour améliorer en continu l'expérience de formation.</span>
+                    </div>
+                    <div class="commitment-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span><strong style="color: #f1f5f9;">Sensibilisation des formateurs</strong> — Former les
+                            intervenants aux enjeux du handicap et aux adaptations pédagogiques nécessaires.</span>
+                    </div>
+                </div>
+                <p style="margin-top: 1.5rem; font-size: 0.9rem; color: #64748b;">
+                    <i class="fas fa-calendar-alt" style="color: var(--primary-color);"></i>
+                    Charte adoptée en janvier 2025 — Révision annuelle (dernière mise à jour : juillet 2026).<br>
+                    <i class="fas fa-download" style="color: var(--primary-color); margin-top: 0.5rem;"></i> <a href="#" style="color: var(--primary-color); text-decoration: underline;">Télécharger la Charte d'engagement autonome (PDF signé)</a>
+                </p>
+            </section>
+
+            <!-- 3. AMÉNAGEMENTS POSSIBLES -->
+            <section class="content-card" id="amenagements">
+                <h2><i class="fas fa-tools"></i> 3. Aménagements possibles</h2>
+                <p>Nos formations étant 100% distancielles (Microsoft Teams), plusieurs aménagements sont directement
+                    applicables. D'autres peuvent être mis en place en lien avec nos partenaires.</p>
+
+                <h3>Aménagements pédagogiques</h3>
+                <div class="amenagement-grid">
+                    <div class="amenagement-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <strong>Aménagement des horaires</strong>
+                            <p>Adaptation du rythme journalier, pauses supplémentaires, fractionnement des sessions sur plus de jours.</p>
+                        </div>
+                    </div>
+                    <div class="amenagement-item">
+                        <i class="fas fa-file-alt"></i>
+                        <div>
+                            <strong>Supports adaptés</strong>
+                            <p>Documents en grands caractères, fort contraste, formats audio, versions simplifiées selon le profil.</p>
+                        </div>
+                    </div>
+                    <div class="amenagement-item">
+                        <i class="fas fa-redo-alt"></i>
+                        <div>
+                            <strong>Accès prolongé aux ressources</strong>
+                            <p>Extension de l'accès aux supports de formation jusqu'à 12 mois (au lieu de 6 mois standard).</p>
+                        </div>
+                    </div>
+                    <div class="amenagement-item">
+                        <i class="fas fa-user-graduate"></i>
+                        <div>
+                            <strong>Accompagnement individuel renforcé</strong>
+                            <p>Sessions de rattrapage ou suivi personnalisé post-formation avec le formateur référent.</p>
+                        </div>
+                    </div>
+                    <div class="amenagement-item">
+                        <i class="fas fa-tasks"></i>
+                        <div>
+                            <strong>Adaptation des évaluations</strong>
+                            <p>Temps majoré pour les quiz et exercices, format alternatif (oral vs écrit), adaptation des consignes.</p>
+                        </div>
+                    </div>
+                    <div class="amenagement-item">
+                        <i class="fas fa-language"></i>
+                        <div>
+                            <strong>Sous-titrage et transcription</strong>
+                            <p>Activation du sous-titrage automatique Teams, fourniture de la transcription écrite de toutes les sessions.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 style="margin-top: 2rem;">Aménagements techniques (distanciel)</h3>
+                <div class="amenagement-grid">
+                    <div class="amenagement-item">
+                        <i class="fas fa-desktop"></i>
+                        <div>
+                            <strong>Assistance technique préalable</strong>
+                            <p>Vérification de la configuration technique avant la formation (30 min d'accompagnement offert).</p>
+                        </div>
+                    </div>
+                    <div class="amenagement-item">
+                        <i class="fas fa-microphone-alt"></i>
+                        <div>
+                            <strong>Alternatives de communication</strong>
+                            <p>Participation par chat uniquement possible si la voix est difficile ; interprète LSF sur demande via partenaires.</p>
+                        </div>
+                    </div>
+                    <div class="amenagement-item">
+                        <i class="fas fa-video-slash"></i>
+                        <div>
+                            <strong>Caméra non obligatoire</strong>
+                            <p>La participation sans caméra est toujours possible, sans aucune pénalité pédagogique.</p>
+                        </div>
+                    </div>
+                    <div class="amenagement-item">
+                        <i class="fas fa-record-vinyl"></i>
+                        <div>
+                            <strong>Enregistrement des sessions</strong>
+                            <p>Enregistrement vidéo mis à disposition sous 48h pour les participants PSH qui en font la demande.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="alert-info" style="margin-top: 1.5rem;">
+                    <strong>Note :</strong> Certains aménagements nécessitent l'intervention de partenaires externes
+                    (interprète LSF, matériel spécialisé). Ces besoins doivent être signalés
+                    <strong>au minimum 3 semaines avant la formation</strong> pour permettre leur organisation.
+                </div>
+            </section>
+
+            <!-- 4. PROCÉDURE -->
+            <section class="content-card" id="procedure">
+                <h2><i class="fas fa-list-ol"></i> 4. Procédure de demande d'aménagement</h2>
+                <p>La demande d'aménagement est simple et confidentielle. Voici les étapes :</p>
+
+                <div style="display: flex; flex-direction: column; gap: 1.5rem; margin-top: 1rem;">
+                    <div style="display: flex; gap: 1.2rem; align-items: flex-start;">
+                        <div class="step-circle">1</div>
+                        <div>
+                            <strong style="color: #f1f5f9; display: block; margin-bottom: 0.2rem;">Prise de contact</strong>
+                            <span style="color: #94a3b8; font-size: 0.95rem;">Contactez le référent handicap par email
+                                (<a href="mailto:contact@babylone42.fr" style="color: var(--primary-color);">contact@babylone42.fr</a>)
+                                ou par téléphone (<a href="tel:+33773609849" style="color: var(--primary-color);">+33 7 73 60 98 49</a>),
+                                de préférence 3 semaines avant le début de la formation.</span>
+                        </div>
+                    </div>
+                    <div style="display: flex; gap: 1.2rem; align-items: flex-start;">
+                        <div class="step-circle">2</div>
+                        <div>
+                            <strong style="color: #f1f5f9; display: block; margin-bottom: 0.2rem;">Entretien de positionnement</strong>
+                            <span style="color: #94a3b8; font-size: 0.95rem;">Un échange (téléphonique ou par Teams) est organisé pour
+                                comprendre vos besoins spécifiques et définir ensemble les aménagements appropriés.
+                                Aucun justificatif médical n'est obligatoire.</span>
+                        </div>
+                    </div>
+                    <div style="display: flex; gap: 1.2rem; align-items: flex-start;">
+                        <div class="step-circle">3</div>
+                        <div>
+                            <strong style="color: #f1f5f9; display: block; margin-bottom: 0.2rem;">Plan d'Aménagement Personnalisé (PAP) formalisé</strong>
+                            <span style="color: #94a3b8; font-size: 0.95rem;">Un Plan d'Aménagement Personnalisé (PAP) écrit est formalisé (via notre fiche de recueil de besoins PSH) et transmis
+                                sous 5 jours ouvrés. Il précise les adaptations retenues, le calendrier et,
+                                le cas échéant, les partenaires mobilisés (ex : appui de la Ressource Handicap Formation - RHF).</span>
+                        </div>
+                    </div>
+                    <div style="display: flex; gap: 1.2rem; align-items: flex-start;">
+                        <div class="step-circle">4</div>
+                        <div>
+                            <strong style="color: #f1f5f9; display: block; margin-bottom: 0.2rem;">Suivi et retour d'expérience</strong>
+                            <span style="color: #94a3b8; font-size: 0.95rem;">À l'issue de la formation, un questionnaire spécifique est
+                                proposé pour recueillir votre retour sur l'expérience et l'efficacité des aménagements
+                                mis en place.</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 5. RÉSEAU PARTENAIRES -->
+            <section class="content-card" id="partenaires">
+                <h2><i class="fas fa-handshake"></i> 5. Réseau de partenaires &amp; Modalités de mobilisation</h2>
+                <p>Lorsque nos ressources internes ne permettent pas de répondre à un besoin spécifique de compensation, notre référent handicap mobilise notre réseau institutionnel et de prestataires spécialisés. L'équipe pédagogique dispose d'un <em>Registre Interne des Partenaires Handicap (Réf. B42-REG-PSH-001)</em> pour une activation rapide.</p>
+                <div class="partner-grid">
+                    <div class="partner-card">
+                        <i class="fas fa-building"></i>
+                        <strong>AGEFIPH / FIPHFP &amp; RHF</strong>
+                        <p>Instruction des cofinancements et appui à la co-construction d'aménagements via le service Ressource Handicap Formation (RHF).</p>
+                        <a href="https://www.agefiph.fr" target="_blank" rel="noopener" style="color: var(--primary-color); font-size: 0.8rem; display: block; margin-top: 0.5rem;">agefiph.fr</a>
+                    </div>
+                    <div class="partner-card">
+                        <i class="fas fa-landmark"></i>
+                        <strong>MDPH 13</strong>
+                        <p>Maison Départementale des Personnes Handicapées des Bouches-du-Rhône pour l'orientation et la reconnaissance de la qualité de travailleur handicapé (RQTH).</p>
+                        <a href="https://www.mdph13.fr" target="_blank" rel="noopener" style="color: var(--primary-color); font-size: 0.8rem; display: block; margin-top: 0.5rem;">mdph13.fr</a>
+                    </div>
+                    <div class="partner-card">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <strong>Cap Emploi Bouches-du-Rhône</strong>
+                        <p>Sécurisation des parcours professionnels et diagnostic de compensation pour nos stagiaires du territoire (antenne Marseille).</p>
+                        <a href="https://www.capemploi-13.com" target="_blank" rel="noopener" style="color: var(--primary-color); font-size: 0.8rem; display: block; margin-top: 0.5rem;">capemploi-13.com</a>
+                    </div>
+                    <div class="partner-card">
+                        <i class="fas fa-deaf"></i>
+                        <strong>Interprètes LSF (URAPEDA PACA)</strong>
+                        <p>Mobilisation d'interprètes en Langue des Signes Française pour les participants sourds ou malentendants.</p>
+                        <a href="https://www.urapeda-paca.org" target="_blank" rel="noopener" style="color: var(--primary-color); font-size: 0.8rem; display: block; margin-top: 0.5rem;">urapeda-paca.org</a>
+                    </div>
+                    <div class="partner-card">
+                        <i class="fas fa-low-vision"></i>
+                        <strong>Déficience visuelle (AVH)</strong>
+                        <p>Adaptation des supports via l'Association Valentin Haüy : braille numérique, audio, etc.</p>
+                        <a href="https://marseille.avh.asso.fr" target="_blank" rel="noopener" style="color: var(--primary-color); font-size: 0.8rem; display: block; margin-top: 0.5rem;">marseille.avh.asso.fr</a>
+                    </div>
+                    <div class="partner-card">
+                        <i class="fas fa-brain"></i>
+                        <strong>Troubles cognitifs (FFDys)</strong>
+                        <p>Conseils d'adaptation pédagogique (mise en page, police OpenDyslexic) en lien avec la FFDys.</p>
+                        <a href="https://www.ffdys.fr" target="_blank" rel="noopener" style="color: var(--primary-color); font-size: 0.8rem; display: block; margin-top: 0.5rem;">ffdys.fr</a>
+                    </div>
+                </div>
+                <div class="alert-info" style="margin-top: 1.5rem;">
+                    <strong>Processus interne de mobilisation :</strong> Notre référent handicap prend contact avec le partenaire pertinent dans les 48h suivant l'entretien de positionnement afin de valider la faisabilité technique et financière du Plan d'Aménagement Personnalisé (PAP). Des preuves de contacts et sollicitations sont conservées dans nos dossiers d'accompagnement.
+                </div>
+            </section>
+
+            <!-- 6. DÉCLARATION RGAA -->
+            <section class="content-card" id="rgaa">
+                <h2><i class="fas fa-code"></i> 6. Déclaration d'accessibilité numérique (RGAA)</h2>
+                <p>Babylone42 s'engage dans une démarche de mise en conformité progressive de son site internet avec le
+                    <strong>Référentiel Général d'Amélioration de l'Accessibilité (RGAA 4.1)</strong>, conformément à
+                    la loi n° 2005-102 du 11 février 2005 et à la directive européenne 2016/2102.</p>
+
+                <h3>Statut de conformité</h3>
+                <div class="alert-info">
+                    <strong>Statut actuel : Partiellement conforme.</strong> Le site présente des non-conformités
+                    identifiées. Un plan d'amélioration est en cours de déploiement.
+                </div>
+
+                <h3 style="margin-top: 1.5rem;">Résultats de l'audit interne (juillet 2026)</h3>
+                <table class="rgaa-table" role="table" aria-label="Résultats de l'audit RGAA par thématique">
+                    <thead>
+                        <tr>
+                            <th scope="col">Critères RGAA</th>
+                            <th scope="col">Thématique</th>
+                            <th scope="col">Statut</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1.1 – 1.6</td><td>Images et alternatives textuelles</td><td><span class="badge-conform badge-partial">Partiel</span></td></tr>
+                        <tr><td>3.1 – 3.2</td><td>Couleurs et contrastes</td><td><span class="badge-conform badge-ok">Conforme</span></td></tr>
+                        <tr><td>4.1 – 4.9</td><td>Multimédia</td><td><span class="badge-conform badge-partial">Partiel</span></td></tr>
+                        <tr><td>5.1 – 5.8</td><td>Tableaux</td><td><span class="badge-conform badge-ok">Conforme</span></td></tr>
+                        <tr><td>6.1 – 6.2</td><td>Liens</td><td><span class="badge-conform badge-ok">Conforme</span></td></tr>
+                        <tr><td>7.1 – 7.5</td><td>Scripts et composants interactifs</td><td><span class="badge-conform badge-partial">Partiel</span></td></tr>
+                        <tr><td>8.1 – 8.9</td><td>Éléments obligatoires (langue, titre)</td><td><span class="badge-conform badge-ok">Conforme</span></td></tr>
+                        <tr><td>9.1 – 9.4</td><td>Structure et sémantique</td><td><span class="badge-conform badge-partial">Partiel</span></td></tr>
+                        <tr><td>10.1 – 10.14</td><td>Présentation de l'information (CSS)</td><td><span class="badge-conform badge-partial">Partiel</span></td></tr>
+                        <tr><td>11.1 – 11.13</td><td>Formulaires</td><td><span class="badge-conform badge-ok">Conforme</span></td></tr>
+                        <tr><td>12.1 – 12.11</td><td>Navigation</td><td><span class="badge-conform badge-ok">Conforme</span></td></tr>
+                        <tr><td>13.1 – 13.12</td><td>Consultation (animations, délais)</td><td><span class="badge-conform badge-ok">Conforme</span></td></tr>
+                    </tbody>
+                </table>
+
+                <h3 style="margin-top: 1.5rem;">Plan d'amélioration</h3>
+                <ul>
+                    <li>Ajout d'attributs <code style="background: rgba(255,255,255,0.06); padding: 0.1rem 0.4rem; border-radius: 4px;">alt</code> descriptifs sur l'ensemble des images — <em>T3 2026</em></li>
+                    <li>Réduction des styles en ligne (<code style="background: rgba(255,255,255,0.06); padding: 0.1rem 0.4rem; border-radius: 4px;">style="..."</code>) — <em>T4 2026</em></li>
+                    <li>Sous-titrage des vidéos de formation — <em>T1 2027</em></li>
+                    <li>Audit RGAA externe complet par un tiers indépendant — <em>T1 2027</em></li>
+                    <li>Publication d'une déclaration de conformité officielle — <em>T2 2027</em></li>
+                </ul>
+                <p style="margin-top: 1rem; font-size: 0.9rem; color: #64748b;">
+                    Audit réalisé en interne — juillet 2026. Prochain audit externe prévu en 2027.
+                </p>
+            </section>
+
+            <!-- 7. SIGNALEMENT & RECOURS -->
+            <section class="content-card" id="signalement">
+                <h2><i class="fas fa-exclamation-circle"></i> 7. Signalement &amp; voies de recours</h2>
+                <p>Si vous constatez un défaut d'accessibilité sur notre site ou dans nos formations, nous vous
+                    encourageons à nous le signaler.</p>
+
+                <h3>Nous contacter directement</h3>
+                <ul>
+                    <li>Par email : <a href="mailto:contact@babylone42.fr" style="color: var(--primary-color);">contact@babylone42.fr</a></li>
+                    <li>Par téléphone : <a href="tel:+33773609849" style="color: var(--primary-color);">+33 7 73 60 98 49</a></li>
+                    <li>Objet du message : <em>"Signalement accessibilité"</em></li>
+                    <li>Délai de traitement garanti : <strong style="color: #f1f5f9;">10 jours ouvrés</strong></li>
+                </ul>
+
+                <h3 style="margin-top: 1.5rem;">Voies de recours externes</h3>
+                <p>Si votre signalement reste sans réponse satisfaisante dans les délais, vous pouvez contacter :</p>
+                <ul>
+                    <li><strong style="color: #f1f5f9;">Défenseur des droits</strong> —
+                        <a href="https://www.defenseurdesdroits.fr" target="_blank" rel="noopener noreferrer" style="color: var(--primary-color);">www.defenseurdesdroits.fr</a>
+                        — 09 69 39 00 00 (gratuit, du lundi au vendredi)</li>
+                    <li><strong style="color: #f1f5f9;">DREETS PACA</strong> — Direction régionale de l'économie, de l'emploi, du travail et des solidarités — pour les réclamations liées aux obligations d'accessibilité en formation professionnelle.</li>
+                    <li><strong style="color: #f1f5f9;">Tribunal administratif</strong> — En dernier recours pour les obligations légales d'accessibilité numérique.</li>
+                </ul>
+
+                <div class="alert-info" style="margin-top: 1.2rem;">
+                    <strong>Rappel légal :</strong> Le droit à l'accessibilité des formations professionnelles est
+                    garanti par la loi n° 2005-102 du 11 février 2005 pour l'égalité des droits et des chances des
+                    personnes handicapées.
+                </div>
+            </section>
+
+            <!-- DATE DE MISE À JOUR -->
+            <p style="text-align: center; color: #475569; font-size: 0.85rem; margin-top: 1rem; padding-bottom: 1rem;">
+                <i class="fas fa-history" style="color: var(--primary-color);"></i>
+                Version 2.0 — Dernière mise à jour : <strong style="color: #64748b;">juillet 2026</strong> —
+                Prochaine révision annuelle prévue : <strong style="color: #64748b;">juillet 2027</strong>
+            </p>
+
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="mega-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col brand-col">
+                    <img src="images/logo.svg" alt="Babylone42 Logo" class="footer-logo-img">
+                    <p class="footer-desc">Babylone42 donne le pouvoir aux équipes de transformer des données brutes en
+                        informations claires grâce à l'IA.</p>
+                    <div class="footer-socials">
+                        <a href="https://www.linkedin.com/company/babylone42/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/babylone42_?igsh=YzVyamk1N3VoYXU1" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=61583402791597&amp;name=xhp_nt__fb__action__open_user&amp;locale=fr_FR" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="https://x.com/babylone42_" target="_blank" rel="noopener noreferrer" aria-label="X Twitter"><i class="fab fa-x-twitter"></i></a>
+                        <a href="https://m.youtube.com/@Babylone42" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Accueil</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="about.html">About us</a></li>
+                        <li><a href="interlocuteurs.html">Vos interlocuteurs</a></li>
+                        <li><a href="articles.html">Actualités</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Solutions IA</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="solution-chatbots.html">Chatbots 24/7</a></li>
+                        <li><a href="solution-copilots.html">Copilots IA</a></li>
+                        <li><a href="solution-automation.html">Automatisation</a></li>
+                        <li><a href="solution-audit.html">Audit &amp; Conseil</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Formations</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="formation-genai.html">IA Générative</a></li>
+                        <li><a href="formation-video-ia-pro.html">Vidéo IA Pro</a></li>
+                        <li><a href="formation-jupyter.html">Jupyter</a></li>
+                        <li><a href="formation-python.html">Python</a></li>
+                        <li><a href="formation-ml.html">Machine Learning</a></li>
+                        <li><a href="formation-dl.html">Deep Learning</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col newsletter-col">
+                    <h4 class="footer-title">Contact &amp; Newsletter</h4>
+                    <p class="footer-contact-info">
+                        <a href="mailto:contact@babylone42.fr"><i class="fas fa-envelope"></i> contact@babylone42.fr</a><br>
+                        <a href="tel:+330773609849"><i class="fas fa-phone-alt"></i> +33 0 7 73 60 98 49</a>
+                    </p>
+                    <form class="footer-newsletter-form">
+                        <input type="email" placeholder="Votre email" required>
+                        <button type="submit" aria-label="S'inscrire"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="copyright"><i class="fas fa-landmark" style="color: var(--primary-color);"></i> SIRET : 992 220 707 00010 |  Enregistré sous le numéro 93132513713. Cet enregistrement ne vaut pas agrément de l'État.</p>
+                <div class="legal-links">
+                    <a href="indicateurs-resultats.html">Indicateurs de Résultats</a>
+                    <a href="cgv.html">CGV</a>
+                    <a href="mentions-legales.html">Mentions Légales</a>
+                    <a href="politique-confidentialite.html">Politique de Confidentialité</a>
+                    <a href="cookies.html">Paramètres des cookies</a>
+                    <a href="accessibilite.html" aria-current="page">Accessibilité (RGAA)</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js?v=5"></script>
+</body>
+
+</html>

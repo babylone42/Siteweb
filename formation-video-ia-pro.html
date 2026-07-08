@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="fr">
 
 <head>
@@ -668,6 +668,47 @@
                 box-shadow: 0 0 0 0 rgba(16, 155, 128, 0);
             }
         }
+
+        /* --- Skills grid & card for pedagogical objectives --- */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .skill-card {
+            background: #fff;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 1.5rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .skill-card i {
+            color: var(--primary-color);
+            font-size: 1.4rem;
+            margin-top: 0.2rem;
+            flex-shrink: 0;
+        }
+
+        .skill-card strong {
+            display: block;
+            color: #0f172a;
+            font-size: 1.1rem;
+            margin-bottom: 0.3rem;
+            text-align: left;
+        }
+
+        .skill-card span {
+            color: #64748b;
+            font-size: 0.95rem;
+            text-align: justify;
+            display: block;
+            line-height: 1.5;
+        }
     </style>
 </head>
 
@@ -770,7 +811,7 @@
                         </p>
                         
                         <div class="badge-grid">
-                            <span class="badge-item"> Certification Babylone42</span>
+                            <span class="badge-item"> Badge numérisé &amp; Attestation de réussite</span>
                             <span class="badge-item"> 70% pratique</span>
                             <span class="badge-item"> -80% de coût de production</span>
                             <span class="badge-item"> 50€ crédits offerts</span>
@@ -791,6 +832,42 @@
                 </div>
             </div>
             <div style="position: absolute; top: -50%; right: -10%; width: 500px; height: 500px; background: radial-gradient(circle, rgba(16,155,128,0.12) 0%, transparent 70%); z-index: 1;"></div>
+        </section>
+
+        <!-- KEY INFO BAR -->
+        <section class="section-padding bg-light" style="border-bottom: 1px solid #e2e8f0;">
+            <div class="container">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem;">
+                    <div class="bento-card"
+                        style="background: white; border: 1px solid #e2e8f0; color: #0f172a; text-align: center; padding: 1.5rem;">
+                        <i class="fas fa-clock"
+                            style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
+                        <h4 style="margin-bottom: 0.5rem; font-size: 1.1rem;">Durée</h4>
+                        <p style="color: #64748b; font-size: 1.1rem; margin-bottom: 0; text-align: center;">21 heures (3 jours)</p>
+                    </div>
+                    <div class="bento-card"
+                        style="background: white; border: 1px solid #e2e8f0; color: #0f172a; text-align: center; padding: 1.5rem;">
+                        <i class="fas fa-users"
+                            style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
+                        <h4 style="margin-bottom: 0.5rem; font-size: 1.1rem;">Public Cible</h4>
+                        <p style="color: #64748b; font-size: 1.1rem; margin-bottom: 0; text-align: center;">Com, Marketing, RH, Dirigeants</p>
+                    </div>
+                    <div class="bento-card"
+                        style="background: white; border: 1px solid #e2e8f0; color: #0f172a; text-align: center; padding: 1.5rem;">
+                        <i class="fas fa-clipboard-check"
+                            style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
+                        <h4 style="margin-bottom: 0.5rem; font-size: 1.1rem;">Pré-requis</h4>
+                        <p style="color: #64748b; font-size: 1.1rem; margin-bottom: 0; text-align: center;">Aucun prérequis technique</p>
+                    </div>
+                    <div class="bento-card"
+                        style="background: white; border: 1px solid #e2e8f0; color: #0f172a; text-align: center; padding: 1.5rem;">
+                        <i class="fas fa-laptop-house"
+                            style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
+                        <h4 style="margin-bottom: 0.5rem; font-size: 1.1rem;">Modalité</h4>
+                        <p style="color: #64748b; font-size: 1.1rem; margin-bottom: 0; text-align: center;">100% Distanciel (Teams / Zoom)</p>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <!-- PROBLEME SECTION (Section 2) -->
@@ -899,6 +976,40 @@
                             </tr>
                         </tbody>
                     </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- OBJECTIFS PEDAGOGIQUES -->
+        <section class="section-padding bg-light" style="border-top: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0;">
+            <div class="container">
+                <h2 class="section-title" style="color: #0f172a;">Objectifs pédagogiques <span class="highlight">de la formation</span></h2>
+                <p class="section-subtitle">Des compétences opérationnelles en production vidéo acquises à la fin du parcours.</p>
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <i class="fas fa-magic"></i>
+                        <div><strong>Conception &amp; Scripting IA</strong><span>Scénariser vos idées et rédiger des scripts captivants avec Claude et ChatGPT en appliquant le framework AIDA.</span></div>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fas fa-microphone"></i>
+                        <div><strong>Génération Audio</strong><span>Cloner votre voix ou celle de votre équipe et générer des voix off réalistes avec ElevenLabs.</span></div>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fas fa-images"></i>
+                        <div><strong>Création Visuelle IA</strong><span>Créer des images ultra-réalistes et cohérentes pour vos décors et personnages avec Midjourney.</span></div>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fas fa-video"></i>
+                        <div><strong>Génération Vidéo</strong><span>Transformer des prompts et des images en plans vidéo haute définition avec Runway Gen-3 et Luma.</span></div>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fas fa-film"></i>
+                        <div><strong>Montage &amp; Effets</strong><span>Assembler vos séquences, gérer le rythme, et ajouter des sous-titres animés et dynamiques dans CapCut.</span></div>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fas fa-volume-up"></i>
+                        <div><strong>Sound Design Pro</strong><span>Habiller vos vidéos avec des effets sonores professionnels et des musiques parfaitement calées.</span></div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -1264,10 +1375,14 @@
         <section class="section-padding" style="background: rgba(255, 255, 255, 0.02); border-top: 1px solid rgba(255, 255, 255, 0.05);">
             <div class="container" style="max-width: 900px;">
                 <h2 class="section-title" style="font-size: 1.6rem; margin-bottom: 1.5rem; text-align: center;">Informations Pratiques &amp; Conformité</h2>
-                <div class="qualiopi-grid-3">
+                <div class="qualiopi-grid">
+                    <div>
+                        <strong style="color: var(--primary-color); display: block; margin-bottom: 0.5rem; font-size: 1.1rem;"><i class="fas fa-euro-sign" style="margin-right: 0.5rem;"></i> Tarifs</strong>
+                        À partir de 1 490 € HT par participant, ou sur devis pour les formules de groupe / intra-entreprise. Financements possibles via votre OPCO ou CPF (selon profil).
+                    </div>
                     <div>
                         <strong style="color: var(--primary-color); display: block; margin-bottom: 0.5rem; font-size: 1.1rem;"><i class="fas fa-calendar-alt" style="margin-right: 0.5rem;"></i> Délais d'accès</strong>
-                        Inscription possible jusqu'à 48 heures avant le début de la session, sous réserve de validation du dossier de financement et de places disponibles.
+                        Inscription possible jusqu'à 14 jours avant le début de la session, sous réserve de validation du dossier de financement et de places disponibles.
                     </div>
                     <div>
                         <strong style="color: var(--primary-color); display: block; margin-bottom: 0.5rem; font-size: 1.1rem;"><i class="fas fa-graduation-cap" style="margin-right: 0.5rem;"></i> Évaluation</strong>
@@ -1358,8 +1473,8 @@
             </div>
 
             <div class="footer-bottom">
-                <p class="copyright">© 2025 Babylone42.  · SIRET : 913 859 292 00018 · NDA en cours d'acquisition</p>
-                <div class="legal-links"><a href="cgv.html">CGV</a>
+                <p class="copyright">© 2025 Babylone42.  · SIRET : 992 220 707 00010 · NDA : enregistré sous le numéro 93132513713. Cet enregistrement ne vaut pas agrément de l'État.</p>
+                <div class="legal-links"><a href="indicateurs-resultats.html">Indicateurs de Résultats</a><a href="cgv.html">CGV</a>
                     <a href="mentions-legales.html">Mentions Légales</a>
                     <a href="politique-confidentialite.html">Politique de Confidentialité</a>
                     <a href="cookies.html">Paramètres des cookies</a>
@@ -1368,9 +1483,68 @@
         </div>
     </footer>
 
+    <!-- MODAL DEVIS FORM -->
+    <div class="modal-overlay" id="devis-modal">
+        <div class="modal-container" style="max-width: 550px;">
+            <button class="modal-close" onclick="closeModal('devis-modal')"><i class="fas fa-times"></i></button>
+            <div class="modal-body">
+                <h3 class="modal-title" style="color: #fff; font-family: var(--font-heading); margin-bottom: 0.5rem;">Télécharger la brochure PDF</h3>
+                <p class="modal-subtitle" style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 2rem;">Remplissez ce formulaire pour recevoir la brochure détaillée de la formation Vidéo IA Pro par email et obtenir un devis personnalisé.</p>
+                
+                <form class="contact-form" id="devisForm">
+                    <div class="form-row form-grid-2" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem;">
+                        <div class="form-group" style="display: flex; flex-direction: column;">
+                            <label for="devis-lastname" style="color: #fff; font-size: 0.9rem; margin-bottom: 0.4rem;">Nom *</label>
+                            <input type="text" id="devis-lastname" required placeholder="Dupont" style="background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12); color: #e2e8f0; padding: 0.75rem 1rem; border-radius: 8px; font-family: inherit; font-size: 0.95rem; outline: none;">
+                        </div>
+                        <div class="form-group" style="display: flex; flex-direction: column;">
+                            <label for="devis-firstname" style="color: #fff; font-size: 0.9rem; margin-bottom: 0.4rem;">Prénom *</label>
+                            <input type="text" id="devis-firstname" required placeholder="Jean" style="background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12); color: #e2e8f0; padding: 0.75rem 1rem; border-radius: 8px; font-family: inherit; font-size: 0.95rem; outline: none;">
+                        </div>
+                    </div>
 
+                    <div class="form-row form-grid-2" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem;">
+                        <div class="form-group" style="display: flex; flex-direction: column;">
+                            <label for="devis-phone" style="color: #fff; font-size: 0.9rem; margin-bottom: 0.4rem;">Téléphone</label>
+                            <input type="tel" id="devis-phone" placeholder="06 12 34 56 78" style="background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12); color: #e2e8f0; padding: 0.75rem 1rem; border-radius: 8px; font-family: inherit; font-size: 0.95rem; outline: none;">
+                        </div>
+                        <div class="form-group" style="display: flex; flex-direction: column;">
+                            <label for="devis-email" style="color: #fff; font-size: 0.9rem; margin-bottom: 0.4rem;">Email *</label>
+                            <input type="email" id="devis-email" required placeholder="jean.dupont@email.com" style="background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12); color: #e2e8f0; padding: 0.75rem 1rem; border-radius: 8px; font-family: inherit; font-size: 0.95rem; outline: none;">
+                        </div>
+                    </div>
 
-    
+                    <div class="form-row form-grid-2" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem;">
+                        <div class="form-group" style="display: flex; flex-direction: column;">
+                            <label for="devis-participants" style="color: #fff; font-size: 0.9rem; margin-bottom: 0.4rem;">Participants *</label>
+                            <select id="devis-participants" required style="width: 100%; background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12); color: #e2e8f0; padding: 0.75rem 1rem; border-radius: 8px; font-family: inherit; font-size: 0.95rem; outline: none; height: 45px;">
+                                <option value="1" style="background:#0d1527;">1 personne</option>
+                                <option value="2-3" style="background:#0d1527;">2-3 personnes</option>
+                                <option value="4+" style="background:#0d1527;">4 personnes ou plus</option>
+                            </select>
+                        </div>
+                        <div class="form-group" style="display: flex; flex-direction: column;">
+                            <label for="devis-sector" style="color: #fff; font-size: 0.9rem; margin-bottom: 0.4rem;">Secteur d'activité *</label>
+                            <select id="devis-sector" required style="width: 100%; background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12); color: #e2e8f0; padding: 0.75rem 1rem; border-radius: 8px; font-family: inherit; font-size: 0.95rem; outline: none; height: 45px;">
+                                <option value="Communication / Marketing" style="background:#0d1527;">Com / Marketing</option>
+                                <option value="Entreprise / RH" style="background:#0d1527;">Entreprise / RH</option>
+                                <option value="E-commerce / Retail" style="background:#0d1527;">E-commerce / Retail</option>
+                                <option value="Autre" style="background:#0d1527;">Autre</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group" style="display: flex; flex-direction: column; margin-bottom: 1.5rem;">
+                        <label for="devis-message" style="color: #fff; font-size: 0.9rem; margin-bottom: 0.4rem;">Besoins spécifiques</label>
+                        <textarea id="devis-message" rows="3" placeholder="Décrivez votre projet, vos attentes ou vos contraintes de financement..." style="width: 100%; background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12); color: #e2e8f0; padding: 0.75rem 1rem; border-radius: 8px; font-family: inherit; font-size: 0.95rem; outline: none; resize: vertical;"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-block" style="width: 100%; padding: 0.8rem; font-size: 1rem; font-weight: 600; border-radius: 8px; border: none; cursor: pointer; background: var(--primary-color); color: #fff;">Télécharger la brochure PDF</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
     <!-- WIDGET BETA TESTER -->
     <div class="beta-widget-wrap">
         <button class="beta-btn" onclick="openModal('beta-modal')"> Inscris-toi à la master class</button>
