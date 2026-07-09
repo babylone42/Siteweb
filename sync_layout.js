@@ -51,12 +51,20 @@ htmlFiles.forEach(filePath => {
     if (depth > 0) {
         // Find href="xxx" and prefix them if they don't start with http, mailto, tel, # or already contain ../
         const adjustLinks = (html) => {
-            return html.replace(/href="([^"#:][^"]*)"/g, (match, p1) => {
+            let res = html.replace(/href="([^"#:][^"]*)"/g, (match, p1) => {
                 if (p1.startsWith('http') || p1.startsWith('mailto') || p1.startsWith('tel') || p1.startsWith('#') || p1.startsWith('../')) {
                     return match;
                 }
                 return `href="${prefix}${p1}"`;
             });
+            // Also adjust image src="images/..." to src="../images/..."
+            res = res.replace(/src="([^":][^"]*)"/g, (match, p1) => {
+                if (p1.startsWith('http') || p1.startsWith('data:') || p1.startsWith('../')) {
+                    return match;
+                }
+                return `src="${prefix}${p1}"`;
+            });
+            return res;
         };
         adjustedHeader = adjustLinks(headerPart);
         adjustedFooter = adjustLinks(footerPart);
