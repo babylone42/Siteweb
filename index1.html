@@ -15,23 +15,6 @@
         rel="stylesheet">
     <link rel="stylesheet" href="style.css?v=11">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <style>
-        .link-disabled {
-            opacity: 0.4 !important;
-            cursor: not-allowed !important;
-            pointer-events: none !important;
-            text-decoration: line-through !important;
-        }
-        a.link-disabled {
-            pointer-events: none !important;
-        }
-        .card-disabled {
-            opacity: 0.45 !important;
-            cursor: not-allowed !important;
-            filter: grayscale(80%) !important;
-            pointer-events: none !important;
-        }
-    </style>
 </head>
 
 <body>
@@ -90,18 +73,18 @@
                                 style="font-size: 0.8rem; margin-left: 0.3rem;"></i></a>
                         <ul class="dropdown-menu">
                             <li class="dropdown-header" style="font-weight: 700; font-size: 0.85rem; color: #109B80; padding: 0.6rem 1rem 0.3rem 1rem; text-transform: uppercase; letter-spacing: 0.05em;">Secteurs & Métiers</li>
-                            <li><a href="#" class="link-disabled" style="padding-left: 1.5rem;">Cabinets d'Avocats</a></li>
-                            <li><a href="#" class="link-disabled" style="padding-left: 1.5rem;">Expertise Comptable & Audit</a></li>
+                            <li><a href="Avocats/brochure_generale_avocats.html" style="padding-left: 1.5rem;">Cabinets d'Avocats</a></li>
+                            <li><a href="Comptables/brochure_generale_comptables.html" style="padding-left: 1.5rem;">Expertise Comptable & Audit</a></li>
                             
                             <li style="border-top: 1px solid rgba(255,255,255,0.08); margin: 0.4rem 0;"></li>
                             
                             <li class="dropdown-header" style="font-weight: 700; font-size: 0.85rem; color: #109B80; padding: 0.6rem 1rem 0.3rem 1rem; text-transform: uppercase; letter-spacing: 0.05em;">Technologies & Outils</li>
                             <li><a href="formation-genai.html" style="padding-left: 1.5rem;">IA Générative</a></li>
-                            <li><a href="#" class="link-disabled" style="padding-left: 1.5rem;">Vidéo IA Pro</a></li>
-                            <li><a href="#" class="link-disabled" style="padding-left: 1.5rem;">Jupyter</a></li>
-                            <li><a href="#" class="link-disabled" style="padding-left: 1.5rem;">Python</a></li>
-                            <li><a href="#" class="link-disabled" style="padding-left: 1.5rem;">Machine Learning</a></li>
-                            <li><a href="#" class="link-disabled" style="padding-left: 1.5rem;">Deep Learning</a></li>
+                            <li><a href="formation-video-ia-pro.html" style="padding-left: 1.5rem;">Vidéo IA Pro</a></li>
+                            <li><a href="formation-jupyter.html" style="padding-left: 1.5rem;">Jupyter</a></li>
+                            <li><a href="formation-python.html" style="padding-left: 1.5rem;">Python</a></li>
+                            <li><a href="formation-ml.html" style="padding-left: 1.5rem;">Machine Learning</a></li>
+                            <li><a href="formation-dl.html" style="padding-left: 1.5rem;">Deep Learning</a></li>
                             
                             <li style="border-top: 1px solid rgba(255,255,255,0.08); margin: 0.4rem 0;"></li>
                             <li><a href="calendrier-formations.html" style="font-weight: bold;">Calendrier des formations</a></li>
@@ -367,7 +350,29 @@
                         class="fas fa-chevron-left"></i></button>
                 <div class="carousel-track-wrapper">
                     <div class="carousel-track" id="formations-track">
-                        <!-- Card 3 (IA Générative - Active & First) -->
+                        <!-- Card 1 -->
+                        <a href="Avocats/brochure_generale_avocats.html" class="solution-card">
+                            <div class="solution-visual">
+                                <img src="images/formation_avocats.png" alt="IA pour les Avocats">
+                            </div>
+                            <div class="solution-content">
+                                <h3>IA pour les Avocats</h3>
+                                <p>Optimisez la gestion de vos dossiers, la rédaction d'actes et vos recherches juridiques avec l'IA.</p>
+                            </div>
+                        </a>
+
+                        <!-- Card 2 -->
+                        <a href="Comptables/brochure_generale_comptables.html" class="solution-card inverted">
+                            <div class="solution-visual">
+                                <img src="images/formation_comptables.png" alt="IA pour les Experts-Comptables">
+                            </div>
+                            <div class="solution-content">
+                                <h3>IA pour les Experts-Comptables</h3>
+                                <p>Automatisez la saisie, fiabilisez les contrôles et décuplez vos capacités d'analyse de données financières.</p>
+                            </div>
+                        </a>
+
+                        <!-- Card 3 -->
                         <a href="formation-genai.html" class="solution-card">
                             <div class="solution-visual">
                                 <img src="images/formation_genai.png" alt="IA Générative">
@@ -379,30 +384,8 @@
                             </div>
                         </a>
 
-                        <!-- Card 1 (Disabled) -->
-                        <a href="#" class="solution-card card-disabled">
-                            <div class="solution-visual">
-                                <img src="images/formation_avocats.png" alt="IA pour les Avocats">
-                            </div>
-                            <div class="solution-content">
-                                <h3>IA pour les Avocats</h3>
-                                <p>Optimisez la gestion de vos dossiers, la rédaction d'actes et vos recherches juridiques avec l'IA.</p>
-                            </div>
-                        </a>
-
-                        <!-- Card 2 (Disabled) -->
-                        <a href="#" class="solution-card inverted card-disabled">
-                            <div class="solution-visual">
-                                <img src="images/formation_comptables.png" alt="IA pour les Experts-Comptables">
-                            </div>
-                            <div class="solution-content">
-                                <h3>IA pour les Experts-Comptables</h3>
-                                <p>Automatisez la saisie, fiabilisez les contrôles et décuplez vos capacités d'analyse de données financières.</p>
-                            </div>
-                        </a>
-
-                        <!-- Card 4 (Disabled) -->
-                        <a href="#" class="solution-card inverted card-disabled">
+                        <!-- Card 4 -->
+                        <a href="formation-video-ia-pro.html" class="solution-card inverted">
                             <div class="solution-visual">
                                 <img src="images/formation-video-ia-pro.png" alt="Réalisation de vidéos par l'IA">
                             </div>
@@ -412,8 +395,8 @@
                             </div>
                         </a>
 
-                        <!-- Card 5 (Disabled) -->
-                        <a href="#" class="solution-card card-disabled">
+                        <!-- Card 5 -->
+                        <a href="formation-jupyter.html" class="solution-card">
                             <div class="solution-visual">
                                 <img src="images/formation_jupyter.png" alt="Jupyter Notebook pour le reporting">
                             </div>
@@ -424,8 +407,8 @@
                             </div>
                         </a>
 
-                        <!-- Card 6 (Disabled) -->
-                        <a href="#" class="solution-card inverted card-disabled">
+                        <!-- Card 6 -->
+                        <a href="formation-python.html" class="solution-card inverted">
                             <div class="solution-visual">
                                 <img src="images/formation_python.png" alt="Python pour l'analyse de données - POO">
                             </div>
@@ -436,8 +419,8 @@
                             </div>
                         </a>
 
-                        <!-- Card 7 (Disabled) -->
-                        <a href="#" class="solution-card card-disabled">
+                        <!-- Card 7 -->
+                        <a href="formation-ml.html" class="solution-card">
                             <div class="solution-visual">
                                 <img src="images/formation_ml.png" alt="Machine Learning - Fondamentaux">
                             </div>
@@ -448,8 +431,8 @@
                             </div>
                         </a>
 
-                        <!-- Card 8 (Disabled) -->
-                        <a href="#" class="solution-card inverted card-disabled">
+                        <!-- Card 8 -->
+                        <a href="formation-dl.html" class="solution-card inverted">
                             <div class="solution-visual">
                                 <img src="images/formation_dl.png" alt="Deep Learning - Apprentissage Profond">
                             </div>
@@ -953,11 +936,11 @@
                     <h4 class="footer-title">Formations</h4>
                     <ul class="footer-links-list">
                         <li><a href="formation-genai.html">IA Générative</a></li>
-                        <li><a href="#" class="link-disabled">Vidéo IA Pro</a></li>
-                        <li><a href="#" class="link-disabled">Jupyter</a></li>
-                        <li><a href="#" class="link-disabled">Python</a></li>
-                        <li><a href="#" class="link-disabled">Machine Learning</a></li>
-                        <li><a href="#" class="link-disabled">Deep Learning</a></li>
+                        <li><a href="formation-video-ia-pro.html">Vidéo IA Pro</a></li>
+                        <li><a href="formation-jupyter.html">Jupyter</a></li>
+                        <li><a href="formation-python.html">Python</a></li>
+                        <li><a href="formation-ml.html">Machine Learning</a></li>
+                        <li><a href="formation-dl.html">Deep Learning</a></li>
                     </ul>
                 </div>
 
