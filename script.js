@@ -843,8 +843,8 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         'prompting': {
             name: 'IA Générative',
-            basePrice: 1290,
-            links: { base: 'https://pay.qonto.com/payment-links/019ea7c0-c87e-7ca4-9736-736a2f3b8a85?resource_id=019ea7c0-c880-7c41-8e97-f081c4222c8d' },
+            basePrice: 790,
+            links: { base: 'https://pay.qonto.com/payment-links/019f6b88-3383-7656-8128-c55704d76037?resource_id=019f6b88-3384-7a1d-bd40-b4e0755655d2' },
             sessions: [
                 { id: 's3', label: '16 - 17 Avril 2026', date: '2026-04-16' },
                 { id: 'ss1', label: '04 Juin 2026', date: '2026-06-04' },
