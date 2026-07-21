@@ -1,0 +1,6 @@
+# Netlify 301 Redirects for Babylone42
+/solution-chatbots.html   /formation-genai.html   301
+/solution-copilots.html   /formation-genai.html   301
+/solution-automation.html /formation-python.html  301
+/solution-audit.html      /calendrier-formations.html 301
+/solutions/*              /calendrier-formations.html 301
