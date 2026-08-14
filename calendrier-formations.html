@@ -854,5 +854,21 @@
 </div>
 </footer>
 <script src="script.js?v=5"></script>
+
+    <!-- Search Modal -->
+    <div id="search-modal" class="search-modal">
+        <div class="search-modal-content">
+            <div class="search-header">
+                <i class="fas fa-search search-icon-input"></i>
+                <input type="text" id="search-input" placeholder="Rechercher une formation, une question..." autocomplete="off">
+                <button id="close-search-modal" class="close-search-btn" aria-label="Fermer"><i class="fas fa-times"></i></button>
+            </div>
+            <div id="search-results" class="search-results">
+                <!-- Les résultats s'afficheront ici -->
+                <div class="search-empty-state">Tapez un mot-clé (ex: ChatGPT, Qualiopi, Prix...)</div>
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>

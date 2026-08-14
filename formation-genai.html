@@ -297,6 +297,7 @@
                     
                     <li><a href="articles.html">Actualités</a></li>
                     <li><a href="contact-page.html" class="btn btn-primary nav-btn">Être rappelé</a></li>
+                    <li class="nav-search-btn"><a href="#" id="open-search-modal" aria-label="Recherche"><i class="fas fa-search"></i></a></li>
                 </ul>
 
                 <div class="hamburger">
@@ -313,9 +314,9 @@
             <div class="container" style="position: relative; z-index: 2;">
                 <div class="form-hero-grid">
                     <div>
-                        <p
-                            style="color: var(--primary-color); font-weight: 600; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1rem;">
-                            Attestation de réussite — 10h — Distanciel</p>
+                        <div style="display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(16, 155, 128, 0.12); border: 1px solid rgba(16, 155, 128, 0.3); padding: 0.35rem 0.85rem; border-radius: 20px; color: #109B80; font-weight: 600; font-size: 0.82rem; margin-bottom: 1rem;">
+                            <i class="fas fa-check-circle"></i> Organisme Certifié Qualiopi (Actions de formation) · Finançable OPCO
+                        </div>
                         <h1 style="font-size: 2.8rem; line-height: 1.15; margin-bottom: 1.2rem;">L'IA ne remplacera pas
                             votre métier.<br><span class="highlight">Mais un collègue qui sait l'utiliser, oui.</span>
                         </h1>
@@ -357,6 +358,14 @@
                     <div>
                         <img src="images/formation-genai.jpg"
                             alt="Formation IA Générative — interface d'IA et document summarisé" class="form-hero-img">
+                        <div class="qualiopi-hero-card">
+                            <img src="images/qualiopi/qualiopi_actions_formation.png" alt="Qualiopi Processus Certifié" class="qualiopi-mini-img">
+                            <div class="qualiopi-mini-text">
+                                <strong>Certification Qualiopi N° 965711-1</strong>
+                                Organisme certifié par CERTIFOPAC pour la catégorie <em>Actions de formation</em>. Éligible financements OPCO & FAF.
+                                <a href="https://certifopac.fr/qualiopi/verification-certificat/?siren=992220707" target="_blank" rel="noopener noreferrer" style="color: #109B80; font-weight: 600; text-decoration: underline; display: inline-flex; align-items: center; gap: 0.3rem; margin-top: 0.25rem;">Vérifier le certificat officiel <i class="fas fa-external-link-alt" style="font-size: 0.75rem;"></i></a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -671,8 +680,39 @@
     
         <!-- QUALIOPI INFORMATION BANNER -->
         <section class="section-padding" style="background: rgba(255, 255, 255, 0.02); border-top: 1px solid rgba(255, 255, 255, 0.05);">
-            <div class="container" style="max-width: 960px;">
-                <h2 class="section-title" style="font-size: 1.6rem; margin-bottom: 1.5rem; text-align: center;">Informations légales et pratiques</h2>
+            <div class="container" style="max-width: 980px;">
+                <div style="text-align: center; margin-bottom: 2.5rem;">
+                    <span class="badge" style="background: rgba(16, 155, 128, 0.15); color: #109B80; border: 1px solid rgba(16, 155, 128, 0.3); padding: 0.4rem 1rem; border-radius: 20px; font-weight: 600; font-size: 0.85rem; display: inline-flex; align-items: center; gap: 0.4rem;">
+                        <i class="fas fa-certificate"></i> Conformité & Référentiel National Qualité
+                    </span>
+                    <h2 class="section-title" style="font-size: 1.8rem; margin-top: 0.8rem; margin-bottom: 0.5rem; text-align: center;">Informations légales, qualité et pratiques</h2>
+                </div>
+
+                <!-- Official Qualiopi Trust Card -->
+                <div class="qualiopi-trust-box" style="margin-bottom: 2.5rem;">
+                    <div class="qualiopi-logo-wrap">
+                        <a href="https://certifopac.fr/qualiopi/verification-certificat/?siren=992220707" target="_blank" rel="noopener noreferrer" title="Vérifier le certificat Qualiopi Babylone 42">
+                            <img src="images/qualiopi/qualiopi_actions_formation.png" alt="Qualiopi Processus Certifié - Actions de formation" width="280">
+                        </a>
+                    </div>
+                    <div class="qualiopi-info-content">
+                        <h3><i class="fas fa-check-circle"></i> Organisme Certifié Qualiopi</h3>
+                        <p>
+                            La certification qualité a été délivrée au titre de la catégorie d'action suivante : <strong>ACTIONS DE FORMATION</strong>. Délivrée par l'organisme certificateur <strong>CERTIFOPAC</strong>, elle atteste de la conformité de nos processus aux exigences du Référentiel National Qualité (RNQ) et ouvre droit aux financements mutualisés (OPCO, FAF).
+                        </p>
+                        <div class="qualiopi-meta-badges">
+                            <span class="qualiopi-meta-pill"><i class="fas fa-award"></i> Certificat n° 965711-1</span>
+                            <span class="qualiopi-meta-pill"><i class="fas fa-shield-alt"></i> Certificateur : CERTIFOPAC</span>
+                            <span class="qualiopi-meta-pill"><i class="fas fa-hand-holding-usd"></i> Éligible prise en charge OPCO & FAF</span>
+                        </div>
+                        <div class="qualiopi-actions-row">
+                            <a href="https://certifopac.fr/qualiopi/verification-certificat/?siren=992220707" target="_blank" rel="noopener noreferrer" class="qualiopi-btn-verify">
+                                <i class="fas fa-external-link-alt"></i> Consulter le certificat officiel (Certifopac)
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="qualiopi-grid">
 
                     <!-- Organisme -->
@@ -681,7 +721,7 @@
                         <strong>Babylone 42 SAS</strong><br>
                         SIRET : 992 220 707 00010<br>
                         NDA : 93132513713 — Déclaration d'activité enregistrée auprès du préfet de région Provence-Alpes-Côte d'Azur. Cet enregistrement ne vaut pas agrément de l'État.<br>
-                        Démarche de certification Qualiopi en cours.
+                        Certifié <strong>Qualiopi</strong> (Certificat n° 965711-1).
                     </div>
 
                     <!-- Modalités d'accès et inscription -->
@@ -702,7 +742,7 @@
                         <strong>Tarif inter-entreprises :</strong> 790 € HT (exonération de TVA — art. 261.4.4° a du CGI)<br>
                         <strong>Tarif indépendant :</strong> 590 € HT <small>(sur justificatif de micro-entreprise ou profession libérale)</small><br>
                         <strong>Modalités de règlement :</strong> 30% d'acompte à la signature de la convention, solde 15 jours avant le début de la formation. Facilités de paiement possibles.<br>
-                        <strong>Financements :</strong> OPCO, CPF, Plan de développement des compétences, financement direct.<br>
+                        <strong>Financements :</strong> OPCO (Atlas, AKTO, OPCO EP...), FIF-PL, FNE-Formation, Plan de développement des compétences, financement direct.<br>
                         Intra-entreprise : <a href="contact-page.html" style="color: var(--primary-color);">devis sur demande</a>.
                     </div>
 
@@ -792,6 +832,13 @@
                 <div class="footer-col brand-col">
                     <img src="images/logo.svg" alt="Babylone42 Logo" class="footer-logo-img">
                     <p class="footer-desc">Babylone42 forme vos équipes à exploiter le potentiel de l'IA et de la data pour gagner en autonomie et en productivité.</p>
+                    
+                    <div style="margin-top: 1.2rem; margin-bottom: 1.2rem; padding: 0.6rem 0.9rem; background: #ffffff; border-radius: 8px; max-width: 200px; box-shadow: 0 2px 10px rgba(0,0,0,0.15);">
+                        <a href="https://certifopac.fr/qualiopi/verification-certificat/?siren=992220707" target="_blank" rel="noopener noreferrer" title="Vérifier notre certificat Qualiopi">
+                            <img src="images/qualiopi/qualiopi_actions_formation.png" alt="Certification Qualiopi Babylone 42" style="width: 100%; height: auto; display: block;">
+                        </a>
+                    </div>
+
                     <div class="footer-socials">
                         <a href="https://www.linkedin.com/company/babylone42/" target="_blank" rel="noopener noreferrer"
                             aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
@@ -849,8 +896,8 @@
             </div>
 
             <div class="footer-bottom">
-                <p class="copyright">© 2025 Babylone42.  · SIRET : 992 220 707 00010 · NDA : enregistré sous le numéro 93132513713. Cet enregistrement ne vaut pas agrément de l'État.</p>
-                <div class="legal-links"><a href="indicateurs-resultats.html">Indicateurs de Résultats</a><a href="cgv.html">CGV</a>
+                <p class="copyright">© 2025 Babylone42. · Organisme certifié <strong>Qualiopi</strong> (Actions de formation — Certificat n° 965711-1 délivré par CERTIFOPAC) · SIRET : 992 220 707 00010 · NDA : 93132513713 (enregistré auprès du préfet de région PACA. Cet enregistrement ne vaut pas agrément de l'État).</p>
+                <div class="legal-links"><a href="https://certifopac.fr/qualiopi/verification-certificat/?siren=992220707" target="_blank" rel="noopener noreferrer" style="color: #109B80; font-weight: 600;"><i class="fas fa-certificate"></i> Certificat Qualiopi</a><a href="indicateurs-resultats.html">Indicateurs de Résultats</a><a href="cgv.html">CGV</a>
                     <a href="mentions-legales.html">Mentions Légales</a>
                     <a href="politique-confidentialite.html">Politique de Confidentialité</a>
                     <a href="cookies.html">Paramètres des cookies</a>
@@ -861,6 +908,22 @@
     </footer>
 
     <script src="script.js?v=5"></script>
+
+    <!-- Search Modal -->
+    <div id="search-modal" class="search-modal">
+        <div class="search-modal-content">
+            <div class="search-header">
+                <i class="fas fa-search search-icon-input"></i>
+                <input type="text" id="search-input" placeholder="Rechercher une formation, une question..." autocomplete="off">
+                <button id="close-search-modal" class="close-search-btn" aria-label="Fermer"><i class="fas fa-times"></i></button>
+            </div>
+            <div id="search-results" class="search-results">
+                <!-- Les résultats s'afficheront ici -->
+                <div class="search-empty-state">Tapez un mot-clé (ex: ChatGPT, Qualiopi, Prix...)</div>
+            </div>
+        </div>
+    </div>
+
 </body>
 
 </html>

@@ -1188,4 +1188,123 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
+// --------------------------------------------------------
+// Recherche Interne (Frontend Search)
+// --------------------------------------------------------
+document.addEventListener('DOMContentLoaded', () => {
+    const searchModal = document.getElementById('search-modal');
+    const openSearchBtn = document.getElementById('open-search-modal');
+    const closeSearchBtn = document.getElementById('close-search-modal');
+    const searchInput = document.getElementById('search-input');
+    const searchResults = document.getElementById('search-results');
 
+    if (!searchModal || !openSearchBtn) return;
+
+    // Index de recherche statique basé sur le contenu principal
+    const searchIndex = [
+        {
+            title: "Formation IA Générative",
+            desc: "Maîtrisez ChatGPT/Copilot pour la productivité quotidienne (Prompting, Assistants).",
+            url: "formation-genai.html",
+            keywords: ["ia générative", "chatgpt", "claude", "prompting", "copilot", "productivité", "formation"]
+        },
+        {
+            title: "Calendrier des Formations",
+            desc: "Découvrez les dates de nos prochaines sessions inter-entreprises.",
+            url: "calendrier-formations.html",
+            keywords: ["calendrier", "dates", "planning", "sessions", "inscription"]
+        },
+        {
+            title: "Certification Qualiopi",
+            desc: "Babylone42 est un organisme certifié Qualiopi pour les actions de formation.",
+            url: "index.html#certification-qualiopi",
+            keywords: ["qualiopi", "certification", "qualité", "rnq", "certifopac", "financement", "opco", "faf"]
+        },
+        {
+            title: "F.A.Q - Financements",
+            desc: "Prise en charge par les OPCO, FAF et plan de développement des compétences.",
+            url: "faq.html",
+            keywords: ["financement", "opco", "faf", "prix", "coût", "tarif", "remboursement"]
+        },
+        {
+            title: "Actualités & Articles",
+            desc: "L'IA avance vite, ne ratez rien. Nos derniers articles et guides stratégiques.",
+            url: "articles.html",
+            keywords: ["actualités", "articles", "blog", "guides", "news", "tendances", "2027", "agents autonomes"]
+        },
+        {
+            title: "Contact & Devis",
+            desc: "Passez à l'action et formez vos équipes.",
+            url: "contact-page.html",
+            keywords: ["contact", "devis", "téléphone", "email", "joindre", "appeler", "message"]
+        },
+        {
+            title: "Vos Interlocuteurs",
+            desc: "Découvrez l'équipe pédagogique et technique de Babylone42.",
+            url: "interlocuteurs.html",
+            keywords: ["équipe", "interlocuteurs", "formateurs", "experts", "qui sommes nous"]
+        }
+    ];
+
+    function openSearch() {
+        searchModal.classList.add('active');
+        setTimeout(() => searchInput.focus(), 100);
+    }
+
+    function closeSearch() {
+        searchModal.classList.remove('active');
+        searchInput.value = '';
+        renderResults('');
+    }
+
+    function renderResults(query) {
+        if (!query.trim()) {
+            searchResults.innerHTML = '<div class="search-empty-state">Tapez un mot-clé (ex: ChatGPT, Qualiopi, Prix...)</div>';
+            return;
+        }
+
+        const normalizedQuery = query.toLowerCase().trim();
+        const results = searchIndex.filter(item => {
+            return item.title.toLowerCase().includes(normalizedQuery) ||
+                   item.desc.toLowerCase().includes(normalizedQuery) ||
+                   item.keywords.some(kw => kw.includes(normalizedQuery));
+        });
+
+        if (results.length === 0) {
+            searchResults.innerHTML = '<div class="search-empty-state">Aucun résultat trouvé pour "' + query + '".</div>';
+            return;
+        }
+
+        let html = '';
+        results.forEach(res => {
+            html += `
+                <a href="${res.url}" class="search-result-item" onclick="document.getElementById('search-modal').classList.remove('active')">
+                    <div class="search-result-title">${res.title}</div>
+                    <div class="search-result-desc">${res.desc}</div>
+                </a>
+            `;
+        });
+        searchResults.innerHTML = html;
+    }
+
+    openSearchBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        openSearch();
+    });
+
+    closeSearchBtn.addEventListener('click', closeSearch);
+
+    searchModal.addEventListener('click', (e) => {
+        if (e.target === searchModal) closeSearch();
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && searchModal.classList.contains('active')) {
+            closeSearch();
+        }
+    });
+
+    searchInput.addEventListener('input', (e) => {
+        renderResults(e.target.value);
+    });
+});

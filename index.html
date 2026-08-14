@@ -32,6 +32,158 @@
         rel="stylesheet">
     <link rel="stylesheet" href="style.css?v=11">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Schema.org Structured Data (GEO & AI Search Optimization) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://www.babylone42.fr/#organization",
+          "name": "Babylone42",
+          "legalName": "Babylone 42",
+          "url": "https://www.babylone42.fr",
+          "logo": "https://www.babylone42.fr/images/logo.svg",
+          "description": "Organisme de formation certifié Qualiopi spécialisé en Intelligence Artificielle et Data à Marseille et en France.",
+          "email": "contact@babylone42.fr",
+          "telephone": "+33773609849",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Marseille",
+            "addressRegion": "Provence-Alpes-Côte d'Azur",
+            "addressCountry": "FR"
+          },
+          "sameAs": [
+            "https://www.linkedin.com/company/babylone42/",
+            "https://www.instagram.com/babylone42_/",
+            "https://www.facebook.com/profile.php?id=61583402791597",
+            "https://x.com/babylone42_",
+            "https://m.youtube.com/@Babylone42"
+          ],
+          "hasCredential": [
+            {
+              "@type": "EducationalOccupationalCredential",
+              "name": "Certification Qualiopi - Actions de formation (L.6313-1 - 1°)",
+              "credentialCategory": "Certification Nationale Qualité (RNQ)",
+              "recognizedBy": {
+                "@type": "Organization",
+                "name": "CERTIFOPAC"
+              },
+              "validIn": {
+                "@type": "AdministrativeArea",
+                "name": "France"
+              }
+            }
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.babylone42.fr/#website",
+          "url": "https://www.babylone42.fr",
+          "name": "Babylone42",
+          "publisher": {
+            "@id": "https://www.babylone42.fr/#organization"
+          },
+          "inLanguage": "fr-FR",
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://www.babylone42.fr/#search?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://www.babylone42.fr/#faqpage",
+          "isPartOf": {
+            "@id": "https://www.babylone42.fr/#website"
+          },
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Comment se déroule une formation avec Babylone42 ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Nous commençons par un diagnostic gratuit de vos besoins en compétences. Ensuite, nous vous proposons un parcours pédagogique adapté. Les sessions alternent théorie et nombreux cas pratiques sur vos propres outils professionnels."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Combien coûtent vos parcours de formation ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Nos tarifs varient selon la durée et le format (intra/inter-entreprises). Nous ajustons systématiquement nos propositions pour optimiser la prise en charge par les fonds de formation. Contactez-nous pour un devis précis."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Mes données sont-elles sécurisées pendant les cas pratiques ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Absolument. Nous vous apprenons à configurer des environnements sécurisés (mode confidentiel, instances privées) et nous garantissons que les données utilisées en formation ne nourrissent aucun modèle public."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Dois-je avoir des compétences techniques pour suivre vos formations ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Non, ce n'est pas nécessaire pour nos parcours \"Literacy\" ou \"IA Générative\". Nos formations sont conçues pour être accessibles à tous les collaborateurs, quel que soit leur niveau technique initial."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Quelles technologies sont enseignées ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Nous vous formons sur les outils les plus performants du marché (ChatGPT, Claude, Midjourney), mais aussi sur des compétences métiers ciblées (Python, Copilots d'entreprise) selon votre parcours."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "L'IA va-t-elle remplacer mes employés ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Non, notre approche pédagogique démontre que l'IA est un assistant (un \"Copilot\"). Nous formons vos collaborateurs pour qu'ils s'approprient cet outil, gagnent en productivité et se concentrent sur la valeur ajoutée de leur métier."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Vos formations sont-elles éligibles aux financements ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Oui. Grâce à notre certification Qualiopi (Certificat n° 965711-1 délivré par CERTIFOPAC pour les actions de formation), nos parcours sont éligibles aux prises en charge par les OPCO (Atlas, AKTO, OPCO EP, etc.), le FAF (FIF-PL) et le Plan de développement des compétences. Nous vous accompagnons dans le montage de vos dossiers de financement."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Au bout de combien de temps serons-nous autonomes ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "L'autonomie est le cœur de notre pédagogie. Dès la fin de la première journée, vos équipes seront capables de mettre en application leurs nouvelles compétences sur des tâches concrètes."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Intervenez-vous partout en France ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Oui. Bien que basés à Marseille, nous travaillons avec des clients dans toute la France, et même à l'international, grâce aux outils de collaboration à distance."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Peut-on tester avant de s'engager ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Oui, nous fonctionnons souvent par phase de \"Diagnostic\" ou de \"POC\" (Preuve de Concept). Cela vous permet de valider la valeur de la formation sur un périmètre restreint avant un déploiement global."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
     <style>
         .link-disabled {
             opacity: 0.4 !important;
@@ -118,6 +270,7 @@
                     
                     <li><a href="articles.html">Actualités</a></li>
                     <li><a href="contact-page.html" class="btn btn-primary nav-btn">Être rappelé</a></li>
+                    <li class="nav-search-btn"><a href="#" id="open-search-modal" aria-label="Recherche"><i class="fas fa-search"></i></a></li>
                 </ul>
 
                 <div class="hamburger">
@@ -134,12 +287,12 @@
         </div>
         <div class="container hero-content">
             <div class="hero-text-content">
-                <span class="badge" style="background: rgba(16, 155, 128, 0.15); color: #109B80; border: 1px solid rgba(16, 155, 128, 0.3); padding: 0.4rem 1rem; border-radius: 20px; font-weight: 600; font-size: 0.85rem; display: inline-block; margin-bottom: 1rem;"><i class="fas fa-certificate" style="margin-right: 0.4rem;"></i> Organisme de formation enregistré sous le n° NDA 93132513713</span>
+                <span class="badge" style="background: rgba(16, 155, 128, 0.15); color: #109B80; border: 1px solid rgba(16, 155, 128, 0.3); padding: 0.4rem 1rem; border-radius: 20px; font-weight: 600; font-size: 0.85rem; display: inline-flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem;"><i class="fas fa-check-circle" style="color: #109B80;"></i> Organisme certifié <strong>Qualiopi</strong> (Actions de formation) · NDA 93132513713</span>
                 <h1>Formez vos équipes et transformez votre entreprise grâce à <span class="highlight">l'IA opérationnelle</span></h1>
                 <p class="hero-subtitle">Nous formons vos collaborateurs à maîtriser les outils d'intelligence artificielle qui automatisent vos tâches et augmentent immédiatement la productivité de vos équipes.</p>
                 <div class="hero-cta">
-                    <a href="#formations" class="btn btn-primary">Formations</a>
-                    </div>
+                    <a href="#formations" class="btn btn-primary">Découvrir nos formations</a>
+                </div>
 
                 <div class="hero-stats">
                     <div class="stat-item">
@@ -439,8 +592,52 @@
         </div>
     </section>
 
+    <!-- QUALIOPI TRUST SECTION -->
+    <section id="certification-qualiopi" class="section-padding bg-darker" style="border-top: 1px solid rgba(255, 255, 255, 0.05); border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
+        <div class="container" style="max-width: 1080px;">
+            <div style="text-align: center; margin-bottom: 2.5rem;">
+                <span class="badge" style="background: rgba(16, 155, 128, 0.15); color: #109B80; border: 1px solid rgba(16, 155, 128, 0.3); padding: 0.4rem 1rem; border-radius: 20px; font-weight: 600; font-size: 0.85rem; display: inline-flex; align-items: center; gap: 0.4rem;">
+                    <i class="fas fa-shield-alt"></i> Gage de Qualité & Financement
+                </span>
+                <h2 class="section-title" style="margin-top: 0.8rem; margin-bottom: 0.5rem;">Organisme de Formation <span class="highlight">Certifié Qualiopi</span></h2>
+                <p style="color: var(--text-muted); max-width: 680px; margin: 0 auto; font-size: 1rem;">
+                    Nos processus de formation répondent aux exigences du Référentiel National Qualité (RNQ), vous garantissant l'excellence pédagogique et l'éligibilité aux financements OPCO & FAF.
+                </p>
+            </div>
+
+            <div class="qualiopi-trust-box">
+                <div class="qualiopi-logo-wrap">
+                    <a href="https://certifopac.fr/qualiopi/verification-certificat/?siren=992220707" target="_blank" rel="noopener noreferrer" title="Consulter la validité officielle du certificat Qualiopi Babylone 42">
+                        <img src="images/qualiopi/qualiopi_actions_formation.png" alt="Qualiopi Processus Certifié - République Française - Actions de formation" width="280">
+                    </a>
+                </div>
+                <div class="qualiopi-info-content">
+                    <h3><i class="fas fa-check-circle"></i> Certification Nationale Qualité RNQ</h3>
+                    <p>
+                        La certification qualité a été délivrée au titre de la catégorie d'action suivante : <strong>ACTIONS DE FORMATION</strong> (L.6313-1 - 1°). Délivrée par l'organisme certificateur <strong>CERTIFOPAC</strong>, elle atteste de la conformité de nos processus de formation aux exigences du Référentiel National Qualité (RNQ).
+                    </p>
+                    <div class="qualiopi-meta-badges">
+                        <span class="qualiopi-meta-pill"><i class="fas fa-award"></i> Certificat n° 965711-1</span>
+                        <span class="qualiopi-meta-pill"><i class="fas fa-calendar-check"></i> Délivré le 11/08/2026</span>
+                        <span class="qualiopi-meta-pill"><i class="fas fa-shield-alt"></i> Certificateur : CERTIFOPAC</span>
+                        <span class="qualiopi-meta-pill"><i class="fas fa-id-card"></i> SIREN : 992 220 707</span>
+                        <span class="qualiopi-meta-pill"><i class="fas fa-hand-holding-usd"></i> Prise en charge OPCO & FAF</span>
+                    </div>
+                    <div class="qualiopi-actions-row">
+                        <a href="https://certifopac.fr/qualiopi/verification-certificat/?siren=992220707" target="_blank" rel="noopener noreferrer" class="qualiopi-btn-verify">
+                            <i class="fas fa-external-link-alt"></i> Vérifier le certificat officiel (Certifopac)
+                        </a>
+                        <a href="indicateurs-resultats.html" class="qualiopi-btn-outline">
+                            <i class="fas fa-chart-bar"></i> Consulter nos indicateurs de résultats
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- FAQ SECTION -->
-    <section id="faq" class="section-padding bg-darker">
+    <section id="faq" class="section-padding bg-light">
         <div class="container">
             <div class="faq-grid">
                 <!-- Left Column: Title & Intro -->
@@ -521,7 +718,7 @@
                                 <i class="fas fa-chevron-down"></i>
                             </div>
                             <div class="faq-answer">
-                                <p>Oui. Nos parcours répondent aux critères de prise en charge du Plan de Développement des Compétences (OPCO). Nous vous accompagnons dans le montage de vos dossiers de financement.</p>
+                                <p>Oui. Grâce à notre certification Qualiopi (Certificat n° 965711-1 délivré par CERTIFOPAC pour les actions de formation), nos parcours sont éligibles aux prises en charge par les OPCO (Atlas, AKTO, OPCO EP, etc.), le FAF (FIF-PL) et le Plan de développement des compétences. Nous vous accompagnons dans le montage de vos dossiers de financement.</p>
                             </div>
                         </div>
                         <!-- Item 8 -->
@@ -743,6 +940,13 @@
                 <div class="footer-col brand-col">
                     <img src="images/logo.svg" alt="Babylone42 Logo" class="footer-logo-img">
                     <p class="footer-desc">Babylone42 forme vos équipes à exploiter le potentiel de l'IA et de la data pour gagner en autonomie et en productivité.</p>
+                    
+                    <div style="margin-top: 1.2rem; margin-bottom: 1.2rem; padding: 0.6rem 0.9rem; background: #ffffff; border-radius: 8px; max-width: 200px; box-shadow: 0 2px 10px rgba(0,0,0,0.15);">
+                        <a href="https://certifopac.fr/qualiopi/verification-certificat/?siren=992220707" target="_blank" rel="noopener noreferrer" title="Vérifier notre certificat Qualiopi">
+                            <img src="images/qualiopi/qualiopi_actions_formation.png" alt="Certification Qualiopi Babylone 42" style="width: 100%; height: auto; display: block;">
+                        </a>
+                    </div>
+
                     <div class="footer-socials">
                         <a href="https://www.linkedin.com/company/babylone42/" target="_blank" rel="noopener noreferrer"
                             aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
@@ -800,8 +1004,8 @@
             </div>
 
             <div class="footer-bottom">
-                <p class="copyright">© 2025 Babylone42.  · SIRET : 992 220 707 00010 · NDA : enregistré sous le numéro 93132513713. Cet enregistrement ne vaut pas agrément de l'État.</p>
-                <div class="legal-links"><a href="indicateurs-resultats.html">Indicateurs de Résultats</a><a href="cgv.html">CGV</a>
+                <p class="copyright">© 2025 Babylone42. · Organisme certifié <strong>Qualiopi</strong> (Actions de formation — Certificat n° 965711-1 délivré par CERTIFOPAC) · SIRET : 992 220 707 00010 · NDA : 93132513713 (enregistré auprès du préfet de région PACA. Cet enregistrement ne vaut pas agrément de l'État).</p>
+                <div class="legal-links"><a href="https://certifopac.fr/qualiopi/verification-certificat/?siren=992220707" target="_blank" rel="noopener noreferrer" style="color: #109B80; font-weight: 600;"><i class="fas fa-certificate"></i> Certificat Qualiopi</a><a href="indicateurs-resultats.html">Indicateurs de Résultats</a><a href="cgv.html">CGV</a>
                     <a href="mentions-legales.html">Mentions Légales</a>
                     <a href="politique-confidentialite.html">Politique de Confidentialité</a>
                     <a href="cookies.html">Paramètres des cookies</a>
@@ -812,6 +1016,21 @@
     </footer>
 
     <script src="script.js?v=5"></script>
+
+    <!-- Search Modal -->
+    <div id="search-modal" class="search-modal">
+        <div class="search-modal-content">
+            <div class="search-header">
+                <i class="fas fa-search search-icon-input"></i>
+                <input type="text" id="search-input" placeholder="Rechercher une formation, une question..." autocomplete="off">
+                <button id="close-search-modal" class="close-search-btn" aria-label="Fermer"><i class="fas fa-times"></i></button>
+            </div>
+            <div id="search-results" class="search-results">
+                <!-- Les résultats s'afficheront ici -->
+                <div class="search-empty-state">Tapez un mot-clé (ex: ChatGPT, Qualiopi, Prix...)</div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>

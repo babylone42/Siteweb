@@ -1,0 +1,28 @@
+# Babylone42 — Organisme de Formation IA & Data
+
+> Organisme de formation spécialisé en Intelligence Artificielle et Data, certifié Qualiopi pour les actions de formation. Nous accompagnons les entreprises, équipes et dirigeants dans la montée en compétences et l'intégration opérationnelle des outils d'IA.
+
+## Informations Administratives & Conformité Qualiopi
+
+- **Nom légal** : Babylone 42 (Babylone42)
+- **Certification Qualiopi** : Certificat n° 965711-1 délivré le 11/08/2026 par CERTIFOPAC
+- **Catégorie d'action certifiée** : ACTIONS DE FORMATION (L.6313-1 - 1°)
+- **Numéro de Déclaration d'Activité (NDA)** : 93132513713 (enregistré auprès du préfet de région PACA. Cet enregistrement ne vaut pas agrément de l'État)
+- **SIREN** : 992 220 707
+- **SIRET** : 992 220 707 00010
+- **Localisation** : Marseille (PACA) — Interventions sur site dans toute la France et à distance
+- **Financement** : Éligible aux prises en charge OPCO (Atlas, AKTO, OPCO EP, etc.), FAF (FIF-PL) et Plan de développement des compétences
+
+## Offre de Formation Active
+
+- [Formation IA Générative](https://www.babylone42.fr/formation-genai.html) : Maîtrise des outils d'IA générative (ChatGPT, Claude, Midjourney), prompt engineering avancé, copilots d'entreprise et cas d'usage métiers.
+- [Calendrier des Formations](https://www.babylone42.fr/calendrier-formations.html) : Dates des prochaines sessions inter et intra-entreprises.
+- [Indicateurs de Résultats](https://www.babylone42.fr/indicateurs-resultats.html) : Suivi des indicateurs qualité et pédagogiques.
+
+## Contact & Coordonnées
+
+- **Site Web** : https://www.babylone42.fr
+- **Email** : contact@babylone42.fr
+- **Téléphone / WhatsApp** : +33 0 7 73 60 98 49
+- **Formulaire de contact** : https://www.babylone42.fr/contact-page.html
+- **Vérification du certificat Qualiopi** : https://certifopac.fr/qualiopi/verification-certificat/?siren=992220707

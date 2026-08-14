@@ -2566,5 +2566,314 @@ p {
         grid-template-columns: 1fr;
     }
 }
+/* Qualiopi Trust Component & Badges */
+.qualiopi-trust-box {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e2e8f0;
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
+.qualiopi-trust-box:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+}
 
+.qualiopi-logo-wrap {
+    flex-shrink: 0;
+    max-width: 280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.qualiopi-logo-wrap img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 6px;
+}
+
+.qualiopi-info-content {
+    flex: 1;
+    color: #334155;
+}
+
+.qualiopi-info-content h3 {
+    font-size: 1.4rem;
+    color: #0f172a;
+    font-weight: 700;
+    margin-bottom: 0.6rem;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.qualiopi-info-content h3 i {
+    color: #109B80;
+}
+
+.qualiopi-info-content p {
+    font-size: 0.95rem;
+    color: #475569;
+    line-height: 1.6;
+    margin-bottom: 1.2rem;
+}
+
+.qualiopi-meta-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-bottom: 1.2rem;
+}
+
+.qualiopi-meta-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.35rem 0.8rem;
+    background: #f1f5f9;
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    font-size: 0.82rem;
+    color: #1e293b;
+    font-weight: 500;
+}
+
+.qualiopi-meta-pill i {
+    color: #109B80;
+    font-size: 0.85rem;
+}
+
+.qualiopi-actions-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+}
+
+.qualiopi-btn-verify {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #109B80;
+    color: #ffffff !important;
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    font-size: 0.88rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.qualiopi-btn-verify:hover {
+    background: #0d7d67;
+    transform: translateY(-1px);
+}
+
+.qualiopi-btn-outline {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: transparent;
+    color: #334155 !important;
+    border: 1px solid #cbd5e1;
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    font-size: 0.88rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: border-color 0.2s, background 0.2s;
+}
+
+.qualiopi-btn-outline:hover {
+    background: #f8fafc;
+    border-color: #94a3b8;
+}
+
+/* Qualiopi Hero Card in Formations */
+.qualiopi-hero-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    margin-top: 1.5rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+.qualiopi-hero-card .qualiopi-mini-img {
+    width: 140px;
+    flex-shrink: 0;
+}
+
+.qualiopi-hero-card .qualiopi-mini-text {
+    font-size: 0.85rem;
+    color: #334155;
+    line-height: 1.45;
+}
+
+.qualiopi-hero-card .qualiopi-mini-text strong {
+    color: #0f172a;
+    display: block;
+    margin-bottom: 0.2rem;
+}
+
+@media (max-width: 860px) {
+    .qualiopi-trust-box {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
+        padding: 1.5rem;
+    }
+    .qualiopi-logo-wrap {
+        max-width: 220px;
+        align-self: center;
+    }
+    .qualiopi-hero-card {
+        flex-direction: column;
+        text-align: center;
+    }
+    .qualiopi-hero-card .qualiopi-mini-img {
+        width: 160px;
+        margin: 0 auto;
+    }
+}
+}
+
+/* Search Modal Styles */
+.nav-search-btn a {
+    color: var(--text-color);
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.nav-search-btn a:hover {
+    color: var(--primary-color);
+}
+
+.search-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(10, 15, 22, 0.95);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    z-index: 9999;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.search-modal.active {
+    display: block;
+    opacity: 1;
+}
+
+.search-modal-content {
+    position: relative;
+    max-width: 800px;
+    margin: 10vh auto;
+    padding: 2rem;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+    transform: translateY(-20px);
+    transition: transform 0.3s ease;
+}
+
+.search-modal.active .search-modal-content {
+    transform: translateY(0);
+}
+
+.search-header {
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.search-icon-input {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-right: 1rem;
+}
+
+#search-input {
+    flex-grow: 1;
+    background: transparent;
+    border: none;
+    color: var(--text-color);
+    font-size: 1.5rem;
+    outline: none;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+#search-input::placeholder {
+    color: var(--text-muted);
+}
+
+.close-search-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-muted);
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close-search-btn:hover {
+    color: var(--primary-color);
+}
+
+.search-results {
+    max-height: 60vh;
+    overflow-y: auto;
+}
+
+.search-empty-state {
+    text-align: center;
+    color: var(--text-muted);
+    padding: 2rem;
+    font-style: italic;
+}
+
+.search-result-item {
+    display: block;
+    padding: 1rem;
+    border-radius: 8px;
+    text-decoration: none;
+    color: var(--text-color);
+    transition: background 0.3s ease;
+    margin-bottom: 0.5rem;
+    border: 1px solid transparent;
+}
+
+.search-result-item:hover {
+    background: rgba(16, 155, 128, 0.1);
+    border-color: rgba(16, 155, 128, 0.3);
+}
+
+.search-result-title {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--primary-color);
+    margin-bottom: 0.3rem;
+}
+
+.search-result-desc {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
