@@ -245,23 +245,13 @@
                             <li><a href="interlocuteurs.html">Vos interlocuteurs</a></li>
                         </ul>
                     </li>
-                    <li class="dropdown">
+                                        <li class="dropdown">
                         <a href="index.html#formations">Formations <i class="fas fa-chevron-down"
                                 style="font-size: 0.8rem; margin-left: 0.3rem;"></i></a>
                         <ul class="dropdown-menu">
-                            <li class="dropdown-header" style="font-weight: 700; font-size: 0.85rem; color: #109B80; padding: 0.6rem 1rem 0.3rem 1rem; text-transform: uppercase; letter-spacing: 0.05em;">Secteurs & Métiers</li>
-                            <li><a href="#" class="link-disabled" style="padding-left: 1.5rem;">Cabinets d'Avocats</a></li>
-                            <li><a href="#" class="link-disabled" style="padding-left: 1.5rem;">Expertise Comptable & Audit</a></li>
-                            
-                            <li style="border-top: 1px solid rgba(255,255,255,0.08); margin: 0.4rem 0;"></li>
-                            
-                            <li class="dropdown-header" style="font-weight: 700; font-size: 0.85rem; color: #109B80; padding: 0.6rem 1rem 0.3rem 1rem; text-transform: uppercase; letter-spacing: 0.05em;">Technologies & Outils</li>
+                            <li class="dropdown-header" style="font-weight: 700; font-size: 0.85rem; color: #109B80; padding: 0.6rem 1rem 0.3rem 1rem; text-transform: uppercase; letter-spacing: 0.05em;">Formations Disponibles</li>
                             <li><a href="formation-genai.html" style="padding-left: 1.5rem;">IA Générative</a></li>
-                            <li><a href="#" class="link-disabled" style="padding-left: 1.5rem;">Vidéo IA Pro</a></li>
-                            <li><a href="#" class="link-disabled" style="padding-left: 1.5rem;">Jupyter</a></li>
-                            <li><a href="#" class="link-disabled" style="padding-left: 1.5rem;">Python</a></li>
-                            <li><a href="#" class="link-disabled" style="padding-left: 1.5rem;">Machine Learning</a></li>
-                            <li><a href="#" class="link-disabled" style="padding-left: 1.5rem;">Deep Learning</a></li>
+                            <li><a href="formation-video-ia-pro.html" style="padding-left: 1.5rem;">Vidéo IA Pro</a></li>
                             
                             <li style="border-top: 1px solid rgba(255,255,255,0.08); margin: 0.4rem 0;"></li>
                             <li><a href="calendrier-formations.html" style="font-weight: bold;">Calendrier des formations</a></li>
@@ -374,19 +364,29 @@
                         class="fas fa-chevron-left"></i></button>
                 <div class="carousel-track-wrapper">
                     <div class="carousel-track" id="formations-track">
-                        <!-- Card 3 (IA Générative - Active & First) -->
+                        <!-- Card 1 (IA Générative - Active) -->
                         <a href="formation-genai.html" class="solution-card">
                             <div class="solution-visual">
                                 <img src="images/formation_genai.png" alt="IA Générative">
                             </div>
                             <div class="solution-content">
                                 <h3>IA Générative</h3>
-                                <p>Maîtrisez ChatGPT/Copilot pour la productivité quotidienne et explorez les usages
-                                    avancés de l'IA générative.</p>
+                                <p>Maîtrisez ChatGPT/Copilot pour la productivité quotidienne et explorez les usages avancés de l'IA générative.</p>
                             </div>
                         </a>
 
-                        <!-- Card 1 (Disabled) -->
+                        <!-- Card 2 (Réalisation de vidéos par l'IA - Active) -->
+                        <a href="formation-video-ia-pro.html" class="solution-card inverted">
+                            <div class="solution-visual">
+                                <img src="images/formation-video-ia-pro.png" alt="Réalisation de vidéos par l'IA">
+                            </div>
+                            <div class="solution-content">
+                                <h3>Réalisation de vidéos par l'IA</h3>
+                                <p>Apprenez à scénariser, générer et monter des vidéos professionnelles grâce aux outils d'IA générative.</p>
+                            </div>
+                        </a>
+
+                        <!-- Card 3 (Disabled) -->
                         <a href="#" class="solution-card card-disabled">
                             <div class="solution-visual">
                                 <img src="images/formation_avocats.png" alt="IA pour les Avocats">
@@ -397,7 +397,7 @@
                             </div>
                         </a>
 
-                        <!-- Card 2 (Disabled) -->
+                        <!-- Card 4 (Disabled) -->
                         <a href="#" class="solution-card inverted card-disabled">
                             <div class="solution-visual">
                                 <img src="images/formation_comptables.png" alt="IA pour les Experts-Comptables">
@@ -405,17 +405,6 @@
                             <div class="solution-content">
                                 <h3>IA pour les Experts-Comptables</h3>
                                 <p>Automatisez la saisie, fiabilisez les contrôles et décuplez vos capacités d'analyse de données financières.</p>
-                            </div>
-                        </a>
-
-                        <!-- Card 4 (Disabled) -->
-                        <a href="#" class="solution-card inverted card-disabled">
-                            <div class="solution-visual">
-                                <img src="images/formation-video-ia-pro.png" alt="Réalisation de vidéos par l'IA">
-                            </div>
-                            <div class="solution-content">
-                                <h3>Réalisation de vidéos par l'IA</h3>
-                                <p>Apprenez à scénariser, générer et monter des vidéos professionnelles grâce aux outils d'IA générative.</p>
                             </div>
                         </a>
 
@@ -782,7 +771,7 @@
                         à l'<span class="highlight">action</span></h2>
                     <p class="section-subtitle"
                         style="margin-bottom: 2rem; color: var(--text-muted); text-align: justify; max-width: 900px; margin-left: auto; margin-right: auto;">
-                        Il est grand temps de transformer vos équipes grâce à l'IA. Chez Babylone 42, nous concevons des parcours de formation immersifs pour permettre à vos collaborateurs d'utiliser les intelligences artificielles génératives au quotidien. Que vous souhaitiez automatiser la création de contenus, accélérer vos recherches juridiques ou comptables, ou former vos développeurs à l'IA, notre organisme est là pour vous accompagner. Notre équipe d'experts pédagogiques est prête à analyser vos besoins en compétences pour vous proposer un plan de formation adapté à votre budget et à vos objectifs. Faites le premier pas vers l'autonomie technologique de votre entreprise et contactez-nous dès aujourd'hui pour être rappelé par un conseiller formation.
+                        Il est grand temps de transformer vos équipes grâce à l'IA. Chez Babylone 42, nous concevons des parcours de formation immersifs pour permettre à vos collaborateurs de maîtriser les outils d'IA au quotidien. Que vous souhaitiez automatiser vos tâches avec l'IA générative ou internaliser votre production vidéo professionnelle, notre organisme certifié Qualiopi est là pour vous accompagner. Notre équipe d'experts pédagogiques est prête à analyser vos besoins en compétences pour vous proposer un plan de formation adapté à votre budget et à vos objectifs. Faites le premier pas vers l'autonomie technologique de votre entreprise et contactez-nous dès aujourd'hui pour être rappelé par un conseiller formation.
                     </p>
 
                     <div class="contact-details"
@@ -814,23 +803,11 @@
                         <div class="form-group dynamic-options" id="options-solutions" style="display:none;"></div>
 
                         <div class="form-group dynamic-options" id="options-formations">
-                            <label style="margin-bottom: 0.75rem; display: block;">Quelles formations vous intéressent
-                                ?</label>
+                            <label style="margin-bottom: 0.75rem; display: block; font-weight: 600;">Quelles formations vous intéressent ?</label>
                             <div class="checkbox-buttons">
-                                <label class="checkbox-btn"><input type="checkbox" name="formation_type"
-                                        value="video_ia_pro"> <span>Vidéo IA Pro</span></label>
-                                <label class="checkbox-btn"><input type="checkbox" name="formation_type"
-                                        value="prompting"> <span>Prompting & IA Générative</span></label>
-                                <label class="checkbox-btn"><input type="checkbox" name="formation_type"
-                                        value="jupyter"> <span>Jupyter Notebook</span></label>
-                                <label class="checkbox-btn"><input type="checkbox" name="formation_type" value="python">
-                                    <span>Python (Data / POO)</span></label>
-                                <label class="checkbox-btn"><input type="checkbox" name="formation_type"
-                                        value="machine_learning"> <span>Machine Learning</span></label>
-                                <label class="checkbox-btn"><input type="checkbox" name="formation_type"
-                                        value="deep_learning"> <span>Deep Learning</span></label>
-                                <label class="checkbox-btn"><input type="checkbox" name="formation_type" value="custom">
-                                    <span>Parcours sur-mesure</span></label>
+                                <label class="checkbox-btn"><input type="checkbox" name="formation_type" value="prompting"> <span>IA Générative</span></label>
+                                <label class="checkbox-btn"><input type="checkbox" name="formation_type" value="video_ia_pro"> <span>Vidéo IA Pro</span></label>
+                                <label class="checkbox-btn"><input type="checkbox" name="formation_type" value="custom"> <span>Parcours sur-mesure</span></label>
                             </div>
                         </div>
 
@@ -975,16 +952,13 @@
 
                 
 
-                <!-- Column 4: Formations -->
+                                <!-- Column 4: Formations -->
                 <div class="footer-col">
                     <h4 class="footer-title">Formations</h4>
                     <ul class="footer-links-list">
                         <li><a href="formation-genai.html">IA Générative</a></li>
-                        <li><a href="#" class="link-disabled">Vidéo IA Pro</a></li>
-                        <li><a href="#" class="link-disabled">Jupyter</a></li>
-                        <li><a href="#" class="link-disabled">Python</a></li>
-                        <li><a href="#" class="link-disabled">Machine Learning</a></li>
-                        <li><a href="#" class="link-disabled">Deep Learning</a></li>
+                        <li><a href="formation-video-ia-pro.html">Vidéo IA Pro</a></li>
+                        <li><a href="calendrier-formations.html">Calendrier des formations</a></li>
                     </ul>
                 </div>
 

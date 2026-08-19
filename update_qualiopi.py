@@ -30,7 +30,7 @@ TEMPLATE = """
                         <strong>Babylone 42 SAS</strong><br>
                         SIRET : 992 220 707 00010<br>
                         NDA : 93132513713 — Déclaration d'activité enregistrée auprès du préfet de région Provence-Alpes-Côte d'Azur. Cet enregistrement ne vaut pas agrément de l'État.<br>
-                        Démarche de certification Qualiopi en cours.
+                        Organisme certifié Qualiopi pour la catégorie d'actions : ACTIONS DE FORMATION.
                     </div>
 
                     <!-- Modalités d'accès et inscription -->

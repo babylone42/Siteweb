@@ -823,7 +823,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 { id: 's3', label: 'Session Hiver — 23 Décembre 2026', date: '2026-12-23' }
             ]
         },
-        'video_ia_pro': {
+                'video_ia_pro': {
             name: 'Vidéo IA Pro',
             basePrice: 1490,
             links: {
@@ -831,14 +831,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 accomp: 'https://pay.qonto.com/payment-links/019ea75f-1598-7712-b7bd-366a2717e45b?resource_id=019ea75f-1599-716a-a443-af8790d1da24'
             },
             sessions: [
-                { id: 's1', label: '07, 08, 09 Septembre 2026', date: '2026-09-07' },
-                { id: 's2', label: '21, 22, 23 Septembre 2026', date: '2026-09-21' },
-                { id: 's3', label: '05, 06, 07 Octobre 2026', date: '2026-10-05' },
-                { id: 's4', label: '19, 20, 21 Octobre 2026', date: '2026-10-19' },
-                { id: 's5', label: '09, 10, 11 Novembre 2026', date: '2026-11-09' },
-                { id: 's6', label: '23, 24, 25 Novembre 2026', date: '2026-11-23' },
-                { id: 's7', label: '07, 08, 09 Décembre 2026', date: '2026-12-07' },
-                { id: 's8', label: '14, 15, 16 Décembre 2026', date: '2026-12-14' }
+                { id: 'v1', label: '07, 08, 09 Septembre 2026', date: '2026-09-07' },
+                { id: 'v2', label: '21, 22, 23 Septembre 2026', date: '2026-09-21' },
+                { id: 'v3', label: '05, 06, 07 Octobre 2026', date: '2026-10-05' },
+                { id: 'v4', label: '19, 20, 21 Octobre 2026', date: '2026-10-19' },
+                { id: 'v5', label: '09, 10, 11 Novembre 2026', date: '2026-11-09' },
+                { id: 'v6', label: '23, 24, 25 Novembre 2026', date: '2026-11-23' },
+                { id: 'v7', label: '07, 08, 09 Décembre 2026', date: '2026-12-07' },
+                { id: 'v8', label: '14, 15, 16 Décembre 2026', date: '2026-12-14' }
             ]
         },
         'prompting': {
@@ -846,11 +846,14 @@ document.addEventListener('DOMContentLoaded', () => {
             basePrice: 790,
             links: { base: 'https://pay.qonto.com/payment-links/019f6b88-3383-7656-8128-c55704d76037?resource_id=019f6b88-3384-7a1d-bd40-b4e0755655d2' },
             sessions: [
-                { id: 's3', label: '16 - 17 Avril 2026', date: '2026-04-16' },
-                { id: 'ss1', label: '04 Juin 2026', date: '2026-06-04' },
-                { id: 's4', label: '03 - 04 Septembre 2026', date: '2026-09-03' },
-                { id: 's5', label: '15 - 16 Octobre 2026', date: '2026-10-15' },
-                { id: 's6', label: '18 Décembre 2026', date: '2026-12-18' }
+                { id: 'p1', label: '03 - 04 Septembre 2026', date: '2026-09-03' },
+                { id: 'p2', label: '17 - 18 Septembre 2026', date: '2026-09-17' },
+                { id: 'p3', label: '01 - 02 Octobre 2026', date: '2026-10-01' },
+                { id: 'p4', label: '15 - 16 Octobre 2026', date: '2026-10-15' },
+                { id: 'p5', label: '05 - 06 Novembre 2026', date: '2026-11-05' },
+                { id: 'p6', label: '19 - 20 Novembre 2026', date: '2026-11-19' },
+                { id: 'p7', label: '03 - 04 Décembre 2026', date: '2026-12-03' },
+                { id: 'p8', label: '17 - 18 Décembre 2026', date: '2026-12-17' }
             ]
         },
         'deep_learning': {
@@ -914,6 +917,13 @@ document.addEventListener('DOMContentLoaded', () => {
         if (urlFormation) {
             const radio = document.querySelector(`input[name="formation_type"][value="${urlFormation}"]`);
             if (radio) radio.checked = true;
+        }
+
+        const urlOption = urlParams.get('option') || urlParams.get('accompagnement');
+        if (urlOption && (urlOption === 'yes' || urlOption === 'true' || urlOption === '3mois' || urlOption === 'accompagnement_3mois' || urlOption === '1')) {
+            if (accomCheckbox) {
+                accomCheckbox.checked = true;
+            }
         }
 
         const updateFormState = () => {
@@ -1202,6 +1212,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Index de recherche statique basé sur le contenu principal
     const searchIndex = [
+        {
+            title: "Formation Réalisation de Vidéos par IA",
+            desc: "Créez des vidéos professionnelles 100% IA (Runway, Midjourney, HeyGen, Suno) sans matériel.",
+            url: "formation-video-ia-pro.html",
+            keywords: ["vidéo", "ia", "midjourney", "runway", "heygen", "suno", "elevenlabs", "avatar", "génération de vidéo", "création vidéo", "formation"]
+        },
         {
             title: "Formation IA Générative",
             desc: "Maîtrisez ChatGPT/Copilot pour la productivité quotidienne (Prompting, Assistants).",

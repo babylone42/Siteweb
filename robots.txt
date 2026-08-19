@@ -1,11 +1,22 @@
+# robots.txt — Babylone42 (https://www.babylone42.fr)
 User-agent: *
 Allow: /
 
-# Directives pour les robots d'indexation IA & Moteurs conversationnels
+# Moteurs de recherche & Indexation standard
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Directives pour les robots d'IA conversationnelle & Search IA
 User-agent: GPTBot
 Allow: /
 
 User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
 Allow: /
 
 User-agent: PerplexityBot
@@ -17,6 +28,12 @@ Allow: /
 User-agent: anthropic-ai
 Allow: /
 
+User-agent: KimiBot
+Allow: /
+
+User-agent: MoonshotBot
+Allow: /
+
 User-agent: Google-Extended
 Allow: /
 
@@ -26,5 +43,21 @@ Allow: /
 User-agent: CCBot
 Allow: /
 
-# Fichier d'information synthétique pour LLMs
+User-agent: cohere-ai
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+# Fichiers synthétiques pour LLMs (LLM context protocol)
 # https://www.babylone42.fr/llms.txt
+# https://www.babylone42.fr/llms-full.txt
+
+# Sitemap officiel
+Sitemap: https://www.babylone42.fr/sitemap.xml

@@ -68,3 +68,47 @@
 5. Émargement numérique par demi-journée (Microsoft Forms)
 6. Évaluations continues et sommative finale sur portfolio (seuil de réussite : 14/20)
 7. Remise de l'Attestation de fin de formation et du Badge numérique sous 48h.
+
+
+## 📚 Programme Détaillé — Vidéo IA Pro (21h / 3 jours)
+
+### Jour 1 : Stratégie, Organisation Data, Scripting C.O.R.E. & Voix IA (7h)
+- **Matin (9h00 - 12h30)** :
+  - Onboarding technique et organisation de l'arborescence Content Factory (01_SCRIPTS, 02_VOIX, 03_VISUELS, 04_VIDEOS, 05_EXPORTS).
+  - Psychologie de l'attention et mécanique virale des formats courts (15-60s) : règle des 3 premières secondes (Hook).
+  - Prompt Engineering narratif sur ChatGPT-4o et Claude 3.5 Sonnet avec la méthode C.O.R.E. (Contexte, Objectif, Rôle, Exécution) et calibrage vocal (130-150 mots/min).
+- **Après-midi (13h30 - 17h00)** :
+  - Génération de voix off et clonage vocal haute fidélité avec ElevenLabs.
+  - Sound design et bandes sonores personnalisées avec Suno.
+  - Livrable J1 : 3 scénarios validés + voix off et pistes audio synchronisées.
+
+### Jour 2 : Consistance Visuelle, Génération Vidéo IA & Montage Initial (7h)
+- **Matin (9h00 - 12h30)** :
+  - Création de la « Prompt Bible » de marque sur Midjourney v6 et Leonardo avec références de style (--sref) et de personnage (--cref).
+  - Storyboarding visuel et découpage des plans de cadrage cinématographiques.
+- **Après-midi (13h30 - 17h00)** :
+  - Animation Image-to-Video dans Runway Gen-3 et Kling AI avec contrôle des mouvements de caméra.
+  - Création et synchronisation labiale d'avatars parlants dans HeyGen.
+  - Prise en main de CapCut Desktop et assemblage de l'ours V1 calé sur la voix.
+  - Livrable J2 : Bibliothèque d'assets visuels/vidéos IA + premier montage V1.
+
+### Jour 3 : Montage Avancé, Variantes A/B, Cadre Juridique & Soutenance (7h)
+- **Matin (9h00 - 12h30)** :
+  - Montage rythmé dans CapCut : découpe des temps morts (jump cuts), alternance des plans toutes les 2-4s, sous-titres animés typographiques.
+  - Création de 3 variantes d'accroches A/B testing (Hook Question, Hook Contre-intuitif, Hook Preuve Sociale).
+- **Après-midi (13h30 - 17h00)** :
+  - Sécurisation juridique : RGPD, droit à l'image, droits d'auteur de l'IA et licences commerciales.
+  - Méthodologie Content Factory : industrialisation des gabarits (-70% de temps de production).
+  - Soutenance individuelle du portfolio vidéo final devant le jury (Objectif O5 — Seuil 14/20).
+  - Livrable J3 : Portfolio finalisé (1 vidéo premium + 3 variantes A/B) + Plan d'action Content Factory.
+
+## ❓ FAQ Complète Babylone42
+
+Q: Quelles sont les prises en charge financières possibles ?
+R: Organisme certifié Qualiopi, nos formations sont finançables par les OPCO (salariés), l'AIF de France Travail (demandeurs d'emploi), les FAF / FIF-PL / AGEFICE (indépendants), et les Plans de développement des compétences.
+
+Q: Faut-il des compétences préalables en vidéo ?
+R: Non. Aucun prérequis technique ou vidéo n'est exigé. Un ordinateur (Windows/macOS) avec connexion internet stable, micro, webcam et souris est requis.
+
+Q: Quel est le prix de la formation Vidéo IA Pro ?
+R: 1 490 € HT (nets de taxe en vertu de l'article 261.4.4° a du CGI). Une option d'accompagnement individuel post-formation de 3 mois est proposée à +200 € HT.
