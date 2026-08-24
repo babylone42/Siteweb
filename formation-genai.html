@@ -442,8 +442,8 @@
             <div class="container">
                 <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 3rem; max-width: 960px; margin: 0 auto;">
                     <div style="flex: 1; min-width: 200px; text-align: center;">
-                        <i class="fas fa-file-pdf" style="font-size: 4rem; color: var(--primary-color);"></i>
-                        <p style="color: #94a3b8; font-size: 0.8rem; margin-top: 0.5rem;">Format PDF – 8 pages</p>
+                        <img src="images/pdf_guide_mockup.jpg" alt="Guide 10 prompts PDF" style="width: 100%; max-width: 180px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                        <p style="color: #94a3b8; font-size: 0.8rem; margin-top: 0.8rem;">Format PDF – 8 pages</p>
                     </div>
                     <div style="flex: 2; min-width: 280px; font-family: var(--font-body);">
                         <h3 style="color: #fff; font-size: 1.8rem; margin-bottom: 0.5rem; font-family: var(--font-heading);">
@@ -1068,12 +1068,14 @@ document.addEventListener("DOMContentLoaded", function() {
                     messageEl.innerHTML = "✅ Merci ! Vérifiez votre boîte mail pour télécharger le guide.";
                     form.reset();
                 } else {
-                    throw new Error('Erreur lors de l\'enregistrement');
+                    const errData = await response.json().catch(() => null);
+                    throw new Error(errData?.message || `Erreur API Supabase (${response.status})`);
                 }
             } catch (error) {
+                console.error("Supabase Error:", error);
                 messageEl.style.display = "block";
                 messageEl.style.color = "#ef4444"; // Rouge erreur
-                messageEl.innerHTML = "❌ Une erreur est survenue. Veuillez vérifier la configuration de vos clés API.";
+                messageEl.innerHTML = "❌ " + (error.message || "Une erreur est survenue.");
             } finally {
                 submitBtn.innerHTML = originalBtnText;
                 submitBtn.disabled = false;
