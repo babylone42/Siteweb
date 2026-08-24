@@ -1065,11 +1065,11 @@ document.addEventListener("DOMContentLoaded", function() {
                 if (response.ok) {
                     messageEl.style.display = "block";
                     messageEl.style.color = "#109B80"; // Vert succès
-                    messageEl.innerHTML = "✅ Merci ! L'ouverture de votre guide va commencer.";
+                    messageEl.innerHTML = "✅ Merci ! Redirection en cours...";
                     form.reset();
                     
-                    // Ouverture du PDF dans un nouvel onglet (à remplacer par le bon lien vers votre PDF)
-                    window.open('programmes/10_prompts_guide.pdf', '_blank');
+                    // Redirection vers la page de remerciement
+                    window.location.href = 'merci.html?pdf=genai';
 
                 } else {
                     const errData = await response.json().catch(() => null);

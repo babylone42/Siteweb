@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10 prompts opérationnels - Babylone 42</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, sans-serif;
+            background: #f1f5f9;
+            padding: 2rem 1rem;
+            color: #0a0f2c;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 1rem;
+            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.15);
+            padding: 3rem;
+            page-break-after: always;
+        }
+        @media print {
+            body { background: white; padding: 0; }
+            .container { box-shadow: none; padding: 0; max-width: 100%; page-break-after: avoid; }
+            .page-break { page-break-before: always; }
+        }
+        .header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 2rem; padding-bottom: 1rem; border-bottom: 2px solid #e2edf7; }
+        .header img { height: 50px; }
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #004b3d, #009B7D, #007a62);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+        .badge {
+            background: #009B7D;
+            color: white;
+            font-size: 0.8rem;
+            font-weight: 600;
+            padding: 0.4rem 1rem;
+            border-radius: 40px;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+        .intro-box {
+            border-left: 5px solid #009B7D;
+            background: #e6f5f2;
+            padding: 1.5rem;
+            border-radius: 0 1rem 1rem 0;
+            margin: 1.5rem 0 2.5rem 0;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #1a2f2b;
+        }
+        h2 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            color: #004b3d;
+            border-bottom: 2px solid #e6f5f2;
+            padding-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .prompt-card {
+            background: #ffffff;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            border: 1px solid #cbd5e1;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            page-break-inside: avoid;
+        }
+        .prompt-card h3 {
+            color: #009B7D;
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .prompt-text {
+            background: #0f172a;
+            color: #f8fafc;
+            padding: 1.2rem;
+            border-radius: 0.8rem;
+            font-family: Consolas, Monaco, monospace;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            margin-bottom: 1rem;
+            white-space: pre-wrap;
+        }
+        .prompt-usage {
+            background: #f8fafc;
+            border-left: 4px solid #64748b;
+            padding: 1rem;
+            font-size: 0.95rem;
+            color: #334155;
+            border-radius: 0 0.5rem 0.5rem 0;
+        }
+        .cta-box {
+            background: #004b3d;
+            color: white;
+            text-align: center;
+            padding: 2.5rem;
+            border-radius: 1rem;
+            margin-top: 3rem;
+        }
+        .cta-box h3 { color: #99d6ca; font-size: 1.5rem; margin-bottom: 1rem; }
+        .cta-box p { font-size: 1.1rem; line-height: 1.6; margin-bottom: 1.5rem; }
+        .btn {
+            background: #009B7D;
+            color: white;
+            padding: 0.8rem 2rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+        }
+        footer {
+            text-align: center;
+            margin-top: 3rem;
+            font-size: 0.8rem;
+            color: #64748b;
+            border-top: 1px solid #e2e8f0;
+            padding-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- PAGE 1 : Introduction -->
+        <div class="header">
+            <img src="../images/logo.svg" alt="Babylone 42" onerror="this.src='../images/logo.png'">
+            <span class="badge">Guide Pratique IA</span>
+        </div>
+        
+        <h1>10 prompts opérationnels pour automatiser vos comptes-rendus, notes de frais et synthèses avec l'IA</h1>
+        
+        <div class="intro-box">
+            <strong>Vous êtes assistante de direction, office manager ou chargée d'administration ?</strong><br><br>
+            Chaque semaine, vous passez des heures à rédiger des comptes-rendus, saisir des notes de frais, synthétiser des réunions et répondre à des emails.<br><br>
+            Ce guide vous donne <strong>10 prompts prêts à l'emploi</strong> pour ChatGPT, Claude ou Copilot. Recopiez-les, collez-les, et gagnez 5 à 10 heures par semaine – sans prérequis technique.
+        </div>
+
+        <div class="page-break"></div>
+
+        <!-- PAGE 2-7 : Les Prompts -->
+        <h2>🚀 Optimisation des Réunions</h2>
+        
+        <div class="prompt-card">
+            <h3>Prompt #1 : Synthèse de réunion express</h3>
+            <div class="prompt-text">Agis comme un assistant de direction expert. Voici mes notes brutes de réunion. Je veux que tu les transformes en un compte-rendu professionnel. Le résultat doit comprendre : 
+1. L'objectif principal de la réunion (en 1 phrase). 
+2. Les décisions clés actées (à puces). 
+3. Le plan d'action sous forme de tableau avec 3 colonnes : Action, Responsable, Délai. 
+Garde un ton neutre et professionnel. 
+
+Voici les notes : [COLLER LES NOTES]</div>
+            <div class="prompt-usage"><strong>💡 Utilisation :</strong> Collez vos notes brutes. L'IA structure un compte-rendu avec décisions, actions et responsables instantanément.</div>
+        </div>
+
+        <div class="prompt-card">
+            <h3>Prompt #2 : Rédaction de compte-rendu structuré</h3>
+            <div class="prompt-text">Rédige un compte-rendu formel à partir de l'ordre du jour suivant et des notes associées. Utilise la structure classique : Date, Participants, Ordre du jour, Synthèse des échanges, Décisions, Prochaines étapes. Le texte doit être prêt à être envoyé à la direction, sans jargon inutile et avec une orthographe irréprochable. 
+
+Notes de la réunion : [COLLER LES NOTES]</div>
+            <div class="prompt-usage"><strong>💡 Utilisation :</strong> Donnez l'ordre du jour. L'IA rédige un CR complet au format ultra-professionnel prêt à être envoyé.</div>
+        </div>
+
+        <div class="page-break"></div>
+        <h2>💰 Gestion & Administratif</h2>
+
+        <div class="prompt-card">
+            <h3>Prompt #3 : Automatisation des notes de frais</h3>
+            <div class="prompt-text">Voici une liste de dépenses en vrac extraites de mes reçus de la semaine. Je veux que tu les organises dans un tableau propre avec les colonnes suivantes : Date, Catégorie (Repas, Transport, Hébergement, Divers), Description, Montant HT, TVA, Montant TTC. Calcule également le total général en bas du tableau. 
+
+Voici les dépenses : [COLLER LES DÉPENSES/INFOS DES TICKETS]</div>
+            <div class="prompt-usage"><strong>💡 Utilisation :</strong> Dictez ou copiez le texte brut de vos tickets. L'IA les classe par catégorie et génère un tableau récapitulatif parfait pour la comptabilité.</div>
+        </div>
+
+        <div class="prompt-card">
+            <h3>Prompt #6 : Planification d'agenda et To-Do list</h3>
+            <div class="prompt-text">Analyse l'email ci-dessous que je viens de recevoir. Extrais toutes les tâches implicites et explicites qui me sont demandées. Formate le résultat en une To-Do list classée par ordre de priorité (Urgent/Important). Pour chaque tâche, précise si je dois faire appel à une autre personne. 
+
+Voici l'email : [COLLER L'EMAIL]</div>
+            <div class="prompt-usage"><strong>💡 Utilisation :</strong> À partir d'un email fleuve, l'IA extrait les actions réelles et les priorise pour vous.</div>
+        </div>
+
+        <div class="page-break"></div>
+        <h2>✉️ Communication & Emails</h2>
+
+        <div class="prompt-card">
+            <h3>Prompt #4 : Correction et reformulation d'emails</h3>
+            <div class="prompt-text">Agis comme un relecteur professionnel bilingue. Voici l'ébauche d'un email que je m'apprête à envoyer à un client/partenaire important. Corrige toutes les fautes d'orthographe et de grammaire. Ensuite, propose-moi une deuxième version reformulée pour être plus courtoise, percutante et diplomate, tout en conservant le message initial. 
+
+Voici mon brouillon : [COLLER LE BROUILLON]</div>
+            <div class="prompt-usage"><strong>💡 Utilisation :</strong> L'IA reformule vos brouillons pour un ton professionnel, sans fautes, et surtout adapté au contexte.</div>
+        </div>
+
+        <div class="prompt-card">
+            <h3>Prompt #7 : Rédaction d'emails de relance</h3>
+            <div class="prompt-text">Je dois relancer un prospect/client qui ne m'a pas répondu depuis 2 semaines. Rédige 3 modèles d'emails différents que je pourrais utiliser : 
+1. Une version très formelle et polie. 
+2. Une version plus directe et orientée résultat. 
+3. Une version créative et accrocheuse (sans être familière). 
+Garde des espaces vides [comme ceci] pour que je puisse insérer son prénom et le nom de l'entreprise. 
+
+Le contexte est : [DÉCRIRE LE CONTEXTE DE LA RELANCE]</div>
+            <div class="prompt-usage"><strong>💡 Utilisation :</strong> L'IA génère 3 versions de relance (formelle, neutre, dynamique) pour débloquer les situations sans paraître insistant.</div>
+        </div>
+
+        <div class="page-break"></div>
+        <h2>📊 Analyse & Synthèse Documentaire</h2>
+
+        <div class="prompt-card">
+            <h3>Prompt #5 : Résumé de longs documents (PDF/Word)</h3>
+            <div class="prompt-text">Je dois comprendre rapidement l'essentiel de ce document de plusieurs pages, mais je n'ai que 5 minutes. Fais-moi un 'Executive Summary' (résumé exécutif) en exactement 5 points à puces. Ensuite, liste les 3 risques majeurs ou points d'attention mentionnés dans le texte. Ignore les détails superflus. 
+
+Voici le texte du document : [COLLER LE TEXTE]</div>
+            <div class="prompt-usage"><strong>💡 Utilisation :</strong> Collez un extrait. L'IA en sort un résumé exécutif de 5 lignes et vous alerte sur les points critiques.</div>
+        </div>
+
+        <div class="prompt-card">
+            <h3>Prompt #10 : Analyse de données basique</h3>
+            <div class="prompt-text">Voici un tableau de données brutes. Agis comme un Data Analyst. Analyse ces chiffres et donne-moi : 
+1. Les 3 tendances majeures qui s'en dégagent. 
+2. Les anomalies ou baisses de performance s'il y en a. 
+3. Une conclusion opérationnelle d'une ligne pour m'aider à prendre une décision. 
+
+Voici les données : [COLLER LES DONNÉES (EX: EXCEL COPIÉ)]</div>
+            <div class="prompt-usage"><strong>💡 Utilisation :</strong> Collez un tableau de chiffres. L'IA en extrait les tendances et les points d'alerte instantanément.</div>
+        </div>
+
+        <div class="page-break"></div>
+        <h2>🌍 Création & International</h2>
+
+        <div class="prompt-card">
+            <h3>Prompt #8 : Création de supports de présentation</h3>
+            <div class="prompt-text">Je dois créer une présentation PowerPoint de 10 slides maximum sur le sujet suivant : [SUJET]. Propose-moi une structure complète. Pour chaque slide, donne-moi : 
+1. Le titre de la slide (percutant). 
+2. Les 3 points clés à aborder (bullet points). 
+3. Une idée visuelle ou un type de graphique à insérer pour illustrer le propos. 
+
+Voici le contenu de base : [COLLER LE TEXTE DE BASE]</div>
+            <div class="prompt-usage"><strong>💡 Utilisation :</strong> À partir d'un texte, l'IA propose un plan de slides et des titres percutants pour vos présentations.</div>
+        </div>
+
+        <div class="prompt-card">
+            <h3>Prompt #9 : Traduction et adaptation de ton</h3>
+            <div class="prompt-text">Traduis le texte suivant en [LANGUE CIBLE]. Ce n'est pas une simple traduction mot à mot : je veux que tu adaptes culturellement le texte pour le marché local et que tu utilises un registre de langue [commercial / formel / interne]. Assure-toi que les formules de politesse correspondent aux standards professionnels de la langue cible. 
+
+Voici le texte : [COLLER LE TEXTE]</div>
+            <div class="prompt-usage"><strong>💡 Utilisation :</strong> Traduisez un texte tout en l'adaptant culturellement aux standards de vos correspondants étrangers.</div>
+        </div>
+
+        <div class="page-break"></div>
+
+        <!-- Conclusion -->
+        <div class="cta-box">
+            <h3>Vous voulez aller plus loin ?</h3>
+            <p>Ces 10 prompts ne sont qu'un aperçu de ce que l'IA peut faire pour vous au quotidien.<br><br>
+            Dans notre formation complète <strong>(1,5 jour)</strong>, vous apprendrez à :<br>
+            ✓ Maîtriser le Prompt Engineering avancé (Chain of Thought, Few-Shot).<br>
+            ✓ Automatiser des processus complets avec Make et Zapier.<br>
+            ✓ Sécuriser vos données et respecter le RGPD en entreprise.</p>
+            
+            <a href="https://babylone42.fr/formation-genai.html" class="btn">🚀 Découvrir le programme et s'inscrire</a>
+        </div>
+
+        <footer>
+            Ce guide est un contenu exclusif offert aux visiteurs de Babylone42. Il ne peut être partagé ou reproduit sans autorisation écrite.
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,168 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merci - Babylone 42</title>
+    <!-- CSS & Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- GSAP for animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <style>
+        .merci-section {
+            padding: 8rem 0 4rem 0;
+            text-align: center;
+            min-height: 70vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .merci-icon {
+            font-size: 5rem;
+            color: var(--primary-color);
+            margin-bottom: 2rem;
+        }
+        .merci-title {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        .merci-subtitle {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            margin-bottom: 3rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .dl-card {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 1rem;
+            padding: 2.5rem;
+            max-width: 500px;
+            width: 100%;
+            margin-bottom: 3rem;
+        }
+        .nl-card {
+            background: rgba(16, 155, 128, 0.05);
+            border: 1px solid rgba(16, 155, 128, 0.2);
+            border-radius: 1rem;
+            padding: 2.5rem;
+            max-width: 600px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="bg-dark">
+
+    <!-- HEADER / NAVBAR -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="images/logo.svg" alt="Babylone 42 Logo" class="logo-image">
+            </a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Accueil</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle">
+                        Formations
+                        <i class="fas fa-chevron-down" style="font-size: 0.8em; margin-left: 5px;"></i>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="formation-genai.html" class="dropdown-item">
+                            <i class="fas fa-robot"></i> IA Générative pour Managers
+                        </a>
+                        <a href="formation-video-ia-pro.html" class="dropdown-item">
+                            <i class="fas fa-video"></i> Production Vidéo IA Pro
+                        </a>
+                    </div>
+                </div>
+                <a href="conseil-ia.html" class="nav-link">Conseil</a>
+                <a href="a-propos.html" class="nav-link">À propos</a>
+                <a href="contact-page.html" class="nav-link btn btn-primary" style="margin-left: 1rem;">Nous contacter</a>
+            </div>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- MERCI SECTION -->
+    <section class="merci-section">
+        <div class="container">
+            <i class="fas fa-check-circle merci-icon"></i>
+            <h1 class="merci-title">Félicitations !</h1>
+            <p class="merci-subtitle">Votre demande a bien été enregistrée. Votre document est prêt à être téléchargé ci-dessous.</p>
+
+            <div class="dl-card" style="margin: 0 auto 3rem auto;">
+                <h3 id="pdf-title" style="margin-bottom: 1.5rem;">Votre Guide</h3>
+                <a id="download-btn" href="#" class="btn btn-primary" style="width: 100%; display: inline-block; padding: 1rem;" download>
+                    <i class="fas fa-download" style="margin-right: 0.5rem;"></i> Télécharger le PDF
+                </a>
+            </div>
+
+            <div class="nl-card" style="margin: 0 auto;">
+                <h3 style="margin-bottom: 1rem; color: var(--primary-color);"><i class="fas fa-envelope-open-text"></i> Ne ratez aucune astuce</h3>
+                <p style="color: var(--text-muted); margin-bottom: 1.5rem;">Inscrivez-vous à notre newsletter pour recevoir nos dernières découvertes en IA, nos nouveaux prompts et nos conseils directement dans votre boîte mail.</p>
+                <form class="footer-newsletter-form" style="display: flex; gap: 0.5rem; justify-content: center;">
+                    <input type="email" name="email" placeholder="Votre adresse e-mail" required style="padding: 0.8rem 1rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.2); background: transparent; color: white; flex: 1; max-width: 300px;">
+                    <button type="submit" class="btn btn-primary">S'inscrire</button>
+                </form>
+                <p class="form-message" style="display: none; margin-top: 1rem; font-weight: 600;"></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <img src="images/logo.svg" alt="Babylone 42 Logo" class="footer-logo">
+                    <p class="footer-desc">Votre partenaire pour la transformation digitale et l'intégration de l'Intelligence Artificielle en entreprise.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Liens rapides</h4>
+                    <ul class="footer-links">
+                        <li><a href="formation-genai.html">Formation IA Générative</a></li>
+                        <li><a href="formation-video-ia-pro.html">Formation Vidéo IA</a></li>
+                        <li><a href="conseil-ia.html">Conseil & Intégration</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Babylone 42. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const pdfType = urlParams.get('pdf');
+            const dlBtn = document.getElementById('download-btn');
+            const pdfTitle = document.getElementById('pdf-title');
+
+            if (pdfType === 'genai') {
+                dlBtn.href = 'programmes/10_prompts_guide.pdf';
+                dlBtn.download = '10_prompts_guide.pdf';
+                pdfTitle.innerHTML = '📘 Le guide des 10 prompts';
+            } else if (pdfType === 'video') {
+                dlBtn.href = 'programmes/checklist_video_pro.pdf';
+                dlBtn.download = 'checklist_video_pro.pdf';
+                pdfTitle.innerHTML = '🎬 Checklist Vidéo IA Pro';
+            } else {
+                // Default fallback
+                dlBtn.href = '#';
+                pdfTitle.innerHTML = 'Votre document';
+            }
+        });
+    </script>
+</body>
+</html>

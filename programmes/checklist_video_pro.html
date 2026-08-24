@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checklist Vidéo IA Pro - Babylone 42</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, sans-serif;
+            background: #f1f5f9;
+            padding: 2rem 1rem;
+            color: #0a0f2c;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 1rem;
+            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.15);
+            padding: 3rem;
+            page-break-after: always;
+        }
+        @media print {
+            body { background: white; padding: 0; }
+            .container { box-shadow: none; padding: 0; max-width: 100%; page-break-after: avoid; }
+            .page-break { page-break-before: always; }
+        }
+        .header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 2rem; padding-bottom: 1rem; border-bottom: 2px solid #e2edf7; }
+        .header img { height: 50px; }
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #004b3d, #009B7D, #007a62);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+        .badge {
+            background: #009B7D;
+            color: white;
+            font-size: 0.8rem;
+            font-weight: 600;
+            padding: 0.4rem 1rem;
+            border-radius: 40px;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+        .intro-box {
+            border-left: 5px solid #009B7D;
+            background: #e6f5f2;
+            padding: 1.5rem;
+            border-radius: 0 1rem 1rem 0;
+            margin: 1.5rem 0 2.5rem 0;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #1a2f2b;
+        }
+        h2 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin-top: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: #004b3d;
+            border-bottom: 2px solid #e6f5f2;
+            padding-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .step-card {
+            background: #ffffff;
+            border-radius: 1rem;
+            padding: 2rem;
+            border: 1px solid #cbd5e1;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            page-break-inside: avoid;
+            position: relative;
+        }
+        .step-number {
+            position: absolute;
+            top: -15px;
+            left: 20px;
+            background: #009B7D;
+            color: white;
+            font-size: 1.2rem;
+            font-weight: bold;
+            padding: 0.5rem 1rem;
+            border-radius: 30px;
+            box-shadow: 0 4px 10px rgba(0, 155, 125, 0.3);
+        }
+        .step-card h3 {
+            color: #004b3d;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            margin-top: 0.5rem;
+        }
+        .step-card p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #334155;
+            margin-bottom: 1.5rem;
+        }
+        .tools-box {
+            background: #f8fafc;
+            border-left: 4px solid #64748b;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+            color: #0f172a;
+            border-radius: 0 0.5rem 0.5rem 0;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .deliverable-box {
+            background: #e6f5f2;
+            border-left: 4px solid #009B7D;
+            padding: 1rem;
+            font-size: 0.95rem;
+            color: #0f172a;
+            border-radius: 0 0.5rem 0.5rem 0;
+            font-weight: 600;
+        }
+        .cta-box {
+            background: #004b3d;
+            color: white;
+            text-align: center;
+            padding: 2.5rem;
+            border-radius: 1rem;
+            margin-top: 3rem;
+            page-break-inside: avoid;
+        }
+        .cta-box h3 { color: #99d6ca; font-size: 1.5rem; margin-bottom: 1rem; }
+        .cta-box p { font-size: 1.1rem; line-height: 1.6; margin-bottom: 1.5rem; }
+        .btn {
+            background: #009B7D;
+            color: white;
+            padding: 0.8rem 2rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+        }
+        footer {
+            text-align: center;
+            margin-top: 3rem;
+            font-size: 0.8rem;
+            color: #64748b;
+            border-top: 1px solid #e2e8f0;
+            padding-top: 1rem;
+        }
+        .check-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 0.5rem;
+            font-size: 1.05rem;
+        }
+        .check-item::before {
+            content: '✓';
+            color: #009B7D;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- PAGE 1 : Introduction -->
+        <div class="header">
+            <img src="../images/logo.svg" alt="Babylone 42" onerror="this.src='../images/logo.png'">
+            <span class="badge">Checklist Production IA</span>
+        </div>
+        
+        <h1>Les 5 étapes pour produire votre première vidéo professionnelle avec l'IA en moins de 4 heures</h1>
+        
+        <div class="intro-box">
+            <strong>Vous voulez produire des vidéos pour vos réseaux sociaux, votre site ou vos campagnes, mais les agences sont trop chères et les délais trop longs ?</strong><br><br>
+            Cette checklist vous donne la méthodologie exacte utilisée par les réalisateurs pros pour passer de l'idée à la vidéo finale en quelques heures, grâce à l'intelligence artificielle.
+        </div>
+        
+        <h2>Le Processus de la Content Factory</h2>
+        <div class="check-item">Pas besoin de caméra, ni de studio, ni d'acteurs.</div>
+        <div class="check-item">Coûts de production divisés par 10.</div>
+        <div class="check-item">Qualité premium (4K, cinématique, voix ultra-réalistes).</div>
+
+        <div class="page-break"></div>
+
+        <!-- PAGE 2 : Etape 1 -->
+        <div class="step-card">
+            <div class="step-number">Étape 1</div>
+            <h3>Scripting C.O.R.E.</h3>
+            <p>Tout part du script. Avant de générer des images, vous devez structurer votre narration. La méthode C.O.R.E. garantit une vidéo captivante de la première à la dernière seconde. Concentrez-vous sur un "Hook" (accroche) fort dans les 3 premières secondes, exposez le problème, amenez la solution, et terminez par un Call-to-Action clair.</p>
+            
+            <div class="tools-box">
+                <strong>🛠️ Outils recommandés :</strong> ChatGPT, Claude
+            </div>
+            <div class="deliverable-box">
+                <strong>🎯 Livrable :</strong> Un script structuré (Hook, Problème, Solution, CTA) calibré pour 15 à 60 secondes.
+            </div>
+        </div>
+
+        <!-- PAGE 3 : Etape 2 -->
+        <div class="step-card">
+            <div class="step-number">Étape 2</div>
+            <h3>Sound Design (Voix & Musique)</h3>
+            <p>Le son fait 50% du travail d'une vidéo professionnelle. L'IA permet aujourd'hui de cloner votre propre voix ou de générer des voix de comédiens avec des intonations parfaites (soupirs, hésitations). Ajoutez-y une bande-son originale générée sur mesure pour rythmer le montage.</p>
+            
+            <div class="tools-box">
+                <strong>🛠️ Outils recommandés :</strong> ElevenLabs (Voix), Suno (Musique)
+            </div>
+            <div class="deliverable-box">
+                <strong>🎯 Livrable :</strong> Une voix off clonée (ou synthétique) ultra-réaliste et une bande-son rythmée adaptée à l'ambiance.
+            </div>
+        </div>
+
+        <div class="page-break"></div>
+
+        <!-- PAGE 4 : Etape 3 -->
+        <div class="step-card">
+            <div class="step-number">Étape 3</div>
+            <h3>Direction Artistique & Prompt Bible</h3>
+            <p>C'est ici que vous définissez l'univers visuel. Générez les images fixes clés qui serviront de base à la vidéo. Le défi principal est la "consistance" : s'assurer que le personnage ou le style graphique reste identique d'une image à l'autre en utilisant des Seeds ou des références.</p>
+            
+            <div class="tools-box">
+                <strong>🛠️ Outils recommandés :</strong> Midjourney, Leonardo.ai
+            </div>
+            <div class="deliverable-box">
+                <strong>🎯 Livrable :</strong> Une charte graphique et une bibliothèque de prompts (Prompt Bible) pour des visuels 100% cohérents.
+            </div>
+        </div>
+
+        <!-- PAGE 5 : Etape 4 -->
+        <div class="step-card">
+            <div class="step-number">Étape 4</div>
+            <h3>Animation Image-to-Video</h3>
+            <p>Prenez vos plus belles images générées à l'étape 3 et donnez-leur vie. Les nouveaux modèles d'IA vidéo permettent d'animer l'eau, les visages, de faire des mouvements de caméra complexes (traveling, zoom, drone) simplement en décrivant le mouvement souhaité.</p>
+            
+            <div class="tools-box">
+                <strong>🛠️ Outils recommandés :</strong> Runway Gen-3, Kling AI, Pika
+            </div>
+            <div class="deliverable-box">
+                <strong>🎯 Livrable :</strong> Des plans vidéo fluides et cinématiques générés à partir de vos images fixes.
+            </div>
+        </div>
+
+        <div class="page-break"></div>
+
+        <!-- PAGE 6 : Etape 5 et Conclusion -->
+        <div class="step-card">
+            <div class="step-number">Étape 5</div>
+            <h3>Montage & Export</h3>
+            <p>La dernière étape consiste à tout assembler comme un puzzle. Synchronisez vos plans vidéo générés avec votre voix off et votre musique. Ajoutez des effets de transition dynamiques, et générez automatiquement des sous-titres animés très prisés sur les réseaux sociaux (style "Hormozi").</p>
+            
+            <div class="tools-box">
+                <strong>🛠️ Outils recommandés :</strong> CapCut Pro
+            </div>
+            <div class="deliverable-box">
+                <strong>🎯 Livrable :</strong> Montage dynamique, sous-titres animés, et export multi-formats (16:9 pour YouTube, 9:16 pour TikTok/Reels, 1:1 pour LinkedIn).
+            </div>
+        </div>
+
+        <!-- Conclusion -->
+        <div class="cta-box">
+            <h3>Passez de la théorie à la pratique</h3>
+            <p>Cette checklist vous permet de démarrer, mais la maîtrise complète (surtout la consistance visuelle et le workflow) s'acquiert en formation.<br><br>
+            En <strong>3 jours (21h)</strong>, en binôme avec un expert IA et un réalisateur professionnel, vous produisez votre première vidéo premium et vous repartez avec votre propre Content Factory opérationnelle.</p>
+            <p style="font-size: 0.95rem; color: #cbd5e1;">⚠️ Places limitées à 12 participants par session.</p>
+            <a href="https://babylone42.fr/formation-video-ia-pro.html" class="btn">🚀 Voir les dates et réserver ma session</a>
+        </div>
+
+        <footer>
+            Ce guide est un contenu exclusif offert aux visiteurs de Babylone42. Il ne peut être partagé ou reproduit sans autorisation écrite.
+        </footer>
+    </div>
+</body>
+</html>
