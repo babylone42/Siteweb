@@ -133,6 +133,17 @@
             border-top: 1px solid #e2e8f0;
             padding-top: 1rem;
         }
+
+        /* Améliorations design Pro */
+        body { font-family: 'Inter', 'Segoe UI', system-ui, sans-serif; }
+        .container { background: #ffffff; box-shadow: 0 10px 30px -10px rgba(0,0,0,0.1); }
+        h2 { font-weight: 700; letter-spacing: -0.02em; }
+        .prompt-card, .step-card { box-shadow: 0 2px 8px rgba(0,0,0,0.04); transition: box-shadow 0.2s; }
+        .prompt-card:hover, .step-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.08); }
+        .intro-box { font-size: 1.1rem; background: #f0faf7; border-left-width: 6px; }
+        .cta-box { background: linear-gradient(135deg, #004b3d, #007a62); }
+        .btn { font-weight: 600; letter-spacing: 0.02em; transition: background 0.2s; }
+        .btn:hover { background: #007a62; transform: scale(1.02); }
     </style>
 </head>
 <body>
@@ -266,6 +277,43 @@ Voici le texte : [COLLER LE TEXTE]</div>
 
         <div class="page-break"></div>
 
+        <!-- À PROPOS DE VOTRE FORMATEUR -->
+        <div class="page-break"></div>
+        <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 1.5rem; background: #e6f5f2; border-radius: 1rem; padding: 1.5rem; margin: 2.5rem 0;">
+            <div style="flex: 0 0 80px; text-align: center;">
+                <img src="https://babylone42.fr/images/eulalio_edited.jpg" alt="Dr. Eulalio TORRES" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 3px solid #009B7D;">
+            </div>
+            <div style="flex: 1;">
+                <p style="margin: 0; font-size: 0.9rem; color: #1a2f2b; line-height: 1.5;">
+                    <strong style="color: #004b3d;">Dr. Eulalio TORRES</strong> – Docteur en Ingénierie Aérospatiale, 15 ans d'expérience en IA et Data Science.  
+                    Il a formé plus de <strong>1 000 professionnels</strong> à l'IA sans prérequis technique. Son credo : des outils opérationnels dès le premier jour, zéro jargon inutile.
+                </p>
+            </div>
+        </div>
+
+        <!-- LEXIQUE IA POUR LES NON-INFORMATICIENS -->
+        <div style="background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 1rem; padding: 1.5rem; margin-top: 3rem;">
+            <h3 style="color: #004b3d; font-size: 1.2rem; margin-bottom: 1rem;">📖 Lexique IA – Traduit pour les non-informaticiens</h3>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; font-size: 0.95rem; line-height: 1.5;">
+                <div>
+                    <strong style="color: #009B7D;">Prompt Engineering</strong>
+                    <p style="margin: 0; color: #334155;">L'art de formuler une requête pour obtenir le meilleur résultat de l'IA.</p>
+                </div>
+                <div>
+                    <strong style="color: #009B7D;">Chain of Thought</strong>
+                    <p style="margin: 0; color: #334155;">Technique qui demande à l'IA de détailler son raisonnement étape par étape, comme un expert qui explique à voix haute.</p>
+                </div>
+                <div>
+                    <strong style="color: #009B7D;">Few-Shot</strong>
+                    <p style="margin: 0; color: #334155;">Fournir 1 ou 2 exemples concrets dans votre prompt pour guider l'IA vers le format ou le ton exact attendu.</p>
+                </div>
+                <div>
+                    <strong style="color: #009B7D;">LLM (Large Language Model)</strong>
+                    <p style="margin: 0; color: #334155;">Le moteur derrière ChatGPT, Claude ou Copilot. C'est le "cerveau" qui comprend et génère du texte.</p>
+                </div>
+            </div>
+        </div>
+
         <!-- Conclusion -->
         <div class="cta-box">
             <h3>Vous voulez aller plus loin ?</h3>
@@ -275,7 +323,7 @@ Voici le texte : [COLLER LE TEXTE]</div>
             ✓ Automatiser des processus complets avec Make et Zapier.<br>
             ✓ Sécuriser vos données et respecter le RGPD en entreprise.</p>
             
-            <a href="https://babylone42.fr/formation-genai.html" class="btn">Découvrir la formation complète</a>
+            <a href="https://babylone42.fr/formation-genai.html?utm_source=lead_magnet&utm_medium=pdf&utm_campaign=guide_10_prompts" class="btn">Découvrir la formation complète</a>
         </div>
 
         <footer>

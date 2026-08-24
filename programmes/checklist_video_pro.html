@@ -166,6 +166,17 @@
             font-weight: bold;
             font-size: 1.2rem;
         }
+
+        /* Améliorations design Pro */
+        body { font-family: 'Inter', 'Segoe UI', system-ui, sans-serif; }
+        .container { background: #ffffff; box-shadow: 0 10px 30px -10px rgba(0,0,0,0.1); }
+        h2 { font-weight: 700; letter-spacing: -0.02em; }
+        .prompt-card, .step-card { box-shadow: 0 2px 8px rgba(0,0,0,0.04); transition: box-shadow 0.2s; }
+        .prompt-card:hover, .step-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.08); }
+        .intro-box { font-size: 1.1rem; background: #f0faf7; border-left-width: 6px; }
+        .cta-box { background: linear-gradient(135deg, #004b3d, #007a62); }
+        .btn { font-weight: 600; letter-spacing: 0.02em; transition: background 0.2s; }
+        .btn:hover { background: #007a62; transform: scale(1.02); }
     </style>
 </head>
 <body>
@@ -266,13 +277,50 @@
             </div>
         </div>
 
+        <!-- À PROPOS DE VOTRE FORMATEUR -->
+        <div class="page-break"></div>
+        <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 1.5rem; background: #e6f5f2; border-radius: 1rem; padding: 1.5rem; margin: 2.5rem 0;">
+            <div style="flex: 0 0 80px; text-align: center;">
+                <img src="https://babylone42.fr/images/eulalio_edited.jpg" alt="Dr. Eulalio TORRES" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 3px solid #009B7D;">
+            </div>
+            <div style="flex: 1;">
+                <p style="margin: 0; font-size: 0.9rem; color: #1a2f2b; line-height: 1.5;">
+                    <strong style="color: #004b3d;">Dr. Eulalio TORRES</strong> – Docteur en Ingénierie Aérospatiale, 15 ans d'expérience en IA et Data Science.  
+                    Il a formé plus de <strong>1 000 professionnels</strong> à l'IA sans prérequis technique. Son credo : des outils opérationnels dès le premier jour, zéro jargon inutile.
+                </p>
+            </div>
+        </div>
+
+        <!-- LEXIQUE IA POUR LES NON-INFORMATICIENS -->
+        <div style="background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 1rem; padding: 1.5rem; margin-top: 3rem;">
+            <h3 style="color: #004b3d; font-size: 1.2rem; margin-bottom: 1rem;">📖 Lexique IA – Traduit pour les non-informaticiens</h3>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; font-size: 0.95rem; line-height: 1.5;">
+                <div>
+                    <strong style="color: #009B7D;">Content Factory</strong>
+                    <p style="margin: 0; color: #334155;">Votre chaîne de production interne. Un processus organisé (scripts, assets, exports) pour produire des vidéos en série, rapidement et à moindre coût.</p>
+                </div>
+                <div>
+                    <strong style="color: #009B7D;">Prompt Bible</strong>
+                    <p style="margin: 0; color: #334155;">Un document de référence contenant tous vos prompts optimisés (visuels, voix, etc.) pour garantir une cohérence absolue entre vos vidéos (couleurs, personnages, ton).</p>
+                </div>
+                <div>
+                    <strong style="color: #009B7D;">Seeds (graines)</strong>
+                    <p style="margin: 0; color: #334155;">Un code numérique qui permet de "figer" le style ou le personnage généré par l'IA, afin de le retrouver facilement dans les prochaines créations.</p>
+                </div>
+                <div>
+                    <strong style="color: #009B7D;">Image-to-Video</strong>
+                    <p style="margin: 0; color: #334155;">Technologie qui transforme une image fixe en une courte vidéo animée (ex: une photo de paysage qui devient un travelling cinématique).</p>
+                </div>
+            </div>
+        </div>
+
         <!-- Conclusion -->
         <div class="cta-box">
             <h3>Passez de la théorie à la pratique</h3>
             <p>Cette checklist vous permet de démarrer, mais la maîtrise complète (surtout la consistance visuelle et le workflow) s'acquiert en formation.<br><br>
             En <strong>3 jours (21h)</strong>, en binôme avec un expert IA et un réalisateur professionnel, vous produisez votre première vidéo premium et vous repartez avec votre propre Content Factory opérationnelle.</p>
             <p style="font-size: 0.95rem; color: #cbd5e1;">⚠️ Places limitées à 12 participants par session.</p>
-            <a href="https://babylone42.fr/formation-video-ia-pro.html" class="btn">Découvrir la formation complète</a>
+            <a href="https://babylone42.fr/formation-video-ia-pro.html?utm_source=lead_magnet&utm_medium=pdf&utm_campaign=checklist_5_etapes" class="btn">Découvrir la formation complète</a>
         </div>
 
         <footer>
