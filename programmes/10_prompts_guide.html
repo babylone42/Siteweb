@@ -22,9 +22,13 @@
             page-break-after: always;
         }
         @media print {
-            body { background: white; padding: 0; }
+            body { background: white; padding: 0; margin: 0; }
             .container { box-shadow: none; padding: 0; max-width: 100%; page-break-after: avoid; }
             .page-break { page-break-before: always; }
+            .step-card, .prompt-card, .intro-box, .cta-box {
+                break-inside: avoid;
+                page-break-inside: avoid;
+            }
         }
         .header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 2rem; padding-bottom: 1rem; border-bottom: 2px solid #e2edf7; }
         .header img { height: 50px; }
