@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Merci - Babylone 42</title>
     <!-- CSS & Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Space+Grotesk:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=11">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <!-- GSAP for animations -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
@@ -59,88 +61,200 @@
 </head>
 <body class="bg-dark">
 
-    <!-- HEADER / NAVBAR -->
+    <!-- NAVIGATION -->
     <nav class="navbar">
-        <div class="container nav-container">
-            <a href="index.html" class="logo">
-                <img src="images/logo.svg" alt="Babylone 42 Logo" class="logo-image">
-            </a>
-            <div class="nav-links">
-                <a href="index.html" class="nav-link">Accueil</a>
-                <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle">
-                        Formations
-                        <i class="fas fa-chevron-down" style="font-size: 0.8em; margin-left: 5px;"></i>
+        <div class="container">
+            <!-- TOP ROW: Socials & Contact -->
+            <div class="navbar-top">
+                <div class="navbar-top-content">
+                    <a href="https://wa.me/33773609849" target="_blank" rel="noopener noreferrer" class="navbar-phone">
+                        <i class="fab fa-whatsapp"></i> +33 0 7 73 60 98 49
                     </a>
-                    <div class="dropdown-menu">
-                        <a href="formation-genai.html" class="dropdown-item">
-                            <i class="fas fa-robot"></i> IA Générative pour Managers
-                        </a>
-                        <a href="formation-video-ia-pro.html" class="dropdown-item">
-                            <i class="fas fa-video"></i> Production Vidéo IA Pro
-                        </a>
+                    <div class="nav-socials">
+                        <a href="https://www.linkedin.com/company/babylone42/" target="_blank" rel="noopener noreferrer"
+                            aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/babylone42_?igsh=YzVyamk1N3VoYXU1" target="_blank"
+                            rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=61583402791597&name=xhp_nt__fb__action__open_user&locale=fr_FR"
+                            target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i
+                                class="fab fa-facebook"></i></a>
+                        <a href="https://x.com/babylone42_" target="_blank" rel="noopener noreferrer"
+                            aria-label="X Twitter"><i class="fab fa-x-twitter"></i></a>
+                        <a href="https://m.youtube.com/@Babylone42" target="_blank" rel="noopener noreferrer"
+                            aria-label="YouTube"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
-                <a href="conseil-ia.html" class="nav-link">Conseil</a>
-                <a href="a-propos.html" class="nav-link">À propos</a>
-                <a href="contact-page.html" class="nav-link btn btn-primary" style="margin-left: 1rem;">Nous contacter</a>
             </div>
-            <div class="mobile-menu-btn">
-                <i class="fas fa-bars"></i>
+
+            <!-- BOTTOM ROW: Logo, Links & Mobile Menu -->
+            <div class="navbar-bottom">
+                <a href="index.html" class="logo">
+                    <img src="images/logo.svg" alt="Babylone42 Logo" style="height: 30px;">
+                </a>
+
+                <ul class="nav-links">
+                    <li class="dropdown">
+                        <a href="#hero">Accueil <i class="fas fa-chevron-down"
+                                style="font-size: 0.8rem; margin-left: 0.3rem;"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="about.html">About us</a></li>
+                            <li><a href="interlocuteurs.html">Vos interlocuteurs</a></li>
+                        </ul>
+                    </li>
+                                        <li class="dropdown">
+                        <a href="index.html#formations">Formations <i class="fas fa-chevron-down"
+                                style="font-size: 0.8rem; margin-left: 0.3rem;"></i></a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-header" style="font-weight: 700; font-size: 0.85rem; color: #109B80; padding: 0.6rem 1rem 0.3rem 1rem; text-transform: uppercase; letter-spacing: 0.05em;">Formations Disponibles</li>
+                            <li><a href="formation-genai.html" style="padding-left: 1.5rem;">IA Générative</a></li>
+                            <li><a href="formation-video-ia-pro.html" style="padding-left: 1.5rem;">Vidéo IA Pro</a></li>
+                            
+                            <li style="border-top: 1px solid rgba(255,255,255,0.08); margin: 0.4rem 0;"></li>
+                            <li><a href="calendrier-formations.html" style="font-weight: bold;">Calendrier des formations</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li><a href="articles.html">Actualités</a></li>
+                    <li><a href="contact-page.html" class="btn btn-primary nav-btn">Être rappelé</a></li>
+                    <li class="nav-search-btn"><a href="#" id="open-search-modal" aria-label="Recherche"><i class="fas fa-search"></i></a></li>
+                </ul>
+
+                <div class="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
             </div>
         </div>
     </nav>
 
     <!-- MERCI SECTION -->
-    <section class="merci-section">
-        <div class="container">
-            <i class="fas fa-check-circle merci-icon"></i>
-            <h1 class="merci-title">Félicitations !</h1>
-            <p class="merci-subtitle">Votre téléchargement a démarré automatiquement.<br>Nous vous contacterons très prochainement pour nous assurer que tout s'est bien passé et répondre à vos éventuelles questions !</p>
+    <main class="page-content" style="padding-top: 80px;">
+        <section class="merci-section">
+            <div class="container">
+                <i class="fas fa-check-circle merci-icon"></i>
+                <h1 class="merci-title">Félicitations !</h1>
+                <p class="merci-subtitle">Votre téléchargement a démarré automatiquement.<br>Nous vous contacterons très prochainement pour nous assurer que tout s'est bien passé et répondre à vos éventuelles questions !</p>
 
-            <div class="nl-card" style="margin: 0 auto 3rem auto;">
-                <h3 style="margin-bottom: 1rem; color: var(--primary-color);"><i class="fas fa-envelope-open-text"></i> Ne ratez aucune astuce</h3>
-                <p style="color: var(--text-muted); margin-bottom: 1.5rem;">Inscrivez-vous à notre newsletter pour recevoir nos dernières découvertes en IA, nos nouveaux prompts et nos conseils directement dans votre boîte mail.</p>
-                <form class="footer-newsletter-form" style="display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center;">
-                    <input type="email" name="email" placeholder="Votre adresse e-mail" required style="padding: 0.8rem 1rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.2); background: transparent; color: white; flex: 1; min-width: 200px; max-width: 300px;">
-                    <button type="submit" class="btn btn-primary" style="flex: 0 0 auto;">S'inscrire</button>
-                </form>
-                <p class="form-message" style="display: none; margin-top: 1rem; font-weight: 600;"></p>
+                <div class="nl-card" style="margin: 0 auto 3rem auto;">
+                    <h3 style="margin-bottom: 1rem; color: var(--primary-color);"><i class="fas fa-envelope-open-text"></i> Ne ratez aucune astuce</h3>
+                    <p style="color: var(--text-muted); margin-bottom: 1.5rem;">Inscrivez-vous à notre newsletter pour recevoir nos dernières découvertes en IA, nos nouveaux prompts et nos conseils directement dans votre boîte mail.</p>
+                    <form class="footer-newsletter-form" style="display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center;">
+                        <input type="email" name="email" placeholder="Votre adresse e-mail" required style="padding: 0.8rem 1rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.2); background: transparent; color: white; flex: 1; min-width: 200px; max-width: 300px;">
+                        <button type="submit" class="btn btn-primary" style="flex: 0 0 auto;">S'inscrire</button>
+                    </form>
+                    <p class="form-message" style="display: none; margin-top: 1rem; font-weight: 600;"></p>
+                </div>
+                
+                <div style="margin-top: 2rem;">
+                    <p style="color: var(--text-muted); margin-bottom: 1rem;">Envie d'aller plus loin et de vous former ?</p>
+                    <a href="calendrier-formations.html" class="btn btn-secondary">
+                        <i class="fas fa-calendar-alt" style="margin-right: 0.5rem;"></i> Voir les dates de nos prochaines formations
+                    </a>
+                </div>
             </div>
-            
-            <div style="margin-top: 2rem;">
-                <p style="color: var(--text-muted); margin-bottom: 1rem;">Envie d'aller plus loin et de vous former ?</p>
-                <a href="calendrier-formations.html" class="btn btn-secondary">
-                    <i class="fas fa-calendar-alt" style="margin-right: 0.5rem;"></i> Voir les dates de nos prochaines formations
-                </a>
-            </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <!-- FOOTER -->
-    <footer class="footer">
+    <footer class="mega-footer">
         <div class="container">
             <div class="footer-grid">
-                <div class="footer-col">
-                    <img src="images/logo.svg" alt="Babylone 42 Logo" class="footer-logo">
-                    <p class="footer-desc">Votre partenaire pour la transformation digitale et l'intégration de l'Intelligence Artificielle en entreprise.</p>
+                <!-- Column 1: Brand & Socials -->
+                <div class="footer-col brand-col">
+                    <img src="images/logo.svg" alt="Babylone42 Logo" class="footer-logo-img">
+                    <p class="footer-desc">Babylone42 forme vos équipes à exploiter le potentiel de l'IA et de la data pour gagner en autonomie et en productivité.</p>
+                    
+                    <div style="margin-top: 1.2rem; margin-bottom: 1.2rem; padding: 0.6rem 0.9rem; background: #ffffff; border-radius: 8px; max-width: 200px; box-shadow: 0 2px 10px rgba(0,0,0,0.15);">
+                        <a href="https://certifopac.fr/qualiopi/verification-certificat/?siren=992220707" target="_blank" rel="noopener noreferrer" title="Vérifier notre certificat Qualiopi">
+                            <img src="images/qualiopi/qualiopi_actions_formation.png" alt="Certification Qualiopi Babylone 42" style="width: 100%; height: auto; display: block;">
+                        </a>
+                    </div>
+                    <div style="margin-top: 1.2rem; margin-bottom: 1.2rem; padding: 0.6rem 0.9rem; background: #ffffff; border-radius: 8px; max-width: 200px; box-shadow: 0 2px 10px rgba(0,0,0,0.15);">
+                        <a href="https://elevenlabs.io/startup-grants" target="_blank" rel="noopener noreferrer" title="ElevenLabs Grants Program">
+                            <img src="https://eleven-public-cdn.elevenlabs.io/payloadcms/pwsc4vchsqt-ElevenLabsGrants.webp" alt="ElevenLabs Grants Program" style="width: 100%; height: auto; display: block;">
+                        </a>
+                    </div>
+
+                    <div class="footer-socials">
+                        <a href="https://www.linkedin.com/company/babylone42/" target="_blank" rel="noopener noreferrer"
+                            aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/babylone42_?igsh=YzVyamk1N3VoYXU1" target="_blank"
+                            rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=61583402791597&name=xhp_nt__fb__action__open_user&locale=fr_FR"
+                            target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i
+                                class="fab fa-facebook"></i></a>
+                        <a href="https://x.com/babylone42_" target="_blank" rel="noopener noreferrer"
+                            aria-label="X Twitter"><i class="fab fa-x-twitter"></i></a>
+                        <a href="https://m.youtube.com/@Babylone42" target="_blank" rel="noopener noreferrer"
+                            aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
                 </div>
+
+                <!-- Column 2: Accueil -->
                 <div class="footer-col">
-                    <h4>Liens rapides</h4>
-                    <ul class="footer-links">
-                        <li><a href="formation-genai.html">Formation IA Générative</a></li>
-                        <li><a href="formation-video-ia-pro.html">Formation Vidéo IA</a></li>
-                        <li><a href="conseil-ia.html">Conseil & Intégration</a></li>
+                    <h4 class="footer-title">Accueil</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="about.html">About us</a></li>
+                        <li><a href="interlocuteurs.html">Vos interlocuteurs</a></li>
+                        <li><a href="articles.html">Actualités</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
                     </ul>
                 </div>
+
+                
+
+                                <!-- Column 4: Formations -->
+                <div class="footer-col">
+                    <h4 class="footer-title">Formations</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="formation-genai.html">IA Générative</a></li>
+                        <li><a href="formation-video-ia-pro.html">Vidéo IA Pro</a></li>
+                        <li><a href="calendrier-formations.html">Calendrier des formations</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 5: Contact & Newsletter -->
+                <div class="footer-col newsletter-col">
+                    <h4 class="footer-title">Contact & Newsletter</h4>
+                    <p class="footer-contact-info">
+                        <a href="mailto:contact@babylone42.fr"><i class="fas fa-envelope"></i>
+                            contact@babylone42.fr</a><br>
+                        <a href="tel:+330773609849"><i class="fas fa-phone-alt"></i> +33 0 7 73 60 98 49</a>
+                    </p>
+                    <form class="footer-newsletter-form">
+                        <input type="email" placeholder="Votre email" required>
+                        <button type="submit" aria-label="S'inscrire"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
             </div>
+
             <div class="footer-bottom">
-                <p>&copy; 2026 Babylone 42. Tous droits réservés.</p>
+                <p class="copyright">© 2025 Babylone42. · Organisme certifié <strong>Qualiopi</strong> (Actions de formation — Certificat n° 965711-1 délivré par CERTIFOPAC) · SIRET : 992 220 707 00010 · NDA : 93132513713 (enregistré auprès du préfet de région PACA. Cet enregistrement ne vaut pas agrément de l'État).</p>
+                <div class="legal-links"><a href="https://certifopac.fr/qualiopi/verification-certificat/?siren=992220707" target="_blank" rel="noopener noreferrer" style="color: #109B80; font-weight: 600;"><i class="fas fa-certificate"></i> Certificat Qualiopi</a><a href="indicateurs-resultats.html">Indicateurs de Résultats</a><a href="cgv.html">CGV</a>
+                    <a href="mentions-legales.html">Mentions Légales</a>
+                    <a href="politique-confidentialite.html">Politique de Confidentialité</a>
+                    <a href="cookies.html">Paramètres des cookies</a>
+                    <a href="accessibilite.html">Accessibilité (RGAA)</a>
+                </div>
             </div>
         </div>
     </footer>
 
+        <!-- Search Modal -->
+    <div id="search-modal" class="search-modal">
+        <div class="search-modal-content">
+            <div class="search-header">
+                <i class="fas fa-search search-icon-input"></i>
+                <input type="text" id="search-input" placeholder="Rechercher une formation, une question..." autocomplete="off">
+                <button id="close-search-modal" class="close-search-btn" aria-label="Fermer"><i class="fas fa-times"></i></button>
+            </div>
+            <div id="search-results" class="search-results">
+                <!-- Les résultats s'afficheront ici -->
+                <div class="search-empty-state">Tapez un mot-clé (ex: ChatGPT, Qualiopi, Prix...)</div>
+            </div>
+        </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-    <script src="script.js"></script>
+    <script src="script.js?v=5"></script>
 </body>
 </html>
