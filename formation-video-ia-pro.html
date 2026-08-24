@@ -1998,8 +1998,11 @@ document.addEventListener("DOMContentLoaded", function() {
                     messageEl.innerHTML = "✅ Merci ! Redirection en cours...";
                     form.reset();
                     
+                    // Téléchargement auto dans un nouvel onglet
+                    window.open('programmes/checklist_video_pro.pdf', '_blank');
+                    
                     // Redirection vers la page de remerciement
-                    window.location.href = 'merci.html?pdf=video';
+                    window.location.href = 'merci.html';
 
                 } else {
                     const errData = await response.json().catch(() => null);

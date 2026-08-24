@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
@@ -96,23 +96,23 @@
         <div class="container">
             <i class="fas fa-check-circle merci-icon"></i>
             <h1 class="merci-title">Félicitations !</h1>
-            <p class="merci-subtitle">Votre demande a bien été enregistrée. Votre document est prêt à être téléchargé ci-dessous.</p>
+            <p class="merci-subtitle">Votre téléchargement a démarré automatiquement.<br>Nous vous contacterons très prochainement pour nous assurer que tout s'est bien passé et répondre à vos éventuelles questions !</p>
 
-            <div class="dl-card" style="margin: 0 auto 3rem auto;">
-                <h3 id="pdf-title" style="margin-bottom: 1.5rem;">Votre Guide</h3>
-                <a id="download-btn" href="#" class="btn btn-primary" style="width: 100%; display: inline-block; padding: 1rem;" download>
-                    <i class="fas fa-download" style="margin-right: 0.5rem;"></i> Télécharger le PDF
-                </a>
-            </div>
-
-            <div class="nl-card" style="margin: 0 auto;">
+            <div class="nl-card" style="margin: 0 auto 3rem auto;">
                 <h3 style="margin-bottom: 1rem; color: var(--primary-color);"><i class="fas fa-envelope-open-text"></i> Ne ratez aucune astuce</h3>
                 <p style="color: var(--text-muted); margin-bottom: 1.5rem;">Inscrivez-vous à notre newsletter pour recevoir nos dernières découvertes en IA, nos nouveaux prompts et nos conseils directement dans votre boîte mail.</p>
-                <form class="footer-newsletter-form" style="display: flex; gap: 0.5rem; justify-content: center;">
-                    <input type="email" name="email" placeholder="Votre adresse e-mail" required style="padding: 0.8rem 1rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.2); background: transparent; color: white; flex: 1; max-width: 300px;">
-                    <button type="submit" class="btn btn-primary">S'inscrire</button>
+                <form class="footer-newsletter-form" style="display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center;">
+                    <input type="email" name="email" placeholder="Votre adresse e-mail" required style="padding: 0.8rem 1rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.2); background: transparent; color: white; flex: 1; min-width: 200px; max-width: 300px;">
+                    <button type="submit" class="btn btn-primary" style="flex: 0 0 auto;">S'inscrire</button>
                 </form>
                 <p class="form-message" style="display: none; margin-top: 1rem; font-weight: 600;"></p>
+            </div>
+            
+            <div style="margin-top: 2rem;">
+                <p style="color: var(--text-muted); margin-bottom: 1rem;">Envie d'aller plus loin et de vous former ?</p>
+                <a href="calendrier-formations.html" class="btn btn-secondary">
+                    <i class="fas fa-calendar-alt" style="margin-right: 0.5rem;"></i> Voir les dates de nos prochaines formations
+                </a>
             </div>
         </div>
     </section>
@@ -142,27 +142,5 @@
 
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script src="script.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const urlParams = new URLSearchParams(window.location.search);
-            const pdfType = urlParams.get('pdf');
-            const dlBtn = document.getElementById('download-btn');
-            const pdfTitle = document.getElementById('pdf-title');
-
-            if (pdfType === 'genai') {
-                dlBtn.href = 'programmes/10_prompts_guide.pdf';
-                dlBtn.download = '10_prompts_guide.pdf';
-                pdfTitle.innerHTML = '📘 Le guide des 10 prompts';
-            } else if (pdfType === 'video') {
-                dlBtn.href = 'programmes/checklist_video_pro.pdf';
-                dlBtn.download = 'checklist_video_pro.pdf';
-                pdfTitle.innerHTML = '🎬 Checklist Vidéo IA Pro';
-            } else {
-                // Default fallback
-                dlBtn.href = '#';
-                pdfTitle.innerHTML = 'Votre document';
-            }
-        });
-    </script>
 </body>
 </html>
