@@ -1081,13 +1081,15 @@
                         <p style="color: #94a3b8; font-size: 0.9rem; margin-bottom: 1.2rem; line-height: 1.5; text-align: justify;">
                             Téléchargez notre méthode pas à pas : script C.O.R.E., génération voix/visuel, montage CapCut. Économisez <strong>jusqu’à 80 %</strong> sur vos coûts de production.
                         </p>
-                        <form action="votre-lien-mailchimp-ou-brevo" method="POST" style="display: flex; flex-wrap: wrap; gap: 0.6rem; align-items: center;">
+                        <form id="lead-form-video" style="display: flex; flex-wrap: wrap; gap: 0.6rem; align-items: center;">
+                            <input type="hidden" name="source" value="checklist_video">
                             <input type="email" name="email" placeholder="Votre email professionnel" required 
                                    style="flex: 2; min-width: 200px; padding: 0.8rem 1rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.15); background: #0d1b2a; color: #fff; font-size: 1rem;">
                             <button type="submit" class="btn btn-primary" style="flex: 0 0 auto; white-space: nowrap;">
                                 <i class="fas fa-download" style="margin-right: 0.4rem;"></i>Je télécharge gratuitement
                             </button>
                         </form>
+                        <p id="form-message-video" style="display: none; font-weight: 600; margin-top: 0.5rem;"></p>
                         <p style="color: #64748b; font-size: 0.75rem; margin-top: 0.6rem; text-align: justify;">
                             <i class="fas fa-lock" style="margin-right: 0.3rem;"></i> Vos données sont sécurisées. 
                             En téléchargeant, vous recevrez 1 email par semaine avec des astuces IA (désabonnement en 1 clic).
@@ -1952,5 +1954,63 @@
             }
         });
     </script>
+<!-- Script d'intégration Supabase pour les Lead Magnets -->
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const form = document.getElementById("lead-form-genai") || document.getElementById("lead-form-video");
+    const messageEl = document.getElementById("form-message-genai") || document.getElementById("form-message-video");
+
+    if(form && messageEl) {
+        form.addEventListener("submit", async function(e) {
+            e.preventDefault();
+            
+            const email = form.querySelector('input[name="email"]').value;
+            const source = form.querySelector('input[name="source"]').value;
+            const submitBtn = form.querySelector('button[type="submit"]');
+
+            const originalBtnText = submitBtn.innerHTML;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin" style="margin-right: 0.4rem;"></i>En cours...';
+            submitBtn.disabled = true;
+
+            // Remplacer par vos informations Supabase (Project Settings > API)
+            const supabaseUrl = 'VOTRE_URL_SUPABASE'; // ex: https://xxx.supabase.co
+            const supabaseKey = 'VOTRE_CLE_ANON';     // ex: eyJhbG...
+
+            try {
+                // Requête vers la table "Lead_magnet"
+                const response = await fetch(`${supabaseUrl}/rest/v1/Lead_magnet`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'apikey': supabaseKey,
+                        'Authorization': `Bearer ${supabaseKey}`,
+                        'Prefer': 'return=minimal'
+                    },
+                    body: JSON.stringify({
+                        email: email,
+                        source: source
+                    })
+                });
+
+                if (response.ok) {
+                    messageEl.style.display = "block";
+                    messageEl.style.color = "#109B80"; // Vert succès
+                    messageEl.innerHTML = "✅ Merci ! Vérifiez votre boîte mail pour télécharger le guide.";
+                    form.reset();
+                } else {
+                    throw new Error('Erreur lors de l\'enregistrement');
+                }
+            } catch (error) {
+                messageEl.style.display = "block";
+                messageEl.style.color = "#ef4444"; // Rouge erreur
+                messageEl.innerHTML = "❌ Une erreur est survenue. Veuillez vérifier la configuration de vos clés API.";
+            } finally {
+                submitBtn.innerHTML = originalBtnText;
+                submitBtn.disabled = false;
+            }
+        });
+    }
+});
+</script>
 </body>
 </html>
