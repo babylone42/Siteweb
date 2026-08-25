@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="fr">
 
 <head>
@@ -327,7 +327,7 @@ document.addEventListener("DOMContentLoaded", function() {
                         'Authorization': `Bearer ${supabaseKey}`,
                         'Prefer': 'return=minimal'
                     },
-                    body: JSON.stringify({ email: email })
+                    body: JSON.stringify({ e_mail: email, source: "interlocuteurs" })
                 });
                 
                 if (response.ok) {
