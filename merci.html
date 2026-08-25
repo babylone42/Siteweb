@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
@@ -316,7 +316,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     headers: {
                         'Content-Type': 'application/json',
                         'apikey': supabaseKey,
-                        'Authorization': Bearer ,
+                        'Authorization': `Bearer ${supabaseKey}`,
                         'Prefer': 'return=minimal'
                     },
                     body: JSON.stringify({
