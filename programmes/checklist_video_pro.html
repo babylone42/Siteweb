@@ -73,14 +73,16 @@
         h2 {
             font-size: 1.6rem;
             font-weight: 700;
-            margin-top: 2.5rem;
-            margin-bottom: 1.5rem;
+            margin-top: 3.5rem;
+            margin-bottom: 2rem;
             color: #004b3d;
             border-bottom: 2px solid #e6f5f2;
             padding-bottom: 0.5rem;
             display: flex;
             align-items: center;
+            justify-content: center;
             gap: 0.5rem;
+            text-align: center;
         }
         .step-card {
             background: #ffffff;
@@ -91,6 +93,9 @@
             box-shadow: 0 4px 6px rgba(0,0,0,0.02);
             page-break-inside: avoid;
             position: relative;
+            max-width: 750px;
+            margin-left: auto;
+            margin-right: auto;
         }
         .step-number {
             position: absolute;
@@ -145,6 +150,9 @@
             border-radius: 1rem;
             margin-top: 3rem;
             page-break-inside: avoid;
+            max-width: 750px;
+            margin-left: auto;
+            margin-right: auto;
         }
         .cta-box h3 { color: #99d6ca; font-size: 1.5rem; margin-bottom: 1rem; }
         .cta-box p { font-size: 1.1rem; line-height: 1.6; margin-bottom: 1.5rem; }
@@ -197,14 +205,26 @@
         }
         @media print {
             .cover-page { height: 297mm; }
+            .cover-page h1, .cover-page h1 span { color: white !important; }
             body { background: white !important; }
             .container { margin: 0 auto; box-shadow: none; border-radius: 0; }
         }
-        .container { background: #ffffff; box-shadow: 0 10px 40px -10px rgba(0,0,0,0.2); max-width: 900px; margin: 2rem auto; border-radius: 1rem; padding: 4rem; }
-        h2 { font-weight: 700; letter-spacing: -0.02em; }
+        .container { background: #ffffff; box-shadow: 0 10px 40px -10px rgba(0,0,0,0.2); max-width: 950px; margin: 2rem auto; border-radius: 1rem; padding: 4rem; }
         .prompt-card, .step-card { box-shadow: 0 2px 8px rgba(0,0,0,0.04); transition: box-shadow 0.2s; }
         .prompt-card:hover, .step-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.08); }
-        .intro-box { font-size: 1.1rem; background: #f0faf7; border-left-width: 6px; }
+        .intro-box {
+            font-size: 1.25rem;
+            background: #f0faf7;
+            border-left: none;
+            border-top: 4px solid #009B7D;
+            border-bottom: 4px solid #009B7D;
+            border-radius: 0;
+            padding: 2.5rem 2rem;
+            margin: 3rem auto;
+            max-width: 800px;
+            text-align: center;
+            line-height: 1.7;
+        }
         .cta-box { background: linear-gradient(135deg, #004b3d, #007a62); }
         .btn { font-weight: 600; letter-spacing: 0.02em; transition: background 0.2s; }
         .btn:hover { background: #007a62; transform: scale(1.02); }
@@ -233,9 +253,11 @@
         </div>
         
         <h2>Le Processus de génération des vidéos par IA</h2>
-        <div class="check-item">Pas besoin de caméra, ni de studio, ni d'acteurs.</div>
-        <div class="check-item">Coûts de production divisés par 10.</div>
-        <div class="check-item">Qualité premium (4K, cinématique, voix ultra-réalistes).</div>
+        <div style="max-width: 600px; margin: 0 auto 3rem auto; display: flex; flex-direction: column; gap: 0.8rem; text-align: left;">
+            <div class="check-item">Pas besoin de caméra, ni de studio, ni d'acteurs.</div>
+            <div class="check-item">Coûts de production divisés par 10.</div>
+            <div class="check-item">Qualité premium (4K, cinématique, voix ultra-réalistes).</div>
+        </div>
 
         <div class="page-break"></div>
 
@@ -315,7 +337,7 @@
 
         <!-- À PROPOS DE VOS FORMATEURS -->
         <div class="page-break"></div>
-        <div style="display: flex; flex-direction: column; gap: 1rem; background: #e6f5f2; border-radius: 1rem; padding: 1.5rem; margin: 2.5rem 0;">
+        <div style="display: flex; flex-direction: column; gap: 1rem; background: #e6f5f2; border-radius: 1rem; padding: 1.5rem; margin: 2.5rem auto; max-width: 750px;">
             <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 1.5rem;">
                 <div style="flex: 0 0 80px; text-align: center;">
                     <img src="https://babylone42.fr/images/eulalio_edited.jpg" alt="Dr. Eulalio TORRES" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 3px solid #009B7D;">
@@ -342,7 +364,7 @@
         </div>
 
         <!-- LEXIQUE IA POUR LES NON-INFORMATICIENS -->
-        <div style="background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 1rem; padding: 1.5rem; margin-top: 3rem;">
+        <div style="background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 1rem; padding: 1.5rem; margin: 3rem auto; max-width: 750px;">
             <h3 style="color: #004b3d; font-size: 1.2rem; margin-bottom: 1rem;">📖 Lexique IA – Traduit pour les non-informaticiens</h3>
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; font-size: 0.95rem; line-height: 1.5;">
                 <div>
