@@ -42,6 +42,14 @@
             margin-bottom: 1rem;
             line-height: 1.2;
         }
+        @media print {
+            h1 {
+                background: none;
+                -webkit-background-clip: initial;
+                background-clip: initial;
+                color: #004b3d !important;
+            }
+        }
         .badge {
             background: #009B7D;
             color: white;
@@ -139,8 +147,27 @@
         }
 
         /* Améliorations design Pro */
-        body { font-family: 'Inter', 'Segoe UI', system-ui, sans-serif; }
-        .container { background: #ffffff; box-shadow: 0 10px 30px -10px rgba(0,0,0,0.1); }
+        body { font-family: 'Inter', 'Segoe UI', system-ui, sans-serif; background: #e2edf7; }
+        .cover-page {
+            width: 100%;
+            height: 100vh;
+            min-height: 297mm;
+            background: linear-gradient(135deg, #0a0f2c 0%, #004b3d 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 2rem;
+            position: relative;
+            page-break-after: always;
+        }
+        @media print {
+            .cover-page { height: 297mm; }
+            body { background: white !important; }
+            .container { margin: 0 auto; box-shadow: none; border-radius: 0; }
+        }
+        .container { background: #ffffff; box-shadow: 0 10px 40px -10px rgba(0,0,0,0.2); max-width: 900px; margin: 2rem auto; border-radius: 1rem; padding: 4rem; }
         h2 { font-weight: 700; letter-spacing: -0.02em; }
         .prompt-card, .step-card { box-shadow: 0 2px 8px rgba(0,0,0,0.04); transition: box-shadow 0.2s; }
         .prompt-card:hover, .step-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.08); }
@@ -151,18 +178,23 @@
     </style>
 </head>
 <body>
-    <div class="container">
-        <!-- PAGE 1 : Introduction -->
-        <div class="header">
-            <a href="https://babylone42.fr" target="_blank">
-                <img src="../images/logo_second_color.svg" alt="Babylone 42">
-            </a>
-            <span class="badge">Guide Pratique IA</span>
+    <div class="cover-page">
+        <div class="cover-content">
+            <div style="margin-bottom: 2rem;">
+                <img src="../images/logo_second_white.png" alt="Babylone 42" style="height: 60px;" onerror="this.src='../images/logo_second_white.svg'">
+            </div>
+            <span class="badge" style="background: rgba(255,255,255,0.2); backdrop-filter: blur(5px); font-size: 1rem; padding: 0.5rem 1.5rem; margin-bottom: 2rem;">Guide Pratique IA</span>
+            <h1 style="color: white; font-size: 3.5rem; line-height: 1.1; margin-bottom: 1.5rem; background: none; -webkit-background-clip: initial; text-shadow: 0 4px 15px rgba(0,0,0,0.3);">10 prompts opérationnels<br><span style="font-size: 2.2rem; font-weight: 500; opacity: 0.9;">pour automatiser vos comptes-rendus, notes de frais et synthèses avec l'IA</span></h1>
+            <p style="color: #99d6ca; font-size: 1.2rem; max-width: 600px; margin: 0 auto;">Pour les assistantes de direction, office managers et chargés d'administration.</p>
         </div>
-        
-        <h1>10 prompts opérationnels pour automatiser vos comptes-rendus, notes de frais et synthèses avec l'IA</h1>
-        
-        <div class="intro-box">
+        <div style="position: absolute; bottom: 40px; width: 100%; text-align: center; color: rgba(255,255,255,0.5);">
+            © Babylone 42 - Reproduction interdite
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Introduction -->
+        <div class="intro-box" style="margin-top: 0;">
             <strong>Vous êtes assistante de direction, office manager ou chargée d'administration ?</strong><br><br>
             Chaque semaine, vous passez des heures à rédiger des comptes-rendus, saisir des notes de frais, synthétiser des réunions et répondre à des emails.<br><br>
             Ce guide vous donne <strong>10 prompts prêts à l'emploi</strong> pour ChatGPT, Claude ou Copilot. Recopiez-les, collez-les, et gagnez 5 à 10 heures par semaine – sans prérequis technique.
