@@ -7,397 +7,453 @@
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, sans-serif;
-            background: #f1f5f9;
-            padding: 2rem 1rem;
+            font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif;
+            background: #e2edf7;
             color: #0a0f2c;
         }
+        /* COVER */
+        .cover-page {
+            width: 100%; min-height: 297mm; height: 100vh;
+            background: linear-gradient(135deg, #0a0f2c 0%, #004b3d 100%);
+            display: flex; flex-direction: column; justify-content: center;
+            align-items: center; text-align: center; padding: 3rem 2rem;
+            position: relative; page-break-after: always;
+        }
+        .cover-copyright {
+            position: absolute; bottom: 40px; width: 100%;
+            text-align: center; color: rgba(255,255,255,0.4); font-size: 0.85rem;
+        }
+        /* CONTAINER */
         .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            background: white;
-            border-radius: 1rem;
-            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.15);
-            padding: 3rem;
-            page-break-after: always;
+            background: #ffffff; max-width: 950px; margin: 2rem auto;
+            border-radius: 1rem; box-shadow: 0 10px 40px -10px rgba(0,0,0,0.2);
+            padding: 3rem 4rem 2rem 4rem; position: relative;
+            display: flex; flex-direction: column; min-height: 80vh;
         }
-        @media print {
-            body { background: white; padding: 0; margin: 0; }
-            .container { box-shadow: none; padding: 0; max-width: 100%; page-break-after: avoid; }
-            .page-break { page-break-before: always; }
-            .step-card, .prompt-card, .intro-box, .cta-box {
-                break-inside: avoid;
-                page-break-inside: avoid;
-            }
+        /* PAGE HEADER */
+        .page-header {
+            display: flex; align-items: center; justify-content: space-between;
+            margin-bottom: 2.5rem; padding-bottom: 1rem; border-bottom: 2px solid #e6f5f2;
+            flex-shrink: 0;
         }
-        .header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 2rem; padding-bottom: 1rem; border-bottom: 2px solid #e2edf7; }
-        .header img { height: 50px; }
-        h1 {
-            font-size: 2.2rem;
-            font-weight: 800;
-            background: linear-gradient(135deg, #004b3d, #009B7D, #007a62);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            margin-bottom: 1rem;
-            line-height: 1.2;
+        .page-header img { height: 40px; }
+        /* PAGE FOOTER */
+        .page-footer {
+            margin-top: auto; padding-top: 1rem; border-top: 1px solid #e2e8f0;
+            display: flex; justify-content: space-between; align-items: center;
+            font-size: 0.7rem; color: #64748b; flex-shrink: 0; width: 100%;
         }
-        @media print {
-            h1 {
-                background: none;
-                -webkit-background-clip: initial;
-                background-clip: initial;
-                color: #004b3d !important;
-            }
-        }
+        .page-footer a { color: #009B7D; text-decoration: none; font-weight: 600; }
+        /* BADGE */
         .badge {
-            background: #009B7D;
-            color: white;
-            font-size: 0.8rem;
-            font-weight: 600;
-            padding: 0.4rem 1rem;
-            border-radius: 40px;
-            display: inline-block;
-            margin-bottom: 1rem;
+            background: #009B7D; color: white; font-size: 0.8rem; font-weight: 600;
+            padding: 0.4rem 1rem; border-radius: 40px; display: inline-block;
         }
-        .intro-box {
-            border-left: 5px solid #009B7D;
-            background: #e6f5f2;
-            padding: 1.5rem;
-            border-radius: 0 1rem 1rem 0;
-            margin: 1.5rem 0 2.5rem 0;
-            font-size: 1.1rem;
-            line-height: 1.6;
-            color: #1a2f2b;
-        }
+        /* H2 */
         h2 {
-            font-size: 1.6rem;
-            font-weight: 700;
-            margin-top: 3.5rem;
-            margin-bottom: 2rem;
-            color: #004b3d;
-            border-bottom: 2px solid #e6f5f2;
-            padding-bottom: 0.5rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.5rem;
-            text-align: center;
+            font-size: 1.5rem; font-weight: 700; margin-bottom: 2rem; color: #004b3d;
+            border-bottom: 2px solid #e6f5f2; padding-bottom: 0.5rem;
+            display: flex; align-items: center; justify-content: center;
+            gap: 0.5rem; text-align: center; flex-shrink: 0;
         }
-        .step-card {
-            background: #ffffff;
-            border-radius: 1rem;
-            padding: 2rem;
-            border: 1px solid #cbd5e1;
-            margin-bottom: 2rem;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
-            page-break-inside: avoid;
-            position: relative;
-            max-width: 750px;
-            margin-left: auto;
-            margin-right: auto;
+        /* INTRO BOX */
+        .intro-box {
+            font-size: 1.15rem; background: #f0faf7;
+            border-top: 4px solid #009B7D; border-bottom: 4px solid #009B7D;
+            padding: 2rem 2.5rem; margin: 0 auto 2.5rem auto;
+            max-width: 800px; text-align: center; line-height: 1.7; color: #1a2f2b;
+            flex-shrink: 0;
         }
-        .step-number {
-            position: absolute;
-            top: -15px;
-            left: 20px;
-            background: #009B7D;
-            color: white;
-            font-size: 1.2rem;
-            font-weight: bold;
-            padding: 0.5rem 1rem;
-            border-radius: 30px;
-            box-shadow: 0 4px 10px rgba(0, 155, 125, 0.3);
+        /* HOW TO */
+        .how-to-box {
+            background: #fff7ed; border: 1px solid #fed7aa;
+            border-left: 5px solid #f97316; border-radius: 0 0.8rem 0.8rem 0;
+            padding: 1.5rem 2rem; max-width: 750px; margin: 0 auto 2rem auto;
+            flex-shrink: 0;
         }
-        .step-card h3 {
-            color: #004b3d;
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            margin-top: 0.5rem;
-        }
-        .step-card p {
-            font-size: 1.1rem;
-            line-height: 1.6;
-            color: #334155;
-            margin-bottom: 1.5rem;
-        }
-        .tools-box {
-            background: #f8fafc;
-            border-left: 4px solid #64748b;
-            padding: 1rem;
-            margin-bottom: 1rem;
-            font-size: 0.95rem;
-            color: #0f172a;
-            border-radius: 0 0.5rem 0.5rem 0;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-        .deliverable-box {
-            background: #e6f5f2;
-            border-left: 4px solid #009B7D;
-            padding: 1rem;
-            font-size: 0.95rem;
-            color: #0f172a;
-            border-radius: 0 0.5rem 0.5rem 0;
-            font-weight: 600;
-        }
-        .cta-box {
-            background: #004b3d;
-            color: white;
-            text-align: center;
-            padding: 2.5rem;
-            border-radius: 1rem;
-            margin-top: 3rem;
-            page-break-inside: avoid;
-            max-width: 750px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        .cta-box h3 { color: #99d6ca; font-size: 1.5rem; margin-bottom: 1rem; }
-        .cta-box p { font-size: 1.1rem; line-height: 1.6; margin-bottom: 1.5rem; }
-        .btn {
-            background: #009B7D;
-            color: white;
-            padding: 0.8rem 2rem;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: bold;
-            display: inline-block;
-        }
-        footer {
-            text-align: center;
-            margin-top: 3rem;
-            font-size: 0.8rem;
-            color: #64748b;
-            border-top: 1px solid #e2e8f0;
-            padding-top: 1rem;
+        .how-to-box h3 { color: #c2410c; font-size: 1.1rem; margin-bottom: 1rem; }
+        .how-to-box ol { padding-left: 1.5rem; color: #431407; font-size: 1rem; line-height: 1.8; }
+        /* CHECK ITEMS */
+        .check-list {
+            max-width: 600px; margin: 0 auto 2.5rem auto;
+            display: flex; flex-direction: column; gap: 0.8rem; flex-shrink: 0;
         }
         .check-item {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin-bottom: 0.5rem;
-            font-size: 1.05rem;
+            display: flex; align-items: flex-start; gap: 10px; font-size: 1.05rem; color: #1a2f2b;
         }
         .check-item::before {
-            content: '✓';
-            color: #009B7D;
-            font-weight: bold;
-            font-size: 1.2rem;
+            content: "✓"; color: #009B7D; font-weight: bold; font-size: 1.2rem; flex-shrink: 0; margin-top: 1px;
         }
-
-        /* Améliorations design Pro */
-        body { font-family: 'Inter', 'Segoe UI', system-ui, sans-serif; background: #e2edf7; }
-        .cover-page {
-            width: 100%;
-            height: 100vh;
-            min-height: 297mm;
-            background: linear-gradient(135deg, #0a0f2c 0%, #004b3d 100%);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 2rem;
-            position: relative;
-            page-break-after: always;
+        /* STEP CARD */
+        .step-card {
+            background: #ffffff; border-radius: 1rem; padding: 2.5rem 2rem 2rem 2rem;
+            border: 1px solid #cbd5e1; margin: 1.5rem auto 2rem auto;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04); page-break-inside: avoid;
+            max-width: 750px; position: relative; width: 100%; flex-shrink: 0;
         }
+        .step-number-big {
+            position: absolute; top: -20px; left: 50%; transform: translateX(-50%);
+            background: #009B7D; color: white; font-size: 1.4rem; font-weight: 800;
+            width: 50px; height: 50px; border-radius: 50%; display: flex;
+            align-items: center; justify-content: center;
+            box-shadow: 0 4px 12px rgba(0,155,125,0.4);
+        }
+        .step-card h3 {
+            color: #004b3d; font-size: 1.4rem; margin-bottom: 0.5rem; margin-top: 1rem;
+            text-align: center; background: #e6f5f2; padding: 0.8rem; border-radius: 0.5rem;
+        }
+        .step-card .step-subtitle {
+            text-align: center; color: #64748b; font-size: 0.95rem; margin-bottom: 1.5rem; font-style: italic;
+        }
+        .step-card p { font-size: 1.05rem; line-height: 1.7; color: #334155; margin-bottom: 1.5rem; }
+        .tools-box {
+            background: #f8fafc; border: 1px solid #cbd5e1; border-left: 5px solid #64748b; padding: 1rem;
+            margin-bottom: 1rem; font-size: 0.95rem; color: #0f172a;
+            border-radius: 0.5rem; display: flex; align-items: center; gap: 0.5rem;
+        }
+        .deliverable-box {
+            background: #f0faf7; border: 1px solid #99d6ca; border-left: 5px solid #009B7D; padding: 1rem;
+            font-size: 0.95rem; color: #0f172a; border-radius: 0.5rem; font-weight: 600;
+        }
+        .demo-link {
+            background: #f0fdf4; border: 1px dashed #009B7D; border-radius: 0.5rem;
+            padding: 0.9rem 1rem; margin-top: 1.5rem; font-size: 0.95rem; color: #004b3d; text-align: center;
+        }
+        .demo-link a { color: #009B7D; font-weight: 600; }
+        /* SCREENSHOT */
+        .screenshot-img {
+            width: 100%; max-width: 600px; height: auto; border-radius: 0.5rem;
+            margin: 1.5rem auto; display: block; border: 1px solid #cbd5e1;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05); flex-shrink: 0;
+        }
+        /* TRAINERS */
+        .trainer-section { max-width: 750px; margin: 0 auto 2rem auto; flex-shrink: 0; }
+        .trainer-box {
+            display: flex; flex-wrap: wrap; align-items: center; gap: 1.5rem;
+            background: #e6f5f2; border-radius: 1rem; padding: 1.5rem 2rem;
+            margin-bottom: 1.5rem;
+        }
+        .trainer-box img { width: 120px; height: 120px; border-radius: 50%; object-fit: cover; border: 3px solid #009B7D; flex-shrink: 0; }
+        .trainer-box p { margin: 0; font-size: 0.95rem; color: #1a2f2b; line-height: 1.6; }
+        /* LEXIQUE */
+        .lexique-box {
+            background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 1rem;
+            padding: 2rem; max-width: 750px; margin: 0 auto 2rem auto; flex-shrink: 0;
+        }
+        .lexique-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; font-size: 0.95rem; line-height: 1.6; }
+        .lexique-term strong { color: #009B7D; display: block; margin-bottom: 0.3rem; }
+        .lexique-term p { margin: 0; color: #334155; }
+        /* CTA */
+        .cta-box {
+            background: linear-gradient(135deg, #004b3d, #007a62);
+            color: white; text-align: center; padding: 2.5rem; border-radius: 1rem;
+            max-width: 750px; margin: 0 auto 2rem auto; flex-shrink: 0;
+        }
+        .cta-box h3 { color: #99d6ca; font-size: 1.4rem; margin-bottom: 1rem; }
+        .cta-box p { font-size: 1rem; line-height: 1.7; margin-bottom: 1.5rem; }
+        .btn {
+            background: #009B7D; color: white; padding: 0.9rem 2.2rem; border-radius: 30px;
+            text-decoration: none; font-weight: 700; letter-spacing: 0.02em; display: inline-block;
+        }
+        .btn:hover { background: #007a62; }
+        /* PRINT */
+        .page-break { page-break-before: always; }
         @media print {
+            body { background: white !important; padding: 0; margin: 0; }
             .cover-page { height: 297mm; }
-            .cover-page h1, .cover-page h1 span { color: white !important; }
-            body { background: white !important; }
-            .container { margin: 0 auto; box-shadow: none; border-radius: 0; }
+            .cover-page h1 { color: white !important; }
+            .container { 
+                box-shadow: none; border-radius: 0; margin: 0; max-width: 100%; 
+                padding: 10mm 15mm; min-height: 290mm; 
+            }
+            .step-card { padding: 1.5rem 1.5rem 1.2rem 1.5rem; margin-top: 1rem; margin-bottom: 1rem; }
+            .step-number-big { top: -15px; width: 40px; height: 40px; font-size: 1.2rem; }
+            .step-card, .cta-box, .trainer-box, .how-to-box { break-inside: avoid; page-break-inside: avoid; }
         }
-        .container { background: #ffffff; box-shadow: 0 10px 40px -10px rgba(0,0,0,0.2); max-width: 950px; margin: 2rem auto; border-radius: 1rem; padding: 4rem; }
-        .prompt-card, .step-card { box-shadow: 0 2px 8px rgba(0,0,0,0.04); transition: box-shadow 0.2s; }
-        .prompt-card:hover, .step-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.08); }
-        .intro-box {
-            font-size: 1.25rem;
-            background: #f0faf7;
-            border-left: none;
-            border-top: 4px solid #009B7D;
-            border-bottom: 4px solid #009B7D;
-            border-radius: 0;
-            padding: 2.5rem 2rem;
-            margin: 3rem auto;
-            max-width: 800px;
-            text-align: center;
-            line-height: 1.7;
-        }
-        .cta-box { background: linear-gradient(135deg, #004b3d, #007a62); }
-        .btn { font-weight: 600; letter-spacing: 0.02em; transition: background 0.2s; }
-        .btn:hover { background: #007a62; transform: scale(1.02); }
     </style>
 </head>
 <body>
-    <div class="cover-page">
-        <div class="cover-content">
-            <div style="margin-bottom: 2rem;">
-                <img src="../images/logo_second_white.png" alt="Babylone 42" style="height: 60px;" onerror="this.src='../images/logo_second_white.svg'">
-            </div>
-            <span class="badge" style="background: rgba(255,255,255,0.2); backdrop-filter: blur(5px); font-size: 1rem; padding: 0.5rem 1.5rem; margin-bottom: 2rem;">Checklist Production IA</span>
-            <h1 style="color: white; font-size: 3.5rem; line-height: 1.1; margin-bottom: 1.5rem; background: none; -webkit-background-clip: initial; text-shadow: 0 4px 15px rgba(0,0,0,0.3);">Les 5 étapes pour produire<br><span style="font-size: 2.2rem; font-weight: 500; opacity: 0.9;">votre première vidéo professionnelle avec l'IA en moins de 4 heures</span></h1>
-            <p style="color: #99d6ca; font-size: 1.2rem; max-width: 600px; margin: 0 auto;">De l'idée à la publication, le processus complet des créateurs de contenu B2B.</p>
-        </div>
-        <div style="position: absolute; bottom: 40px; width: 100%; text-align: center; color: rgba(255,255,255,0.5);">
-            © Babylone 42 - Reproduction interdite
-        </div>
-    </div>
 
-    <div class="container">
-        <!-- Introduction -->
-        <div class="intro-box" style="margin-top: 0;">
-            <strong>Vous voulez produire des vidéos pour vos réseaux sociaux, votre site ou vos campagnes, mais les agences sont trop chères et les délais trop longs ?</strong><br><br>
-            Cette checklist vous donne la méthodologie exacte utilisée par les réalisateurs pros pour passer de l'idée à la vidéo finale en quelques heures, grâce à l'intelligence artificielle.
-        </div>
+<!-- PAGE 1 : COUVERTURE -->
+<div class="cover-page">
+    <div style="margin-bottom: 2rem;">
+        <img src="../images/logo_second_white.png" alt="Babylone 42" style="height: 60px;" onerror="this.src='../images/logo_second_white.svg'">
+    </div>
+    <span class="badge" style="background: rgba(255,255,255,0.2); font-size: 1rem; padding: 0.5rem 1.5rem; margin-bottom: 2rem;">Checklist Production IA</span>
+    <h1 style="color: white; font-size: 3.2rem; line-height: 1.1; margin-bottom: 1.5rem; font-weight: 800; text-shadow: 0 4px 15px rgba(0,0,0,0.3);">
+        Les 5 étapes pour produire<br>
+        <span style="font-size: 2.2rem; font-weight: 500; opacity: 0.9;">votre première vidéo professionnelle avec l'IA en moins de 4 heures</span>
+    </h1>
+    <p style="color: #99d6ca; font-size: 1.2rem; max-width: 600px; margin: 0 auto;">De l'idée à la publication – le processus complet des créateurs de contenu B2B.</p>
+    <div class="cover-copyright">© Babylone 42 – Reproduction interdite sans autorisation écrite</div>
+</div>
+
+<!-- PAGE 2 : Introduction + Comment utiliser -->
+<div class="container">
+    <div class="page-header">
+        <a href="https://babylone42.fr" target="_blank"><img src="../images/logo_second_color.svg" alt="Babylone 42"></a>
+        <span class="badge">Checklist Production IA</span>
+    </div>
+    <div class="intro-box">
+        <strong>Vous voulez produire des vidéos pour vos réseaux sociaux, votre site ou vos campagnes, mais les agences sont trop chères et les délais trop longs ?</strong><br><br>
+        Cette checklist vous donne la méthodologie exacte utilisée par les réalisateurs pros pour passer de l'idée à la vidéo finale en quelques heures, grâce à l'intelligence artificielle.
+    </div>
+    <h2>Le Processus de génération des vidéos par IA</h2>
+    <div class="check-list">
+        <div class="check-item">Pas besoin de caméra, ni de studio, ni d'acteurs.</div>
+        <div class="check-item">Coûts de production divisés par 10.</div>
+        <div class="check-item">Qualité premium (4K, cinématique, voix ultra-réalistes).</div>
+    </div>
+    <div class="how-to-box">
+        <h3>📋 Comment utiliser cette checklist ?</h3>
+        <ol>
+            <li>Commencez par l'étape 1 (Scripting) – c'est la fondation.</li>
+            <li>Suivez les étapes dans l'ordre, car elles s'enchaînent logiquement.</li>
+            <li>Pour chaque étape, utilisez les outils recommandés (gratuits ou freemium).</li>
+            <li>À la fin de l'étape 5, vous aurez une vidéo prête à être publiée.</li>
+            <li>Si vous voulez aller plus loin, inscrivez-vous à la formation complète (3 jours).</li>
+        </ol>
+    </div>
+    <div class="page-footer">
+        <span>© Babylone 42 • Organisme certifié Qualiopi • SIRET : 992 220 707 00010 • NDA : 93132513713</span>
+        <a href="https://babylone42.fr" target="_blank">babylone42.fr</a>
+    </div>
+</div>
+
+<!-- PAGE 3 : Étape 1 – Scripting -->
+<div class="container page-break">
+    <div class="page-header">
+        <a href="https://babylone42.fr" target="_blank"><img src="../images/logo_second_color.svg" alt="Babylone 42"></a>
+        <span class="badge">Étape 1 / 5</span>
+    </div>
+    <div class="step-card">
+        <div class="step-number-big">1</div>
+        <h3>Scripting C.O.R.E.</h3>
+        <p class="step-subtitle">La fondation de toute vidéo professionnelle</p>
+        <p>Tout part du script. Avant de générer des images, vous devez structurer votre narration. La méthode <strong>C.O.R.E.</strong> garantit une vidéo captivante de la première à la dernière seconde :</p>
+        <p>
+            🎯 <strong>C – Crochet (Hook)</strong> : une accroche forte dans les 3 premières secondes.<br>
+            🔍 <strong>O – Obstacle (Problème)</strong> : exposez le problème de votre audience.<br>
+            💡 <strong>R – Résolution (Solution)</strong> : amenez votre solution clairement.<br>
+            ✅ <strong>E – Engagement (CTA)</strong> : terminez par un Call-to-Action précis.
+        </p>
+        <div class="tools-box"><strong>🛠️ Outils recommandés :</strong> ChatGPT, Claude</div>
+        <div class="deliverable-box"><strong>🎯 Livrable :</strong> Un script structuré (Hook, Problème, Solution, CTA) calibré pour 15 à 60 secondes.</div>
+    </div>
+    <div class="page-footer">
+        <span>© Babylone 42 • Organisme certifié Qualiopi • SIRET : 992 220 707 00010 • NDA : 93132513713</span>
+        <a href="https://babylone42.fr" target="_blank">babylone42.fr</a>
+    </div>
+</div>
+
+<!-- PAGE 4 : Étape 2 – Sound Design -->
+<div class="container page-break">
+    <div class="page-header">
+        <a href="https://babylone42.fr" target="_blank"><img src="../images/logo_second_color.svg" alt="Babylone 42"></a>
+        <span class="badge">Étape 2 / 5</span>
+    </div>
+    <div class="step-card">
+        <div class="step-number-big">2</div>
+        <h3>Sound Design (Voix &amp; Musique)</h3>
+        <p class="step-subtitle">Le son fait 50 % du travail d'une vidéo professionnelle</p>
+        <p>L'IA permet aujourd'hui de cloner votre propre voix ou de générer des voix de comédiens avec des intonations parfaites (soupirs, hésitations, emphase). Ajoutez-y une bande-son originale générée sur mesure pour rythmer le montage et créer une identité sonore reconnaissable.</p>
+        <p>
+            🎙️ <strong>Voix IA :</strong> clonez votre voix en 60 secondes d'enregistrement.<br>
+            🎵 <strong>Musique générative :</strong> créez une bande-son exclusive, libres de droits.<br>
+            🔊 <strong>Mixage :</strong> équilibrez voix off et musique pour un rendu broadcast.
+        </p>
+        <div class="tools-box"><strong>🛠️ Outils recommandés :</strong> ElevenLabs (Voix), Suno (Musique)</div>
+        <div class="deliverable-box"><strong>🎯 Livrable :</strong> Une voix off clonée (ou synthétique) ultra-réaliste et une bande-son rythmée adaptée à l'ambiance.</div>
+    </div>
+    <div class="page-footer">
+        <span>© Babylone 42 • Organisme certifié Qualiopi • SIRET : 992 220 707 00010 • NDA : 93132513713</span>
+        <a href="https://babylone42.fr" target="_blank">babylone42.fr</a>
+    </div>
+</div>
+
+<!-- PAGE 5 : Étape 3 – Direction Artistique -->
+<div class="container page-break">
+    <div class="page-header">
+        <a href="https://babylone42.fr" target="_blank"><img src="../images/logo_second_color.svg" alt="Babylone 42"></a>
+        <span class="badge">Étape 3 / 5</span>
+    </div>
+    <div class="step-card">
+        <div class="step-number-big">3</div>
+        <h3>Direction Artistique &amp; Prompt Bible</h3>
+        <p class="step-subtitle">Définissez votre univers visuel une fois pour toutes</p>
+        <p>C'est ici que vous définissez l'univers visuel. Générez les images fixes clés qui serviront de base à la vidéo. Le défi principal est la <strong>consistance</strong> : s'assurer que le personnage ou le style graphique reste identique d'une image à l'autre.</p>
+        <p>
+            🎨 <strong>Charte graphique :</strong> couleurs, typographies, ambiance (cinématique, corporate, cartoon…).<br>
+            🔑 <strong>Seeds :</strong> codes numériques pour "figer" un personnage ou un style.<br>
+            📖 <strong>Prompt Bible :</strong> votre bibliothèque de prompts optimisés, réutilisable à l'infini.
+        </p>
+        <div class="tools-box"><strong>🛠️ Outils recommandés :</strong> Midjourney, Leonardo.ai</div>
+        <div class="deliverable-box"><strong>🎯 Livrable :</strong> Une charte graphique et une bibliothèque de prompts (Prompt Bible) pour des visuels 100 % cohérents.</div>
+    </div>
+    <div class="page-footer">
+        <span>© Babylone 42 • Organisme certifié Qualiopi • SIRET : 992 220 707 00010 • NDA : 93132513713</span>
+        <a href="https://babylone42.fr" target="_blank">babylone42.fr</a>
+    </div>
+</div>
+
+<!-- PAGE 6 : Étape 4 – Animation -->
+<div class="container page-break">
+    <div class="page-header">
+        <a href="https://babylone42.fr" target="_blank"><img src="../images/logo_second_color.svg" alt="Babylone 42"></a>
+        <span class="badge">Étape 4 / 5</span>
+    </div>
+    <div class="step-card">
+        <div class="step-number-big">4</div>
+        <h3>Animation Image-to-Video</h3>
+        <p class="step-subtitle">Donnez vie à vos images fixes</p>
+        <p>Prenez vos plus belles images générées à l'étape 3 et donnez-leur vie. Les nouveaux modèles d'IA vidéo permettent d'animer l'eau, les visages, de faire des mouvements de caméra complexes simplement en décrivant le mouvement souhaité.</p>
+        <p>
+            🎬 <strong>Traveling &amp; Zoom :</strong> simulez des mouvements de caméra professionnels.<br>
+            👤 <strong>Lip sync :</strong> synchronisez les lèvres des personnages avec votre voix off.<br>
+            🌊 <strong>VFX naturels :</strong> animez l'eau, les nuages, les flammes de manière réaliste.
+        </p>
+        <div class="tools-box"><strong>🛠️ Outils recommandés :</strong> Runway Gen-3, Kling AI, Pika</div>
+        <div class="deliverable-box"><strong>🎯 Livrable :</strong> Des plans vidéo fluides et cinématiques générés à partir de vos images fixes.</div>
+    </div>
+    <div class="page-footer">
+        <span>© Babylone 42 • Organisme certifié Qualiopi • SIRET : 992 220 707 00010 • NDA : 93132513713</span>
+        <a href="https://babylone42.fr" target="_blank">babylone42.fr</a>
+    </div>
+</div>
+
+<!-- PAGE 7 : Étape 5 – Montage -->
+<div class="container page-break">
+    <div class="page-header">
+        <a href="https://babylone42.fr" target="_blank"><img src="../images/logo_second_color.svg" alt="Babylone 42"></a>
+        <span class="badge">Étape 5 / 5</span>
+    </div>
+    <div class="step-card">
+        <div class="step-number-big">5</div>
+        <h3>Montage &amp; Export</h3>
+        <p class="step-subtitle">Assemblez, finalisez et publiez</p>
+        <p>La dernière étape consiste à tout assembler comme un puzzle. Synchronisez vos plans vidéo générés avec votre voix off et votre musique. Ajoutez des effets de transition dynamiques, et générez automatiquement des sous-titres animés très prisés sur les réseaux sociaux.</p>
+        <p>
+            ✂️ <strong>Montage IA :</strong> synchronisation automatique son/image en un clic.<br>
+            📝 <strong>Sous-titres animés :</strong> style "Hormozi" ultra-viral sur TikTok/Reels/LinkedIn.<br>
+            📤 <strong>Export multi-formats :</strong> 16:9 YouTube, 9:16 TikTok/Reels, 1:1 LinkedIn.
+        </p>
+        <div class="tools-box"><strong>🛠️ Outils recommandés :</strong> CapCut Pro</div>
+        <div class="deliverable-box"><strong>🎯 Livrable :</strong> Montage dynamique, sous-titres animés, et export multi-formats prêts à publier.</div>
         
-        <h2>Le Processus de génération des vidéos par IA</h2>
-        <div style="max-width: 600px; margin: 0 auto 3rem auto; display: flex; flex-direction: column; gap: 0.8rem; text-align: left;">
-            <div class="check-item">Pas besoin de caméra, ni de studio, ni d'acteurs.</div>
-            <div class="check-item">Coûts de production divisés par 10.</div>
-            <div class="check-item">Qualité premium (4K, cinématique, voix ultra-réalistes).</div>
-        </div>
-
-        <div class="page-break"></div>
-
-        <!-- PAGE 2 : Etape 1 -->
-        <div class="step-card">
-            <div class="step-number">Étape 1</div>
-            <h3>Scripting C.O.R.E.</h3>
-            <p>Tout part du script. Avant de générer des images, vous devez structurer votre narration. La méthode C.O.R.E. garantit une vidéo captivante de la première à la dernière seconde. Concentrez-vous sur un "Hook" (accroche) fort dans les 3 premières secondes, exposez le problème, amenez la solution, et terminez par un Call-to-Action clair.</p>
-            
-            <div class="tools-box">
-                <strong>🛠️ Outils recommandés :</strong> ChatGPT, Claude
-            </div>
-            <div class="deliverable-box">
-                <strong>🎯 Livrable :</strong> Un script structuré (Hook, Problème, Solution, CTA) calibré pour 15 à 60 secondes.
-            </div>
-        </div>
-
-        <!-- PAGE 3 : Etape 2 -->
-        <div class="step-card">
-            <div class="step-number">Étape 2</div>
-            <h3>Sound Design (Voix & Musique)</h3>
-            <p>Le son fait 50% du travail d'une vidéo professionnelle. L'IA permet aujourd'hui de cloner votre propre voix ou de générer des voix de comédiens avec des intonations parfaites (soupirs, hésitations). Ajoutez-y une bande-son originale générée sur mesure pour rythmer le montage.</p>
-            
-            <div class="tools-box">
-                <strong>🛠️ Outils recommandés :</strong> ElevenLabs (Voix), Suno (Musique)
-            </div>
-            <div class="deliverable-box">
-                <strong>🎯 Livrable :</strong> Une voix off clonée (ou synthétique) ultra-réaliste et une bande-son rythmée adaptée à l'ambiance.
-            </div>
-        </div>
-
-        <div class="page-break"></div>
-
-        <!-- PAGE 4 : Etape 3 -->
-        <div class="step-card">
-            <div class="step-number">Étape 3</div>
-            <h3>Direction Artistique & Prompt Bible</h3>
-            <p>C'est ici que vous définissez l'univers visuel. Générez les images fixes clés qui serviront de base à la vidéo. Le défi principal est la "consistance" : s'assurer que le personnage ou le style graphique reste identique d'une image à l'autre en utilisant des Seeds ou des références.</p>
-            
-            <div class="tools-box">
-                <strong>🛠️ Outils recommandés :</strong> Midjourney, Leonardo.ai
-            </div>
-            <div class="deliverable-box">
-                <strong>🎯 Livrable :</strong> Une charte graphique et une bibliothèque de prompts (Prompt Bible) pour des visuels 100% cohérents.
-            </div>
-        </div>
-
-        <!-- PAGE 5 : Etape 4 -->
-        <div class="step-card">
-            <div class="step-number">Étape 4</div>
-            <h3>Animation Image-to-Video</h3>
-            <p>Prenez vos plus belles images générées à l'étape 3 et donnez-leur vie. Les nouveaux modèles d'IA vidéo permettent d'animer l'eau, les visages, de faire des mouvements de caméra complexes (traveling, zoom, drone) simplement en décrivant le mouvement souhaité.</p>
-            
-            <div class="tools-box">
-                <strong>🛠️ Outils recommandés :</strong> Runway Gen-3, Kling AI, Pika
-            </div>
-            <div class="deliverable-box">
-                <strong>🎯 Livrable :</strong> Des plans vidéo fluides et cinématiques générés à partir de vos images fixes.
-            </div>
-        </div>
-
-        <div class="page-break"></div>
-
-        <!-- PAGE 6 : Etape 5 et Conclusion -->
-        <div class="step-card">
-            <div class="step-number">Étape 5</div>
-            <h3>Montage & Export</h3>
-            <p>La dernière étape consiste à tout assembler comme un puzzle. Synchronisez vos plans vidéo générés avec votre voix off et votre musique. Ajoutez des effets de transition dynamiques, et générez automatiquement des sous-titres animés très prisés sur les réseaux sociaux (style "Hormozi").</p>
-            
-            <div class="tools-box">
-                <strong>🛠️ Outils recommandés :</strong> CapCut Pro
-            </div>
-            <div class="deliverable-box">
-                <strong>🎯 Livrable :</strong> Montage dynamique, sous-titres animés, et export multi-formats (16:9 pour YouTube, 9:16 pour TikTok/Reels, 1:1 pour LinkedIn).
-            </div>
-        </div>
-
-        <!-- À PROPOS DE VOS FORMATEURS -->
-        <div class="page-break"></div>
-        <div style="display: flex; flex-direction: column; gap: 1rem; background: #e6f5f2; border-radius: 1rem; padding: 1.5rem; margin: 2.5rem auto; max-width: 750px;">
-            <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 1.5rem;">
-                <div style="flex: 0 0 80px; text-align: center;">
-                    <img src="https://babylone42.fr/images/eulalio_edited.jpg" alt="Dr. Eulalio TORRES" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 3px solid #009B7D;">
-                </div>
-                <div style="flex: 1;">
-                    <p style="margin: 0; font-size: 0.9rem; color: #1a2f2b; line-height: 1.5;">
-                        <strong style="color: #004b3d;">Dr. Eulalio TORRES</strong> – Docteur en Ingénierie Aérospatiale, 15 ans d'expérience en IA et Data Science.  
-                        Il a formé plus de <strong>1 000 professionnels</strong> à l'IA sans prérequis technique.
-                    </p>
-                </div>
-            </div>
-            <div style="height: 1px; background: rgba(0, 155, 125, 0.2); margin: 0.5rem 0;"></div>
-            <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 1.5rem;">
-                <div style="flex: 0 0 80px; text-align: center;">
-                    <img src="https://babylone42.fr/images/thomas-khairallah.jpg" alt="Thomas KHAIRALLAH" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 3px solid #009B7D;">
-                </div>
-                <div style="flex: 1;">
-                    <p style="margin: 0; font-size: 0.9rem; color: #1a2f2b; line-height: 1.5;">
-                        <strong style="color: #004b3d;">Thomas KHAIRALLAH</strong> – Formateur Vidéo IA & Réalisateur indépendant.
-                        Garant de la qualité esthétique, il maîtrise la chaîne complète : de la génération d'images au montage dynamique, pour un contenu premium prêt pour les réseaux sociaux.
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <!-- LEXIQUE IA POUR LES NON-INFORMATICIENS -->
-        <div style="background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 1rem; padding: 1.5rem; margin: 3rem auto; max-width: 750px;">
-            <h3 style="color: #004b3d; font-size: 1.2rem; margin-bottom: 1rem;">📖 Lexique IA – Traduit pour les non-informaticiens</h3>
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; font-size: 0.95rem; line-height: 1.5;">
-                <div>
-                    <strong style="color: #009B7D;">Génération en série (Pipeline)</strong>
-                    <p style="margin: 0; color: #334155;">Votre chaîne de production interne. Un processus organisé (scripts, assets, exports) pour produire des vidéos de qualité, rapidement et à moindre coût.</p>
-                </div>
-                <div>
-                    <strong style="color: #009B7D;">Prompt Bible</strong>
-                    <p style="margin: 0; color: #334155;">Un document de référence contenant tous vos prompts optimisés (visuels, voix, etc.) pour garantir une cohérence absolue entre vos vidéos (couleurs, personnages, ton).</p>
-                </div>
-                <div>
-                    <strong style="color: #009B7D;">Seeds (graines)</strong>
-                    <p style="margin: 0; color: #334155;">Un code numérique qui permet de "figer" le style ou le personnage généré par l'IA, afin de le retrouver facilement dans les prochaines créations.</p>
-                </div>
-                <div>
-                    <strong style="color: #009B7D;">Image-to-Video</strong>
-                    <p style="margin: 0; color: #334155;">Technologie qui transforme une image fixe en une courte vidéo animée (ex: une photo de paysage qui devient un travelling cinématique).</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Conclusion -->
-        <div class="cta-box">
-            <h3>Passez de la théorie à la pratique</h3>
-            <p>Cette checklist vous permet de démarrer, mais la maîtrise complète (surtout la consistance visuelle et le workflow) s'acquiert en formation.<br><br>
-            En <strong>3 jours (21h)</strong>, en binôme avec un expert IA et un réalisateur professionnel, vous produisez votre première vidéo premium et vous repartez avec votre propre pipeline de génération de vidéos par IA opérationnel.</p>
-            <p style="font-size: 0.95rem; color: #cbd5e1;">⚠️ Places limitées à 12 participants par session.</p>
-            <a href="https://babylone42.fr/formation-video-ia-pro.html?utm_source=lead_magnet&utm_medium=pdf&utm_campaign=checklist_5_etapes" class="btn">Découvrir la formation complète</a>
-        </div>
-
-        <footer>
-            Ce guide est un contenu exclusif offert aux visiteurs de Babylone42. Il ne peut être partagé ou reproduit sans autorisation écrite.
-        </footer>
+        <img src="../images/demo-montage.jpg" alt="Exemple d'interface de montage (ajouter l'image dans /images/demo-montage.jpg)" class="screenshot-img" onerror="this.style.display='none'">
+        
+        <div class="demo-link">💡 <strong>Voir un exemple :</strong> <a href="https://www.youtube.com/@babylone42" target="_blank">Voir une vidéo de démo sur YouTube</a></div>
     </div>
+    <div class="page-footer">
+        <span>© Babylone 42 • Organisme certifié Qualiopi • SIRET : 992 220 707 00010 • NDA : 93132513713</span>
+        <a href="https://babylone42.fr" target="_blank">babylone42.fr</a>
+    </div>
+</div>
+
+<!-- PAGE 8 : Formateurs -->
+<div class="container page-break">
+    <div class="page-header">
+        <a href="https://babylone42.fr" target="_blank"><img src="../images/logo_second_color.svg" alt="Babylone 42"></a>
+        <span class="badge">Vos Formateurs</span>
+    </div>
+    <h2>📌 À propos de vos formateurs</h2>
+    <div class="trainer-section">
+        <div class="trainer-box">
+            <img src="https://babylone42.fr/images/eulalio_edited.jpg" alt="Dr. Eulalio TORRES">
+            <div>
+                <p>
+                    <strong style="color: #004b3d; font-size: 1rem;">Dr. Eulalio TORRES</strong> – Expert IA &amp; Formateur principal<br>
+                    Docteur en Ingénierie Aérospatiale, 15 ans d'expérience en IA et Data Science.<br>
+                    Il a formé plus de <strong>1 000 professionnels</strong> à l'IA sans prérequis technique.<br>
+                    Son credo : des outils opérationnels dès le premier jour, zéro jargon inutile.
+                </p>
+            </div>
+        </div>
+        <div class="trainer-box">
+            <img src="https://babylone42.fr/images/thomas-khairallah.jpg" alt="Thomas KHAIRALLAH">
+            <div>
+                <p>
+                    <strong style="color: #004b3d; font-size: 1rem;">Thomas KHAIRALLAH</strong> – Formateur Vidéo IA &amp; Réalisateur<br>
+                    Garant de la qualité esthétique, il maîtrise la chaîne complète : de la génération d'images au montage dynamique.<br>
+                    Spécialiste de la cohérence visuelle et de la narration vidéo B2B,<br>
+                    il vous guide vers un contenu premium prêt pour les réseaux sociaux.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="page-footer">
+        <span>© Babylone 42 • Organisme certifié Qualiopi • SIRET : 992 220 707 00010 • NDA : 93132513713</span>
+        <a href="https://babylone42.fr" target="_blank">babylone42.fr</a>
+    </div>
+</div>
+
+<!-- PAGE 9 : Lexique IA -->
+<div class="container page-break">
+    <div class="page-header">
+        <a href="https://babylone42.fr" target="_blank"><img src="../images/logo_second_color.svg" alt="Babylone 42"></a>
+        <span class="badge">Lexique IA</span>
+    </div>
+    <h2>📖 Lexique IA – Traduit pour les non-informaticiens</h2>
+    <div class="lexique-box">
+        <div class="lexique-grid">
+            <div class="lexique-term">
+                <strong>Génération en série (Pipeline)</strong>
+                <p>Votre chaîne de production interne. Un processus organisé (scripts, assets, exports) pour produire des vidéos de qualité, rapidement et à moindre coût.</p>
+            </div>
+            <div class="lexique-term">
+                <strong>Prompt Bible</strong>
+                <p>Un document de référence contenant tous vos prompts optimisés pour garantir une cohérence absolue entre vos vidéos (couleurs, personnages, ton).</p>
+            </div>
+            <div class="lexique-term">
+                <strong>Seeds (graines)</strong>
+                <p>Un code numérique qui permet de "figer" le style ou le personnage généré par l'IA, afin de le retrouver fidèlement dans les prochaines créations.</p>
+            </div>
+            <div class="lexique-term">
+                <strong>Image-to-Video</strong>
+                <p>Technologie qui transforme une image fixe en une courte vidéo animée (ex : une photo de paysage qui devient un travelling cinématique).</p>
+            </div>
+            <div class="lexique-term">
+                <strong>Lip Sync</strong>
+                <p>Synchronisation automatique des mouvements de lèvres d'un personnage avec une voix off générée par IA. Donne un rendu ultra-réaliste.</p>
+            </div>
+            <div class="lexique-term">
+                <strong>Consistance visuelle</strong>
+                <p>La capacité à générer des personnages, décors ou styles identiques d'une image à l'autre. Le défi #1 de la vidéo IA, résolu par les Seeds et la Prompt Bible.</p>
+            </div>
+        </div>
+    </div>
+    <div class="page-footer">
+        <span>© Babylone 42 • Organisme certifié Qualiopi • SIRET : 992 220 707 00010 • NDA : 93132513713</span>
+        <a href="https://babylone42.fr" target="_blank">babylone42.fr</a>
+    </div>
+</div>
+
+<!-- PAGE 10 : CTA + Footer -->
+<div class="container page-break">
+    <div class="page-header">
+        <a href="https://babylone42.fr" target="_blank"><img src="../images/logo_second_color.svg" alt="Babylone 42"></a>
+        <span class="badge">Formation Complète</span>
+    </div>
+    <h2>🚀 Passez de la théorie à la pratique</h2>
+    <div class="cta-box">
+        <h3>Prêt à produire vos premières vidéos IA ?</h3>
+        <p>
+            Cette checklist vous permet de démarrer, mais la maîtrise complète<br>
+            (consistance visuelle, workflow avancé, pitching client) s'acquiert en formation.<br><br>
+            En <strong>3 jours (21h)</strong>, en binôme avec un expert IA et un réalisateur professionnel,<br>
+            vous produisez votre première vidéo premium et repartez avec votre propre<br>
+            pipeline de génération de vidéos par IA entièrement opérationnel.
+        </p>
+        <p style="font-size: 0.95rem; color: #a7f3d0; margin-bottom: 1.5rem; display: flex; align-items: center; justify-content: center; gap: 0.5rem;">
+            <span>⚠️</span> Places limitées à 12 participants par session.
+        </p>
+        <a href="https://babylone42.fr/formation-video-ia-pro.html?utm_source=lead_magnet&utm_medium=pdf&utm_campaign=checklist_video_pro" class="btn">Découvrir la formation complète</a>
+    </div>
+    <div class="page-footer">
+        <span>© Babylone 42 • Organisme certifié Qualiopi • SIRET : 992 220 707 00010 • NDA : 93132513713</span>
+        <a href="https://babylone42.fr" target="_blank">babylone42.fr</a>
+    </div>
+</div>
+
 </body>
 </html>

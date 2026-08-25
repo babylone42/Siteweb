@@ -1,4 +1,4 @@
-/* RESET & VARIABLES */
+﻿/* RESET & VARIABLES */
 :root {
     --bg-color: #02161b;
     /* Deep Teal Background */
@@ -20,6 +20,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+input, button, textarea, select {
+    font-family: inherit;
 }
 
 html {
@@ -1713,6 +1717,8 @@ p {
 .footer-bottom .legal-links {
     display: flex;
     gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .footer-bottom .legal-links a {

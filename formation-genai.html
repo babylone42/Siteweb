@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="fr">
 
 <head>
@@ -220,21 +220,23 @@
             pointer-events: none !important;
         }
     </style>
-    <style id="audit-styles">
-        .link-disabled {
-            opacity: 0.4 !important;
-            cursor: not-allowed !important;
-            pointer-events: none !important;
-            text-decoration: line-through !important;
+    
+    <style>
+        .trainer-badge {
+            background: rgba(16,155,128,0.15);
+            padding: 0.2rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            color: #109B80;
+            border: 1px solid rgba(16,155,128,0.2);
+            transition: all 0.3s ease;
+            cursor: default;
         }
-        a.link-disabled {
-            pointer-events: none !important;
-        }
-        .card-disabled {
-            opacity: 0.45 !important;
-            cursor: not-allowed !important;
-            filter: grayscale(80%) !important;
-            pointer-events: none !important;
+        .trainer-badge:hover {
+            background: #109B80;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(16,155,128,0.3);
         }
     </style>
 </head>
@@ -321,9 +323,8 @@
                         </h1>
                         <p
                             style="font-size: 1.1rem; color: var(--text-muted); margin-bottom: 2rem; text-align: justify;">
-                            Maîtrisez ChatGPT,
-                            Copilot et Midjourney en 1,5 jour. Prompt Engineering avancé, automatisation no-code, cas
-                            pratiques sectoriels. Zéro prérequis technique.</p>
+                            <strong>Vous êtes assistante de direction, office manager ou chargée d'administration ?</strong><br>
+                            Cette formation vous apprend à <span class="highlight">automatiser vos tâches rédactionnelles</span> : comptes-rendus, notes de frais, synthèses de réunions, réponses e-mail… Gagnez <strong>5 à 10 heures par semaine</strong> grâce à une méthode 100 % pratique. Zéro prérequis technique.</p>
                         <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.5rem;">
                             <i class="fas fa-file-pdf" style="color: var(--primary-color);"></i>
                             <a href="programmes/REF-2026-IAGEN-001.pdf" style="color: var(--primary-color); text-decoration: underline;">Télécharger le programme complet (PDF)</a>
@@ -391,9 +392,7 @@
                         <i class="fas fa-users"
                             style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
                         <h4 style="margin-bottom: 0.5rem; font-size: 1.1rem;">Public Cible</h4>
-                        <p style="color: #64748b; font-size: 1.1rem; margin-bottom: 0; text-align: center;">Managers,
-                            Marketeurs, RH,
-                            Dirigeants</p>
+                        <p style="color: #64748b; font-size: 1.1rem; margin-bottom: 0; text-align: center;">Assistantes de direction, office managers, responsables RH, managers – tout professionnel souhaitant automatiser ses tâches administratives et rédactionnelles.</p>
                     </div>
                     <div class="bento-card"
                         style="background: white; border: 1px solid #e2e8f0; color: #0f172a; text-align: center; padding: 1.5rem;">
@@ -466,7 +465,7 @@
                         <p id="form-message-genai" style="display: none; font-weight: 600; margin-top: 0.5rem;"></p>
                         <p style="color: #64748b; font-size: 0.85rem; margin-top: 0.6rem; text-align: justify;">
                             <i class="fas fa-lock" style="margin-right: 0.3rem;"></i> Vos données sont sécurisées. 
-                            En téléchargeant, vous recevrez 1 email par mois avec des astuces IA (désabonnement en 1 clic).
+                            En téléchargeant, vous recevrez 1 email par mois avec des astuces IA (désabonnement en 1 clic). <a href="politique-confidentialite.html" style="color: var(--primary-color); text-decoration: underline;">Lire notre politique de confidentialité</a>.
                         </p>
                     </div>
                 </div>
@@ -588,9 +587,9 @@
                         <img src="images/eulalio_edited.jpg" alt="Dr. Eulalio TORRES - Formateur IA Générative" 
                              style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; border: 4px solid var(--primary-color); display: block; margin: 0 auto;">
                         <div style="display: flex; justify-content: center; gap: 0.5rem; margin-top: 1rem; flex-wrap: wrap;">
-                            <span style="background: rgba(16,155,128,0.15); padding: 0.2rem 0.8rem; border-radius: 20px; font-size: 0.7rem; color: #109B80; border: 1px solid rgba(16,155,128,0.2);">PhD</span>
-                            <span style="background: rgba(16,155,128,0.15); padding: 0.2rem 0.8rem; border-radius: 20px; font-size: 0.7rem; color: #109B80; border: 1px solid rgba(16,155,128,0.2);">15 ans d’expérience</span>
-                            <span style="background: rgba(16,155,128,0.15); padding: 0.2rem 0.8rem; border-radius: 20px; font-size: 0.7rem; color: #109B80; border: 1px solid rgba(16,155,128,0.2);">1000+ étudiants</span>
+                            <span class="trainer-badge">PhD</span>
+                            <span class="trainer-badge">15 ans d'expérience</span>
+                            <span class="trainer-badge">1000+ étudiants</span>
                         </div>
                     </div>
 
@@ -601,7 +600,7 @@
                             Docteur en Ingénierie Aérospatiale – Formateur principal & Responsable pédagogique
                         </p>
                         <p style="color: var(--text-muted); line-height: 1.8; text-align: justify; font-size: 1.05rem;">
-                            Après un PhD à l’Université Polytechnique de Madrid et des missions de recherche dans des projets européens (ANR), j’ai formé <strong>plus de 1 000 professionnels</strong> en Python, Machine Learning et IA à Aix‑Marseille Université, Paris, SUPINFO et IMIE.
+                            Après un PhD à l’Université Polytechnique de Madrid et des missions de recherche dans des projets européens (ANR), j’ai formé <strong>plus de 1 000 professionnels</strong> en Python, Machine Learning et IA à Collège Doctoral Aix-Marseille Université, Pôle Collège des Écoles Doctorales Université de Paris, SUPINFO, IMIE et Campus Academy.
                         </p>
                         <p style="color: var(--text-muted); line-height: 1.8; text-align: justify; font-size: 1.05rem;">
                             Je suis spécialisé dans la <strong>démocratisation de l’IA pour les non‑informaticiens</strong>. Mon credo : des prompts opérationnels dès le premier jour, zéro jargon inutile, et un accompagnement personnalisé sur vos cas d’usage réels.
@@ -761,7 +760,7 @@
         <!-- CTA -->
         <section class="section-padding bg-light" style="text-align: center;">
             <div class="container" style="max-width: 700px;">
-                <h2 class="section-title" style="color: #0f172a;">Prenez une longueur d'avance</h2>
+                <h2 class="section-title" style="color: #0f172a;">Prêt à gagner 5 heures par semaine dès la première session ?</h2>
                 <p class="section-subtitle" style="margin-bottom: 2rem; font-size: 1.1rem; text-align: justify;">L'IA ne
                     remplacera pas les humains, mais les
                     humains qui utilisent l'IA remplaceront ceux qui ne l'utilisent pas. La prochaine session est

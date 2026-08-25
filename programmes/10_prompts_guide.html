@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
@@ -8,48 +8,76 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, sans-serif;
-            background: #f1f5f9;
-            padding: 2rem 1rem;
+            background: #e2edf7;
             color: #0a0f2c;
         }
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            background: white;
-            border-radius: 1rem;
-            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.15);
-            padding: 3rem;
+
+        /* ── COVER PAGE ── */
+        .cover-page {
+            width: 100%;
+            min-height: 297mm;
+            height: 100vh;
+            background: linear-gradient(135deg, #0a0f2c 0%, #004b3d 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 3rem 2rem;
+            position: relative;
             page-break-after: always;
         }
-        @media print {
-            body { background: white; padding: 0; margin: 0; }
-            .container { box-shadow: none; padding: 0; max-width: 100%; page-break-after: avoid; }
-            .page-break { page-break-before: always; }
-            .step-card, .prompt-card, .intro-box, .cta-box {
-                break-inside: avoid;
-                page-break-inside: avoid;
-            }
+        .cover-copyright {
+            position: absolute;
+            bottom: 40px;
+            width: 100%;
+            text-align: center;
+            color: rgba(255,255,255,0.4);
+            font-size: 0.85rem;
         }
-        .header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 2rem; padding-bottom: 1rem; border-bottom: 2px solid #e2edf7; }
-        .header img { height: 50px; }
-        h1 {
-            font-size: 2.2rem;
-            font-weight: 800;
-            background: linear-gradient(135deg, #004b3d, #009B7D, #007a62);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            margin-bottom: 1rem;
-            line-height: 1.2;
+
+        /* ── CONTENT PAGES ── */
+        .container {
+            background: #ffffff;
+            max-width: 950px;
+            margin: 2rem auto;
+            border-radius: 1rem;
+            box-shadow: 0 10px 40px -10px rgba(0,0,0,0.2);
+            padding: 3rem 4rem 2rem 4rem;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            min-height: 80vh;
         }
-        @media print {
-            h1 {
-                background: none;
-                -webkit-background-clip: initial;
-                background-clip: initial;
-                color: #004b3d !important;
-            }
+
+        /* ── PAGE HEADER ── */
+        .page-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid #e6f5f2;
+            flex-shrink: 0;
         }
+        .page-header img { height: 40px; }
+
+        /* ── PAGE FOOTER ── */
+        .page-footer {
+            margin-top: auto; /* Pushes footer to the bottom */
+            padding-top: 1rem;
+            border-top: 1px solid #e2e8f0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.7rem;
+            color: #64748b;
+            flex-shrink: 0;
+            width: 100%;
+        }
+        .page-footer a { color: #009B7D; text-decoration: none; font-weight: 600; }
+
+        /* ── TYPOGRAPHY ── */
         .badge {
             background: #009B7D;
             color: white;
@@ -58,23 +86,11 @@
             padding: 0.4rem 1rem;
             border-radius: 40px;
             display: inline-block;
-            margin-bottom: 1rem;
-        }
-        .intro-box {
-            border-left: 5px solid #009B7D;
-            background: #e6f5f2;
-            padding: 1.5rem;
-            border-radius: 0 1rem 1rem 0;
-            margin: 1.5rem 0 2.5rem 0;
-            font-size: 1.1rem;
-            line-height: 1.6;
-            color: #1a2f2b;
         }
         h2 {
-            font-size: 1.6rem;
+            font-size: 1.5rem;
             font-weight: 700;
-            margin-top: 3.5rem;
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
             color: #004b3d;
             border-bottom: 2px solid #e6f5f2;
             padding-bottom: 0.5rem;
@@ -83,23 +99,58 @@
             justify-content: center;
             gap: 0.5rem;
             text-align: center;
+            flex-shrink: 0;
         }
+
+        /* ── INTRO BOX ── */
+        .intro-box {
+            font-size: 1.15rem;
+            background: #f0faf7;
+            border-top: 4px solid #009B7D;
+            border-bottom: 4px solid #009B7D;
+            padding: 2rem 2.5rem;
+            margin: 0 auto 2.5rem auto;
+            max-width: 800px;
+            text-align: center;
+            line-height: 1.7;
+            color: #1a2f2b;
+            flex-shrink: 0;
+        }
+
+        /* ── HOW TO USE BOX ── */
+        .how-to-box {
+            background: #fff7ed;
+            border: 1px solid #fed7aa;
+            border-left: 5px solid #f97316;
+            border-radius: 0 0.8rem 0.8rem 0;
+            padding: 1.5rem 2rem;
+            max-width: 750px;
+            margin: 0 auto 2rem auto;
+            flex-shrink: 0;
+        }
+        .how-to-box h3 { color: #c2410c; font-size: 1.1rem; margin-bottom: 1rem; }
+        .how-to-box ol { padding-left: 1.5rem; color: #431407; font-size: 1rem; line-height: 1.8; }
+
+        /* ── PROMPT CARDS ── */
         .prompt-card {
             background: #ffffff;
             border-radius: 1rem;
-            padding: 1.5rem;
+            padding: 1.2rem 1.5rem;
             border: 1px solid #cbd5e1;
-            margin-bottom: 2rem;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            margin-bottom: 1.5rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
             page-break-inside: avoid;
             max-width: 750px;
             margin-left: auto;
             margin-right: auto;
+            width: 100%;
+            flex-shrink: 0;
         }
+        .prompt-card:last-child { margin-bottom: 1.5rem; }
         .prompt-card h3 {
             color: #009B7D;
-            font-size: 1.3rem;
-            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            margin-bottom: 0.8rem;
             display: flex;
             align-items: center;
             gap: 0.5rem;
@@ -107,131 +158,180 @@
         .prompt-text {
             background: #0f172a;
             color: #f8fafc;
-            padding: 1.2rem;
+            padding: 1rem;
             border-radius: 0.8rem;
             font-family: Consolas, Monaco, monospace;
-            font-size: 0.95rem;
+            font-size: 0.85rem;
             line-height: 1.5;
-            margin-bottom: 1rem;
+            margin-bottom: 0.8rem;
             white-space: pre-wrap;
         }
         .prompt-usage {
             background: #f8fafc;
-            border-left: 4px solid #64748b;
-            padding: 1rem;
-            font-size: 0.95rem;
+            border-left: 4px solid #009B7D;
+            padding: 0.8rem 1rem;
+            font-size: 0.9rem;
             color: #334155;
             border-radius: 0 0.5rem 0.5rem 0;
         }
+
+        /* ── LEXIQUE ── */
+        .lexique-box {
+            background: #f8fafc;
+            border: 1px solid #cbd5e1;
+            border-radius: 1rem;
+            padding: 2rem;
+            max-width: 750px;
+            margin: 0 auto 2rem auto;
+            flex-shrink: 0;
+        }
+        .lexique-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        .lexique-term strong { color: #009B7D; display: block; margin-bottom: 0.3rem; }
+        .lexique-term p { margin: 0; color: #334155; }
+
+        /* ── TRAINER ── */
+        .trainer-box {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 1.5rem;
+            background: #e6f5f2;
+            border-radius: 1rem;
+            padding: 1.5rem 2rem;
+            max-width: 750px;
+            margin: 0 auto 2rem auto;
+            flex-shrink: 0;
+        }
+        .trainer-box img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #009B7D;
+            flex-shrink: 0;
+        }
+        .trainer-box p {
+            margin: 0;
+            font-size: 0.95rem;
+            color: #1a2f2b;
+            line-height: 1.6;
+        }
+
+        /* ── CTA ── */
         .cta-box {
-            background: #004b3d;
+            background: linear-gradient(135deg, #004b3d, #007a62);
             color: white;
             text-align: center;
             padding: 2.5rem;
             border-radius: 1rem;
-            margin-top: 3rem;
             max-width: 750px;
-            margin-left: auto;
-            margin-right: auto;
+            margin: 0 auto 2rem auto;
+            flex-shrink: 0;
         }
-        .cta-box h3 { color: #99d6ca; font-size: 1.5rem; margin-bottom: 1rem; }
-        .cta-box p { font-size: 1.1rem; line-height: 1.6; margin-bottom: 1.5rem; }
+        .cta-box h3 { color: #99d6ca; font-size: 1.4rem; margin-bottom: 1rem; }
+        .cta-box p { font-size: 1rem; line-height: 1.7; margin-bottom: 1.5rem; }
         .btn {
             background: #009B7D;
             color: white;
-            padding: 0.8rem 2rem;
+            padding: 0.9rem 2.2rem;
             border-radius: 30px;
             text-decoration: none;
-            font-weight: bold;
+            font-weight: 700;
+            letter-spacing: 0.02em;
             display: inline-block;
+            transition: background 0.2s;
         }
-        footer {
-            text-align: center;
-            margin-top: 3rem;
-            font-size: 0.8rem;
-            color: #64748b;
-            border-top: 1px solid #e2e8f0;
-            padding-top: 1rem;
-        }
+        .btn:hover { background: #007a62; transform: scale(1.02); }
 
-        /* Améliorations design Pro */
-        body { font-family: 'Inter', 'Segoe UI', system-ui, sans-serif; background: #e2edf7; }
-        .cover-page {
-            width: 100%;
-            height: 100vh;
-            min-height: 297mm;
-            background: linear-gradient(135deg, #0a0f2c 0%, #004b3d 100%);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 2rem;
-            position: relative;
-            page-break-after: always;
-        }
+        /* ── PRINT ── */
+        .page-break { page-break-before: always; }
         @media print {
+            body { background: white !important; padding: 0; margin: 0; }
             .cover-page { height: 297mm; }
             .cover-page h1, .cover-page h1 span { color: white !important; }
-            body { background: white !important; }
-            .container { margin: 0 auto; box-shadow: none; border-radius: 0; }
+            .container { 
+                box-shadow: none; 
+                border-radius: 0; 
+                margin: 0; 
+                max-width: 100%; 
+                padding: 10mm 15mm; 
+                min-height: 290mm; /* ensures footer is pushed exactly to A4 bottom */
+            }
+            .prompt-card { margin-bottom: 1rem; padding: 1rem; }
+            .prompt-text { padding: 0.8rem; margin-bottom: 0.5rem; }
+            .prompt-card, .cta-box, .trainer-box, .how-to-box { break-inside: avoid; page-break-inside: avoid; }
         }
-        .container { background: #ffffff; box-shadow: 0 10px 40px -10px rgba(0,0,0,0.2); max-width: 950px; margin: 2rem auto; border-radius: 1rem; padding: 4rem; }
-        .prompt-card, .step-card { box-shadow: 0 2px 8px rgba(0,0,0,0.04); transition: box-shadow 0.2s; }
-        .prompt-card:hover, .step-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.08); }
-        .intro-box {
-            font-size: 1.25rem;
-            background: #f0faf7;
-            border-left: none;
-            border-top: 4px solid #009B7D;
-            border-bottom: 4px solid #009B7D;
-            border-radius: 0;
-            padding: 2.5rem 2rem;
-            margin: 3rem auto;
-            max-width: 800px;
-            text-align: center;
-            line-height: 1.7;
-        }
-        .cta-box { background: linear-gradient(135deg, #004b3d, #007a62); }
-        .btn { font-weight: 600; letter-spacing: 0.02em; transition: background 0.2s; }
-        .btn:hover { background: #007a62; transform: scale(1.02); }
     </style>
 </head>
 <body>
+
+    <!-- PAGE DE COUVERTURE -->
     <div class="cover-page">
-        <div class="cover-content">
-            <div style="margin-bottom: 2rem;">
-                <img src="../images/logo_second_white.png" alt="Babylone 42" style="height: 60px;" onerror="this.src='../images/logo_second_white.svg'">
-            </div>
-            <span class="badge" style="background: rgba(255,255,255,0.2); backdrop-filter: blur(5px); font-size: 1rem; padding: 0.5rem 1.5rem; margin-bottom: 2rem;">Guide Pratique IA</span>
-            <h1 style="color: white; font-size: 3.5rem; line-height: 1.1; margin-bottom: 1.5rem; background: none; -webkit-background-clip: initial; text-shadow: 0 4px 15px rgba(0,0,0,0.3);">10 prompts opérationnels<br><span style="font-size: 2.2rem; font-weight: 500; opacity: 0.9;">pour automatiser vos comptes-rendus, notes de frais et synthèses avec l'IA</span></h1>
-            <p style="color: #99d6ca; font-size: 1.2rem; max-width: 600px; margin: 0 auto;">Pour les assistantes de direction, office managers et chargés d'administration.</p>
+        <div style="margin-bottom: 2rem;">
+            <img src="../images/logo_second_white.png" alt="Babylone 42" style="height: 60px;" onerror="this.src='../images/logo_second_white.svg'">
         </div>
-        <div style="position: absolute; bottom: 40px; width: 100%; text-align: center; color: rgba(255,255,255,0.5);">
-            © Babylone 42 - Reproduction interdite
-        </div>
+        <span class="badge" style="background: rgba(255,255,255,0.2); backdrop-filter: blur(5px); font-size: 1rem; padding: 0.5rem 1.5rem; margin-bottom: 2rem;">Guide Pratique IA</span>
+        <h1 style="color: white; font-size: 3.5rem; line-height: 1.1; margin-bottom: 1.5rem; font-weight: 800; text-shadow: 0 4px 15px rgba(0,0,0,0.3);">
+            10 prompts opérationnels
+            <br>
+            <span style="font-size: 2.2rem; font-weight: 500; opacity: 0.9;">pour automatiser vos comptes-rendus, notes de frais et synthèses avec l'IA</span>
+        </h1>
+        <p style="color: #99d6ca; font-size: 1.2rem; max-width: 600px; margin: 0 auto;">Pour les assistantes de direction, office managers et chargés d'administration.</p>
+        <div class="cover-copyright">© Babylone 42 – Reproduction interdite sans autorisation écrite</div>
     </div>
 
+    <!-- PAGE 1 : Introduction + Comment utiliser -->
     <div class="container">
-        <!-- Introduction -->
-        <div class="intro-box" style="margin-top: 0;">
+        <div class="page-header">
+            <a href="https://babylone42.fr" target="_blank"><img src="../images/logo_second_color.svg" alt="Babylone 42"></a>
+            <span class="badge">Guide Pratique IA</span>
+        </div>
+
+        <div class="intro-box">
             <strong>Vous êtes assistante de direction, office manager ou chargée d'administration ?</strong><br><br>
             Chaque semaine, vous passez des heures à rédiger des comptes-rendus, saisir des notes de frais, synthétiser des réunions et répondre à des emails.<br><br>
             Ce guide vous donne <strong>10 prompts prêts à l'emploi</strong> pour ChatGPT, Claude ou Copilot. Recopiez-les, collez-les, et gagnez 5 à 10 heures par semaine – sans prérequis technique.
         </div>
 
-        <div class="page-break"></div>
-
-        <!-- PAGE 2-7 : Les Prompts -->
-        <h2>🚀 Optimisation des Réunions</h2>
+        <div class="how-to-box">
+            <h3>📋 Comment utiliser ce guide ?</h3>
+            <ol>
+                <li>Ouvrez ChatGPT, Claude ou Copilot.</li>
+                <li>Copiez-collez le prompt de votre choix dans l'outil.</li>
+                <li>Remplacez les textes entre <strong>[ ]</strong> par vos propres informations (notes, données, emails…).</li>
+                <li>L'IA vous génère un résultat structuré – ajustez-le si besoin.</li>
+                <li>Gagnez 5 à 10 heures par semaine dès aujourd'hui.</li>
+            </ol>
+        </div>
         
+        <div class="page-footer">
+            <span>© Babylone 42 • Organisme certifié Qualiopi • SIRET : 992 220 707 00010 • NDA : 93132513713</span>
+            <a href="https://babylone42.fr" target="_blank">babylone42.fr</a>
+        </div>
+    </div>
+
+    <!-- PAGE 2 : Prompts #1, #2, #3 – Réunions -->
+    <div class="container page-break">
+        <div class="page-header">
+            <a href="https://babylone42.fr" target="_blank"><img src="../images/logo_second_color.svg" alt="Babylone 42"></a>
+            <span class="badge">Optimisation des Réunions</span>
+        </div>
+
+        <h2>🚀 Optimisation des Réunions</h2>
+
         <div class="prompt-card">
             <h3>Prompt #1 : Synthèse de réunion express</h3>
-            <div class="prompt-text">Agis comme un assistant de direction expert. Voici mes notes brutes de réunion. Je veux que tu les transformes en un compte-rendu professionnel. Le résultat doit comprendre : 
-1. L'objectif principal de la réunion (en 1 phrase). 
-2. Les décisions clés actées (à puces). 
-3. Le plan d'action sous forme de tableau avec 3 colonnes : Action, Responsable, Délai. 
-Garde un ton neutre et professionnel. 
+            <div class="prompt-text">Agis comme un assistant de direction expert. Voici mes notes brutes de réunion. Je veux que tu les transformes en un compte-rendu professionnel. Le résultat doit comprendre :
+1. L'objectif principal de la réunion (en 1 phrase).
+2. Les décisions clés actées (à puces).
+3. Le plan d'action sous forme de tableau avec 3 colonnes : Action, Responsable, Délai.
+Garde un ton neutre et professionnel.
 
 Voici les notes : [COLLER LES NOTES]</div>
             <div class="prompt-usage"><strong>💡 Utilisation :</strong> Collez vos notes brutes. L'IA structure un compte-rendu avec décisions, actions et responsables instantanément.</div>
@@ -239,149 +339,219 @@ Voici les notes : [COLLER LES NOTES]</div>
 
         <div class="prompt-card">
             <h3>Prompt #2 : Rédaction de compte-rendu structuré</h3>
-            <div class="prompt-text">Rédige un compte-rendu formel à partir de l'ordre du jour suivant et des notes associées. Utilise la structure classique : Date, Participants, Ordre du jour, Synthèse des échanges, Décisions, Prochaines étapes. Le texte doit être prêt à être envoyé à la direction, sans jargon inutile et avec une orthographe irréprochable. 
+            <div class="prompt-text">Rédige un compte-rendu formel à partir de l'ordre du jour suivant et des notes associées. Utilise la structure classique : Date, Participants, Ordre du jour, Synthèse des échanges, Décisions, Prochaines étapes. Le texte doit être prêt à être envoyé à la direction, sans jargon inutile et avec une orthographe irréprochable.
 
 Notes de la réunion : [COLLER LES NOTES]</div>
             <div class="prompt-usage"><strong>💡 Utilisation :</strong> Donnez l'ordre du jour. L'IA rédige un CR complet au format ultra-professionnel prêt à être envoyé.</div>
         </div>
 
-        <div class="page-break"></div>
-        <h2>💰 Gestion & Administratif</h2>
-
         <div class="prompt-card">
             <h3>Prompt #3 : Automatisation des notes de frais</h3>
-            <div class="prompt-text">Voici une liste de dépenses en vrac extraites de mes reçus de la semaine. Je veux que tu les organises dans un tableau propre avec les colonnes suivantes : Date, Catégorie (Repas, Transport, Hébergement, Divers), Description, Montant HT, TVA, Montant TTC. Calcule également le total général en bas du tableau. 
+            <div class="prompt-text">Voici une liste de dépenses en vrac extraites de mes reçus de la semaine. Je veux que tu les organises dans un tableau propre avec les colonnes suivantes : Date, Catégorie (Repas, Transport, Hébergement, Divers), Description, Montant HT, TVA, Montant TTC. Calcule également le total général en bas du tableau.
 
 Voici les dépenses : [COLLER LES DÉPENSES/INFOS DES TICKETS]</div>
             <div class="prompt-usage"><strong>💡 Utilisation :</strong> Dictez ou copiez le texte brut de vos tickets. L'IA les classe par catégorie et génère un tableau récapitulatif parfait pour la comptabilité.</div>
         </div>
+        
+        <div class="page-footer">
+            <span>© Babylone 42 • Organisme certifié Qualiopi • SIRET : 992 220 707 00010 • NDA : 93132513713</span>
+            <a href="https://babylone42.fr" target="_blank">babylone42.fr</a>
+        </div>
+    </div>
 
-        <div class="prompt-card">
-            <h3>Prompt #6 : Planification d'agenda et To-Do list</h3>
-            <div class="prompt-text">Analyse l'email ci-dessous que je viens de recevoir. Extrais toutes les tâches implicites et explicites qui me sont demandées. Formate le résultat en une To-Do list classée par ordre de priorité (Urgent/Important). Pour chaque tâche, précise si je dois faire appel à une autre personne. 
-
-Voici l'email : [COLLER L'EMAIL]</div>
-            <div class="prompt-usage"><strong>💡 Utilisation :</strong> À partir d'un email fleuve, l'IA extrait les actions réelles et les priorise pour vous.</div>
+    <!-- PAGE 3 : Prompts #4, #6, #7 – Emails -->
+    <div class="container page-break">
+        <div class="page-header">
+            <a href="https://babylone42.fr" target="_blank"><img src="../images/logo_second_color.svg" alt="Babylone 42"></a>
+            <span class="badge">Communication & Emails</span>
         </div>
 
-        <div class="page-break"></div>
         <h2>✉️ Communication & Emails</h2>
 
         <div class="prompt-card">
             <h3>Prompt #4 : Correction et reformulation d'emails</h3>
-            <div class="prompt-text">Agis comme un relecteur professionnel bilingue. Voici l'ébauche d'un email que je m'apprête à envoyer à un client/partenaire important. Corrige toutes les fautes d'orthographe et de grammaire. Ensuite, propose-moi une deuxième version reformulée pour être plus courtoise, percutante et diplomate, tout en conservant le message initial. 
+            <div class="prompt-text">Agis comme un relecteur professionnel bilingue. Voici l'ébauche d'un email que je m'apprête à envoyer à un client/partenaire important. Corrige toutes les fautes d'orthographe et de grammaire. Ensuite, propose-moi une deuxième version reformulée pour être plus courtoise, percutante et diplomate, tout en conservant le message initial.
 
 Voici mon brouillon : [COLLER LE BROUILLON]</div>
             <div class="prompt-usage"><strong>💡 Utilisation :</strong> L'IA reformule vos brouillons pour un ton professionnel, sans fautes, et surtout adapté au contexte.</div>
         </div>
 
         <div class="prompt-card">
-            <h3>Prompt #7 : Rédaction d'emails de relance</h3>
-            <div class="prompt-text">Je dois relancer un prospect/client qui ne m'a pas répondu depuis 2 semaines. Rédige 3 modèles d'emails différents que je pourrais utiliser : 
-1. Une version très formelle et polie. 
-2. Une version plus directe et orientée résultat. 
-3. Une version créative et accrocheuse (sans être familière). 
-Garde des espaces vides [comme ceci] pour que je puisse insérer son prénom et le nom de l'entreprise. 
+            <h3>Prompt #5 : Planification d'agenda et To-Do list</h3>
+            <div class="prompt-text">Analyse l'email ci-dessous que je viens de recevoir. Extrais toutes les tâches implicites et explicites qui me sont demandées. Formate le résultat en une To-Do list classée par ordre de priorité (Urgent/Important). Pour chaque tâche, précise si je dois faire appel à une autre personne.
+
+Voici l'email : [COLLER L'EMAIL]</div>
+            <div class="prompt-usage"><strong>💡 Utilisation :</strong> À partir d'un email fleuve, l'IA extrait les actions réelles et les priorise pour vous.</div>
+        </div>
+
+        <div class="prompt-card">
+            <h3>Prompt #6 : Rédaction d'emails de relance</h3>
+            <div class="prompt-text">Je dois relancer un prospect/client qui ne m'a pas répondu depuis 2 semaines. Rédige 3 modèles d'emails différents que je pourrais utiliser :
+1. Une version très formelle et polie.
+2. Une version plus directe et orientée résultat.
+3. Une version créative et accrocheuse (sans être familière).
+Garde des espaces vides [comme ceci] pour que je puisse insérer son prénom et le nom de l'entreprise.
 
 Le contexte est : [DÉCRIRE LE CONTEXTE DE LA RELANCE]</div>
             <div class="prompt-usage"><strong>💡 Utilisation :</strong> L'IA génère 3 versions de relance (formelle, neutre, dynamique) pour débloquer les situations sans paraître insistant.</div>
         </div>
+        
+        <div class="page-footer">
+            <span>© Babylone 42 • Organisme certifié Qualiopi • SIRET : 992 220 707 00010 • NDA : 93132513713</span>
+            <a href="https://babylone42.fr" target="_blank">babylone42.fr</a>
+        </div>
+    </div>
 
-        <div class="page-break"></div>
+    <!-- PAGE 4 : Prompts #5, #10 – Analyse -->
+    <div class="container page-break">
+        <div class="page-header">
+            <a href="https://babylone42.fr" target="_blank"><img src="../images/logo_second_color.svg" alt="Babylone 42"></a>
+            <span class="badge">Analyse & Synthèse</span>
+        </div>
+
         <h2>📊 Analyse & Synthèse Documentaire</h2>
 
         <div class="prompt-card">
-            <h3>Prompt #5 : Résumé de longs documents (PDF/Word)</h3>
-            <div class="prompt-text">Je dois comprendre rapidement l'essentiel de ce document de plusieurs pages, mais je n'ai que 5 minutes. Fais-moi un 'Executive Summary' (résumé exécutif) en exactement 5 points à puces. Ensuite, liste les 3 risques majeurs ou points d'attention mentionnés dans le texte. Ignore les détails superflus. 
+            <h3>Prompt #7 : Résumé de longs documents (PDF/Word)</h3>
+            <div class="prompt-text">Je dois comprendre rapidement l'essentiel de ce document de plusieurs pages, mais je n'ai que 5 minutes. Fais-moi un 'Executive Summary' (résumé exécutif) en exactement 5 points à puces. Ensuite, liste les 3 risques majeurs ou points d'attention mentionnés dans le texte. Ignore les détails superflus.
 
 Voici le texte du document : [COLLER LE TEXTE]</div>
             <div class="prompt-usage"><strong>💡 Utilisation :</strong> Collez un extrait. L'IA en sort un résumé exécutif de 5 lignes et vous alerte sur les points critiques.</div>
         </div>
 
         <div class="prompt-card">
-            <h3>Prompt #10 : Analyse de données basique</h3>
-            <div class="prompt-text">Voici un tableau de données brutes. Agis comme un Data Analyst. Analyse ces chiffres et donne-moi : 
-1. Les 3 tendances majeures qui s'en dégagent. 
-2. Les anomalies ou baisses de performance s'il y en a. 
-3. Une conclusion opérationnelle d'une ligne pour m'aider à prendre une décision. 
+            <h3>Prompt #8 : Analyse de données basique</h3>
+            <div class="prompt-text">Voici un tableau de données brutes. Agis comme un Data Analyst. Analyse ces chiffres et donne-moi :
+1. Les 3 tendances majeures qui s'en dégagent.
+2. Les anomalies ou baisses de performance s'il y en a.
+3. Une conclusion opérationnelle d'une ligne pour m'aider à prendre une décision.
 
 Voici les données : [COLLER LES DONNÉES (EX: EXCEL COPIÉ)]</div>
             <div class="prompt-usage"><strong>💡 Utilisation :</strong> Collez un tableau de chiffres. L'IA en extrait les tendances et les points d'alerte instantanément.</div>
         </div>
+        
+        <div class="page-footer">
+            <span>© Babylone 42 • Organisme certifié Qualiopi • SIRET : 992 220 707 00010 • NDA : 93132513713</span>
+            <a href="https://babylone42.fr" target="_blank">babylone42.fr</a>
+        </div>
+    </div>
 
-        <div class="page-break"></div>
+    <!-- PAGE 5 : Prompts #8, #9 – International -->
+    <div class="container page-break">
+        <div class="page-header">
+            <a href="https://babylone42.fr" target="_blank"><img src="../images/logo_second_color.svg" alt="Babylone 42"></a>
+            <span class="badge">Création & International</span>
+        </div>
+
         <h2>🌍 Création & International</h2>
 
         <div class="prompt-card">
-            <h3>Prompt #8 : Création de supports de présentation</h3>
-            <div class="prompt-text">Je dois créer une présentation PowerPoint de 10 slides maximum sur le sujet suivant : [SUJET]. Propose-moi une structure complète. Pour chaque slide, donne-moi : 
-1. Le titre de la slide (percutant). 
-2. Les 3 points clés à aborder (bullet points). 
-3. Une idée visuelle ou un type de graphique à insérer pour illustrer le propos. 
+            <h3>Prompt #9 : Création de supports de présentation</h3>
+            <div class="prompt-text">Je dois créer une présentation PowerPoint de 10 slides maximum sur le sujet suivant : [SUJET]. Propose-moi une structure complète. Pour chaque slide, donne-moi :
+1. Le titre de la slide (percutant).
+2. Les 3 points clés à aborder (bullet points).
+3. Une idée visuelle ou un type de graphique à insérer pour illustrer le propos.
 
 Voici le contenu de base : [COLLER LE TEXTE DE BASE]</div>
             <div class="prompt-usage"><strong>💡 Utilisation :</strong> À partir d'un texte, l'IA propose un plan de slides et des titres percutants pour vos présentations.</div>
         </div>
 
         <div class="prompt-card">
-            <h3>Prompt #9 : Traduction et adaptation de ton</h3>
-            <div class="prompt-text">Traduis le texte suivant en [LANGUE CIBLE]. Ce n'est pas une simple traduction mot à mot : je veux que tu adaptes culturellement le texte pour le marché local et que tu utilises un registre de langue [commercial / formel / interne]. Assure-toi que les formules de politesse correspondent aux standards professionnels de la langue cible. 
+            <h3>Prompt #10 : Traduction et adaptation de ton</h3>
+            <div class="prompt-text">Traduis le texte suivant en [LANGUE CIBLE]. Ce n'est pas une simple traduction mot à mot : je veux que tu adaptes culturellement le texte pour le marché local et que tu utilises un registre de langue [commercial / formel / interne]. Assure-toi que les formules de politesse correspondent aux standards professionnels de la langue cible.
 
 Voici le texte : [COLLER LE TEXTE]</div>
             <div class="prompt-usage"><strong>💡 Utilisation :</strong> Traduisez un texte tout en l'adaptant culturellement aux standards de vos correspondants étrangers.</div>
-        <div class="page-break"></div>
+        </div>
+        
+        <div class="page-footer">
+            <span>© Babylone 42 • Organisme certifié Qualiopi • SIRET : 992 220 707 00010 • NDA : 93132513713</span>
+            <a href="https://babylone42.fr" target="_blank">babylone42.fr</a>
+        </div>
+    </div>
 
-        <!-- À PROPOS DE VOTRE FORMATEUR -->
-        <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 1.5rem; background: #e6f5f2; border-radius: 1rem; padding: 1.5rem; margin: 2.5rem auto; max-width: 750px;">
-            <div style="flex: 0 0 80px; text-align: center;">
-                <img src="https://babylone42.fr/images/eulalio_edited.jpg" alt="Dr. Eulalio TORRES" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 3px solid #009B7D;">
+    <!-- PAGE 6 : Lexique IA -->
+    <div class="container page-break">
+        <div class="page-header">
+            <a href="https://babylone42.fr" target="_blank"><img src="../images/logo_second_color.svg" alt="Babylone 42"></a>
+            <span class="badge">Lexique IA</span>
+        </div>
+
+        <h2>📖 Lexique IA – Traduit pour les non-informaticiens</h2>
+
+        <div class="lexique-box">
+            <div class="lexique-grid">
+                <div class="lexique-term">
+                    <strong>Prompt Engineering</strong>
+                    <p>L'art de formuler une requête pour obtenir le meilleur résultat de l'IA. C'est la compétence clé de ce guide.</p>
+                </div>
+                <div class="lexique-term">
+                    <strong>Chain of Thought</strong>
+                    <p>Technique qui demande à l'IA de détailler son raisonnement étape par étape, comme un expert qui explique à voix haute.</p>
+                </div>
+                <div class="lexique-term">
+                    <strong>Few-Shot</strong>
+                    <p>Fournir 1 ou 2 exemples concrets dans votre prompt pour guider l'IA vers le format ou le ton exact attendu.</p>
+                </div>
+                <div class="lexique-term">
+                    <strong>LLM (Large Language Model)</strong>
+                    <p>Le moteur derrière ChatGPT, Claude ou Copilot. C'est le "cerveau" qui comprend et génère du texte.</p>
+                </div>
+                <div class="lexique-term">
+                    <strong>Token</strong>
+                    <p>L'unité de mesure du texte pour l'IA. Environ 1 500 mots = 2 000 tokens. La limite de tokens définit la longueur maximale d'un échange.</p>
+                </div>
+                <div class="lexique-term">
+                    <strong>Hallucination</strong>
+                    <p>Quand l'IA invente une information plausible mais fausse. Toujours vérifier les chiffres, dates et noms propres.</p>
+                </div>
             </div>
-            <div style="flex: 1;">
-                <p style="margin: 0; font-size: 0.9rem; color: #1a2f2b; line-height: 1.5;">
-                    <strong style="color: #004b3d;">Dr. Eulalio TORRES</strong> – Docteur en Ingénierie Aérospatiale, 15 ans d'expérience en IA et Data Science.  
-                    Il a formé plus de <strong>1 000 professionnels</strong> à l'IA sans prérequis technique. Son credo : des outils opérationnels dès le premier jour, zéro jargon inutile.
+        </div>
+        
+        <div class="page-footer">
+            <span>© Babylone 42 • Organisme certifié Qualiopi • SIRET : 992 220 707 00010 • NDA : 93132513713</span>
+            <a href="https://babylone42.fr" target="_blank">babylone42.fr</a>
+        </div>
+    </div>
+
+    <!-- PAGE 7 : Formateur + CTA -->
+    <div class="container page-break">
+        <div class="page-header">
+            <a href="https://babylone42.fr" target="_blank"><img src="../images/logo_second_color.svg" alt="Babylone 42"></a>
+            <span class="badge">Votre Formateur</span>
+        </div>
+
+        <h2>👤 À propos de votre formateur</h2>
+
+        <div class="trainer-box">
+            <img src="https://babylone42.fr/images/eulalio_edited.jpg" alt="Dr. Eulalio TORRES">
+            <div>
+                <p>
+                    <strong style="color: #004b3d; font-size: 1rem;">Dr. Eulalio TORRES</strong><br>
+                    Docteur en Ingénierie Aérospatiale, 15 ans d'expérience en IA et Data Science.<br>
+                    Il a formé plus de <strong>1 000 professionnels</strong> à l'IA sans prérequis technique.<br>
+                    Son credo : des outils opérationnels dès le premier jour, zéro jargon inutile.
                 </p>
             </div>
         </div>
 
-        <!-- LEXIQUE IA POUR LES NON-INFORMATICIENS -->
-        <div style="background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 1rem; padding: 1.5rem; margin: 3rem auto; max-width: 750px;">
-            <h3 style="color: #004b3d; font-size: 1.2rem; margin-bottom: 1rem;">📖 Lexique IA – Traduit pour les non-informaticiens</h3>
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; font-size: 0.95rem; line-height: 1.5;">
-                <div>
-                    <strong style="color: #009B7D;">Prompt Engineering</strong>
-                    <p style="margin: 0; color: #334155;">L'art de formuler une requête pour obtenir le meilleur résultat de l'IA.</p>
-                </div>
-                <div>
-                    <strong style="color: #009B7D;">Chain of Thought</strong>
-                    <p style="margin: 0; color: #334155;">Technique qui demande à l'IA de détailler son raisonnement étape par étape, comme un expert qui explique à voix haute.</p>
-                </div>
-                <div>
-                    <strong style="color: #009B7D;">Few-Shot</strong>
-                    <p style="margin: 0; color: #334155;">Fournir 1 ou 2 exemples concrets dans votre prompt pour guider l'IA vers le format ou le ton exact attendu.</p>
-                </div>
-                <div>
-                    <strong style="color: #009B7D;">LLM (Large Language Model)</strong>
-                    <p style="margin: 0; color: #334155;">Le moteur derrière ChatGPT, Claude ou Copilot. C'est le "cerveau" qui comprend et génère du texte.</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Conclusion -->
         <div class="cta-box">
             <h3>Vous voulez aller plus loin ?</h3>
-            <p>Ces 10 prompts ne sont qu'un aperçu de ce que l'IA peut faire pour vous au quotidien.<br><br>
-            Dans notre formation complète <strong>(1,5 jour)</strong>, vous apprendrez à :<br>
-            ✓ Maîtriser le Prompt Engineering avancé (Chain of Thought, Few-Shot).<br>
-            ✓ Automatiser des processus complets avec Make et Zapier.<br>
-            ✓ Sécuriser vos données et respecter le RGPD en entreprise.</p>
-            
+            <p>
+                Ces 10 prompts ne sont qu'un aperçu de ce que l'IA peut faire pour vous au quotidien.<br><br>
+                Dans notre formation complète <strong>(1,5 jour)</strong>, vous apprendrez à :<br>
+                ✓ Maîtriser le Prompt Engineering avancé (Chain of Thought, Few-Shot).<br>
+                ✓ Automatiser des processus complets avec Make et Zapier.<br>
+                ✓ Sécuriser vos données et respecter le RGPD en entreprise.
+            </p>
             <a href="https://babylone42.fr/formation-genai.html?utm_source=lead_magnet&utm_medium=pdf&utm_campaign=guide_10_prompts" class="btn">Découvrir la formation complète</a>
         </div>
-
-        <footer>
-            Ce guide est un contenu exclusif offert aux visiteurs de Babylone42. Il ne peut être partagé ou reproduit sans autorisation écrite.
-        </footer>
+        
+        <div class="page-footer">
+            <span>© Babylone 42 • Organisme certifié Qualiopi • SIRET : 992 220 707 00010 • NDA : 93132513713</span>
+            <a href="https://babylone42.fr" target="_blank">babylone42.fr</a>
+        </div>
     </div>
+
 </body>
 </html>

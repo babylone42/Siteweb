@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
@@ -134,7 +134,42 @@
                 <h1 class="merci-title">Félicitations !</h1>
                 <p class="merci-subtitle">Votre téléchargement a démarré automatiquement.<br>Nous vous contacterons très prochainement pour nous assurer que tout s'est bien passé et répondre à vos éventuelles questions !</p>
 
-                <div class="nl-card" style="margin: 0 auto 3rem auto;">
+                <!-- Formulaire de qualification (après téléchargement) -->
+<div class="dl-card" style="background: rgba(16, 155, 128, 0.05); border: 1px solid rgba(16, 155, 128, 0.2); border-radius: 1rem; padding: 2rem; max-width: 600px; margin: 2rem auto;">
+    <h3 style="color: var(--primary-color); margin-bottom: 1rem;">
+        <i class="fas fa-phone-alt"></i> Profitez d'un diagnostic offert
+    </h3>
+    <p style="color: var(--text-muted); margin-bottom: 1.5rem;">
+        Complétez vos coordonnées et je vous rappelle sous 24h pour vous offrir un diagnostic IA gratuit de 15 minutes. Identifions ensemble comment l'IA peut vous faire gagner 5 à 10 heures par semaine.
+    </p>
+    <form id="qualification-form" style="display: flex; flex-direction: column; gap: 1rem; text-align: left;">
+        <input type="hidden" name="source" value="merci_guide_genai">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem;">
+            <input type="text" name="prenom" placeholder="Votre prénom" required style="padding: 0.8rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.2); background: transparent; color: white; width: 100%;">
+            <input type="text" name="nom" placeholder="Votre nom" required style="padding: 0.8rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.2); background: transparent; color: white; width: 100%;">
+        </div>
+        <input type="tel" name="telephone" placeholder="Votre numéro de téléphone" required style="padding: 0.8rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.2); background: transparent; color: white; width: 100%;">
+        <select name="fonction" style="padding: 0.8rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.2); background: #0a1628; color: white; width: 100%;">
+            <option value="">Votre fonction (optionnel)</option>
+            <option value="assistante">Assistante de direction / Administratif</option>
+            <option value="manager">Manager / Chef de projet</option>
+            <option value="drh">DRH / Responsable RH</option>
+            <option value="dirigeant">Dirigeant / Fondateur</option>
+            <option value="independant">Indépendant / Freelance</option>
+            <option value="autre">Autre</option>
+        </select>
+        <button type="submit" class="btn btn-primary" style="width: 100%;">
+            <i class="fas fa-calendar-check" style="margin-right: 0.5rem;"></i> Je veux un diagnostic gratuit
+        </button>
+    </form>
+    <p id="qualif-message" style="display: none; font-weight: 600; margin-top: 1rem;"></p>
+    <p style="color: #64748b; font-size: 0.8rem; margin-top: 1rem; text-align: center;">
+        <i class="fas fa-lock"></i> Vos coordonnées sont sécurisées. Pas de spam, vous pouvez vous désinscrire à tout moment.
+    </p>
+</div>
+
+
+<div class="nl-card" style="margin: 0 auto 3rem auto;">
                     <h3 style="margin-bottom: 1rem; color: var(--primary-color);"><i class="fas fa-envelope-open-text"></i> Ne ratez aucune astuce</h3>
                     <p style="color: var(--text-muted); margin-bottom: 1.5rem;">Inscrivez-vous à notre newsletter pour recevoir nos dernières découvertes en IA, nos nouveaux prompts et nos conseils directement dans votre boîte mail.</p>
                     <form class="footer-newsletter-form" style="display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center;">
@@ -256,5 +291,63 @@
 
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script src="script.js?v=5"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const qualifForm = document.getElementById('qualification-form');
+    const qualifMsg = document.getElementById('qualif-message');
+    if (qualifForm) {
+        qualifForm.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const submitBtn = qualifForm.querySelector('button[type="submit"]');
+            const originalText = submitBtn.innerHTML;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Envoi...';
+            submitBtn.disabled = true;
+
+            const formData = new FormData(qualifForm);
+            const data = Object.fromEntries(formData.entries());
+
+            // Envoyer à Supabase
+            const supabaseUrl = 'https://nzkirwiilgdlitbylxxv.supabase.co';
+            const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im56a2lyd2lpbGdkbGl0YnlseHh2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzE5NDYxNzIsImV4cCI6MjA4NzUyMjE3Mn0.xad9ed_JK-6goYodSyhhcEEiOdmro0xq2skohjGW7SE';
+
+            try {
+                const response = await fetch(`${supabaseUrl}/rest/v1/Prospects`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'apikey': supabaseKey,
+                        'Authorization': Bearer ,
+                        'Prefer': 'return=minimal'
+                    },
+                    body: JSON.stringify({
+                        email: data.email || null,
+                        prenom: data.prenom || null,
+                        nom: data.nom || null,
+                        telephone: data.telephone || null,
+                        fonction: data.fonction || null,
+                        source: data.source || 'merci_guide_genai'
+                    })
+                });
+
+                if (response.ok) {
+                    qualifMsg.style.display = 'block';
+                    qualifMsg.style.color = '#109B80';
+                    qualifMsg.innerHTML = '✅ Merci ! Votre demande a bien été prise en compte. Nous vous rappellerons sous 24h.';
+                    qualifForm.reset();
+                } else {
+                    throw new Error('Erreur lors de l’enregistrement');
+                }
+            } catch (error) {
+                qualifMsg.style.display = 'block';
+                qualifMsg.style.color = '#ef4444';
+                qualifMsg.innerHTML = '❌ Une erreur est survenue. Veuillez nous contacter directement sur <a href="mailto:contact@babylone42.fr" style="color: #109B80;">contact@babylone42.fr</a>.';
+            } finally {
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+            }
+        });
+    }
+});
+</script>
 </body>
 </html>

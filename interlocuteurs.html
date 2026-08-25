@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="fr">
 
 <head>
@@ -16,23 +16,7 @@
         rel="stylesheet">
     <link rel="stylesheet" href="style.css?v=11">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <style id="audit-styles">
-        .link-disabled {
-            opacity: 0.4 !important;
-            cursor: not-allowed !important;
-            pointer-events: none !important;
-            text-decoration: line-through !important;
-        }
-        a.link-disabled {
-            pointer-events: none !important;
-        }
-        .card-disabled {
-            opacity: 0.45 !important;
-            cursor: not-allowed !important;
-            filter: grayscale(80%) !important;
-            pointer-events: none !important;
-        }
-    </style>
+    
 </head>
 
 <body>
@@ -130,7 +114,7 @@
                         style="color: var(--primary-color); font-weight: 400; font-size: 1.1rem; margin-bottom: 1.5rem;">
                         CEO & Fondateur</h3>
                     <p style="color: var(--text-muted); line-height: 1.8; margin-bottom: 2rem; text-align: justify; font-size: 1.05rem;">
-                        <strong>Docteur en Ingénierie Aérospatiale</strong> (PhD) et fort de <strong>15 ans d’expérience</strong> en Data Science et IA, j’ai formé <strong>plus de 1 000 professionnels</strong> (Aix‑Marseille Université, Paris, SUPINFO, IMIE) à l’IA sans prérequis technique.  
+                        <strong>Docteur en Ingénierie Aérospatiale</strong> (PhD) et fort de <strong>15 ans d’expérience</strong> en Data Science et IA, j’ai formé <strong>plus de 1 000 professionnels</strong> (Collège Doctoral Aix-Marseille Université, Pôle Collège des Écoles Doctorales Université de Paris, SUPINFO, IMIE, Campus Academy) à l’IA sans prérequis technique.  
                         <br><br>
                         Mon double objectif ?  
                         <strong>Pour les DRH et dirigeants :</strong> faire financer intégralement vos formations par votre OPCO, tout en augmentant la productivité de vos équipes administratives sans recrutement.  
@@ -163,7 +147,8 @@
                         nous
                         permettant d'assembler en temps réel l'équipe d'experts la plus adaptée pour répondre à chaque
                         défi
-                        technologique.
+                        technologique.<br><br>
+                        <strong>Financements :</strong> Elle coordonne également l'accompagnement des entreprises dans leurs demandes de financement OPCO, AIF et FAF.
                     </p>
                     <a href="https://www.linkedin.com/in/laurencepeersman/" target="_blank" rel="noopener noreferrer"
                         class="btn btn-outline" style="width: 100%; border-radius: 8px;">
@@ -197,8 +182,19 @@
                     Chaque formateur et expert apporte une vision unique et une expérience pratique, garantissant
                     des sessions dynamiques et des formations robustes parfaitement adaptées à vos besoins concrets.
                 </p>
-                <a href="contact-page.html" class="btn btn-primary"><i class="fas fa-calendar-alt"
-                        style="margin-right: 0.5rem;"></i> Rencontrer notre équipe</a>
+                <a href="contact-page.html" class="btn btn-primary"><i class="fas fa-calendar-alt" style="margin-right: 0.5rem;"></i> Rencontrer notre équipe</a>
+                  
+                  <div style="margin-top: 2.5rem; padding: 1.5rem; background: rgba(16, 155, 128, 0.1); border: 1px solid var(--primary-color); border-radius: 12px; max-width: 600px; margin-left: auto; margin-right: auto;">
+                      <p style="color: white; margin-bottom: 0.5rem; font-weight: 500;">🎁 En attendant, téléchargez notre guide gratuit :</p>
+                      <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1rem;">10 prompts pour automatiser vos comptes-rendus. Laissez-nous votre e-mail pour y accéder immédiatement.</p>
+                      <form id="lead-magnet-form" style="display: flex; gap: 0.5rem; width: 100%; flex-wrap: wrap;">
+                          <input type="email" name="email" placeholder="Votre email professionnel" required style="padding: 0.8rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.2); background: transparent; color: white; flex: 1; min-width: 200px;">
+                          <button type="submit" class="btn btn-outline" style="border-radius: 8px; border-color: var(--primary-color); color: var(--primary-color); flex-shrink: 0;">
+                              <i class="fas fa-download"></i> Télécharger
+                          </button>
+                      </form>
+                      <p id="lead-magnet-msg" style="display: none; margin-top: 0.5rem; font-size: 0.85rem;"></p>
+                  </div>
             </div>
         </div>
     </main>
@@ -306,6 +302,52 @@
         </div>
     </div>
 
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const leadForm = document.getElementById('lead-magnet-form');
+    const leadMsg = document.getElementById('lead-magnet-msg');
+    if (leadForm) {
+        leadForm.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const btn = leadForm.querySelector('button');
+            const originalHtml = btn.innerHTML;
+            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> En cours...';
+            btn.disabled = true;
+            
+            const email = leadForm.querySelector('input[type="email"]').value;
+            const supabaseUrl = 'https://nzkirwiilgdlitbylxxv.supabase.co';
+            const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im56a2lyd2lpbGdkbGl0YnlseHh2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzE5NDYxNzIsImV4cCI6MjA4NzUyMjE3Mn0.xad9ed_JK-6goYodSyhhcEEiOdmro0xq2skohjGW7SE';
+            
+            try {
+                const response = await fetch(`${supabaseUrl}/rest/v1/lead_magnet`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'apikey': supabaseKey,
+                        'Authorization': Bearer ,
+                        'Prefer': 'return=minimal'
+                    },
+                    body: JSON.stringify({ email: email })
+                });
+                
+                if (response.ok) {
+                    window.open('programmes/10_prompts_guide.html?utm_source=lead_magnet&utm_medium=website_interlocuteurs', '_blank');
+                    window.location.href = 'merci.html';
+                } else {
+                    throw new Error('Erreur');
+                }
+            } catch (error) {
+                leadMsg.style.display = 'block';
+                leadMsg.style.color = '#ef4444';
+                leadMsg.innerHTML = '❌ Une erreur est survenue. Veuillez réessayer.';
+            } finally {
+                btn.innerHTML = originalHtml;
+                btn.disabled = false;
+            }
+        });
+    }
+});
+</script>
 </body>
 
 </html>
